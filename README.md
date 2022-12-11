@@ -1,10 +1,12 @@
 <a name="readme-top"></a>
 <br />
 <div align="center">
-  <a href="https://git![k2 LOGO square](https://user-images.githubusercontent.com/94724551/206882335-fdf33672-7fa9-4e9d-a1dd-1e2a0f8c4038.png)
-hub.com/RedstoneChicken/Krafted">
+  <a href="https://github.com/RedstoneChicken/Krafted">
 
+    ![k2 LOGO square](https://user-images.githubusercontent.com/94724551/206882354-bf0e465c-0064-4312-9ccf-4888bda8b007.png)
+    
   </a>
+
 
 <h3 align="center">Krafted</h3>
 
