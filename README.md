@@ -44,6 +44,7 @@
 ## Contact
 
 Redstone Chicken - [@OfficialRSC](https://twitter.com/OfficialRSC)
+
 Redstone Chicken - [Redstone Chicken#0001] (https://dsc.gg/rscbuilds)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
