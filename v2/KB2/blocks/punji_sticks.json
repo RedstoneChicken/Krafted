@@ -1,0 +1,149 @@
+//bridge-file-version: #51
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:punji_sticks",
+			"properties": {
+				"bridge:block_rotation": [
+					0,
+					1,
+					2,
+					3,
+					4
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "punji_sticks",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.punji_sticks",
+			"minecraft:collision_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					6,
+					10
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					6,
+					10
+				]
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0.5,
+					0.5
+				],
+				"on_tick": {
+					"event": "strat:damage"
+				}
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"minecraft:block_light_filter": 0,
+			"minecraft:block_light_emission": 0
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing"
+				}
+			},
+			"strat:damage": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"damage @e[r=1] 1 void",
+								"effect @e[r=1] slowness 1 2 true"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						180,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						270,
+						0
+					]
+				}
+			}
+		]
+	}
+}

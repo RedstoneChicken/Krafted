@@ -1,0 +1,28 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:hammer_127_5_repair"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"ingredients": [
+			{
+				"item": "strat:hammer_127_5",
+				"count": 1
+			},
+			{
+				"item": "strat:ardite_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:hammer_127_5",
+				"count": 1
+			}
+		]
+	}
+}

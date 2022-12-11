@@ -1,0 +1,89 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:jade_apple",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 1.6,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "supernatural",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "consumed",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "jade_apple",
+				"frame": "query.texture_frame_index 1"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:display_name": {
+				"value": "Jade Apple"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			}
+		},
+		"events": {
+			"consumed": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "regeneration",
+							"duration": 30,
+							"amplifier": 0,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "absorption",
+							"duration": 120,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"duration": 180,
+							"amplifier": 0,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "haste",
+							"duration": 60,
+							"amplifier": 0,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"duration": 60,
+							"amplifier": 0,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "village_hero",
+							"duration": 180,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

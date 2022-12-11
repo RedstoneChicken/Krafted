@@ -1,0 +1,61 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nether:blue_nethershroom",
+			"runtime_identifier": "minecraft:snowball",
+			"is_summonable": false,
+			"is_spawnable": false,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"event_trigger": {
+							"event": "nether:splash"
+						}
+					},
+					"spawn_aoe_cloud": {
+						"radius": 3,
+						"duration": 5,
+						"particle": "mobspellambient",
+						"potion": 1
+					},
+					"remove_on_hit": {}
+				},
+				"power": 0.5,
+				"gravity": 0.025,
+				"angle_offset": -20,
+				"hit_sound": "fungus_impact"
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			}
+		},
+		"events": {
+			"nether:splash": {
+				"run_command": {
+					"command": [
+						"effect @a[r=3] weakness 10 1"
+					]
+				}
+			}
+		},
+		"component_groups": {}
+	}
+}

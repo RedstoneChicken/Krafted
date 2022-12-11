@@ -1,0 +1,134 @@
+//bridge-file-version: #75
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:coconut_block",
+			"register_to_creative_menu": true,
+			"properties": {
+				"korbon:face": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "coconut_block",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:geometry": "geometry.coconut",
+			"minecraft:destroy_time": 0.2,
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:on_player_placing": {
+				"event": "korbon:place"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:loot": "loot_tables/blocks/coconut.json",
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					7,
+					-9
+				],
+				"size": [
+					10,
+					10,
+					10
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:log"
+						],
+						"allowed_faces": [
+							"side"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"korbon:place": {
+				"set_block_property": {
+					"korbon:face": "(query.cardinal_player_facing)"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:face') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					],
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "flame2",
+							"target": "self"
+						},
+						"range": [
+							0,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					],
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "flame1",
+							"target": "self"
+						},
+						"range": [
+							0,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					],
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "flame3",
+							"target": "self"
+						},
+						"range": [
+							0,
+							1
+						]
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,42 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "korbon:lumberjack_villager",
+			"materials": {
+				"default": "villager"
+			},
+			"textures": {
+				"default": "textures/entity/villager/lumberjack_villager"
+			},
+			"geometry": {
+				"default": "geometry.villager_v2"
+			},
+			"scripts": {
+				"scale": 0.9375
+			},
+			"animations": {
+				"general": "animation.villager.general",
+				"look_at_target": "animation.common.look_at_target",
+				"move": "animation.villager.move",
+				"get_in_bed": "animation.villager.get_in_bed"
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.villager_v2.general"
+				},
+				{
+					"move": "controller.animation.villager_v2.move"
+				}
+			],
+			"render_controllers": [
+				"controller.render.wandering_trader"
+			],
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 14
+			}
+		}
+	}
+}

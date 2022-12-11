@@ -1,0 +1,38 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:lumberaxe_65"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" #~",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:copper_broad_axe_head"
+			},
+			"~": {
+				"item": "strat:copper_large_plate"
+			},
+			"o": {
+				"item": "strat:copper_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:copper_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:lumberaxe_65",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

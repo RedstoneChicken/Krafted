@@ -1,0 +1,35 @@
+//bridge-file-version: #53
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:hatchet_65_rec"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:copper_axe_head"
+			},
+			"~": {
+				"item": "strat:copper_binding"
+			},
+			"o": {
+				"item": "strat:copper_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:hatchet_65",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

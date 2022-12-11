@@ -1,0 +1,22 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:lily_valley_bouquet_into_lily_valley"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:lily_valley_bouquet_item",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "minecraft:red_flower",
+      "data": 10,
+      "count": 9
+    }
+  }
+}

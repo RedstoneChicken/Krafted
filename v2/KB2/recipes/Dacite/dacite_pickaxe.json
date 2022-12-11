@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:dacite_pickaxe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XXX",
+      " # ",
+      " # "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stick"
+      },
+      "X": {
+        "item": "cav:dacite"
+      }
+    },
+    "result": {
+      "item": "minecraft:stone_pickaxe"
+    }
+  }
+}

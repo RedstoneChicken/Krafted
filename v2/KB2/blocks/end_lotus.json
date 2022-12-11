@@ -1,0 +1,77 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:end_lotus"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "end_lotus",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.end_lotus",
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_interact": {
+				"event": "fruit"
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					5,
+					-4
+				],
+				"size": [
+					8,
+					7,
+					8
+				]
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:endilex_leaves",
+							"end:endilex_log"
+						],
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"fruit": {
+				"set_block": {
+					"block_type": "end:end_lotus_non"
+				},
+				"spawn_loot": {
+					"table": "loot_tables/lotus_melon.json"
+				}
+			}
+		}
+	}
+}

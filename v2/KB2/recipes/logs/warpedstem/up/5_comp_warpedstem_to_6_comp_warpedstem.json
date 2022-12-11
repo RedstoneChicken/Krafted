@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:quintuple_compressed_warpedstem_to_sextuple_compressed_warpedstem"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:quintuple_compressed_warpedstem"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:sextuple_compressed_warpedstem",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,377 @@
+{
+	"format_version" : "1.16.0",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:ghast",
+			"is_spawnable" : true,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"elite_ghast" : {
+				"minecraft:health" : {
+					"value" : 20,
+					"max" : 20
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/elite_ghast.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "20"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Armoured Ghast The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Unseen Ghast Of Stalking"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_ghastly" : {
+				"minecraft:boss" : {
+					"hud_range" : 64,
+					"name" : "§bElite Fireballsy Ghast The Bomber"
+				},
+				"minecraft:behavior.ranged_attack" : {
+					"priority" : 3,
+					"burst_shots" : 3,
+					"burst_interval" : 0.4,
+					"charge_charged_trigger" : 0.0,
+					"charge_shoot_trigger" : 4.0,
+					"attack_radius" : 64.0
+				}
+			},
+			"ultra_ghast" : {
+				"minecraft:health" : {
+					"value" : 40,
+					"max" : 40
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/ultra_ghast.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "40"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Defensive Ghast Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Stalking Ghast The Unseen"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_ghastly" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§eUltra Bombing Ghast Of Balls Of Fire"
+				},
+				"minecraft:behavior.ranged_attack" : {
+					"priority" : 3,
+					"burst_shots" : 5,
+					"burst_interval" : 0.4,
+					"charge_charged_trigger" : 0.0,
+					"charge_shoot_trigger" : 4.0,
+					"attack_radius" : 80.0
+				}
+			},
+			"infernal_ghast" : {
+				"minecraft:health" : {
+					"value" : 60,
+					"max" : 60
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/infernal_ghast.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "60"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Turtling Ghast Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Hunting Ghast The Predator"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_ghastly" : {
+				"minecraft:boss" : {
+					"hud_range" : 96,
+					"name" : "§cInfernal Bombing Ghast OMGFIREBALLS"
+				},
+				"minecraft:behavior.ranged_attack" : {
+					"priority" : 3,
+					"burst_shots" : 7,
+					"burst_interval" : 0.4,
+					"charge_charged_trigger" : 0.0,
+					"charge_shoot_trigger" : 4.0,
+					"attack_radius" : 96.0
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:experience_reward" : {
+				"on_death" : "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+			},
+			"minecraft:breathable" : {
+				"total_supply" : 15,
+				"suffocate_time" : 0
+			},
+			"minecraft:fire_immune" : {},
+			"minecraft:nameable" : {},
+			"minecraft:health" : {
+				"value" : 10,
+				"max" : 10
+			},
+			"minecraft:collision_box" : {
+				"width" : 4.02,
+				"height" : 4
+			},
+			"minecraft:movement" : {
+				"value" : 0.03
+			},
+			"minecraft:navigation.float" : {
+				"can_path_over_water" : true
+			},
+			"minecraft:behavior.float_wander" : {
+				"priority" : 2,
+				"must_reach" : true
+			},
+			"minecraft:can_fly" : {},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/ghast.json"
+			},
+			"minecraft:shooter" : {
+				"def" : "minecraft:fireball"
+			},
+			"minecraft:type_family" : {
+				"family" : [ "ghast", "monster", "mob" ]
+			},
+			"minecraft:damage_sensor" : {
+				"triggers" : {
+					"cause" : "fall",
+					"deals_damage" : false
+				}
+			},
+			"minecraft:jump.static" : {},
+			"minecraft:despawn" : {
+				"despawn_from_distance" : {}
+			},
+			"minecraft:behavior.float" : {
+				"priority" : 0
+			},
+			"minecraft:behavior.ranged_attack" : {
+				"priority" : 1,
+				"attack_radius" : 64,
+				"charge_shoot_trigger" : 2,
+				"charge_charged_trigger" : 1
+			},
+			"minecraft:follow_range" : {
+				"value" : 64,
+				"max" : 64
+			},
+			"minecraft:behavior.hurt_by_target" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.nearest_attackable_target" : {
+				"priority" : 2,
+				"entity_types" : [
+					{
+						"filters" : {
+							"test" : "is_family",
+							"subject" : "other",
+							"value" : "player"
+						},
+						"max_dist" : 28
+					}
+				],
+				"must_see" : true
+			},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 9500,
+						"add" : {},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_ghast", "elite_bullwark" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_ghast", "elite_cloaking" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_ghast", "elite_ghastly" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_ghast", "ultra_bullwark" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_ghast", "ultra_cloaking" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_ghast", "ultra_ghastly" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_ghast", "infernal_bullwark" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_ghast", "infernal_cloaking" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_ghast", "infernal_ghastly" ]
+						}
+					}
+				]
+			}
+		}
+	}
+}

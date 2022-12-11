@@ -1,0 +1,210 @@
+//bridge-file-version: #34
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "incubation:nest",
+			"category": "Nature",
+			"properties": {
+				"incubation:egg": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.nest_geo",
+			"minecraft:loot": "loot_tables/blocks/incubation_nest.json",
+			"minecraft:destroy_time": 0.3,
+			"minecraft:friction": 0.7,
+			"minecraft:map_color": "#FFFFFF",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:flammable": {
+				"flame_odds": 1,
+				"burn_odds": 1
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:on_player_destroyed": {
+				"event": "remove:block",
+				"target": "self"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "incubation_nest",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "step:on",
+				"target": "self"
+			},
+			"minecraft:on_step_off": {
+				"event": "step:off",
+				"target": "self"
+			},
+			"minecraft:on_placed": {
+				"event": "size:block",
+				"target": "self"
+			},
+			"minecraft:on_fall_on": {
+				"event": "fall:on",
+				"target": "self"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					10,
+					10
+				],
+				"on_tick": {
+					"event": "on_tick",
+					"target": "self"
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "nature"
+			},
+			"minecraft:on_interact": {
+				"condition": "query.get_equipped_item_name == 'egg'",
+				"event": "nestegg"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "random:tick",
+					"target": "self"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					3,
+					16
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					3,
+					16
+				]
+			}
+		},
+		"events": {
+			"remove:block": {},
+			"size:block": {},
+			"step:on": {},
+			"step:off": {},
+			"random:tick": {
+				"sequence": [
+					{
+						"condition": "query.block_property('incubation:egg') == 1",
+						"run_command": {
+							"command": [
+								"summon minecraft:chicken ~ ~ ~ from_egg"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('incubation:egg') == 1",
+						"set_block_property": {
+							"incubation:egg": 0
+						}
+					}
+				]
+			},
+			"on_tick": {},
+			"fall:on": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"incubation:egg": 0
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:egg_destroy_emitter"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound block.turtle_egg.crack"
+							]
+						}
+					}
+				]
+			},
+			"nestegg": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"incubation:egg": 1
+						}
+					},
+					{
+						"decrement_stack": {}
+					}
+				]
+			},
+			"nestremove": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/incubation_egg_drop.json"
+				},
+				"set_block_property": {
+					"incubation:egg": 0
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('incubation:egg') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.nest_geo",
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name == 'egg'",
+						"event": "nestegg"
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "incubation_nest",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('incubation:egg') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.nestegg_geo",
+					"minecraft:on_interact": {
+						"event": "nestremove"
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "incubation_nest",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:on_fall_on": {
+						"condition": "query.block_property('incubation:egg') == 1",
+						"event": "fall:on",
+						"target": "self"
+					}
+				}
+			}
+		]
+	}
+}

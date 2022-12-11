@@ -1,0 +1,35 @@
+//bridge-file-version: #35
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:longsword_128"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_sword_blade"
+			},
+			"~": {
+				"item": "strat:manyullyn_hand_guard"
+			},
+			"o": {
+				"item": "strat:manyullyn_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:longsword_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

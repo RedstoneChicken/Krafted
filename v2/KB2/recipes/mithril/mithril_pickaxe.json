@@ -1,0 +1,31 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:mithril_pickaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			" # ",
+			" # "
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stick"
+			},
+			"X": {
+				"item": "oh:mithril"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:mithril_pickaxe",
+				"count": 1
+			}
+		]
+	}
+}

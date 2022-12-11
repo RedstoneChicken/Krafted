@@ -1,0 +1,106 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cc:compressed_crimsonstem",
+			"register_to_creative_menu": true,
+			"is_experimental": false,
+			"properties": {
+				"cc:tiledata": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('cc:tiledata') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					],
+					"minecraft:geometry": "geometry.block",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "compressed_crimsonstem",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_player_placing": {
+						"event": "cc:update_rot",
+						"target": "self"
+					},
+					"minecraft:loot": "loot_tables/logs/crimsonstem/compressed_crimsonstem.json",
+					"tag:minecraft:wood": {}
+				}
+			},
+			{
+				"condition": "query.block_property('cc:tiledata') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						90
+					],
+					"minecraft:geometry": "geometry.block",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "compressed_crimsonstem",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_player_placing": {
+						"event": "cc:update_rot",
+						"target": "self"
+					},
+					"minecraft:loot": "loot_tables/logs/crimsonstem/compressed_crimsonstem.json",
+					"tag:minecraft:wood": {}
+				}
+			},
+			{
+				"condition": "query.block_property('cc:tiledata') == 2",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						90,
+						0
+					],
+					"minecraft:geometry": "geometry.block",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "compressed_crimsonstem",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_player_placing": {
+						"event": "cc:update_rot",
+						"target": "self"
+					},
+					"minecraft:loot": "loot_tables/logs/crimsonstem/compressed_crimsonstem.json",
+					"tag:minecraft:wood": {}
+				}
+			}
+		],
+		"events": {
+			"cc:update_rot": {
+				"set_block_property": {
+					"cc:tiledata": "math.floor(query.block_face/2)"
+				}
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 1,
+			"minecraft:block_light_emission": 0,
+			"minecraft:breathability": "solid",
+			"minecraft:immovable": true,
+			"minecraft:destroy_time": 5,
+			"minecraft:explosion_resistance": 1200,
+			"minecraft:creative_category": {
+				"category": "construction"
+			}
+		}
+	}
+}

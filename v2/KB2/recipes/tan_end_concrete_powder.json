@@ -1,0 +1,49 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:tan_end_concrete_powder"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "group": "concrete_powder",
+    "ingredients": [
+      {
+        "item": "cav:tan_dye"
+      },
+      {
+        "item": "cav:end_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:end_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:end_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:end_sand",
+        "data": 0
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      }
+    ],
+    "result": {
+      "item": "cav:tan_concrete_powder",
+      "count": 8
+    }
+  }
+}

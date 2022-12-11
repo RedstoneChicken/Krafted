@@ -1,0 +1,42 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "nether:marouge_tree_feature_rule",
+			"places_feature": "nether:marouge_tree_placement_feature"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "crimson_forest"
+			}
+		},
+		"distribution": {
+			"iterations": 350,
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"y": {
+				"extent": [
+					30,
+					80
+				],
+				"distribution": "uniform"
+			},
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_wolfsbane_into_large_wolfsbane"},"tags":["crafting_table"],"ingredients":[{"item":"ff:wolfsbane_tall_item","count":2}],"result":{"item":"ff:wolfsbane_large_item"}}}

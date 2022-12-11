@@ -1,0 +1,73 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "kna:dummy",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"kna:despawned": {
+        "minecraft:instant_despawn": {}
+   }
+		},
+		"components": {
+	   "minecraft:timer": {
+       "looping": false,
+       "time": 30,
+       "time_down_event": {
+         "event": "kna:despawned"
+       }
+      },
+			"minecraft:type_family": {
+			  "family": [ "player", "pet", "mob" ]
+			},
+			"minecraft:nameable": {},
+			"minecraft:collision_box": {
+				"width": 0.8,
+				"height": 2.7
+			},
+			"minecraft:health": {
+				"value": 10000,
+				"max": 10000
+			},
+			"minecraft:attack": {
+				"damage": 0
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true
+			},
+			"minecraft:jump.static": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:follow_range": {
+				"value": 0
+			},
+			"minecraft:knockback_resistance": {
+				"value": 200,
+				"max": 200
+			}
+		},
+		"events": {
+			  "kna:despawned": {
+    "add": {
+     "component_groups": [
+      "kna:despawned"
+     ]
+    },
+    "run_command": {
+     "command": [
+      "particle minecraft:death_explosion_emitter ~ ~0.5 ~"
+     ]
+    }
+   }
+		}
+	}
+}

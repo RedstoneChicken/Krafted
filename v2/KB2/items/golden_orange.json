@@ -1,0 +1,52 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:golden_orange",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"saturation_modifier": "supernatural",
+				"nutrition": 8,
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "effect",
+					"target": "self"
+				}
+			},
+			"minecraft:use_duration": 1.5,
+			"minecraft:use_animation": "eat",
+			"minecraft:icon": {
+				"texture": "korbon:golden_orange"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:display_name": {
+				"value": "§bGolden Orange§r"
+			}
+		},
+		"events": {
+			"effect": {
+				"add_mob_effect": {
+					"effect": "regeneration",
+					"target": "holder",
+					"duration": 10,
+					"amplifier": 1
+				},
+				"run_command": {
+					"command": [
+						"effect @s absorption 120 1 false"
+					],
+					"target": "holder"
+				}
+			}
+		}
+	}
+}

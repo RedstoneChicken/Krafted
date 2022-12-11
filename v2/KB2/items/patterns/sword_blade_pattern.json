@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:sword_blade_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Sword Blade Pattern\n§7Material Cost: 2§r"
+			},
+			"minecraft:icon": {
+				"texture": "strat_sword blade pattern"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:sword_blade_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

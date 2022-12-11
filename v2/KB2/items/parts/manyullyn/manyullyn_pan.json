@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:manyullyn_pan"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Manyullyn Pan"
+			},
+			"minecraft:icon": {
+				"texture": "manyullyn_pan"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,53 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "mudstone_swamp_feature_rules",
+      "places_feature": "cav:mudstone_feature"
+    },
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "any_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "swamp"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "overworld_generation"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 10,
+      "coordinate_eval_order": "zyx",
+      "x": {
+        "distribution": "uniform",
+        "extent": [
+          0,
+          16
+        ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [
+          49,
+          59
+        ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [
+          0,
+          16
+        ]
+      }
+    }
+  }
+}

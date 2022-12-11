@@ -1,0 +1,48 @@
+{
+ "format_version": "1.16.100",
+ "minecraft:item": {
+  "description": {
+   "identifier": "kna:sussy_paper"
+  },
+  "components": {
+   "minecraft:use_animation": "drink",
+   "minecraft:hand_equipped": false,
+   "minecraft:stacked_by_data": true,
+   "minecraft:max_stack_size": 1,
+   "minecraft:use_duration": 0.2,
+   "minecraft:icon": {
+    "texture": "paper"
+   },
+   "minecraft:display_name": {
+    "value": "§4Suspicious §7Paper"
+   },
+   "minecraft:creative_category": {
+    "parent": "itemGroup.name.starter"
+   },
+   "minecraft:foil": true,
+   "minecraft:on_use": {
+    "on_use": {
+     "event": "use",
+     "target": "self"
+    }
+   }
+  },
+  "events": {
+   "use": {
+    "run_command": {
+     "command": [
+     	"gamerule sendcommandfeedback false",
+      "give @a kna:starter_chest 1",
+      "give @a kna:common_crate 2",
+        "give @a kna:uncommon_crate 1",
+      "give @a kna:sock_of_candies_4"
+     ],
+     "target": "holder"
+    },
+    "decrement_stack": {
+     "ignore_game_mode": false
+    }
+   }
+  }
+ }
+}   

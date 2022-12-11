@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:septuple_compressed_emerald_block_to_octuple_compressed_emerald_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:septuple_compressed_emerald_block"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:octuple_compressed_emerald_block",
+				"count": 1
+			}
+		]
+	}
+}

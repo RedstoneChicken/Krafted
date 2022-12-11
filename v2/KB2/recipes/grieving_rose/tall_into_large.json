@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_grieving_rose_into_large_grieving_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:grieving_rose_tall_item","count":2}],"result":{"item":"ff:grieving_rose_large_item"}}}

@@ -1,0 +1,69 @@
+//bridge-file-version: #54
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_leaves"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.2,
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_leaves_side",
+					"render_method": "blend"
+				},
+				"up": {
+					"texture": "chorus_leaves_top",
+					"render_method": "blend"
+				},
+				"down": {
+					"texture": "chorus_leaves_top",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:map_color": "#908640",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.leaves",
+				"category": "nature"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			},
+			"minecraft:loot": "empty",
+			"tag:chorus_leaves": {}
+		},
+		"events": {
+			"particle": {
+				"randomize": [
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"particle korbon:chorus_leaf ~~-0.5~"
+							]
+						}
+					},
+					{
+						"weight": 2
+					}
+				]
+			},
+			"shear": {
+				"sequence": [
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/chorus_leaves.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

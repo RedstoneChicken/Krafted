@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:catfish",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "catfish",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

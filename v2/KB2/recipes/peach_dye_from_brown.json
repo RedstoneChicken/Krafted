@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:peach_dye_from_brown"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:brown_dye"
+      },
+      {
+        "item": "minecraft:white_dye",
+        "count": 2
+      }
+    ],
+    "result": {
+      "item": "cav:peach_dye",
+      "count": 3
+    }
+  }
+}

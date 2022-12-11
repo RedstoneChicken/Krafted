@@ -1,0 +1,30 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:magmaflowerstage04"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.magma_flower_stage04",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "magmaflower",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:magma"
+						]
+					}
+				]
+			},
+			"minecraft:block_light_emission": 0.8
+		},
+		"events": {}
+	}
+}

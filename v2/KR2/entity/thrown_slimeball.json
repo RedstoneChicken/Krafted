@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:thrown_slimeball",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/items/hardened_slimeball"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+		"particle_effects": {
+			"cloud": "honkit26113:thrown_slimeball_hit_particle"
+		},
+      "render_controllers": [ "controller.render.item_sprite" ],
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+} 

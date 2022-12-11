@@ -1,0 +1,16 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook_golden_koi_to_salmon"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "adv:golden_koi",
+    "output": "minecraft:cooked_salmon"
+  }
+}

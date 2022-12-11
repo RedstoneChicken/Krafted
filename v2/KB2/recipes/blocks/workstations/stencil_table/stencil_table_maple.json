@@ -1,0 +1,30 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stencil_table_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stencil_table_maple",
+				"count": 1
+			}
+		]
+	}
+}

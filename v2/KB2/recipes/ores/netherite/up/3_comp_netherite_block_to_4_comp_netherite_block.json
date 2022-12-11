@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:tripple_compressed_netherite_block_to_quadruple_compressed_netherite_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:tripple_compressed_netherite_block"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:quadruple_compressed_netherite_block",
+				"count": 1
+			}
+		]
+	}
+}

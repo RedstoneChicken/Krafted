@@ -1,0 +1,28 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:plate_boots_manyullyn_3"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:plate_boots_manyullyn",
+				"count": 1
+			},
+			{
+				"item": "minecraft:rabbit_foot",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "strat:plate_boots_manyullyn_3",
+				"count": 1
+			}
+		]
+	}
+}

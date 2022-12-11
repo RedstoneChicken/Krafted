@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_elymus_grass_into_tall_elymus_grass"},"tags":["crafting_table"],"ingredients":[{"item":"ff:elymus_grass_item","count":2}],"result":{"item":"ff:elymus_grass_tall_item"}}}

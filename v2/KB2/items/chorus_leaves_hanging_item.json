@@ -1,0 +1,27 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:chorus_leaves_hanging_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:chorus_leaves_hanging",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "chorus_leaves_hanging_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:chorus_leaves_hanging_item.name"
+			}
+		},
+		"events": {}
+	}
+}

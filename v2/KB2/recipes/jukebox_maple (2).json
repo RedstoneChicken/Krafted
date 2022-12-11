@@ -1,0 +1,30 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.16,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:jukebox_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"ABA",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "strat:maple_planks"
+			},
+			"B": {
+				"item": "diamond"
+			}
+		},
+		"result": {
+			"item": "jukebox",
+			"count": 1
+		},
+		"priority": 50
+	}
+}

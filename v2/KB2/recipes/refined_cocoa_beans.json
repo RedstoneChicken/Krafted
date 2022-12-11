@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "kna:refined_cocoa_beans"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:dye",
+        "data":  3
+      },
+      {
+       "item": "minecraft:bowl"
+      }
+    ],
+    "result": {
+      "item": "kna:refined_cocoa",
+      "count": 1
+    }
+  }
+}

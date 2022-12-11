@@ -1,0 +1,26 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "nether:wither_nylium_scatter"
+		},
+		"iterations": 1000,
+		"x": {
+			"extent": [
+				-32,
+				32
+			],
+			"distribution": "gaussian"
+		},
+		"z": {
+			"extent": [
+				-32,
+				32
+			],
+			"distribution": "gaussian"
+		},
+		"y": -1,
+		"places_feature": "nether:wither_nylium_snap_to_surface"
+	}
+}

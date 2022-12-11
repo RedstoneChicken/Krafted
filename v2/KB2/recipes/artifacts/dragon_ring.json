@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "kna:dragon_ring"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "HA ",
+      "A A",
+      " A "
+    ],
+    "key": {
+      "H": {
+        "item": "minecraft:dragon_egg"
+      },
+      "A": {
+        "item": "minecraft:dragon_breath"
+      }
+    },
+    "result": {
+      "item": "kna:dragon_ring",
+      "count": 1
+    }
+  }
+}

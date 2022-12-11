@@ -1,0 +1,8 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "mysterious_mushroom",
+		"metalness_emissive_roughness": "mysterious_mushroom_mer"
+	}
+}

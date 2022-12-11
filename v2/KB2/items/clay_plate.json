@@ -1,0 +1,19 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:clay_plate",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "clay_plate"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

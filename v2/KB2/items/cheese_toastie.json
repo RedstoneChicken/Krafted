@@ -1,0 +1,25 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cheese_toastie",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "good"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_cheese toastie"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

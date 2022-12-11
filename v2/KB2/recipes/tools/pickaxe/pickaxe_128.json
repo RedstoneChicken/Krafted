@@ -1,0 +1,35 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:pickaxe_128"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_pickaxe_head"
+			},
+			"~": {
+				"item": "strat:manyullyn_binding"
+			},
+			"o": {
+				"item": "strat:manyullyn_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:pickaxe_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

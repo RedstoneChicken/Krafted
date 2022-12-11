@@ -1,0 +1,83 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:tool_rod_pattern_block"
+		},
+		"components": {
+			"minecraft:block_light_filter": 0,
+			"minecraft:geometry": "geometry.stencil",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "tool_rod_pattern",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"strat:stencil_table_spruce",
+							"strat:stencil_table_birch",
+							"strat:stencil_table_jungle",
+							"strat:stencil_table_acacia",
+							"strat:stencil_table_dark_oak",
+							"strat:stencil_table_oak",
+							"strat:stencil_table_warped",
+							"strat:stencil_table_crimson",
+							"strat:stencil_table_mangrove",
+							"strat:stencil_table_lavawood",
+							"strat:stencil_table_maple"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:loot": "loot_tables/patterns/tool_rod_pattern.json",
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					1,
+					12
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "strat:pattern"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:pattern": {
+				"sequence": [
+					{
+						"condition": "query.is_sneaking == 0.0",
+						"set_block": {
+							"block_type": "strat:tool_binding_pattern_block"
+						}
+					},
+					{
+						"condition": "query.is_sneaking == 1.0",
+						"run_command": {
+							"command": [
+								"title @s actionbar Selected: Tool Rod Pattern"
+							],
+							"target": "player"
+						}
+					}
+				]
+			}
+		}
+	}
+}

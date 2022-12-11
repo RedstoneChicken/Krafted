@@ -1,0 +1,33 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:end_campfire_crystal_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" S ",
+			"SPS",
+			"WWW"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stick"
+			},
+			"P": {
+				"item": "end:poison_crystal"
+			},
+			"W": {
+				"item": "end:crystal_mushroom_stem"
+			}
+		},
+		"result": [
+			{
+				"item": "end:end_campfire_item"
+			}
+		]
+	}
+}

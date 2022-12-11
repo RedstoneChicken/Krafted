@@ -1,0 +1,110 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:coffee_bean_sapling"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:loot": "loot_tables/coffee_bean_sapling.json",
+			"minecraft:geometry": "geometry.strat_crop",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "coffee_bean_sapling",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:grass",
+							"minecraft:dirt",
+							"minecraft:podzol"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "grow"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					13,
+					12
+				]
+			}
+		},
+		"events": {
+			"grow": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ air",
+								"structure load coffee_tree ~-2 ~ ~-2"
+							]
+						},
+						"weight": 1
+					},
+					{
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ air",
+								"structure load coffee_tree2 ~-2 ~ ~-2"
+							]
+						},
+						"weight": 3
+					}
+				]
+			},
+			"bone_meal": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"particle minecraft:crop_growth_emitter ~~~",
+										"playsound item.bone_meal.use @a ~~~"
+									]
+								},
+								"weight": 1
+							},
+							{
+								"trigger": {
+									"event": "grow"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"particle minecraft:crop_growth_emitter ~~~"
+									]
+								},
+								"weight": 5
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

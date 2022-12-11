@@ -1,0 +1,94 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:frypan_55_8",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "frypan_55_8"
+			},
+			"minecraft:display_name": {
+				"value": "Ardite Frypan\n§bDiamond\n§3Beheading§r"
+			},
+			"minecraft:damage": 5,
+			"minecraft:durability": {
+				"max_durability": 1686,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "hurt"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:hand_equipped": true,
+			"minecraft:max_stack_size": 1
+		},
+		"events": {
+			"hurt": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability == 10000",
+						"transform_item": {
+							"transform": "strat:frypan_55_broken"
+						},
+						"run_command": {
+							"command": [
+								"playsound tinkers.frypan_hit @a ~~~",
+								"playsound random.break @a ~~~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"condition": "query.remaining_durability < 10000",
+						"damage": {
+							"type": "none",
+							"amount": 1,
+							"target": "self"
+						},
+						"run_command": {
+							"command": [
+								"playsound tinkers.frypan_hit @a ~~~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"effect @s slowness 2 1 true"
+							],
+							"target": "other"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"run_command": {
+									"command": [
+										"function beheading"
+									],
+									"target": "holder"
+								},
+								"weight": 1
+							},
+							{
+								"weight": 29
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

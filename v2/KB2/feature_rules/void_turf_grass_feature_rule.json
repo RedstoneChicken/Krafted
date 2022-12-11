@@ -1,0 +1,48 @@
+//bridge-file-version: #101
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "korbon:void_turf_grass_feature_rule",
+			"places_feature": "korbon:void_turf_grass_scatter_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "the_end"
+						}
+					]
+				}
+			],
+			"placement_pass": "final_pass"
+		},
+		"distribution": {
+			"iterations": 100,
+			"x": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					15
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					100
+				]
+			},
+			"z": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					15
+				]
+			}
+		}
+	}
+}

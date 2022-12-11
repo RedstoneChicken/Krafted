@@ -1,0 +1,25 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:platinum_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"X X",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "oh:platinum"
+			}
+		},
+		"result": {
+			"item": "oh:platinum_chestplate"
+		}
+	}
+}

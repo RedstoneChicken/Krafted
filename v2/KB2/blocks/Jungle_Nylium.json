@@ -1,0 +1,74 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:jungle_nylium"
+		},
+		"components": {
+			"minecraft:on_interact": {
+				"event": "caf:growrandom",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:destroy_time": 1
+		},
+		"events": {
+			"caf:grow1": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~1~",
+						"setblock ~1~~ caf:jungle_nylium"
+					]
+				}
+			},
+			"caf:grow2": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~1~",
+						"setblock ~~~1 caf:jungle_nylium"
+					]
+				}
+			},
+			"caf:grow3": {
+				"run_command": {
+					"command": [
+						"function JungleNyliumRandomGrow1",
+						"particle minecraft:crop_growth_emitter ~~1~"
+					]
+				}
+			},
+			"caf:grow4": {
+				"run_command": {
+					"command": [
+						"function JungleNyliumRandomGrow2",
+						"particle minecraft:crop_growth_emitter ~~1~"
+					]
+				}
+			},
+			"caf:growrandom": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow1"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow2"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow3"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow4"
+						}
+					}
+				]
+			}
+		}
+	}
+}

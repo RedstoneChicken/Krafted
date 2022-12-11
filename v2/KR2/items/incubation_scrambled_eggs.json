@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "incubation:scrambled_eggs",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "incubation:scrambled_eggs",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

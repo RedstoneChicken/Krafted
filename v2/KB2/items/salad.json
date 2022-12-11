@@ -1,0 +1,31 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:salad",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:max_stack_size": 16,
+			"minecraft:use_animation": "eat",
+			"minecraft:food": {
+				"nutrition": 7,
+				"can_always_eat": false,
+				"saturation_modifier": "normal",
+				"using_converts_to": "minecraft:bowl",
+				"on_consume": {
+					"event": "consume"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_salad"
+			}
+		},
+		"events": {}
+	}
+}

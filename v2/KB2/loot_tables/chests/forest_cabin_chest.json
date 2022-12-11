@@ -1,0 +1,189 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 2,
+        "max": 5
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gold_ingot",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bread",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 2,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potato",
+          "weight": 23,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:carrot",
+          "weight": 23,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:book",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:enchanted_book",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "enchant_randomly"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:coal",
+          "weight": 16,
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 0
+            },
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:wheat",
+          "weight": 18,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:compass",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bucket",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:fishing_rod",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

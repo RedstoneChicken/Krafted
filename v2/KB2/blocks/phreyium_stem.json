@@ -1,0 +1,84 @@
+//bridge-file-version: #30
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:phreyium_stem",
+			"properties": {
+				"korbon:facing_direction": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:facing_direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:facing_direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:facing_direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:flammable": {
+				"burn_odds": 25,
+				"flame_odds": 25
+			},
+			"minecraft:loot": "loot_tables/blocks/burning_log.json",
+			"minecraft:unit_cube": {},
+			"minecraft:destroy_time": 0.6,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "phreyium_stem",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "set_facing_direction"
+			},
+			"minecraft:explosion_resistance": 0.7,
+			"minecraft:map_color": "#1C1911",
+			"minecraft:on_interact": {
+				"event": "cwt:stripped",
+				"target": "self",
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.log",
+				"category": "nature"
+			}
+		},
+		"events": {
+			"set_facing_direction": {
+				"set_block_property": {
+					"korbon:facing_direction": "math.floor(query.cardinal_block_face_placed_on / 2.0)"
+				}
+			}
+		}
+	}
+}

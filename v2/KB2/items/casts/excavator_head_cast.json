@@ -1,0 +1,23 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:excavator_head_cast",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Excavator Head Cast\n§7Material Cost: 8§r"
+			},
+			"minecraft:icon": {
+				"texture": "excavator_head_cast"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"tag:cast": {}
+		},
+		"events": {}
+	}
+}

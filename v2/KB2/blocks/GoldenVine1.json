@@ -1,0 +1,117 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:golden_vine1"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0.7,
+			"minecraft:geometry": "geometry.cb",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "goldenvine1",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "caf:meal_random",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:entity_collision": false
+		},
+		"events": {
+			"caf:grow1": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ caf:golden_vine1",
+						"setblock ~ ~-2 ~ caf:golden_vine1",
+						"setblock ~ ~-3 ~ caf:golden_vine2",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow2": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ caf:golden_vine2",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow3": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ caf:golden_vine1",
+						"setblock ~ ~-2 ~ caf:golden_vine2",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow1_natural": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ caf:golden_vine1",
+						"setblock ~ ~-2 ~ caf:golden_vine1",
+						"setblock ~ ~-3 ~ caf:golden_vine2"
+					]
+				}
+			},
+			"caf:grow2_natural": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ caf:golden_vine2"
+					]
+				}
+			},
+			"caf:grow3_natural": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ caf:golden_vine1",
+						"setblock ~ ~-2 ~ caf:golden_vine2"
+					]
+				}
+			},
+			"caf:meal_random": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow1"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow2"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow3"
+						}
+					}
+				]
+			},
+			"caf:grow_random": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow1_natural"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow2_natural"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow3_natural"
+						}
+					}
+				]
+			}
+		}
+	}
+}

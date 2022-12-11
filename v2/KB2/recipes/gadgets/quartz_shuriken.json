@@ -1,0 +1,27 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:quartz_shuriken"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" # ",
+			"# #",
+			" # "
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:quartz"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:quartz_shuriken",
+				"count": 4
+			}
+		]
+	}
+}

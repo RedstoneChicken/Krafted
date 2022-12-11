@@ -1,0 +1,29 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:smelting_manyullyn_wide_guard"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_wide_guard"
+			},
+			"~": {
+				"item": "minecraft:bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_manyullyn_bucket",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.blastling.shoot": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shoot": "query.is_charged&&q.has_target"
+						}
+					],
+					"blend_transition": 0.05
+				},
+				"shoot": {
+					"animations": [
+						"shoot"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.05
+				}
+			}
+		}
+	}
+}

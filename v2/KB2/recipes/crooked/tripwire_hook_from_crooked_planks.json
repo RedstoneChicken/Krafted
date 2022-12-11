@@ -1,0 +1,32 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:tripwire_hook_from_crooked_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "A",
+            "B",
+            "C"
+        ],
+        "key": {
+            "A": {
+                "item": "iron_ingot"
+            },
+            "B": {
+                "item": "stick"
+            },
+            "C": {
+                "item": "honkit26113:crooked_planks"
+            }
+        },
+        "result": {
+            "item": "tripwire_hook",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

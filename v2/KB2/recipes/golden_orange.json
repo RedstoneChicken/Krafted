@@ -1,0 +1,28 @@
+{
+  "format_version": "1.13",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "korbon:golden_orange"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:gold_ingot"
+      },
+      "X": {
+        "item": "korbon:orange"
+      }
+    },
+    "result": {
+      "item": "korbon:golden_orange",
+      "data": 0
+    }
+  }
+}

@@ -1,0 +1,32 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:pizza_dinner"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:meat_feast_pizza_slice",
+				"count": 1
+			},
+			{
+				"item": "strat:fries",
+				"count": 1
+			},
+			{
+				"item": "strat:paper_plate",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:pizza_dinner",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:cut_mudstone_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:cut_mudstone"
+      }
+    },
+    "result": {
+      "item": "cav:cut_mudstone_slab",
+      "count": 6
+    }
+  }
+}

@@ -1,0 +1,60 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "rns:bushrule",
+			"places_feature": "rns:bushplace"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "forest"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "plains"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "meadows"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "grove"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 5,
+			"scatter_chance": 2,
+			"x": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+			"z": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

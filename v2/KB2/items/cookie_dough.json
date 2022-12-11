@@ -1,0 +1,19 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cookie_dough",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "cookie_dough"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

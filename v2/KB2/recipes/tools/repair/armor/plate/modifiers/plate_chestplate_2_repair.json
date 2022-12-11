@@ -1,0 +1,29 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:plate_chestplate_2_repair"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:plate_chestplate_2",
+				"count": 1
+			},
+			{
+				"item": "strat:cobalt_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:plate_chestplate_2",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

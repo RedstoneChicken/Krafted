@@ -1,0 +1,35 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:enderling",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/enderling"
+			},
+			"geometry": {
+				"default": "geometry.enderling"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.enderling.walk",
+				"idle": "animation.enderling.idle",
+				"move": "animation.enderling.move"
+			},
+			"spawn_egg": {
+				"base_color": "#3E0A47",
+				"overlay_color": "#316641"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

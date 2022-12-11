@@ -1,0 +1,17 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.cryptcrawler.move": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"move": "query.modified_move_speed"
+						}
+					]
+				}
+			}
+		}
+	}
+}

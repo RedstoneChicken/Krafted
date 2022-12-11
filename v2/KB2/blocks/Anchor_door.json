@@ -1,0 +1,177 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:anchor_door",
+			"properties": {
+				"caf:open": [
+					0,
+					1
+				],
+				"caf:facing": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"texture": "anchordoor"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "caf:facing"
+			},
+			"minecraft:breakonpush": true
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('ed:open') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.extra_door",
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							5
+						],
+						"size": [
+							16,
+							16,
+							3
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							0,
+							5
+						],
+						"size": [
+							16,
+							16,
+							3
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "caf:open",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('caf:open') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.extra_door_open",
+					"minecraft:pick_collision": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:entity_collision": {
+						"origin": [
+							5,
+							0,
+							-8
+						],
+						"size": [
+							3,
+							16,
+							16
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "caf:close",
+						"target": "self"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('caf:facing') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('caf:facing') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('caf:facing') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('caf:facing') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						-90,
+						0
+					]
+				}
+			}
+		],
+		"events": {
+			"caf:open": {
+				"set_block_property": {
+					"caf:open": 1
+				},
+				"run_command": {
+					"command": [
+						"playsound random.door_open @a ~ ~ ~"
+					],
+					"target": "self"
+				}
+			},
+			"caf:close": {
+				"set_block_property": {
+					"caf:open": 0
+				},
+				"run_command": {
+					"command": [
+						"playsound random.door_close @a ~ ~ ~"
+					],
+					"target": "self"
+				}
+			},
+			"caf:facing": {
+				"set_block_property": {
+					"caf:facing": "query.cardinal_facing_2d"
+				}
+			}
+		}
+	}
+}

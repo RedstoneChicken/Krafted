@@ -1,0 +1,29 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:skipper_raw",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:stacked_by_data": true,
+			"minecraft:foil": false,
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 4,
+				"can_always_eat": false,
+				"saturation_modifier": "low"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.rawFood"
+			},
+			"minecraft:icon": {
+				"texture": "skipper_raw"
+			}
+		},
+		"events": {}
+	}
+}

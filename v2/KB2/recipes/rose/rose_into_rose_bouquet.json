@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:rose_into_rose_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:rose_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:rose_bouquet_item",
+      "count": 1
+    }
+  }
+}

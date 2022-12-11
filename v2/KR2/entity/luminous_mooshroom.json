@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:luminous_mooshroom",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_luminous_mooshroom"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_luminous_mooshroom"
+      },
+      "animations": {
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.mooshroom.baby_transform"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.mooshroom.move" },
+        { "baby": "controller.animation.mooshroom.baby" }
+      ],
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "luminous_mooshroom_spawn_egg"
+      }
+    }
+  }
+}

@@ -1,0 +1,838 @@
+{
+ "format_version": "1.16.100",
+ "minecraft:item": {
+  "components": {
+   "minecraft:can_destroy_in_creative": false,
+   "minecraft:creative_category": {
+    "parent": "itemGroup.name.items"
+   },
+   "minecraft:display_name": {
+    "value": "§6Tier IV Crate\n§7Epic Artifacts"
+   },
+   "minecraft:hand_equipped": true,
+   "minecraft:icon": {
+    "texture": "epic_artifact"
+   },
+   "minecraft:max_stack_size": 1,
+   "minecraft:on_use": {
+    "on_use": {
+     "event": "give",
+     "target": "self"
+    }
+   },
+   "minecraft:use_animation": "drink",
+   "minecraft:use_duration": 0
+  },
+  "description": {
+   "identifier": "kna:epic_crate"
+  },
+  "events": {
+   "give": {
+    "randomize": [
+      {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:rocket_boost 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:blazing_coil 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:dragon_ring 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:midnight_berries 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:coral_totem 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:enderstone_necklace 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:night_clock 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:blast_crystal 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+  
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:concussion_shell 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:wither_star 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:winter_disc 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:dripstone_fragment 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+          {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:ring_of_fire 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:aura_goggles 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+          {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:vikings_horn 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:lightning_rod 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     }
+    ]
+   }
+  }
+ }
+}   d": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:lightning_rod 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     }
+    ]
+   }
+  }
+ }
+}    entity @s slot.weapon.mainhand 0 kna:amythest_crystal 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:golden_soup 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:shulker_stone 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:cold_snow 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:chorus_amulet 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:filling_bundle 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:water_sprayer 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:bushy_camou 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:winter_disc 1"
+       ],
+       "target": "self"
+      },
+      "weight": 5
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:gravity_template 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:feather_fall 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:coral_guard_totem 1"
+       ],
+       "target": "self"
+      },
+      "weight": 5
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:tnt_book 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:remote 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:tp_pearl 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:blazing_stick 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:glass_of_wine 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:discord_hunting 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:discord_fishing 1"
+       ],
+       "target": "self"
+      },
+      "weight": 10
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:enderstone_necklace 1"
+       ],
+       "target": "self"
+      },
+      "weight": 5
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:silver_ring 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:knockback_stick 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:evil_anvil 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     },
+     {
+      "run_command": {
+       "command": [
+        "replaceitem entity @s slot.weapon.mainhand 0 kna:stingy_hive 1"
+       ],
+       "target": "self"
+      },
+      "weight": 8
+     }
+    ]
+   }
+  }
+ }
+}								],
+								"target": "self"
+							}
+						 },
+						 						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:evil_anvil 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:stingy_hive 1"
+								],
+								"target": "self"
+							}
+						 }
+				]
+			}
+		}
+	}
+}format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:unknown_artifact"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.starter"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "unknown_artifact"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value": "Unknown Artifact"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "give",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"give": {
+						"randomize": [
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:eternal_steak 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:health_potion 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:clay_bricks 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:xp_tome 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:golem_kit 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:jump_boots 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:speed_boots 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:haste_spell 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:dynamite 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:concussion_bomb 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:ghast_ball 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 5,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:blast_crystal 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:midnight_escape_berries 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:drowned_shards 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:quiver 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:blinding_sac 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:flame_square 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:amythest_crystal 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:golden_soup 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:shulker_stone 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:cold_snow 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:chorus_amulet 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:filling_bundle 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:water_sprayer 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:bushy_camou 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:winter_disc 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:gravity_template 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:feather_fall 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 5,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:coral_guard_totem 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:tnt_book 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:remote 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:tp_pearl 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:blazing_stick 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:glass_of_wine 1"
+								],
+								"target": "self"
+							}
+						 },
+						 						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:discord_hunting 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:discord_fishing 1"
+								],
+								"target": "self"
+							}
+						 },
+						 	
+							{
+							"weight": 5,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:enderstone_necklace 1"
+								],
+								"target": "self"
+							}
+						 },
+						 						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:silver_ring 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:knockback_stick 1"
+								],
+								"target": "self"
+							}
+						 },
+						 						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:evil_anvil 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 8,
+							"run_command": {
+								"command": [
+									"replaceitem entity @s slot.weapon.mainhand 0 kna:stingy_hive 1"
+								],
+								"target": "self"
+							}
+						 }
+				]
+			}
+		}}

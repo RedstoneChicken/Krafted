@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:glowball",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "glowball"
+			},
+			"minecraft:display_name": {
+				"value": "Glowball\n§7Not suited for consumption.§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:max_stack_size": 16,
+			"minecraft:block_placer": {
+				"block": "strat:glow",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

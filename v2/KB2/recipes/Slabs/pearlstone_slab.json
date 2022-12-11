@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:pearlstone_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:pearlstone"
+      }
+    },
+    "result": {
+      "item": "cav:pearlstone_slab",
+      "count": 6
+    }
+  }
+}

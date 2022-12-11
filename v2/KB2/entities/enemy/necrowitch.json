@@ -1,0 +1,602 @@
+{
+ "format_version": "1.16.0",
+ "minecraft:entity": {
+  "components": {
+  	     "minecraft:break_blocks": {
+        "breakable_blocks": [
+        	"packed_ice"
+        ]
+      },
+   "minecraft:balloonable": {},
+   "minecraft:behavior.drink_potion": {
+    "potions": [
+     {
+      "chance": 1,
+      "id": 22
+     }
+    ],
+    "priority": 1,
+    "speed_modifier": 0.1
+   },
+   "minecraft:behavior.float": {
+    "priority": 0
+   },
+   "minecraft:behavior.summon_entity": {
+        "priority": 0,
+
+        "summon_choices": [
+          {
+            "min_activation_range": 0.0,
+            "max_activation_range": 3.0,
+            "cooldown_time": 8.0,
+            "weight": 3,
+            "cast_duration": 2.0,
+            "particle_color": "#FF664D59",
+            "start_sound_event": "cast.spell",
+            "sequence": [
+              {
+                "shape": "circle",
+                "target": "self",
+                "base_delay": 0.15,
+                "delay_per_summon": 0.0,
+                "num_entities_spawned": 8,
+                "entity_type": "kna:bad_skelly"
+              }
+            ]
+          },
+          {
+            "min_activation_range": 0.0,
+            "weight": 3,
+            "cooldown_time": 10.0,
+            "cast_duration": 2.0,
+            "particle_color": "#FF664D59",
+            "start_sound_event": "cast.spell",
+            "sequence": [
+              {
+                "shape": "line",
+                "target": "self",
+                "base_delay": 1.0,
+                "delay_per_summon": 0.05,
+                "num_entities_spawned": 8,
+                "entity_type": "kna:bad_skelly"
+              }
+            ]
+          }
+        ]
+      },
+   "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {  
+                "any_of": [
+                  { "test" :  "is_family", "subject" : "other", "value" :  "player"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "snowgolem"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "irongolem"},
+                  { "test" :  "is_family", "subject" : "other", "value" :  "pet"}
+                ] 
+            },
+            "max_dist": 20
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_family", "subject": "other", "value": "villager" },
+                { "test": "has_component", "subject": "other", "operator": "!=", "value": "minecraft:is_baby" }
+              ]
+            },
+            "max_dist": 20
+          }
+        ],
+        "must_see": true
+      },
+   "minecraft:behavior.look_at_player": {
+    "look_distance": 6,
+    "priority": 14,
+    "probability": 0.02
+   },
+   "minecraft:behavior.avoid_mob_type": {
+        "priority": 5,
+        "entity_types": [
+          {
+            "filters": { "test" :  "is_family", "subject" : "other", "value" :  "player"},
+            "max_dist": 8,
+            "walk_speed_multiplier": 0.6,
+            "sprint_speed_multiplier": 1.0
+          }
+        ]
+      },
+   "minecraft:behavior.nearest_prioritized_attackable_target": {
+    "entity_types": [
+     {
+      "filters": {
+       "subject": "other",
+       "test": "is_family",
+       "value": "player"
+      },
+      "max_dist": 16
+     },
+     {
+      "filters": {
+       "subject": "other",
+       "test": "is_family",
+       "value": "pet"
+      },
+      "max_dist": 16
+     },     {
+      "filters": {
+       "subject": "other",
+       "test": "is_family",
+       "value": "iron_golem"
+      },
+      "max_dist": 16
+     },
+     {
+      "filters": {
+       "subject": "other",
+       "test": "is_family",
+       "value": "snow_golem"
+      },
+      "max_dist": 16
+     }
+
+    ],
+    "must_see": true,
+    "priority": 2,
+    "reselect_targets": true
+   },
+
+   "minecraft:behavior.random_look_around": {
+    "priority": 15
+   },
+   "minecraft:behavior.random_look_around_and_sit": {
+    "max_look_count": 5,
+    "max_look_time": 100,
+    "min_look_count": 2,
+    "min_look_time": 80,
+    "priority": 12,
+    "probability": 0.001
+   },
+   "minecraft:behavior.random_stroll": {
+    "priority": 13,
+    "speed_multiplier": 0.8
+   },
+   "minecraft:breathable": {
+    "suffocateTime": 0,
+    "totalSupply": 30
+   },
+   "minecraft:can_climb": {},
+   "minecraft:collision_box": {
+    "height": 1.8,
+    "width": 0.6
+   },
+   "minecraft:health": {
+    "max": 200,
+    "value": 250
+   },
+   "minecraft:boss": {
+        "name": "§0Necro §8Witch",
+        "hud_range": 10
+      },
+   "minecraft:jump.static": {},
+   "minecraft:loot": {
+    "table": "loot_tables/entities/necrowitch.json"
+   },
+   "minecraft:movement": {
+    "value": 0.29
+   },
+   "minecraft:movement.basic": {},
+   "minecraft:nameable": {
+    "allowNameTagRenaming": true,
+    "alwaysShow": true
+   },
+   "minecraft:navigation.walk": {
+    "avoid_damage_blocks": true,
+    "avoid_water": true,
+    "can_open_doors": true,
+    "can_pass_doors": true,
+    "can_path_over_water": true
+   },
+   "minecraft:physics": {},
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:type_family": {
+    "family": [
+     "necrowitch",
+     "monster"
+    ]
+   },
+   "minecraft:equipment": {
+        "table": "loot_tables/entities/necrowitch_gear.json"
+      }
+  },
+  "description": {
+   "identifier": "kna:necrowitch",
+   "is_experimental": false,
+   "is_spawnable": true,
+   "is_summonable": true
+  }
+ }
+}  family": {
+    "family": [
+     "necrowitch",
+     "monster"
+    ]
+   },
+   "minecraft:equipment": {
+        "table": "loot_tables/entities/necrowitch_gear.json"
+      }
+  },
+  "description": {
+   "identifier": "kna:necrowitch",
+   "is_experimental": false,
+   "is_spawnable": true,
+   "is_summonable": true
+  }
+ }
+}  ue
+  }
+ }
+}   }
+ }
+}  raft:poisonous_potato",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:porkchop",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:potato",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:pufferfish",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:pumpkin_pie",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:rabbit",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:rabbit_stew",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:rotten_flesh",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:salmon",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:spider_eye",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:sweet_berries",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:suspicious_stew",
+      "max_amount": 1,
+      "priority": 0
+     }
+    ]
+   },
+   "minecraft:shooter": {
+    "def": "minecraft:arrow"
+   },
+   "minecraft:type_family": {
+    "family": [
+     "player",
+     "ally",
+     "human",
+     "pet"
+    ]
+   }
+  },
+  "description": {
+   "identifier": "kna:necrowitch",
+   "is_experimental": false,
+   "is_spawnable": true,
+   "is_summonable": true
+  }
+ }
+}: "minecraft:bread",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:carrot",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:chicken",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:chorus_fruit",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:clownfish",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cooked_beef",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cooked_chicken",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cooked_fish",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cooked_porkchop",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cooked_rabbit",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cooked_salmon",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:cookie",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:dried_kelp",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:fish",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:golden_apple",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:golden_carrot",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:melon",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:mushroom_stew",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:muttonCooked",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:muttonRaw",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:poisonous_potato",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:porkchop",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:potato",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:pufferfish",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:pumpkin_pie",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:rabbit",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:rabbit_stew",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:rotten_flesh",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:salmon",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:spider_eye",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:sweet_berries",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:suspicious_stew",
+      "max_amount": 1,
+      "priority": 0
+     }
+    ]
+   },
+   "minecraft:shooter": {
+    "def": "minecraft:arrow"
+   },
+   "minecraft:type_family": {
+    "family": [
+     "player",
+     "ally",
+     "human",
+     "pet"
+    ]
+   }
+  },
+  "description": {
+   "identifier": "kna:necrowitch",
+   "is_experimental": false,
+   "is_spawnable": true,
+   "is_summonable": true
+  }
+ }
+}  {
+      "item": "minecraft:spider_eye",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:sweet_berries",
+      "max_amount": 1,
+      "priority": 0
+     },
+     {
+      "item": "minecraft:suspicious_stew",
+      "max_amount": 1,
+      "priority": 0
+     }
+    ]
+   },
+   "minecraft:shooter": {
+    "def": "minecraft:arrow"
+   },
+   "minecraft:type_family": {
+    "family": [
+     "player",
+     "ally",
+     "human",
+     "pet"
+    ]
+   }
+  },
+  "description": {
+   "identifier": "kna:human_one",
+   "is_experimental": false,
+   "is_spawnable": true,
+   "is_summonable": true
+  }
+ }
+} true
+  }
+ }
+}    "type": "Arrow"
+   },
+   "minecraft:type_family": {
+    "family": [
+     "player",
+     "ally",
+     "human",
+     "pet"
+    ]
+   }
+  },
+  "description": {
+   "identifier": "kna:human_one",
+   "is_experimental": false,
+   "is_spawnable": true,
+   "is_summonable": true
+  }
+ }
+}"max_dist": 16
+          },
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "zombie"
+            },
+            "max_dist": 16
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "skeleton"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": true
+                }
+              ]
+            },
+            "max_dist": 16
+          }
+        ],
+        "must_see": true
+      },
+      "minecraft:balloonable": {
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+        }
+      }
+  }
+}

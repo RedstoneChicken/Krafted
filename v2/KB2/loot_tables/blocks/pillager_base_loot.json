@@ -1,0 +1,242 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 3,
+        "max": 5
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:enchanted_book",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            },
+            {
+              "function": "enchant_randomly"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:experience_bottle",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 6
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:crossbow",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:crossbow",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potato",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bread",
+          "weight": 23,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 15
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:carrot",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:emerald",
+          "weight": 13,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:arrow",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_nbt",
+              "tag": "{BlockEntityTag:{Patterns:[{Patern:\"mr\",Color:9},{Patern:\"bs\",Color:8},{Patern:\"cs\",Color:7},{Patern:\"bo\",Color:8},{Patern:\"ms\",Color:15},{Patern:\"hh\",Color:8},{Patern:\"mc\",Color:8},{Patern:\"bo\",Color:15}]},display:{Name:'{\"color\":\"gold\",\"translate\":\"block.minecraft.ominous_banner\"}'}}"
+            },
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:totem_of_undying",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:name_tag",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:wheat",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_ingot",
+          "weight": 13,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:book",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:paper",
+          "weight": 17,
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

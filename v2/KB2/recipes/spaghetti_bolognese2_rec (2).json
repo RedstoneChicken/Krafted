@@ -1,0 +1,36 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:spaghetti_bolognese2_rec"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:pasta",
+				"count": 1
+			},
+			{
+				"item": "strat:tomato",
+				"count": 1
+			},
+			{
+				"item": "minecraft:cooked_beef",
+				"count": 1
+			},
+			{
+				"item": "strat:ceramic_plate",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:spaghetti_bolognese2",
+				"count": 1
+			}
+		]
+	}
+}

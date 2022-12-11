@@ -1,0 +1,35 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:wooden_large_plate_rec_2"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:large_plate_cast"
+			},
+			"~": {
+				"item": "minecraft:planks"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:wooden_large_plate",
+				"count": 1
+			},
+			{
+				"item": "strat:large_plate_cast",
+				"count": 1
+			}
+		]
+	}
+}

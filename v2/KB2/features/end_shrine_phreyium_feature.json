@@ -1,0 +1,32 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:end_shrine_phreyium_feature"
+		},
+		"structure_name": "mystructure:end_shrine_phreyium",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air",
+					"minecraft:water",
+					"korbon:phreyium_grass",
+					"korbon:void_turf_grass_short",
+					"korbon:void_sprouts",
+					"korbon:phreyium",
+					"korbon:phreyium_stem",
+					"korbon:phreyium_wart_block",
+					"korbon:thorn_root",
+					"korbon:phreyium_tooth_fungus",
+					"korbon:viscosa",
+					"korbon:viscosa_tall",
+					"korbon:ori_blossom"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+//bridge-file-version: #6
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:broad_axe_head_cast"
+				}
+			]
+		}
+	]
+}

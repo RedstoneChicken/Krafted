@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:starshell_turtle",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "starshell_turtle",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

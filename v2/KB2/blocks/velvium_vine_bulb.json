@@ -1,0 +1,101 @@
+//bridge-file-version: #98
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:velvium_vine_bulb"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "velvium_vine_bulb",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.velvium_vine_bulb",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:velvium_vine_body",
+							"korbon:velvium_vine_top"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#CB78B8",
+			"minecraft:flammable": {
+				"burn_odds": 20,
+				"flame_odds": 20
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:on_placed": {
+				"event": "place"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy"
+			},
+			"minecraft:loot": "loot_tables/blocks/velvium_vine_bulb.json",
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "particle"
+				}
+			}
+		},
+		"events": {
+			"place": {
+				"run_command": {
+					"command": [
+						"fill ~~-1~ ~~-1~ korbon:velvium_vine_body 0 replace korbon:velvium_vine_top"
+					]
+				}
+			},
+			"destroy": {
+				"run_command": {
+					"command": [
+						"fill ~~-1~ ~~-1~ korbon:velvium_vine_top 0 replace korbon:velvium_vine_body"
+					]
+				}
+			},
+			"particle": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:velvium_bulb_sparkles ~~0.4~",
+								"particle korbon:velvium_bulb_ambient ~~3.5~"
+							]
+						},
+						"weight": 1
+					},
+					{
+						"weight": 1
+					}
+				]
+			}
+		}
+	}
+}

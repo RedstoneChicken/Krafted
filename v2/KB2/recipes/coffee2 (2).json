@@ -1,0 +1,44 @@
+//bridge-file-version: #6
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:coffee2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#~=",
+			"-o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:coffee_beans"
+			},
+			"~": {
+				"item": "strat:bubbly_water"
+			},
+			"o": {
+				"item": "strat:milk_glass"
+			},
+			"-": {
+				"item": "strat:ceramic_mug"
+			},
+			"=": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:coffee",
+				"count": 1
+			},
+			{
+				"item": "strat:drinking_glass",
+				"count": 2
+			}
+		],
+		"priority": 1
+	}
+}

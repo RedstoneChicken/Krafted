@@ -1,0 +1,69 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:enderling",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"enderman",
+					"wandering_trader"
+				]
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:physics": {},
+			"minecraft:movement.basic": {},
+			"minecraft:loot": {},
+			"minecraft:health": {
+				"value": 30,
+				"max": 30
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:navigation.walk": {},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"probability": 0.02
+			},
+			"minecraft:economy_trade_table": {
+				"display_name": "§l§dENDERLING TRADE",
+				"new_screen": true,
+				"show_trade_screen": true,
+				"table": "trading/enderling_trades.json"
+			},
+			"minecraft:behavior.trade_with_player": {
+				"priority": 1
+			},
+			"minecraft:behavior.trade_interest": {
+				"priority": 3,
+				"within_radius": 6,
+				"interest_time": 45,
+				"remove_item_time": 1,
+				"carried_item_switch_time": 2,
+				"cooldown": 2
+			},
+			"minecraft:behavior.look_at_trading_player": {
+				"priority": 4
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

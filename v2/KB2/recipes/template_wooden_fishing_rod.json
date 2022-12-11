@@ -1,0 +1,18 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "template_wooden_fishing_rod"
+		},
+		"tags" : [ "tackle_box" ],
+		"pattern" : [ "  #", " # ", "#  " ],
+		"key" : {
+			"#" : {
+				"item" : "minecraft:stick"
+			}
+		},
+		"result" : {
+			"item" : "azc:wooden_fishing_rod_template"
+		}
+	}
+}

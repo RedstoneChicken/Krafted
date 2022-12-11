@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:hammer_head_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "hammer_head_pattern"
+			},
+			"minecraft:display_name": {
+				"value": "Hammer Head Pattern\n§7Material Cost: 8§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:hammer_head_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

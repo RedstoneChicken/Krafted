@@ -1,0 +1,38 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:excavator_127"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" ~#",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:ardite_excavator_head"
+			},
+			"~": {
+				"item": "strat:ardite_large_plate"
+			},
+			"o": {
+				"item": "strat:ardite_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:ardite_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:excavator_127",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

@@ -1,0 +1,57 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:ghill",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:behavior.random_hover": {
+				"priority": 1,
+				"xz_dist": 8,
+				"y_dist": 8,
+				"y_offset": -1,
+				"interval": 1,
+				"hover_height": [
+					2,
+					6
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:behavior.float": {
+				"priority": 19
+			},
+			"minecraft:movement": {
+				"value": 0.3
+			},
+			"minecraft:flying_speed": {
+				"value": 0.15
+			},
+			"minecraft:navigation.hover": {
+				"can_path_over_water": true,
+				"can_sink": false,
+				"can_pass_doors": false,
+				"can_path_from_air": true,
+				"avoid_water": true,
+				"avoid_damage_blocks": true,
+				"avoid_sun": false
+			},
+			"minecraft:movement.hover": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_fly": true,
+			"minecraft:health": {
+				"value": 10
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/tentacle.json"
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

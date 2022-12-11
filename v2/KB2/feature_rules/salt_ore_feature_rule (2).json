@@ -1,0 +1,49 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "strat:salt_ore_feature_rule",
+			"places_feature": "strat:salt_ore_feat"
+		},
+		"conditions": {
+			"placement_pass": "underground_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "overworld"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 20,
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					128
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

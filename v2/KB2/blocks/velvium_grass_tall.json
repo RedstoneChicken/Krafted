@@ -1,0 +1,91 @@
+//bridge-file-version: #55
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:velvium_grass_tall"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "velvium_grass_tall_bottom",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:velvium",
+							"korbon:verdanite_velvium"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#CB78B8",
+			"minecraft:flammable": {
+				"burn_odds": 15,
+				"flame_odds": 15
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:on_placed": {
+				"event": "place"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy"
+			},
+			"minecraft:loot": "empty"
+		},
+		"events": {
+			"place": {
+				"run_command": {
+					"command": [
+						"fill ~~1~ ~~1~ korbon:velvium_grass_tall_top 0 replace air"
+					]
+				}
+			},
+			"destroy": {
+				"sequence": [
+					{
+						"set_block_at_pos": {
+							"block_type": "minecraft:air",
+							"block_offset": [
+								0,
+								1,
+								0
+							]
+						}
+					},
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/velvium_grass_tall.json"
+						},
+						"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+					}
+				]
+			}
+		}
+	}
+}

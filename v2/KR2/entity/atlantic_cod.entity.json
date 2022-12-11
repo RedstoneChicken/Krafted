@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "azc:atlantic_cod",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/atlantic_cod"
+			},
+			"geometry" : {
+				"default" : "geometry.atlantic_cod"
+			},
+			"animations" : {
+				"swim" : "animation.atlantic_cod.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.salmon" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_atlantic_cod",
+				"texture_index" : 0
+			}
+		}
+	}
+}

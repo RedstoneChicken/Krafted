@@ -1,0 +1,49 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:dummy_totem",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "dummy_totem"
+			},
+			"minecraft:display_name": {
+			 "value":  "Dummy Totem\n§1Rare\n§7Cooldown: 80\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "dummy_totem",
+				"duration": 80
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "spawn",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "spawn": {
+        "run_command": {
+          "command": [
+            "playsound conduit.attack @a[r=10]",
+            "summon kna:dummy",
+            "effect @s invisibility 1 2 true",
+            "execute @s ~~~ particle minecraft:basic_smoke_particle ~~~"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

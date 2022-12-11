@@ -1,0 +1,31 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:tourmaline_axe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XX",
+			"X#",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stick"
+			},
+			"X": {
+				"item": "oh:tourmaline"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:tourmaline_axe",
+				"count": 1
+			}
+		]
+	}
+}

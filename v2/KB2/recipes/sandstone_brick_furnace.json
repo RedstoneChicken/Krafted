@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "cav:sandstone_brick_furnace"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "minecraft:sandstone:3",
+    "output": "cav:sandstone_brick"
+  }
+  
+}

@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:marshmallow"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:marshmallow",
+				"count": 2
+			}
+		]
+	}
+}

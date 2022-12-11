@@ -1,0 +1,51 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:quiver",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "quiver"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value":  "Quiver\n§8Common\n§7Cooldown: 35\nLevel: 1"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:cooldown": {
+				"category": "quiver",
+				"duration": 35
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "fire",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+		 "fire":{ 
+		  "run_command": {
+          "command": [
+          	"playsound random.bow @a[r=10]",
+            "tag @s add usera",
+            "execute @e[tag=!usera,tag=!none,r=10] ~~~ summon arrow ~~2~",
+            "execute @e[tag=!usera,tag=!none,r=10] ~~~ summon arrow ~~2~",
+            "execute @e[tag=!usera,tag=!none,r=10] ~~~ summon arrow ~~2~",
+            "execute @e[tag=!usera,tag=!none,r=10] ~~~ summon arrow ~~2~",
+            "tag @s remove usera"
+          ],
+          "target": "holder"
+        }
+		 }
+		}
+	}
+}

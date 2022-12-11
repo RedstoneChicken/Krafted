@@ -1,0 +1,1324 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:ceramic_plate_block",
+			"properties": {
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:state2": [
+					0,
+					1,
+					2,
+					3,
+					4
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.6,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:explosion_resistance": 3,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "plate",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.plate",
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:loot": "loot_tables/ceramic_plate.json",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "strat:plate"
+			}
+		},
+		"events": {
+			"strat:plate": {
+				"sequence": [
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cooked_chicken'",
+								"set_block_property": {
+									"strat:state": 1
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cooked_chicken.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'yule_log'",
+								"set_block_property": {
+									"strat:state": 2
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 2",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/yule_log.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cooked_porkchop'",
+								"set_block_property": {
+									"strat:state": 3
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 3",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cooked_porkchop.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cooked_beef'",
+								"set_block_property": {
+									"strat:state": 4
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 4 && query.get_equipped_item_name('main_hand') != 'fries'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cooked_beef.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 4 && query.get_equipped_item_name('main_hand') == 'fries'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'spaghetti_bolognese'",
+								"set_block_property": {
+									"strat:state": 5
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'spaghetti_bolognese2'",
+								"set_block_property": {
+									"strat:state": 5
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:spaghetti_bolognese",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:spaghetti_bolognese2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'fish_and_chips'",
+								"set_block_property": {
+									"strat:state": 6
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'fish_and_chips2'",
+								"set_block_property": {
+									"strat:state": 6
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 6 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:fish_and_chips",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 6 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:fish_and_chips2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'bangers_and_mash'",
+								"set_block_property": {
+									"strat:state": 7
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'bangers_and_mash2'",
+								"set_block_property": {
+									"strat:state": 7
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 7 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:bangers_and_mash",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 7 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:bangers_and_mash2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cooked_cod'",
+								"set_block_property": {
+									"strat:state": 8
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 8 && query.get_equipped_item_name('main_hand') != 'fries'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cooked_cod.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 8 && query.get_equipped_item_name('main_hand') == 'fries'",
+								"set_block_property": {
+									"strat:state": 6
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'pizza_dinner'",
+								"set_block_property": {
+									"strat:state": 9
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'pizza_dinner2'",
+								"set_block_property": {
+									"strat:state": 9
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 9 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:pizza_dinner",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 9 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:pizza_dinner2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'meat_feast_pizza_slice'",
+								"set_block_property": {
+									"strat:state": 10
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 10 && query.get_equipped_item_name('main_hand') != 'fries'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/meat_feast_pizza_slice1.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 10 && query.get_equipped_item_name('main_hand') == 'fries'",
+								"set_block_property": {
+									"strat:state": 9
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'bacon_and_eggs'",
+								"set_block_property": {
+									"strat:state": 11
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'bacon_and_eggs2'",
+								"set_block_property": {
+									"strat:state": 11
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 11 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:bacon_and_eggs",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 11 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:bacon_and_eggs2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'milk_and_cookies'",
+								"set_block_property": {
+									"strat:state": 12
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'milk_and_cookies2'",
+								"set_block_property": {
+									"strat:state": 12
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 12 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:milk_and_cookies",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 12 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:milk_and_cookies2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'steak_and_chips'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'steak_and_chips2'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 13 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:steak_and_chips",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 13 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:steak_and_chips2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'fries'",
+								"set_block_property": {
+									"strat:state": 14
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') != 'cooked_cod' && query.get_equipped_item_name('main_hand') != 'cooked_beef' && query.get_equipped_item_name('main_hand') != 'meat_feast_pizza_slice' && query.get_equipped_item_name('main_hand') != 'chicken_nuggets'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/fries.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'cooked_cod'",
+								"set_block_property": {
+									"strat:state": 6
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'cooked_beef'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'meat_feast_pizza_slice'",
+								"set_block_property": {
+									"strat:state": 9
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'chicken_nuggets'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'chicken_nuggets'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 1
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 1 && query.get_equipped_item_name('main_hand') != 'fries'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/chicken_nuggets.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 1 && query.get_equipped_item_name('main_hand') == 'fries'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'nuggets_and_fries'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'nuggets_and_fries2'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 2 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:nuggets_and_fries",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 2 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:nuggets_and_fries2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'chicken_and_waffles'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 3
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'chicken_and_waffles2'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 3
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 3 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:chicken_and_waffles",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 3 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:chicken_and_waffles2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'roast_chicken'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 4
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:paper_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'roast_chicken2'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 4
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:ceramic_plate",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 4 && query.get_equipped_item_name('main_hand') == 'paper_plate'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:roast_chicken",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 4 && query.get_equipped_item_name('main_hand') == 'ceramic_plate'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {
+									"ignore_game_mode": true
+								},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:roast_chicken2",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.plate",
+					"minecraft:loot": "loot_tables/ceramic_plate.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chicken_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platechicken",
+					"minecraft:loot": "loot_tables/ceramic_plate2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "yule_log_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.plateyulelog",
+					"minecraft:loot": "loot_tables/ceramic_plate3.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "pork_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platepork",
+					"minecraft:loot": "loot_tables/ceramic_plate4.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "beef_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platebeef",
+					"minecraft:loot": "loot_tables/ceramic_plate5.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "spaghetti_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platepork",
+					"minecraft:loot": "loot_tables/ceramic_plate6.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "fish_and_chips_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platefishandchips",
+					"minecraft:loot": "loot_tables/ceramic_plate7.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bangers_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platebangers",
+					"minecraft:loot": "loot_tables/ceramic_plate8.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "fish_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platefish",
+					"minecraft:loot": "loot_tables/ceramic_plate9.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "pizza_dinner_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platepizzadinner",
+					"minecraft:loot": "loot_tables/ceramic_plate10.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 10",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "pizza_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platepizza",
+					"minecraft:loot": "loot_tables/ceramic_plate11.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 11",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bacon_and_eggs_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platebaconandeggs",
+					"minecraft:loot": "loot_tables/ceramic_plate12.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 12",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "milk_and_cookies_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platemilkandcookies",
+					"minecraft:loot": "loot_tables/ceramic_plate13.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 13",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "steak_and_chips_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platesteakandchips",
+					"minecraft:loot": "loot_tables/ceramic_plate14.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 14",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "fries_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platefries",
+					"minecraft:loot": "loot_tables/ceramic_plate15.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "nuggets_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platenuggets",
+					"minecraft:loot": "loot_tables/ceramic_plate16.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "nuggets_and_fries_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platenuggetsandfries",
+					"minecraft:loot": "loot_tables/ceramic_plate17.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chicken_and_waffles_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.platechickenandwaffles",
+					"minecraft:loot": "loot_tables/ceramic_plate18.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "roast_chicken_plate",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.plateroast",
+					"minecraft:loot": "loot_tables/ceramic_plate19.json"
+				}
+			}
+		]
+	}
+}

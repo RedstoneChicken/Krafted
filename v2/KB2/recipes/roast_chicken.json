@@ -1,0 +1,40 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:roast_chicken"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:cooked_chicken",
+				"count": 1
+			},
+			{
+				"item": "strat:tomato",
+				"count": 1
+			},
+			{
+				"item": "strat:salt",
+				"count": 1
+			},
+			{
+				"item": "strat:paper_plate",
+				"count": 1
+			},
+			{
+				"item": "strat:lettuce",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:roast_chicken",
+				"count": 1
+			}
+		]
+	}
+}

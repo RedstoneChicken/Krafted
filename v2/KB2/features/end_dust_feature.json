@@ -1,0 +1,17 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:end_dust_feature"
+    },
+    "count": 30,
+    "replace_rules": [
+      {
+        "places_block": "cav:end_dust_block",
+        "may_replace": [
+          "minecraft:end_stone"
+        ]
+      }
+    ]
+  }
+}

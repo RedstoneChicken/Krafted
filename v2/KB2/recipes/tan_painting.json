@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:tan_painting"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "TTT",
+      "TDT",
+      "TTT"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:stick"
+      },
+      "D": {
+        "item": "cav:tan_wool"
+      }
+    },
+    "result": {
+      "item": "minecraft:painting",
+      "count": 1
+    }
+  }
+}

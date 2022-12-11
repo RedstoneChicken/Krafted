@@ -1,0 +1,14 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:mushroom_tree_small_with_fungus_feature"
+		},
+		"features": [
+			"korbon:mushroom_tree_small_feature",
+			"korbon:depraved_tooth_fungus_scatter_feature"
+		],
+		"early_out": "none"
+	}
+}

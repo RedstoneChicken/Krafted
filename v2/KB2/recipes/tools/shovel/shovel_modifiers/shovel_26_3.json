@@ -1,0 +1,28 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:shovel_26_3"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:shovel_26",
+				"count": 1
+			},
+			{
+				"item": "minecraft:redstone_block",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:shovel_26_3",
+				"count": 1
+			}
+		]
+	}
+}

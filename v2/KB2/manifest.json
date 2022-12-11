@@ -1,0 +1,66 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§l§6Krafted §r§eBP §r§k||§r§a2§r§k||§r",
+		"description": "Modpack By §cRedstone Chicken§b\n\n§*Having problems?? Contact me from my discord server!\ndsc.gg/rscbuilds",
+		"uuid": "1a2f42bd-98d4-4e0d-8e3f-934ab8a0c05e",
+		"version": [
+		  2,
+		  0,
+		  0
+		],
+		"min_engine_version": [
+		  1,
+		  19,
+		  0
+		]
+	  },
+	  "modules": [
+		{
+		  "type": "data",
+		  "uuid": "b87aaa86-7767-fab7-b145-546138eea0ae",
+		  "version": [
+			2,
+			0,
+			0
+		  ]
+		},
+		{
+		  "description": "Modpack By §cRedstone Chicken§b\n\n§*Having problems?? Contact me from my discord server!\ndsc.gg/rscbuilds",
+		  "type": "script",
+		  "language": "javascript",
+		  "uuid": "1a1b53fc-5653-4a75-91b7-9cdF027674ae",
+		  "version": [
+			2,
+			0,
+			0
+		  ],
+		  "entry": "scripts/Main.js"
+		}
+	  ],
+	  "capabilities": [
+		"script_eval"
+	  ],
+	  "dependencies": [
+		{
+		  "module_name": "@minecraft/server",
+		  "version": "1.1.0-beta"
+		},
+		{
+		  "module_name": "@minecraft/server-gametest",
+		  "version": "1.0.0-beta"
+		},
+		{
+		  "module_name": "@minecraft/server-ui",
+		  "version": "1.0.0-beta"
+		},
+		{
+			"version": [
+				2,
+				0,
+				0
+			],
+			"uuid": "fd406fd5-3c1c-49b8-aaa3-062a4ea1d0aa"
+		}
+	  ]
+	}

@@ -1,0 +1,207 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:brownstone_bricks_slab",
+			"properties": {
+				"strat:slab": [
+					0,
+					1
+				],
+				"strat:block": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 5,
+			"minecraft:map_color": "#202020",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "brownstone_bricks",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.slab",
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:block_light_filter": 0,
+			"minecraft:on_player_placing": {
+				"event": "strat:upper_slab"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.slab",
+				"category": "Construction"
+			},
+			"tag:stone": {},
+			"minecraft:friction": 0.8
+		},
+		"events": {
+			"strat:upper_slab": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"strat:slab": "query.block_face"
+						}
+					}
+				]
+			},
+			"strat:make_block": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:slab') == 0 && query.block_face == 0.0",
+						"set_block_property": {
+							"strat:block": 1
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound use.stone @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:slab') == 1 && query.block_face == 1.0",
+						"set_block_property": {
+							"strat:block": 1
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"playsound use.stone @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:slab') == 0 && query.block_property('strat:block') == 0",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:geometry": "geometry.top_slab",
+					"minecraft:on_interact": {
+						"event": "strat:make_block",
+						"condition": "query.get_equipped_item_name('main_hand') == 'brownstone_bricks_slab' && query.block_face == 0.0"
+					},
+					"minecraft:loot": "loot_tables/brownstone_bricks_slab.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:slab') == 1 && query.block_property('strat:block') == 0",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:geometry": "geometry.slab",
+					"minecraft:on_interact": {
+						"event": "strat:make_block",
+						"condition": "query.get_equipped_item_name('main_hand') == 'brownstone_bricks_slab' && query.block_face == 1.0"
+					},
+					"minecraft:loot": "loot_tables/brownstone_bricks_slab.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:block') == 1",
+				"components": {
+					"minecraft:collision_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:unit_cube": {},
+					"minecraft:loot": "loot_tables/brownstone_bricks_slab2.json"
+				}
+			}
+		]
+	}
+}

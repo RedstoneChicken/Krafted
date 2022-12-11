@@ -1,0 +1,40 @@
+//bridge-file-version: #4
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:cake2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"BEB",
+			"CCC"
+		],
+		"key": {
+			"A": {
+				"item": "strat:milk_glass"
+			},
+			"B": {
+				"item": "minecraft:sugar"
+			},
+			"C": {
+				"item": "strat:flour"
+			},
+			"E": {
+				"item": "minecraft:egg"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:cake"
+			},
+			{
+				"item": "strat:drinking_glass",
+				"count": 3
+			}
+		]
+	}
+}

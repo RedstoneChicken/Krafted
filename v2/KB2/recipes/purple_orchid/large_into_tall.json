@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_purple_orchid_into_tall_purple_orchid"},"tags":["crafting_table"],"ingredients":[{"item":"ff:purple_orchid_large_item"}],"result":{"item":"ff:purple_orchid_tall_item","count":2}}}

@@ -1,0 +1,108 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:greenheart_sapling"
+		},
+		"components": {
+			"minecraft:block_light_filter": 0,
+			"minecraft:loot": "loot_tables/greenheart_sapling.json",
+			"minecraft:geometry": "geometry.strat_crop",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "greenheart_sapling",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"strat:earth_slime_grass",
+							"strat:earth_slime_dirt"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "grow"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					13,
+					12
+				]
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"grow": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ air",
+								"fill ~~-1~ ~~-1~ strat:earth_slime_dirt 0 replace strat:earth_slime_grass",
+								"structure load earth_slime_tree ~-3~~-3"
+							]
+						},
+						"weight": 1
+					},
+					{
+						"weight": 3
+					}
+				]
+			},
+			"bone_meal": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"particle minecraft:crop_growth_emitter ~~~",
+										"playsound item.bone_meal.use @a ~~~"
+									]
+								},
+								"weight": 1
+							},
+							{
+								"trigger": {
+									"event": "grow"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"particle minecraft:crop_growth_emitter ~~~"
+									]
+								},
+								"weight": 5
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "kna:purple_ball",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.31,
+        "height": 0.31
+      },
+
+      "minecraft:projectile": {
+        "on_hit": {
+          "spawn_aoe_cloud": {
+            "radius": 5,
+            "radius_on_use": 0,
+            "potion": 23,
+            "particle": "dragonbreath",
+            "duration": 5,
+            "color": [ 277, 89, 32 ],
+            "affect_owner": false,
+            "reapplication_delay": 1
+          },
+          "remove_on_hit": { }
+        },
+        "power": 2,
+        "gravity": 0.00,
+        "inertia": 1,
+        "anchor": 1,
+        "offset": [ 0, 0, 0 ],
+        "semi_random_diff_damage": true,
+        "uncertainty_base": 10.0,
+        "reflect_on_hurt": true,
+        "hit_sound": "explode"
+      }
+    },
+	  "minecraft:physics": {
+    },
+    "minecraft:pushable": {
+      "is_pushable": true,
+      "is_pushable_by_piston": true
+    },
+    "minecraft:conditional_bandwidth_optimization": {
+      "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+      }
+    }
+  }
+}    
+  
+     }
+}

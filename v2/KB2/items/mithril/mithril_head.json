@@ -1,0 +1,23 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:mithril_head",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:display_name": {
+				"value": "Mithril Head"
+			},
+			"minecraft:icon": {
+				"texture": "mithril_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.items"
+			}
+		},
+		"events": {}
+	}
+}

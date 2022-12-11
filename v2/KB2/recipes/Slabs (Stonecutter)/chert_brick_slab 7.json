@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:dolostone_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:dolostone_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:dolostone_brick_slab",
+      "count": 2
+    }
+  } 
+}

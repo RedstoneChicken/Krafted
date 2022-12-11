@@ -1,0 +1,21 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ardite_wide_guard"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Ardite Wide Guard"
+			},
+			"minecraft:icon": {
+				"texture": "ardite_wide_guard"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

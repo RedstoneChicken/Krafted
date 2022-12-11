@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:red_grouper",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "red_grouper",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

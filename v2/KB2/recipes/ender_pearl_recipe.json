@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cav:ender_pearl_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "PPP",
+      " P "
+    ],
+    "key": {
+      "P": {
+        "item": "cav:pearlstone"
+      }
+    },
+    "result": {
+      "item": "minecraft:ender_pearl",
+      "count": 5
+    }
+  }
+}

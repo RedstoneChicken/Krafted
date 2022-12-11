@@ -1,0 +1,26 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "ff:drip_flower/drip_flower1_feature"
+    },
+
+    "body_blocks": [
+      [
+        {
+          "name": "minecraft:big_dripleaf",
+          "states": {
+            "big_dripleaf_head": 0
+          }
+        },
+        1
+      ]
+    ],
+    "head_blocks": [["minecraft:big_dripleaf", 1]],
+    "age": { "range_min": 1, "range_max": 15 },
+
+    "growth_direction": "up",
+    "height_distribution": [[{ "range_min": 1, "range_max": 10 }, 1]],
+    "allow_water": true
+  }
+}

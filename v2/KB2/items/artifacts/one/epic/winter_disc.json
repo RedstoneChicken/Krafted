@@ -1,0 +1,49 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:winter_disc",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "winter_disc"
+			},
+			"minecraft:display_name": {
+			 "value": "§eWinter Disc\n§6Epic\n§7Cooldown: 75\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "winter_disc",
+				"duration": 75
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "use": {
+        "run_command": {
+          "command": [
+          	"playsound mob.player.hurt_freeze @a[r=10]",
+            "tag @s add user_wd",
+            "execute @e[tag=!user_wd,tag=!none,r=10] ~~~ fill ~-1~~-1 ~1~3~1 packed_ice 0",
+            "tag @s remove user_wd"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

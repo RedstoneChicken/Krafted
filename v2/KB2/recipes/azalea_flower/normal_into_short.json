@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:normal_azalea_flower_into_short_azalea_flower"},"tags":["crafting_table"],"ingredients":[{"item":"ff:azalea_flower_item","count":2}],"result":{"item":"ff:azalea_flower_short_item"}}}

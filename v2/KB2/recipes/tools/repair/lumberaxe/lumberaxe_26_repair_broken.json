@@ -1,0 +1,29 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:lumberaxe_26_repair_broken"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"ingredients": [
+			{
+				"item": "strat:lumberaxe_26_broken",
+				"count": 1
+			},
+			{
+				"item": "minecraft:flint",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "strat:lumberaxe_26",
+				"count": 1
+			}
+		],
+		"priority": 2
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_knife_diamond"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "  A",
+      " A ",
+      "B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:diamond"
+      },
+      "B": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "azc:diamond_fillet_knife"
+    }
+  }
+}

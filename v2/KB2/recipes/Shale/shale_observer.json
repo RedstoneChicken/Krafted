@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:shale_observer"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "RRQ",
+      "###"
+    ],
+    "key": {
+      "Q": {
+        "item": "minecraft:quartz"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "#": {
+        "item": "cav:shale"
+      }
+    },
+    "result": {
+      "item": "minecraft:observer"
+    }
+  }
+}

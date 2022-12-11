@@ -1,0 +1,112 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+	"description": {
+      "identifier": "kna:boomerang_r",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+	    "scripts": {
+	    	"animate": [
+	    		"boomerang_rt" 
+	    		] 
+	    },
+	    "animations": { 
+	    	"boomerang_rt": 
+	    	 "controller.animation.boomerang_r" 
+	    }
+    },
+   
+	"component_groups": {
+	  "kna:rd": {
+	    "minecraft:type_family": {
+		  "family": [ "boomerang" ]
+		}
+	  }
+	},
+	
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "inanimate" ]
+      },
+	  "minecraft:despawn": {
+	    "filters": {
+		  "all_of": [
+		    { "test": "is_family", "subject": "self", "value": "boomerang" }
+		  ]
+		}
+	  },
+      "minecraft:entity_sensor": {
+        "sensor_range": 2,
+        "minimum_count": 1,
+        "event_filters": {
+          "all_of": [ { "test": "is_family", "subject": "other", "value": "player" } ]
+        },
+        "event": "kna:returned"
+      },
+      "minecraft:push_through": {
+        "value": 1
+      },
+      "minecraft:collision_box": {
+        "width": 0.4,
+        "height": 0.4
+      },
+	  "minecraft:damage_sensor": [
+	    {
+		  "cause": "all",
+		  "deals_damage": false
+		}
+	  ],
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:health": {
+        "value": 9999
+	  },
+      "minecraft:fall_damage": {
+        "value": 0.0
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+	  "minecraft:physics": {
+	    "has_collision": false,
+	  	"has_gravity": false
+	  },
+	   "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 5,
+            "knockback": true,
+            "semirandomdiffdamage": false
+          }
+        },
+        "power": 1.2,
+        "gravity": 0,
+        "angle_offset": 0.0,
+        "inertia": 1,
+        "liquid_inertia": 1,
+        "multiple_targets": true
+      },
+	  "minecraft:pushable": {
+	    "is_pushable": true,
+		"is_pushable_by_piston": true
+	  }
+    },
+	
+	"events": {
+	  "kna:returned": {
+	    "add": { "component_groups": [ "kna:rd" ] }
+	  }
+	}
+  }
+}  } 
+
+	"events": {
+	  "kna:returned": {
+	    "add": { "component_groups": [ "kna:rd" ] }
+	  }
+	}
+  }
+} 
+

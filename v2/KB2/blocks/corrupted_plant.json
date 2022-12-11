@@ -1,0 +1,54 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:corrupted_plant"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "corrupted_plant",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.corrupted_plant",
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 0.5,
+			"minecraft:entity_collision": false,
+			"minecraft:loot": "loot_tables/corrupted_plant.json",
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:corrupted_block"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			}
+		},
+		"events": {}
+	}
+}

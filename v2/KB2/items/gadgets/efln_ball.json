@@ -1,0 +1,29 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:efln_ball",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "efln"
+			},
+			"minecraft:display_name": {
+				"value": "EFLN\n§7Explodes! Safe for mining.§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:throwable": {
+				"do_swing_animation": true
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "strat:efln_ball"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {}
+	}
+}

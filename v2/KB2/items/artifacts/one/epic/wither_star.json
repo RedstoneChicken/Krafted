@@ -1,0 +1,61 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:wither_star",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "wither_star"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value": "§eWither Star\n§6Epic\n§7Cooldown: 25\nLevel: 1"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:cooldown": {
+				"category": "wither_star",
+				"duration": 25
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "fire",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"fire": {
+			 "run_command": {
+          "command": [
+            "playsound mob.wither.shoot @a[r=18]",
+            "effect @s resistance 5 5 true",
+            "tag @s add user_ws",
+            "execute @e[tag=!user_ws, r=5] ~~~ particle minecraft:wither_boss_invulnerable ~~~",
+            "effect @e[tag=!user_ws, r=5] wither 10 1",
+            "tag @s remove user_ws"
+          ],
+          "target": "holder"
+        },
+			 "swing":{
+            },
+    "shoot":{
+     "launch_power":1,
+     "angle_offset":"query.cardinal_facing",
+     "projectile":"wither_skull"
+   },
+			 "damage": {
+					"type": "magic",
+					"amount": 1
+				}
+			}
+		}
+	}
+}

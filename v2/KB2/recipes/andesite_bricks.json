@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:andesite_bricks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stone",
+        "data": 6
+      }
+    },
+    "result": {
+      "item": "cav:andesite_bricks",
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,43 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "caf:super_anchor_tree_feature"
+		},
+		"may_grow_on": [
+			"minecraft:netherrack",
+			"minecraft:crimson_nylium",
+			"minecraft:warped_nylium",
+			"caf:jungle_nylium"
+		],
+		"may_replace": [
+			"minecraft:air",
+			"minecraft:netherrack",
+			"minecraft:crimson_nylium",
+			"minecraft:warped_nylium",
+			"caf:jungle_nylium"
+		],
+		"may_grow_through": [
+			"minecraft:warped_nylium",
+			"minecraft:crimson_nylium",
+			"caf:jungle_nylium"
+		],
+		"mega_trunk": {
+			"trunk_block": {
+				"name": "caf:anchor_log"
+			},
+			"trunk_height": 10,
+			"trunk_width": 5,
+			"branches": {
+				"branch_canopy": {
+					"mega_canopy": {
+						"leaf_block": {
+							"name": "caf:anchor_leaves"
+						}
+					}
+				}
+			}
+		}
+	}
+}

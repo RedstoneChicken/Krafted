@@ -1,0 +1,65 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:plains_stable_feature_rule",
+			"places_feature": "minecraft:plains_stable_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "lakes"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "ocean"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "river"
+						},
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "prairie"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "shrubland"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "lavender_grove"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.04,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) + -1",
+			"z": 0
+		}
+	}
+}

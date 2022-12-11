@@ -1,0 +1,19 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.jokle.trail": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "trail",
+							"locator": "locator"
+						}
+					]
+				}
+			}
+		}
+	}
+}

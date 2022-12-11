@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.16,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:loom_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA",
+			"BB"
+		],
+		"key": {
+			"A": {
+				"item": "string"
+			},
+			"B": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": {
+			"item": "loom",
+			"count": 1
+		},
+		"priority": 50
+	}
+}

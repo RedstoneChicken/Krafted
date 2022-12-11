@@ -1,0 +1,18 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:cooked_salmon"
+		},
+		"components": {
+			"minecraft:use_duration": 16,
+			"minecraft:stacked_by_data": true,
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "good"
+			}
+		},
+		"events": {}
+	}
+}

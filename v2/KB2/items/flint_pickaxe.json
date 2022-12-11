@@ -1,0 +1,2846 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "cav:flint_pickaxe",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 200,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        }
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "cav:flint_pickaxe"
+            ],
+            "repair_amount": "query.max_durability"
+          }
+        ]
+      },
+      "minecraft:mining_speed": 1,
+      "minecraft:damage": 3,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "pickaxe"
+      },
+      "minecraft:icon": {
+        "texture": "flint_pickaxe"
+      },
+      "minecraft:display_name": {
+        "value": "Flint Pickaxe"
+      },
+      "minecraft:weapon": {
+        "on_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_not_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_hit_block": {
+          "event": "dmg"
+        }
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.pickaxe"
+      },
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": "minecraft:ice",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:bone_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:infested_deepslate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:chiseled_deepslate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:dripstone_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:pointed_dripstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smooth_basalt",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:tuff",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cobbled_deepslate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_deepslate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_tiles",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cracked_deepslate_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cracked_deepslate_tiles",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_deepslate_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_brick_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_tile_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_deepslate_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_tile_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },          
+          {
+            "block": "minecraft:cobbled_deepslate_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_deepslate_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_brick_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_tile_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_deepslate_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_brick_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_tile_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:calcite",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:copper_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:exposed_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:weathered_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:oxidized_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_exposed_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_weathered_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_oxidized_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:exposed_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:weathered_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:oxidized_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_exposed_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_weathered_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_oxidized_cut_copper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:exposed_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:weathered_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:oxidized_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_exposed_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_weathered_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_oxidized_cut_copper_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:exposed_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:weathered_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:oxidized_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_exposed_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_weathered_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:waxed_oxidized_cut_copper_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:copper_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_copper_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_lapis_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:deepslate_iron_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:small_amethyst_bud",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:amethyst_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:budding_amethyst",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:raw_copper_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:raw_iron_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:raw_gold_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:medium_amethyst_bud",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:large_amethyst_bud",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:amethyst_cluster",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:mob_spawner",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:anvil",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smooth_stone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:lapis_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:enchanting_table",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:end_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cracked_polished_blackstone_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:nether_brick",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cracked_nether_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:purpur_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:purpur_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:end_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab2",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab3",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:mossy_stone_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:sandstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:grindstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:brewing_stand",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:chain",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:lantern",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:soul_lantern",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:quartz_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:netherrack",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:basalt",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_basalt",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stonebrick",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:warped_nylium",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:crimson_nylium",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:end_stone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:ender_chest",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:quartz_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:quartz_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:quartz_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:nether_gold_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:furnace",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blast_furnace",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:lit_furnace",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blackstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:magma",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:golden_rail",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:rail",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:prismarine",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:gilded_blackstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:chiseled_polished_blackstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:purpur_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:conduit",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:coal_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:hopper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:iron_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:lapis_ore",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:concrete",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:dragon_egg",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cauldron",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cobblestone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:packed_ice",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blue_ice",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:heavy_weighted_pressure_plate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:light_weighted_pressure_plate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_pressure_plate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_pressure_plate",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:lodestone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stonecutter_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smoker",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:prismarine_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:prismarine_bricks_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:dark_prismarine_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cobblestone_wall",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:chemical_heat",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_button",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_button",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:brewing_stand",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:bed",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:white_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:orange_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:magenta_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:light_blue_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:yellow_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:lime_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:pink_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:gray_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:silver_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:cyan_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:purple_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blue_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:brown_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:green_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:red_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:black_glazed_terracotta",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smoker",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:nether_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:red_nether_brick_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:sandstone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smooth_sandstone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:red_sandstone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smooth_red_sandstone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:quartz_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smooth_quartz_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:iron_bars",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:mossy_cobblestone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:iron_door",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:iron_trapdoor",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:bell",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:redstone_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:iron_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:dropper",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:dispenser",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:observer",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:smoker",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:red_nether_brick",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:chiseled_nether_bricks",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:undyed_shulker_box",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:shulker_box",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:nether_brick_fence",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:mossy_cobblestone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab2",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab3",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab4",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab4",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_double_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_slab",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:normal_stone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:granite_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_granite_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:diorite_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_diorite_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:andesite_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:polished_andesite_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stone_stairs",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:brick_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:activator_rail",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:detector_rail",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:red_sandstone",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:hardened_clay",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:stained_hardened_clay",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:amphibolite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_amphibolite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:amphibolite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:andesite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:banded_sandstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:chert",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_chert",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:chert_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:chiseled_end_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_smooth_end_stone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cracked_end_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:chiseled_mudstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cobbled_mudstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cobbled_sandstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_mudstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_pearlstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_voidstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dacite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_dacite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dacite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diabase",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diorite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_diabase",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diabase_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:feldspar_block",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:feldspar_ore",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dolostone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_dolostone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dolostone_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:flint_block",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:flint_ore",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:gabbro",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_gabbro",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:gabbro_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:gneiss",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:granite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:hornfels",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_hornfels",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:hornfels_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:limestone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_limestone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:limestone_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:marble",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:marble_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_marble",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mariposite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_mariposite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mariposite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mica_block",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mica_ore",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mudstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:novaculite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_novaculite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:novaculite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:obsidian_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:pearlstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:pegmatite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_pegmatite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:pegmatite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:phyllite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_phyllite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:phyllite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_cobblestone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_pearlstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_voidstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:purpurite_block",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:rhyolite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_rhyolite",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:rhyolite_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:river_rock",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:ruby_ore",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:ruby_block",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:sandstone_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:schist",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_schist",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:schist_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:shale",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_shale",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:shale_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:siltstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_siltstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:purpurite_ore",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:tan_concrete",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:peach_concrete",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:tan_terracotta",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:peach_terracotta",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:tan_glass",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:peach_glass",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:tan_glazed_terracotta",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:peach_glazed_terracotta",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:siltstone_bricks",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:smooth_mudstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:voidstone",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:amphibolite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_amphibolite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:amphibolite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:andesite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:banded_sandstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:chert_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_chert_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:chert_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_smooth_end_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cracked_end_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cobbled_mudstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cobbled_sandstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_mudstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_pearlstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:cut_voidstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dacite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_dacite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dacite_bricks_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diabase_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_diabase_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diabase_bricks_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diorite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dolostone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_dolostone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:dolostone_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:gabbro_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_gabbro_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:gabbro_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:gneiss_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:granite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:hornfels_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_hornfels",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:hornfels_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:limestone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_limestone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:limestone_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:marble_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:marble_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_marble_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mariposite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_mariposite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mariposite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mudstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:novaculite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_novaculite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:novaculite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:obsidian_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:pearlstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:pegmatite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_pegmatite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:pegmatite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:phyllite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_phyllite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:phyllite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_cobblestone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_pearlstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_voidstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:purpurite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:rhyolite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_rhyolite_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:rhyolite_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:river_rock_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:sandstone_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:schist_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_schist_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:schist_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:shale_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_shale_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:shale_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:siltstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:polished_siltstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:siltstone_brick_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:smooth_mudstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:voidstone_slab",
+            "speed": 3,
+            "on_dig": {
+              "event": "dmg"
+            }
+          }
+
+        ],
+        "on_dig": {
+          "event": "dmg"
+        }
+      }
+    },
+    "events": {
+      "dmg": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      }
+    }
+  }
+}

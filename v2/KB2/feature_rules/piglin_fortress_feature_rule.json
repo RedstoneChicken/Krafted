@@ -1,0 +1,53 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:piglin_fortress_feature_rule",
+			"places_feature": "minecraft:piglin_fortress_feature_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "soulsand_valley"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.3,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					32
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					35,
+					100
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					32
+				]
+			}
+		}
+	}
+}

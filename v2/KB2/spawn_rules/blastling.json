@@ -1,0 +1,40 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "korbon:blastling",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:weight": {
+					"default": 15
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 3
+				},
+				"minecraft:biome_filter": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					}
+				],
+				"minecraft:spawns_on_block_filter": [
+					"korbon:velvium",
+					"korbon:verdanite_velvium",
+					"korbon:velvium_grass",
+					"korbon:vaudrite",
+					"korbon:velvium_grass_tall",
+					"korbon:velvium_vine_body",
+					"korbon:velvium_vine_top",
+					"korbon:velvium_vine_bulb",
+					"korbon:chorus_leaves_pink"
+				]
+			}
+		]
+	}
+}

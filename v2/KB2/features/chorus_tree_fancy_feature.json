@@ -1,0 +1,47 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "korbon:chorus_tree_fancy_feature"
+		},
+		"fancy_trunk": {
+			"trunk_height": {
+				"base": 10,
+				"variance": 12,
+				"scale": 0.618
+			},
+			"trunk_width": 1,
+			"trunk_block": {
+				"name": "korbon:chorus_wood"
+			},
+			"branches": {
+				"slope": 0.381,
+				"density": 1,
+				"min_altitude_factor": 0.2
+			},
+			"width_scale": 1,
+			"foliage_altitude_factor": 0.3
+		},
+		"fancy_canopy": {
+			"height": 4,
+			"radius": 3,
+			"leaf_block": {
+				"name": "korbon:chorus_leaves"
+			}
+		},
+		"base_block": [
+			"korbon:void_turf"
+		],
+		"may_grow_on": [
+			"korbon:void_turf"
+		],
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_grow_through": [
+			"korbon:void_turf",
+			"korbon:void_turf_grass"
+		]
+	}
+}

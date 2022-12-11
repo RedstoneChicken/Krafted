@@ -1,0 +1,28 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:lonsdaleite_ore"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:loot": "loot_tables/lonsdaleite.json",
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:destroy_time": 2,
+			"tag:stone": {}
+		},
+		"events": {}
+	}
+}

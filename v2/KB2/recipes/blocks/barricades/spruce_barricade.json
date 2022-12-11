@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:spruce_barricade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:log",
+				"data": 1
+			}
+		},
+		"result": [
+			{
+				"item": "strat:spruce_barricade",
+				"count": 4
+			}
+		]
+	}
+}

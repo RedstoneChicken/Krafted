@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:dark_oak_barricade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:log2",
+				"data": 1
+			}
+		},
+		"result": [
+			{
+				"item": "strat:dark_oak_barricade",
+				"count": 4
+			}
+		]
+	}
+}

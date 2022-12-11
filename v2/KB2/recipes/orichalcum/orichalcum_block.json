@@ -1,0 +1,24 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:orichalcum_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XX",
+			"XX"
+		],
+		"key": {
+			"X": {
+				"item": "oh:orichalcum"
+			}
+		},
+		"result": {
+			"item": "oh:orichalcum_block"
+		}
+	}
+}

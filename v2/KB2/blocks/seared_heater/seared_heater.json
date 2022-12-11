@@ -1,0 +1,137 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:seared_heater",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "seared_heater",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					1,
+					1
+				],
+				"on_tick": {
+					"event": "strat:change_block"
+				}
+			},
+			"minecraft:loot": "loot_tables/seared_heater.json"
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"bridge:block_rotation": "query.cardinal_facing_2d"
+						}
+					},
+					{
+						"trigger": {
+							"event": "strat:change_block"
+						}
+					}
+				]
+			},
+			"strat:change_block": {
+				"sequence": [
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 2",
+						"set_block": {
+							"block_type": "strat:seared_heater_180"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 3",
+						"set_block": {
+							"block_type": "strat:seared_heater_0"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 4",
+						"set_block": {
+							"block_type": "strat:seared_heater_270"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 5",
+						"set_block": {
+							"block_type": "strat:seared_heater_90"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_heater_180",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_heater",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_heater_270",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_heater_90",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:orange_leaves",
+			"register_to_creative_menu": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "k_orange_leaves",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:explosion_resistance": 0.2,
+			"minecraft:destroy_time": 0.2,
+			"minecraft:loot": "loot_tables/blocks/k_orange_leaves.json",
+			"minecraft:flammable": {
+				"burn_odds": 100,
+				"flame_odds": 100
+			},
+			"minecraft:unit_cube": {}
+		},
+		"events": {}
+	}
+}

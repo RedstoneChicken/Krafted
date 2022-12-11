@@ -1,0 +1,43 @@
+{
+ "format_version": "1.8.0",
+ "minecraft:spawn_rules": {
+  "description": {
+   "identifier": "kna:mini_golem",
+   "population_control": "cat"
+  },
+  "conditions": [
+   {
+    "minecraft:spawns_on_surface": {},
+    "minecraft:brightness_filter": {
+     "min": 9,
+     "max": 15,
+     "adjust_for_weather": true
+    },
+    "minecraft:weight": {
+     "default": 4
+    },
+    "minecraft:difficulty_filter": {
+     "min": "easy",
+     "max": "hard"
+    },
+    "minecraft:herd": {
+     "min_size": 0,
+     "max_size": 1
+    },
+    "minecraft:density_limit": {
+     "surface": 1
+    },
+        "minecraft:biome_filter": [
+          { "test": "has_biome_tag", "operator":"==", "value": "plains"},
+          { "test": "has_biome_tag", "operator":"!=", "value": "desert"}
+        ]
+      
+   }
+  ]
+ }
+} e": "animal"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "cav:novaculite_furnace"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "cav:novaculite",
+    "output": "cav:novaculite_brick"
+  }
+  
+}

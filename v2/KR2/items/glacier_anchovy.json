@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:glacier_anchovy",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "glacier_anchovy",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

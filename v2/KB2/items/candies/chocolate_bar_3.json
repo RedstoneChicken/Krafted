@@ -1,0 +1,31 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:chocolate_bar_3",
+     	"category": "nature"
+    },
+    "components": {
+     "minecraft:use_animation": "eat",
+      "minecraft:use_duration": 1,
+      "minecraft:food": {
+				    "nutrition": 2,
+				    "saturation_modifier": "low",
+				    "can_always_eat": true,
+				    "using_converts_to": "kna:chocolate_bar_4" 
+      },
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 64,
+			   "minecraft:icon": {
+				    "texture": "chocolate_bar_3"
+		   	},
+      "minecraft:display_name": {
+			     "value": "Chocolate Bar"
+   			},
+
+			   "minecraft:creative_category": {
+			    	"parent": "itemGroup.name.candies"
+		   	}
+    }
+   }
+}

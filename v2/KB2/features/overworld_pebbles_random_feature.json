@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:overworld_pebbles_random_feature"
+    },
+    "features": [
+      [ "honkit26113:pebbles_feature", 65 ],
+      [ "honkit26113:cobblestone_pebbles_feature", 35 ]
+    ]
+  }
+}

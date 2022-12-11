@@ -1,0 +1,26 @@
+//bridge-file-version: #89
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:phreyium_spines_spikes"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "phreyium_spines_spikes",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:unwalkable": true,
+			"minecraft:map_color": "#216F64",
+			"minecraft:geometry": "geometry.phreyium_spikes_top",
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": false,
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,36 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:giant_mold_sapling"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.mold_sapling",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "giantmoldsapling",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "caf:growmeal",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			}
+		},
+		"events": {
+			"caf:growmeal": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:mold_stem_bottom",
+						"setblock ~ ~1 ~ caf:mold_stem",
+						"setblock ~ ~2 ~ caf:giant_mold_top",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			}
+		}
+	}
+}

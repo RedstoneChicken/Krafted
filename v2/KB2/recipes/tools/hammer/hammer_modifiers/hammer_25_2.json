@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:hammer_25_2"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:hammer_25",
+				"count": 1
+			},
+			{
+				"item": "minecraft:diamond",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:hammer_25_2",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cobalt_shovel_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Cobalt Shovel Head"
+			},
+			"minecraft:icon": {
+				"texture": "cobalt_shovel_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

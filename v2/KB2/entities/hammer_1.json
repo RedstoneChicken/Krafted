@@ -1,0 +1,76 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "oh:hammer",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"death": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:scale": {
+				"value": 0
+			},
+			"minecraft:health": {
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false
+			},
+			"minecraft:behavior.knockback_roar": {
+				"priority": 1,
+				"attack_time": 0.1,
+				"duration": 0.1,
+				"knockback_damage": 0,
+				"knockback_range": 0,
+				"knockback_horizontal_strength": 0,
+				"knockback_vertical_strength": 0,
+				"on_roar_end": {
+					"event": "despawn"
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function hammer"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"death"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

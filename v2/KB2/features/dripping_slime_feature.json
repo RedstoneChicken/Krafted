@@ -1,0 +1,21 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "honkit26113:dripping_slime_feature"
+    },
+    "height_distribution":  [
+      [{"range_min": 1, "range_max": 10}, 2],
+      [{"range_min": 1, "range_max": 7}, 5],
+      [{"range_min": 1, "range_max": 4}, 3]
+    ],
+    "growth_direction": "DOWN",
+    "age": {"range_min": 4, "range_max": 9},
+    "body_blocks": [
+      ["honkit26113:dripping_slime_body", 4]
+    ],
+    "head_blocks": [
+      ["honkit26113:dripping_slime_head", 1]
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:dripstone_fragment",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "dripstone_fragment"
+			},
+			"minecraft:display_name": {
+			 "value": "§eDripstone Fragment\n§6Epic\n§7Cooldown: 36\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "dripstone_fragment",
+				"duration": 36
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "use": {
+        "run_command": {
+          "command": [
+          		"playsound break.pointed_dripstone @a[r=10]",
+            "tag @s add user_df",
+            "effect @e[tag=!user_df,r=10] slowness 2 8 true",
+            "effect @s resistance 2 5 true",
+            "execute @e[tag=!user_df,tag=!none,r=10] ~~~ fill ~1~12~1 ~-1~10~-1 pointed_dripstone",
+            "tag @s remove user_df"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}     

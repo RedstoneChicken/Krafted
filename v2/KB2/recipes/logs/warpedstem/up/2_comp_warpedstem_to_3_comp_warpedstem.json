@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:double_compressed_warpedstem_to_tripple_compressed_warpedstem"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:double_compressed_warpedstem"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:tripple_compressed_warpedstem",
+				"count": 1
+			}
+		]
+	}
+}

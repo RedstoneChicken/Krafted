@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:phyllite_brick_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:phyllite_bricks"
+      }
+    },
+    "result": {
+      "item": "cav:phyllite_brick_slab",
+      "count": 6
+    }
+  }
+}

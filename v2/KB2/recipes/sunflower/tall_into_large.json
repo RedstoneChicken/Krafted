@@ -1,0 +1,9 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": { "identifier": "ff:tall_sunflower_into_large_sunflower" },
+    "tags": ["crafting_table"],
+    "ingredients": [{ "item": "minecraft:double_plant", "count": 2, "data": 0 }],
+    "result": { "item": "ff:sunflower_large_item" }
+  }
+}

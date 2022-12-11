@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.watchling.attack": {
+			"loop": true,
+			"animation_length": 0.4,
+			"override_previous_animation": true,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [85, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [85, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4": {
+							"post": [-2.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

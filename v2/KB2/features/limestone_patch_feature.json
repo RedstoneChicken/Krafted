@@ -1,0 +1,26 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.0",
+  "minecraft:vegetation_patch_feature": {
+    "description": {
+      "identifier": "honkit26113:limestone_patch_feature"
+    },
+    "replaceable_blocks": [
+      "honkit26113:limestone"
+    ],
+    "ground_block": "honkit26113:limestone",
+    "vegetation_feature": "honkit26113:limestone_pebbles_feature",
+    "surface": "floor",
+    "depth": {
+      "range_min": 1,
+      "range_max": 1
+    },
+    "vertical_range": 5,
+    "vegetation_chance": 0.005,
+    "horizontal_radius": {
+      "range_min": 6,
+      "range_max": 12
+    },
+    "extra_edge_column_chance": 0.15
+  }
+}

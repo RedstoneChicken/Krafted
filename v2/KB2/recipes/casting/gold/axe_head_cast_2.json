@@ -1,0 +1,33 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:axe_head_cast_2"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:molten_gold_bucket"
+			},
+			"~": {
+				"item": "strat:stone_axe_head"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:axe_head_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

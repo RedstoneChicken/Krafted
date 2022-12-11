@@ -1,0 +1,22 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ardite_nugget",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "ardite_nugget"
+			},
+			"minecraft:display_name": {
+				"value": "Ardite Nugget"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

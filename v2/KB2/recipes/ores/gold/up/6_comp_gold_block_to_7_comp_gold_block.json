@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:sextuple_compressed_gold_block_to_septuple_compressed_gold_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:sextuple_compressed_gold_block"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:septuple_compressed_gold_block",
+				"count": 1
+			}
+		]
+	}
+}

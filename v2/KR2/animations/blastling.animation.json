@@ -1,0 +1,105 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.blastling.shoot": {
+			"animation_length": 1.12,
+			"override_previous_animation": true,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.08": {
+							"post": [90, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.2": {
+							"post": [102.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.32": {
+							"post": [90, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.44": {
+							"post": [90, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.56": {
+							"post": [72.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.64": {
+							"post": [35, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.72": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": {
+							"post": [90, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.12": {
+							"post": [102.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.24": {
+							"post": [90, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.36": {
+							"post": [90, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.48": {
+							"post": [72.5, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.56": {
+							"post": [35, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.64": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"body2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.12": [0, 5, 0],
+						"0.2": [0, -5, 0],
+						"0.32": [0, 0, 0]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "shoot",
+					"locator": "lefthand"
+				},
+				"0.12": {
+					"effect": "shoot",
+					"locator": "righthand"
+				}
+			}
+		},
+		"animation.blastling.flame": {
+			"loop": true,
+			"override_previous_animation": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "smoke",
+						"locator": "locator"
+					}
+				]
+			}
+		}
+	}
+}

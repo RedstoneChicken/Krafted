@@ -1,0 +1,36 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:warped_stag",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/warped_stag",
+				"saddled": "textures/entity/warped_stag_saddled"
+			},
+			"geometry": {
+				"default": "geometry.warped_stag"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.warped_stag.walk",
+				"idle": "animation.warped_stag.idle",
+				"move": "animation.warped_stag.walk"
+			},
+			"spawn_egg": {
+				"base_color": "#0CA5A5",
+				"overlay_color": "#8D9E10"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

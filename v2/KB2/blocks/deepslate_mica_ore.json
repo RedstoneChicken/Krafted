@@ -1,0 +1,25 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "cav:deepslate_mica_ore",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      },
+      "minecraft:destroy_time": 0.9,
+      "minecraft:explosion_resistance": 30,
+      "minecraft:block_light_absorption": 15,
+      "minecraft:map_color": "#969696",
+      "minecraft:block_light_emission": 0,
+      "minecraft:loot": "loot_tables/blocks/mica_ore.json",
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      }
+    }
+  }
+}

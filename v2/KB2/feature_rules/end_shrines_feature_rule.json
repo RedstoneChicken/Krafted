@@ -1,0 +1,43 @@
+//bridge-file-version: #74
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "korbon:end_shrines_feature_rule",
+			"places_feature": "korbon:select_end_shrine_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "the_end"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.45,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz)",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:crimsonstem_to_compressed_crimsonstem"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:crimson_stem"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_crimsonstem",
+				"count": 1
+			}
+		]
+	}
+}

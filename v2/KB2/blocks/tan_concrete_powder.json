@@ -1,0 +1,36 @@
+{
+  "format_version": "1.16.200",
+  "minecraft:block": {
+    "description": {
+      "identifier": "cav:tan_concrete_powder",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "construction",
+        "group": "itemGroup.name.concretePowder"
+      },
+      "minecraft:on_placed": {
+    		"event": "cavern:turnto_concrete",
+    		"target": "self"
+      		},
+      "minecraft:destroy_time": 0.25,
+      "minecraft:explosion_resistance": 30,
+      "minecraft:block_light_absorption": 15,
+      "minecraft:map_color": "#DEC98A",
+      "minecraft:block_light_emission": 0,
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      }
+    },
+	 "events": {
+		"cavern:turnto_concrete": {
+		"run_command": {
+			"command": ["execute @s ~ ~ ~ detect ~+1 ~+1 ~+1 water -1 setblock ~ ~ ~ cav:tan_concrete"],
+			"target": "self"
+				}
+			}		
+		}
+	}
+}

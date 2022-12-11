@@ -1,0 +1,30 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:crystal_apple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"CCC",
+			"CAC",
+			"CCC"
+		],
+		"key": {
+			"C": {
+				"item": "end:lonsdaleite_shard"
+			},
+			"A": {
+				"item": "minecraft:golden_apple"
+			}
+		},
+		"result": [
+			{
+				"item": "end:crystal_apple"
+			}
+		]
+	}
+}

@@ -1,0 +1,179 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:endithere",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"ride": "controller.animation.ride"
+			},
+			"scripts": {
+				"animate": [
+					"ride"
+				]
+			}
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 5 : 0"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"phantom",
+					"undead",
+					"monster",
+					"mob",
+					"endithere"
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/wyvern_feather.json"
+			},
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 50,
+				"max": 50
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:attack": {
+				"damage": 10
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": false
+			},
+			"minecraft:collision_box": {
+				"width": 0.9,
+				"height": 0.5
+			},
+			"minecraft:movement": {
+				"value": 1.8
+			},
+			"minecraft:movement.glide": {
+				"start_speed": 0.1,
+				"speed_when_turning": 0.2
+			},
+			"minecraft:follow_range": {
+				"value": 64,
+				"max": 64
+			},
+			"minecraft:despawn": {
+				"despawn_from_distance": {}
+			},
+			"minecraft:behavior.avoid_mob_type": {
+				"priority": 0,
+				"max_dist": 16,
+				"ignore_visibility": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "ocelot"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "cat"
+								}
+							]
+						},
+						"max_dist": 16
+					}
+				]
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"reselect_targets": true,
+				"within_radius": 64,
+				"must_see_forget_duration": 0.5,
+				"target_search_height": 80,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						},
+						"max_dist": 64
+					}
+				]
+			},
+			"minecraft:behavior.circle_around_anchor": {
+				"priority": 3,
+				"radius_change": 1,
+				"radius_adjustment_chance": 0.004,
+				"height_adjustment_chance": 0.002857,
+				"goal_radius": 1,
+				"angle_change": 15,
+				"radius_range": [
+					5,
+					15
+				],
+				"height_offset_range": [
+					-4,
+					5
+				],
+				"height_above_target_range": [
+					20,
+					40
+				]
+			},
+			"minecraft:rideable": {
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0,
+							-1,
+							0
+						]
+					}
+				],
+				"seat_count": 1,
+				"family_types": [
+					"player"
+				]
+			},
+			"minecraft:behavior.delayed_attack": {
+				"priority": 2,
+				"speed_multiplier": 1,
+				"attack_once": false,
+				"random_stop_interval": 0,
+				"track_target": true,
+				"require_complete_path": false
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

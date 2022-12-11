@@ -1,0 +1,19 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "end:tiny_end_island_1"
+		},
+		"structure_name": "end:tiny_end_island1",
+		"adjustment_radius": 4,
+		"facing_direction": "random",
+		"constraints": {
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air"
+				]
+			}
+		}
+	}
+}

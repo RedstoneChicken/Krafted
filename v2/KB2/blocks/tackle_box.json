@@ -1,0 +1,66 @@
+{
+	"format_version" : "1.16.100",
+	"minecraft:block" : {
+		"description" : {
+			"identifier" : "azc:tackle_box",
+			"is_experimental" : false,
+			"category" : "Items",
+			"register_to_creative_menu" : true,
+			"properties" : {
+				"block:rotation" : [ 0, 1, 2, 3, 4, 5, 6 ]
+			}
+		},
+		"components" : {
+			"minecraft:loot" : "loot_tables/blocks/tackle_box.json",
+			"minecraft:destroy_time" : 3.75,
+			"minecraft:map_color" : "#FFFFFF",
+			"minecraft:block_light_absorption" : 0,
+			"minecraft:block_light_emission" : 0,
+			"minecraft:explosion_resistance" : 2.5,
+			"minecraft:on_player_placing" : {
+				"event" : "update_rotation"
+			},
+			"minecraft:creative_category" : {
+				"category" : "items"
+			},
+			"minecraft:crafting_table" : {
+				"grid_size" : 3,
+				"crafting_tags" : [ "tackle_box" ],
+				"custom_description" : "Tackle Box"
+			}
+		},
+		"permutations" : [
+			{
+				"condition" : "query.block_property('block:rotation') == 2",
+				"components" : {
+					"minecraft:rotation" : [ 0, 0, 0 ]
+				}
+			},
+			{
+				"condition" : "query.block_property('block:rotation') == 3",
+				"components" : {
+					"minecraft:rotation" : [ 0, -180, 0 ]
+				}
+			},
+			{
+				"condition" : "query.block_property('block:rotation') == 4",
+				"components" : {
+					"minecraft:rotation" : [ 0, 90, 0 ]
+				}
+			},
+			{
+				"condition" : "query.block_property('block:rotation') == 5",
+				"components" : {
+					"minecraft:rotation" : [ 0, -90, 0 ]
+				}
+			}
+		],
+		"events" : {
+			"update_rotation" : {
+				"set_block_property" : {
+					"block:rotation" : "query.cardinal_facing_2d"
+				}
+			}
+		}
+	}
+}

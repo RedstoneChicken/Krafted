@@ -1,0 +1,39 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:redmushrooms"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.redmushroom",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_redmushroom",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 0.2,
+			"minecraft:explosion_resistance": 30,
+			"minecraft:block_light_absorption": 1,
+			"minecraft:map_color": "#10551D",
+			"minecraft:flammable": {
+				"burn_odds": 0,
+				"flame_odds": 0
+			},
+			"minecraft:pick_collision": {
+				"size": [
+					16,
+					8,
+					16
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:loot": "loot_tables/redmushroom.json"
+		},
+		"events": {}
+	}
+}

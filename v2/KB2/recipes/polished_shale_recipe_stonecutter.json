@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cav:polished_shale_recipe_stonecutter"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:shale"
+      }
+    ],
+    "result": {
+      "item": "cav:polished_shale",
+      "count": 1
+    }
+  }
+  
+}

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:iron_fishing_rod_template",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "iron_fishing_rod_template",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

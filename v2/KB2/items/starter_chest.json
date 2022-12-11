@@ -1,0 +1,46 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+   "identifier": "kna:starter_chest",
+			"category": "items"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "starter_chest"
+			},
+			"minecraft:display_name": {
+			 "value": "§6Starter Chest"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.starter"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "spawn",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "spawn": {
+        "run_command": {
+          "command": [
+            "summon kna:starter_loot ~~~",
+            "execute @s ~~~ particle minecraft:crop_growth_emitter ~~~"
+          ],
+          "target": "holder"
+        },
+            "decrement_stack": {
+     "ignore_game_mode": true
+    }
+      }
+    }
+  }
+}

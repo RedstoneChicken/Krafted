@@ -1,0 +1,35 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_large_plate_rec"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:large_plate_pattern"
+			},
+			"~": {
+				"item": "minecraft:cobblestone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_large_plate",
+				"count": 1
+			},
+			{
+				"item": "strat:large_plate_pattern",
+				"count": 1
+			}
+		]
+	}
+}

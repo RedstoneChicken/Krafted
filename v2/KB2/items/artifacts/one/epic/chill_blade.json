@@ -1,0 +1,116 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:chill_blade",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:use_duration": 0,			
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "snowball",
+					"target": "self"
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"texture": "chill_blade"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+		 "minecraft:display_name": {
+			 "value": "§bChill Blade\n§eEpic Weapon\n§79 Attack Damage\n2500 Durability\nSpecial Effect: §3Chill"
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "chill"
+				}
+			},
+			"minecraft:damage": 9,
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 10
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:durability": {
+				"max_durability": 2500
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:snow"
+						],
+						"repair_amount": 20
+					},
+					{
+						"items": [
+							"minecraft:powder_snow_bucket"
+						],
+						"repair_amount": 120
+					}
+				]
+			},
+			"minecraft:allow_off_hand": false,
+			"minecraft:foil": false,
+			"minecraft:mining_speed": 1,
+			"minecraft:render_offsets": "tools",
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"on_dig": {
+					"event": "dam"
+				},
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 15,
+						"on_dig": {
+							"event": "dam"
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"chill": {
+				"damage": {
+					"type": "magic",
+					"amount": 1,
+					"target": "self"
+				},
+				"run_command": {
+					"command": [
+						"effect @s speed 1 2 true",
+						"effect @e[type=!player,r=3] slowness 2 3 true",
+						"execute @e[type=!player,r=3] ~ ~ ~ particle minecraft:falling_dust_top_snow_particle ~ ~1.5 ~"
+					],
+					"target": "self"
+				}
+			},
+			"dam": {
+				"damage": {
+					"type": "magic",
+					"amount": 1,
+					"target": "self"
+				}
+			},
+			"snowball": {
+							"swing":{
+            },
+   "shoot":{
+     "launch_power":2,
+     "angle_offset":"query.cardinal_facing",
+     "projectile":"snowball"
+   },
+			"damage": {
+					"type": "snowball",
+					"amount": 0
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:lava_tank_diamond_full",
+			"properties": {
+				"honkit26113:obsidian": [ 0, 1 ]
+			}
+		},
+		"components": {
+			"tag:honkit26113_dig_with_pickaxe": {},
+			"tag:honkit26113_lava_tank": {},
+      		"minecraft:creative_category": {
+        		"group": "itemGroup.name.none",
+      			"category": "none"
+      		},
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "lava_tank_diamond",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:geometry": "geometry.lava_tank",
+            "minecraft:part_visibility": {
+                "rules": {
+                    "glass": true,
+                    "base": true,
+                    "lava": "q.block_property('honkit26113:obsidian') == 0",
+                    "obsidian": "q.block_property('honkit26113:obsidian') == 1"
+                }
+            },
+			"minecraft:on_interact": {
+				"event": "honkit26113:cool_down_tank"
+			},
+            "minecraft:breathability": "air",
+			"minecraft:destroy_time": 0.5,
+			"minecraft:explosion_resistance": 2
+        },
+        "events": {
+      		"honkit26113:cool_down_tank": {
+        		"sequence": [
+          			{
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.interact_with_water\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.get_equipped_item_name('main_hand') == 'water_bucket'",
+            			"set_block_property": {
+              				"honkit26113:obsidian": 1
+            			}
+          			},
+          			{
+          				"condition": "q.get_equipped_item_name('main_hand') == 'water_bucket'",
+            			"transform_item": {
+              				"transform": "minecraft:bucket:0"
+            			}
+          			},
+          			{
+          				"condition": "q.get_equipped_item_name('main_hand') == 'water_bucket'",
+            			"run_command": {
+              				"command": [
+              					"titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooling_down\"}]}",
+              					"playsound random.fizz @a[r=10]",
+              					"particle minecraft:ice_evaporation_emitter ~ ~ ~"
+              				]
+            			}
+          			}
+        		]
+      		},
+      		"honkit26113:empty_tank": {
+        		"sequence": [
+          			{
+          				"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.interact_with_pickaxe\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.get_equipped_item_name('main_hand') == 'diamond_pickaxe' || q.get_equipped_item_name('main_hand') == 'netherite_pickaxe' || q.get_equipped_item_name('main_hand') == 'luminite_pickaxe'",
+            			"set_block": {
+              				"block_type": "honkit26113:lava_tank_diamond_cooldown"
+            			}
+          			},
+          			{
+          				"condition": "q.get_equipped_item_name('main_hand') == 'diamond_,pickaxe' || q.get_equipped_item_name('main_hand') == 'netherite_pickaxe' || q.get_equipped_item_name('main_hand') == 'luminite_pickaxe'",
+            			"run_command": {
+              				"command": [
+              					"titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.emptied\"}]}",
+              					"playsound dig.stone @a[r=10]"
+              				]
+            			}
+          			}
+        		]
+      		}
+  		},
+  		"permutations": [
+  			{
+  				"condition": "q.block_property('honkit26113:obsidian') == 0", // lava
+  				"components": {
+  					"minecraft:on_interact": {
+  						"event": "honkit26113:cool_down_tank"
+  					},
+  					"minecraft:block_light_emission": 1.0
+  				}
+  			},
+  			{
+  				"condition": "q.block_property('honkit26113:obsidian') == 1", // obsidian
+  				"components": {
+  					"minecraft:on_interact": {
+  						"event": "honkit26113:empty_tank"
+  					}
+  				}
+  			}
+  		]
+	}
+}

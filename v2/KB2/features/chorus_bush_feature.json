@@ -1,0 +1,65 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "korbon:chorus_bush_feature"
+		},
+		"trunk": {
+			"trunk_height": 1,
+			"trunk_block": {
+				"name": "korbon:chorus_log"
+			}
+		},
+		"canopy": {
+			"canopy_offset": {
+				"min": -1,
+				"max": 1
+			},
+			"leaf_block": {
+				"name": "korbon:chorus_leaves"
+			},
+			"min_width": 0,
+			"canopy_slope": {
+				"rise": 1,
+				"run": 1
+			},
+			"variation_chance": {
+				"numerator": 1,
+				"denominator": 2
+			}
+		},
+		"base_block": [
+			"korbon:void_turf"
+		],
+		"may_grow_on": [
+			"minecraft:dirt",
+			"minecraft:podzol",
+			"minecraft:grass",
+			"minecraft:farmland",
+			"minecraft:dirt",
+			"minecraft:moss_block",
+			"minecraft:dirt_with_roots",
+			"minecraft:clay",
+			"korbon:void_turf",
+			"korbon:void_turf_stone"
+		],
+		"may_replace": [
+			"minecraft:water",
+			"minecraft:flowing_water",
+			"minecraft:air",
+			"minecraft:flowering_azalea",
+			"minecraft:azalea_leaves_flowered",
+			"minecraft:azalea_leaves",
+			"minecraft:azalea",
+			"minecraft:leaves2",
+			"minecraft:leaves"
+		],
+		"may_grow_through": [
+			"minecraft:dirt",
+			"minecraft:grass",
+			"korbon:void_turf",
+			"korbon:void_turf_stone"
+		]
+	}
+}

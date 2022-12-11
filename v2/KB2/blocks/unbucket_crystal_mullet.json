@@ -1,0 +1,31 @@
+{
+	"format_version" : "1.17.0",
+	"minecraft:block" : {
+		"description" : {
+			"identifier" : "adv:unbucket_crystal_mullet"
+		},
+		"components" : {
+			"minecraft:entity_collision" : false,
+			"minecraft:pick_collision" : false,
+			"minecraft:material_instances" : {
+				"*" : {
+					"texture" : "unbucket",
+					"render_method" : "alpha_test"
+				}
+			},
+			"minecraft:unit_cube" : {},
+			"minecraft:block_light_absorption" : 0,
+			"minecraft:block_light_emission" : 0,
+			"minecraft:on_placed" : {
+				"event" : "unbucket"
+			}
+		},
+		"events" : {
+			"unbucket" : {
+				"run_command" : {
+					"command" : [ "function unbucket_crystal_mullet" ]
+				}
+			}
+		}
+	}
+}

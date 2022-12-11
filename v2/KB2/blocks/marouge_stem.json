@@ -1,0 +1,114 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:marouge_stem",
+			"properties": {
+				"wiki:rotation": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "marouge_stem",
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				},
+				"up": {
+					"texture": "marouge_stem_top",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				},
+				"down": {
+					"texture": "marouge_stem_top",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 3,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+			},
+			"minecraft:on_player_placing": {
+				"event": "wiki:set_rotation"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:on_interact": {
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
+				"event": "nether:strip"
+			},
+			"tag:wood": {}
+		},
+		"events": {
+			"wiki:set_rotation": {
+				"set_block_property": {
+					"wiki:rotation": "math.floor(query.cardinal_facing/2)"
+				}
+			},
+			"nether:strip": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "nether:stripped_marouge_stem"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound hit.wood @a ~~~"
+							]
+						}
+					},
+					{
+						"damage": {
+							"type": "durability",
+							"amount": 1,
+							"target": "item"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						270
+					]
+				}
+			}
+		]
+	}
+}

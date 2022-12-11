@@ -1,0 +1,29 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:peach_concrete"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CCC",
+      "CWC",
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "cav:peach_concrete_powder"
+      },
+      "W": {
+        "item": "minecraft:water_bucket"
+      }
+    },
+
+    "result": [
+      { "item": "cav:peach_concrete", "count": 8 },
+      { "item": "minecraft:bucket", "count": 1, "data": 0 }
+    ]
+  }
+}

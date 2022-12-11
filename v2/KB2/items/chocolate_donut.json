@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:chocolate_donut",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": "good"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "chocolate_donut"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

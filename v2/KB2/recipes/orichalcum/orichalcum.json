@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "oh:orichalcum"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "oh:orichalcum_ore",
+		"output": "oh:orichalcum"
+	}
+}

@@ -1,0 +1,47 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:speed_boots_two",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "speed_boots"
+			},
+			"minecraft:display_name": {
+			 "value": "Speed Boots\n§8Common\n§7Cooldown: 32\nLevel: 2\nSpeed 4: 15 sec"
+			 },
+			"minecraft:cooldown": {
+				"category": "speed_boots",
+				"duration": 32
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+     	     	"playsound mob.player.hurt_drown @a[r=10]",
+            "effect @s speed 15 3 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

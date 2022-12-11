@@ -1,0 +1,46 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:rocket_boost",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"rocket_boost"
+         },
+         "minecraft:display_name":{
+            "value":"§eBoost Rocket\n§6Epic\n§7Cooldown: 6\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"rocket_boost",
+            "duration":6
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"boost",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "boost":{
+            "run_command":{
+               "command":[
+                  "playsound firework.launch @a[r=10]",
+                  "summon kna:strong_wind ^^^-0.1"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

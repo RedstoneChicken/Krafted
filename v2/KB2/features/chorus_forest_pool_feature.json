@@ -1,0 +1,39 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.0",
+	"minecraft:vegetation_patch_feature": {
+		"description": {
+			"identifier": "korbon:chorus_forest_pool_feature"
+		},
+		"replaceable_blocks": [
+			"minecraft:clay",
+			"minecraft:moss_block",
+			"minecraft:sand",
+			"minecraft:gravel",
+			"minecraft:dirt",
+			"minecraft:podzol",
+			"minecraft:dirt_with_roots",
+			"minecraft:grass",
+			"minecraft:mycelium",
+			"minecraft:stone",
+			"minecraft:cave_vines",
+			"minecraft:cave_vines_body_with_berries",
+			"minecraft:cave_vines_head_with_berries",
+			"korbon:void_turf",
+			"korbon:void_turf_stone"
+		],
+		"ground_block": "korbon:void_turf",
+		"vegetation_feature": "korbon:chorus_water_leaves_scatter_feature",
+		"surface": "floor",
+		"depth": 3,
+		"vertical_range": 5,
+		"vegetation_chance": 0.1,
+		"horizontal_radius": {
+			"range_min": 4,
+			"range_max": 8
+		},
+		"extra_deep_block_chance": 0.8,
+		"extra_edge_column_chance": 0.7,
+		"waterlogged": true
+	}
+}

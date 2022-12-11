@@ -1,0 +1,29 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:pasta",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 0.8,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_pasta"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "poor",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

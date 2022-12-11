@@ -1,0 +1,20 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "honkit26113:giant_crooked_fungus_big_1_e_feature"
+        },
+        "structure_name": "mystructure:crooked_fungus_big_1_rotated_90",
+        "adjustment_radius": 11,
+        "facing_direction": "east",
+        "constraints": {
+        	"grounded": {},
+      		"block_intersection": {
+        		"block_allowlist": [
+          			"minecraft:air"
+        		]
+      		}
+    	}
+    }
+}

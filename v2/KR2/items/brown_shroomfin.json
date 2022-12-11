@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:brown_shroomfin",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "brown_shroomfin",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

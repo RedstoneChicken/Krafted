@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.extra_large_water_plant",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-56, 0, -8],
+							"size": [64, 0, 64],
+							"uv": {
+								"up": {"uv": [16, 16], "uv_size": [-16, -16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

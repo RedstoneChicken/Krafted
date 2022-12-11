@@ -1,0 +1,31 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_gold_from_cast14"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "strat:tough_tool_rod_cast"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_gold_bucket",
+				"count": 1
+			}
+		],
+		"priority": 5
+	}
+}

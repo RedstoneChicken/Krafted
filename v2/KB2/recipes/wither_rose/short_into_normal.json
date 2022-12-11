@@ -1,0 +1,20 @@
+{
+    "format_version": 1.12,
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "ff:short_wither_rose_into_normal_wither_rose"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "ff:wither_rose_short_item"
+            }
+        ],
+        "result": {
+            "item": "minecraft:wither_rose",
+            "count": 2
+        }
+    }
+}

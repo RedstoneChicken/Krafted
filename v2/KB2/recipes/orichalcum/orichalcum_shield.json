@@ -1,0 +1,34 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh_orichalcum:shield"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"WPW",
+			"P#P",
+			" P"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:planks"
+			},
+			"W": {
+				"item": "minecraft:log"
+			},
+			"#": {
+				"item": "oh:orichalcum"
+			}
+		},
+		"result": [
+			{
+				"item": "oh_orichalcum:shield",
+				"count": 1
+			}
+		]
+	}
+}

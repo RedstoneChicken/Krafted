@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:warped_barricade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:warped_stem"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:warped_barricade",
+				"count": 4
+			}
+		]
+	}
+}

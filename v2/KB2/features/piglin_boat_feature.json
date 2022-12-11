@@ -1,0 +1,23 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "minecraft:piglin_boat_feature"
+		},
+		"structure_name": "mystructure:piglin_boat",
+		"adjustment_radius": 0,
+		"facing_direction": "south",
+		"constraints": {
+			"unburied": {},
+			"block_intersection": {
+				"block_whitelist": [
+					{
+						"name": "minecraft:air"
+					},
+					"minecraft:lava"
+				]
+			}
+		}
+	}
+}

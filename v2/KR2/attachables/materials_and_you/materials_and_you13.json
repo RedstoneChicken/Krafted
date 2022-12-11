@@ -1,0 +1,29 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "strat:materials_and_you13",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/models/book/materials_and_you13"
+			},
+			"geometry": {
+				"default": "geometry.book2"
+			},
+			"animations": {
+				"wield": "animation.book.wield"
+			},
+			"scripts": {
+				"animate": [
+					"wield"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

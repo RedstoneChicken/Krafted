@@ -1,0 +1,14 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:chorus_tree_big_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:chorus_tree_grass_feature",
+			"korbon:chorus_tree_big_1_feature"
+		]
+	}
+}

@@ -1,0 +1,80 @@
+//bridge-file-version: #52
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:viscosa_tall_top"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "viscosa_tall_top",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:viscosa_tall"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:map_color": "#909143",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:flammable": {
+				"burn_odds": 2,
+				"flame_odds": 1
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:loot": "empty",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy"
+			}
+		},
+		"events": {
+			"destroy": {
+				"sequence": [
+					{
+						"set_block_at_pos": {
+							"block_type": "minecraft:air",
+							"block_offset": [
+								0,
+								-1,
+								0
+							]
+						}
+					},
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/viscosa_tall.json"
+						},
+						"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+					}
+				]
+			}
+		}
+	}
+}

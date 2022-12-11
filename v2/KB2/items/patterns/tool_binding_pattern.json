@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tool_binding_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Tool Binding Pattern\n§7Material Cost: 1§r"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_tool binding pattern"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:tool_binding_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

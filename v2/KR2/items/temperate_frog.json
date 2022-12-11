@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:temperate_frog",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "temperate_frog",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

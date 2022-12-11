@@ -1,0 +1,42 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:earth_slimy_seeds",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "earth_slimy_seeds"
+			},
+			"minecraft:display_name": {
+				"value": "Slimy Seeds"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.seed"
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "strat:transform"
+				}
+			}
+		},
+		"events": {
+			"strat:transform": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"fill ~~~~~~ strat:earth_slime_grass 0 replace dirt",
+								"fill ~~~~~~ strat:earth_slime_grass 0 replace strat:earth_slime_dirt",
+								"playsound use.slime @a ~~~"
+							],
+							"target": "block"
+						},
+						"decrement_stack": {}
+					}
+				]
+			}
+		}
+	}
+}

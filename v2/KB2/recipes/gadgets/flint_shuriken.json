@@ -1,0 +1,27 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:flint_shuriken"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" # ",
+			"# #",
+			" # "
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:flint"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:flint_shuriken",
+				"count": 4
+			}
+		]
+	}
+}

@@ -1,0 +1,94 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ff:test_block",
+      "properties": {
+        "ff:rotation": [0, 1, 2, 3],
+        "ff:model": [0, 1 ,2 ,3]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_property('ff:rotation') == 0",
+        "components": {
+          "minecraft:rotation": [0, 0, 0]
+        }
+      },
+      {
+        "condition": "q.block_property('ff:rotation') == 1",
+        "components": {
+          "minecraft:rotation": [0, 180, 0]
+        }
+      },
+      {
+        "condition": "q.block_property('ff:rotation') == 2",
+        "components": {
+          "minecraft:rotation": [0, 90, 0]
+        }
+      },
+      {
+        "condition": "q.block_property('ff:rotation') == 3",
+        "components": {
+          "minecraft:rotation": [0, -90, 0]
+        }
+      },
+      {
+        "condition": "q.block_property('ff:model') == 0",
+        "components": {
+          "minecraft:geometry": "geometry.cactus_group"
+        }
+      },
+      {
+        "condition": "q.block_property('ff:model') == 1",
+        "components": {
+          "minecraft:geometry": "geometry.cactus_group1"
+        }
+      },
+      {
+        "condition": "q.block_property('ff:model') == 2",
+        "components": {
+          "minecraft:geometry": "geometry.cactus_group2"
+        }
+      },
+      {
+        "condition": "q.block_property('ff:model') == 3",
+        "components": {
+          "minecraft:geometry": "geometry.cactus_group3"
+        }
+      }
+    ],
+    "components": {
+      "minecraft:geometry": "geometry.cactus_group",
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:breathability": "air",
+
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "alpha_test",
+          "texture": "cactus_side",
+          "face_dimming": true,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:block_light_emission": 0.14,
+      "minecraft:entity_collision": false,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:destroy_time": 0,
+      "minecraft:creative_category": {
+        "category": "construction"
+      },
+      "minecraft:on_placed": {
+        "event": "randomize"
+      }
+    },
+    "events": {
+      "randomize": {
+        "set_block_property": {
+          "ff:rotation": "math.floor(math.random(0, 4))",
+          "ff:model": "math.floor(math.random(0, 4))"
+        }
+      }
+    }
+  }
+}

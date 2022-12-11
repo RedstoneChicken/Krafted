@@ -1,0 +1,98 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:void_standing_torch_top"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void_standing_torch_top",
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.standing_torch_top",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 1,
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0,
+					5
+				],
+				"on_tick": {
+					"event": "flame"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-1,
+					0,
+					-1
+				],
+				"size": [
+					2,
+					11,
+					2
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-1,
+					0,
+					-1
+				],
+				"size": [
+					2,
+					11,
+					2
+				]
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy"
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"korbon:void_standing_torch_bottom"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/empty.json",
+			"minecraft:unwalkable": true,
+			"tag:void_torch": {}
+		},
+		"events": {
+			"flame": {
+				"run_command": {
+					"command": [
+						"particle korbon:void_flame ~~0.29~",
+						"particle minecraft:basic_smoke_particle ~~0.35~"
+					]
+				}
+			},
+			"destroy": {
+				"set_block_at_pos": {
+					"block_type": "minecraft:air",
+					"block_offset": [
+						0,
+						-1,
+						0
+					]
+				},
+				"spawn_loot": {
+					"table": "loot_tables/blocks/void_standing_torch.json"
+				}
+			}
+		}
+	}
+}

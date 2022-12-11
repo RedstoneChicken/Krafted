@@ -1,0 +1,35 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:churn_rec"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" #",
+			"~ ~",
+			"~-~"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stick"
+			},
+			"-": {
+				"item": "minecraft:wooden_slab"
+			},
+			"~": {
+				"item": "minecraft:planks"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:churn_item",
+				"count": 1
+			}
+		],
+		"priority": 1
+	}
+}

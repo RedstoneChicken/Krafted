@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:crystal_chest"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"P P",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "end:crystal_plank"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:chest"
+			}
+		]
+	}
+}

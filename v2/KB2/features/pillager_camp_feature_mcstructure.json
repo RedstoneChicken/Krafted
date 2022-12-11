@@ -1,0 +1,16 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "minecraft:pillager_camp_feature_mcstructure"
+		},
+		"structure_name": "mystructure:pillager_camp",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {}
+		}
+	}
+}

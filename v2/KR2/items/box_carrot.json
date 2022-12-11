@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:box_carrot",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "box",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

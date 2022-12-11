@@ -1,0 +1,38 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:excavator_126"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" ~#",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_excavator_head"
+			},
+			"~": {
+				"item": "strat:cobalt_large_plate"
+			},
+			"o": {
+				"item": "strat:cobalt_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:cobalt_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:excavator_126",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

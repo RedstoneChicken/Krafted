@@ -1,0 +1,28 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:darkoak_to_compressed_darkoak"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:log2",
+				"data": 1
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_darkoak",
+				"count": 1
+			}
+		]
+	}
+}

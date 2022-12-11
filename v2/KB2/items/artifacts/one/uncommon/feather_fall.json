@@ -1,0 +1,47 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:feather_fall",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "feather_fall"
+			},
+			"minecraft:display_name": {
+			 "value":  "Feather Fall\n§2Uncommon\n§7Cooldown: 60\nLevel: 1\nFeather Falling 1: 12 sec"
+			 },
+			"minecraft:cooldown": {
+				"category": "feather_fall",
+				"duration": 60
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound beacon.deactivate @a[r=10]",
+            "effect @s slow_falling 12 1 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

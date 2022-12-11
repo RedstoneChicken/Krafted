@@ -1,0 +1,75 @@
+//bridge-file-version: #60
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:vaudrite_spike_bottom"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vaudrite_spike_bottom",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:vaudrite"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:map_color": "#411F4F",
+			"minecraft:flammable": {
+				"burn_odds": 10,
+				"flame_odds": 10
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:loot": "loot_tables/blocks/empty.json",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "place"
+			},
+			"minecraft:on_placed": {
+				"event": "place",
+				"target": "self"
+			},
+			"minecraft:block_light_absorption": 0,
+			"tag:vaudrite_spike": {}
+		},
+		"events": {
+			"place": {
+				"set_block_at_pos": {
+					"block_type": "korbon:vaudrite_spike_top",
+					"block_offset": [
+						0,
+						1,
+						0
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "neptunium_leggings"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AAA",
+      "A A",
+      "A A"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:neptunium_ingot"
+      }
+    },
+    "result": {
+      "item": "azc:neptunium_leggings"
+    }
+  }
+}

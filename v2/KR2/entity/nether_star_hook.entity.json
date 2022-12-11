@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "azc:nether_star_hook",
+      "materials": {
+        "default": "fishing_hook"
+      },
+      "textures": {
+        "default": "textures/entity/nether_star_hook"
+      },
+      "geometry": {
+        "default": "geometry.fishing_hook"
+      },
+      "render_controllers": [ "controller.render.fishing_hook" ]
+    }
+  }
+}

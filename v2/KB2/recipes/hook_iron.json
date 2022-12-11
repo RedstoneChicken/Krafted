@@ -1,0 +1,18 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "hook_iron"
+		},
+		"tags" : [ "tackle_box" ],
+		"pattern" : [ "  A", "A A", " A " ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:iron_nugget"
+			}
+		},
+		"result" : {
+			"item" : "azc:iron_hook"
+		}
+	}
+}

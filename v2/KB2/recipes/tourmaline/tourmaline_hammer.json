@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:tourmaline_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:tourmaline_head"
+			},
+			"Y": {
+				"item": "oh:trunk_stick"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:tourmaline_hammer",
+				"count": 1
+			}
+		]
+	}
+}

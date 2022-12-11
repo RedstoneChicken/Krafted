@@ -1,0 +1,26 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.18.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:smeltery_controller_0_11"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "smeltery_controller",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"minecraft:loot": "loot_tables/smeltery_controller.json",
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		}
+	}
+}

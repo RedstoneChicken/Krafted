@@ -1,0 +1,55 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:blinding_sac",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "blinding_sac"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value":  "Blinding Sac\n§8Common\n§7Cooldown: 30\nLevel: 1"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:cooldown": {
+				"category": "blinding_sac",
+				"duration": 30
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"use": {
+			 "run_command": {
+          "command": [
+       	   	"playsound mob.wither.death @a[r=10] ~ ~ ~ 0.8 0.7 1.1",
+            "tag @s add user_bs",
+            "effect @e[tag=!user_bs,r=10] blindness 8 2",
+            "effect @e[tag=!user_bs,r=10] weakness 8 2",
+            "effect @e[tag=!user_bs,r=10] slowness 8 2",
+            "execute @s ~~~ execute @e[tag=!user_bs,r=10] ~~~ particle minecraft:squid_ink_bubble ~~~",
+            "tag @s remove user_bs"
+            ],
+          "target": "holder"
+        },
+			 "damage": {
+					"type": "blindness",
+					"amount": 1
+				}
+			}
+		}
+	}
+}

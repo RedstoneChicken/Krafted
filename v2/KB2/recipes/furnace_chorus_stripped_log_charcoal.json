@@ -1,0 +1,14 @@
+//bridge-file-version: #7
+{
+	"format_version": 1.12,
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "korbon:furnace_chorus_stripped_log_charcoal"
+		},
+		"tags": [
+			"furnace"
+		],
+		"input": "korbon:stripped_chorus_log",
+		"output": "minecraft:charcoal"
+	}
+}

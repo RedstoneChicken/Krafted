@@ -1,0 +1,533 @@
+{
+	"format_version" : "1.16.0",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:wither",
+			"is_spawnable" : false,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"elite_wither" : {
+				"minecraft:health" : {
+					"value" : 700,
+					"max" : 800
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/elite_wither.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "400"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:movement" : {
+					"value" : 0.45
+				}
+			},
+			"elite_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 70,
+					"name" : "§bElite Trolling Wither The NASA"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 70,
+					"name" : "§bElite Armoured Wither The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 85,
+					"name" : "§bElite Enderborn Wither The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 0.10,
+					"light_teleport_chance" : 0.10
+				}
+			},
+			"elite_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 70,
+					"name" : "§bElite Striking Wither Of Lightning"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 70,
+					"name" : "§bElite Webbing Wither The spider"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_wither" : {
+				"minecraft:health" : {
+					"value" : 800,
+					"max" : 900
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/ultra_wither.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "600"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:movement" : {
+					"value" : 0.65
+				}
+			},
+			"ultra_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 90,
+					"name" : "§eUltra Thumping Wither Of Mission Control"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 90,
+					"name" : "§eUltra Defensive Wither Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 100,
+					"name" : "§eUltra Tricky Wither The Enderborn"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 0.5,
+					"light_teleport_chance" : 0.5
+				}
+			},
+			"ultra_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 90,
+					"name" : "§eUltra Thundering Wither Of Striking"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 90,
+					"name" : "§eUltra Ensnaring Wither The Deceiver"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_wither" : {
+				"minecraft:health" : {
+					"value" : 900,
+					"max" : 1000
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/infernal_wither.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "800"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:movement" : {
+					"value" : 0.85
+				}
+			},
+			"infernal_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 125,
+					"name" : "§cInfernal Byebye Wither Of WEEEE"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 125,
+					"name" : "§cInfernal Turtling Wither Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 150,
+					"name" : "§cInfernal Enderborn Wither The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1,
+					"light_teleport_chance" : 1
+				}
+			},
+			"infernal_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 125,
+					"name" : "§cInfernal Electrified Wither The Raiden"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 125,
+					"name" : "§cInfernal Deceiving Wither Of Traps"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:experience_reward" : {
+				"on_death" : "50"
+			},
+			"minecraft:breathable" : {
+				"total_supply" : 15,
+				"suffocate_time" : 0
+			},
+			"minecraft:boss" : {
+				"should_darken_sky" : true,
+				"hud_range" : 55
+			},
+			"minecraft:damage_sensor" : {
+				"triggers" : {
+					"on_damage" : {
+						"filters" : {
+							"test" : "is_family",
+							"subject" : "other",
+							"value" : "undead"
+						}
+					},
+					"deals_damage" : false
+				}
+			},
+			"minecraft:health" : {
+				"value" : 600,
+				"max" : 600
+			},
+			"minecraft:collision_box" : {
+				"width" : 1,
+				"height" : 3
+			},
+			"minecraft:fire_immune" : {},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/wither_boss.json"
+			},
+			"minecraft:nameable" : {},
+			"minecraft:movement" : {
+				"value" : 0.25
+			},
+			"minecraft:navigation.walk" : {
+				"can_path_over_water" : true,
+				"avoid_water" : true
+			},
+			"minecraft:movement.basic" : {
+				"max_turn" : 180.0
+			},
+			"minecraft:jump.static" : {},
+			"minecraft:can_climb" : {},
+			"minecraft:can_fly" : {},
+			"minecraft:behavior.float" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.wither_random_attack_pos_goal" : {
+				"priority" : 3
+			},
+			"minecraft:behavior.wither_target_highest_damage" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.hurt_by_target" : {
+				"priority" : 2
+			},
+			"minecraft:behavior.nearest_attackable_target" : {
+				"priority" : 3,
+				"entity_types" : [
+					{
+						"filters" : {
+							"test" : "is_family",
+							"subject" : "other",
+							"value" : "player"
+						},
+						"max_dist" : 70
+					},
+					{
+						"filters" : {
+							"all_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"operator" : "!=",
+									"value" : "undead"
+								},
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"operator" : "!=",
+									"value" : "inanimate"
+								}
+							]
+						},
+						"max_dist" : 70
+					}
+				],
+				"must_see" : true
+			},
+			"minecraft:behavior.random_stroll" : {
+				"priority" : 5,
+				"speed_multiplier" : 1
+			},
+			"minecraft:behavior.look_at_target" : {
+				"priority" : 5
+			},
+			"minecraft:behavior.look_at_player" : {
+				"priority" : 6,
+				"look_distance" : 8
+			},
+			"minecraft:behavior.random_look_around" : {
+				"priority" : 7
+			},
+			"minecraft:type_family" : {
+				"family" : [ "wither", "skeleton", "monster", "undead", "mob" ]
+			},
+			"minecraft:persistent" : {},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither", "elite_blastoff" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither", "elite_bullwark" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither", "elite_ender" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither", "elite_storm" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither", "elite_webber" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither", "ultra_blastoff" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither", "ultra_bullwark" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither", "ultra_ender" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither", "ultra_storm" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither", "ultra_webber" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_wither", "infernal_blastoff" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_wither", "infernal_bullwark" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_wither", "infernal_ender" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_wither", "infernal_storm" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_wither", "infernal_webber" ]
+						}
+					}
+				]
+			},
+			"blastoff" : {
+				"run_command" : {
+					"command" : [ "effect @a [m=s,r=20] levitation 1 14" ]
+				}
+			},
+			"storm" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=20] ~~~ summon lightning_bolt" ]
+				}
+			},
+			"webber" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=10] ~~~ fill ~~~ ~~~ air 0 replace web 0" ]
+				}
+			}
+		}
+	}
+}

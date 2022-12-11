@@ -1,0 +1,196 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:blaze_head",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_filter": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blaze_head",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.player_head_block",
+			"minecraft:collision_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					8,
+					8
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					8,
+					8
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up",
+							"north",
+							"south",
+							"east",
+							"west",
+							"side"
+						]
+					}
+				]
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.skull",
+				"category": "Items"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"bridge:block_rotation": "query.cardinal_facing_2d"
+						}
+					},
+					{
+						"condition": "query.block_face != 1.0",
+						"set_block_property": {
+							"strat:state": 1
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.player_head_block",
+					"minecraft:collision_box": {
+						"origin": [
+							-4,
+							0,
+							-4
+						],
+						"size": [
+							8,
+							8,
+							8
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-4,
+							0,
+							-4
+						],
+						"size": [
+							8,
+							8,
+							8
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.player_head_block2",
+					"minecraft:collision_box": {
+						"origin": [
+							-4,
+							4,
+							0
+						],
+						"size": [
+							8,
+							8,
+							8
+						]
+					},
+					"minecraft:selection_box": {
+						"origin": [
+							-4,
+							4,
+							0
+						],
+						"size": [
+							8,
+							8,
+							8
+						]
+					}
+				}
+			}
+		]
+	}
+}

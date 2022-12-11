@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "sponge_eater_to_sponge"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "adv:sponge_eater"
+      }
+    },
+    "result": [
+      {
+        "item": "minecraft:sponge"
+      }
+    ]
+  }
+}

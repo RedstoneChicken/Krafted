@@ -1,0 +1,44 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "strat:maple_tree_1_feature_rule",
+			"places_feature": "strat:maple_tree_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "dark_oak"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "forest"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "plains"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "maple"
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 20,
+			"scatter_chance": 0.5,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+			"z": 0
+		}
+	}
+}

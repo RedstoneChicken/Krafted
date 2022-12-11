@@ -1,0 +1,30 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:crystal_pickaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"EEE",
+			" S",
+			" S"
+		],
+		"key": {
+			"E": {
+				"item": "end:crystal_plank"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "end:endilex_pickaxe"
+			}
+		]
+	}
+}

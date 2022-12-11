@@ -1,0 +1,28 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:leafpile"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.leafpile",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_leafpile",
+					"face_dimming": true,
+					"ambient_occlusion": false,
+					"render_method": "blend"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:loot": "loot_tables/leaf.json"
+		},
+		"events": {}
+	}
+}

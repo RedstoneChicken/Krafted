@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "golden_iron_fishing_rod_worm"
+		},
+		"tags" : [ "tackle_box" ],
+		"pattern" : [ " A ", "B C", "D E" ],
+		"key" : {
+			"A" : {
+				"item" : "azc:iron_fishing_rod_template"
+			},
+			"B" : {
+				"item" : "azc:golden_hook"
+			},
+			"C" : {
+				"item" : "azc:worm"
+			},
+			"D" : {
+				"item" : "azc:fishing_line"
+			},
+			"E" : {
+				"item" : "azc:bobber"
+			}
+		},
+		"result" : {
+			"item" : "azc:iron_fishing_rod_golden"
+		}
+	}
+}

@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_bluebell_into_tall_bluebell"},"tags":["crafting_table"],"ingredients":[{"item":"ff:bluebell_item","count":2}],"result":{"item":"ff:bluebell_tall_item"}}}

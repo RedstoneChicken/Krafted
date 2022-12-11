@@ -1,0 +1,30 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:endilex_hoe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" EE",
+			" S",
+			" S"
+		],
+		"key": {
+			"E": {
+				"item": "end:endilex_plank"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "end:endilex_hoe"
+			}
+		]
+	}
+}

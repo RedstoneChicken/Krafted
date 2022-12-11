@@ -1,0 +1,22 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:jungle_plant2"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.25,
+			"minecraft:geometry": "geometry.jungleplant",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "jungleplant2"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

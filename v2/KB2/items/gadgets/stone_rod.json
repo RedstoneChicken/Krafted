@@ -1,0 +1,23 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:stone_rod",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "stone_rod"
+			},
+			"minecraft:display_name": {
+				"value": "Stone Rod"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:hand_equipped": true
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,40 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:poison_flower"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.poisoned_flower",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "poison_flower",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					2,
+					16
+				]
+			}
+		},
+		"events": {}
+	}
+}

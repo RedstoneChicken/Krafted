@@ -1,0 +1,27 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:chicken_and_waffles",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 3.2,
+			"minecraft:food": {
+				"nutrition": 11,
+				"saturation_modifier": "max",
+				"using_converts_to": "strat:dirty_paper_plate"
+			},
+			"minecraft:icon": {
+				"texture": "chicken_and_waffles"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {}
+	}
+}

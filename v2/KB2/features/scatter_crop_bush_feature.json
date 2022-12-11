@@ -1,0 +1,33 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "strat:scatter_crop_bush_feature"
+		},
+		"iterations": 45,
+		"x": {
+			"distribution": "gaussian",
+			"extent": [
+				-8,
+				8
+			]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [
+				-4,
+				4
+			]
+		},
+		"z": {
+			"distribution": "gaussian",
+			"extent": [
+				-8,
+				8
+			]
+		},
+		"coordinate_eval_order": "zyx",
+		"places_feature": "strat:crop_bush_feature"
+	}
+}

@@ -1,0 +1,14 @@
+//bridge-file-version: #32
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:coagulated_blood"
+				}
+			]
+		}
+	]
+}

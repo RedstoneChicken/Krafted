@@ -1,0 +1,122 @@
+//bridge-file-version: #4
+{
+	"minecraft:block": {
+		"description": {
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			},
+			"identifier": "caf:egg_plant_stage01"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:on_step_on": {
+				"event": "bridge:effect_on_step_on"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.egg_plant_stage01",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "eggplant",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "caf:mealgrow",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:loot": "loot_tables/egg_plant_stage01.json",
+			"minecraft:ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "caf:emit_particle"
+				},
+				"range": [
+					1,
+					3
+				]
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"bridge:effect_on_step_on": {
+				"add_mob_effect": {
+					"effect": "poison",
+					"target": "other",
+					"duration": 5,
+					"amplifier": 1
+				}
+			},
+			"caf:meal_grow": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:egg_plant_stage02",
+						"particle minecraft:crop_growth_emitter ~~~",
+						"clear @p minecraft:bone_meal 0 1"
+					]
+				}
+			},
+			"caf:emit_particle": {
+				"run_command": {
+					"command": [
+						"particle caf:egg_plant_effect_particle_emitter ~ ~0.8 ~"
+					]
+				}
+			}
+		}
+	},
+	"format_version": "1.16.200"
+}

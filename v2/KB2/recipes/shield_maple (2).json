@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:shield_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#I#",
+			"###",
+			" # "
+		],
+		"key": {
+			"#": {
+				"item": "strat:maple_planks"
+			},
+			"I": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"result": {
+			"item": "minecraft:shield"
+		},
+		"priority": 50
+	}
+}

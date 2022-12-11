@@ -1,0 +1,48 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:shulker_crab",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"mob"
+				]
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:physics": {},
+			"minecraft:movement.basic": {},
+			"minecraft:loot": {
+				"table": "loot_tables/shulker_crab.json"
+			},
+			"minecraft:health": {
+				"value": 30,
+				"max": 30
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:movement": {
+				"value": 0.18
+			},
+			"minecraft:navigation.walk": {},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 6
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

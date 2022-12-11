@@ -1,0 +1,98 @@
+//bridge-file-version: #70
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:endstone_geyser"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "cobbled_endstone",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#F6FABD",
+			"minecraft:explosion_resistance": 1.5,
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.construction",
+				"category": "construction"
+			},
+			"minecraft:on_step_on": {
+				"event": "damage",
+				"target": "other"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "water"
+				}
+			}
+		},
+		"events": {
+			"water": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:water_shower ~~0.5~",
+								"fill ~~1~ ~~1~ flowing_water 0 replace air",
+								"particle korbon:geyser_steam ~~0.5~"
+							]
+						},
+						"weight": 1
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:water_shower_stream ~~0.5~",
+								"particle korbon:geyser_steam ~~0.5~",
+								"fill ~~1~ ~~1~ flowing_water 0 replace air",
+								"camerashake add @a[r=6] 0.1 10 positional"
+							]
+						},
+						"weight": 3
+					}
+				]
+			},
+			"damage": {
+				"damage": {
+					"amount": 2,
+					"target": "other",
+					"type": "fire_tick"
+				}
+			},
+			"water_startup": {
+				"randomize": [
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:water_shower ~~0.5~",
+								"fill ~~1~ ~~1~ flowing_water 0 replace air",
+								"particle korbon:geyser_steam ~~0.5~"
+							]
+						},
+						"weight": 1
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:water_shower_stream ~~0.5~",
+								"particle korbon:geyser_steam ~~0.5~",
+								"fill ~~1~ ~~1~ flowing_water 0 replace air",
+								"camerashake add @a[r=6] 0.1 10 positional"
+							]
+						},
+						"weight": 3
+					}
+				],
+				"run_command": {
+					"command": [
+						"particle korbon:geyser_steam ~~0.5~"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+//bridge-file-version: #0
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 0,
+				"max": 3
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "caf:nether_ruby"
+				}
+			]
+		}
+	]
+}

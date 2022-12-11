@@ -1,0 +1,34 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:wisp",
+      "materials": {
+        "default": "honkit26113_wisp"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_wisp",
+        "shooting": "textures/entity/honkit26113_wisp_shooting"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_wisp"
+      },
+      "animations": {
+        "move": "animation.wisp.move",
+        "look_at_target": "animation.wisp.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          { "move": "query.modified_move_speed * 2" },
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [ "controller.render.wisp" ],
+		  "spawn_egg": {
+			  "base_color": "#888888",
+			  "overlay_color": "#13AFB3"
+		  }
+    }
+  }
+}

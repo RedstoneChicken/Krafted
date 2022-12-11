@@ -1,0 +1,24 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:banana_seeds",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:ignores_permission": true,
+			"minecraft:icon": {
+				"texture": "korbon:banana_seeds"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:banana_seeds.name"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.seed"
+			}
+		},
+		"events": {}
+	}
+}

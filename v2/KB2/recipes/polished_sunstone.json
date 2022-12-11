@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:polished_sunstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SS",
+			"SS"
+		],
+		"key": {
+			"S": {
+				"item": "nether:sunstone_block"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:polished_sunstone",
+				"count": 4
+			}
+		]
+	}
+}

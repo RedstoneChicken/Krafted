@@ -1,0 +1,91 @@
+//bridge-file-version: #47
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:viscosa_tall"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "viscosa_tall_bottom",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:phreyium",
+							"korbon:phreyium_block"
+						]
+					}
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:map_color": "#909143",
+			"minecraft:flammable": {
+				"burn_odds": 2,
+				"flame_odds": 1
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:loot": "empty",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:on_placed": {
+				"event": "place"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy"
+			}
+		},
+		"events": {
+			"place": {
+				"run_command": {
+					"command": [
+						"fill ~~1~ ~~1~ korbon:viscosa_tall_top 0 replace air"
+					]
+				}
+			},
+			"destroy": {
+				"sequence": [
+					{
+						"set_block_at_pos": {
+							"block_type": "minecraft:air",
+							"block_offset": [
+								0,
+								1,
+								0
+							]
+						}
+					},
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/viscosa_tall.json"
+						},
+						"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+					}
+				]
+			}
+		}
+	}
+}

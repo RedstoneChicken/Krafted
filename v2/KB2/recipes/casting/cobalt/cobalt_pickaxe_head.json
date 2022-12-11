@@ -1,0 +1,38 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:cobalt_pickaxe_head"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:pickaxe_head_cast"
+			},
+			"~": {
+				"item": "strat:molten_cobalt_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:cobalt_pickaxe_head",
+				"count": 1
+			},
+			{
+				"item": "strat:pickaxe_head_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 2
+			}
+		]
+	}
+}

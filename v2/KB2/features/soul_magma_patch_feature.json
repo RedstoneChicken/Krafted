@@ -1,0 +1,29 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.0",
+  "minecraft:vegetation_patch_feature": {
+    "description": {
+      "identifier": "honkit26113:soul_magma_patch_feature"
+    },
+    "replaceable_blocks": [
+      "minecraft:netherrack",
+      "minecraft:blackstone",
+      "minecraft:gravel",
+      "minecraft:end_stone"
+    ],
+    "ground_block": "honkit26113:soul_magma",
+    "vegetation_feature": "honkit26113:soul_geyser_feature",
+    "surface": "floor",
+    "depth": {
+      "range_min": 1,
+      "range_max": 1
+    },
+    "vertical_range": 2,
+    "vegetation_chance": 0.5,
+    "horizontal_radius": {
+      "range_min": 3,
+      "range_max": 6
+    },
+    "extra_edge_column_chance": 0.15
+  }
+}

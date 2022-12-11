@@ -1,0 +1,36 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "end:crystal_water_feature_rule",
+			"places_feature": "end:crystal_water_scatter_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "the_end"
+			}
+		},
+		"distribution": {
+			"iterations": 2,
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"y": 0,
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			}
+		}
+	}
+}

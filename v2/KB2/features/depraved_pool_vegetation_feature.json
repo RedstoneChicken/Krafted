@@ -1,0 +1,13 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.13.0",
+	"minecraft:sequence_feature": {
+		"description": {
+			"identifier": "korbon:depraved_pool_vegetation_feature"
+		},
+		"features": [
+			"korbon:ori_blossom_scatter_feature",
+			"korbon:thorn_root_scatter_feature"
+		]
+	}
+}

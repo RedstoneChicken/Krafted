@@ -1,0 +1,14 @@
+//bridge-file-version: #18
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:water_jar"
+				}
+			]
+		}
+	]
+}

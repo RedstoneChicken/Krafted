@@ -1,0 +1,22 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:dried_brick",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "dried_brick"
+			},
+			"minecraft:display_name": {
+				"value": "Dried Brick"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

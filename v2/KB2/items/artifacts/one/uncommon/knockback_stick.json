@@ -1,0 +1,74 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:knockback_stick",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:hand_equipped":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0,
+         "minecraft:icon":{
+            "texture":"knockback_stick"
+         },
+         "minecraft:display_name":{
+            "value":"Knockback Stick\n§2Uncommon\n§7Cooldown: 10\nLevel: 1"
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:damage":0,
+         "minecraft:enchantable":{
+            "slot":"sword",
+            "value":10
+         },
+         "minecraft:can_destroy_in_creative":false,
+         "minecraft:durability":{
+            "max_durability":10000
+         },
+         "minecraft:repairable":{
+            "repair_items":[
+               {
+                  "items":[
+                     "minecraft:stick"
+                  ],
+                  "repair_amount":2500
+               }
+            ]
+         },
+         "minecraft:cooldown":{
+            "category":"knockback_stick",
+            "duration":10
+         },
+         "minecraft:allow_off_hand":false,
+         "minecraft:foil":false,
+         "minecraft:mining_speed":1,
+         "minecraft:render_offsets":"tools",
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"fire",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "fire":{
+            "run_command":{
+               "command":[
+                  "playsound mob.ghast.fireball @a[r=10]",
+                  "enchant @s knockback 2",
+                  "tag @s add ks_user",
+                  "summon kna:wind ~~~",
+                  "execute @s ~~~ particle minecraft:knockback_roar_particle ~~~",
+                  "effect @s resistance 3 3 true",
+                  "effect @s clear",
+                  "effect @s resistance 3 10 true",
+                  "tag @s remove ks_user"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

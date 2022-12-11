@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "smelt:white_sand_glass"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "cav:white_sand",
+    "output": "minecraft:glass"
+  }
+  
+}

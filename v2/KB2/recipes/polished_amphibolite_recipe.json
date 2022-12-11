@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cav:polished_amphibolite_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:amphibolite"
+      }
+    },
+    "result": {
+      "item": "cav:polished_amphibolite",
+      "count": 4
+    }
+  }
+}

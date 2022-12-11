@@ -1,0 +1,69 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:endilex_pickaxe",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "endliex_pickaxe"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "durability_update"
+				}
+			},
+			"minecraft:damage": 3,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.pickaxe"
+			},
+			"minecraft:enchantable": {
+				"value": 5,
+				"slot": "pickaxe"
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "q.any_tag('stone', 'metal', 'stone_pick_diggable')"
+						},
+						"speed": 2
+					},
+					{
+						"block": "minecraft:ice",
+						"speed": 2
+					},
+					{
+						"block": "minecraft:sandstone",
+						"speed": 2
+					},
+					{
+						"block": "minecraft:end_stone",
+						"speed": 2
+					}
+				],
+				"on_dig": {
+					"event": "durability_update"
+				}
+			},
+			"minecraft:durability": {
+				"max_damage": 59
+			}
+		},
+		"events": {
+			"durability_update": {
+				"damage": {
+					"type": "durability",
+					"amount": 1,
+					"target": "self"
+				}
+			}
+		}
+	}
+}

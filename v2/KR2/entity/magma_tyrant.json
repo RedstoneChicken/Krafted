@@ -1,0 +1,38 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:magma_tyrant",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/magma_spined_tyrant"
+			},
+			"geometry": {
+				"default": "geometry.magma_spined_tyrant"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller",
+					"attack_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.magma_tyrant.walk",
+				"attack_controller": "controller.animation.magma_tyrant.attack",
+				"attack": "animation.magma_tyrant.attack",
+				"idle": "animation.magma_tyrant.idle",
+				"move": "animation.magma_tyrant.move"
+			},
+			"spawn_egg": {
+				"base_color": "#8B4301",
+				"overlay_color": "#FF490C"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

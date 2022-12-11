@@ -1,0 +1,16 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "end:skipper_raw"
+		},
+		"tags": [
+			"furnace",
+			"smoker",
+			"campfire"
+		],
+		"input": "end:skipper_raw",
+		"output": "end:skipper_cooked"
+	}
+}

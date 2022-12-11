@@ -1,0 +1,51 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:poisoned_carnation",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "poisoned_carnation"
+			},
+			"minecraft:display_name": {
+			 "value": "Poisoned Carnation\n§2Uncommon\n§7Cooldown: 30\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "poisoned_carnation",
+				"duration": 30
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"tag @s add wf_user",
+          	"playsound item.trident.riptide_2 @p",
+            "execute @s ~~~ effect @e[r=8,tag=!wf_user] weakness 12 2",
+            "tag @s remove wf_user"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}  
+
+

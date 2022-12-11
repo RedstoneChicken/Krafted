@@ -1,0 +1,194 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:crooked_fence_gate",
+            "properties": {
+                "honkit26113:blockstate": [0, 2, 4, 12, 13, 14, 15]
+            }
+        },
+        "components": {
+            "tag:honkit26113_dig_with_axe": {},
+            "tag:crooked_fence": {},
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.fenceGate",
+                "category": "construction"
+            },
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "crooked_planks",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": true,
+                    "face_dimming": true
+                }
+            },
+            "minecraft:destroy_time": 0.5,
+            "minecraft:explosion_resistance": 2,
+            "minecraft:block_light_absorption": 0,
+            "minecraft:unwalkable": true,
+            "minecraft:geometry": "geometry.fence_gate",
+            "minecraft:part_visibility": {
+                "rules": {
+                    "closed": "q.block_property('honkit26113:blockstate') == 0 || q.block_property('honkit26113:blockstate') == 2 || q.block_property('honkit26113:blockstate') == 4",
+                    "open": "q.block_property('honkit26113:blockstate') == 12 || q.block_property('honkit26113:blockstate') == 13 || q.block_property('honkit26113:blockstate') == 14 || q.block_property('honkit26113:blockstate') == 15"
+                }
+            },
+            "minecraft:on_player_placing": {
+                "event": "honkit26113:on_placed"
+            },
+            "minecraft:on_interact": {
+                "event": "honkit26113:on_interact"
+            }
+        },
+        "events": {
+            // north: -Z 2
+            // south: +Z 3
+            // west:  -X 4
+            // east:  +X 5
+            "honkit26113:on_placed": {
+                "sequence": [
+                    {
+                        "condition": "q.cardinal_facing_2d == 2 || q.cardinal_facing_2d == 4",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.cardinal_facing_2d"
+                        }
+                    },
+                    {
+                        "condition": "q.cardinal_facing_2d == 3 || q.cardinal_facing_2d == 5",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.cardinal_facing_2d - 1"
+                        }
+                    }
+                ]
+            },
+            "honkit26113:on_interact": {
+                "sequence": [
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 2",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "math.floor(q.cardinal_facing_2d / 2) + 11"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 4",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "math.floor(q.cardinal_facing_2d / 2) + 13"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 2 || q.block_property('honkit26113:blockstate') == 4",
+                        "run_command": {
+                            "command": "playsound random.door_open @a[r=10]"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 12 || q.block_property('honkit26113:blockstate') == 14",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.block_property('honkit26113:blockstate') - 10"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 13 || q.block_property('honkit26113:blockstate') == 15",
+                        "set_block_property": {
+                            "honkit26113:blockstate": "q.block_property('honkit26113:blockstate') - 11"
+                        }
+                    },
+                    {
+                        "condition": "q.block_property('honkit26113:blockstate') == 12 || q.block_property('honkit26113:blockstate') == 13 || q.block_property('honkit26113:blockstate') == 14 || q.block_property('honkit26113:blockstate') == 15",
+                        "run_command": {
+                            "command": "playsound random.door_close @a[r=10]"
+                        }
+                    }
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 0", // none
+                "components": {
+                    "minecraft:pick_collision": {
+                        "origin": [-2, 0, -2],
+                        "size": [4, 16, 4]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-2, 0, -2],
+                        "size": [4, 16, 4]
+                    }
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 2", // north & south
+                "components": {
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:unwalkable": true
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 4", // west & east
+                "components": {
+                    "minecraft:rotation": [ 0, 90, 0 ],
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:unwalkable": true
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 12", // north
+                "components": {
+                    "minecraft:rotation": [ 0, 180, 0 ],
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:entity_collision": false
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 13", // south
+                "components": {
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:entity_collision": false
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 14", // west
+                "components": {
+                    "minecraft:rotation": [ 0, 90, 0 ],
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:entity_collision": false
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:blockstate') == 15", // east
+                "components": {
+                    "minecraft:rotation": [ 0, 270, 0 ],
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -2],
+                        "size": [16, 16, 4]
+                    },
+                    "minecraft:entity_collision": false
+                }
+            }
+        ]
+    }
+}

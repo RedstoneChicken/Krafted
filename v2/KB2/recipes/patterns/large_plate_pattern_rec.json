@@ -1,0 +1,24 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:large_plate_pattern_rec"
+		},
+		"tags": [
+			"stencil_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:broad_axe_head_pattern",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:large_plate_pattern",
+				"count": 1
+			}
+		]
+	}
+}

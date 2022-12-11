@@ -1,0 +1,17 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:topaz_block"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "Construction"
+			},
+			"tag:dextenblocks": {},
+			"minecraft:destroy_time": 4,
+			"minecraft:explosion_resistance": 2
+		},
+		"events": {}
+	}
+}

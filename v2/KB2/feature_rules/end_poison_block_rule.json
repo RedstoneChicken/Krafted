@@ -1,0 +1,36 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "end:end_poison_block_rule",
+			"places_feature": "end:end_poison_block_feature"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "the_end"
+			},
+			"placement_pass": "after_surface_pass"
+		},
+		"distribution": {
+			"iterations": 50,
+			"x": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"z": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": "query.heightmap(v.worldx, v.worldz) -2"
+		}
+	}
+}

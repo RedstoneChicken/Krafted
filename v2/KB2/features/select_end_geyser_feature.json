@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "korbon:select_end_geyser_feature"
+		},
+		"features": [
+			[
+				"korbon:end_geyser_1_feature",
+				1
+			],
+			[
+				"korbon:end_geyser_2_feature",
+				1
+			],
+			[
+				"korbon:end_geyser_3_feature",
+				1
+			]
+		]
+	}
+}

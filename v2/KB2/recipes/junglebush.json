@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "rns:junglebush"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"lsl",
+			"lsl",
+			"#s#"
+		],
+		"key": {
+			"l": {
+				"item": "rns:leaf"
+			},
+			"s": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "rns:jungleleafbush"
+			}
+		]
+	}
+}

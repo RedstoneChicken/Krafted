@@ -1,0 +1,18 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:gilded_obsidian_feature"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "cav:gilded_obsidian",
+        "may_replace": [
+          "minecraft:end_stone"
+        ]
+      }
+    ]
+  }
+}
+

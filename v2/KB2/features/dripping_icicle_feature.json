@@ -1,0 +1,21 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "honkit26113:dripping_icicle_feature"
+    },
+    "height_distribution":  [
+      [{"range_min": 1, "range_max": 6}, 3],
+      [{"range_min": 1, "range_max": 3}, 3],
+      [{"range_min": 1, "range_max": 4}, 4]
+    ],
+    "growth_direction": "DOWN",
+    "age": {"range_min": 1, "range_max": 6},
+    "body_blocks": [
+      ["honkit26113:dripping_icicle_medium", 4]
+    ],
+    "head_blocks": [
+      ["honkit26113:dripping_icicle_small", 1]
+    ]
+  }
+}

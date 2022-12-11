@@ -1,0 +1,6 @@
+          "ki@crystal_image":{
+            "layer": 3,
+            "size":["88%"],
+            "offset":[-50.5, 31]
+            
+          }

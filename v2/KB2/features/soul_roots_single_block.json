@@ -1,0 +1,20 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "nether:soul_roots_single_block"
+		},
+		"places_block": "nether:soul_roots",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_attach_to": {
+			"bottom": [
+				"nether:wither_nylium"
+			]
+		},
+		"may_replace": [
+			"minecraft:air"
+		]
+	}
+}

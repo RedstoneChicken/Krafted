@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:double_compressed_endstone_to_compressed_endstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:double_compressed_endstone"
+			}
+		],
+		"result": [
+			{
+				"item": "cc:compressed_endstone",
+				"count": 9
+			}
+		]
+	}
+}

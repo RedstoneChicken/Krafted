@@ -1,0 +1,30 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:slime_boots"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"o o",
+			"# #"
+		],
+		"key": {
+			"#": {
+				"item": "strat:congealed_slime_block"
+			},
+			"o": {
+				"item": "minecraft:slime_ball"
+			}
+		},
+		"result": [
+			{
+				"item": "hax:slime_boots",
+				"count": 1
+			}
+		]
+	}
+}

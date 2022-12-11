@@ -1,0 +1,855 @@
+//bridge-file-version: #40
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:blender",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state2": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blender",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:geometry": "geometry.blender",
+			"minecraft:entity_collision": {
+				"origin": [
+					-3,
+					0,
+					-3
+				],
+				"size": [
+					6,
+					12,
+					6
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-3,
+					0,
+					-3
+				],
+				"size": [
+					6,
+					12,
+					6
+				]
+			},
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"minecraft:on_interact": {
+				"event": "strat:interact"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"strat:interact": {
+				"sequence": [
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:state') == 0 || query.block_property('strat:state') == 1) && query.get_equipped_item_name('main_hand') == 'melon_slice'",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') + 1"
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "(query.block_property('strat:state') == 1 || query.block_property('strat:state') == 2) && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') - 1"
+								},
+								"spawn_loot": {
+									"table": "loot_tables/melon.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 2 && query.is_sneaking == 0.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') + 1"
+								},
+								"run_command": {
+									"command": [
+										"playsound strat.blender @a ~~~"
+									]
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 4 && query.get_equipped_item_name('main_hand') == 'drinking_glass'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:melon_smoothie",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'melon_smoothie'",
+								"set_block_property": {
+									"strat:state": 4
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:drinking_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'banana'",
+								"set_block_property": {
+									"strat:state": 5
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5 && query.get_equipped_item_name('main_hand') == 'banana'",
+								"set_block_property": {
+									"strat:state": 6
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5 && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/banana.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 6 && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') - 1"
+								},
+								"spawn_loot": {
+									"table": "loot_tables/banana.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 6 && query.is_sneaking == 0.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') + 1"
+								},
+								"run_command": {
+									"command": [
+										"playsound strat.blender @a ~~~"
+									]
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 8 && query.get_equipped_item_name('main_hand') == 'drinking_glass'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:banana_smoothie",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'banana_smoothie'",
+								"set_block_property": {
+									"strat:state": 8
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:drinking_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'sweet_berries'",
+								"set_block_property": {
+									"strat:state": 9
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 9 && query.get_equipped_item_name('main_hand') == 'orange'",
+								"set_block_property": {
+									"strat:state": 10
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 10 && query.get_equipped_item_name('main_hand') == 'banana'",
+								"set_block_property": {
+									"strat:state": 11
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 9 && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/sweet_berries1.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 10 && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') - 1"
+								},
+								"spawn_loot": {
+									"table": "loot_tables/orange.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 11 && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') - 1"
+								},
+								"spawn_loot": {
+									"table": "loot_tables/banana.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 11 && query.is_sneaking == 0.0",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') + 1"
+								},
+								"run_command": {
+									"command": [
+										"playsound strat.blender @a ~~~"
+									]
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 13 && query.get_equipped_item_name('main_hand') == 'drinking_glass'",
+								"set_block_property": {
+									"strat:state": "query.block_property('strat:state') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:fruit_smoothie",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'drinking_glass'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:fruit_smoothie",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'fruit_smoothie'",
+								"set_block_property": {
+									"strat:state": 14
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:drinking_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'fruit_smoothie'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:drinking_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'milk_bucket'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 1
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'milk_glass'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 1
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:drinking_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 1 && query.get_equipped_item_name('main_hand') == 'cookie'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 2 && query.get_equipped_item_name('main_hand') == 'cookie'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 3
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 1 && query.get_equipped_item_name('main_hand') == 'drinking_glass'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:milk_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 1 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s milk_bucket",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:state2') == 2 || query.block_property('strat:state2') == 3) && query.is_sneaking == 1.0",
+								"set_block_property": {
+									"strat:state2": "query.block_property('strat:state2') - 1"
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cookie.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 3 && query.is_sneaking == 0.0",
+								"set_block_property": {
+									"strat:state2": "query.block_property('strat:state2') + 1"
+								},
+								"run_command": {
+									"command": [
+										"playsound strat.blender @a ~~~"
+									]
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 5 && query.get_equipped_item_name('main_hand') == 'drinking_glass'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:cookies_and_cream_smoothie",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.empty_water @a ~~~"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cookies_and_cream_smoothie'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 5
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s strat:drinking_glass",
+										"gamerule sendcommandfeedback true",
+										"playsound bucket.fill_water @a ~~~"
+									],
+									"target": "player"
+								}
+							}
+						]
+					}
+				]
+			},
+			"strat:blend": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:state') != 15",
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:state2') > 0 && query.block_property('strat:state2') != 15",
+						"set_block_property": {
+							"strat:state2": "query.block_property('strat:state2') + 1"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_melon1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender1"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_melon1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender2"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_melon1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender2",
+					"minecraft:ticking": {
+						"range": [
+							3,
+							3
+						],
+						"on_tick": {
+							"event": "strat:blend"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_melon2",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender3"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_banana1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender1"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_banana1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender2"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_banana1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender2",
+					"minecraft:ticking": {
+						"range": [
+							3,
+							3
+						],
+						"on_tick": {
+							"event": "strat:blend"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_banana2",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender3"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_fruit1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender1"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 10",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_fruit1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender2"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 11",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_fruit1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender5"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 12",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_fruit1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender5",
+					"minecraft:ticking": {
+						"range": [
+							3,
+							3
+						],
+						"on_tick": {
+							"event": "strat:blend"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 13",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_fruit3",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender4"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 14",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_fruit2",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender3"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_cookie1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender3"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_cookie1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender6"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_cookie1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender7"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_cookie1",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender7",
+					"minecraft:ticking": {
+						"range": [
+							3,
+							3
+						],
+						"on_tick": {
+							"event": "strat:blend"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blender_cookie2",
+							"render_method": "blend"
+						}
+					},
+					"minecraft:geometry": "geometry.blender3"
+				}
+			}
+		]
+	}
+}

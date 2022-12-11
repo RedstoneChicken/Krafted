@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_gardenia_into_large_gardenia"},"tags":["crafting_table"],"ingredients":[{"item":"ff:gardenia_tall_item","count":2}],"result":{"item":"ff:gardenia_large_item"}}}

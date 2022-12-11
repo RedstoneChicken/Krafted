@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_foxglove_into_tall_foxglove"},"tags":["crafting_table"],"ingredients":[{"item":"ff:foxglove_item","count":2}],"result":{"item":"ff:foxglove_tall_item"}}}

@@ -1,0 +1,35 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "caf:skull",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/skull"
+			},
+			"geometry": {
+				"default": "geometry.skull"
+			},
+			"animations": {
+				"fly": "animation.skull.fly"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"fly": "query.can_fly"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.skull"
+			],
+			"spawn_egg": {
+				"base_color": "#363433",
+				"overlay_color": "#FF5600"
+			}
+		}
+	}
+}

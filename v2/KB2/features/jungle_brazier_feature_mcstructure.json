@@ -1,0 +1,23 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:jungle_brazier_feature_mcstructure"
+		},
+		"structure_name": "mystructure:jungle_brazier",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_whitelist": [
+					{
+						"name": "minecraft:air"
+					}
+				]
+			}
+		}
+	}
+}

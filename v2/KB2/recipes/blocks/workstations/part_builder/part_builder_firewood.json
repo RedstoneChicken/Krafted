@@ -1,0 +1,30 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:part_builder_firewood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "strat:firewood"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:part_builder_firewood",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,15 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "end:endilex_tree_2"
+		},
+		"structure_name": "end:endilex_tree2",
+		"facing_direction": "random",
+		"adjustment_radius": 0,
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

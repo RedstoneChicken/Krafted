@@ -1,0 +1,46 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "nether:marouge_nylium_rule",
+			"places_feature": "nether:marouge_nylium_snap_to_surface"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "crimson_forest"
+			}
+		},
+		"distribution": {
+			"iterations": 256,
+			"x": {
+				"extent": [
+					-32,
+					32
+				],
+				"distribution": "gaussian"
+			},
+			"y": {
+				"extent": [
+					30,
+					90
+				],
+				"distribution": "gaussian"
+			},
+			"z": {
+				"extent": [
+					-32,
+					32
+				],
+				"distribution": "gaussian"
+			},
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 25
+			}
+		}
+	}
+}

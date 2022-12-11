@@ -1,0 +1,204 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:endilex_sapling",
+			"properties": {
+				"wiki:growing": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "endilex_sapling",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:zallium"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:destroy_time": 0.01,
+			"minecraft:loot": "loot_tables/endilex_sapling.json",
+			"minecraft:ticking": {
+				"range": [
+					1,
+					1
+				],
+				"on_tick": {
+					"event": "grow_0"
+				}
+			}
+		},
+		"events": {
+			"grow_0": {
+				"set_block_property": {
+					"wiki:growing": 0
+				}
+			},
+			"grow_1": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~"
+							]
+						}
+					},
+					{
+						"set_block_property": {
+							"wiki:growing": 1
+						}
+					}
+				]
+			},
+			"grow_2": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~"
+							]
+						}
+					},
+					{
+						"set_block_property": {
+							"wiki:growing": 2
+						}
+					}
+				]
+			},
+			"grow_3": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~",
+						"structure load end:endilex_tree_small1 ~-3 ~ ~-3"
+					]
+				}
+			},
+			"bone_meal_1": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+					},
+					{
+						"trigger": {
+							"event": "grow_1"
+						}
+					}
+				]
+			},
+			"bone_meal_2": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+					},
+					{
+						"trigger": {
+							"event": "grow_2"
+						}
+					}
+				]
+			},
+			"bone_meal_3": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+					},
+					{
+						"trigger": {
+							"event": "grow_3"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:growing') == 0",
+				"components": {
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+						"event": "bone_meal_1"
+					},
+					"minecraft:ticking": {
+						"range": [
+							120,
+							180
+						],
+						"on_tick": {
+							"event": "grow_1"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:growing') == 1",
+				"components": {
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+						"event": "bone_meal_2"
+					},
+					"minecraft:ticking": {
+						"range": [
+							120,
+							180
+						],
+						"on_tick": {
+							"event": "grow_2"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:growing') == 2",
+				"components": {
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+						"event": "bone_meal_3"
+					},
+					"minecraft:ticking": {
+						"range": [
+							120,
+							180
+						],
+						"on_tick": {
+							"event": "grow_3"
+						}
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,114 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:jukebox_extended_mystical",
+			"properties": {
+				"korbon:face": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "jukebox_extended",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:map_color": "#00FF00",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:on_player_placing": {
+				"event": "korbon:place"
+			},
+			"minecraft:on_interact": {
+				"target": "self",
+				"event": "record_mystical_stop"
+			},
+			"minecraft:geometry": "geometry.basic_block",
+			"minecraft:on_player_destroyed": {
+				"event": "jukebox_extended_mystical_break",
+				"target": "self"
+			},
+			"minecraft:loot": "loot_tables/blocks/empty.json"
+		},
+		"events": {
+			"korbon:place": {
+				"set_block_property": {
+					"korbon:face": "(query.cardinal_player_facing)"
+				}
+			},
+			"record_mystical_stop": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"stopsound @a[r=80]"
+					]
+				},
+				"spawn_loot": {
+					"table": "loot_tables/items/record_mystical.json"
+				},
+				"set_block": {
+					"block_type": "korbon:jukebox_extended"
+				}
+			},
+			"jukebox_extended_mystical_break": {
+				"run_command": {
+					"target": "self",
+					"command": [
+						"stopsound @a[r=80]"
+					]
+				},
+				"spawn_loot": {
+					"table": "loot_tables/blocks/jukebox_extended_mystical_break.json"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:face') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		]
+	}
+}

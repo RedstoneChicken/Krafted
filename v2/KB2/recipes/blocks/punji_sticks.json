@@ -1,0 +1,27 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:punji_sticks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" #",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:bamboo"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:punji_sticks",
+				"count": 1
+			}
+		]
+	}
+}

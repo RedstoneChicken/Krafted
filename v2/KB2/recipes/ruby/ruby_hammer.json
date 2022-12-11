@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:ruby_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:ruby_head"
+			},
+			"Y": {
+				"item": "oh:trunk_stick"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:ruby_hammer",
+				"count": 1
+			}
+		]
+	}
+}

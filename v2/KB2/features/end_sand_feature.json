@@ -1,0 +1,17 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:end_sand_feature"
+    },
+    "count": 80,
+    "replace_rules": [
+      {
+        "places_block": "cav:end_sand",
+        "may_replace": [
+          "minecraft:end_stone"
+        ]
+      }
+    ]
+  }
+}

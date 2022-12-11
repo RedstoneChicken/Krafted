@@ -1,0 +1,28 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:handle"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"LL",
+			"LX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:stick"
+			},
+			"L": {
+				"item": "minecraft:leather"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:strong_stick"
+			}
+		]
+	}
+}

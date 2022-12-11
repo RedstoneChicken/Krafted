@@ -1,0 +1,37 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:toaster_rec"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" t",
+			"ooo",
+			"#~#"
+		],
+		"key": {
+			"t": {
+				"item": "minecraft:lever"
+			},
+			"o": {
+				"item": "minecraft:iron_ingot"
+			},
+			"#": {
+				"item": "minecraft:coal"
+			},
+			"~": {
+				"item": "minecraft:redstone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:toaster",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,24 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:spore_sprouts_feature"
+		},
+		"places_block": "korbon:phreyium_sprouts",
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:air",
+			"korbon:void_turf_grass_short",
+			"phreyium_grass"
+		],
+		"may_attach_to": {
+			"bottom": [
+				"korbon:phreyium",
+				"korbon:phreyium_stone",
+				"korbon:phreyium_block"
+			]
+		}
+	}
+}

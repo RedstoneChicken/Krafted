@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "caf:nether_ruby",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:foil": false,
+			"minecraft:hand_equipped": true,
+			"minecraft:can_destroy_in_creative": true,
+			"minecraft:icon": {
+				"texture": "nether_ruby"
+			},
+			"minecraft:render_offsets": "apple",
+			"minecraft:display_name": {}
+		},
+		"events": {}
+	}
+}

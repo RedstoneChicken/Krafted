@@ -1,0 +1,49 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:aura_goggles_g",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"aura_goggles_g"
+         },
+         "minecraft:display_name":{
+            "value":"Aura Goggles (§2Ally)\n§1Rare\n§7Cooldown: 25\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"aura_goggles_g",
+            "duration":25
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"light",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "light":{
+            "run_command":{
+               "command":[
+                  "playsound portal.trigger @a[r=15]",
+                  "execute @e[r=15,family=player] ~~~ particle kna:green_glow ~~~",
+                  "execute @e[r=15,family=pet] ~~~ particle kna:green_glow ~~~",
+                  "execute @e[r=15,family=iron_golem] ~~~ particle kna:green_glow ~~~",
+                  "execute @e[r=15,family=snow_golem] ~~~ particle kna:green_glow ~~~"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

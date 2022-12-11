@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:polished_schist"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:schist"
+      }
+    },
+    "result": {
+      "item": "cav:polished_schist",
+      "count": 4
+    }
+  }
+}

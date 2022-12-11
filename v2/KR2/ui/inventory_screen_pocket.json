@@ -1,0 +1,44 @@
+{
+	"namespace": "crafting_pocket",
+	
+	"recipe_inventory_screen_content_pocket/root_panel":{
+		"modifications":[
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": {
+				"@hammer_table_ui.final_panel":{}
+				}
+				},
+				{
+					"array_name": "controls",
+					"operation": "insert_front",
+					"value": {
+					"@tackle_box.final_panel":{}
+					}
+					}
+			  ]
+		  },
+		  "recipe_inventory_screen_content_pocket/root_panel/hotbar_and_panel":{
+			  "modifications":[
+				{
+				"array_name": "bindings",
+				"operation": "insert_front",
+				"value": {
+					"binding_name": "#crafting_label_text"
+				}
+				},
+	  
+				{
+				"array_name": "bindings",
+				"operation": "insert_back",
+				"value": {			
+					"binding_type": "view",
+					"source_property_name": "((#crafting_label_text = container.crafting) or (#crafting_label_text = 'custom_craft5') or (#crafting_label_text = 'custom_craft2'))",
+					"target_property_name": "#visible" 
+				}
+				}
+			  ]
+		  }
+  }
+  

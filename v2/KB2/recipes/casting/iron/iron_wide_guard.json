@@ -1,0 +1,37 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:iron_wide_guard"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:wide_guard_cast"
+			},
+			"~": {
+				"item": "strat:molten_iron_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:iron_wide_guard",
+				"count": 1
+			},
+			{
+				"item": "strat:wide_guard_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

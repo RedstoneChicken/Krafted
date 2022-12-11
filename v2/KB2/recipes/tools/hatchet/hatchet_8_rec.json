@@ -1,0 +1,35 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:hatchet_8_rec"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:stone_axe_head"
+			},
+			"~": {
+				"item": "strat:stone_binding"
+			},
+			"o": {
+				"item": "strat:stone_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:hatchet_8",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

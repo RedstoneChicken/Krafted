@@ -1,0 +1,73 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:heart_of_ender",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:physics": {},
+			"minecraft:movement.basic": {},
+			"minecraft:loot": {},
+			"minecraft:health": {
+				"value": 600,
+				"max": 600
+			},
+			"minecraft:boss": {
+				"should_darken_sky": true,
+				"hud_range": 100,
+				"name": "Heart Of Ender"
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 8
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 1,
+				"ranged_fov": 90,
+				"burst_shots": 4,
+				"burst_interval": 3,
+				"attack_interval_min": 0.25,
+				"attack_interval_max": 0.75,
+				"attack_radius": 45
+			},
+			"minecraft:shooter": {
+				"def": "end:ender_orb"
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"must_see": true,
+				"reselect_targets": true,
+				"within_radius": 45,
+				"must_see_forget_duration": 17,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						}
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"monster"
+				]
+			},
+			"minecraft:navigation.walk": {},
+			"minecraft:movement": {
+				"value": 0
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

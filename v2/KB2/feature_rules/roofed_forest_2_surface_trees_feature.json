@@ -1,0 +1,26 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ff:roofed_forest_2_surface_trees_feature",
+      "places_feature": "minecraft:legacy:plains_tree_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": {
+				"any_of":[
+					{
+						"test": "has_biome_tag",
+						"value": "roofed"
+					}
+				]
+      }
+    },
+    "distribution": {
+      "iterations": 8,
+      "x": 0,
+      "z": 0,
+			"y": "t.in = q.noise(v.worldx / 256, v.worldz / 256) + q.noise(v.worldx, v.worldz) * 0.05; return ((t.in > 0.4 && t.in < 0.5) || (t.in < 0.7 && t.in > 0.6) ? q.heightmap(v.worldx, v.worldz) : -65);"
+		}
+  }
+}

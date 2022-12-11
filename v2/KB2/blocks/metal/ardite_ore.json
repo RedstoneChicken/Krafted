@@ -1,0 +1,36 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:ardite_ore"
+		},
+		"components": {
+			"minecraft:destroy_time": 15,
+			"minecraft:map_color": "#660900",
+			"minecraft:explosion_resistance": 5,
+			"tag:cobalt_level": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.ore",
+				"category": "Nature"
+			},
+			"minecraft:loot": "loot_tables/ardite_ore.json"
+		},
+		"events": {
+			"gather": {
+				"sequence": [
+					{
+						"spawn_loot": {
+							"table": "loot_tables/ardite_ore.json"
+						},
+						"run_command": {
+							"command": [
+								"say you will receive ardite ore"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "korbon:phreyium_stone_scatter_feature"
+		},
+		"iterations": 40,
+		"x": {
+			"distribution": "inverse_gaussian",
+			"extent": [
+				-8,
+				8
+			]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [
+				-4,
+				4
+			]
+		},
+		"z": {
+			"distribution": "inverse_gaussian",
+			"extent": [
+				-8,
+				8
+			]
+		},
+		"coordinate_eval_order": "zyx",
+		"places_feature": "korbon:phreyium_stone_feature"
+	}
+}

@@ -1,0 +1,108 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:seared_tank_copper_2"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:map_color": "#202020",
+			"minecraft:geometry": "geometry.tank_50",
+			"minecraft:block_light_filter": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "seared_tank_copper_50",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:explosion_resistance": 5,
+			"minecraft:on_interact": {
+				"event": "strat:interact"
+			},
+			"minecraft:block_light_emission": 1,
+			"tag:stone": {},
+			"minecraft:ticking": {
+				"range": [
+					1,
+					1
+				],
+				"looping": true,
+				"on_tick": {
+					"event": "strat:activate_smeltery"
+				}
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "strat:deactivate_smeltery"
+			},
+			"minecraft:on_placed": {
+				"event": "strat:activate_smeltery"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:interact": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'molten_copper_bucket'",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"playsound bucket.fill_lava @a ~~~",
+								"give @s bucket",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"set_block": {
+							"block_type": "strat:seared_tank_copper_3"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'bucket'",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"playsound bucket.empty_lava @a ~~~",
+								"give @s strat:molten_copper_bucket",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"set_block": {
+							"block_type": "strat:seared_tank_copper_1"
+						}
+					}
+				]
+			},
+			"strat:activate_smeltery": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function smeltery_tank_check",
+								"function smeltery_activate"
+							]
+						}
+					}
+				]
+			},
+			"strat:deactivate_smeltery": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function smeltery_deactivate"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

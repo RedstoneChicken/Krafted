@@ -1,0 +1,23 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "rns:bones"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:bone",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "rns:bones"
+			}
+		]
+	}
+}

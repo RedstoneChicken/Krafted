@@ -1,0 +1,14 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:velvium_pool_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:vaudrite_pool_feature",
+			"korbon:select_pink_chorus_tree_feature"
+		]
+	}
+}

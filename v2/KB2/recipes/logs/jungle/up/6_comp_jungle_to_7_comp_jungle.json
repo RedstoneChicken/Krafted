@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:sextuple_compressed_jungle_to_septuple_compressed_jungle"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:sextuple_compressed_jungle"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:septuple_compressed_jungle",
+				"count": 1
+			}
+		]
+	}
+}

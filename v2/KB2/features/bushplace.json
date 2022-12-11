@@ -1,0 +1,28 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "rns:bushplace"
+		},
+		"places_block": {
+			"name": "rns:bush"
+		},
+		"may_replace": [
+			{
+				"name": "minecraft:air"
+			}
+		],
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_attach_to": {
+			"min_sides_must_attach": 1,
+			"bottom": [
+				"minecraft:grass",
+				"minecraft:dirt",
+				"minecraft:snow",
+				"minecraft:powder_snow"
+			]
+		}
+	}
+}

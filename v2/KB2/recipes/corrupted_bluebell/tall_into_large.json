@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_corrupted_bluebell_into_large_corrupted_bluebell"},"tags":["crafting_table"],"ingredients":[{"item":"ff:corrupted_bluebell_tall_item","count":2}],"result":{"item":"ff:corrupted_bluebell_large_item"}}}

@@ -1,0 +1,38 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:lumberaxe_8"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" #~",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:stone_broad_axe_head"
+			},
+			"~": {
+				"item": "strat:stone_large_plate"
+			},
+			"o": {
+				"item": "strat:stone_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:stone_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:lumberaxe_8",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

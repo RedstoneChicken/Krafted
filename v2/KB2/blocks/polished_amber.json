@@ -1,0 +1,25 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:polished_amber"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "construction"
+			}
+		},
+		"events": {}
+	}
+}

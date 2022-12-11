@@ -1,0 +1,46 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:coagulated_blood",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "coagulated_blood"
+			},
+			"minecraft:display_name": {
+				"value": "Coagulated Blood"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:use_duration": 1.6,
+			"minecraft:use_animation": "eat",
+			"minecraft:food": {
+				"nutrition": 1,
+				"saturation_modifier": "normal",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "strat:coagulated_blood"
+				}
+			}
+		},
+		"events": {
+			"strat:coagulated_blood": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"effect @s poison 45 2 true",
+								"effect @s health_boost 60 0 true"
+							],
+							"target": "holder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:granite_dispenser"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "#X#",
+      "#R#"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "#": {
+        "item": "minecraft:stone",
+        "data": 1
+      },
+      "X": {
+        "item": "minecraft:bow"
+      }
+    },
+    "result": {
+      "item": "minecraft:dispenser",
+      "data": 3
+    }
+  }
+}

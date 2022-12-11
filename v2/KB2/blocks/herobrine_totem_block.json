@@ -1,0 +1,35 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:herobrine_totem_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 1000,
+			"minecraft:flammable": {
+				"burn_odds": 0,
+				"flame_odds": 0
+			},
+			"minecraft:explosion_resistance": 100,
+			"minecraft:on_interact": {
+				"event": "event:say"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "event:say"
+			}
+		},
+		"events": {
+			"event:say": {
+				"run_command": {
+					"command": [
+						"function sayevent",
+						"summon korbon:herobrine ~~~",
+						"playsound ambient.cave @p[r=25] ~~~ 5"
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

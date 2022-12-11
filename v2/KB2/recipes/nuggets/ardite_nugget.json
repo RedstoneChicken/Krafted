@@ -1,0 +1,24 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:ardite_nugget"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:ardite_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:ardite_nugget",
+				"count": 9
+			}
+		]
+	}
+}

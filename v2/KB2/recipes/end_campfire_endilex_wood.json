@@ -1,0 +1,33 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:end_campfire_endilex_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" S ",
+			"SPS",
+			"WWW"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stick"
+			},
+			"P": {
+				"item": "end:poison_crystal"
+			},
+			"W": {
+				"item": "end:endilex_log"
+			}
+		},
+		"result": [
+			{
+				"item": "end:end_campfire_item"
+			}
+		]
+	}
+}

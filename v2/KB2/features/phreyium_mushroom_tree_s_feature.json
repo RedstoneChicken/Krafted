@@ -1,0 +1,31 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:phreyium_mushroom_tree_s_feature"
+		},
+		"structure_name": "mystructure:mushroom_tree_1b_p",
+		"adjustment_radius": 0,
+		"facing_direction": "south",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air",
+					"korbon:phreyium_grass",
+					"korbon:phreyium_grass",
+					"minecraft:water",
+					"minecraft:flowing_water",
+					"minecraft:chorus_plant",
+					"minecraft:chorus_flower",
+					"korbon:phreyium",
+					"korbon:phreyium_block",
+					"korbon:viscosa_fungus",
+					"korbon:viscosa_tall",
+					"korbon:void_sprouts"
+				]
+			}
+		}
+	}
+}

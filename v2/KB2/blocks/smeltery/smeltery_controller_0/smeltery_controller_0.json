@@ -1,0 +1,45 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.18.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:smeltery_controller_0"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "smeltery_controller",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"minecraft:loot": "loot_tables/smeltery_controller.json",
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:activate": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"playsound bucket.fill_lava @a ~~~",
+								"give @s bucket",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						}
+					}
+				]
+			}
+		}
+	}
+}

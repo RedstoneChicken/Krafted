@@ -1,0 +1,35 @@
+//bridge-file-version: #30
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:coconut",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": {
+				"texture": "korbon:coconut"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:coconut.name"
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "korbon:coconut"
+			},
+			"minecraft:throwable": {
+				"do_swing_animation": true
+			},
+			"minecraft:cooldown": {
+				"category": "ender_pearl",
+				"duration": 1.3
+			}
+		},
+		"events": {}
+	}
+}

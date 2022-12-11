@@ -1,0 +1,78 @@
+{
+	"format_version" : "1.17.0",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "azc:trap_loot",
+			"is_spawnable" : false,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"azure" : {
+				"minecraft:loot" : {
+					"table" : "loot_tables/gameplay/azure_fishing.json"
+				}
+			},
+			"double" : {
+				"minecraft:loot" : {
+					"table" : "loot_tables/gameplay/azure_fishing_double.json"
+				}
+			},
+			"lucky" : {
+				"minecraft:loot" : {
+					"table" : "loot_tables/gameplay/azure_fishing_lucky.json"
+				}
+			},
+			"otherworldly" : {
+				"minecraft:loot" : {
+					"table" : "loot_tables/gameplay/azure_fishing_otherworldly.json"
+				}
+			}
+		},
+		"components" : {
+			"minecraft:pushable" : {
+				"is_pushable" : false,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:knockback_resistance" : {
+				"value" : 10,
+				"max" : 10
+			},
+			"minecraft:health" : {
+				"value" : 1
+			},
+			"minecraft:damage_sensor" : {
+				"triggers" : [
+					{
+						"cause" : "all",
+						"deals_damage" : false,
+						"damage_modifier" : 0,
+						"damage_multiplier" : 0
+					}
+				]
+			}
+		},
+		"events" : {
+			"azure" : {
+				"add" : {
+					"component_groups" : [ "azure" ]
+				}
+			},
+			"double" : {
+				"add" : {
+					"component_groups" : [ "double" ]
+				}
+			},
+			"lucky" : {
+				"add" : {
+					"component_groups" : [ "lucky" ]
+				}
+			},
+			"otherworldly" : {
+				"add" : {
+					"component_groups" : [ "otherworldly" ]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+      "color": "infernal_fern",
+      "metalness_emissive_roughness": "infernal_fern_mer",
+      "heightmap": "infernal_fern_heightmap"
+  }
+}

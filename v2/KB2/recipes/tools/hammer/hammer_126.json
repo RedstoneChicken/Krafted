@@ -1,0 +1,35 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:hammer_126"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			"~",
+			" #",
+			"o ~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_hammer_head"
+			},
+			"~": {
+				"item": "strat:cobalt_large_plate"
+			},
+			"o": {
+				"item": "strat:cobalt_tough_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:hammer_126",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

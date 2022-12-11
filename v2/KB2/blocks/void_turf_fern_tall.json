@@ -1,0 +1,93 @@
+//bridge-file-version: #54
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:void_turf_fern_tall"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void_turf_fern_tall_bottom",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:void_turf",
+							"korbon:void_turf_stone"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_emission": 0.6,
+			"minecraft:map_color": "#7B7B3B",
+			"minecraft:flammable": {
+				"burn_odds": 15,
+				"flame_odds": 15
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:loot": "empty",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:on_placed": {
+				"event": "place"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "destroy"
+			}
+		},
+		"events": {
+			"place": {
+				"run_command": {
+					"command": [
+						"fill ~~1~ ~~1~ korbon:void_turf_fern_tall_top 0 replace air"
+					]
+				}
+			},
+			"destroy": {
+				"sequence": [
+					{
+						"set_block_at_pos": {
+							"block_type": "minecraft:air",
+							"block_offset": [
+								0,
+								1,
+								0
+							]
+						}
+					},
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/turf_fern_tall.json"
+						},
+						"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+					}
+				]
+			}
+		}
+	}
+}

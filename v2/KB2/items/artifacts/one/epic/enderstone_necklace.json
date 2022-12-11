@@ -1,0 +1,55 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:enderstone_necklace",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "enderstone_necklace"
+			},
+			"minecraft:display_name": {
+			 "value": "§eEnderstone Necklace\n§6Epic\n§7Cooldown: 80\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "enderstone_necklace",
+				"duration": 80
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "use": {
+        "run_command": {
+          "command": [
+            "tag @s add user_en",
+            "execute @s ~ ~ ~ spreadplayers ~ ~ 1 50 @e[tag=user_en,r=10]",
+            	"playsound portal.trigger @a[r=10]",
+            "tag @s remove user_ca",            
+            "effect @s instant_health 1 2 true",
+            "effect @s resistance 5 8 true",
+            "effect @s slowness 3 8 true",
+            "tp @s @r[type=player,tag=!user_en]",
+            "execute @s ~~~ particle minecraft:portal_directional ~~~"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}
+     

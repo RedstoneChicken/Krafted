@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:gardenia_bouquet_into_gardenia"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:gardenia_bouquet_item",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ff:gardenia_item",
+      "count": 9
+    }
+  }
+}

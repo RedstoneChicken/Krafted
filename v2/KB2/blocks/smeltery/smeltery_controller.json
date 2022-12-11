@@ -1,0 +1,304 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.18.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:smeltery_controller",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "smeltery_controller",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"minecraft:loot": "loot_tables/smeltery_controller.json",
+			"minecraft:on_placed": {
+				"event": "strat:commands"
+			},
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"bridge:block_rotation": "query.cardinal_facing_2d"
+						},
+						"trigger": {
+							"event": "strat:update_block"
+						}
+					}
+				]
+			},
+			"strat:activate": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'",
+						"set_block_property": {
+							"strat:state": 1
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"playsound bucket.fill_lava @a ~~~",
+								"give @s bucket",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						}
+					}
+				]
+			},
+			"strat:deactivate": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:state') == 1",
+						"set_block_property": {
+							"strat:state": 0
+						}
+					}
+				]
+			},
+			"strat:update_block": {
+				"sequence": [
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 2",
+						"set_block": {
+							"block_type": "strat:smeltery_controller_180"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 3",
+						"set_block": {
+							"block_type": "strat:smeltery_controller_0"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 4",
+						"set_block": {
+							"block_type": "strat:smeltery_controller_270"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:block_rotation') == 5",
+						"set_block": {
+							"block_type": "strat:smeltery_controller_90"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2 && query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_180",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:activate",
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'"
+					},
+					"minecraft:block_light_emission": 0
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3 && query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:activate",
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'"
+					},
+					"minecraft:block_light_emission": 0
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4 && query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_270",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:activate",
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'"
+					},
+					"minecraft:block_light_emission": 0
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5 && query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_90",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:activate",
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'"
+					},
+					"minecraft:block_light_emission": 0
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2 && query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_on_180",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:crafting_table": {
+						"custom_description": "Smeltery",
+						"grid_size": 3,
+						"crafting_tags": [
+							"smeltery"
+						]
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							180,
+							180
+						],
+						"on_tick": {
+							"event": "strat:deactivate"
+						}
+					},
+					"minecraft:block_light_emission": 1
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3 && query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_on",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:crafting_table": {
+						"custom_description": "Smeltery",
+						"grid_size": 3,
+						"crafting_tags": [
+							"smeltery"
+						]
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							180,
+							180
+						],
+						"on_tick": {
+							"event": "strat:deactivate"
+						}
+					},
+					"minecraft:block_light_emission": 1
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4 && query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_on_270",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:crafting_table": {
+						"custom_description": "Smeltery",
+						"grid_size": 3,
+						"crafting_tags": [
+							"smeltery"
+						]
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							180,
+							180
+						],
+						"on_tick": {
+							"event": "strat:deactivate"
+						}
+					},
+					"minecraft:block_light_emission": 1
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5 && query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "smeltery_controller_on_90",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:crafting_table": {
+						"custom_description": "Smeltery",
+						"grid_size": 3,
+						"crafting_tags": [
+							"smeltery"
+						]
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							180,
+							180
+						],
+						"on_tick": {
+							"event": "strat:deactivate"
+						}
+					},
+					"minecraft:block_light_emission": 1
+				}
+			}
+		]
+	}
+}

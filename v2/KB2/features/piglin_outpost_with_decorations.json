@@ -1,0 +1,14 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:piglin_outpost_with_decorations"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"minecraft:piglin_outpost_feature_mcstructure",
+			"korbon:piglin_outpost_lanterns_scatter"
+		]
+	}
+}

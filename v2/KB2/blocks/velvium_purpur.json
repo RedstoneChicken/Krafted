@@ -1,0 +1,26 @@
+//bridge-file-version: #36
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:velvium_purpur"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "velvium_purpur_block",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#F6FABD",
+			"minecraft:explosion_resistance": 1.5,
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.construction",
+				"category": "construction"
+			}
+		},
+		"events": {}
+	}
+}

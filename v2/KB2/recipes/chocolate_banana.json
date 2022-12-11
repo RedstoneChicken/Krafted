@@ -1,0 +1,28 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:chocolate_banana"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:banana",
+				"count": 1
+			},
+			{
+				"item": "strat:chocolate_bar",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:chocolate_banana",
+				"count": 1
+			}
+		]
+	}
+}

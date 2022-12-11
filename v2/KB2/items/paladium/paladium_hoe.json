@@ -1,0 +1,153 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:paladium_hoe",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.hoe"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 1245
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "stripped_hoe"
+				}
+			},
+			"minecraft:damage": 4,
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "hoe"
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:paladium"
+						],
+						"repair_amount": "25"
+					}
+				]
+			},
+			"minecraft:use_on": {
+				"blocks": [
+					"grass",
+					"dirt",
+					"grass_path"
+				]
+			},
+			"tag:minecraft:is_hoe": {},
+			"minecraft:display_name": {
+				"value": "Paladium Hoe"
+			},
+			"minecraft:icon": {
+				"texture": "paladium_hoe"
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_not_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_hit_block": {
+					"event": "dmg"
+				}
+			},
+			"minecraft:creative_vategory": {
+				"parent": "itemGroup.name.hoe"
+			},
+			"minecraft:digger": {
+    "use_efficiency": true,
+    "destroy_speeds": [
+        {
+            "block": "minecraft:nether_wart_block",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        },
+        {
+            "block": "minecraft:target",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        },
+        {
+            "block": "minecraft:shroomlight",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        },
+        {
+            "block": "minecraft:hay_block",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        },
+        {
+            "block": "minecraft:leaves",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        },
+        {
+            "block": "minecraft:leaves2",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        },
+        {
+            "block": "minecraft:warped_wart_block",
+            "speed": 5,
+            "on_dig": {
+                "event": "dmg"
+            }
+        }
+    ],
+    "on_dig": {
+        "event": "dmg"
+    }
+}
+		},
+		"events": {
+			"stripped_hoe": {
+				"sequence": [
+					{
+						"swing": {},
+						"damage": {
+							"type": "durability",
+							"amount": 1,
+							"target": "item"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function stripped_hoe"
+							]
+						}
+					}
+				]
+			},
+			"dmg": {
+				"damage": {
+					"type": "none",
+					"amount": 1,
+					"target": "self"
+				}
+			}
+		}
+	}
+}

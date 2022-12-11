@@ -1,0 +1,22 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:blank_cast"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Blank Cast"
+			},
+			"minecraft:icon": {
+				"texture": "strat_blank cast"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"tag:cast": {}
+		},
+		"events": {}
+	}
+}

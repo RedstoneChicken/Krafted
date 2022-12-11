@@ -1,0 +1,42 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:three_ghast_ball"
+  },
+  "tags": [
+   "crafting_table"
+  ],
+  "pattern": [
+   "SAS"
+  ],
+  "key": {
+   "A": {
+    "item": "kna:ghast_ball_two"
+   },
+   "S": {
+    "item": "kna:common_scrap"
+   }
+  },
+  "result": {
+   "item": "kna:ghast_ball_three",
+   "count": 1
+  }
+ }
+}
+
+}
+}
+: "kna:wither_star",
+   "count": 1
+  }
+ }
+}
+      }
+    },
+    "result": {
+      "item": "kna:wither_star",
+      "count": 1
+    }
+  }
+}

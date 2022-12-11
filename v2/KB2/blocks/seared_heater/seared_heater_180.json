@@ -1,0 +1,60 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:seared_heater_180"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "seared_heater_180",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"tag:stone": {},
+			"minecraft:loot": "loot_tables/seared_heater.json",
+			"minecraft:on_interact": {
+				"event": "strat:activate",
+				"condition": "query.get_equipped_item_name('main_hand') == 'coal' || query.get_equipped_item_name('main_hand') == 'charcoal'"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:activate": {
+				"sequence": [
+					{
+						"decrement_stack": {
+							"ignore_game_mode": false
+						},
+						"set_block": {
+							"block_type": "strat:seared_heater_180_on"
+						},
+						"run_command": {
+							"command": [
+								"function melter_activate"
+							]
+						}
+					}
+				]
+			},
+			"strat:deactivate": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function melter_deactivate"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

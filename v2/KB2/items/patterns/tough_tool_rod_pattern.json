@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tough_tool_rod_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Tough Tool Rod Pattern\n§7Material Cost: 3§r"
+			},
+			"minecraft:icon": {
+				"texture": "strat_tough tool rod pattern"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:tough_tool_rod_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

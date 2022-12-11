@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:anemone_into_anemone_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:anemone_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:anemone_bouquet_item",
+      "count": 1
+    }
+  }
+}

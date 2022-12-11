@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:firewood_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "strat:firewood"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:firewood_slab",
+				"count": 6
+			}
+		],
+		"priority": 1
+	}
+}

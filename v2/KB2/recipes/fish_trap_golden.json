@@ -1,0 +1,24 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "golden_fish_trap"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ "CBC", "BAB", "CBC" ],
+		"key" : {
+			"A" : {
+				"item" : "azc:wooden_fish_trap"
+			},
+			"B" : {
+				"item" : "minecraft:gold_nugget"
+			},
+			"C" : {
+				"item" : "minecraft:gold_ingot"
+			}
+		},
+		"result" : {
+			"item" : "azc:golden_fish_trap"
+		}
+	}
+}

@@ -1,0 +1,51 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:egg_capturer",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "egg_capturer"
+			},
+			"minecraft:display_name": {
+			 "value": "§cEgg Capturer\n§6Mythic\n§7Fuel:12 Hearts\nLevel: 1\nWorks on: Villagers, Piglin and Creepers"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound random.screenshot @a[r=10]",
+          	"execute @e[type=villager,name=\"egg\",r=10] ~~~ summon kna:egg ~~~ kna:villager",
+          	"execute @e[type=piglin,name=\"egg\",r=10] ~~~ summon kna:egg ~~~ kna:piglin",
+          	"execute @e[type=creeper,name=\"egg\",r=10] ~~~ summon kna:egg ~~~ kna:creeper",
+          	"kill @e[type=villager,name=\"egg\",r=10]",
+          	"kill @e[type=creeper,name=\"egg\",r=10]",
+        		"kill @e[type=piglin,name=\"egg\",r=10]",
+            "effect @s instant_damage 1 1 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}   
+
+

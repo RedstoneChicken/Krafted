@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:glowing_obsidian_patch_vegetation_random_feature"
+    },
+    "features": [
+      [ "honkit26113:glowing_obsidian_feature", 30 ],
+      [ "honkit26113:placeholder_test_feature", 70 ]
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "honkit26113:smoker_from_stripped_crooked_stem"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " # ",
+      "#F#",
+      " # "
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:furnace"
+      },
+      "#": {
+        "item": "honkit26113:crooked_stem_stripped"
+      }
+    },
+    "result": {
+      "item": "minecraft:smoker"
+    }
+  }
+}

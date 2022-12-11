@@ -1,0 +1,50 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "caf:black_apple",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "poor",
+				"on_consume": {
+					"event": "consumed",
+					"target": "self"
+				}
+			},
+			"minecraft:foil": false,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:display_name": {},
+			"minecraft:render_offsets": "apple",
+			"minecraft:icon": {
+				"texture": "blackapple"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.6
+		},
+		"events": {
+			"consumed": {
+				"randomize": [
+					{
+						"weight": 8,
+						"add_mob_effect": {
+							"effect": "hunger",
+							"duration": 30,
+							"amplifier": 0,
+							"target": "holder"
+						}
+					},
+					{
+						"weight": 2
+					}
+				]
+			}
+		}
+	}
+}

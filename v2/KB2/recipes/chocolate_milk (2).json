@@ -1,0 +1,41 @@
+//bridge-file-version: #5
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:chocolate_milk"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#~",
+			"-o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:chocolate_bar"
+			},
+			"~": {
+				"item": "strat:marshmallow"
+			},
+			"o": {
+				"item": "strat:milk_glass"
+			},
+			"-": {
+				"item": "strat:ceramic_mug"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:chocolate_milk",
+				"count": 1
+			},
+			{
+				"item": "strat:drinking_glass",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

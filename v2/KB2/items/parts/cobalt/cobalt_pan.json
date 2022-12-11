@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cobalt_pan"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Cobalt Pan"
+			},
+			"minecraft:icon": {
+				"texture": "cobalt_pan"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

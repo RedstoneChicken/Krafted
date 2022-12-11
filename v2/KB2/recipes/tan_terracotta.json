@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:tan_terracotta"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "TTT",
+      "TDT",
+      "TTT"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:hardened_clay"
+      },
+      "D": {
+        "item": "cav:tan_dye"
+      }
+    },
+    "result": {
+      "item": "cav:tan_terracotta",
+      "count": 8
+    }
+  }
+}

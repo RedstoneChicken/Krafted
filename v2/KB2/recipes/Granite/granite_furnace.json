@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:granite_furnace"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "# #",
+      "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stone",
+        "data": 1
+      }
+    },
+    "result": {
+      "item": "minecraft:furnace"
+    }
+  }
+}

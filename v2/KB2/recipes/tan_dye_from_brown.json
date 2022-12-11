@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:tan_dye_from_brown"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "minecraft:white_dye"
+      },
+      {
+        "item": "minecraft:brown_dye"
+      }
+    ],
+    "result": {
+      "item": "cav:tan_dye",
+      "count": 2
+    }
+  }
+}

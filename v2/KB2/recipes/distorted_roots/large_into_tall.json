@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_distorted_roots_into_tall_distorted_roots"},"tags":["crafting_table"],"ingredients":[{"item":"ff:distorted_roots_large_item"}],"result":{"item":"ff:distorted_roots_tall_item","count":2}}}

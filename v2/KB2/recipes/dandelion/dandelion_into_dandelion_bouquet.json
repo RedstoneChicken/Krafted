@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:dandelion_into_dandelion_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:yellow_flower",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:dandelion_bouquet_item",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "nest_02c3710d"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "A A",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:wheat",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "incubation:nest",
+      "count": 1
+    }
+  }
+}

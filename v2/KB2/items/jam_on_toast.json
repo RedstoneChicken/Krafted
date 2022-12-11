@@ -1,0 +1,44 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:jam_on_toast",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": "normal",
+				"on_consume": {
+					"event": "speed"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_jam on toast"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {
+			"speed": {
+				"randomize": [
+					{
+						"weight": 1
+					},
+					{
+						"weight": 2,
+						"run_command": {
+							"command": [
+								"effect @p speed 10 0"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

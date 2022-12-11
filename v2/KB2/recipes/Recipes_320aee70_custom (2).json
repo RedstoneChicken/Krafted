@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "tags": [
+      "furnace"
+    ],
+    "output": {
+      "item": "incubation:fried_egg",
+      "data": 0
+    },
+    "input": {
+      "item": "minecraft:egg",
+      "data": 0
+    },
+    "description": {
+      "identifier": "recipes_fa3ba991"
+    }
+  }
+}

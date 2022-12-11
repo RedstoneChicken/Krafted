@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "adv:ender_shad",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:chorus_koi",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "adv:pearl_sardine",
+          "weight": 13
+        }
+      ]
+    }
+  ]
+}

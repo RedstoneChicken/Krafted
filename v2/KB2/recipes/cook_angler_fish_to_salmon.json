@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook_angler_fish_to_salmon"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "adv:angler_fish",
+    "output": {
+      "item": "minecraft:cooked_salmon",
+      "count": 3
+    }
+  }
+}

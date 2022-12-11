@@ -1,0 +1,21 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:soul_nether_shroom_dummy"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			}
+		},
+		"events": {}
+	}
+}

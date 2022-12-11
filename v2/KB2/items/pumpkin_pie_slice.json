@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:pumpkin_pie_slice",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 0.8,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "pumpkin_pie_slice"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,20 @@
+//bridge-file-version: #3
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:potato"
+		},
+		"components": {
+			"minecraft:use_duration": 16,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "low"
+			},
+			"minecraft:seed": {
+				"crop_result": "potatoes"
+			}
+		},
+		"events": {}
+	}
+}

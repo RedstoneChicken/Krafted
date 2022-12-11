@@ -1,0 +1,29 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:lasagne",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 2.4,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "lasagne"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

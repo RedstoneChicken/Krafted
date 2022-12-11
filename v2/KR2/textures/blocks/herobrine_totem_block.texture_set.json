@@ -1,0 +1,8 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "herobrine_totem_block",
+		"metalness_emissive_roughness": "herobrine_totem_block_mer"
+	}
+}

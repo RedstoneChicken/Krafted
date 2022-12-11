@@ -1,0 +1,41 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:eye_small"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.25,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "eyesmallbottom",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.smalleye",
+			"minecraft:on_interact": {
+				"event": "caf:grow",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			}
+		},
+		"events": {
+			"caf:grow": {
+				"set_block_at_pos": {
+					"block_type": "caf:eye",
+					"block_offset": [
+						0,
+						0,
+						0
+					]
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			}
+		}
+	}
+}

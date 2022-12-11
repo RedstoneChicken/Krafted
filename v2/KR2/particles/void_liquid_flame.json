@@ -1,0 +1,64 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "korbon:void_liquid_flame",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/void_liquid_flame"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 5,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 10
+			},
+			"minecraft:emitter_shape_sphere": {
+				"radius": 0.025,
+				"direction": "inwards"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "Math.random(1, 2.0)"
+			},
+			"minecraft:particle_initial_speed": 1,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					2,
+					0
+				]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"(0.2 + variable.particle_random_1*0.1) - (0.1 * variable.particle_age)",
+					"(0.2 + variable.particle_random_1*0.1) - (0.1 * variable.particle_age)"
+				],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [
+					1,
+					1,
+					1,
+					1
+				]
+			}
+		}
+	}
+}

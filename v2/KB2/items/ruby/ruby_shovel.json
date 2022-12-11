@@ -1,0 +1,216 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:ruby_shovel",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 495,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				}
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "stripped_shovel"
+				}
+			},
+			"minecraft:damage": 3,
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "shovel"
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:ruby"
+						],
+						"repair_amount": "25"
+					}
+				]
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:soul_sand",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:soul_soil",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_nylium",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_nylium",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:dirt",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:coarse_dirt",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:farmland",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:grass",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:grass_path",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:podzol",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:mycelium",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:mud",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:gravel",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:sand",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:snow",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:snow_layer",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:dirt_with_roots",
+						"speed": 4,
+						"on_dig": {
+							"event": "dmg"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "dmg"
+				}
+			},
+			"tag:minecraft:is_shovel": {},
+			"minecraft:icon": {
+				"texture": "ruby_shovel"
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_not_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_hit_block": {
+					"event": "dmg"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "Ruby Shovel"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.shovel"
+			}
+		},
+		"events": {
+			"stripped_shovel": {
+				"sequence": [
+					{
+						"swing": {},
+						"damage": {
+							"type": "durability",
+							"amount": 1,
+							"target": "item"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"function stripped_shovel"
+							]
+						}
+					}
+				]
+			},
+			"dmg": {
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
+			}
+		}
+	}
+}

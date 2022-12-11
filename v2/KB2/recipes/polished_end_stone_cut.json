@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:polished_end_stone_cut"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "minecraft:end_stone"
+      }
+    ],
+    "result": {
+      "item": "cav:polished_end_stone",
+      "count": 1
+    }
+  }  
+}

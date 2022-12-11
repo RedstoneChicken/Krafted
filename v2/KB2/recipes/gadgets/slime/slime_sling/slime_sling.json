@@ -1,0 +1,34 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:slimesling"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~#~",
+			"o o",
+			" o"
+		],
+		"key": {
+			"~": {
+				"item": "minecraft:string"
+			},
+			"#": {
+				"item": "strat:congealed_slime_block"
+			},
+			"o": {
+				"item": "minecraft:slime_ball"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:slime_sling",
+				"count": 1
+			}
+		]
+	}
+}

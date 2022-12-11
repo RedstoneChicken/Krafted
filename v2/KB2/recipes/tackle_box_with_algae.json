@@ -1,0 +1,27 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "tackle_box_with_algae"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ "DCD", "CAC", "CBC" ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:crafting_table"
+			},
+			"B" : {
+				"item" : "minecraft:iron_block"
+			},
+			"C" : {
+				"item" : "minecraft:iron_ingot"
+			},
+			"D" : {
+				"item" : "azc:algae"
+			}
+		},
+		"result" : {
+			"item" : "azc:tackle_box"
+		}
+	}
+}

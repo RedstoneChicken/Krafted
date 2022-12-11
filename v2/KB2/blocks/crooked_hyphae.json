@@ -1,0 +1,30 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.14.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:crooked_hyphae"
+		},
+		"components": {
+            "tag:honkit26113_dig_with_axe": {},
+      		"minecraft:creative_category": {
+        		"group": "itemGroup.name.nature",
+      			"category": "nature"
+      		},
+			"minecraft:destroy_time": 0.5,
+			"minecraft:explosion_resistance": 2,
+			"minecraft:map_color": "#672E7D",
+      		"minecraft:on_interact": {
+        		"condition": "q.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
+        		"event": "honkit26113:strip"
+      		}
+        },
+        "events": {
+        	"honkit26113:strip": {
+        		"set_block": {
+        			"block_type": "honkit26113:crooked_hyphae_stripped"
+        		}
+        	}
+        }
+	}
+}

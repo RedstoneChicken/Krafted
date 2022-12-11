@@ -1,0 +1,30 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:lonsdaleite_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"B": {
+				"item": "end:block_of_lonsdaleite"
+			},
+			"D": {
+				"item": "minecraft:diamond_chestplate"
+			}
+		},
+		"pattern": [
+			"BBB",
+			"BDB",
+			"BBB"
+		],
+		"result": [
+			{
+				"item": "end:lonsdaleite_chestplate"
+			}
+		]
+	}
+}

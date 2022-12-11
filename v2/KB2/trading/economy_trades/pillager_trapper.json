@@ -1,0 +1,210 @@
+//bridge-file-version: #35
+{
+	"tiers": [
+		{
+			"groups": [
+				{
+					"num_to_select": 3,
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "minecraft:rabbit_hide",
+									"quantity": {
+										"min": 2,
+										"max": 8
+									},
+									"price_multiplier": 0.05
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 1,
+										"max": 3
+									}
+								}
+							],
+							"trader_exp": 2,
+							"max_uses": 16,
+							"reward_exp": true
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:leather",
+									"quantity": {
+										"min": 2,
+										"max": 4
+									},
+									"price_multiplier": 0.15
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 1,
+										"max": 3
+									}
+								}
+							],
+							"trader_exp": 2,
+							"max_uses": 16,
+							"reward_exp": true
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:arrow",
+									"price_multiplier": 0.05,
+									"quantity": {
+										"min": 10,
+										"max": 25
+									}
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 2,
+										"max": 3
+									}
+								}
+							],
+							"trader_exp": 2,
+							"max_uses": 16,
+							"reward_exp": true
+						}
+					]
+				},
+				{
+					"num_to_select": 3,
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 1,
+										"max": 2
+									},
+									"price_multiplier": 0.13
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:rabbit_hide",
+									"quantity": {
+										"min": 2,
+										"max": 6
+									}
+								}
+							],
+							"trader_exp": 1,
+							"max_uses": 12,
+							"reward_exp": true
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 2,
+										"max": 3
+									},
+									"price_multiplier": 0.13
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:leather",
+									"quantity": {
+										"min": 2,
+										"max": 5
+									}
+								}
+							],
+							"trader_exp": 1,
+							"max_uses": 12,
+							"reward_exp": true
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 2,
+										"max": 3
+									},
+									"price_multiplier": 0.13
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:arrow",
+									"quantity": {
+										"min": 8,
+										"max": 16
+									}
+								}
+							],
+							"trader_exp": 1,
+							"max_uses": 12,
+							"reward_exp": true
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 5,
+										"max": 10
+									},
+									"price_multiplier": 0.13
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:bow",
+									"quantity": 1
+								}
+							],
+							"trader_exp": 1,
+							"max_uses": 12,
+							"reward_exp": true
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:emerald",
+									"quantity": {
+										"min": 12,
+										"max": 20
+									},
+									"price_multiplier": 0.13
+								}
+							],
+							"gives": [
+								{
+									"item": "minecraft:bow",
+									"quantity": 1,
+									"functions": [
+										{
+											"function": "enchant_randomly"
+										}
+									]
+								}
+							],
+							"trader_exp": 1,
+							"max_uses": 3,
+							"reward_exp": true
+						}
+					]
+				}
+			]
+		}
+	]
+}

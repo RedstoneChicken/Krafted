@@ -1,0 +1,14 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:velvium_tall_grass_place_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:velvium_grass_feature",
+			"korbon:velvium_tall_grass_feature"
+		]
+	}
+}

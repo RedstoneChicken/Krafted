@@ -1,0 +1,207 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "components":{
+         "minecraft:can_destroy_in_creative":false,
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.items"
+         },
+         "minecraft:display_name":{
+            "value":"§fTier I Crate\n§7Common Artifact"
+         },
+         "minecraft:hand_equipped":true,
+         "minecraft:icon":{
+            "texture":"common_artifact"
+         },
+         "minecraft:max_stack_size":1,
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"give",
+               "target":"self"
+            }
+         },
+         "minecraft:use_animation":"drink",
+         "minecraft:use_duration":0
+      },
+      "description":{
+         "identifier":"kna:common_crate"
+      },
+      "events":{
+         "give":{
+            "randomize":[
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:eternal_steak 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:health_potion 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:clay_bricks 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:golem_kit 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:jump_boots 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:speed_boots 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:ghast_ball 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:quiver 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:blinding_sac 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:dynamite 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:filling_bundle 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:pillaging_shield 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:smoke_canister 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:ender_wand 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:haste_spell 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:glass_of_wine 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:remote 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:hunting_rope 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:fishing_net 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               }
+            ]
+         }
+      }
+   }
+}

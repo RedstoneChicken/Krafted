@@ -1,0 +1,18 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_brewing_mix" : {
+		"description" : {
+			"identifier" : "lingering_poison_by_azc_jellyfish"
+		},
+		"tags" : [ "brewing_stand" ],
+		"input" : {
+			"item" : "minecraft:lingering_potion",
+			"data" : 4
+		},
+		"reagent" : "azc:azc_jellyfish",
+		"output" : {
+			"item" : "minecraft:lingering_potion",
+			"data" : 25
+		}
+	}
+}

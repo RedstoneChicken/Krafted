@@ -1,0 +1,53 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "ff:sleeted_grass_block_rule",
+			"places_feature": "ff:sleeted_grass_block_feature"
+		},
+
+		"conditions": {
+			"placement_pass": "before_surface_pass",
+
+      "minecraft:biome_filter": {
+				"any_of":[
+					{
+						"test": "has_biome_tag",
+						"value": "snowy_slopes"
+					},
+					{
+						"test": "has_biome_tag",
+						"value": "frozen"
+					},
+					{
+						"test": "has_biome_tag",
+						"value": "ice"
+					},
+					{
+						"test": "has_biome_tag",
+						"value": "ice_plains"
+					},
+					{
+						"test": "has_biome_tag",
+						"value": "cold"
+					}
+				]
+      }
+		},
+
+		"distribution": {
+			"iterations": 2048,
+
+			"x": {
+				"distribution": "uniform",
+				"extent": [0, 15]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [0, 15]
+			},
+			"y": "t.in = q.noise(v.worldx / 1024, v.worldz / 1024) + q.noise(v.worldx, v.worldz) * 0.05; return (t.in > 0.5 && t.in < 0.7 ? q.heightmap(v.worldx, v.worldz) - 1: -65);"
+		}
+	}
+}

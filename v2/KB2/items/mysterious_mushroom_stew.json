@@ -1,0 +1,48 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:mysterious_mushroom_stew",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.5,
+			"minecraft:max_stack_size": 1,
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation_modifier": "good",
+				"on_consume": {
+					"event": "mysterious_mushroom_stew_event",
+					"target": "self"
+				},
+				"can_always_eat": true
+			},
+			"minecraft:icon": {
+				"texture": "korbon:mysterious_mushroom_stew"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:mysterious_mushroom_stew.name"
+			}
+		},
+		"events": {
+			"mysterious_mushroom_stew_event": {
+				"run_command": {
+					"command": [
+						"give @s bowl 1",
+						"effect @s strength 30 1 false",
+						"effect @s speed 20 1 false",
+						"effect @s regeneration 15 2 false",
+						"effect @s haste 15 1 false"
+					],
+					"target": "holder"
+				},
+				"decrement_stack": {}
+			}
+		}
+	}
+}

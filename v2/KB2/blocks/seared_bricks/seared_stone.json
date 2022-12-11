@@ -1,0 +1,59 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:seared_stone"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 5,
+			"minecraft:map_color": "#202020",
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.stoneBrick",
+				"category": "Construction"
+			},
+			"minecraft:ticking": {
+				"range": [
+					0.5,
+					0.5
+				],
+				"looping": true,
+				"on_tick": {
+					"event": "strat:activate_smeltery"
+				}
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "strat:deactivate_smeltery"
+			},
+			"minecraft:on_placed": {
+				"event": "strat:activate_smeltery"
+			}
+		},
+		"events": {
+			"strat:activate_smeltery": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function smeltery_activate"
+							]
+						}
+					}
+				]
+			},
+			"strat:deactivate_smeltery": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function smeltery_deactivate"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

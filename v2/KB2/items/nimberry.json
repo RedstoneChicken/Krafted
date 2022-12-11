@@ -1,0 +1,40 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "rns:nimberry"
+		},
+		"components": {
+			"minecraft:food": {
+				"on_consume": {
+					"event": "rns:speed"
+				},
+				"nutrition": 2,
+				"saturation_modifier": "low"
+			},
+			"minecraft:stacked_by_data": true,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "nimberry"
+			},
+			"minecraft:display_name": {
+				"value": "Nimberry"
+			},
+			"minecraft:use_duration": 1.6,
+			"minecraft:use_animation": "eat"
+		},
+		"events": {
+			"rns:speed": {
+				"add_mob_effect": {
+					"effect": "speed",
+					"duration": 3,
+					"amplifier": 1,
+					"target": "holder"
+				}
+			}
+		}
+	}
+}

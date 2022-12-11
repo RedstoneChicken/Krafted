@@ -1,0 +1,37 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:verdanite"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "verdanite",
+					"render_method": "opaque"
+				}
+			},
+			"tag:stone": {},
+			"minecraft:map_color": "#6A8672",
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:on_player_destroyed": {
+				"event": "play_sound"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			}
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a[r=3]"
+					]
+				}
+			}
+		}
+	}
+}

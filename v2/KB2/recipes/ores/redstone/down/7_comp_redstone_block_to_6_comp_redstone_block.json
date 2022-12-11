@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:septuple_compressed_redstone_block_to_sextuple_compressed_redstone_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:septuple_compressed_redstone_block"
+			}
+		],
+		"result": [
+			{
+				"count": 9,
+				"item": "cc:sextuple_compressed_redstone_block"
+			}
+		]
+	}
+}

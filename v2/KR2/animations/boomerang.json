@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.boomerang.spinning": {
+      "loop": true,
+      "animation_length": 1.0,
+      "bones": {
+        "boomerang": {
+          "rotation": {
+            "0.0": [0, 0, 0],
+            "1.0": [0, 1080, 0]
+          }
+        }
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,54 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "end:lonsdaleite_ore_rule",
+			"places_feature": "end:lonsdaleite_ore_feature"
+		},
+		"conditions": {
+			"placement_pass": "underground_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 5,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					44,
+					58
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 3
+			}
+		}
+	}
+}

@@ -1,0 +1,68 @@
+//bridge-file-version: #37
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:crop_bush"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "strat_crop_bush",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.strat_crop",
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					12,
+					14
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:grass",
+							"minecraft:dirt",
+							"minecraft:podzol"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "strat:spawn_loot"
+			},
+			"minecraft:loot": "loot_tables/empty.json"
+		},
+		"events": {
+			"strat:spawn_loot": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'shears'",
+						"spawn_loot": {
+							"table": "loot_tables/crop_bush2.json"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') != 'shears'",
+						"spawn_loot": {
+							"table": "loot_tables/crop_bush.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

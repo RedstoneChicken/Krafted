@@ -1,0 +1,18 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_brewing_mix" : {
+		"description" : {
+			"identifier" : "lingering_healing_by_leech"
+		},
+		"tags" : [ "brewing_stand" ],
+		"input" : {
+			"item" : "minecraft:lingering_potion",
+			"data" : 4
+		},
+		"reagent" : "azc:leech",
+		"output" : {
+			"item" : "minecraft:lingering_potion",
+			"data" : 21
+		}
+	}
+}

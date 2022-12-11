@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:fishing_line",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "fishing_line",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

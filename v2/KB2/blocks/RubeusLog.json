@@ -1,0 +1,61 @@
+//bridge-file-version: #0
+{
+	"minecraft:block": {
+		"description": {
+			"properties": {
+				"bridge:block_rotation": [
+					0,
+					1,
+					2
+				]
+			},
+			"identifier": "caf:rubeus_log"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"tag:wood": {}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "math.floor(query.cardinal_facing / 2.0)"
+				}
+			}
+		}
+	},
+	"format_version": "1.16.200"
+}

@@ -1,0 +1,2098 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:casting_basin",
+			"properties": {
+				"strat:stage": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13
+				],
+				"strat:material": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_filter": 0,
+			"minecraft:map_color": "#202020",
+			"minecraft:explosion_resistance": 5,
+			"minecraft:geometry": "geometry.casting_basin_v2",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "casting_basin",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:part_visibility": {
+				"conditions": {
+					"stage1": "query.block_property('strat:stage') == 1",
+					"stage2": "query.block_property('strat:stage') == 2",
+					"stage3": "query.block_property('strat:stage') == 3",
+					"stage4": "query.block_property('strat:stage') == 4",
+					"stage5": "query.block_property('strat:stage') == 5",
+					"stage6": "query.block_property('strat:stage') == 6",
+					"stage7": "query.block_property('strat:stage') == 7",
+					"stage8": "query.block_property('strat:stage') == 8",
+					"stage9": "query.block_property('strat:stage') == 9",
+					"block": "query.block_property('strat:stage') == 10",
+					"block2": "query.block_property('strat:stage') == 11",
+					"block3": "query.block_property('strat:stage') == 12",
+					"block4": "query.block_property('strat:stage') == 13"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "strat:interact"
+			},
+			"minecraft:loot": "loot_tables/casting_basin.json",
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "strat:interact"
+			}
+		},
+		"events": {
+			"strat:interact": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:stage') == 0",
+						"sequence": [
+							{
+								"sequence": [
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_iron_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 1
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 2
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_copper_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 3
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_cobalt_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 4
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_ardite_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 5
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_manyullyn_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 6
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'seared_stone_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 4",
+											"strat:material": 7
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_glass_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 4",
+											"strat:material": 8
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'molten_obsidian_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 4",
+											"strat:material": 9
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'blood_bucket'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 4",
+											"strat:material": 12
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s bucket",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_iron'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 1",
+											"strat:material": 1
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_gold'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 1",
+											"strat:material": 2
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_copper'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 1",
+											"strat:material": 3
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_cobalt'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 1",
+											"strat:material": 4
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_ardite'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 1",
+											"strat:material": 5
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_manyullyn'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 1",
+											"strat:material": 6
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_seared_stone'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 7
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_glass'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 8
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_obsidian'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 9
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_blood'",
+										"set_block_property": {
+											"strat:stage": "query.block_property('strat:stage') + 2",
+											"strat:material": 12
+										},
+										"decrement_stack": {},
+										"run_command": {
+											"command": [
+												"playsound bucket.fill_lava @a ~~~",
+												"gamerule sendcommandfeedback false",
+												"give @s strat:copper_can_blood",
+												"gamerule sendcommandfeedback true"
+											],
+											"target": "player"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'iron_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'gold_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'cobalt_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'ardite_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'seared_stone'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'glass'",
+										"set_block_property": {
+											"strat:stage": 13,
+											"strat:material": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'obsidian'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'cobblestone'",
+										"set_block_property": {
+											"strat:stage": 11,
+											"strat:material": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'seared_cobblestone'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'warped_planks'",
+										"set_block_property": {
+											"strat:stage": 11,
+											"strat:material": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'crimson_planks'",
+										"set_block_property": {
+											"strat:stage": 12,
+											"strat:material": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'lavawood'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'congealed_blood_block'",
+										"set_block_property": {
+											"strat:stage": 10,
+											"strat:material": 12
+										},
+										"decrement_stack": {}
+									}
+								]
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 8 && query.block_property('strat:material') == 1 && query.get_equipped_item_name('main_hand') == 'molten_iron_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 8 && query.block_property('strat:material') == 1 && query.get_equipped_item_name('main_hand') == 'molten_iron_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 1 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 1 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_iron_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 1",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/iron_block.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 8 && query.block_property('strat:material') == 2 && query.get_equipped_item_name('main_hand') == 'molten_gold_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 8 && query.block_property('strat:material') == 2 && query.get_equipped_item_name('main_hand') == 'molten_gold_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 1 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 2 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_gold_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 2",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/gold_block.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 8 && query.block_property('strat:material') == 3 && query.get_equipped_item_name('main_hand') == 'molten_copper_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 8 && query.block_property('strat:material') == 3 && query.get_equipped_item_name('main_hand') == 'molten_copper_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 1 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 3 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_copper_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 3",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/copper_block.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 8 && query.block_property('strat:material') == 4 && query.get_equipped_item_name('main_hand') == 'molten_cobalt_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 8 && query.block_property('strat:material') == 4 && query.get_equipped_item_name('main_hand') == 'molten_cobalt_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 1 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 4 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_cobalt_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 4",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/cobalt_block.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 8 && query.block_property('strat:material') == 5 && query.get_equipped_item_name('main_hand') == 'molten_ardite_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 8 && query.block_property('strat:material') == 5 && query.get_equipped_item_name('main_hand') == 'molten_ardite_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 1 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 5 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_ardite_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 5",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/ardite_block.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 8 && query.block_property('strat:material') == 6 && query.get_equipped_item_name('main_hand') == 'molten_manyullyn_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 8 && query.block_property('strat:material') == 6 && query.get_equipped_item_name('main_hand') == 'molten_manyullyn_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 1 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 6 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_manyullyn_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 6",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/manyullyn_block.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2) && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'seared_stone_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'seared_stone_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'seared_stone_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:seared_stone_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:seared_stone_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 7",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/seared_stone.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2) && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'molten_glass_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'molten_glass_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'molten_glass_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_glass_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_glass_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 13 && query.block_property('strat:material') == 8",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/glass.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2) && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'molten_obsidian_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'molten_obsidian_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'molten_glass_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_obsidian_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:molten_obsidian_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 9",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/obsidian.json"
+								}
+							}
+						]
+					},
+
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 9 && query.block_property('strat:material') == 1 && query.get_equipped_item_name('main_hand') == 'copper_can_iron'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 1 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_iron",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 9 && query.block_property('strat:material') == 2 && query.get_equipped_item_name('main_hand') == 'copper_can_gold'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 2 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_gold",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 9 && query.block_property('strat:material') == 3 && query.get_equipped_item_name('main_hand') == 'copper_can_copper'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 3 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_copper",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 9 && query.block_property('strat:material') == 4 && query.get_equipped_item_name('main_hand') == 'copper_can_cobalt'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 4 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_cobalt",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 9 && query.block_property('strat:material') == 5 && query.get_equipped_item_name('main_hand') == 'copper_can_ardite'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 5 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_ardite",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 9 && query.block_property('strat:material') == 6 && query.get_equipped_item_name('main_hand') == 'copper_can_manyullyn'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') > 0 && query.block_property('strat:stage') < 10 && query.block_property('strat:material') == 6 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_manyullyn",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'copper_can_seared_stone'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'copper_can_seared_stone'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_seared_stone",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 7 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_seared_stone",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'copper_can_glass'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'copper_can_glass'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_glass",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 8 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_glass",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'copper_can_obsidian'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'copper_can_obsidian'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_obsidian",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 9 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_obsidian",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'copper_can_blood'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'copper_can_blood'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 2 || query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 2"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_blood",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'copper_can'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:copper_can_blood",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 10",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/seared_cobblestone.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 11 && query.block_property('strat:material') == 10 && query.get_equipped_item_name('main_hand') != 'seared_stone_bucket'",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/cobblestone.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 11 && query.block_property('strat:material') == 10 && query.get_equipped_item_name('main_hand') == 'seared_stone_bucket'",
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								},
+								"trigger": {
+									"event": "strat:solidify"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 11",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/lavawood.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 11 && query.block_property('strat:material') == 11 && query.get_equipped_item_name('main_hand') != 'lava_bucket'",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/warped_planks.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 12 && query.block_property('strat:material') == 11 && query.get_equipped_item_name('main_hand') != 'lava_bucket'",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/crimson_planks.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 11 && query.block_property('strat:material') == 11 && query.get_equipped_item_name('main_hand') == 'lava_bucket'",
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								},
+								"trigger": {
+									"event": "strat:solidify"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 12 && query.block_property('strat:material') == 11 && query.get_equipped_item_name('main_hand') == 'lava_bucket'",
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								},
+								"trigger": {
+									"event": "strat:solidify"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "(query.block_property('strat:stage') == 2) && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'blood_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4) && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'blood_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 6 && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'blood_bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') + 3"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "(query.block_property('strat:stage') == 4 || query.block_property('strat:stage') == 6) && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 4"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:blood_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 9 && query.block_property('strat:material') == 12 && query.get_equipped_item_name('main_hand') == 'bucket'",
+								"set_block_property": {
+									"strat:stage": "query.block_property('strat:stage') - 5"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound bucket.empty_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s strat:blood_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:stage') == 10 && query.block_property('strat:material') == 12",
+								"set_block_property": {
+									"strat:stage": 0,
+									"strat:material": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/casting/basin/congealed_blood_block.json"
+								}
+							}
+						]
+					}
+				]
+			},
+			"strat:solidify": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:material') != 8",
+						"set_block_property": {
+							"strat:stage": 10
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:material') == 8",
+						"set_block_property": {
+							"strat:stage": 13
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:material') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/casting_basin.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_iron",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_gold",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_copper",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_cobalt",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_ardite",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_manyullyn",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_seared_stone",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_glass",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_obsidian",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 10",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_seared_cobblestone",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 11",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_lavawood",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 12",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_basin_blood",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:stage') == 9",
+				"components": {
+					"minecraft:ticking": {
+						"range": [
+							5,
+							5
+						],
+						"on_tick": {
+							"event": "strat:solidify"
+						}
+					}
+				}
+			}
+		]
+	}
+}

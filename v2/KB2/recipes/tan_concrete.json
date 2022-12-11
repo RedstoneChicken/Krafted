@@ -1,0 +1,29 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:tan_concrete"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "CCC",
+      "CWC",
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "cav:tan_concrete_powder"
+      },
+      "W": {
+        "item": "minecraft:water_bucket"
+      }
+    },
+
+    "result": [
+      { "item": "cav:tan_concrete", "count": 8 },
+      { "item": "minecraft:bucket", "count": 1, "data": 0 }
+    ]
+  }
+}

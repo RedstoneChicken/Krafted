@@ -1,0 +1,29 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:beef_jerky",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "beef_jerky"
+			},
+			"minecraft:display_name": {
+				"value": "Beef Jerky"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "good",
+				"can_always_eat": false
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			}
+		},
+		"events": {}
+	}
+}

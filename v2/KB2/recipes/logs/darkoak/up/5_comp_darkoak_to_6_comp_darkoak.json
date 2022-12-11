@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:quintuple_compressed_darkoak_to_sextuple_compressed_darkoak"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:quintuple_compressed_darkoak"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:sextuple_compressed_darkoak",
+				"count": 1
+			}
+		]
+	}
+}

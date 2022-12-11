@@ -1,0 +1,28 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:longsword_25_10_repair"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:longsword_25_10",
+				"count": 1
+			},
+			{
+				"item": "minecraft:iron_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:longsword_25_10",
+				"count": 1
+			}
+		]
+	}
+}

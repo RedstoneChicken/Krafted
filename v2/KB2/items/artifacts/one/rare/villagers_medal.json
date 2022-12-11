@@ -1,0 +1,46 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:villagers_medal",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"villagers_medal"
+         },
+         "minecraft:display_name":{
+            "value":"Villager's Medal\n§1Rare\n§7Cooldown: 300\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"villagers_medal",
+            "duration":300
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"effect",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "effect":{
+            "run_command":{
+               "command":[
+                  "playsound random.toast @a[r=10]",
+                  "effect @s village_hero 100 1"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

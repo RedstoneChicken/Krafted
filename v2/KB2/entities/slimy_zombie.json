@@ -1,0 +1,740 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:slimy_zombie",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "minecraft:mode_switcher": {
+        "minecraft:target_nearby_sensor": {
+          "inside_range": 3.0,
+          "outside_range": 5.0,
+          "on_inside_range": {
+            "event": "minecraft:switch_to_melee",
+            "target": "self"
+          },
+          "on_outside_range": {
+            "event": "minecraft:switch_to_ranged",
+            "target": "self"
+          }
+        },
+        "minecraft:equipment": {
+          "table": "loot_tables/slimy_zombie_ranged_equipment.json",
+          "slot_drop_chance": [
+            {
+              "slot": "slot.weapon.offhand",
+              "drop_chance": 1.0
+            }
+          ]
+        }
+      },
+
+      "minecraft:ranged_mode": {
+        "minecraft:shooter": {
+          "def": "honkit26113:thrown_slimeball"
+        },
+        "minecraft:behavior.ranged_attack": {
+          "priority": 3,
+          "attack_interval_min": 1.0,
+          "attack_interval_max": 3.0,
+          "attack_radius": 10.0,
+          "swing": true
+        },
+        "minecraft:equipment": {
+          "table": "loot_tables/slimy_zombie_equipment.json",
+          "slot_drop_chance": [
+            {
+              "slot": "slot.weapon.mainhand",
+              "drop_chance": 0.05
+            }
+          ]
+        }
+      },
+
+      "minecraft:melee_mode": {
+        "minecraft:shooter": {
+          "def": "honkit26113:thrown_slimeball"
+        },
+        "minecraft:behavior.ranged_attack": {
+          "priority": 3,
+          "attack_interval_min": 1.0,
+          "attack_interval_max": 3.0,
+          "attack_radius": 10.0,
+          "swing": true
+        },/*
+        "minecraft:attack": {
+          "damage": 3
+        },
+        "minecraft:behavior.melee_attack": {
+          "priority": 3,
+          "speed_multiplier": 1,
+          "track_target": false,
+          "require_complete_path": true
+        },*/
+        "minecraft:equipment": {
+          "table": "loot_tables/slimy_zombie_equipment.json",
+          "slot_drop_chance": [
+            {
+              "slot": "slot.weapon.mainhand",
+              "drop_chance": 0.05
+            }
+          ]
+        }
+      },
+
+      "minecraft:hunter_mode": {
+        "minecraft:navigation.generic": {
+          "is_amphibious": true,
+          "can_path_over_water": false,
+          "can_break_doors": true,
+          "can_swim": true,
+          "can_walk": true,
+          "avoid_sun": true
+        }
+      },
+
+      "minecraft:wander_mode": {
+        "minecraft:navigation.generic": {
+          "is_amphibious": true,
+          "can_path_over_water": false,
+          "can_break_doors": true,
+          "can_swim": false,
+          "can_walk": true,
+          "avoid_sun": true
+        }
+      },
+      "minecraft:look_to_start_zombie_transformation": {
+        "minecraft:environment_sensor": {
+          "triggers": {
+            "filters": {
+              "test": "is_underwater", "subject": "self", "operator": "==", "value": true
+            },
+            "event": "minecraft:start_transforming"
+          }
+        }
+      },
+      "minecraft:start_zombie_transformation": {
+        "minecraft:environment_sensor": {
+          "triggers": {
+            "filters": {
+              "test": "is_underwater", "subject": "self", "operator": "==", "value": false
+            },
+            "event": "minecraft:stop_transforming"
+          }
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 30,
+          "time_down_event": {
+            "event": "minecraft:convert_to_zombie"
+          }
+        }
+      },
+
+      "minecraft:convert_to_zombie": {
+        "minecraft:transformation": {
+          "into": "minecraft:zombie<minecraft:as_adult>",
+          "transformation_sound": "convert_to_drowned",
+          "drop_equipment": true,
+          "delay": {
+            "value": 15
+          }
+        },
+        "minecraft:is_shaking": {
+        }
+      },
+
+      "minecraft:convert_to_baby_zombie": {
+        "minecraft:transformation": {
+          "into": "minecraft:zombie<minecraft:as_baby>",
+          "transformation_sound": "convert_to_drowned",
+          "drop_equipment": true,
+          "delay": {
+            "value": 15
+          }
+        },
+        "minecraft:is_shaking": {
+        }
+      },
+
+      "minecraft:zombie_baby": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:movement": {
+          "value": 0.35
+        }
+      },
+
+      "honkit26113:slimy_zombie_adult": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:movement": {
+          "value": 0.23
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "zombie"
+          ],
+          "seats": {
+            "position": [ 0.0, 1.1, -0.35 ],
+            "lock_rider_rotation": 0
+          }
+        },
+        "minecraft:behavior.mount_pathing": {
+          "priority": 2,
+          "speed_multiplier": 1.25,
+          "target_dist": 0.0,
+          "track_target": true
+        }
+      },
+
+      "honkit26113:slimy_zombie_jockey": {
+        "minecraft:behavior.find_mount": {
+          "priority": 1,
+          "within_radius": 16,
+          "start_delay": 15,
+          "max_failed_attempts": 20
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:nameable": {
+      },
+
+      // Zombie Components
+      "minecraft:type_family": {
+        "family": [ "slimy_zombie", "zombie", "undead", "monster", "mob" ]
+      },
+      "minecraft:equip_item": {
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:navigation.walk": {
+        "is_amphibious": true,
+        "can_pass_doors": true,
+        "can_walk": true,
+        "can_break_doors": true
+      },
+      "minecraft:annotation.break_door": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": true,
+        "breathes_water": true
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/slimy_zombie.json"
+      },
+      "minecraft:shareables": {
+        "items": [
+          {
+            "item": "minecraft:trident",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 0
+          },
+          {
+            "item": "minecraft:netherite_sword",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 0
+          },
+          {
+            "item": "minecraft:diamond_sword",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 1
+          },
+          {
+            "item": "minecraft:iron_sword",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 2
+          },
+          {
+            "item": "minecraft:stone_sword",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 3
+          },
+          {
+            "item": "minecraft:golden_sword",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 4
+          },
+          {
+            "item": "minecraft:wooden_sword",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 5
+          },
+          {
+            "item": "minecraft:netherite_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 0
+          },
+          {
+            "item": "minecraft:diamond_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 1
+          },
+          {
+            "item": "minecraft:iron_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 2
+          },
+          {
+            "item": "minecraft:chainmail_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 3
+          },
+          {
+            "item": "minecraft:golden_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 4
+          },
+          {
+            "item": "minecraft:leather_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 5
+          },
+          {
+            "item": "minecraft:turtle_helmet",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority":  6
+          },
+          {
+            "item": "minecraft:skull:0",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 7
+          },
+          {
+            "item": "minecraft:skull:1",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 7
+          },
+          {
+            "item": "minecraft:carved_pumpkin",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 7
+          },
+          {
+            "item": "minecraft:netherite_chestplate",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 0
+          },
+          {
+            "item": "minecraft:diamond_chestplate",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 1
+          },
+          {
+            "item": "minecraft:iron_chestplate",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 2
+          },
+          {
+            "item": "minecraft:chainmail_chestplate",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 3
+          },
+          {
+            "item": "minecraft:golden_chestplate",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 4
+          },
+          {
+            "item": "minecraft:leather_chestplate",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 5
+          },
+          {
+            "item": "minecraft:netherite_leggings",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 0
+          },
+          {
+            "item": "minecraft:diamond_leggings",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 1
+          },
+          {
+            "item": "minecraft:iron_leggings",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 2
+          },
+          {
+            "item": "minecraft:chainmail_leggings",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 3
+          },
+          {
+            "item": "minecraft:golden_leggings",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 4
+          },
+          {
+            "item": "minecraft:leather_leggings",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 5
+          },
+          {
+            "item": "minecraft:netherite_boots",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 0
+          },
+          {
+            "item": "minecraft:diamond_boots",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 1
+          },
+          {
+            "item": "minecraft:iron_boots",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 2
+          },
+          {
+            "item": "minecraft:chainmail_boots",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 3
+          },
+          {
+            "item": "minecraft:golden_boots",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 4
+          },
+          {
+            "item": "minecraft:leather_boots",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 5
+          }
+        ]
+      },
+
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": {
+            "test": "is_underwater",
+            "operator": "==",
+            "value": true
+          },
+          "event": "minecraft:start_transforming"
+        }
+      },
+
+      // Zombie Behaviors
+      "minecraft:behavior.equip_item": {
+        "priority": 2
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 3
+      },
+      "minecraft:behavior.stomp_turtle_egg": {
+        "priority": 4,
+        "speed_multiplier": 1,
+        "search_range": 10,
+        "search_height": 2,
+        "goal_radius": 1.14,
+        "interval": 20
+      },
+      "minecraft:behavior.pickup_items": {
+        "priority": 6,
+        "max_dist": 3,
+        "goal_radius": 2,
+        "speed_multiplier": 1.0,
+        "pickup_based_on_chance": true,
+        "can_pickup_any_item": true
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 6,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "must_see": true,
+        "reselect_targets": true,
+        "within_radius": 25.0,
+        "must_see_forget_duration": 17.0,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "player" },
+                { "test": "is_family", "subject": "other", "value": "snowgolem" },
+                { "test": "is_family", "subject": "other", "value": "irongolem" }
+              ]
+            },
+            "max_dist": 35
+          },
+          {
+            "filters": {
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "villager" },
+                { "test": "is_family", "subject": "other", "value": "wandering_trader" }
+              ]
+            },
+            "max_dist": 35,
+            "must_see": false
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_family", "subject": "other", "value": "baby_turtle" },
+                { "test": "in_water", "subject": "other", "operator": "!=", "value": true }
+              ]
+            },
+            "max_dist": 35
+          }
+        ]
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 15,
+            "remove": {
+            },
+            "add": {
+              "component_groups": [
+                "minecraft:mode_switcher",
+                "minecraft:ranged_mode",
+                "honkit26113:slimy_zombie_adult"
+              ]
+            }
+          },
+          {
+            "weight": 85,
+            "randomize": [
+              {
+                "weight": 95,
+                "remove": {
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:melee_mode",
+                    "honkit26113:slimy_zombie_adult"
+                  ]
+                }
+              },
+              {
+                "weight": 5,
+                "remove": {
+                },
+                "add": {
+                  "component_groups": [
+                    "minecraft:melee_mode",
+                    "honkit26113:slimy_zombie_baby"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:as_baby": {
+        "add": {
+          "component_groups": [
+            "minecraft:melee_mode",
+            "honkit26113:slimy_zombie_baby"
+          ]
+        }
+      },
+      "minecraft:as_adult": {
+        "add": {
+          "component_groups": [
+            "minecraft:melee_mode",
+            "honkit26113:slimy_zombie_adult"
+          ]
+        }
+      }, 
+      "minecraft:switch_to_melee": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ranged_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:melee_mode"
+          ]
+        }
+      },
+      "minecraft:switch_to_ranged": {
+        "remove": {
+          "component_groups": [
+            "minecraft:melee_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ranged_mode"
+          ]
+        }
+      },
+      "minecraft:has_target": {
+        "remove": {
+          "component_groups": [
+            "minecraft:wander_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:hunter_mode"
+          ]
+        }
+      },
+      "minecraft:lost_target": {
+        "remove": {
+          "component_groups": [
+            "minecraft:hunter_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:wander_mode"
+          ]
+        }
+      },
+      "minecraft:start_transforming": {
+        "add": {
+          "component_groups": [
+            "minecraft:start_zombie_transformation"
+          ]
+        },
+        "remove": {
+          "component_groups": [ "minecraft:look_to_start_zombie_transformation" ]
+        }
+      },
+      "minecraft:stop_transforming": {
+        "add": {
+          "component_groups": [
+            "minecraft:look_to_start_zombie_transformation"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "minecraft:start_zombie_transformation"
+          ]
+        }
+      },
+      "minecraft:convert_to_zombie": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_component",
+              "operator": "!=",
+              "value": "minecraft:is_baby"
+            },
+            "add": {
+              "component_groups": [ "minecraft:convert_to_zombie" ]
+            },
+            "remove": {
+              "component_groups": [ "minecraft:start_zombie_transformation" ]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_component",
+              "value": "minecraft:is_baby"
+            },
+            "add": {
+              "component_groups": [ "minecraft:convert_to_baby_zombie" ]
+            },
+            "remove": {
+              "component_groups": [ "minecraft:start_zombie_transformation" ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

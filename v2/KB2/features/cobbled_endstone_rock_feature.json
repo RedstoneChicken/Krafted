@@ -1,0 +1,65 @@
+//bridge-file-version: #79
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "korbon:cobbled_endstone_rock_feature"
+		},
+		"trunk": {
+			"trunk_height": 1,
+			"trunk_block": {
+				"name": "korbon:cobbled_endstone"
+			}
+		},
+		"canopy": {
+			"canopy_offset": {
+				"min": -1,
+				"max": 0
+			},
+			"leaf_block": {
+				"name": "korbon:cobbled_endstone"
+			},
+			"min_width": 1,
+			"canopy_slope": {
+				"rise": 1,
+				"run": 1
+			},
+			"variation_chance": {
+				"numerator": 2,
+				"denominator": 2
+			}
+		},
+		"base_block": [
+			"korbon:velvium"
+		],
+		"may_grow_on": [
+			"minecraft:dirt",
+			"minecraft:podzol",
+			"minecraft:grass",
+			"minecraft:farmland",
+			"minecraft:dirt",
+			"minecraft:moss_block",
+			"minecraft:dirt_with_roots",
+			"minecraft:clay",
+			"korbon:velvium",
+			"korbon:verdanite"
+		],
+		"may_replace": [
+			"minecraft:water",
+			"minecraft:flowing_water",
+			"minecraft:air",
+			"minecraft:flowering_azalea",
+			"minecraft:azalea_leaves_flowered",
+			"minecraft:azalea_leaves",
+			"minecraft:azalea",
+			"minecraft:leaves2",
+			"minecraft:leaves"
+		],
+		"may_grow_through": [
+			"minecraft:dirt",
+			"minecraft:grass",
+			"korbon:velvium",
+			"korbon:verdanite"
+		]
+	}
+}

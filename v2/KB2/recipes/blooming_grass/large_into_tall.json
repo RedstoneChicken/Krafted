@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_blooming_grass_into_tall_blooming_grass"},"tags":["crafting_table"],"ingredients":[{"item":"ff:blooming_grass_large_item"}],"result":{"item":"ff:blooming_grass_tall_item","count":2}}}

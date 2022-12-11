@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:gold_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "korbon:ectoplasm"
+			}
+		},
+		"result": {
+			"item": "korbon:ectoplasm_block"
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "rns:boneplace"
+		},
+		"places_block": {
+			"name": "rns:bones"
+		},
+		"may_replace": [
+			{
+				"name": "minecraft:air"
+			}
+		],
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_attach_to": {
+			"min_sides_must_attach": 1,
+			"bottom": [
+				"minecraft:grass",
+				"minecraft:stone",
+				"minecraft:snow",
+				"minecraft:sand",
+				"minecraft:hardened_clay",
+				"minecraft:gravel",
+				"minecraft:mud"
+			]
+		}
+	}
+}

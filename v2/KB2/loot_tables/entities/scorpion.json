@@ -1,0 +1,36 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "honkit26113:raw_scorpion",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        },
+                        {
+                            "function": "furnace_smelt",
+                            "conditions": [
+                                {
+                                    "condition": "entity_properties",
+                                    "entity": "this",
+                                    "properties": {
+                                        "on_fire": true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

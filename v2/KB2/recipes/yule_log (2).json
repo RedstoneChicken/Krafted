@@ -1,0 +1,37 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:yule_log"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"CCC",
+			"AOA"
+		],
+		"key": {
+			"C": {
+				"item": "strat:cocoa_powder"
+			},
+			"A": {
+				"item": "minecraft:milk_bucket"
+			},
+			"O": {
+				"item": "strat:butter"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:yule_log",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 2
+			}
+		]
+	}
+}

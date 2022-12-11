@@ -1,0 +1,22 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:seared_brick",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "strat_seared brick"
+			},
+			"minecraft:display_name": {
+				"value": "Seared Brick"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

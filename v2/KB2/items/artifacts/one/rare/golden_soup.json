@@ -1,0 +1,47 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:golden_soup",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"golden_soup"
+         },
+         "minecraft:display_name":{
+            "value":"Golden Soup\n§1Rare\n§7Cooldown: 40\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"golden_soup",
+            "duration":40
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"effect",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "effect":{
+            "run_command":{
+               "command":[
+                  "playsound mob.player.hurt_drown @a[r=10]",
+                  "playsound random.drink @a[r=10]",
+                  "effect @s absorption 20 20 true"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

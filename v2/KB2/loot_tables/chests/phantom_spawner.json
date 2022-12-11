@@ -1,0 +1,367 @@
+//bridge-file-version: #4
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 3,
+				"max": 6
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:rotten_flesh",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:bone",
+					"weight": 9,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 3
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:enchanted_book",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "enchant_randomly"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:record_11",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:record_chirp",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:record_mellohi",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:record_stal",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_sword",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "set_damage",
+							"damage": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_sword",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "enchant_randomly"
+						},
+						{
+							"function": "set_damage",
+							"damage": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_ingot",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:diamond",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 3
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potion",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "set_nbt",
+							"tag": "{Potion:\"minecraft:slow_falling\"}"
+						},
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:experience_bottle",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_helmet",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "enchant_randomly"
+						},
+						{
+							"function": "set_damage",
+							"damage": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_chestplate",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "enchant_randomly"
+						},
+						{
+							"function": "set_damage",
+							"damage": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_leggings",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "enchant_randomly"
+						},
+						{
+							"function": "set_damage",
+							"damage": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_boots",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 1
+						},
+						{
+							"function": "enchant_randomly"
+						},
+						{
+							"function": "set_damage",
+							"damage": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potato",
+					"weight": 7,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 5
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:carrot",
+					"weight": 7,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 6
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:golden_apple",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_data",
+							"data": 0
+						},
+						{
+							"function": "set_count",
+							"count": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 0,
+				"max": 1
+			},
+			"entries": [
+				{
+					"type": "item",
+					"weight": 2,
+					"name": "bs:exp_book_1"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "bs:exp_book_2"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "bs:exp_book_3"
+				},
+				{
+					"type": "item",
+					"weight": 1,
+					"name": "bs:the_great_book_of_experience"
+				}
+			]
+		}
+	]
+}

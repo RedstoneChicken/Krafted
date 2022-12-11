@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:hand_guard_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Hand Guard Pattern\n§7Material Cost: 1§r"
+			},
+			"minecraft:icon": {
+				"texture": "strat_hand guard pattern"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:hand_guard_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

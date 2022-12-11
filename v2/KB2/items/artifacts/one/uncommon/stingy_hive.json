@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:stingy_hive",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "stingy_hive"
+			},
+			"minecraft:display_name": {
+			 "value":  "Stingy Hive\n§2Uncommon\n§7Cooldown: 60\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "stingy_hive",
+				"duration": 60
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "spawn",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "spawn": {
+        "run_command": {
+          "command": [
+          		"playsound conduit.attack @a[r=10]",
+            "summon kna:bee",
+            "summon kna:bee",
+            "summon kna:bee",
+            "execute @s ~~~ particle minecraft:basic_smoke_particle ~~~"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

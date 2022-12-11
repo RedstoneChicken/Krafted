@@ -1,0 +1,34 @@
+//bridge-file-version: #104
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "korbon:piglin_outpost_lanterns_scatter"
+		},
+		"iterations": 12,
+		"project_input_to_floor": true,
+		"coordinate_eval_order": "zyx",
+		"places_feature": "korbon:piglin_lantern_big_decoration",
+		"x": {
+			"extent": [
+				-16,
+				16
+			],
+			"distribution": "inverse_gaussian"
+		},
+		"z": {
+			"extent": [
+				8,
+				16
+			],
+			"distribution": "inverse_gaussian"
+		},
+		"y": {
+			"extent": [
+				0,
+				4
+			],
+			"distribution": "inverse_gaussian"
+		}
+	}
+}

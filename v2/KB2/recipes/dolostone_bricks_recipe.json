@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cav:dolostone_bricks_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:polished_dolostone"
+      }
+    },
+    "result": {
+      "item": "cav:dolostone_bricks",
+      "count": 4
+    }
+  }
+}

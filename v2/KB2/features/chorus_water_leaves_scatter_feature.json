@@ -1,0 +1,33 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "korbon:chorus_water_leaves_scatter_feature"
+		},
+		"iterations": 20,
+		"x": {
+			"distribution": "gaussian",
+			"extent": [
+				-8,
+				8
+			]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [
+				-4,
+				4
+			]
+		},
+		"z": {
+			"distribution": "gaussian",
+			"extent": [
+				-8,
+				8
+			]
+		},
+		"coordinate_eval_order": "zyx",
+		"places_feature": "korbon:chorus_water_leaves_feature"
+	}
+}

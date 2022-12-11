@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:chert_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:chert_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:chert_brick_slab",
+      "count": 2
+    }
+  } 
+}

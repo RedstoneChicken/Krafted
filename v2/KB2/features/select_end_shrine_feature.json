@@ -1,0 +1,23 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "korbon:select_end_shrine_feature"
+		},
+		"features": [
+			[
+				"korbon:velvium_end_shrine_feature",
+				1
+			],
+			[
+				"korbon:chorus_end_shrine_feature",
+				1
+			],
+			[
+				"korbon:phreyium_end_shrine_feature",
+				1
+			]
+		]
+	}
+}

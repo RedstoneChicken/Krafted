@@ -1,0 +1,20 @@
+//bridge-file-version: #21
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:sausage",
+					"weight": 1
+				},
+				{
+					"type": "item",
+					"name": "strat:bacon",
+					"weight": 3
+				}
+			]
+		}
+	]
+}

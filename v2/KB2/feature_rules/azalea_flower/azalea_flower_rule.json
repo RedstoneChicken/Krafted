@@ -1,0 +1,35 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "ff:azalea_flower_rule",
+			"places_feature": "ff:azalea_flower/azalea_flower_snap_to_surface"
+		},
+
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag",
+          "value": "lush_caves"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 1000,
+      "x": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [-64, 256]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "nether:brimstone_scatter_feature"
+		},
+		"iterations": 20,
+		"x": {
+			"extent": [
+				0,
+				16
+			],
+			"distribution": "gaussian"
+		},
+		"z": {
+			"extent": [
+				0,
+				16
+			],
+			"distribution": "gaussian"
+		},
+		"y": {
+			"extent": [
+				31,
+				35
+			],
+			"distribution": "uniform"
+		},
+		"places_feature": "nether:brimstone_single_block_feature"
+	}
+}

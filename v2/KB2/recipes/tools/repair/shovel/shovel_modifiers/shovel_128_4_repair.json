@@ -1,0 +1,28 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:shovel_128_4_repair"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:shovel_128_4",
+				"count": 1
+			},
+			{
+				"item": "strat:manyullyn_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:shovel_128_4",
+				"count": 1
+			}
+		]
+	}
+}

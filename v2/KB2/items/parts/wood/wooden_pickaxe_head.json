@@ -1,0 +1,21 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:wooden_pickaxe_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Wooden Pickaxe Head"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_wooden pickaxe head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

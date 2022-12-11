@@ -1,0 +1,205 @@
+{
+ "tiers": [
+  {
+   "groups": [
+    {
+     "num_to_select": 2,
+     "trades": [
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:coal_block",
+         "quantity": 1
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:sock_of_candies_4"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:charcoal",
+         "quantity": 7
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:sock_of_candies_3"
+        }
+       ]
+      },
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "minecraft:coal",
+         "quantity": 4
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:sock_of_candies_2"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:coal",
+         "quantity": 12
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:sock_of_candies_4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num_to_select": 1,
+     "trades": [
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:coal",
+         "quantity": 25
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:name_tag"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:wood",
+         "quantity": 10
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:name_tag"
+        }
+       ]
+      },
+            {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:charcoal",
+         "quantity": 15
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:name_tag"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num_to_select": 1,
+     "trades": [
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:diamond_block",
+         "quantity": 2
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:chill_blade"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:gold_block",
+         "quantity": 4
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:chill_blade"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:wool",
+         "quantity": 30
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:spear"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "kna:solar_glass",
+         "quantity": 1
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:spear"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:villager_spawn_egg",
+         "quantity": 3
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:boomerang"
+        }
+       ]
+      },
+          {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:totem",
+         "quantity": 1
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:boomerang"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}  

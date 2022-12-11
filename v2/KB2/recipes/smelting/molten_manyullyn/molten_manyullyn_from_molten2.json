@@ -1,0 +1,36 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_manyullyn_from_molten2"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			" v",
+			" V"
+		],
+		"key": {
+			"V": {
+				"item": "strat:molten_ardite_bucket"
+			},
+			"v": {
+				"item": "strat:molten_cobalt_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_manyullyn_bucket",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"data": 0,
+				"count": 1
+			}
+		],
+		"priority": 2
+	}
+}

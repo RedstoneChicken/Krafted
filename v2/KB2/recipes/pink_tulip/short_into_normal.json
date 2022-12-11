@@ -1,0 +1,21 @@
+{
+    "format_version": 1.12,
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "ff:short_pink_tulip_into_normal_pink_tulip"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "ff:pink_tulip_short_item"
+            }
+        ],
+        "result": {
+            "item": "minecraft:red_flower",
+            "data": 7,
+            "count": 2
+        }
+    }
+}

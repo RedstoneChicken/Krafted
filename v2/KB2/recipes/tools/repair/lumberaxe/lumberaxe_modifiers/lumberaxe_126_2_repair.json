@@ -1,0 +1,28 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:lumberaxe_126_2_repair"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"ingredients": [
+			{
+				"item": "strat:lumberaxe_126_2",
+				"count": 1
+			},
+			{
+				"item": "strat:cobalt_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:lumberaxe_126_2",
+				"count": 1
+			}
+		]
+	}
+}

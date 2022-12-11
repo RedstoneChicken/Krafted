@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "kna:blast_crystal"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "/_/",
+      "_#_",
+      "/_/"
+    ],
+    "key": {
+      "/": {
+        "item": "minecraft:glass"
+      },
+      "_": {
+        "item": "minecraft:end_crystal"
+      },
+      "#": {
+        "item": "minecraft:gold_block"
+      }
+    },
+    "result": {
+      "item": "kna:blast_crystal",
+      "count": 1
+    }
+  }
+}

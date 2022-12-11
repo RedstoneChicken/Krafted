@@ -1,0 +1,60 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:molten_brimstone"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:explosion_resistance": 2,
+			"minecraft:destroy_time": 2,
+			"minecraft:flammable": {
+				"flame_odds": 0,
+				"burn_odds": 0
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:on_placed": {
+				"condition": "query.block_neighbor_has_any_tag(0,1,0,'water')",
+				"event": "placed",
+				"target": "self"
+			}
+		},
+		"events": {
+			"placed": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "nether:brimstone"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:knockback_roar_particle ~ ~ ~"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound lavahiss @p"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

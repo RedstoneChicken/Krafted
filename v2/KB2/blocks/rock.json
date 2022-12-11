@@ -1,0 +1,217 @@
+//bridge-file-version: #57
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:rock",
+			"properties": {
+				"rns:type": [
+					0,
+					1,
+					2
+				],
+				"rns:snow": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.rock",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "rns_rock"
+				}
+			},
+			"minecraft:destroy_time": 0.5,
+			"minecraft:explosion_resistance": 30,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#201E1C",
+			"minecraft:pick_collision": {
+				"size": [
+					16,
+					4,
+					16
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "nature"
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:loot": "loot_tables/pebble.json",
+			"minecraft:on_placed": {
+				"event": "rns:random"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0,
+					0
+				],
+				"on_tick": {
+					"event": "rns:snow"
+				}
+			}
+		},
+		"events": {
+			"rns:random": {
+				"randomize": [
+					{
+						"set_block_property": {
+							"rns:type": 1
+						}
+					},
+					{
+						"set_block_property": {
+							"rns:type": 2
+						}
+					},
+					{
+						"set_block_property": {
+							"rns:type": 0
+						}
+					}
+				]
+			},
+			"rns:snow": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,1,0,'snow')",
+						"set_block_property": {
+							"rns:snow": 1
+						},
+						"run_command": {
+							"command": [
+								"fill ~ ~1 ~ ~ ~1 ~ air 0 replace snow_layer"
+							]
+						}
+					}
+				]
+			},
+			"rns:snow2": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,1,0,'snow')",
+						"set_block_property": {
+							"rns:snow": 2
+						},
+						"run_command": {
+							"command": [
+								"fill ~ ~1 ~ ~ ~1 ~ air 0 replace snow_layer"
+							]
+						}
+					}
+				]
+			},
+			"rns:snow3": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,1,0,'snow')",
+						"set_block_property": {
+							"rns:snow": 3
+						},
+						"run_command": {
+							"command": [
+								"fill ~ ~1 ~ ~ ~1 ~ air 0 replace snow_layer"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('rns:type') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_rock2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.rock2",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "rns:snow2"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('rns:type') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_rock3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.rock3",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [
+							0,
+							0
+						],
+						"on_tick": {
+							"event": "rns:snow3"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('rns:snow') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_snowrock",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.rock"
+				}
+			},
+			{
+				"condition": "query.block_property('rns:snow') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_snowrock2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.rock2"
+				}
+			},
+			{
+				"condition": "query.block_property('rns:snow') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_snowrock3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.rock3"
+				}
+			}
+		]
+	}
+}

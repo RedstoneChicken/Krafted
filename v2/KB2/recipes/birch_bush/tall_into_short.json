@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_birch_bush_into_short_birch_bush"},"tags":["crafting_table"],"ingredients":[{"item":"ff:birch_bush_tall_item"}],"result":{"item":"ff:birch_bush_item","count":2}}}

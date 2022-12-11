@@ -1,0 +1,35 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:wooden_hammer_head"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:hammer_head_pattern"
+			},
+			"~": {
+				"item": "minecraft:planks"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:wooden_hammer_head",
+				"count": 1
+			},
+			{
+				"item": "strat:hammer_head_pattern",
+				"count": 1
+			}
+		]
+	}
+}

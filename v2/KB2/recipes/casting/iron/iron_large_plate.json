@@ -1,0 +1,39 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:iron_large_plate"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:large_plate_cast"
+			},
+			"~": {
+				"item": "strat:molten_iron_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:iron_large_plate",
+				"count": 1
+			},
+			{
+				"item": "strat:large_plate_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 8
+			}
+		]
+	}
+}

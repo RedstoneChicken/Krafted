@@ -1,0 +1,182 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:mica_ore_feature"
+    },
+    "count": 10,
+    "replace_rules": [
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "stone"
+            }
+          }
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "diorite"
+            }
+          }
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "granite"
+            }
+          }
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "andesite"
+            }
+          }
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:amphibolite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:chert"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:dacite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:diabase"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:dolostone"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:gabbro"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:gneiss"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:hornfels"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:limestone"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:marble"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:mariposite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:mudstone"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:novaculite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:pegmatite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:phyllite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:rhyolite"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:schist"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:shale"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "cav:siltstone"
+        ]
+      },
+      {
+        "places_block": "cav:mica_ore",
+        "may_replace": [
+          "minecraft:tuff"
+        ]
+      },
+      {
+        "places_block": "cav:deepslate_mica_ore",
+        "may_replace": [
+          "minecraft:deepslate"
+        ]
+      }
+    ]
+  }
+}
+

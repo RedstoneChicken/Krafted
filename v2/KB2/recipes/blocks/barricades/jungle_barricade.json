@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:jungle_barricade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:log",
+				"data": 3
+			}
+		},
+		"result": [
+			{
+				"item": "strat:jungle_barricade",
+				"count": 4
+			}
+		]
+	}
+}

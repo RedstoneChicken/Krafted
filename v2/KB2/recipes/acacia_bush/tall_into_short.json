@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_acacia_bush_into_short_acacia_bush"},"tags":["crafting_table"],"ingredients":[{"item":"ff:acacia_bush_tall_item"}],"result":{"item":"ff:acacia_bush_item","count":2}}}

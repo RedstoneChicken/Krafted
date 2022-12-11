@@ -1,0 +1,35 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:cleaver_1"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			"  #",
+			" o~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:wooden_large_sword_blade"
+			},
+			"~": {
+				"item": "strat:wooden_large_plate"
+			},
+			"o": {
+				"item": "strat:wooden_tough_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:cleaver_1",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

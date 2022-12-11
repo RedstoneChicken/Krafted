@@ -1,0 +1,192 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:banana_crop",
+			"properties": {
+				"strat:growth_stage": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.strat_crop",
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "grow_stage"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:map_color": "#1EB809",
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"down"
+						],
+						"block_filter": [
+							"minecraft:leaves",
+							"minecraft:leaves2"
+						]
+					}
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:loot": "loot_tables/banana_crop.json"
+		},
+		"events": {
+			"bone_meal": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:growth_stage') < 2",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~",
+								"playsound item.bone_meal.use @a ~~~"
+							]
+						},
+						"trigger": {
+							"event": "grow_stage_2"
+						}
+					}
+				]
+			},
+			"grow_stage": {
+				"randomize": [
+					{
+						"weight": 2
+					},
+					{
+						"weight": 1,
+						"set_block_property": {
+							"strat:growth_stage": "(query.block_property('strat:growth_stage')<3) ? query.block_property('strat:growth_stage') + 1 : 2"
+						}
+					}
+				]
+			},
+			"grow_stage_2": {
+				"randomize": [
+					{
+						"weight": 1
+					},
+					{
+						"weight": 3,
+						"set_block_property": {
+							"strat:growth_stage": "(query.block_property('strat:growth_stage')<3) ? query.block_property('strat:growth_stage') + 1 : 2"
+						}
+					}
+				]
+			},
+			"do_nothing": {},
+			"final_stage": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"strat:growth_stage": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/banana_crop_2.json"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:growth_stage') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_banana_crop_0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/banana_crop.json",
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_banana_crop_1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/banana_crop.json",
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							6,
+							-8
+						],
+						"size": [
+							16,
+							10,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_banana_crop_2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/banana_crop_2.json",
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							4,
+							-8
+						],
+						"size": [
+							16,
+							12,
+							16
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "final_stage"
+					}
+				}
+			}
+		]
+	}
+}

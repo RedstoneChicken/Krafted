@@ -1,0 +1,29 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:mashed_potato",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 1.6,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_mashed potato"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,358 @@
+{
+	"format_version" : "1.16.0",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:elder_guardian",
+			"is_spawnable" : true,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"elite_elder_guardian" : {
+				"minecraft:health" : {
+					"value" : 95,
+					"max" : 95
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/elite_elder_guardian.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "55"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 10
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Armoured Elder Guardian The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Unseen Elder Guardian Of Stalking"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_elder_guardian" : {
+				"minecraft:health" : {
+					"value" : 110,
+					"max" : 110
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/ultra_elder_guardian.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "70"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 15
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Defensive Elder Guardian Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Stalking Elder Guardian The Unseen"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_elder_guardian" : {
+				"minecraft:health" : {
+					"value" : 110,
+					"max" : 110
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/infernal_elder_guardian.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "85"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 20
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Turtling Elder Guardian Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Hunting Elder Guardian The Predator"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:experience_reward" : {
+				"on_death" : "query.last_hit_by_player ? 10 : 0"
+			},
+			"minecraft:collision_box" : {
+				"width" : 1.99,
+				"height" : 1.99
+			},
+			"minecraft:nameable" : {},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/elder_guardian.json"
+			},
+			"minecraft:navigation.generic" : {
+				"is_amphibious" : true,
+				"can_path_over_water" : false,
+				"can_swim" : true,
+				"can_walk" : false,
+				"can_breach" : true
+			},
+			"minecraft:movement.sway" : {},
+			"minecraft:jump.static" : {},
+			"minecraft:health" : {
+				"value" : 80,
+				"max" : 80
+			},
+			"minecraft:hurt_on_condition" : {
+				"damage_conditions" : [
+					{
+						"filters" : {
+							"test" : "in_lava",
+							"subject" : "self",
+							"operator" : "==",
+							"value" : true
+						},
+						"cause" : "lava",
+						"damage_per_tick" : 4
+					}
+				]
+			},
+			"minecraft:movement" : {
+				"value" : 0.3
+			},
+			"minecraft:underwater_movement" : {
+				"value" : 0.3
+			},
+			"minecraft:attack" : {
+				"damage" : 5
+			},
+			"minecraft:follow_range" : {
+				"value" : 16,
+				"max" : 16
+			},
+			"minecraft:breathable" : {
+				"breathes_water" : true
+			},
+			"minecraft:home" : {
+				"restriction_radius" : 16
+			},
+			"minecraft:behavior.nearest_attackable_target" : {
+				"priority" : 1,
+				"entity_types" : [
+					{
+						"filters" : {
+							"any_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "player"
+								},
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "squid"
+								},
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "axolotl"
+								}
+							]
+						},
+						"max_dist" : 16
+					}
+				],
+				"attack_interval_min" : 1.0,
+				"must_see" : true
+			},
+			"minecraft:behavior.guardian_attack" : {
+				"priority" : 4
+			},
+			"minecraft:behavior.move_towards_home_restriction" : {
+				"priority" : 5,
+				"speed_multiplier" : 1.0
+			},
+			"minecraft:behavior.random_swim" : {
+				"priority" : 7,
+				"speed_multiplier" : 0.5,
+				"avoid_surface" : false
+			},
+			"minecraft:behavior.look_at_player" : {
+				"priority" : 8,
+				"look_distance" : 12.0,
+				"probability" : 0.01
+			},
+			"minecraft:behavior.random_look_around" : {
+				"priority" : 9
+			},
+			"minecraft:type_family" : {
+				"family" : [ "guardian_elder", "monster", "mob" ]
+			},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 9500,
+						"remove" : {},
+						"add" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_elder_guardian", "elite_bullwark" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_elder_guardian", "elite_cloaking" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_elder_guardian", "ultra_bullwark" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_elder_guardian", "ultra_cloaking" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_elder_guardian", "infernal_bullwark" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"add" : {
+							"component_groups" : [ "infernal_elder_guardian", "infernal_cloaking" ]
+						}
+					}
+				]
+			}
+		}
+	}
+}

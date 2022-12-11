@@ -1,0 +1,35 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:travelers_goggles"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~ ~",
+			"O~O",
+			"# #"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:copper_ingot"
+			},
+			"~": {
+				"item": "minecraft:leather"
+			},
+			"O": {
+				"item": "minecraft:glass_pane"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:travelers_goggles",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

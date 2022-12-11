@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:polished_pegmatite_stonecutter"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:pegmatite"
+      }
+    ],
+    "result": {
+      "item": "cav:polished_pegmatite",
+      "count": 1
+    }
+  }  
+}

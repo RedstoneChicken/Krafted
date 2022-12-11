@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:iron_hook",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "iron_hook",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

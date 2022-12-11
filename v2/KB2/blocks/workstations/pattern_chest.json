@@ -1,0 +1,231 @@
+//bridge-file-version: #0
+{
+	"minecraft:block": {
+		"description": {
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:storage": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:storage2": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				]
+			},
+			"identifier": "strat:pattern_chest"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.cast_chest",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "pattern_chest",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:block_light_filter": 0,
+			"minecraft:map_color": "#6D2B15",
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"minecraft:on_interact": {
+				"event": "strat:store"
+			},
+			"tag:wood": {}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"strat:store": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:storage') < 14 && query.get_equipped_item_name('main_hand') == 'blank_pattern'",
+						"set_block_property": {
+							"strat:storage": "query.block_property('strat:storage') + 1"
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.block_property('strat:storage') == 14 && query.get_equipped_item_name('main_hand') == 'blank_pattern'",
+						"set_block_property": {
+							"strat:storage": "query.block_property('strat:storage') + 1",
+							"strat:storage2": "query.block_property('strat:storage2') + 1"
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "(query.block_property('strat:storage2') > 0 && query.block_property('strat:storage2') < 13) && query.get_equipped_item_name('main_hand') == 'blank_pattern'",
+						"set_block_property": {
+							"strat:storage2": "query.block_property('strat:storage2') + 1"
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "(query.block_property('strat:storage') > 0 && query.block_property('strat:storage') < 15) && query.is_sneaking == 1.0",
+						"spawn_loot": {
+							"table": "loot_tables/patterns/random_pattern.json"
+						},
+						"set_block_property": {
+							"strat:storage": "query.block_property('strat:storage') - 1"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:storage2') == 1 && query.is_sneaking == 1.0",
+						"spawn_loot": {
+							"table": "loot_tables/patterns/random_pattern.json"
+						},
+						"set_block_property": {
+							"strat:storage": "query.block_property('strat:storage') - 1",
+							"strat:storage2": "query.block_property('strat:storage2') - 1"
+						}
+					},
+					{
+						"condition": "(query.block_property('strat:storage2') > 1 && query.block_property('strat:storage2') < 13) && query.is_sneaking == 1.0",
+						"spawn_loot": {
+							"table": "loot_tables/patterns/random_pattern.json"
+						},
+						"set_block_property": {
+							"strat:storage2": "query.block_property('strat:storage2') - 1"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:storage2') == 13 && query.get_equipped_item_name('main_hand') == 'blank_pattern'",
+						"run_command": {
+							"command": [
+								"title @s actionbar Pattern Chest: Full"
+							],
+							"target": "player"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:storage2') == 13 && query.is_sneaking == 1.0",
+						"set_block_property": {
+							"strat:storage": 0,
+							"strat:storage2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/blank_pattern_27.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:storage') == 0 && query.is_sneaking == 1.0",
+						"run_command": {
+							"command": [
+								"title @s actionbar Pattern Chest: Empty"
+							],
+							"target": "player"
+						}
+					}
+				]
+			}
+		}
+	},
+	"format_version": "1.17.0"
+}

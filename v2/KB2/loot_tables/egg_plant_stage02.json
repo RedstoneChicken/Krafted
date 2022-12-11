@@ -1,0 +1,17 @@
+//bridge-file-version: #1
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 2,
+				"max": 2
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "caf:egg_plant_stage01"
+				}
+			]
+		}
+	]
+}

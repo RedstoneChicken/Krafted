@@ -1,0 +1,38 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:crystal_golem",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/crystal_golem_1"
+			},
+			"geometry": {
+				"default": "geometry.crystal_golem"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller",
+					"attack_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.golem.walk",
+				"attack_controller": "controller.animation.golem.attack",
+				"attack": "animation.crystal_golem.attack",
+				"idle": "animation.crystal_golem.idle",
+				"move": "animation.crystal_golem.walk"
+			},
+			"spawn_egg": {
+				"base_color": "#4E370B",
+				"overlay_color": "#BE16BB"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

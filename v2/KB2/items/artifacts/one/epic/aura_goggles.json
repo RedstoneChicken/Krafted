@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:aura_goggles",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "aura_goggles"
+			},
+			"minecraft:display_name": {
+			 "value": "§eAura Goggles (§4Hostile)\n§6Epic\n§7Cooldown: 30\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "aura_goggles",
+				"duration": 30
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "light",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "light": {
+        "run_command": {
+          "command": [
+          	"playsound portal.trigger @a[r=15]",
+            "execute @e[r=15,family=monster] ~~~ particle kna:red_glow ~~~",
+             "execute @e[r=15,family=illager] ~~~ particle kna:red_glow ~~~",
+             "execute @e[r=15,family=monster] ~~~ particle kna:red_glow ~~~",
+             "execute @e[r=15,type=creeper] ~~~ particle kna:red_glow ~~~"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}             

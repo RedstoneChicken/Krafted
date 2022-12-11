@@ -1,0 +1,42 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:two_speed_boots"
+  },
+  "tags": [
+   "crafting_table"
+  ],
+  "pattern": [
+   "AS"
+  ],
+  "key": {
+   "A": {
+    "item": "kna:speed_boots"
+   },
+   "S": {
+    "item": "kna:common_scrap"
+   }
+  },
+  "result": {
+   "item": "kna:speed_boots_two",
+   "count": 1
+  }
+ }
+}
+
+ }
+}
+item": "kna:wither_star",
+   "count": 1
+  }
+ }
+}
+      }
+    },
+    "result": {
+      "item": "kna:wither_star",
+      "count": 1
+    }
+  }
+}

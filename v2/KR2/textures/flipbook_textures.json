@@ -1,0 +1,726 @@
+[
+	{
+		"flipbook_texture": "textures/blocks/firewood",
+		"atlas_tile": "firewood",
+		"ticks_per_frame": 5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/blocks/table/part_builder_firewood",
+		"atlas_tile": "part_builder_firewood",
+		"ticks_per_frame": 5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/blocks/table/part_builder_crimson",
+		"atlas_tile": "part_builder_crimson",
+		"ticks_per_frame": 15
+	},
+	{
+		"flipbook_texture": "textures/blocks/table/part_builder_warped",
+		"atlas_tile": "part_builder_warped",
+		"ticks_per_frame": 15
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_lava_25",
+		"atlas_tile": "seared_tank_lava_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_lava_50",
+		"atlas_tile": "seared_tank_lava_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_lava_75",
+		"atlas_tile": "seared_tank_lava_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_lava_100",
+		"atlas_tile": "seared_tank_lava_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_lava_25",
+		"atlas_tile": "seared_gauge_lava_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_lava_50",
+		"atlas_tile": "seared_gauge_lava_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_lava_75",
+		"atlas_tile": "seared_gauge_lava_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_lava_100",
+		"atlas_tile": "seared_gauge_lava_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_iron_25",
+		"atlas_tile": "seared_tank_iron_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_iron_50",
+		"atlas_tile": "seared_tank_iron_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_iron_75",
+		"atlas_tile": "seared_tank_iron_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_iron_100",
+		"atlas_tile": "seared_tank_iron_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_iron_25",
+		"atlas_tile": "seared_gauge_iron_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_iron_50",
+		"atlas_tile": "seared_gauge_iron_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_iron_75",
+		"atlas_tile": "seared_gauge_iron_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_iron_100",
+		"atlas_tile": "seared_gauge_iron_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_iron1",
+		"atlas_tile": "seared_melter_iron1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_iron3",
+		"atlas_tile": "seared_melter_iron3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_gold_25",
+		"atlas_tile": "seared_tank_gold_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_gold_50",
+		"atlas_tile": "seared_tank_gold_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_gold_75",
+		"atlas_tile": "seared_tank_gold_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_gold_100",
+		"atlas_tile": "seared_tank_gold_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_gold_25",
+		"atlas_tile": "seared_gauge_gold_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_gold_50",
+		"atlas_tile": "seared_gauge_gold_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_gold_75",
+		"atlas_tile": "seared_gauge_gold_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_gold_100",
+		"atlas_tile": "seared_gauge_gold_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_gold1",
+		"atlas_tile": "seared_melter_gold1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_gold3",
+		"atlas_tile": "seared_melter_gold3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_copper_25",
+		"atlas_tile": "seared_tank_copper_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_copper_50",
+		"atlas_tile": "seared_tank_copper_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_copper_75",
+		"atlas_tile": "seared_tank_copper_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_copper_100",
+		"atlas_tile": "seared_tank_copper_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_copper_25",
+		"atlas_tile": "seared_gauge_copper_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_copper_50",
+		"atlas_tile": "seared_gauge_copper_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_copper_75",
+		"atlas_tile": "seared_gauge_copper_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_copper_100",
+		"atlas_tile": "seared_gauge_copper_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_copper1",
+		"atlas_tile": "seared_melter_copper1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_copper3",
+		"atlas_tile": "seared_melter_copper3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_cobalt_25",
+		"atlas_tile": "seared_tank_cobalt_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_cobalt_50",
+		"atlas_tile": "seared_tank_cobalt_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_cobalt_75",
+		"atlas_tile": "seared_tank_cobalt_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_cobalt_100",
+		"atlas_tile": "seared_tank_cobalt_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_cobalt_25",
+		"atlas_tile": "seared_gauge_cobalt_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_cobalt_50",
+		"atlas_tile": "seared_gauge_cobalt_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_cobalt_75",
+		"atlas_tile": "seared_gauge_cobalt_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_cobalt_100",
+		"atlas_tile": "seared_gauge_cobalt_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_cobalt1",
+		"atlas_tile": "seared_melter_cobalt1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_cobalt3",
+		"atlas_tile": "seared_melter_cobalt3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_ardite_25",
+		"atlas_tile": "seared_tank_ardite_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_ardite_50",
+		"atlas_tile": "seared_tank_ardite_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_ardite_75",
+		"atlas_tile": "seared_tank_ardite_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_ardite_100",
+		"atlas_tile": "seared_tank_ardite_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_ardite_25",
+		"atlas_tile": "seared_gauge_ardite_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_ardite_50",
+		"atlas_tile": "seared_gauge_ardite_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_ardite_75",
+		"atlas_tile": "seared_gauge_ardite_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_ardite_100",
+		"atlas_tile": "seared_gauge_ardite_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_ardite1",
+		"atlas_tile": "seared_melter_ardite1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_ardite3",
+		"atlas_tile": "seared_melter_ardite3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_manyullyn_25",
+		"atlas_tile": "seared_tank_manyullyn_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_manyullyn_50",
+		"atlas_tile": "seared_tank_manyullyn_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_manyullyn_75",
+		"atlas_tile": "seared_tank_manyullyn_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_manyullyn_100",
+		"atlas_tile": "seared_tank_manyullyn_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_manyullyn_25",
+		"atlas_tile": "seared_gauge_manyullyn_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_manyullyn_50",
+		"atlas_tile": "seared_gauge_manyullyn_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_manyullyn_75",
+		"atlas_tile": "seared_gauge_manyullyn_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_manyullyn_100",
+		"atlas_tile": "seared_gauge_manyullyn_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_manyullyn1",
+		"atlas_tile": "seared_melter_manyullyn1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_manyullyn3",
+		"atlas_tile": "seared_melter_manyullyn3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_obsidian_25",
+		"atlas_tile": "seared_tank_obsidian_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_obsidian_50",
+		"atlas_tile": "seared_tank_obsidian_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_obsidian_75",
+		"atlas_tile": "seared_tank_obsidian_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_obsidian_100",
+		"atlas_tile": "seared_tank_obsidian_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_obsidian_25",
+		"atlas_tile": "seared_gauge_obsidian_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_obsidian_50",
+		"atlas_tile": "seared_gauge_obsidian_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_obsidian_75",
+		"atlas_tile": "seared_gauge_obsidian_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_obsidian_100",
+		"atlas_tile": "seared_gauge_obsidian_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_obsidian1",
+		"atlas_tile": "seared_melter_obsidian1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_obsidian3",
+		"atlas_tile": "seared_melter_obsidian3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_glass_25",
+		"atlas_tile": "seared_tank_glass_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_glass_50",
+		"atlas_tile": "seared_tank_glass_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_glass_75",
+		"atlas_tile": "seared_tank_glass_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_glass_100",
+		"atlas_tile": "seared_tank_glass_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_glass_25",
+		"atlas_tile": "seared_gauge_glass_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_glass_50",
+		"atlas_tile": "seared_gauge_glass_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_glass_75",
+		"atlas_tile": "seared_gauge_glass_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_glass_100",
+		"atlas_tile": "seared_gauge_glass_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_glass1",
+		"atlas_tile": "seared_melter_glass1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_glass3",
+		"atlas_tile": "seared_melter_glass3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_seared_25",
+		"atlas_tile": "seared_tank_seared_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_seared_50",
+		"atlas_tile": "seared_tank_seared_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_seared_75",
+		"atlas_tile": "seared_tank_seared_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_tank/seared_tank_seared_100",
+		"atlas_tile": "seared_tank_seared_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_seared_25",
+		"atlas_tile": "seared_gauge_seared_25",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_seared_50",
+		"atlas_tile": "seared_gauge_seared_50",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_seared_75",
+		"atlas_tile": "seared_gauge_seared_75",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_gauge/seared_gauge_seared_100",
+		"atlas_tile": "seared_gauge_seared_100",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_seared1",
+		"atlas_tile": "seared_melter_seared1",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/seared_melter/seared_melter_seared3",
+		"atlas_tile": "seared_melter_seared3",
+		"ticks_per_frame": 10,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/phreyium_stem",
+		"atlas_tile": "phreyium_stem",
+		"ticks_per_frame": 15,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/void_liquid",
+		"atlas_tile": "void_liquid",
+		"ticks_per_frame": 12,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/corrupted_block",
+		"atlas_tile": "corrupted_block",
+		"ticks_per_frame": 15
+	},
+	{
+		"flipbook_texture": "textures/blocks/corrupted_plant_animation",
+		"atlas_tile": "corrupted_plant",
+		"ticks_per_frame": 3,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/blocks/crystal",
+		"atlas_tile": "crystal",
+		"ticks_per_frame": 35
+	},
+	{
+		"flipbook_texture": "textures/blocks/crystal_nylium",
+		"atlas_tile": "crystal_nylium",
+		"ticks_per_frame": 30
+	},
+	{
+		"flipbook_texture": "textures/blocks/crystal_nylium_side",
+		"atlas_tile": "cystal_nylium_side",
+		"ticks_per_frame": 30
+	},
+	{
+		"flipbook_texture": "textures/blocks/crystal_fungus_cap",
+		"atlas_tile": "crystal_mushroom_cap",
+		"ticks_per_frame": 30
+	},
+	{
+		"flipbook_texture": "textures/blocks/crystal_fungus",
+		"atlas_tile": "crystal_fungus",
+		"ticks_per_frame": 35
+	},
+	{
+		"flipbook_texture": "textures/blocks/end_campfire",
+		"atlas_tile": "end_campfire",
+		"ticks_per_frame": 5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/blocks/crystal_planks",
+		"atlas_tile": "crystal_planks",
+		"ticks_per_frame": 60
+	},
+	{
+		"flipbook_texture": "textures/blocks/lava_brimstone",
+		"atlas_tile": "molten_brimstone",
+		"ticks_per_frame": 20
+	},
+	{
+		"flipbook_texture": "textures/blocks/scorched_magma_nether_brick",
+		"atlas_tile": "scorched_magma_nether_brick",
+		"ticks_per_frame": 20
+	},
+	{
+		"flipbook_texture": "textures/blocks/marouge_stem_side",
+		"atlas_tile": "marouge_stem",
+		"ticks_per_frame": 10
+	},
+	{
+		"flipbook_texture": "textures/blocks/soul_stem_side",
+		"atlas_tile": "soul_stem_side",
+		"ticks_per_frame": 10
+	},
+	{
+		"flipbook_texture": "textures/blocks/soulshroom_block",
+		"atlas_tile": "soulshroom_block",
+		"ticks_per_frame": 10,
+		"blend_frames": false
+	},
+  {
+    "flipbook_texture": "textures/blocks/soul_magma",
+    "atlas_tile": "soul_magma",
+    "ticks_per_frame": 10,
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/crooked/crooked_stem_side",
+    "atlas_tile": "crooked_stem_side",
+    "ticks_per_frame": 15
+  },
+  {
+		"flipbook_texture": "textures/blocks/mysterious_mushroom",
+		"atlas_tile": "mysterious_mushroom",
+		"ticks_per_frame": 15,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/sawmill",
+		"atlas_tile": "sawmill",
+		"ticks_per_frame": 1,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/blocks/jukebox_extended",
+		"atlas_tile": "jukebox_extended",
+		"ticks_per_frame": 5,
+		"blend_frames": true
+	}
+]

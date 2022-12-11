@@ -1,0 +1,59 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:filling_bundle",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "filling_bundle"
+			},
+			"minecraft:display_name": {
+			 "value":  "Filling Bundle\n§8Common\n§7Cooldown: 20\nLevel: 1\nRadius : 20"
+			 },
+			"minecraft:cooldown": {
+				"category": "filling_bundle",
+				"duration": 20
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "use": {
+        "run_command": {
+          "command": [
+          		"playsound random.toast @a[r=20]",
+          "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+          "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+          "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+          "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+          "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+           "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+           "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+           "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+           "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+           "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+          "execute @s ~~~ tp @e[type=item,r=20] ^^^0.1 facing @s",
+            "execute @s ~~~ tp @e[type=item,r=20] ~~~"
+             
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

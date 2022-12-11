@@ -1,0 +1,39 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:glow"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.glow",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "glow",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:block_light_emission": 1,
+			"minecraft:block_light_filter": 0,
+			"minecraft:loot": "loot_tables/glowball.json",
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {}
+	}
+}

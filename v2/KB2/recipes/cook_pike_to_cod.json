@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook_pike_to_cod"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "adv:pike",
+    "output": {
+      "item": "minecraft:cooked_fish",
+      "count": 3
+    }
+  }
+}

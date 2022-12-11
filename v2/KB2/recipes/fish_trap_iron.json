@@ -1,0 +1,24 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "iron_fish_trap"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ "CBC", "BAB", "CBC" ],
+		"key" : {
+			"A" : {
+				"item" : "azc:wooden_fish_trap"
+			},
+			"B" : {
+				"item" : "minecraft:iron_nugget"
+			},
+			"C" : {
+				"item" : "minecraft:iron_ingot"
+			}
+		},
+		"result" : {
+			"item" : "azc:iron_fish_trap"
+		}
+	}
+}

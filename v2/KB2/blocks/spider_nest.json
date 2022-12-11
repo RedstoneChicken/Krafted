@@ -1,0 +1,77 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:spider_nest"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.spider_nest",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "spider_nest",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:friction": 0.3,
+			"minecraft:unwalkable": true,
+			"minecraft:ticking": {
+				"range": [
+					400,
+					1000
+				],
+				"on_tick": {
+					"event": "spider_spawn",
+					"target": "self"
+				}
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "spider_spawn",
+				"target": "self"
+			},
+			"minecraft:on_interact": {
+				"event": "spider_spawn",
+				"target": "self"
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-2.5,
+					0,
+					-3
+				],
+				"size": [
+					5,
+					9,
+					6
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-2.5,
+					0,
+					-3
+				],
+				"size": [
+					5,
+					9,
+					6
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/spider_nest.json"
+		},
+		"events": {
+			"spider_spawn": {
+				"run_command": {
+					"command": [
+						"summon korbon:baby_spider ~~~",
+						"summon korbon:baby_spider ~~~",
+						"summon korbon:baby_spider ~~~",
+						"fill ~~~ ~~~ air"
+					]
+				}
+			}
+		}
+	}
+}

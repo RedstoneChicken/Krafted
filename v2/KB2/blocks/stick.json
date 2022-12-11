@@ -1,0 +1,134 @@
+//bridge-file-version: #29
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:sticks",
+			"properties": {
+				"rns:first": [
+					0,
+					1
+				],
+				"rns:second": [
+					0,
+					1
+				],
+				"rns:third": [
+					0,
+					1
+				],
+				"rns:fourth": [
+					0,
+					1
+				],
+				"rns:addstick": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.stick2",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_stick",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 0.1,
+			"minecraft:explosion_resistance": 30,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#302513",
+			"minecraft:pick_collision": {
+				"size": [
+					16,
+					4,
+					16
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "nature"
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:part_visibility": {
+				"rules": {
+					"first": "q.block_property('rns:first') == 0",
+					"second": "q.block_property('rns:second') == 1",
+					"third": "q.block_property('rns:third') == 1",
+					"fourth": "q.block_property('rns:fourth') == 1"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "rns:addstick",
+				"condition": "query.get_equipped_item_name == 'stick'"
+			},
+			"minecraft:loot": "loot_tables/stick.json"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('rns:addstick') == 1",
+				"components": {
+					"minecraft:part_visibility": {
+						"rules": {
+							"first": "q.block_property('rns:first') == 0",
+							"second": "q.block_property('rns:second') == 0",
+							"third": "q.block_property('rns:third') == 1",
+							"fourth": "q.block_property('rns:fourth') == 1"
+						}
+					},
+					"minecraft:loot": "loot_tables/stick2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('rns:addstick') == 2",
+				"components": {
+					"minecraft:part_visibility": {
+						"rules": {
+							"first": "q.block_property('rns:first') == 0",
+							"second": "q.block_property('rns:second') == 0",
+							"third": "q.block_property('rns:third') == 0",
+							"fourth": "q.block_property('rns:fourth') == 1"
+						}
+					},
+					"minecraft:loot": "loot_tables/stick3.json"
+				}
+			},
+			{
+				"condition": "query.block_property('rns:addstick') == 3",
+				"components": {
+					"minecraft:part_visibility": {
+						"rules": {
+							"first": "q.block_property('rns:first') == 0",
+							"second": "q.block_property('rns:second') == 0",
+							"third": "q.block_property('rns:third') == 0",
+							"fourth": "q.block_property('rns:fourth') == 0"
+						}
+					},
+					"minecraft:loot": "loot_tables/stick4.json"
+				}
+			}
+		],
+		"events": {
+			"rns:addstick": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"rns:addstick": "query.block_property('rns:addstick')+1"
+						}
+					}
+				]
+			}
+		}
+	}
+}

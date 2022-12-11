@@ -1,0 +1,20 @@
+//bridge-file-version: #5
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:toast",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 2
+						}
+					]
+				}
+			]
+		}
+	]
+}

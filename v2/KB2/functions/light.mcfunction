@@ -1,0 +1,1 @@
+execute @a[hasitem={location=slot.armor.head,item=oh:orichalcum_helmet}] ~ ~ ~ execute @a[hasitem={location=slot.armor.chest,item=oh:orichalcum_chestplate}] ~ ~ ~ execute @a[hasitem={location=slot.armor.legs,item=oh:orichalcum_leggings}] ~ ~ ~ execute @a[hasitem={location=slot.armor.feet,item=oh:orichalcum_boots}] ~ ~ ~ fill ~ ~ ~ ~ ~ ~ oh:light_b 0 replace air

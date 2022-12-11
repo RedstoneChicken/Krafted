@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:schist_dropper"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "# #",
+      "#R#"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "#": {
+        "item": "cav:schist"
+      }
+    },
+    "result": {
+      "item": "minecraft:dropper",
+      "data": 3
+    }
+  }
+}

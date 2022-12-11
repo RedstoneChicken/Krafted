@@ -1,0 +1,31 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stencil_table_acacia"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "minecraft:planks",
+				"data": 4
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stencil_table_acacia",
+				"count": 1
+			}
+		]
+	}
+}

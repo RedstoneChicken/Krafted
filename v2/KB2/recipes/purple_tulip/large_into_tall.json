@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_purple_tulip_into_tall_purple_tulip"},"tags":["crafting_table"],"ingredients":[{"item":"ff:purple_tulip_large_item"}],"result":{"item":"ff:purple_tulip_tall_item","count":2}}}

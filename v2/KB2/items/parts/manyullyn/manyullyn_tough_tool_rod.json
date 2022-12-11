@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:manyullyn_tough_tool_rod"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Manyullyn Tough Tool Rod"
+			},
+			"minecraft:icon": {
+				"texture": "manyullyn_tough_tool_rod"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

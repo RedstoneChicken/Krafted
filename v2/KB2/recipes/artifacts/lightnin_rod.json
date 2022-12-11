@@ -1,0 +1,31 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:lightning_rod"
+  },
+  "key": {
+   "A": {
+    "item": "minecraft:copper_block"
+   },
+   "S": {
+    "item": "minecraft:copper_block"
+   },
+   "W": {
+    "item": "minecraft:lightning_rod"
+   }
+  },
+  "pattern": [
+   "A A",
+   " S ",
+   " W "
+  ],
+  "result": {
+   "count": 1,
+   "item": "kna:lightning_rod"
+  },
+  "tags": [
+   "crafting_table"
+  ]
+ }
+}   

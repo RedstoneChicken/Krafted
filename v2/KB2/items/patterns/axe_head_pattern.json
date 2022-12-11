@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:axe_head_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "strat_axe head pattern"
+			},
+			"minecraft:display_name": {
+				"value": "Axe Head Pattern\n§7Material Cost: 2§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:axe_head_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

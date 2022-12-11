@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "neptunium_boots"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "A A",
+      "A A"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:neptunium_ingot"
+      }
+    },
+    "result": {
+      "item": "azc:neptunium_boots"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "§l§6Krafted §r§eRP §r§k||§r§a2§r§k||§r",
+		"description": "Modpack By §cRedstone Chicken§b\n\n§*Having problems?? Contact me from my discord server!\ndsc.gg/rscbuilds",
+		"uuid": "fd406fd5-3c1c-49b8-aaa3-062a4ea1d0aa",
+		"version": [
+			2,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			19,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "7f2935ef-360e-477f-b060-e436f1514cc0",
+			"version": [
+				2,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"version": [
+				2,
+				0,
+				0
+			],
+			"uuid": "1a2f42bd-98d4-4e0d-8e3f-934ab8a0c05e"
+		}
+	]
+}

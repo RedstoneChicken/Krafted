@@ -1,0 +1,55 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "rns:stick3rule",
+			"places_feature": "rns:stick3"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "forest"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "shore"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "stone"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 4,
+			"x": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"z": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz) + 0"
+		}
+	}
+}

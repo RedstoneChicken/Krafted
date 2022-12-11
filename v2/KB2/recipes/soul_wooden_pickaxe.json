@@ -1,0 +1,30 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:soul_wooden_pickaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			" S",
+			" S"
+		],
+		"key": {
+			"P": {
+				"item": "nether:soul_planks"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:wooden_pickaxe"
+			}
+		]
+	}
+}

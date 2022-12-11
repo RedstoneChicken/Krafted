@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:endslate_slab"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"EEE"
+		],
+		"key": {
+			"E": {
+				"item": "end:endslate"
+			}
+		},
+		"result": [
+			{
+				"item": "end:endslate_slab",
+				"count": 6
+			}
+		]
+	}
+}

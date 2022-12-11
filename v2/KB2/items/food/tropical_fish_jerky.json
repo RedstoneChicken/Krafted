@@ -1,0 +1,29 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tropical_fish_jerky",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tropical_fish_jerky"
+			},
+			"minecraft:display_name": {
+				"value": "Tropical Fish Jerky"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,74 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:item",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "unburnable"
+        ]
+      },
+      "animations": {
+        "unburnable": "controller.animation.unburnable"
+      }
+    },
+    "component_groups": {
+      "unburnable": {
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "fire",
+              "deals_damage": false
+            },
+            {
+              "cause": "fire_tick",
+              "deals_damage": false
+            },
+            {
+              "cause": "lava",
+              "deals_damage": false
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_tag",
+                  "operator": "==",
+                  "value": "unburnable"
+                },
+                {
+                  "test": "is_mark_variant",
+                  "operator": "!=",
+                  "value": 1
+                }
+              ]
+            },
+            "event": "unburnable"
+          }
+        ]
+      }
+    },
+    "events": {
+      "unburnable": {
+        "add": {
+          "component_groups": [
+            "unburnable"
+          ]
+        }
+      }
+    }
+  }
+}

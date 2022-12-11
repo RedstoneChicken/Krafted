@@ -1,0 +1,182 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.scorpion.look_at_target": {
+			"loop": true,
+			"bones": {
+				"scorpion": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg0": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg1": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg2": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg3": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg4": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg5": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg6": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"leg7": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				},
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation - this", "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.scorpion.attack": {
+			"loop": true,
+			"animation_length": 0.80,
+			"bones": {
+				"tail": {
+					"rotation": [0, 0, 0]
+				},
+				"bone10": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.20": [-56.25, 0, 0],
+						"0.40": [-92.5, 0, 0],
+						"0.60": [-56.25, 0, 0],
+						"0.80": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.20": [0, 0.05, -7.7],
+						"0.40": [0, 3.3, -12.2],
+						"0.60": [0, 0.05, -7.7],
+						"0.80": [0, 0, 0]
+					}
+				},
+				"bone9": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.38": [7.5, 0, 0],
+						"0.76": [0, 0, 0]
+					}
+				},
+				"bone6": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.38": [-5, 0, 0],
+						"0.76": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.38": [0, -0.1, -1.7],
+						"0.76": [0, 0, 0]
+					}
+				},
+				"bone7": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.40": [-52.5, 0, 0],
+						"0.80": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.40": [0, 5.5, -6.2],
+						"0.80": [0, 0, 0]
+					}
+				},
+				"bone": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.38": [-32.5, 0, 0],
+						"0.76": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.38": [0, 3, -4.9],
+						"0.76": [0, 0, 0]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.38": [7.5, 0, 0],
+						"0.76": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.38": [0, 0, -0.3],
+						"0.76": [0, 0, 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.20": [-20, 0, 0],
+						"0.40": [-40, 0, 0],
+						"0.60": [-20, 0, 0],
+						"0.80": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.20": [0, 0.75, -2.4],
+						"0.40": [0, 1.5, -4.8],
+						"0.60": [0, 0.75, -2.4],
+						"0.80": [0, 0, 0]
+					}
+				},
+				"right_claw": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.26": [0, -20, 0],
+						"0.52": [0, -20, 0],
+						"0.78": [0, 0, 0]
+					}
+				},
+				"left_claw": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.26": [0, 20, 0],
+						"0.52": [0, 20, 0],
+						"0.78": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

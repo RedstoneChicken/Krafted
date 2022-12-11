@@ -1,0 +1,28 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tea",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "max",
+				"using_converts_to": "strat:ceramic_mug",
+				"can_always_eat": true
+			},
+			"minecraft:icon": {
+				"texture": "tea"
+			},
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {}
+	}
+}

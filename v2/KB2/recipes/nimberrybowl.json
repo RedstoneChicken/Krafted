@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "rns:nimberrybowl"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "rns:nimberry",
+				"count": 2
+			},
+			{
+				"item": "minecraft:sweet_berries",
+				"count": 2
+			},
+			{
+				"item": "minecraft:bowl"
+			}
+		],
+		"result": [
+			{
+				"item": "rns:nimberrybowl"
+			}
+		]
+	}
+}

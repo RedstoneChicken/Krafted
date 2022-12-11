@@ -1,0 +1,28 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:sausage_pizza"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:cheese_pizza",
+				"count": 1
+			},
+			{
+				"item": "strat:cooked_sausage",
+				"count": 3
+			}
+		],
+		"result": [
+			{
+				"item": "strat:sausage_pizza",
+				"count": 1
+			}
+		]
+	}
+}

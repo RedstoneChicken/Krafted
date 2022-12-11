@@ -1,0 +1,26 @@
+//bridge-file-version: #29
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:end_ruin_feature"
+		},
+		"features": [
+			"korbon:end_ruin_pillar_10_scatter",
+			"korbon:end_ruin_pillar_9_scatter",
+			"korbon:end_ruin_pillar_8_scatter",
+			"korbon:end_ruin_pillar_7_scatter",
+			"korbon:end_ruin_pillar_6_scatter",
+			"korbon:end_ruin_pillar_5_scatter",
+			"korbon:end_ruin_pillar_4_scatter",
+			"korbon:end_ruin_pillar_3_scatter",
+			"korbon:end_ruin_pillar_2_scatter",
+			"korbon:end_ruin_pillar_1_scatter",
+			"korbon:end_ruin_banner_scatter",
+			"korbon:end_ruin_rod_scatter",
+			"korbon:end_ruin_window_1_scatter",
+			"korbon:end_ruin_window_2_scatter"
+		],
+		"early_out": "first_failure"
+	}
+}

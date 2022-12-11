@@ -1,0 +1,120 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:abandoned_house_1_feature_rule",
+			"places_feature": "minecraft:abandoned_house_1_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "lakes"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "ocean"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "river"
+						},
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pine_normal"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pine_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "highland"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pendula"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "autumn_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "azalea_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "coniferous"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "dandelion_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "deciduous"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "jacaranda"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "maple_woods"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "redwood"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "tall_roofed"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.05,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+			"z": 0
+		}
+	}
+}

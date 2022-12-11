@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:flint_tool_rod"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Flint Tool Rod"
+			},
+			"minecraft:icon": {
+				"texture": "strat_flint tool rod"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

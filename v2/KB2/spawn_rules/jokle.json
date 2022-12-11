@@ -1,0 +1,30 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "korbon:jokle",
+			"population_control": "animal"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:spawns_underwater": {},
+				"minecraft:weight": {
+					"default": 10
+				},
+				"minecraft:herd": {
+					"min_size": 4,
+					"max_size": 7
+				},
+				"minecraft:biome_filter": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:raw_ender_block"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "raw_ender_block",
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:destroy_time": 4,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"tag:stone": {}
+		},
+		"events": {}
+	}
+}

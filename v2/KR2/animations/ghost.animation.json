@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ghost.idle": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"body": {
+					"position": [0, "-1.5+math.cos(query.anim_time * 110) * 0.6", 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "caf:golden_vine",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:foil": false,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.seed"
+			},
+			"minecraft:display_name": {},
+			"minecraft:render_offsets": "apple",
+			"minecraft:icon": {
+				"texture": "goldenvine"
+			},
+			"minecraft:block_placer": {
+				"use_block_description": true,
+				"block": "caf:golden_vine2"
+			}
+		},
+		"events": {}
+	}
+}

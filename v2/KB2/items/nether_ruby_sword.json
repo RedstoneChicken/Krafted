@@ -1,0 +1,48 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "caf:nether_ruby_sword",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_damage": 1561
+			},
+			"minecraft:mining_speed": 1.5,
+			"minecraft:damage": 7,
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": false,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 15
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 10
+					}
+				]
+			},
+			"minecraft:foil": false,
+			"minecraft:render_offsets": "apple",
+			"minecraft:display_name": {},
+			"minecraft:icon": {
+				"texture": "nether_ruby_sword"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			}
+		},
+		"events": {}
+	}
+}

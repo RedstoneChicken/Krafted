@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:lotus_melon"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"M"
+		],
+		"key": {
+			"M": {
+				"item": "end:lotus_melon"
+			}
+		},
+		"result": [
+			{
+				"item": "end:lotus_melon_slice",
+				"count": 2
+			}
+		]
+	}
+}

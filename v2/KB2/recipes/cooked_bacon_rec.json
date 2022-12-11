@@ -1,0 +1,16 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "strat:cooked_bacon_rec"
+		},
+		"tags": [
+			"furnace",
+			"smoker",
+			"campfire"
+		],
+		"input": "strat:bacon",
+		"output": "strat:cooked_bacon"
+	}
+}

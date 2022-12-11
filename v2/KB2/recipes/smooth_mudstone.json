@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "smelt:smooth_mudstone"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "cav:mudstone",
+    "output": "cav:smooth_mudstone"
+  }
+  
+}

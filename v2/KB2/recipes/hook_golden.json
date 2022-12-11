@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "hook_golden"
+		},
+		"tags" : [ "tackle_box" ],
+		"pattern" : [ " A ", "ABA", " A " ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:gold_nugget"
+			},
+			"B" : {
+				"item" : "azc:iron_hook"
+			}
+		},
+		"result" : {
+			"item" : "azc:golden_hook"
+		}
+	}
+}

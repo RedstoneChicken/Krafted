@@ -1,0 +1,20 @@
+//bridge-file-version: #14
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:cooked_sausage",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 2
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:melon_smoothie",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 5,
+				"saturation_modifier": "normal",
+				"using_converts_to": "strat:drinking_glass",
+				"can_always_eat": false
+			},
+			"minecraft:icon": {
+				"texture": "melon_smoothie"
+			},
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {}
+	}
+}

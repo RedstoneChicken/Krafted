@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:diabase"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB",
+      "BA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:basalt"
+      },
+      "B": {
+        "item": "cav:gabbro"
+      }
+    },
+    "result": {
+      "item": "cav:diabase",
+      "count": 4
+    }
+  }
+}

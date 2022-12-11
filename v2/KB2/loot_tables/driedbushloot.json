@@ -1,0 +1,32 @@
+//bridge-file-version: #2
+{
+	"pools": [
+		{
+			"rolls": {
+				"max": 1,
+				"min": 2
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:stick",
+					"weight": 2
+				},
+				{
+					"type": "item",
+					"name": "rns:driedleaf",
+					"weight": 1,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

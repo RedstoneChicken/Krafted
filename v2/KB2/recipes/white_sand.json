@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:white_sand"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB",
+      "BA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:gypsum_dust"
+      },
+      "B": {
+        "item": "minecraft:sand"
+      }
+    },
+    "result": {
+      "item": "cav:white_sand",
+      "count": 4
+    }
+  }
+}

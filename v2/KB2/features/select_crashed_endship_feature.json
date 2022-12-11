@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "korbon:select_crashed_endship_feature"
+		},
+		"features": [
+			[
+				"korbon:velvium_crashed_endship_feature",
+				1
+			],
+			[
+				"korbon:chorus_crashed_endship_feature",
+				1
+			],
+			[
+				"korbon:phreyium_crashed_endship_feature",
+				1
+			]
+		]
+	}
+}

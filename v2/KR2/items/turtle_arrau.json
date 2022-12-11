@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:arrau_turtle",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "arrau_turtle",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

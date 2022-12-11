@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:message_in_a_bottle",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "message_in_a_bottle",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

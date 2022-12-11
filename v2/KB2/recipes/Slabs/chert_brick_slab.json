@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:chert_brick_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:chert_bricks"
+      }
+    },
+    "result": {
+      "item": "cav:chert_brick_slab",
+      "count": 6
+    }
+  }
+}

@@ -1,0 +1,23 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "rns:jungleleafbush"
+		},
+		"structure_name": "mystructure:jungleleafbush",
+		"adjustment_radius": 1,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					{
+						"name": "minecraft:air"
+					}
+				]
+			}
+		}
+	}
+}

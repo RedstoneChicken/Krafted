@@ -1,0 +1,25 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "rns:waterrock1"
+		},
+		"structure_name": "mystructure:waterrock1",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					{
+						"name": "minecraft:air"
+					},
+					{
+						"name": "minecraft:grass"
+					}
+				]
+			}
+		}
+	}
+}

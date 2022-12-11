@@ -1,0 +1,25 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:sausage_sandwich",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "good"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_sausage sandwich"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

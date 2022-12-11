@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:double_compressed_lapis_block_to_compressed_lapis_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:double_compressed_lapis_block"
+			}
+		],
+		"result": [
+			{
+				"item": "cc:compressed_lapis_block",
+				"count": 9
+			}
+		]
+	}
+}

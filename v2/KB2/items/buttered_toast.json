@@ -1,0 +1,25 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:buttered_toast",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation_modifier": "good"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_buttered toast"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

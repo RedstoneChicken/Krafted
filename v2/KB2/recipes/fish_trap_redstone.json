@@ -1,0 +1,24 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "redstone_fish_trap"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ "CBC", "BAB", "CBC" ],
+		"key" : {
+			"A" : {
+				"item" : "azc:wooden_fish_trap"
+			},
+			"B" : {
+				"item" : "minecraft:redstone"
+			},
+			"C" : {
+				"item" : "minecraft:redstone_block"
+			}
+		},
+		"result" : {
+			"item" : "azc:redstone_fish_trap"
+		}
+	}
+}

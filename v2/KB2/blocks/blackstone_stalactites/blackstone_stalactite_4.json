@@ -1,0 +1,33 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:blackstone_stalactite_4"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "blackstonestalactite"
+				}
+			},
+			"minecraft:geometry": "geometry.stalagmite_4",
+			"minecraft:entity_collision": {
+				"size": [
+					8,
+					16,
+					8
+				],
+				"origin": [
+					-4,
+					0,
+					-4
+				]
+			}
+		},
+		"events": {}
+	}
+}

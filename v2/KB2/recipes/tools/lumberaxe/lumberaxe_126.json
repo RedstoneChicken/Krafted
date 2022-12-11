@@ -1,0 +1,38 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:lumberaxe_126"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" #~",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_broad_axe_head"
+			},
+			"~": {
+				"item": "strat:cobalt_large_plate"
+			},
+			"o": {
+				"item": "strat:cobalt_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:cobalt_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:lumberaxe_126",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

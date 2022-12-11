@@ -1,0 +1,32 @@
+//bridge-file-version: #26
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:frying_pan_item"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:sausage",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 2
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

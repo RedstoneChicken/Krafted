@@ -1,0 +1,25 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:crystal_mushroom_stem"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+			},
+			"tag:wood": {}
+		},
+		"events": {}
+	}
+}

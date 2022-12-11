@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:limestone_patch_random_feature"
+    },
+    "features": [
+      [ "honkit26113:limestone_patch_feature", 5 ],
+      [ "honkit26113:limestone_patch_with_sand_layer_feature", 1 ]
+    ]
+  }
+}

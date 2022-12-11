@@ -1,0 +1,115 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:adult_spectral_jelly",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:behavior.random_hover": {
+				"priority": 1,
+				"xz_dist": 8,
+				"y_dist": 8,
+				"y_offset": -1,
+				"interval": 1,
+				"hover_height": [
+					2,
+					6
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:behavior.float": {
+				"priority": 19
+			},
+			"minecraft:movement": {
+				"value": 0.3
+			},
+			"minecraft:flying_speed": {
+				"value": 0.15
+			},
+			"minecraft:navigation.hover": {
+				"can_path_over_water": true,
+				"can_sink": false,
+				"can_pass_doors": false,
+				"can_path_from_air": true,
+				"avoid_water": true,
+				"avoid_damage_blocks": true,
+				"avoid_sun": false
+			},
+			"minecraft:movement.hover": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_fly": true,
+			"minecraft:health": {
+				"value": 25
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 4
+			},
+			"minecraft:boostable": {
+				"speed_multiplier": 2,
+				"duration": 8,
+				"boost_items": [
+					{
+						"item": "end:zalix_bud_on_a_stick",
+						"damage": 1,
+						"replace_item": "fishing_rod"
+					}
+				]
+			},
+			"minecraft:rideable": {
+				"seat_count": 4,
+				"crouching_skip_interact": true,
+				"family_types": [
+					"player"
+				],
+				"seats": [
+					{
+						"position": [
+							0.4,
+							3.7,
+							0
+						]
+					},
+					{
+						"position": [
+							-0.4,
+							3.7,
+							0
+						]
+					},
+					{
+						"position": [
+							0,
+							3.7,
+							0.4
+						]
+					},
+					{
+						"position": [
+							0,
+							3.7,
+							-0.4
+						]
+					}
+				]
+			},
+			"minecraft:item_controllable": {
+				"control_items": [
+					"end:zalix_bud_on_a_stick"
+				]
+			},
+			"minecraft:behavior.controlled_by_player": {
+				"priority": 0,
+				"mount_speed_multiplier": 1.45
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

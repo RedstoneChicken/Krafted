@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "oh:mithril_4"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "oh:raw_mithril",
+		"output": "oh:mithril"
+	}
+}

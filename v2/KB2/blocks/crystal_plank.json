@@ -1,0 +1,27 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:crystal_plank"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 2,
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "itemGroup.name.planks"
+			},
+			"tag:wood": {}
+		},
+		"events": {}
+	}
+}

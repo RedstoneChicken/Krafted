@@ -1,0 +1,77 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "caf:rubeus_tree_feature"
+		},
+		"acacia_trunk": {
+			"trunk_width": 3,
+			"trunk_height": {
+				"base": 7,
+				"intervals": [
+					5,
+					5
+				]
+			},
+			"trunk_block": {
+				"name": "caf:rubeus_log"
+			},
+			"trunk_lean": {
+				"allow_diagonal_growth": true,
+				"lean_height": {
+					"range_min": 3,
+					"range_max": 7
+				},
+				"lean_steps": {
+					"range_min": 3,
+					"range_max": 6
+				}
+			},
+			"branches": {
+				"branch_chance": 100,
+				"branch_length": {
+					"range_min": 1,
+					"range_max": 4
+				},
+				"branch_position": {
+					"range_min": 1,
+					"range_max": 3
+				},
+				"branch_canopy": {
+					"acacia_canopy": {
+						"canopy_size": 2,
+						"leaf_block": {
+							"name": "caf:rubeus_leafs"
+						},
+						"simplify_canopy": true
+					}
+				}
+			}
+		},
+		"acacia_canopy": {
+			"canopy_size": 3,
+			"leaf_block": {
+				"name": "caf:rubeus_leafs"
+			}
+		},
+		"base_block": [
+			"minecraft.netherrack",
+			"minecraft:warped_nylium",
+			"caf:jungle_nylium"
+		],
+		"may_grow_on": [
+			"minecraft:netherrack",
+			"minecraft:warped_nylium",
+			"caf:jungle_nylium"
+		],
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_grow_through": [
+			"minecraft:netherrack",
+			"minecraft:warped_nylium",
+			"caf:jungle_nylium"
+		]
+	}
+}

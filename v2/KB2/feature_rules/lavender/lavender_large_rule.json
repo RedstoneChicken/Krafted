@@ -1,0 +1,33 @@
+{
+  "format_version": "1.13.0",
+
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ff:lavender_large_rule",
+      "places_feature": "ff:lavender/lavender_large_feature"
+    },
+
+    "conditions": {
+      "placement_pass": "before_surface_pass",
+
+      "minecraft:biome_filter": {
+        "test": "has_biome_tag",
+        "value": "plains"
+      }
+    },
+
+    "distribution": {
+      "iterations": 2,
+
+      "x": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+			"y": "t.in = q.noise(v.worldx / 2048, v.worldz / 2048) + q.noise(v.worldx, v.worldz) * 0.05; return (t.in > 0.3 && t.in < 0.4 ? q.heightmap(v.worldx, v.worldz) : -65);"
+		}
+  }
+}

@@ -1,0 +1,277 @@
+{
+ "format_version": "1.16.0",
+ "minecraft:entity": {
+  "description": {
+   "identifier": "kna:bee",
+   "is_spawnable": true,
+   "is_summonable": true,
+   "is_experimental": false
+  },
+  "component_groups": {
+   "kna:despawn": {
+    "minecraft:instant_despawn": {}
+   }
+  },
+  "components": {
+   "minecraft:timer": {
+    "looping": false,
+    "time": 30,
+    "time_down_event": {
+     "event": "kna:despawned"
+    }
+   },
+   "minecraft:is_hidden_when_invisible": {},
+   "minecraft:behavior.move_towards_home_restriction": {
+    "priority": 9
+   },
+   "minecraft:behavior.random_hover": {
+    "priority": 12,
+    "xz_dist": 8,
+    "y_dist": 8,
+    "y_offset": -1,
+    "interval": 1,
+    "hover_height": [
+     1,
+     4
+    ]
+   },
+   "minecraft:behavior.float": {
+    "priority": 19
+   },
+   "minecraft:type_family": {
+    "family": [
+     "bee",
+     "pet",
+     "mob",
+     "villager"
+    ]
+   },
+   "minecraft:on_target_acquired": {
+    "event": "attacked",
+    "target": "self"
+   },
+   "minecraft:breathable": {
+    "totalSupply": 15,
+    "suffocateTime": 0
+   },
+   "minecraft:collision_box": {
+    "width": 0.55,
+    "height": 0.5
+   },
+   "minecraft:conditional_bandwidth_optimization": {},
+   "minecraft:follow_range": {
+    "value": 1024
+   },
+   "minecraft:damage_sensor": {
+    "triggers": {
+     "cause": "fall",
+     "deals_damage": false
+    }
+   },
+   "minecraft:hurt_on_condition": {
+    "damage_conditions": [
+     {
+      "filters": {
+       "test": "in_lava",
+       "subject": "self",
+       "operator": "==",
+       "value": true
+      },
+      "cause": "lava",
+      "damage_per_tick": 4
+     }
+    ]
+   },
+   "minecraft:behavior.melee_attack": {
+    "priority": 1,
+    "track_target": true
+   },
+   "minecraft:behavior.move_towards_target": {
+    "priority": 2,
+    "speed_multiplier": 0.9,
+    "within_radius": 32
+   },
+   "minecraft:behavior.nearest_attackable_target": {
+    "priority": 3,
+    "must_reach": true,
+    "must_see": true,
+    "entity_types": [
+     {
+      "filters": {
+       "all_of": [
+        {
+         "test": "is_family",
+         "subject": "other",
+         "value": "monster"
+        },
+        {
+         "test": "is_family",
+         "subject": "other",
+         "operator": "!=",
+         "value": "creeper"
+        }
+       ]
+      },
+      "within_default": 10
+     },
+     {
+      "filters": {
+       "all_of": [
+        {
+         "test": "is_family",
+         "subject": "other",
+         "value": "hoglin"
+        },
+        {
+         "test": "is_difficulty",
+         "operator": "!=",
+         "value": "peaceful"
+        }
+       ]
+      },
+      "max_dist": 16
+     },
+     {
+      "filters": {
+       "all_of": [
+        {
+         "test": "is_family",
+         "subject": "other",
+         "value": "zoglin"
+        },
+        {
+         "test": "is_difficulty",
+         "operator": "!=",
+         "value": "peaceful"
+        }
+       ]
+      },
+      "max_dist": 16
+     }
+    ]
+   },
+   "minecraft:attack": {
+    "damage": 4,
+    "effect_name": "poison",
+    "effect_duration": 18
+   },
+   "minecraft:behavior.hurt_by_target": {
+    "priority": 2,
+    "entity_types": {
+     "filters": {
+      "test": "is_family",
+      "subject": "other",
+      "operator": "!=",
+      "value": "pet"
+     }
+    }
+   },
+   "minecraft:movement": {
+    "value": 0.3
+   },
+   "minecraft:flying_speed": {
+    "value": 0.3
+   },
+   "minecraft:navigation.hover": {
+    "can_path_over_water": true,
+    "can_sink": false,
+    "can_pass_doors": false,
+    "can_path_from_air": true,
+    "avoid_water": true,
+    "avoid_damage_blocks": true,
+    "avoid_sun": false
+   },
+   "minecraft:movement.hover": {},
+   "minecraft:jump.static": {},
+   "minecraft:can_fly": {},
+   "minecraft:health": {
+    "value": 18,
+    "max": 12
+   },
+   "minecraft:nameable": {},
+   "minecraft:physics": {},
+   "minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+   }
+  },
+  "events": {
+   "kna:despawned": {
+    "add": {
+     "component_groups": [
+      "kna:despawned"
+     ]
+    },
+    "run_command": {
+     "command": [
+      "particle minecraft:death_explosion_emitter ~ ~0.5 ~"
+     ]
+    }
+   }
+  }
+ }
+}     : "!=",
+                  "value": "peaceful"
+                }
+              ]
+            },
+            "max_dist": 16
+          }
+        ]
+      },
+            "minecraft:attack": {
+                    "damage": 4,
+                    "effect_name": "poison",
+                    "effect_duration": 18
+                },
+            "minecraft:behavior.hurt_by_target": {
+             "priority": 2,
+             "entity_types": {
+             "filters": { "test": "is_family", "subject": "other", "operator": "!=", "value": "creeper" }
+        }
+      },
+            "minecraft:movement": {
+                "value": 0.3
+            },
+            "minecraft:flying_speed": {
+                "value": 0.20
+            },
+            "minecraft:navigation.hover": {
+                "can_path_over_water": true,
+                "can_sink": false,
+                "can_pass_doors": false,
+                "can_path_from_air": true,
+                "avoid_water": true,
+                "avoid_damage_blocks": true,
+                "avoid_sun": false
+            },
+            "minecraft:movement.hover": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_fly": {},
+            "minecraft:health": {
+                "value": 25,
+                "max": 25
+            },
+            "minecraft:nameable": {},
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+              }
+        },
+        "events": {
+         		"kna:despawned": {
+				"add": {
+				  "component_groups": [
+					"kna:despawned"
+				  ]
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:death_explosion_emitter ~ ~0.5 ~"
+					]
+				}
+			}
+        }
+    }
+}

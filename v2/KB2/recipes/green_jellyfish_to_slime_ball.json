@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "green_jellyfish_to_slime_ball"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:green_jellyfish"
+      }
+    ],
+    "result": {
+      "item": "minecraft:slime_ball"
+    }
+  }
+}

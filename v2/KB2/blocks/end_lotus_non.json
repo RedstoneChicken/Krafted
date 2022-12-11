@@ -1,0 +1,54 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:end_lotus_non"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.end_lotus_non",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "end_lotus_non",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [
+					-2,
+					0,
+					-2
+				],
+				"size": [
+					4,
+					16,
+					4
+				]
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:endilex_leaves",
+							"end:endilex_log"
+						],
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			}
+		},
+		"events": {}
+	}
+}

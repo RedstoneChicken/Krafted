@@ -1,0 +1,173 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:dark_oak_barricade",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "strat:placed"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_filter": 0,
+			"minecraft:explosion_resistance": 4,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "dark_oak_barricade",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"tag:wood": {}
+		},
+		"events": {
+			"strat:interact": {
+				"sequence": [
+					{
+						"decrement_stack": {},
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						},
+						"run_command": {
+							"command": [
+								"playsound use.wood @a ~~~"
+							]
+						}
+					}
+				]
+			},
+			"strat:placed": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"strat:state": 1
+						}
+					},
+					{
+						"set_block_property": {
+							"bridge:block_rotation": "query.cardinal_facing_2d"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.barricade0",
+					"minecraft:loot": "loot_tables/dark_oak_barricade.json",
+					"minecraft:ticking": {
+						"range": [
+							1,
+							1
+						],
+						"on_tick": {
+							"event": "strat:placed"
+						},
+						"looping": false
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.barricade1",
+					"minecraft:loot": "loot_tables/dark_oak_barricade.json",
+					"minecraft:on_interact": {
+						"event": "strat:interact",
+						"condition": "query.get_equipped_item_name('main_hand') == 'dark_oak_barricade'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.barricade2",
+					"minecraft:loot": "loot_tables/dark_oak_barricade2.json",
+					"minecraft:on_interact": {
+						"event": "strat:interact",
+						"condition": "query.get_equipped_item_name('main_hand') == 'dark_oak_barricade'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.barricade3",
+					"minecraft:loot": "loot_tables/dark_oak_barricade3.json",
+					"minecraft:on_interact": {
+						"event": "strat:interact",
+						"condition": "query.get_equipped_item_name('main_hand') == 'dark_oak_barricade'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.barricade4",
+					"minecraft:loot": "loot_tables/dark_oak_barricade4.json"
+				}
+			}
+		]
+	}
+}

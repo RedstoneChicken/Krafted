@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:blazing_fishing_pole_template",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "blazing_fishing_pole_template",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

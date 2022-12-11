@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:shark",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "shark",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

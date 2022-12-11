@@ -1,0 +1,34 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:biome": {
+		"description": {
+			"identifier": "testplains"
+		},
+		"components": {
+			"minecraft:climate": {
+				"downfall": 0.4,
+				"snow_accumulation": [
+					0,
+					0.125
+				],
+				"temperature": 0.8
+			},
+			"minecraft:the_end_surface": {
+				"noise_type": "query.heightmap(variable.worldx, variable.worldz) * query.is_end(variable.is_end, variable.the_end_surface_noise) ? query.is_end== 1"
+			},
+			"animal": {},
+			"monster": {},
+			"the_end": {},
+			"testplains": {},
+			"minecraft:surface_parameters": {
+				"sea_floor_depth": 7,
+				"sea_floor_material": "minecraft:endstone",
+				"foundation_material": "minecraft:grass",
+				"mid_material": "minecraft:endstone",
+				"top_material": "minecraft:grass",
+				"sea_material": "minecraft:water"
+			}
+		}
+	}
+}

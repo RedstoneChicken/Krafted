@@ -1,0 +1,40 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:chocolate_sprinkled_donut"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:chocolate_donut",
+				"count": 1
+			},
+			{
+				"item": "minecraft:sugar",
+				"count": 1
+			},
+			{
+				"item": "minecraft:red_dye",
+				"count": 1
+			},
+			{
+				"item": "minecraft:yellow_dye",
+				"count": 1
+			},
+			{
+				"item": "minecraft:blue_dye",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:chocolate_sprinkled_donut",
+				"count": 1
+			}
+		]
+	}
+}

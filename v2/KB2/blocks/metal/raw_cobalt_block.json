@@ -1,0 +1,20 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:raw_cobalt_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 15,
+			"minecraft:map_color": "#176ED2",
+			"minecraft:explosion_resistance": 20,
+			"tag:cobalt_level": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Construction",
+				"category": "Construction"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,30 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "hatchi:bundlepack_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "STS",
+            "L L",
+            "LLL"
+        ],
+        "key": {
+            "S": {
+                "item": "minecraft:string"
+            },
+            "T": {
+                "item": "minecraft:stick"
+            },
+            "L": {
+                "item": "minecraft:leather"
+            }
+        },
+        "result": {
+            "item": "hatchi:bundlepack"
+        }
+    }
+}

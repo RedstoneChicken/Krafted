@@ -1,0 +1,23 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "end:crystal_plants"
+		},
+		"features": [
+			[
+				"end:crystal_fungus_feature",
+				1
+			],
+			[
+				"end:crystal_grass_tall_feature",
+				1
+			],
+			[
+				"end:crystal_grass_short_feature",
+				1
+			]
+		]
+	}
+}

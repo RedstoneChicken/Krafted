@@ -1,0 +1,34 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:peach",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"saturation_modifier": "normal",
+				"nutrition": 4,
+				"can_always_eat": false,
+				"effects": {}
+			},
+			"minecraft:use_duration": 1.5,
+			"minecraft:use_animation": "eat",
+			"minecraft:icon": {
+				"texture": "korbon:peach"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:display_name": {
+				"value": "Peach"
+			}
+		},
+		"events": {}
+	}
+}

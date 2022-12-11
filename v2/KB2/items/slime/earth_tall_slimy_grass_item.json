@@ -1,0 +1,26 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:earth_tall_slimy_grass_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "earth_tall_slimy_grass"
+			},
+			"minecraft:display_name": {
+				"value": "Tall Slimy Grass"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:earth_tall_slimy_grass",
+				"use_block_description": true
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.grass"
+			}
+		},
+		"events": {}
+	}
+}

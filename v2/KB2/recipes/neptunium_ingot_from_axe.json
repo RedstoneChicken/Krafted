@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "neptunium_ingot_from_axe"
+    },
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "azc:neptunium_axe",
+    "output": "azc:neptunium_ingot"
+  }
+}

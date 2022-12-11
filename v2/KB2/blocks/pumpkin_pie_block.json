@@ -1,0 +1,244 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:pumpkin_pie_block",
+			"properties": {
+				"strat:state": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.6,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "pumpkin_pie_block",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.pie",
+			"minecraft:entity_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					5,
+					12
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					5,
+					12
+				]
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:map_color": "#633E24",
+			"minecraft:on_interact": {
+				"event": "strat:cut",
+				"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"strat:cut": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife' && query.block_property('strat:state') < 3",
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:pumpkin_pie_slice 1",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"damage": {
+							"amount": 1,
+							"target": "item",
+							"type": "none"
+						},
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife' && query.block_property('strat:state') == 3",
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:pumpkin_pie_slice 1",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"set_block": {
+							"block_type": "minecraft:air"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.pie",
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							5,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							5,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.pie2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							5,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							-6
+						],
+						"size": [
+							12,
+							5,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.pie3",
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							0
+						],
+						"size": [
+							12,
+							5,
+							6
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							0
+						],
+						"size": [
+							12,
+							5,
+							6
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.pie4",
+					"minecraft:entity_collision": {
+						"origin": [
+							-6,
+							0,
+							0
+						],
+						"size": [
+							6,
+							5,
+							6
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-6,
+							0,
+							0
+						],
+						"size": [
+							6,
+							5,
+							6
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			}
+		]
+	}
+}

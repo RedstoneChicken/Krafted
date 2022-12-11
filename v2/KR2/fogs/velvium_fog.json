@@ -1,0 +1,23 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "korbon:velvium_fog"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 160,
+				"fog_end": 256,
+				"fog_color": "#3F2433",
+				"render_distance_type": "fixed"
+			},
+			"water": {
+				"fog_start": 0,
+				"fog_end": 15,
+				"fog_color": "#382336",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}

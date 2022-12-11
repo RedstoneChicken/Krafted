@@ -1,0 +1,21 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "end:crystal_grass_short_feature"
+		},
+		"places_block": "end:crystal_grass_short",
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false,
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_attach_to": {
+			"bottom": [
+				"end:crystal_nylium"
+			],
+			"min_sides_must_attach": 1
+		}
+	}
+}

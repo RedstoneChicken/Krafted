@@ -1,0 +1,1990 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:seared_melter_90_on",
+			"properties": {
+				"strat:material": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"strat:smelts": [
+					0,
+					1,
+					2,
+					3,
+					4
+				],
+				"strat:melted": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "seared_melter_on",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.melter",
+			"minecraft:rotation": [
+				0,
+				90,
+				0
+			],
+			"minecraft:loot": "loot_tables/seared_melter.json",
+			"tag:stone": {},
+			"minecraft:block_light_emission": 1,
+			"minecraft:on_interact": {
+				"event": "strat:melter"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "strat:empty_heater"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:melter": {
+				"sequence": [
+					{
+						"condition": "(query.block_property('strat:melted') == 0 || query.block_property('strat:melted') == 1) && query.block_property('strat:smelts') < 4",
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:material') == 0 && query.block_property('strat:melted') == 0",
+								"sequence": [
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'iron_ingot' || query.get_equipped_item_name('main_hand') == 'raw_iron'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'gold_ingot' || query.get_equipped_item_name('main_hand') == 'raw_gold'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'copper_ingot' || query.get_equipped_item_name('main_hand') == 'raw_copper'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'cobalt_ingot' || query.get_equipped_item_name('main_hand') == 'cobalt_ore' || query.get_equipped_item_name('main_hand') == 'raw_cobalt'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'ardite_ingot' || query.get_equipped_item_name('main_hand') == 'ardite_ore' || query.get_equipped_item_name('main_hand') == 'raw_ardite'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_ingot'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'seared_brick' || query.get_equipped_item_name('main_hand') == 'grout' || query.get_equipped_item_name('main_hand') == 'nether_grout'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'glass'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.get_equipped_item_name('main_hand') == 'obsidian'",
+										"set_block_property": {
+											"strat:material": 9,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									}
+								]
+							},
+							{
+								"condition": "query.block_property('strat:melted') == 1 || query.block_property('strat:material') != 0",
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 1 && (query.get_equipped_item_name('main_hand') == 'iron_ingot' || query.get_equipped_item_name('main_hand') == 'raw_iron')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && (query.get_equipped_item_name('main_hand') == 'gold_ingot' || query.get_equipped_item_name('main_hand') == 'raw_gold')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && (query.get_equipped_item_name('main_hand') == 'copper_ingot' || query.get_equipped_item_name('main_hand') == 'raw_copper')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && (query.get_equipped_item_name('main_hand') == 'cobalt_ingot' || query.get_equipped_item_name('main_hand') == 'cobalt_ore' || query.get_equipped_item_name('main_hand') == 'raw_cobalt')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && (query.get_equipped_item_name('main_hand') == 'ardite_ingot' || query.get_equipped_item_name('main_hand') == 'ardite_ore' || query.get_equipped_item_name('main_hand') == 'raw_ardite')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && (query.get_equipped_item_name('main_hand') == 'manyullyn_ingot')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && (query.get_equipped_item_name('main_hand') == 'seared_brick' || query.get_equipped_item_name('main_hand') == 'grout' || query.get_equipped_item_name('main_hand') == 'nether_grout')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && (query.get_equipped_item_name('main_hand') == 'glass')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 9 && (query.get_equipped_item_name('main_hand') == 'obsidian')",
+										"set_block_property": {
+											"strat:melted": 2,
+											"strat:smelts": "query.block_property('strat:smelts') + 1"
+										},
+										"decrement_stack": {
+											"ignore_game_mode": false
+										},
+										"run_command": {
+											"command": [
+												"playsound liquid.lavapop @a ~~~"
+											]
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:melted') == 3",
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 1",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_iron_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_iron_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_iron",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_gold_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_gold_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_gold",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_copper_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_copper_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_copper",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_cobalt_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_cobalt_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_cobalt",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_ardite_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_ardite_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_ardite",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_manyullyn_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_manyullyn_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_manyullyn",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:seared_stone_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:seared_stone_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_seared_stone",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_glass_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_glass_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_glass",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 9",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": "query.block_property('strat:melted') - 3"
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_obsidian_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'bucket' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:molten_obsidian_bucket",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+												"set_block_property": {
+													"strat:melted": 1
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_obsidian",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											}
+										]
+									}
+								]
+							},
+							{
+								"condition": "query.block_property('strat:melted') == 1",
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 1",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_iron",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_iron",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_gold",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_gold",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_copper",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_copper",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_cobalt",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_cobalt",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_ardite",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_ardite",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_manyullyn",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_manyullyn",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_seared_stone",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_seared_stone",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_glass",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_glass",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									},
+									{
+										"condition": "query.block_property('strat:material') == 9",
+										"sequence": [
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') < 4",
+												"set_block_property": {
+													"strat:material": 0,
+													"strat:melted": 0
+												},
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_obsidian",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												}
+											},
+											{
+												"condition": "query.get_equipped_item_name('main_hand') == 'copper_can' && query.block_property('strat:smelts') == 4",
+												"decrement_stack": {
+													"ignore_game_mode": false
+												},
+												"run_command": {
+													"command": [
+														"gamerule sendcommandfeedback false",
+														"give @s strat:copper_can_obsidian",
+														"playsound bucket.empty_lava @a ~~~",
+														"gamerule sendcommandfeedback true"
+													],
+													"target": "player"
+												},
+												"set_block": {
+													"block_type": "strat:seared_melter_90"
+												},
+												"trigger": {
+													"event": "strat:empty_heater"
+												}
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"strat:melt_material": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"strat:melted": "query.block_property('strat:melted') + 1"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_flame_particle ~~~",
+								"playsound bucket.fill_lava @a ~~~"
+							]
+						}
+					}
+				]
+			},
+			"strat:empty_heater": {
+				"run_command": {
+					"command": [
+						"function heater_deactivate"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:material') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_on",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_iron0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_iron1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_iron2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_iron3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_gold0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_gold1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_gold2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_gold3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_copper0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_copper1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_copper2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_copper3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_cobalt0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_cobalt1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_cobalt2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_cobalt3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_ardite0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_ardite1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_ardite2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_ardite3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_manyullyn0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_manyullyn1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_manyullyn2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_manyullyn3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_seared0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_seared1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_seared2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_seared3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_glass0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_glass1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_glass2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_glass3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 9 && query.block_property('strat:melted') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_obsidian0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 9 && query.block_property('strat:melted') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.melter1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_obsidian1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 9 && query.block_property('strat:melted') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_obsidian2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							8,
+							8
+						],
+						"on_tick": {
+							"event": "strat:melt_material"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 9 && query.block_property('strat:melted') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.melter2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "seared_melter_obsidian3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		]
+	}
+}

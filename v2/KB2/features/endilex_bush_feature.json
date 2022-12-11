@@ -1,0 +1,19 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "end:endilex_bush_feature"
+		},
+		"features": [
+			[
+				"end:endilex_bush_1",
+				1
+			],
+			[
+				"end:endilex_bush_2",
+				1
+			]
+		]
+	}
+}

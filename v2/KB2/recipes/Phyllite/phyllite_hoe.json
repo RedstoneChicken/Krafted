@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:phyllite_hoe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "XX",
+      " #",
+      " #"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stick"
+      },
+      "X": {
+        "item": "cav:phyllite"
+      }
+    },
+    "result": {
+      "item": "minecraft:stone_hoe"
+    }
+  }
+}

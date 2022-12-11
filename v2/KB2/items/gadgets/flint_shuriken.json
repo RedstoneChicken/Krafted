@@ -1,0 +1,28 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:flint_shuriken",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "flint_shuriken"
+			},
+			"minecraft:display_name": {
+				"value": "Flint Shuriken"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:throwable": {
+				"do_swing_animation": true
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "strat:flint_shuriken"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {}
+	}
+}

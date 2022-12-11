@@ -1,0 +1,27 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:sticky_spikes_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "honkit26113:sticky_spikes",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "sticky_spikes_item"
+			},
+      		"minecraft:display_name": {
+        		"value": "tile.honkit26113:sticky_spikes.name"
+      		},
+			"minecraft:use_duration": 0.5
+		}
+	}
+}

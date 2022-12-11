@@ -1,0 +1,32 @@
+//bridge-file-version: #29
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:crashed_endship_phreyium_feature"
+		},
+		"structure_name": "mystructure:crashed_endship_phreyium",
+		"adjustment_radius": 0,
+		"facing_direction": "north",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air",
+					"minecraft:water",
+					"korbon:phreyium_grass",
+					"korbon:void_turf_grass_short",
+					"korbon:void_sprouts",
+					"korbon:phreyium",
+					"korbon:phreyium_stem",
+					"korbon:phreyium_wart_block",
+					"korbon:thorn_root",
+					"korbon:phreyium_tooth_fungus",
+					"korbon:viscosa",
+					"korbon:viscosa_tall",
+					"korbon:ori_blossom"
+				]
+			}
+		}
+	}
+}

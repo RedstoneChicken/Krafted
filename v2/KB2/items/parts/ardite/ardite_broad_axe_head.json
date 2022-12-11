@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ardite_broad_axe_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Ardite Broad Axe Head"
+			},
+			"minecraft:icon": {
+				"texture": "ardite_broad_axe_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

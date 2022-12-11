@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:enderite_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:enderite_head"
+			},
+			"Y": {
+				"item": "oh:ender_stick"
+			},
+			"Z": {
+				"item": "oh:enderite_block"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:enderite_hammer",
+				"count": 1
+			}
+		]
+	}
+}

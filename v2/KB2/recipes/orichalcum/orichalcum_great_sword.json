@@ -1,0 +1,34 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:orichalcum_great_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" X",
+			"XXX",
+			"B#B"
+		],
+		"key": {
+			"#": {
+				"item": "oh:strong_stick"
+			},
+			"X": {
+				"item": "oh:orichalcum"
+			},
+			"B": {
+				"item": "oh:orichalcum_block"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:orichalcum_great_sword",
+				"count": 1
+			}
+		]
+	}
+}

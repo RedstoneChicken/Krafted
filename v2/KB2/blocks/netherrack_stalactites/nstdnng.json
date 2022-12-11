@@ -1,0 +1,165 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:nstdnng"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:on_placed": {
+				"event": "growrandom"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "growrandom"
+				}
+			}
+		},
+		"events": {
+			"grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_8",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_7",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_6",
+						"setblock ~ ~-3 ~ caf:netherrack_stalactite_5",
+						"setblock ~ ~-4 ~ caf:netherrack_stalactite_4",
+						"setblock ~ ~-5 ~ caf:netherrack_stalactite_3",
+						"setblock ~ ~-6 ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-7 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-8 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow02": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_7",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_6",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_5",
+						"setblock ~ ~-3 ~ caf:netherrack_stalactite_4",
+						"setblock ~ ~-4 ~ caf:netherrack_stalactite_3",
+						"setblock ~ ~-5 ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-6 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-7 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow03": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_6",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_5",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_4",
+						"setblock ~ ~-3 ~ caf:netherrack_stalactite_3",
+						"setblock ~ ~-4 ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-5 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-6 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow04": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_5",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_4",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_3",
+						"setblock ~ ~-3 ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-4 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-5 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow05": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_4",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_3",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-3 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-4 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow06": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_3",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-3 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow07": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_2",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-2 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"grow08": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:netherrack_stalactite_1",
+						"setblock ~ ~-1 ~ caf:netherrack_stalactite_0"
+					]
+				}
+			},
+			"growrandom": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "grow01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow02"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow03"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow04"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow05"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow06"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow07"
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow08"
+						}
+					}
+				]
+			}
+		}
+	}
+}

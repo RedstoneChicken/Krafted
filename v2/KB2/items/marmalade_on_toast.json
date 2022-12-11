@@ -1,0 +1,28 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:marmalade_on_toast",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "good",
+				"on_consume": {
+					"event": "speed"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "marmalade_on_toast"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

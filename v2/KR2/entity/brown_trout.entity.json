@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "azc:brown_trout",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/brown_trout"
+			},
+			"geometry" : {
+				"default" : "geometry.brown_trout"
+			},
+			"animations" : {
+				"swim" : "animation.brown_trout.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.salmon" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_brown_trout",
+				"texture_index" : 0
+			}
+		}
+	}
+}

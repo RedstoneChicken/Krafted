@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:quadruple_compressed_redsand_to_quintuple_compressed_redsand"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:quadruple_compressed_redsand"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:quintuple_compressed_redsand",
+				"count": 1
+			}
+		]
+	}
+}

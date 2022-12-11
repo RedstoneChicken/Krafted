@@ -1,0 +1,122 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wildfire.block": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"shield_base": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 180, 0]
+					},
+					"position": {
+						"0.0": [0, -1, 0],
+						"0.5": [0, -1, 0]
+					}
+				},
+				"body": {
+					"position": [0, 0, 0]
+				},
+				"front_shield": {
+					"position": [0, 0, -1]
+				},
+				"right_shield": {
+					"position": [-1, 0, 0]
+				},
+				"left_shield": {
+					"position": [1, 0, 0]
+				},
+				"back_shield": {
+					"position": [0, 0, 1]
+				},
+				"head": {
+					"position": [0, -4, 0]
+				}
+			}
+		},
+		"animation.wildfire.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"shield_base": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 90, 0],
+						"1.0": [0, 180, 0],
+						"1.5": [0, 270, 0],
+						"2.0": [0, 360, 0]
+					},
+					"position": {
+						"0.0": [0, -1, 0],
+						"0.5": [0, 1, 0],
+						"1.0": [0, -1, 0],
+						"1.5": [0, 1, 0],
+						"2.0": [0, -1, 0]
+					}
+				},
+				"body": {
+					"position": {
+						"0.0": [0, -1, 0],
+						"0.5": [0, 0, 0],
+						"1.0": [0, -1, 0],
+						"1.5": [0, 0, 0],
+						"2.0": [0, -1, 0]
+					}
+				},
+				"front_shield": {
+					"rotation": [-15, 0, 0],
+					"position": [0, 0, -2]
+				},
+				"right_shield": {
+					"rotation": [0, 0, 15],
+					"position": [-2, 0, 0]
+				},
+				"left_shield": {
+					"rotation": [0, 0, -15],
+					"position": [2, 0, 0]
+				},
+				"back_shield": {
+					"rotation": [-15, 0, 0],
+					"position": [0, 0, 2]
+				}
+			}
+		},
+		"animation.wildfire.meelee_attack": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"shield_base": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 180, 0]
+					},
+					"position": {
+						"0.0": [0, -1, 0],
+						"0.2": [0, 1, 0],
+						"0.5": [0, -1, 0]
+					}
+				},
+				"body": {
+					"position": [0, 0, 0]
+				},
+				"front_shield": {
+					"rotation": [-77.5, 0, 0],
+					"position": [0, 0, -2]
+				},
+				"right_shield": {
+					"rotation": [0, 0, 77.5],
+					"position": [-2, 0, 0]
+				},
+				"left_shield": {
+					"rotation": [0, 0, -77.5],
+					"position": [2, 0, 0]
+				},
+				"back_shield": {
+					"rotation": [-77.5, 0, 0],
+					"position": [0, 0, 2]
+				}
+			}
+		}
+	}
+}

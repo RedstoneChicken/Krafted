@@ -1,0 +1,51 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:crystal_vines"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.1,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "crystal_vine",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					16,
+					12
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:crystal_mushroom_top",
+							"end:crystal_vines"
+						],
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			},
+			"minecraft:loot": "loot_tables/crystal_vine.json"
+		},
+		"events": {}
+	}
+}

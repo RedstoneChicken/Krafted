@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.16.100",
+	"minecraft:block" : {
+		"description" : {
+			"identifier" : "azc:neptunium_block",
+			"is_experimental" : false,
+			"category" : "Construction"
+		},
+		"components" : {
+			"minecraft:loot" : "loot_tables/blocks/neptunium_block.json",
+			"minecraft:destroy_time" : 25.0,
+			"minecraft:map_color" : "#FFFFFF",
+			"minecraft:block_light_absorption" : 0,
+			"minecraft:block_light_emission" : 0,
+			"minecraft:explosion_resistance" : 45.0,
+			"minecraft:creative_category" : {
+				"category" : "construction"
+			}
+		}
+	}
+}

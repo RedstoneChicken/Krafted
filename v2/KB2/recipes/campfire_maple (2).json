@@ -1,0 +1,32 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:campfire_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" | ",
+			"|C|",
+			"###"
+		],
+		"key": {
+			"|": {
+				"item": "minecraft:stick"
+			},
+			"#": {
+				"item": "strat:maple_log"
+			},
+			"C": {
+				"item": "minecraft:coal"
+			}
+		},
+		"result": {
+			"item": "minecraft:campfire"
+		},
+		"priority": 50
+	}
+}

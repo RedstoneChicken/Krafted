@@ -1,0 +1,48 @@
+//bridge-file-version: #113
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "korbon:end_stone_patch_velvium_feature_rule",
+			"places_feature": "korbon:end_stone_patch_velvium_scatter_feature"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "the_end"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 25,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					-8,
+					8
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					100
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					-8,
+					8
+				]
+			}
+		}
+	}
+}

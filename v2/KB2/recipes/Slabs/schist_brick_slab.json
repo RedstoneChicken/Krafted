@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:schist_brick_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:schist_bricks"
+      }
+    },
+    "result": {
+      "item": "cav:schist_brick_slab",
+      "count": 6
+    }
+  }
+}

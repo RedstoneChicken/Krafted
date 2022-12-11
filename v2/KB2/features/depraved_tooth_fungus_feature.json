@@ -1,0 +1,29 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:depraved_tooth_fungus_feature"
+		},
+		"places_block": {
+			"name": "korbon:phreyium_tooth_fungus"
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			{
+				"name": "minecraft:air"
+			}
+		],
+		"may_attach_to": {
+			"min_sides_must_attach": 2,
+			"top": [
+				"korbon:phreyium_stem",
+				"korbon:phreyium_wart_block"
+			],
+			"bottom": [
+				"minecraft:air"
+			]
+		}
+	}
+}

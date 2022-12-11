@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:marouge_planks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"L"
+		],
+		"key": {
+			"L": {
+				"item": "nether:marouge_stem"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:marouge_planks",
+				"count": 4
+			}
+		]
+	}
+}

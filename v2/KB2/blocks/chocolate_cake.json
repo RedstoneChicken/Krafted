@@ -1,0 +1,353 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:chocolate_cake",
+			"properties": {
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.6,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chocolate_cake",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.cake",
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					8,
+					14
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					8,
+					14
+				]
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:map_color": "#633E24",
+			"minecraft:on_interact": {
+				"event": "strat:cut",
+				"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+			},
+			"minecraft:rotation": [
+				0,
+				90,
+				0
+			],
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"strat:cut": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife' && query.block_property('strat:state') < 6",
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:chocolate_cake_slice 1",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"damage": {
+							"amount": 1,
+							"target": "item",
+							"type": "none"
+						},
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife' && query.block_property('strat:state') == 6",
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:chocolate_cake_slice 1",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"set_block": {
+							"block_type": "minecraft:air"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.cake",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							8,
+							14
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-7
+						],
+						"size": [
+							14,
+							8,
+							14
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.cake2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-5
+						],
+						"size": [
+							14,
+							8,
+							12
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-5
+						],
+						"size": [
+							14,
+							8,
+							12
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.cake3",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-3
+						],
+						"size": [
+							14,
+							8,
+							10
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-3
+						],
+						"size": [
+							14,
+							8,
+							10
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.cake4",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							-1
+						],
+						"size": [
+							14,
+							8,
+							8
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							-1
+						],
+						"size": [
+							14,
+							8,
+							8
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.cake5",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							1
+						],
+						"size": [
+							14,
+							8,
+							6
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							1
+						],
+						"size": [
+							14,
+							8,
+							6
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.cake6",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							3
+						],
+						"size": [
+							14,
+							8,
+							4
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							3
+						],
+						"size": [
+							14,
+							8,
+							4
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut",
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.cake7",
+					"minecraft:entity_collision": {
+						"origin": [
+							-7,
+							0,
+							5
+						],
+						"size": [
+							14,
+							8,
+							2
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-7,
+							0,
+							5
+						],
+						"size": [
+							14,
+							8,
+							2
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "strat:cut"
+					}
+				}
+			}
+		]
+	}
+}

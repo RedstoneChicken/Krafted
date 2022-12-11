@@ -1,0 +1,33 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.16,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:soul_campfire_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" A ",
+			"ABA",
+			"CCC"
+		],
+		"key": {
+			"A": {
+				"item": "stick"
+			},
+			"B": {
+				"item": "soul_soil"
+			},
+			"C": {
+				"item": "strat:maple_log"
+			}
+		},
+		"result": {
+			"item": "soul_campfire",
+			"count": 1
+		},
+		"priority": 50
+	}
+}

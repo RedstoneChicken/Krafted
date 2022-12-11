@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:polished_schist_stonecutter"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:schist"
+      }
+    ],
+    "result": {
+      "item": "cav:polished_schist",
+      "count": 1
+    }
+  }
+  
+}

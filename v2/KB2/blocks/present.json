@@ -1,0 +1,64 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:present"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:flammable": {
+				"burn_odds": 10,
+				"flame_odds": 10
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "present",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.present",
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					9,
+					10
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					9,
+					9,
+					9
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "presentloot",
+				"target": "self"
+			}
+		},
+		"events": {
+			"presentloot": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/present.json"
+				},
+				"set_block": {
+					"block_type": "minecraft:air"
+				}
+			}
+		}
+	}
+}

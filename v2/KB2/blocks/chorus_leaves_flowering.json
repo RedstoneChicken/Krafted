@@ -1,0 +1,38 @@
+//bridge-file-version: #39
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_leaves_flowering"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.2,
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_leaves_flowering_side",
+					"render_method": "blend"
+				},
+				"up": {
+					"texture": "chorus_leaves_top",
+					"render_method": "blend"
+				},
+				"down": {
+					"texture": "chorus_leaves_top",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:map_color": "#908640",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.leaves",
+				"category": "nature"
+			}
+		},
+		"events": {}
+	}
+}

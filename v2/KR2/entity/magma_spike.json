@@ -1,0 +1,43 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "kna:magma_spike",
+			"materials": {
+				"default": "villager_v2"
+			},
+			"textures": {
+				"default": "textures/entity/magma_spike"
+			},
+			"geometry": {
+				"default": "geometry.magma_spike"
+			},
+			"scripts": {
+				"animate": [
+					"rise"
+				]
+			},
+			"animations": {
+				"rise": "animation.magma_spike.rise",
+				"despawned": "animation.magma_spike.despawn"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}
+	}
+}}
+}
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}]
+		}
+	}
+}		}
+	}
+}

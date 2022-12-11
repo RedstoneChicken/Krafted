@@ -1,0 +1,16 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "furnace_piranha_to_salmon"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "adv:piranha",
+    "output": "minecraft:cooked_salmon"
+  }
+}

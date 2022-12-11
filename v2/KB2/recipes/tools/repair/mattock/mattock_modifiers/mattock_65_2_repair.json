@@ -1,0 +1,28 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:mattock_65_2_repair"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:mattock_65_2",
+				"count": 1
+			},
+			{
+				"item": "minecraft:copper_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:mattock_65_2",
+				"count": 1
+			}
+		]
+	}
+}

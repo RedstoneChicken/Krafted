@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "korbon:coconut_open"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "korbon:coconut"
+			}
+		],
+		"result": {
+			"item": "korbon:coconut_open",
+			"count": 1
+		}
+	}
+}

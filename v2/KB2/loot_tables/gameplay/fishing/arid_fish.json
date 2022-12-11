@@ -1,0 +1,49 @@
+{
+	"pools" : [
+		{
+			"rolls" : 1,
+			"entries" : [
+				{
+					"type" : "item",
+					"name" : "minecraft:fish",
+					"weight" : 60
+				},
+				{
+					"type" : "item",
+					"name" : "azc:synodontis",
+					"weight" : 60
+				},
+				{
+					"type" : "item",
+					"name" : "minecraft:salmon",
+					"weight" : 25
+				},
+				{
+					"type" : "item",
+					"name" : "azc:boulti",
+					"weight" : 25
+				},
+				{
+					"type" : "item",
+					"name" : "minecraft:pufferfish",
+					"weight" : 13
+				},
+				{
+					"type" : "item",
+					"name" : "azc:bayad",
+					"weight" : 13
+				},
+				{
+					"type" : "item",
+					"name" : "minecraft:clownfish",
+					"weight" : 2
+				},
+				{
+					"type" : "item",
+					"name" : "azc:capitaine",
+					"weight" : 2
+				}
+			]
+		}
+	]
+}

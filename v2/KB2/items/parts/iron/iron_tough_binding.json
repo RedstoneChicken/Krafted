@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:iron_tough_binding"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Iron Tough Binding"
+			},
+			"minecraft:icon": {
+				"texture": "iron_tough_binding"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

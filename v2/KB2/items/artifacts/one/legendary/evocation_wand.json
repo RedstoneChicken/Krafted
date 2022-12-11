@@ -1,0 +1,52 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:evocation_wand",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "evocation_wand"
+			},
+			"minecraft:display_name": {
+			 "value": "§bEvocation Wand\n§3Legendary\n§7Cooldown: 3\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "evocation_cube",
+				"duration": 3
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:foil": true,
+				"minecraft:render_offsets": "tools",
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"tag @s add ec_user",
+          	"playsound mob.evocation_illager.prepare_attack @a[r=12]",
+            "execute @s ~~~ execute @e[tag=!ec_user,tag=!none,r=10] ~~~ summon evocation_fang ~~~",
+            "tag @s remove ec_user",
+            "effect @s weakness 3 3 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}  

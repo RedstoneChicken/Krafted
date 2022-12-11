@@ -1,0 +1,50 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "end:ender_ore_rule",
+			"places_feature": "end:ender_ore_feature"
+		},
+		"conditions": {
+			"placement_pass": "underground_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 2,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					10,
+					16
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

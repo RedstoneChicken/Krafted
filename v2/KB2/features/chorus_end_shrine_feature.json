@@ -1,0 +1,14 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:chorus_end_shrine_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:chorus_tree_grass_feature",
+			"korbon:end_shrine_chorus_feature"
+		]
+	}
+}

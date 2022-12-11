@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:slime_from_sky_slime"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "strat:sky_slime_ball"
+			}
+		},
+		"result": {
+			"item": "minecraft:slime"
+		}
+	}
+}

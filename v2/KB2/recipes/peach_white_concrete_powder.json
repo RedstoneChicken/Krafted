@@ -1,0 +1,49 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:peach_white_concrete_powder"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "group": "concrete_powder",
+    "ingredients": [
+      {
+        "item": "cav:peach_dye"
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      }
+    ],
+    "result": {
+      "item": "cav:peach_concrete_powder",
+      "count": 8
+    }
+  }
+}

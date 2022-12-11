@@ -1,0 +1,24 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:seared_creeperface_stonecutter_9"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "strat:seared_paver",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:seared_creeperface",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "swamp_plaice_to_waterlily"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:swamp_plaice"
+      }
+    ],
+    "result": {
+      "item": "minecraft:waterlily"
+    }
+  }
+}

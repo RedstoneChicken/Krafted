@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:bubbly_water",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.2,
+			"minecraft:food": {
+				"nutrition": 0,
+				"using_converts_to": "strat:drinking_glass",
+				"can_always_eat": false
+			},
+			"minecraft:icon": {
+				"texture": "bubbly_water"
+			},
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {}
+	}
+}

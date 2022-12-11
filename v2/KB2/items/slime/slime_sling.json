@@ -1,0 +1,82 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:slime_sling",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "Slime Sling"
+			},
+			"minecraft:icon": {
+				"texture": "slime_sling"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.equipment"
+			},
+			"minecraft:use_animation": "bow",
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "strat:sling"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "slime_sling",
+				"duration": 2
+			}
+		},
+		"events": {
+			"strat:sling": {
+				"sequence": [
+					{
+						"condition": "((query.cardinal_facing != 1.0 && query.cardinal_facing != 0.0) && (query.is_on_ground == 1.0 || query.is_in_water == 1.0))",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"effect @s levitation 1 6 true",
+										"summon strat:slime_sling_launch ^ ^0.5 ^1",
+										"playsound tinkers.slime_sling @a ~~~"
+									]
+								},
+								"swing": {}
+							}
+						]
+					},
+					{
+						"condition": "((query.cardinal_facing != 1.0 && query.cardinal_facing == 0.0) && (query.is_on_ground == 1.0 || query.is_in_water == 1.0))",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"effect @s levitation 1 6 true",
+										"playsound tinkers.slime_sling @a ~~~"
+									]
+								},
+								"swing": {}
+							}
+						]
+					},
+					{
+						"condition": "((query.cardinal_facing == 1.0) || (query.is_on_ground == 0.0 && query.is_in_water == 0.0))",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"playsound tinkers.slime_sling2 @a ~~~"
+									]
+								},
+								"swing": {}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

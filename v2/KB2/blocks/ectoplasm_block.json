@@ -1,0 +1,36 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:ectoplasm_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:flammable": {
+				"burn_odds": 0,
+				"flame_odds": 0
+			},
+			"minecraft:friction": 0.2,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ectoplasm_block",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:on_step_on": {
+				"event": "step on"
+			}
+		},
+		"events": {
+			"step on": {
+				"run_command": {
+					"command": [
+						"effect @e[r=1] invisibility 30 0 true"
+					]
+				}
+			}
+		}
+	}
+}

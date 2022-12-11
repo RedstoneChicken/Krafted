@@ -1,0 +1,151 @@
+{
+ "pools": [
+  {
+   "entries": [
+    {
+     "functions": [
+      {
+       "damage": {
+        "max": 0.9,
+        "min": 0
+       },
+       "function": "set_damage"
+      }
+     ],
+     "name": "minecraft:leather_boots",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:leather",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:bone",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:potion",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:string",
+     "type": "item",
+     "weight": 5
+    },
+    {
+     "functions": [
+      {
+       "damage": {
+        "max": 0.9,
+        "min": 0
+       },
+       "function": "set_damage"
+      }
+     ],
+     "name": "minecraft:fishing_rod",
+     "type": "item",
+     "weight": 2
+    },
+    {
+     "name": "minecraft:bowl",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:stick",
+     "type": "item",
+     "weight": 5
+    },
+    {
+     "name": "kna:hunting_rope",
+     "type": "item",
+     "weight": 1
+    },
+        {
+     "name": "kna:weather_scroll_clear",
+     "type": "item",
+     "weight": 1
+    },
+            {
+     "name": "kna:weather_scroll_rain",
+     "type": "item",
+     "weight": 1
+    },
+           {
+     "name": "kna:weather_scroll_thunder",
+     "type": "item",
+     "weight": 1
+           },
+    
+    {
+     "functions": [
+      {
+       "data": 0,
+       "function": "set_data"
+      },
+      {
+       "count": 10,
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:dye",
+     "type": "item",
+     "weight": 1
+    },
+    {
+     "functions": [
+      {
+       "data": 3,
+       "function": "set_data"
+      },
+      {
+       "count": 1,
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:dye",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:tripwire_hook",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:rotten_flesh",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:bamboo",
+     "type": "item",
+     "weight": 10
+    }
+   ],
+   "rolls": 1
+  }
+ ]
+}  },
+        {
+          "type": "item",
+          "name": "minecraft:rotten_flesh",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bamboo",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}      }
+      ]
+    }
+  ]
+}

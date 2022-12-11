@@ -1,0 +1,222 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:infidigger",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:damage": 1343,
+			"minecraft:durability": {
+				"max_durability": 999999,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "hurt_280000"
+				},
+				"on_hit_block": {
+					"event": "hurt"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.shovel"
+			},
+			"minecraft:icon": {
+				"texture": "infidigger"
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "q.any_tag('dirt', 'sand', 'gravel', 'grass', 'snow')"
+						},
+						"speed": 28000080000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "strat:grout",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "strat:nether_grout",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:farmland",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:grass",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:grass_path",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:gravel",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:podzol",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:dirt",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:sand",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:concrete_powder",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:snow_layer",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:clay",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:snow",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:mycelium",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:soul_sand",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					},
+					{
+						"block": "minecraft:soul_soil",
+						"speed": 280000,
+						"on_dig": {
+							"event": "break"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "hurt"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "§oInfiDigger"
+			}
+		},
+		"events": {
+			"hurt": {
+				"sequence": [
+					{
+					}
+				]
+			},
+			"hurt_280000": {
+				"sequence": [
+					{
+					}
+				]
+			},
+			"break": {
+				"sequence": [
+					{
+						"condition": "query.cardinal_player_facing == 0.0 || query.cardinal_player_facing == 1.0",
+						"run_command": {
+							"command": [
+								"function excavate_0"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 2.0",
+						"run_command": {
+							"command": [
+								"function excavate_2"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 3.0",
+						"run_command": {
+							"command": [
+								"function excavate_3"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 4.0 || query.cardinal_player_facing == 5.0",
+						"run_command": {
+							"command": [
+								"function excavate_4"
+							],
+							"target": "block"
+						}
+					}
+				]
+			}
+		}
+	}
+}

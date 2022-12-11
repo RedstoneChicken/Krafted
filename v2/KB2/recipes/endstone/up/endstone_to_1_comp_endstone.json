@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:endstone_to_compressed_endstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:end_stone"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_endstone",
+				"count": 1
+			}
+		]
+	}
+}

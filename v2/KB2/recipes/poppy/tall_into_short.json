@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_poppy_into_short_poppy"},"tags":["crafting_table"],"ingredients":[{"item":"ff:poppy_tall_item"}],"result":{"item":"ff:poppy_short_item","count":2}}}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.blastling": {
+			"textures": [
+				"Texture.default"
+			],
+			"geometry": "Geometry.default",
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.mod(math.floor(query.life_time * 8),10) / 10"
+				],
+				"scale": [
+					1,
+					"1 / 10"
+				]
+			}
+		}
+	}
+}

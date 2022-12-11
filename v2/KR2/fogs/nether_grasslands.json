@@ -1,0 +1,29 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "caf:nether_grasslands_fog"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 10,
+				"fog_end": 96,
+				"fog_color": "#870707",
+				"render_distance_type": "fixed"
+			},
+			"water": {
+				"fog_start": 0,
+				"fog_end": 15,
+				"fog_color": "#FF4949",
+				"render_distance_type": "fixed"
+			},
+			"weather": {
+				"fog_start": 10,
+				"fog_end": 96,
+				"fog_color": "#870707",
+				"render_distance_type": "render"
+			}
+		}
+	}
+}

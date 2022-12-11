@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "recipe:nether_ruby_helmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"A A"
+		],
+		"key": {
+			"A": {
+				"item": "caf:nether_ruby"
+			}
+		},
+		"result": [
+			{
+				"item": "caf:nether_ruby_helmet"
+			}
+		]
+	}
+}

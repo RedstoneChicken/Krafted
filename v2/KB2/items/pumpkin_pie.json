@@ -1,0 +1,18 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:pumpkin_pie"
+		},
+		"components": {
+			"minecraft:use_duration": 4,
+			"minecraft:food": {
+				"nutrition": 0,
+				"using_converts_to": "strat:pumpkin_pie_item",
+				"can_always_eat": true
+			}
+		},
+		"events": {}
+	}
+}

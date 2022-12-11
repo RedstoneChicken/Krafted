@@ -1,0 +1,134 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:moonstone",
+			"properties": {
+				"wiki:block_rotation": [
+					1,
+					0,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 4,
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.moonstone",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "moonstone",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:loot": "loot_tables/moonstone_crystal.json",
+			"minecraft:on_player_placing": {
+				"event": "wiki:update_rotation"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:block_rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:block_rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						180,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						270,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						180,
+						0,
+						-270
+					]
+				}
+			}
+		],
+		"events": {
+			"wiki:update_rotation": {
+				"set_block_property": {
+					"wiki:block_rotation": "query.block_face"
+				}
+			}
+		}
+	}
+}

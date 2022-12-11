@@ -1,0 +1,30 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:dullstone_bricks_blend"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SS",
+			"MM"
+		],
+		"key": {
+			"S": {
+				"item": "nether:sunstone_bricks"
+			},
+			"M": {
+				"item": "nether:moonstone_brick"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:dullstone_bricks",
+				"count": 2
+			}
+		]
+	}
+}

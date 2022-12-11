@@ -1,0 +1,27 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:blood_from_flesh"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:rotten_flesh"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:coagulated_blood",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

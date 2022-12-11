@@ -1,0 +1,17 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:white_sand_feature"
+    },
+    "count": 66,
+    "replace_rules": [
+      {
+        "places_block": "cav:white_sand",
+        "may_replace": [
+          "minecraft:sand"
+        ]
+      }
+    ]
+  }
+}

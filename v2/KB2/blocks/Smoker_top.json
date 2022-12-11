@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:smoker_top"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "smokers_top"
+				}
+			},
+			"minecraft:geometry": "geometry.smoker_top"
+		},
+		"events": {}
+	}
+}

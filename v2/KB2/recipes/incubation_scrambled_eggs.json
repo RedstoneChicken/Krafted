@@ -1,0 +1,40 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "scrambled_eggs_e2de643f"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA ",
+			"BC "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:egg",
+				"data": 0
+			},
+			"B": {
+				"item": "minecraft:bowl",
+				"data": 0
+			},
+			"C": {
+				"item": "minecraft:bucket",
+				"data": 1
+			}
+		},
+		"result": [
+			{
+				"item": "incubation:scrambled_eggs",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

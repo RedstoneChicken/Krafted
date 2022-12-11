@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "azc:tuna",
+			"materials" : {
+				"default" : "cod"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/tuna"
+			},
+			"geometry" : {
+				"default" : "geometry.tuna"
+			},
+			"animations" : {
+				"swim" : "animation.tuna.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.cod" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_tuna",
+				"texture_index" : 0
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:cut_mudstone"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:mudstone"
+      }
+    },
+    "result": {
+      "item": "cav:cut_mudstone",
+      "count": 4
+    }
+  }
+}

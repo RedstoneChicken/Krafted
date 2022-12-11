@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "azc:perch",
+			"materials" : {
+				"default" : "cod"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/perch"
+			},
+			"geometry" : {
+				"default" : "geometry.perch"
+			},
+			"animations" : {
+				"swim" : "animation.perch.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.cod" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_perch",
+				"texture_index" : 0
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:seared_stone_from_brick"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "strat:seared_brick"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:seared_stone_bucket",
+				"count": 1
+			}
+		],
+		"priority": 1
+	}
+}

@@ -1,0 +1,35 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:water_glass_from_bottle2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:drinking_glass"
+			},
+			"~": {
+				"item": "minecraft:potion"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:water_glass",
+				"count": 1
+			},
+			{
+				"item": "minecraft:glass_bottle",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

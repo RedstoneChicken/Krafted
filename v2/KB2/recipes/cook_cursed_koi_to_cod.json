@@ -1,0 +1,16 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook_cursed_koi_to_cod"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "adv:cursed_koi",
+    "output": "minecraft:cooked_fish"
+  }
+}

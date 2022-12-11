@@ -1,0 +1,25 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "end:zalix_buds_on_a_stick"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "end:zalix_buds"
+			},
+			{
+				"item": "minecraft:fishing_rod"
+			}
+		],
+		"result": [
+			{
+				"item": "end:zalix_bud_on_a_stick"
+			}
+		]
+	}
+}

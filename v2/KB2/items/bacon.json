@@ -1,0 +1,53 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:bacon",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 0.8,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.rawFood"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_bacon raw"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "poor",
+				"can_always_eat": false,
+				"on_consume": {
+					"event": "strat:raw_foodism"
+				}
+			}
+		},
+		"events": {
+			"strat:raw_foodism": {
+				"randomize": [
+					{
+						"weight": 199
+					},
+					{
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:raw_foodism_trophy",
+								"playsound strat.trophy_collected @s",
+								"effect @s nausea 10 1",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "holder"
+						},
+						"weight": 1
+					}
+				]
+			}
+		}
+	}
+}

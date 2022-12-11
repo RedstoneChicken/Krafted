@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cav:shale_bricks_stonecutter_1"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:polished_shale"
+      }
+    ],
+    "result": {
+      "item": "cav:shale_bricks",
+      "count": 1
+    }
+  }
+  
+}

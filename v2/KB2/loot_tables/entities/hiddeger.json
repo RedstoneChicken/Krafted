@@ -1,0 +1,35 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "kna:invisibility_cloak",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
+     {
+              "function": "enchant_random_gear",
+              "chance": 0.10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

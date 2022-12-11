@@ -1,0 +1,15 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.16.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:chorus_water_leaves_feature"
+		},
+		"places_block": "korbon:chorus_water_leaves",
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:air"
+		]
+	}
+}

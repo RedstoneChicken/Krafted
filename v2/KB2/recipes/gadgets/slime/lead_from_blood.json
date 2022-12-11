@@ -1,0 +1,29 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:lead_from_blood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~~ ",
+			"~O ",
+			"  ~"
+		],
+		"key": {
+			"~": {
+				"item": "minecraft:string"
+			},
+			"O": {
+				"item": "strat:coagulated_blood"
+			}
+		},
+		"result": {
+			"item": "minecraft:lead",
+			"count": 2
+		}
+	}
+}

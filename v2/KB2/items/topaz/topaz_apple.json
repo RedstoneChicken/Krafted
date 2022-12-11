@@ -1,0 +1,57 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:topaz_apple",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 1.6,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "supernatural",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "consumed",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "topaz_apple",
+				"frame": "query.texture_frame_index 1"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:display_name": {
+				"value": "Topaz Apple"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			}
+		},
+		"events": {
+			"consumed": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "regeneration",
+							"duration": 10,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"duration": 60,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

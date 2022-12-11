@@ -1,0 +1,31 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "honkit26113:slime_lantern"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" A ",
+			"ABA",
+			" A "
+		],
+		"key": {
+			"A": {
+				"item": "honkit26113:hardened_slimeball"
+			},
+			"B": {
+				"item": "minecraft:glowstone"
+			}
+		},
+		"result": [
+			{
+				"item": "honkit26113:slime_lantern",
+				"count": 1
+			}
+		]
+	}
+}

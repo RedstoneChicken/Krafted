@@ -1,0 +1,128 @@
+//bridge-file-version: #80
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:phreyium_spines",
+			"properties": {
+				"korbon:spiked": [
+					true,
+					false
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "phreyium_spines",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "korbon:spike",
+				"target": "self"
+			},
+			"minecraft:unwalkable": true,
+			"minecraft:map_color": "#216F64",
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			}
+		},
+		"events": {
+			"korbon:spike": {
+				"set_block_property": {
+					"korbon:spiked": true
+				},
+				"run_command": {
+					"command": [
+						"playsound hit.nether_sprouts @a[r=4]",
+						"particle minecraft:basic_smoke_particle ~0.4~0.5~0.4",
+						"particle minecraft:basic_smoke_particle ~-0.4~0.5~",
+						"particle minecraft:basic_smoke_particle ~-0.25~0.5~0.35",
+						"particle minecraft:basic_smoke_particle ~0.1~0.5~0.1",
+						"particle minecraft:basic_smoke_particle ~0.3~0.5~-0.2",
+						"particle minecraft:basic_smoke_particle ~-0.3~0.5~-0.35"
+					]
+				},
+				"set_block_at_pos": {
+					"block_type": "minecraft:air",
+					"block_offset": [
+						0,
+						1,
+						0
+					]
+				}
+			},
+			"korbon:unspike": {
+				"set_block_property": {
+					"korbon:spiked": false
+				},
+				"damage": {
+					"amount": 40,
+					"type": "contact",
+					"target": "other"
+				},
+				"run_command": {
+					"command": [
+						"playsound hit.nether_sprouts @a[r=4]",
+						"particle minecraft:basic_smoke_particle ~0.4~0.5~0.4",
+						"particle minecraft:basic_smoke_particle ~-0.4~0.5~",
+						"particle minecraft:basic_smoke_particle ~-0.25~0.5~0.35",
+						"particle minecraft:basic_smoke_particle ~0.1~0.5~0.1",
+						"particle minecraft:basic_smoke_particle ~0.3~0.5~-0.2",
+						"particle minecraft:basic_smoke_particle ~-0.3~0.5~-0.35"
+					]
+				},
+				"add_mob_effect": {
+					"effect": "fatal_poison",
+					"duration": 5,
+					"amplifier": 0
+				},
+				"set_block_at_pos": {
+					"block_type": "korbon:phreyium_spines_spikes",
+					"block_offset": [
+						0,
+						1,
+						0
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:spiked') == true",
+				"components": {
+					"minecraft:on_step_on": {
+						"event": "korbon:unspike",
+						"target": "self"
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "phreyium_spines",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:spiked') == false",
+				"components": {
+					"minecraft:on_step_off": {
+						"event": "korbon:spike",
+						"target": "self"
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "phreyium_spines_spiked",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.phreyium_spines"
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,52 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "strat:quartz_shuriken",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:egg"
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": 5,
+						"knockback": true,
+						"destroy_on_hit": true
+					},
+					"particle_on_hit": {
+						"particle_type": "iconcrack",
+						"num_particles": 3,
+						"on_entity_hit": true,
+						"on_other_hit": true
+					},
+					"remove_on_hit": {}
+				},
+				"power": 2,
+				"gravity": 0.05,
+				"angle_offset": 0
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

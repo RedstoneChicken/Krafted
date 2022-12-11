@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:buttered_pancake"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:pancake",
+				"count": 1
+			},
+			{
+				"item": "strat:butter",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:buttered_pancake",
+				"count": 1
+			}
+		]
+	}
+}

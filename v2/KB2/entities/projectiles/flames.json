@@ -1,0 +1,96 @@
+{
+  "format_version":"1.16.0",
+  "minecraft:entity":{
+    "description":{
+      "identifier":"kna:flames",
+      "is_spawnable":false,
+      "is_summonable":true,
+      "is_experimental":false,
+      "scripts":{
+        "animate":[ "flame" ]
+      },
+      "animations":{
+        "flame":"controller.animation.big_flame"
+      }
+    },
+    "component_groups":{
+      "remove_flames":{
+        "minecraft:variant":{
+          "value":1
+        },
+        "minecraft:despawn": {
+          "remove_child_entities": true,
+          "filters": {
+            "all_of": [{
+              "test": "is_family",
+              "subject": "self",
+              "value": "flame"
+            }]
+          }
+        }
+      }
+    },
+    "components":{
+      "minecraft:navigation.walk":{
+        "is_amphibious":false,
+        "can_pass_doors":false,
+        "can_walk":false,
+        "can_break_doors":false
+      },
+      "minecraft:variant":{
+        "value":0
+      },
+      "minecraft:timer":{
+        "looping":true,
+        "time":0.5,
+        "time_down_event":{
+          "event":"despawn"
+        }
+      },
+      "minecraft:damage_sensor":{
+        "triggers":{
+          "cause":"all",
+          "deals_damage":false
+        }
+      },
+      "minecraft:movement.basic":{
+        
+      },
+      "minecraft:movement":{
+        "value":0
+      },
+      "minecraft:type_family":{
+        "family":[ "flame", "pet" ]
+      },
+      "minecraft:collision_box":{
+        "width":0,
+        "height":0
+      },
+      "minecraft:physics":{
+        
+      },
+      "minecraft:pushable":{
+        "is_pushable":false,
+        "is_pushable_by_piston":false
+      },
+      "minecraft:conditional_bandwidth_optimization":{
+        
+      }
+    },
+    "events":{
+      "despawn":{
+        "add":{
+          "component_groups":[
+            "remove_flames"
+          ]
+        }
+      }
+    }
+  }
+}        }
+  }
+}  }
+      }
+    }
+  }
+}

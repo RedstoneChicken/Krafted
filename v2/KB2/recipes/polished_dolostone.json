@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:polished_dolostone"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:dolostone"
+      }
+    },
+    "result": {
+      "item": "cav:polished_dolostone",
+      "count": 4
+    }
+  }
+}

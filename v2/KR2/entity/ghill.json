@@ -1,0 +1,33 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:ghill",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ghill"
+			},
+			"geometry": {
+				"default": "geometry.ghill"
+			},
+			"animations": {
+				"move": "animation.ghill.move"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#8D07A0",
+				"overlay_color": "#C50BA8"
+			}
+		}
+	}
+}

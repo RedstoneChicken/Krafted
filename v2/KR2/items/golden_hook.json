@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:golden_hook",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "golden_hook",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

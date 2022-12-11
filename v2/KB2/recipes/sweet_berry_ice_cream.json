@@ -1,0 +1,40 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:sweet_berry_ice_cream"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#~",
+			"YV"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:milk_bucket"
+			},
+			"~": {
+				"item": "minecraft:sweet_berries"
+			},
+			"Y": {
+				"item": "strat:ice_cream_cone"
+			},
+			"V": {
+				"item": "minecraft:snowball"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:sweet_berry_ice_cream",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,30 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:sunstone_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SSS",
+			"SDS",
+			"SSS"
+		],
+		"key": {
+			"S": {
+				"item": "nether:sunstone_crystal"
+			},
+			"D": {
+				"item": "minecraft:diamond_chestplate"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:sunstone_chestplate"
+			}
+		]
+	}
+}

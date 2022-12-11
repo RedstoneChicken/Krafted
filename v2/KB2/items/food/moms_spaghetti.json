@@ -1,0 +1,54 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:moms_spaghetti",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 100
+			},
+			"minecraft:display_name": {
+				"value": "Mum's Spaghetti\n§7100 Noms§r"
+			},
+			"minecraft:icon": {
+				"texture": "moms_spaghetti"
+			},
+			"minecraft:creative_category": {
+				"parent": "commands"
+			},
+			"tag:cobalt_level": {},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 0.8,
+			"minecraft:chargeable": {
+				"on_complete": {
+					"event": "eat"
+				},
+				"movement_modifier": 0.5
+			}
+		},
+		"events": {
+			"eat": {
+				"sequence": [
+					{
+						"damage": {
+							"type": "none",
+							"amount": 1,
+							"target": "self"
+						},
+						"run_command": {
+							"command": [
+								"effect @s saturation 1 1 true",
+								"playsound random.burp @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

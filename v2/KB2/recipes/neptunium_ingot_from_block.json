@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "neptunium_ingot_from_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "azc:neptunium_block"
+      }
+    ],
+    "result": {
+      "item": "azc:neptunium_ingot",
+      "count": 9
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:jump_boots",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "jump_boots"
+			},
+			"minecraft:display_name": {
+			 "value":  "Jump Boost\n§8Common\n§7Cooldown: 30\nLevel: 1\n Jump Boost 3: 10 sec"
+			},
+			"minecraft:cooldown": {
+				"category": "jump_boots",
+				"duration": 30
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound mob.player.hurt_drown @p",
+            "effect @s jump_boost 10 2 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}  
+

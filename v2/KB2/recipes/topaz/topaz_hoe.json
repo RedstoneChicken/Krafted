@@ -1,0 +1,31 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:topaz_hoe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XX",
+			" #",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stick"
+			},
+			"X": {
+				"item": "oh:topaz"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:topaz_hoe",
+				"count": 1
+			}
+		]
+	}
+}

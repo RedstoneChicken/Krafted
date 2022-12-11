@@ -1,0 +1,19 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "end:endilex_tree_feature"
+		},
+		"features": [
+			[
+				"end:endilex_tree_small1",
+				3
+			],
+			[
+				"end:endilex_tree_big1",
+				1
+			]
+		]
+	}
+}

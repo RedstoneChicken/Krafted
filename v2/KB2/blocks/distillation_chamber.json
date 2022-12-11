@@ -1,0 +1,22 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:distillation_chamber"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:block_light_emission": 0.4,
+			"minecraft:explosion_resistance": 4,
+			"minecraft:geometry": "geometry.distillation_chamber",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "distillation chamber",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"events": {}
+	}
+}

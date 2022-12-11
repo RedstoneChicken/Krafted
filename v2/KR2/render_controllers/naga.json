@@ -1,0 +1,17 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.naga": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.default"
+			]
+		}
+	}
+}

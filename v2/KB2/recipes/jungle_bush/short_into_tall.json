@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_jungle_bush_into_tall_jungle_bush"},"tags":["crafting_table"],"ingredients":[{"item":"ff:jungle_bush_item","count":2}],"result":{"item":"ff:jungle_bush_tall_item"}}}

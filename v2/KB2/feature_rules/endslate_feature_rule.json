@@ -1,0 +1,40 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "end:endslate_feature_rule",
+			"places_feature": "end:endslate_scatter_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "the_end"
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"y": 0,
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 5
+			}
+		}
+	}
+}

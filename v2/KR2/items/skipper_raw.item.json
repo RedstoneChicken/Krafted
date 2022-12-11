@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:skipper_raw",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:icon": "skipper_raw",
+			"minecraft:use_animation": "eat",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

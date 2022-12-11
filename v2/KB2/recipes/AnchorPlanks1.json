@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "caf:ap1"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"A"
+		],
+		"key": {
+			"A": {
+				"item": "caf:stripped_anchor_log"
+			}
+		},
+		"result": [
+			{
+				"item": "caf:anchor_planks",
+				"count": 4
+			}
+		]
+	}
+}

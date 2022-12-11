@@ -1,0 +1,27 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:phreyium_sprouts_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:phreyium_sprouts",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "phreyium_sprouts_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:phreyium_sprouts_item.name"
+			}
+		},
+		"events": {}
+	}
+}

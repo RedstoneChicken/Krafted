@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "chorus_koi_to_chorus_fruit"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:chorus_koi"
+      }
+    ],
+    "result": {
+      "item": "minecraft:chorus_fruit"
+    }
+  }
+}

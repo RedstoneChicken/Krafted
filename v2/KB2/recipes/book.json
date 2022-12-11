@@ -1,0 +1,37 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "chetty:waypoint_map"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AB",
+            "CD"
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:compass",
+                "data": 0
+            },
+            "B": {
+                "item": "minecraft:empty_map",
+                "data": 0
+            },
+            "C": {
+                "item": "minecraft:empty_map",
+                "data": 0
+            },
+            "D": {
+                "item": "minecraft:ender_pearl",
+                "data": 0
+            }
+        },
+        "result": {
+            "item": "chetty:waypoint_map",
+            "count": 1
+        }
+    }
+}

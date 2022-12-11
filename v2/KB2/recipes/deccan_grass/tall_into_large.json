@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_deccan_grass_into_large_deccan_grass"},"tags":["crafting_table"],"ingredients":[{"item":"ff:deccan_grass_tall_item","count":2}],"result":{"item":"ff:deccan_grass_large_item"}}}

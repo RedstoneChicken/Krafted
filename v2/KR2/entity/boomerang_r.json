@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "kna:boomerang_r",
+      "textures": {
+        "default": "textures/boomerang"
+      },
+      "geometry": {
+        "default": "geometry.boomerang"
+      },
+      "animations": {
+        "spin": "controller.animation.boomerang.spin",
+        "spinning": "animation.boomerang.spinning"
+      },
+      "scripts": {
+        "animate": [ "spin" ]
+      },
+      "render_controllers": [ "controller.render.translucence" ],
+      "materials": {
+        "default": "translucence"
+      }
+    }
+  }
+}}    }
+  }
+}cence" ]
+    }
+  }
+}} ]
+    }
+  }
+}

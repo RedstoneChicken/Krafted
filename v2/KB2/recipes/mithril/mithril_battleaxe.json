@@ -1,0 +1,34 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:mithril_battleaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XBX",
+			"X#X",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "oh:strong_stick"
+			},
+			"X": {
+				"item": "oh:mithril"
+			},
+			"B": {
+				"item": "oh:mithril_block"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:mithril_battleaxe",
+				"count": 1
+			}
+		]
+	}
+}

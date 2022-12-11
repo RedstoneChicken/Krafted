@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:gold_rose_into_gold_rose_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:gold_rose_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:gold_rose_bouquet_item",
+      "count": 1
+    }
+  }
+}

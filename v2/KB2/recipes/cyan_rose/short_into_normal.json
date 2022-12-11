@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_cyan_rose_into_normal_cyan_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:cyan_rose_short_item"}],"result":{"item":"ff:cyan_rose_item","count":2}}}

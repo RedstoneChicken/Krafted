@@ -1,0 +1,20 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "nether:marouge_vine_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "nether:marouge_vines"
+			},
+			"minecraft:icon": {
+				"texture": "marouge_vines_item"
+			}
+		},
+		"events": {}
+	}
+}

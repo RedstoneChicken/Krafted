@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_bayad_wooden"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:wooden_fillet_knife"
+      },
+      "B": {
+        "item": "azc:bayad"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 4
+      },
+      {
+        "item": "azc:wooden_fillet_knife"
+      }
+    ]
+  }
+}

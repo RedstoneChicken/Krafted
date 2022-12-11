@@ -1,0 +1,26 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:jungleleafbush"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.leafbush",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_leafbush",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:loot": "loot_tables/bushloot.json"
+		},
+		"events": {}
+	}
+}

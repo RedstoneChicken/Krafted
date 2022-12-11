@@ -1,0 +1,31 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:part_builder_birch"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "minecraft:log",
+				"data": 2
+			}
+		},
+		"result": [
+			{
+				"item": "strat:part_builder_birch",
+				"count": 1
+			}
+		]
+	}
+}

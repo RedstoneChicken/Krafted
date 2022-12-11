@@ -1,0 +1,23 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:excavator_128_broken",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "excavator_128_broken"
+			},
+			"minecraft:display_name": {
+				"value": "Manyullyn Excavator\n§l§4Broken"
+			},
+			"minecraft:creative_category": {
+				"parent": "commands"
+			}
+		},
+		"events": {}
+	}
+}

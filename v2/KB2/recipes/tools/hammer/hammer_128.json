@@ -1,0 +1,35 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:hammer_128"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			"~",
+			" #",
+			"o ~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_hammer_head"
+			},
+			"~": {
+				"item": "strat:manyullyn_large_plate"
+			},
+			"o": {
+				"item": "strat:manyullyn_tough_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:hammer_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

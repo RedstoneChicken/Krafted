@@ -1,0 +1,557 @@
+{
+  "format_version": "1.18.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "chetty:waypoint_beam",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "waypoint_black": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "waypoint_blue": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "waypoint_brown": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "waypoint_cyan": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "waypoint_gray": {
+        "minecraft:variant": {
+          "value": 4
+        }
+      },
+      "waypoint_green": {
+        "minecraft:variant": {
+          "value": 5
+        }
+      },
+      "waypoint_light_blue": {
+        "minecraft:variant": {
+          "value": 6
+        }
+      },
+      "waypoint_lime": {
+        "minecraft:variant": {
+          "value": 7
+        }
+      },
+      "waypoint_magenta": {
+        "minecraft:variant": {
+          "value": 8
+        }
+      },
+      "waypoint_orange": {
+        "minecraft:variant": {
+          "value": 9
+        }
+      },
+      "waypoint_pink": {
+        "minecraft:variant": {
+          "value": 10
+        }
+      },
+      "waypoint_purple": {
+        "minecraft:variant": {
+          "value": 11
+        }
+      },
+      "waypoint_red": {
+        "minecraft:variant": {
+          "value": 12
+        }
+      },
+      "waypoint_light_gray": {
+        "minecraft:variant": {
+          "value": 13
+        }
+      },
+      "waypoint_white": {
+        "minecraft:variant": {
+          "value": 14
+        }
+      },
+      "waypoint_yellow": {
+        "minecraft:variant": {
+          "value": 15
+        }
+      },
+      "waypoint_none": {
+        "minecraft:variant": {
+          "value": 16
+        }
+      },
+      "waypoint_beam_remove": {
+        "minecraft:instant_despawn": {}
+      },
+      "waypoint_show_beam": {
+        "minecraft:is_saddled": {}
+      },
+      "waypoint_hide_beam": {},
+      "waypoint_show_name": {
+        "minecraft:skin_id": {
+          "value": 0
+        },
+        "minecraft:nameable": {
+          "always_show": true,
+          "allow_name_tag_renaming": false
+        }
+      },
+      "waypoint_hide_name": {
+        "minecraft:skin_id": {
+          "value": 1
+        },
+        "minecraft:nameable": {
+          "always_show": false,
+          "allow_name_tag_renaming": false
+        }
+      },
+      "teleport": {
+        "minecraft:timer": {
+          "looping": false,
+          "time": 0.5,
+          "time_down_event": {
+            "event": "teleport_sound"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "waypoint",
+          "inanimate"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 0.3
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 1.2,
+            "height": 1.2,
+            "pivot": [
+              0,
+              0.6,
+              0
+            ]
+          }
+        ]
+      },
+      "minecraft:health": {
+        "max": 1,
+        "min": 1,
+        "value": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "deals_damage": false
+        }
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:tick_world": {},
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": "waypoint"
+                }
+              ]
+            },
+            "event": "idle"
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "waypoint_show_beam",
+            "waypoint_show_name"
+          ]
+        }
+      },
+      "set_show_name": {
+        "add": {
+          "component_groups": [
+            "waypoint_show_name"
+          ]
+        }
+      },
+      "set_hide_name": {
+        "add": {
+          "component_groups": [
+            "waypoint_hide_name"
+          ]
+        }
+      },
+      "set_show_beam": {
+        "add": {
+          "component_groups": [
+            "waypoint_show_beam"
+          ]
+        }
+      },
+      "set_hide_beam": {
+        "remove": {
+          "component_groups": [
+            "waypoint_show_beam"
+          ]
+        }
+      },
+      "add_black": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_black"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_black"
+            }
+          }
+        ]
+      },
+      "add_blue": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_blue"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_blue"
+            }
+          }
+        ]
+      },
+      "add_brown": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_brown"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_brown"
+            }
+          }
+        ]
+      },
+      "add_cyan": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_cyan"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_cyan"
+            }
+          }
+        ]
+      },
+      "add_gray": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_gray"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_gray"
+            }
+          }
+        ]
+      },
+      "add_green": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_green"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_green"
+            }
+          }
+        ]
+      },
+      "add_light_blue": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_light_blue"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_light_blue"
+            }
+          }
+        ]
+      },
+      "add_lime": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_lime"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_lime"
+            }
+          }
+        ]
+      },
+      "add_magenta": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_magenta"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_magenta"
+            }
+          }
+        ]
+      },
+      "add_orange": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_orange"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_orange"
+            }
+          }
+        ]
+      },
+      "add_pink": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_pink"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_pink"
+            }
+          }
+        ]
+      },
+      "add_purple": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_purple"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_purple"
+            }
+          }
+        ]
+      },
+      "add_red": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_red"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_red"
+            }
+          }
+        ]
+      },
+      "add_light_gray": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_light_gray"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_silver"
+            }
+          }
+        ]
+      },
+      "add_white": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_white"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_white"
+            }
+          }
+        ]
+      },
+      "add_yellow": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_yellow"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": "function beacon_yellow"
+            }
+          }
+        ]
+      },
+      "add_none": {
+        "add": {
+          "component_groups": [
+            "waypoint_none"
+          ]
+        }
+      },
+      "waypoint_remove": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "setblock ~~~ air"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "waypoint_beam_remove"
+              ]
+            }
+          }
+        ]
+      },
+      "idle": {
+        "run_command": {
+          "command": [
+            "effect @s clear",
+            "tp @s ~~~"
+          ]
+        }
+      },
+      "particle": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                 "particle chetty:teleport ~~~",
+                "particle chetty:teleport ~~1~"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "teleport"
+              ]
+            }
+          }
+        ]
+      },
+      "teleport_sound": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "playsound mob.shulker.teleport @a[r=5]"
+              ]
+            }
+          },
+          {
+            "remove": {
+              "component_groups": [
+                "teleport"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

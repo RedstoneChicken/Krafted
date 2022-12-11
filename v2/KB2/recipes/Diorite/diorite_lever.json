@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:diorite_lever"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "X",
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "cav:dacite"
+      },
+      "X": {
+        "item": "minecraft:stone",
+        "data": 3
+      }
+    },
+    "result": {
+      "item": "minecraft:lever"
+    }
+  }
+}

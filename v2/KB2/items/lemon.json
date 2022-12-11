@@ -1,0 +1,47 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:lemon",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"saturation_modifier": "normal",
+				"nutrition": 2,
+				"can_always_eat": false,
+				"effects": {},
+				"on_consume": {
+					"event": "effect",
+					"target": "self"
+				}
+			},
+			"minecraft:use_duration": 1.5,
+			"minecraft:use_animation": "eat",
+			"minecraft:icon": {
+				"texture": "korbon:lemon"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:display_name": {
+				"value": "Lemon"
+			}
+		},
+		"events": {
+			"effect": {
+				"add_mob_effect": {
+					"effect": "nausea",
+					"duration": 7,
+					"amplifier": 1,
+					"target": "holder"
+				}
+			}
+		}
+	}
+}

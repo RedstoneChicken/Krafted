@@ -1,0 +1,58 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:dynamite",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0,
+         "minecraft:icon":{
+            "texture":"dynamite"
+         },
+         "minecraft:hand_equipped":true,
+         "minecraft:display_name":{
+            "value":"Dynamite\n§8Common\n§7Cooldown: 42\nLevel: 1"
+         },
+         "minecraft:can_destroy_in_creative":false,
+         "minecraft:cooldown":{
+            "category":"dynamite",
+            "duration":42
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"fire",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "fire":{
+            "run_command":{
+               "command":[
+                  "playsound random.fuse @a[r=10]",
+                  "effect @s resistance 4 5 true"
+               ],
+               "target":"holder"
+            },
+            "swing":{
+               
+            },
+            "shoot":{
+               "launch_power":10,
+               "angle_offset":"query.cardinal_facing",
+               "projectile":"tnt"
+            },
+            "damage":{
+               "type":"magic",
+               "amount":1
+            }
+         }
+      }
+   }
+}

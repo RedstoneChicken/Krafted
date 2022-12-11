@@ -1,0 +1,568 @@
+{
+  "format_version": "1.19.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "azc:worm_farm",
+      "menu_category": {
+        "category": "items"
+      },
+      "properties": {
+        "azc:farm": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/worm_farm.json",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3
+      },
+      "minecraft:flammable": {
+        "destroy_chance_modifier": 20,
+        "catch_chance_modifier": 5
+      },
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "worm_farm_empty",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "geometry.worm_farm_empty",
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": [
+              "up"
+            ]
+          }
+        ]
+      }
+    },
+    "events": {
+      "start": {
+        "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+        "trigger": {
+          "event": "pile_1"
+        }
+      },
+      "pile_1": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 1
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 2
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 2
+            }
+          }
+        ]
+      },
+      "pile_2": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 2
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 3
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 3
+            }
+          }
+        ]
+      },
+      "pile_3": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 3
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 4
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 4
+            }
+          }
+        ]
+      },
+      "pile_4": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 4
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 5
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 5
+            }
+          }
+        ]
+      },
+      "pile_5": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 5
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 6
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 6
+            }
+          }
+        ]
+      },
+      "pile_6": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 6
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 7
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 7
+            }
+          }
+        ]
+      },
+      "pile_7": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 75,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "playsound block.composter.fill @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 7
+                }
+              },
+              {
+                "weight": 25,
+                "condition": "query.get_equipped_item_name == 'rotten_flesh'",
+                "decrement_stack": {},
+                "run_command": {
+                  "command": [
+                    "particle minecraft:crop_growth_emitter ~~1~",
+                    "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+                  ]
+                },
+                "set_block_property": {
+                  "azc:farm": 8
+                }
+              }
+            ]
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'chr:rotten_flesh_block')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": [
+                "particle minecraft:crop_growth_emitter ~~1~",
+                "playsound block.composter.fill_success @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "set_block_property": {
+              "azc:farm": 8
+            }
+          }
+        ]
+      },
+      "ready": {
+        "run_command": {
+          "command": [
+            "playsound block.composter.ready @a [r=10] ~~~ 0.5"
+          ]
+        },
+        "set_block_property": {
+          "azc:farm": 9
+        }
+      },
+      "worm": {
+        "run_command": {
+          "command": [
+            "playsound block.composter.empty @a [r=10] ~~~ 0.5"
+          ]
+        },
+        "spawn_loot": {
+          "table": "loot_tables/blocks/worm_ready.json"
+        },
+        "set_block_property": {
+          "azc:farm": 1
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('azc:farm') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_empty",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_empty",
+          "minecraft:on_interact": {
+            "event": "start"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_fill_1",
+          "minecraft:on_interact": {
+            "event": "pile_2"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 3",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_fill_2",
+          "minecraft:on_interact": {
+            "event": "pile_3"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 4",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_fill_3",
+          "minecraft:on_interact": {
+            "event": "pile_4"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 5",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_fill_4",
+          "minecraft:on_interact": {
+            "event": "pile_5"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 6",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_fill_5",
+          "minecraft:on_interact": {
+            "event": "pile_6"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 7",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_fill_6",
+          "minecraft:on_interact": {
+            "event": "pile_7"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 8",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_filled",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_ready",
+          "minecraft:queued_ticking": {
+            "looping": false,
+            "interval_range": [
+              40,
+              60
+            ],
+            "on_tick": {
+              "event": "ready",
+              "target": "self"
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:farm') == 9",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "worm_farm_ready",
+              "render_method": "opaque"
+            }
+          },
+          "minecraft:geometry": "geometry.worm_farm_ready",
+          "minecraft:on_interact": {
+            "event": "worm"
+          }
+        }
+      }
+    ]
+  }
+}

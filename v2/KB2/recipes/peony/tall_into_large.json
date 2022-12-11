@@ -1,0 +1,21 @@
+{
+    "format_version": 1.12,
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "ff:tall_peony_into_large_peony"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "minecraft:double_plant",
+                "data": 5,
+                "count": 2
+            }
+        ],
+        "result": {
+            "item": "ff:peony_large_item"
+        }
+    }
+}

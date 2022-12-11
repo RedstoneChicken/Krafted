@@ -1,0 +1,35 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:stnng"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "caf:growstalagnate"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "caf:growstalagnate"
+			}
+		},
+		"events": {
+			"caf:growstalagnate": {
+				"run_command": {
+					"command": [
+						"fill ~ ~ ~ ~ ~80 ~ caf:stalagnate_trunk 0 replace air"
+					]
+				}
+			}
+		}
+	}
+}

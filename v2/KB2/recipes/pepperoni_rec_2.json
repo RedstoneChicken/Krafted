@@ -1,0 +1,26 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:pepperoni_2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:cooked_porkchop"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:pepperoni",
+				"count": 2
+			}
+		]
+	}
+}

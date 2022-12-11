@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:granite_shovel"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "X",
+      "#",
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stick"
+      },
+      "X": {
+        "item": "minecraft:stone",
+        "data": 1
+      }
+    },
+    "result": {
+      "item": "minecraft:stone_shovel"
+    }
+  }
+}

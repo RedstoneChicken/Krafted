@@ -1,0 +1,183 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cav:polished_siltstone_slab",
+			"properties": {
+				"cavern:slab_variant": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+          "minecraft:creative_category": {
+             "category": "construction",
+             "group": "itemGroup.name.slab"
+          },
+			"minecraft:destroy_time": 0.6,
+			"minecraft:explosion_resistance": 30,
+			"minecraft:on_player_placing": {
+				"event": "cavern:set_position",
+				"condition": "query.target_x_rotation < 0.0 || query.cardinal_block_face_placed_on == 0.0"
+			},
+			"minecraft:rotation": [
+				0,
+				0,
+				0
+			],
+			"minecraft:map_color": "#3F4242"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('cavern:slab_variant') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "polished_siltstone",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:geometry": "geometry.lower_slab",
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "cavern:half_bottom_to_full",
+						"condition": "query.cardinal_block_face_placed_on == 1.0 && query.get_equipped_item_name('main_hand') == 'polished_siltstone_slab'"
+					},
+					"minecraft:breathability": "air",
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('cavern:slab_variant') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "polished_siltstone",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:geometry": "geometry.upper_slab",
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							8,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "cavern:half_upper_to_full",
+						"condition": "query.cardinal_block_face_placed_on == 1.0 && query.get_equipped_item_name('main_hand') == 'polished_siltstone_slab'"
+					},
+					"minecraft:breathability": "air",
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('cavern:slab_variant') == 2",
+				"components": {
+					"minecraft:unit_cube": {},
+					"minecraft:entity_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:loot": "loot_tables/double_polished_siltstone_slab.json",
+					"minecraft:breathability": "solid",
+					"minecraft:block_light_absorption": 16
+				}
+			}
+		],
+		"events": {
+			"cavern:set_position": {
+				"set_block_property": {
+					"cavern:slab_variant": "query.block_property('cavern:slab_variant')+1"
+				}
+			},
+			"cavern:half_bottom_to_full": {
+				"set_block_property": {
+					"cavern:slab_variant": "query.block_property('cavern:slab_variant')+2"
+				},
+				"run_command": {
+					"command": [
+						"playsound dig.stone @s ~~~ 50"
+					],
+					"target": "other"
+				},
+				"decrement_stack": {}
+			},
+			"cavern:half_upper_to_full": {
+				"set_block_property": {
+					"cavern:slab_variant": "query.block_property('cavern:slab_variant')+1"
+				},
+				"run_command": {
+					"command": [
+						"playsound dig.stone @s ~~~ 50"
+					],
+					"target": "other"
+				},
+				"decrement_stack": {}
+			}
+		}
+	}
+}

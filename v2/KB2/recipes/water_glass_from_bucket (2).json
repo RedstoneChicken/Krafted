@@ -1,0 +1,35 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:water_glass_from_bucket"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~#",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "strat:drinking_glass"
+			},
+			"~": {
+				"item": "minecraft:water_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:water_glass",
+				"count": 3
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		],
+		"priority": 1
+	}
+}

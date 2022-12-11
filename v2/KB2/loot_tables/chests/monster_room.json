@@ -1,0 +1,156 @@
+{
+ "pools": [
+  {
+   "entries": [
+    {
+     "functions": [
+      {
+       "count": {
+        "max": 5,
+        "min": 1
+       },
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:iron_ingot",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "functions": [
+      {
+       "count": {
+        "max": 4,
+        "min": 1
+       },
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:redstone",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:bread",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:golden_apple",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "functions": [
+      {
+       "count": {
+        "max": 4,
+        "min": 1
+       },
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:wheat",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "functions": [
+      {
+       "count": {
+        "max": 4,
+        "min": 1
+       },
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:gunpowder",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "functions": [
+      {
+       "count": {
+        "max": 4,
+        "min": 1
+       },
+       "function": "set_count"
+      }
+     ],
+     "name": "minecraft:string",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "minecraft:name_tag",
+     "type": "item",
+     "weight": 10
+    },
+    {
+     "name": "kna:vikings_horn",
+     "type": "item",
+     "weight": 8
+    },
+    {
+     "name": "kna:aura_goggles",
+     "type": "item",
+     "weight": 3
+    },
+    {
+     "name": "minecraft:bucket",
+     "type": "item",
+     "weight": 5
+    },
+    {
+     "name": "minecraft:horsearmoriron",
+     "type": "item",
+     "weight": 5
+    },
+    {
+     "name": "minecraft:horsearmorgold",
+     "type": "item",
+     "weight": 2
+    },
+    {
+     "functions": [
+      {
+       "function": "enchant_randomly"
+      }
+     ],
+     "name": "minecraft:book",
+     "type": "item",
+     "weight": 1
+    }
+   ],
+   "rolls": 1
+  }
+ ]
+}",
+          "name": "minecraft:bucket",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:horsearmoriron",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:horsearmorgold",
+          "weight": 2
+        },
+        {
+          "type": "item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:banded_snadstone_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:banded_sandstone"
+      }
+    },
+    "result": {
+      "item": "cav:banded_sandstone_slab",
+      "count": 6
+    }
+  }
+}

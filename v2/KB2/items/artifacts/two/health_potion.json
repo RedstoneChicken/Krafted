@@ -1,0 +1,49 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:health_potion_two",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "health_potion"
+			},
+			"minecraft:display_name": {
+			 "value":  "Health Potion\n§8Common\n§7Cooldown: 18\nLevel: 2"			},
+			"minecraft:cooldown": {
+				"category": "health_potion",
+				"duration": 18
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}   
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"effect @s regeneration 3 3",
+            "effect @s instant_health 1 1 true",
+            "execute @s ~~1~ particle minecraft:heart_particle ~~~",
+            "execute @s ~~1~ particle minecraft:heart_particle ~~~",
+            "playsound random.drink @a[r=10]"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

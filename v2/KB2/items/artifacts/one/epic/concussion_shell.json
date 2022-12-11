@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:concussion_shell",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "concussion_shell"
+			},
+			"minecraft:display_name": {
+			 "value": "§eConcussion Shell\n§6Epic\n§7Cooldown: 48\nLevel: 1\nStun : 10 secs"
+			},
+			"minecraft:cooldown": {
+				"category": "concussion_shell",
+				"duration": 48
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          		"playsound mob.wither.death @a[r=10] ~ ~ ~ 0.8 0.5 1.1",
+            "tag @s add self",
+            "effect @e[tag=!self,r=10] slowness 10 10 true",
+            "execute @e[tag=!self,r=10] ~~~ particle minecraft:knockback_roar_particle ~~~",
+            "tag @s remove self"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

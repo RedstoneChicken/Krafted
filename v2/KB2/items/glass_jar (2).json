@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:glass_jar",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "glass_jar"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:jar_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

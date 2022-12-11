@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_blue_tulip_into_large_blue_tulip"},"tags":["crafting_table"],"ingredients":[{"item":"ff:blue_tulip_tall_item","count":2}],"result":{"item":"ff:blue_tulip_large_item"}}}

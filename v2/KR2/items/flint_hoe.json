@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16",
+  "minecraft:item": {
+    "description": {
+      "identifier": "cav:flint_hoe",
+      "category": "Equipment",
+      "is_experimental": false,
+      "register_to_creative_menu": true
+    },
+
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.sword"
+      },
+      "minecraft:icon": "flint_hoe",
+      "minecraft:render_offsets": "tools",
+      "register_to_creative_menu": true
+    }
+  }
+}

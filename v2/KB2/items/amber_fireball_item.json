@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "nether:amber_fireball_item"
+		},
+		"components": {
+			"minecraft:throwable": {
+				"do_swing_animation": true
+			},
+			"minecraft:icon": {
+				"texture": "amber_fireball"
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "nether:amber_fireball"
+			}
+		},
+		"events": {}
+	}
+}

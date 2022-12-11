@@ -1,0 +1,162 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "components":{
+         "minecraft:can_destroy_in_creative":false,
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.items"
+         },
+         "minecraft:display_name":{
+            "value":"§8Tier II Crate\n§7Uncommon Artifact"
+         },
+         "minecraft:hand_equipped":true,
+         "minecraft:icon":{
+            "texture":"uncommon_artifact"
+         },
+         "minecraft:max_stack_size":1,
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"give",
+               "target":"self"
+            }
+         },
+         "minecraft:use_animation":"drink",
+         "minecraft:use_duration":0
+      },
+      "description":{
+         "identifier":"kna:uncommon_crate"
+      },
+      "events":{
+         "give":{
+            "randomize":[
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:solar_glass 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:drowned_shards 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:feather_fall 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:silver_ring 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:stingy_hive 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:snow_figure 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:xp_tome 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:hunting_rope 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:greeny_waste 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:herbal_drink 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:poisoned_carnation 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:invisibility_cloak 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:bush_camou 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:knockback_stick 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               }
+            ]
+         }
+      }
+   }
+}

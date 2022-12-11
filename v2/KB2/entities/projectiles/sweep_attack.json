@@ -1,0 +1,99 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "kna:sweep_attack",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"disappear": {
+				"minecraft:despawn": {
+					"remove_child_entities": true,
+					"filters": {
+						"all_of": [{
+							"test": "is_family",
+							"subject": "self",
+							"value": "attack"
+						}]
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": [{
+				"cause": "all",
+				"deals_damage": false
+			}],
+			"minecraft:type_family": {
+				"family": ["attack","pet"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:timer": {
+				"looping": false,
+				"time": 0.1,
+				"time_down_event": {
+					"event": "disappear"
+				}
+			},
+			"minecraft:scale": {
+				"value": 0.5
+			},
+			"minecraft:behavior.knockback_roar": {
+				"priority": 1,
+				"duration": 0.1,
+				"attack_time": 0.1,
+				"knockback_damage": 2,
+				"knockback_strength": 1,
+				"knockback_range": 1,
+				"on_roar_end": {
+					"event": "disappear"
+				},
+				"cooldown_time": 10.0
+			},
+			"minecraft:physics": {
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"disappear": {
+				"add": {
+					"component_groups": ["disappear"]
+				}
+			}
+		}
+	}
+}	
+				"all_of": [
+						{ "test" :  "is_family", "subject" : "other", "operator": "!=", "value" :  "player"},
+						{ "test" :  "is_family", "subject" : "other", "operator": "!=", "value" :  "pet"}
+					]
+				},
+				"on_roar_end": {
+					"event": "disappear"
+				},
+				"cooldown_time": 10.0
+			},
+			"minecraft:physics": {
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"disappear": {
+				"add": {
+					"component_groups": ["disappear"]
+				}
+			}
+		}
+	}
+}			}
+	}
+}			}
+			}
+		}
+	}
+}

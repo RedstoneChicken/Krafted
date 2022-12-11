@@ -1,0 +1,82 @@
+//bridge-file-version: #31
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "rns:branchtree1",
+			"places_feature": "rns:branchtree1"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "desert"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "mesa"
+							},
+							{
+								"all_of": [
+									{
+										"test": "has_biome_tag",
+										"operator": "==",
+										"value": "forest"
+									},
+									{
+										"test": "has_biome_tag",
+										"operator": "!=",
+										"value": "birch"
+									},
+									{
+										"test": "has_biome_tag",
+										"operator": "!=",
+										"value": "roofed"
+									},
+									{
+										"test": "has_biome_tag",
+										"operator": "==",
+										"value": "taiga"
+									}
+								]
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "savanna"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz)",
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 50
+			}
+		}
+	}
+}

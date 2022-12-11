@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pebbles_var2",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 0, 1], "size": [8, 2, 4], "uv": [0, 0]},
+						{"origin": [-6, 0, -7], "size": [5, 1, 4], "uv": [0, 0]},
+						{"origin": [3, 0, -7], "size": [4, 1, 6], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

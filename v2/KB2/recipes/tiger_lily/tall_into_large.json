@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_tiger_lily_into_large_tiger_lily"},"tags":["crafting_table"],"ingredients":[{"item":"ff:tiger_lily_tall_item","count":2}],"result":{"item":"ff:tiger_lily_large_item"}}}

@@ -1,0 +1,12 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "end:ground_zallium_feature"
+		},
+		"places_block": "end:zallium",
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

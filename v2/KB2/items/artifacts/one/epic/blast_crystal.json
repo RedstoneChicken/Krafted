@@ -1,0 +1,52 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:blast_crystal",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"blast_crystal"
+         },
+         "minecraft:display_name":{
+            "value":"§eBlast Crystal\n§6Epic\n§7Cooldown: 60\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"blast_crystal",
+            "duration":60
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"use",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "use":{
+            "run_command":{
+               "command":[
+                  "playsound mob.dolphin.idle @a[r=10]",
+                  "tag @s add blast",
+                  "effect @s resistance 5 10",
+                  "execute @e[tag=!blast,r=8] ~~~ summon ender_crystal",
+                  "execute @e[tag=!blast,r=8] ~~~ summon ender_crystal ~~2~",
+                  "execute @e[type=ender_crystal,tag=!none,r=8] ~~~ summon arrow ~~2~",
+                  "execute @e[type=ender_crystal] ~~~ summon ender_crystal ~~~",
+                  "tag @s remove blast"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

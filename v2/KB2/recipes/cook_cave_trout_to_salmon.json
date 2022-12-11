@@ -1,0 +1,16 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook_cave_trout_to_salmon"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "adv:cave_trout",
+    "output": "minecraft:cooked_salmon"
+  }
+}

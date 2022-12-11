@@ -1,0 +1,23 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "korbon:chorus_slab"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "~~~"
+        ],
+        "key": {
+            "~": {
+                "item": "korbon:chorus_planks"
+            }
+        },
+        "result": [
+			{
+				"item": "korbon:chorus_slab",
+				"count": 6
+			}
+		]
+    }
+}

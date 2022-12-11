@@ -1,0 +1,124 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "kna:magma_spike",
+			"runtime_identifier": "minecraft:shulker",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+		 "scripts":{
+        "animate":[ "flame" ]
+      },
+      "animations":{
+        "flame":"controller.animation.flame"
+      }
+		},
+		"component_groups": {
+			"despawn": {
+			 "minecraft:variant":{
+          "value":1
+        },
+       "minecraft:instant_despawn": {
+         "remove_child_entities": true
+        }
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"spike",
+					"player",
+					"inanimate",
+					"pet"
+				]
+			},
+			"minecraft:timer":{
+				"looping":false,
+				"time":1.5,
+				"time_down_event":{
+				   "event":"despawn"
+				}
+			},
+      "minecraft:behavior.knockback_roar": {
+         "priority": 1,
+         "duration": 0.1,
+         "attack_time": 0.1,
+         "knockback_damage": 14,
+         "knockback_strength": 0,
+         "knockback_range": 1,
+         "cooldown_time": 100
+            },
+			"minecraft:nameable": {},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:navigation.walk": {},
+			"minecraft:movement.basic": {},
+			"minecraft:knockback_resistance": {
+				"value": 200,
+				"max": 200
+			},
+			"minecraft:scale": {
+				"value": 0.6
+			},
+			"minecraft:health": {
+				"value": 50,
+				"max": 50
+			},
+			"minecraft:physics": {
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:push_through": {
+				"value": 0
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+				  "component_groups": [
+					"despawn"
+				  ]
+				},
+				"run_command": {
+					"command": [
+						"particle basic_smoke_particle ~ ~0.5 ~"
+					]
+				}
+			}
+		}
+	}
+}							]
+				}
+			}
+		}
+	}
+}				}
+	}
+}		}
+	}
+}
+		}
+	}
+}
+}		}
+	}
+}			}
+			}
+		}
+	}
+}

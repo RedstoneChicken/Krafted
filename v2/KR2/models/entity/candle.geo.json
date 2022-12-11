@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.candle",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0.1, 0, 0.1],
+					"cubes": [
+						{"origin": [-1.5, 0, -1.5], "size": [3, 9, 3], "uv": [0, 0]},
+						{"origin": [-0.1, 9, -0.1], "size": [0.3, 0.9, 0.3], "uv": [13, 1]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "fungi_catfish_to_nether_wart"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:fungi_catfish"
+      }
+    ],
+    "result": {
+      "item": "minecraft:nether_wart",
+      "count": 2
+    }
+  }
+}

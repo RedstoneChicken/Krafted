@@ -1,0 +1,65 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:congealed_slime_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:map_color": "#17D225",
+			"minecraft:explosion_resistance": 3,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			},
+			"minecraft:friction": 0.1,
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					12,
+					16
+				]
+			},
+			"minecraft:on_step_on": {
+				"event": "strat:congealed_slime"
+			},
+			"minecraft:on_step_off": {
+				"event": "strat:congealed_slime_remove"
+			}
+		},
+		"events": {
+			"strat:congealed_slime": {
+				"sequence": [
+					{
+						"condition": "query.is_sneaking == 0.0",
+						"run_command": {
+							"command": [
+								"effect @s jump_boost 1 2 true"
+							],
+							"target": "other"
+						}
+					}
+				]
+			},
+			"strat:congealed_slime_remove": {
+				"sequence": [
+					{
+						"condition": "query.is_sneaking == 0.0",
+						"run_command": {
+							"command": [
+								"effect @s jump_boost 0 3 true"
+							],
+							"target": "other"
+						}
+					}
+				]
+			}
+		}
+	}
+}

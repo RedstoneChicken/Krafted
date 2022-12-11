@@ -1,0 +1,23 @@
+//bridge-file-version: #15
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:brownstone_bricks_slab",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 2
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

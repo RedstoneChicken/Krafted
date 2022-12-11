@@ -1,0 +1,14 @@
+//bridge-file-version: #18
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:tropical_fish_jerky"
+				}
+			]
+		}
+	]
+}

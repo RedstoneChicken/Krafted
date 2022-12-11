@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:whale",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "whale",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

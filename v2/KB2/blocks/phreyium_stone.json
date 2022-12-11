@@ -1,0 +1,52 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:phreyium_stone"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "phreyium_stone",
+					"render_method": "opaque"
+				}
+			},
+			"tag:stone": {},
+			"minecraft:map_color": "#216F64",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			},
+			"minecraft:on_interact": {
+				"event": "path",
+				"target": "self",
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_shovel')"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "play_sound"
+			}
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a ~ ~ ~"
+					]
+				}
+			},
+			"path": {
+				"set_block": {
+					"block_type": "korbon:phreyium_path"
+				},
+				"run_command": {
+					"command": [
+						"playsound use.grass @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

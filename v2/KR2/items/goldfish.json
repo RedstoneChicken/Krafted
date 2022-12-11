@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:goldfish",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "goldfish",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

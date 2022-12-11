@@ -1,0 +1,33 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_wide_guard_rec_3"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:wide_guard_cast"
+			},
+			"~": {
+				"item": "minecraft:cobblestone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_wide_guard",
+				"count": 1
+			},
+			{
+				"item": "strat:wide_guard_cast",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:frypan_46_12"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:frypan_46_2",
+				"count": 1
+			},
+			{
+				"item": "strat:necrotic_bone",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:frypan_46_12",
+				"count": 1
+			}
+		]
+	}
+}

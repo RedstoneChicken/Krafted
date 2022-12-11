@@ -1,0 +1,68 @@
+//bridge-file-version: #55
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:thorn_root"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "thorn_root",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": true
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:phreyium",
+							"korbon:phreyium_block"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:map_color": "#B0D59F",
+			"minecraft:flammable": {
+				"burn_odds": 10,
+				"flame_odds": 10
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:loot": "empty",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			}
+		},
+		"events": {
+			"shear": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/thorn_root.json"
+				}
+			}
+		}
+	}
+}

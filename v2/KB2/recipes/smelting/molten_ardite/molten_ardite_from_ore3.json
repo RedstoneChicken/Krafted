@@ -1,0 +1,36 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_ardite_from_ore3"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			" V",
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "strat:ardite_ore"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_ardite_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_ardite_bucket",
+				"count": 1
+			}
+		],
+		"priority": 4
+	}
+}

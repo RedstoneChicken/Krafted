@@ -1,0 +1,28 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:blazing_coil"
+  },
+  "key": {
+   "G": {
+    "item": "minecraft:blaze_rod"
+   },
+   "S": {
+    "item": "minecraft:gold_block"
+   }
+  },
+  "pattern": [
+   "GGG",
+   "GSG",
+   "GGG"
+  ],
+  "result": {
+   "item": "kna:blazing_coil"
+  },
+  "tags": [
+   "crafting_table"
+  ]
+ }
+}
+

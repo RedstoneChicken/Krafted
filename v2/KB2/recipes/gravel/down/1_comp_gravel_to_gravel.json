@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:compressed_gravel_to_gravel"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:compressed_gravel"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:gravel",
+				"count": 9
+			}
+		]
+	}
+}

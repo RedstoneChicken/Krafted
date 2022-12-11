@@ -1,0 +1,112 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:sunstone_gong",
+			"properties": {
+				"wiki:rotation": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 4,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sunstone_gong",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.nether_gong",
+			"minecraft:on_interact": {
+				"event": "nether:ring",
+				"target": "self"
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-2
+				],
+				"size": [
+					16,
+					14,
+					4
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-2
+				],
+				"size": [
+					16,
+					14,
+					4
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:on_player_placing": {
+				"event": "wiki:set_rotation"
+			}
+		},
+		"events": {
+			"nether:ring": {
+				"run_command": {
+					"command": [
+						"playsound gong_sound @a",
+						"event entity @e nether:gong"
+					]
+				}
+			},
+			"wiki:set_rotation": {
+				"set_block_property": {
+					"wiki:rotation": "math.floor(query.cardinal_facing/2)"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

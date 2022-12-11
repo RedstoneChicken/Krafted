@@ -1,0 +1,28 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:plate_boots"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"# #",
+			"# #"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_ingot"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:plate_boots",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

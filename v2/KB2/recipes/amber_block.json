@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:amber_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA",
+			"AA"
+		],
+		"key": {
+			"A": {
+				"item": "nether:amber_chunk"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:amber_block"
+			}
+		]
+	}
+}

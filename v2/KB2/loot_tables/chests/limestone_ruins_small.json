@@ -1,0 +1,183 @@
+{
+    "pools": [
+        {
+            "rolls": {
+                "min": 2,
+                "max": 8
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:coal",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:stone_axe",
+                    "weight": 2,
+                    "functions": [
+                        {
+                            "function": "enchant_randomly"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:rotten_flesh",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "honkit26113:raw_scorpion",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:emerald",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:wheat",
+                    "weight": 7,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 2,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:torch",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "honkit26113:limestone",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 11
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "honkit26113:limestone_bricks",
+                    "weight": 8,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "honkit26113:limestone_bricks_cracked",
+                    "weight": 5,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "min": 3,
+                                "max": 8
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:leather_chestplate",
+                    "weight": 15,
+                    "functions": [
+                        {
+                            "function": "enchant_randomly"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:chainmail_helmet",
+                    "weight": 10,
+                    "functions": [
+                        {
+                            "function": "enchant_randomly"
+                        }
+                    ]
+                },
+                {
+                    "type": "item",
+                    "name": "minecraft:book",
+                    "weight": 1,
+                    "functions": [
+                        {
+                            "function": "enchant_randomly"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

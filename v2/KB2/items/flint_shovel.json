@@ -1,0 +1,237 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "cav:flint_shovel",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 200,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        }
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "cav:flint_shovel"
+            ],
+            "repair_amount": "query.max_durability"
+          }
+        ]
+      },
+      "minecraft:mining_speed": 1,
+      "minecraft:damage": 2,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "shovel"
+      },
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": "minecraft:soul_sand",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:soul_soil",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:grass",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:grass_path",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:snow_layer",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:clay",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:farmland",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:podzol",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:mycelium",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:sand",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:gravel",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:clay",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:dirt",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:snow",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:concretePowder",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:end_sand",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:white_sand",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:tan_concrete_powder",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:peach_concrete_powder",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:diatomite",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:mud",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:creative_clay",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "cav:end_dust_block",
+            "speed": 6,
+            "on_dig": {
+              "event": "dmg"
+            }
+          }
+        ],
+        "on_dig": {
+          "event": "dmg"
+        }
+      },
+      "tag:minecraft:is_shovel": {
+
+      },
+      "minecraft:icon": {
+        "texture": "flint_shovel"
+      },
+      "minecraft:weapon": {
+        "on_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_not_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_hit_block": {
+          "event": "dmg"
+        }
+      },
+      "minecraft:display_name": {
+        "value": "Flint Shovel"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.shovel"
+      }
+    },
+    "events": {
+      "dmg": {
+        "damage": {
+          "type": "durability",
+          "amount": 1,
+          "target": "self"
+        }
+      }
+    }
+  }
+}

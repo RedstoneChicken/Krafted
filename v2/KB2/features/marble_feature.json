@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:marble_feature"
+    },
+    "count": 66,
+    "replace_rules": [
+      {
+        "places_block": "cav:marble",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "stone"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+

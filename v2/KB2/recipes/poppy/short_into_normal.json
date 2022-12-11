@@ -1,0 +1,21 @@
+{
+    "format_version": 1.12,
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "ff:short_poppy_into_normal_poppy"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "ff:poppy_short_item"
+            }
+        ],
+        "result": {
+            "item": "minecraft:red_flower",
+            "data": 0,
+            "count": 2
+        }
+    }
+}

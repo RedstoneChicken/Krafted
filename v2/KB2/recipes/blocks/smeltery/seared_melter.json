@@ -1,0 +1,31 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:seared_melter"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" #",
+			"#O#",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "strat:seared_brick"
+			},
+			"O": {
+				"item": "strat:seared_gauge"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:seared_melter",
+				"count": 1
+			}
+		]
+	}
+}

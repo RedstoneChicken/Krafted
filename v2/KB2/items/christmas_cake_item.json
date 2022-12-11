@@ -1,0 +1,23 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:christmas_cake_item",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "christmas_cake_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:christmas_cake",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,14 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "nether:marouge_tree_scatter"
+		},
+		"places_feature": "nether:marouge_tree_weighted",
+		"iterations": 1,
+		"x": -2,
+		"y": 0,
+		"z": -2
+	}
+}

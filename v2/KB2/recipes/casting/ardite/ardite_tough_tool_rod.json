@@ -1,0 +1,38 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:ardite_tough_tool_rod"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~",
+			"~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:tough_tool_rod_cast"
+			},
+			"~": {
+				"item": "strat:molten_ardite_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:ardite_tough_tool_rod",
+				"count": 1
+			},
+			{
+				"item": "strat:tough_tool_rod_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 3
+			}
+		]
+	}
+}

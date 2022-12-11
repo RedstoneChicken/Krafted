@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_azc_catfish_diamond"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:diamond_fillet_knife"
+      },
+      "B": {
+        "item": "azc:azc_catfish"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 6
+      },
+      {
+        "item": "azc:diamond_fillet_knife"
+      }
+    ]
+  }
+}

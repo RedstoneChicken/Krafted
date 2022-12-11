@@ -1,0 +1,77 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:snng"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "caf:growsmoker"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "caf:growsmoker"
+			}
+		},
+		"events": {
+			"caf:grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:smoker_stem_bottom",
+						"setblock ~ ~1 ~ caf:smoker_stem",
+						"setblock ~ ~2 ~ caf:smoker_top"
+					]
+				}
+			},
+			"caf:grow02": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:smoker_stem_bottom",
+						"setblock ~ ~1 ~ caf:smoker_stem",
+						"setblock ~ ~2 ~ caf:smoker_stem",
+						"setblock ~ ~3 ~ caf:smoker_top"
+					]
+				}
+			},
+			"caf:grow03": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:smoker_stem_bottom",
+						"setblock ~ ~1 ~ caf:smoker_stem",
+						"setblock ~ ~2 ~ caf:smoker_stem",
+						"setblock ~ ~3 ~ caf:smoker_stem",
+						"setblock ~ ~4 ~ caf:smoker_top"
+					]
+				}
+			},
+			"caf:growsmoker": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow02"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow03"
+						}
+					}
+				]
+			}
+		}
+	}
+}

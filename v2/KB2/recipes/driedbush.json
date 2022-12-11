@@ -1,0 +1,30 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "rns:driedbush"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"lll",
+			"lll",
+			"#b#"
+		],
+		"key": {
+			"l": {
+				"item": "rns:driedleaf"
+			},
+			"b": {
+				"item": "rns:oakbranch"
+			}
+		},
+		"result": [
+			{
+				"item": "rns:driedbush"
+			}
+		]
+	}
+}

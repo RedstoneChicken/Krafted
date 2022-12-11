@@ -1,0 +1,53 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:coral_totem",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "coral_totem"
+			},
+			"minecraft:display_name": {
+			 "value": "§eCoral Totem\n§6Epic\n§7Cooldown: 130\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "coral_totem",
+				"duration": 130
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "spawn",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "spawn": {
+        "run_command": {
+          "command": [
+            "summon minecraft:axolotl",
+             "summon minecraft:axolotl",
+              "summon minecraft:axolotl",
+               "summon minecraft:axolotl",
+                "summon minecraft:axolotl",
+            "effect @e[type=axolotl,r=5] strength 12 2",
+            "effect @e[type=axolotl,r=5] resistance 12 2",
+            "particle minecraft:water_splash_particle ~~~"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:shulker_crab",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/shulker_crab"
+			},
+			"geometry": {
+				"default": "geometry.shulker_crab"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller",
+					"attack_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.shulker_crab.walk",
+				"attack_controller": "controller.animation.shulker_crab.attack",
+				"attack": "animation.shulker_crab.attack",
+				"idle": "animation.shulker_crab.idle",
+				"move": "animation.shulker_crab.move"
+			},
+			"spawn_egg": {
+				"base_color": "#7C5306",
+				"overlay_color": "#B965B8"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.peach_leaves",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "peach_leaves",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, -8], "size": [16, 16, 16], "uv": [0, 0]},
+						{"origin": [-1.8, -5.6, -2], "size": [4.6, 0.6, 4.5], "uv": [0, 37]},
+						{"origin": [-2, -5, -2.3], "size": [5, 4, 5], "uv": [0, 32]},
+						{"origin": [0.5, -1, -0.3], "size": [0, 1, 1], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

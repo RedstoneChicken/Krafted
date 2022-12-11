@@ -1,0 +1,23 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:pink_chorus_tree_1_feature"
+		},
+		"structure_name": "mystructure:pink_chorus_tree_1",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air",
+					"korbon:velvium_grass",
+					"korbon:void_sprouts",
+					"korbon:void_turf_grass_short"
+				]
+			}
+		}
+	}
+}

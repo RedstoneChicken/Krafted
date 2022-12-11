@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "cav:end_observer_recipe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "RRQ",
+      "###"
+    ],
+    "key": {
+      "Q": {
+        "item": "minecraft:quartz"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "#": {
+        "item": "minecraft:end_stone"
+      }
+    },
+    "result": {
+      "item": "minecraft:observer"
+    }
+  }
+}

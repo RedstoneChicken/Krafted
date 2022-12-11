@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:normal_peony_into_short_peony"},"tags":["crafting_table"],"ingredients":[{"item":"ff:peony_item","count":2}],"result":{"item":"ff:peony_short_item"}}}

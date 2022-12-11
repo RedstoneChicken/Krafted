@@ -1,0 +1,23 @@
+//bridge-file-version: #18
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:frying_pan_item"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:pancake"
+				}
+			]
+		}
+	]
+}

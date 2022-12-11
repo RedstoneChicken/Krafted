@@ -1,0 +1,33 @@
+//bridge-file-version: #43
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "korbon:verdanite_scatter_feature"
+		},
+		"iterations": 186,
+		"x": {
+			"distribution": "gaussian",
+			"extent": [
+				2,
+				8
+			]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [
+				-4,
+				4
+			]
+		},
+		"z": {
+			"distribution": "gaussian",
+			"extent": [
+				2,
+				8
+			]
+		},
+		"coordinate_eval_order": "zyx",
+		"places_feature": "korbon:verdanite_feature"
+	}
+}

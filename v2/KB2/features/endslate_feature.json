@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "end:endslate_feature"
+		},
+		"places_block": "end:endslate",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:end_stone"
+		]
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:dacite_bricks_stonecutter"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:polished_dacite"
+      }
+    ],
+    "result": {
+      "item": "cav:dacite_bricks",
+      "count": 1
+    }
+  }
+  
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:chiseled_end_bricks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "A",
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stone_slab3",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "cav:chiseled_end_bricks",
+      "count": 1
+    }
+  }
+}

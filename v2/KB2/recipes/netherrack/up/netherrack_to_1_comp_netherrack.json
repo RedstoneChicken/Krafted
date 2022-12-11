@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:netherrack_to_compressed_netherrack"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:netherrack"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_netherrack",
+				"count": 1
+			}
+		]
+	}
+}

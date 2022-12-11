@@ -1,0 +1,46 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:nuggets_and_fries2",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "good",
+				"on_consume": {
+					"event": "speed"
+				},
+				"using_converts_to": "strat:ceramic_plate"
+			},
+			"minecraft:icon": {
+				"texture": "nuggets_and_fries2"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {
+			"strength": {
+				"randomize": [
+					{
+						"weight": 2,
+						"run_command": {
+							"command": [
+								"effect @p speed 10 1"
+							]
+						}
+					},
+					{
+						"weight": 8
+					}
+				]
+			}
+		}
+	}
+}

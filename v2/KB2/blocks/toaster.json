@@ -1,0 +1,335 @@
+//bridge-file-version: #31
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:toaster",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:geometry": "geometry.toaster",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "strat_toaster",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-3
+				],
+				"size": [
+					10,
+					7,
+					6
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-5,
+					0,
+					-3
+				],
+				"size": [
+					10,
+					7,
+					6
+				]
+			},
+			"minecraft:loot": "loot_tables/toaster.json",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_interact": {
+				"event": "toast"
+			},
+			"tag:metal": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.toaster",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.toaster_outside1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster 1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster_1.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.toaster_outside",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster 1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster_2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.toaster_inside1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster 2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster_1.json",
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							10,
+							10
+						],
+						"on_tick": {
+							"event": "done"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.toaster_inside",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster 2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster_2.json",
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							10,
+							10
+						],
+						"on_tick": {
+							"event": "done"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.toaster_outside1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster 3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster_3.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.toaster_outside",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_toaster 3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/toaster_4.json"
+				}
+			}
+		],
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"toast": {
+				"sequence": [
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'bread_slice'",
+								"decrement_stack": {},
+								"set_block_property": {
+									"strat:state": 1
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1 && query.get_equipped_item_name('main_hand') != 'bread_slice'",
+								"set_block_property": {
+									"strat:state": 3
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1 && query.is_sneaking",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/bread_slice.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/toast_1.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 1 && query.get_equipped_item_name('main_hand') == 'bread_slice'",
+								"decrement_stack": {},
+								"set_block_property": {
+									"strat:state": 2
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 2",
+								"set_block_property": {
+									"strat:state": 4
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 2 && query.is_sneaking",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/bread_slice_2.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 6",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/toast_2.json"
+								}
+							}
+						]
+					}
+				]
+			},
+			"done": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:state') == 3",
+						"set_block_property": {
+							"strat:state": 5
+						},
+						"run_command": {
+							"command": [
+								"playsound note.pling @a ~~~"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:state') == 4",
+						"set_block_property": {
+							"strat:state": 6
+						},
+						"run_command": {
+							"command": [
+								"playsound note.pling @a ~~~"
+							],
+							"target": "self"
+						}
+					}
+				]
+			}
+		}
+	}
+}

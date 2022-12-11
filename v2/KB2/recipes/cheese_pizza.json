@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "strat:cheese_pizza"
+		},
+		"tags": [
+			"furnace",
+			"smoker"
+		],
+		"input": "strat:raw_cheese_pizza",
+		"output": "strat:cheese_pizza"
+	}
+}

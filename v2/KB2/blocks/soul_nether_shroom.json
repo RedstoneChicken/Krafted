@@ -1,0 +1,44 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:soul_nether_shroom"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"on_tick": {
+					"event": "particle"
+				},
+				"range": [
+					1,
+					2
+				]
+			}
+		},
+		"events": {
+			"particle": {
+				"run_command": {
+					"command": [
+						"particle nether:soul_shroomlight ~ ~ ~"
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

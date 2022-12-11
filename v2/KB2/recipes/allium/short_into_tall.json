@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_allium_into_tall_allium"},"tags":["crafting_table"],"ingredients":[{"item":"ff:allium_short_item","count":2}],"result":{"item":"ff:allium_tall_item"}}}

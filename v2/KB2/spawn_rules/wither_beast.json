@@ -1,0 +1,40 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "nether:wither_beast",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:spawns_underground": {},
+				"minecraft:spawns_on_block_prevented_filter": [
+					"minecraft:nether_wart_block",
+					"minecraft:shroomlight"
+				],
+				"minecraft:difficulty_filter": {
+					"min": "easy",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 20
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 3
+				},
+				"minecraft:biome_filter": {
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "soulsand_valley"
+						}
+					]
+				}
+			}
+		]
+	}
+}

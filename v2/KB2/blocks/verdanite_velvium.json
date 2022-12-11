@@ -1,0 +1,53 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:verdanite_velvium"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "verdanite_velvium",
+					"render_method": "opaque"
+				}
+			},
+			"tag:grass": {},
+			"tag:stone": {},
+			"minecraft:map_color": "#CB78B8",
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:on_player_destroyed": {
+				"event": "play_sound"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			},
+			"minecraft:on_interact": {
+				"event": "path",
+				"target": "self",
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_shovel')"
+			}
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a ~ ~ ~"
+					]
+				}
+			},
+			"path": {
+				"set_block": {
+					"block_type": "korbon:velvium_path"
+				},
+				"run_command": {
+					"command": [
+						"playsound use.grass @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

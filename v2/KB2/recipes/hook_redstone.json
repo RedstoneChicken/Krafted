@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "hook_redstone"
+		},
+		"tags" : [ "tackle_box" ],
+		"pattern" : [ " A ", "ABA", " A " ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:redstone"
+			},
+			"B" : {
+				"item" : "azc:iron_hook"
+			}
+		},
+		"result" : {
+			"item" : "azc:redstone_hook"
+		}
+	}
+}

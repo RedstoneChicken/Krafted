@@ -1,0 +1,21 @@
+{
+	"pools" : [
+		{
+			"rolls" : 1,
+			"entries" : [
+				{
+					"type" : "loot_table",
+					"name" : "loot_tables/gameplay/fishing.json",
+					"weight" : 60,
+					"quality" : -1
+				},
+				{
+					"type" : "loot_table",
+					"name" : "loot_tables/gameplay/jungle_fishing.json",
+					"weight" : 40,
+					"quality" : 2
+				}
+			]
+		}
+	]
+}

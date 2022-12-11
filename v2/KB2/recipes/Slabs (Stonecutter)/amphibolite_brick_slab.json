@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:amphibolite_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:amphibolite_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:amphibolite_brick_slab",
+      "count": 2
+    }
+  } 
+}

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.16.0",
+
+	"minecraft:snap_to_surface_feature": {
+		"description": {
+			"identifier": "ff:infernal_grass/snap_infernal_fern_feature"
+		},
+
+		"feature_to_snap": "ff:infernal_grass/infernal_fern_feature",
+
+		"surface": "floor",
+		"vertical_search_range": 12
+	}
+}

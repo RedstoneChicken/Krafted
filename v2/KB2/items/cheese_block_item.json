@@ -1,0 +1,23 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cheese_block_item",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "strat_cheese block item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:cheese_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

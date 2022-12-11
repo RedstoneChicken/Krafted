@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:prism_quartz_block"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:destroy_time": 3,
+			"tag:metal": {}
+		},
+		"events": {}
+	}
+}

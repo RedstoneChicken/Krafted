@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:marble_dropper"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "# #",
+      "#R#"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "#": {
+        "item": "cav:marble"
+      }
+    },
+    "result": {
+      "item": "minecraft:dropper",
+      "data": 3
+    }
+  }
+}

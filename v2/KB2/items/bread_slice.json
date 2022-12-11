@@ -1,0 +1,29 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:bread_slice",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 0.8,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_bread slice"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 1,
+				"saturation_modifier": "low",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

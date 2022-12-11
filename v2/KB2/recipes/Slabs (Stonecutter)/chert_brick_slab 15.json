@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:obsidian_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:obsidian_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:obsidian_brick_slab",
+      "count": 2
+    }
+  } 
+}

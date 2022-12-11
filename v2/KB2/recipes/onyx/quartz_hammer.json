@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:quartz_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:quartz_head"
+			},
+			"Y": {
+				"item": "oh:trunk_stick"
+			},
+			"Z": {
+				"item": "minecraft:quartz_block"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:quartz_hammer",
+				"count": 1
+			}
+		]
+	}
+}

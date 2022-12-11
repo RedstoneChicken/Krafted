@@ -1,0 +1,28 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cornish_pasty",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 2.4,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "cornish_pasty"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation_modifier": "max",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}
