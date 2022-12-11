@@ -10,7 +10,7 @@
   <p align="center">
     Krafted is a Minecraft bedrock modpack that aims to improve Minecraft using addons while keeping the original Vanilla feel.
     <br />
-    <a href="https://www.youtube.com/watch?v=HrT7Yy8pAx4"><strong>Check out the most recent Sneak Peak/Trailer for Krafted v2 »</strong></a>
+    <a href="https://www.youtube.com/watch?v=HrT7Yy8pAx4"><strong>Check out the Sneak Peak/Trailer for Krafted v2 »</strong></a>
     <br />
     <br />
     <a href="https://dsc.gg/rscbuilds">Report & Suggest (discord)</a>
