@@ -3,7 +3,6 @@
 <div align="center">
   <a href="https://github.com/RedstoneChicken/Krafted">
 
-   https://user-images.githubusercontent.com/94724551/206882354-bf0e465c-0064-4312-9ccf-4888bda8b007.png
     
   </a>
 
