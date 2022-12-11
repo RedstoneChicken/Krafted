@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/RedstoneChicken/Krafted">
-    <img src="v2/KR2/pack_icon.png" alt="Logo" width="50" height="50">
+![k2 LOGO square](https://user-images.githubusercontent.com/94724551/206882323-47591810-9941-4358-b3ff-ef6bcc26d0d1.png)
   </a>
 
 <h3 align="center">Krafted</h3>
