@@ -1,8 +1,9 @@
 <a name="readme-top"></a>
 <br />
 <div align="center">
-  <a href="https://github.com/RedstoneChicken/Krafted">
-(https://user-images.githubusercontent.com/94724551/206882323-47591810-9941-4358-b3ff-ef6bcc26d0d1.png)
+  <a href="https://git![k2 LOGO square](https://user-images.githubusercontent.com/94724551/206882335-fdf33672-7fa9-4e9d-a1dd-1e2a0f8c4038.png)
+hub.com/RedstoneChicken/Krafted">
+
   </a>
 
 <h3 align="center">Krafted</h3>
