@@ -505,6 +505,8 @@
     "incubation_nest": {
       "textures": ["textures/blocks/incubation_nest"]
     },
+
+    //AzureCulture 4.2
     "neptunium_block": {
       "textures": ["textures/blocks/neptunium_block"]
     },
@@ -522,6 +524,9 @@
     },
     "tackle_box_top": {
       "textures": ["textures/blocks/tackle_box_top"]
+    },
+    "fish_trap": {
+      "textures": ["textures/blocks/fish_trap"]
     },
     "fish_trap_wooden": {
       "textures": ["textures/blocks/fish_trap_wooden"]
@@ -550,6 +555,93 @@
     "unbucket": {
       "textures": ["textures/blocks/unbucket"]
     },
+    "fish_trophy": {
+      "textures": ["textures/blocks/fish_trophy"]
+    },
+    "fish_trophy_arapaima": {
+      "textures": ["textures/blocks/fish_trophy_arapaima"]
+    },
+    "fish_trophy_atlantic_cod": {
+      "textures": ["textures/blocks/fish_trophy_atlantic_cod"]
+    },
+    "fish_trophy_atlantic_halibut": {
+      "textures": ["textures/blocks/fish_trophy_atlantic_halibut"]
+    },
+    "fish_trophy_atlantic_herring": {
+      "textures": ["textures/blocks/fish_trophy_atlantic_herring"]
+    },
+    "fish_trophy_bayad": {
+      "textures": ["textures/blocks/fish_trophy_bayad"]
+    },
+    "fish_trophy_blackfish": {
+      "textures": ["textures/blocks/fish_trophy_blackfish"]
+    },
+    "fish_trophy_bluegill": {
+      "textures": ["textures/blocks/fish_trophy_bluegill"]
+    },
+    "fish_trophy_boulti": {
+      "textures": ["textures/blocks/fish_trophy_boulti"]
+    },
+    "fish_trophy_brown_shrooma": {
+      "textures": ["textures/blocks/fish_trophy_brown_shrooma"]
+    },
+    "fish_trophy_brown_trout": {
+      "textures": ["textures/blocks/fish_trophy_brown_trout"]
+    },
+    "fish_trophy_capitaine": {
+      "textures": ["textures/blocks/fish_trophy_capitaine"]
+    },
+    "fish_trophy_carp": {
+      "textures": ["textures/blocks/fish_trophy_carp"]
+    },
+    "fish_trophy_catfish": {
+      "textures": ["textures/blocks/fish_trophy_catfish"]
+    },
+    "fish_trophy_gar": {
+      "textures": ["textures/blocks/fish_trophy_gar"]
+    },
+    "fish_trophy_goldfish": {
+      "textures": ["textures/blocks/fish_trophy_goldfish"]
+    },
+    "fish_trophy_muskellunge": {
+      "textures": ["textures/blocks/fish_trophy_muskellunge"]
+    },
+    "fish_trophy_pacific_halibut": {
+      "textures": ["textures/blocks/fish_trophy_pacific_halibut"]
+    },
+    "fish_trophy_perch": {
+      "textures": ["textures/blocks/fish_trophy_perch"]
+    },    
+    "fish_trophy_pink_salmon": {
+      "textures": ["textures/blocks/fish_trophy_pink_salmon"]
+    },
+    "fish_trophy_piranha": {
+      "textures": ["textures/blocks/fish_trophy_piranha"]
+    },
+    "fish_trophy_pollock": {
+      "textures": ["textures/blocks/fish_trophy_pollock"]
+    },
+    "fish_trophy_rainbow_trout": {
+      "textures": ["textures/blocks/fish_trophy_rainbow_trout"]
+    },
+    "fish_trophy_red_grouper": {
+      "textures": ["textures/blocks/fish_trophy_red_grouper"]
+    },
+    "fish_trophy_red_shrooma": {
+      "textures": ["textures/blocks/fish_trophy_red_shrooma"]
+    },
+    "fish_trophy_smallmouth_bass": {
+      "textures": ["textures/blocks/fish_trophy_smallmouth_bass"]
+    },
+    "fish_trophy_synodontis": {
+      "textures": ["textures/blocks/fish_trophy_synodontis"]
+    },
+    "fish_trophy_tambaqui": {
+      "textures": ["textures/blocks/fish_trophy_tambaqui"]
+    },
+    "fish_trophy_tuna": {
+      "textures": ["textures/blocks/fish_trophy_tuna"]
+    }
     "gabbro": {
       "textures": ["textures/blocks/gabbro"]
     },
@@ -6380,8 +6472,8 @@
     "stone_bricks_trap_mossy": {
       "textures": ["textures/blocks/stone_bricks_trap_mossy"]
     },
-    "spike_trap_base": {
-      "textures": ["textures/blocks/spike_trap_base"]
+    "fish_trophy_atlantic_cod": {
+      "textures": ["textures/blocks/fish_trophy_atlantic_cod"]
     },
     "crypt_traproom_small_spawner": {
       "textures": ["textures/blocks/empty"]

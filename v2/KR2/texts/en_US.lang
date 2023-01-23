@@ -321,6 +321,37 @@ item.azc:treasure_chest_gold_ingot.name=§eTreasure Chest
 item.azc:treasure_chest_diamond.name=§bTreasure Chest
 item.azc:treasure_chest_emerald.name=§dTreasure Chest
 
+## Fish Trophies:
+tile.azc:fish_trophy.name=Fish Trophy
+tile.azc:fish_trophy_arapaima.name=Arapaima Trophy
+tile.azc:fish_trophy_atlantic_cod.name=Atlantic Cod Trophy
+tile.azc:fish_trophy_atlantic_halibut.name=Atlantic Halibut Trophy
+tile.azc:fish_trophy_atlantic_herring.name=Atlantic Herring Trophy
+tile.azc:fish_trophy_bayad.name=Bagrid Trophy
+tile.azc:fish_trophy_blackfish.name=Tautog Trophy
+tile.azc:fish_trophy_bluegill.name=Bluegill Trophy
+tile.azc:fish_trophy_boulti.name=Boulti Trophy
+tile.azc:fish_trophy_brown_shrooma.name=Brown Shrooma Trophy
+tile.azc:fish_trophy_brown_trout.name=Brown Trout Trophy
+tile.azc:fish_trophy_capitaine.name=Capitaine Trophy
+tile.azc:fish_trophy_carp.name=Carp Trophy
+tile.azc:fish_trophy_catfish.name=Catfish Trophy
+tile.azc:fish_trophy_gar.name=Gar Trophy
+tile.azc:fish_trophy_goldfish.name=Goldfish Trophy
+tile.azc:fish_trophy_muskellunge.name=Muskellunge Trophy
+tile.azc:fish_trophy_pacific_halibut.name=Pacific Halibut Trophy
+tile.azc:fish_trophy_perch.name=Perch Trophy
+tile.azc:fish_trophy_pink_salmon.name=Pink Salmon Trophy
+tile.azc:fish_trophy_piranha.name=Piranha Trophy
+tile.azc:fish_trophy_pollock.name=Pollock Trophy
+tile.azc:fish_trophy_rainbow_trout.name=Rainbow Trout Trophy
+tile.azc:fish_trophy_red_grouper.name=Red Grouper Trophy
+tile.azc:fish_trophy_red_shrooma.name=Red Shrooma Trophy
+tile.azc:fish_trophy_smallmouth_bass.name=Smallmouth Bass Trophy
+tile.azc:fish_trophy_synodontis.name=Synodontis Trophy
+tile.azc:fish_trophy_tambaqui.name=Tambaqui Trophy
+tile.azc:fish_trophy_tuna.name=Tuna Trophy
+
 ## Neptuniums:
 item.azc:neptunium_ingot.name=Neptunium Ingot
 item.azc:neptunium_nugget.name=Neptunium Nugget

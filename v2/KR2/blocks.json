@@ -120,6 +120,8 @@
     "textures": "unbucket",
     "sound": "coral"
   },
+
+  //AzureCulture 4.2
   "azc:neptunium_block": {
     "textures": "neptunium_block",
     "sound": "metal"
@@ -303,6 +305,122 @@
     "textures": "unbucket",
     "sound": "coral"
   },
+  "azc:fish_trophy": {
+    "textures": "fish_trophy",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_arapaima": {
+    "textures": "fish_trophy_arapaima",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_atlantic_cod": {
+    "textures": "fish_trophy_atlantic_cod",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_atlantic_halibut": {
+    "textures": "fish_trophy_atlantic_halibut",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_atlantic_herring": {
+    "textures": "fish_trophy_atlantic_herring",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_bayad": {
+    "textures": "fish_trophy_bayad",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_blackfish": {
+    "textures": "fish_trophy_blackfish",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_bluegill": {
+    "textures": "fish_trophy_bluegill",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_boulti": {
+    "textures": "fish_trophy_boulti",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_brown_shrooma": {
+    "textures": "fish_trophy_brown_shrooma",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_brown_trout": {
+    "textures": "fish_trophy_brown_trout",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_capitaine": {
+    "textures": "fish_trophy_capitaine",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_carp": {
+    "textures": "fish_trophy_carp",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_catfish": {
+    "textures": "fish_trophy_catfish",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_gar": {
+    "textures": "fish_trophy_gar",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_goldfish": {
+    "textures": "fish_trophy_goldfish",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_muskellunge": {
+    "textures": "fish_trophy_muskellunge",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_pacific_halibut": {
+    "textures": "fish_trophy_pacific_halibut",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_perch": {
+    "textures": "fish_trophy_perch",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_pink_salmon": {
+    "textures": "fish_trophy_pink_salmon",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_piranha": {
+    "textures": "fish_trophy_piranha",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_pollock": {
+    "textures": "fish_trophy_pollock",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_rainbow_trout": {
+    "textures": "fish_trophy_rainbow_trout",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_red_grouper": {
+    "textures": "fish_trophy_red_grouper",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_red_shrooma": {
+    "textures": "fish_trophy_red_shrooma",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_smallmouth_bass": {
+    "textures": "fish_trophy_smallmouth_bass",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_synodontis": {
+    "textures": "fish_trophy_synodontis",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_tambaqui": {
+    "textures": "fish_trophy_tambaqui",
+    "sound": "wood"
+  },
+  "azc:fish_trophy_tuna": {
+    "textures": "fish_trophy_tuna",
+    "sound": "wood"
+  }
   "cav:mudstone": {
     "sound": "stone",
     "textures": {

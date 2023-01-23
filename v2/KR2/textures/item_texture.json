@@ -880,6 +880,53 @@
     "bucket_sunfish": {
       "textures": "textures/items/bucket_sunfish"
     },
+    "atlantic_halibut": {
+      "textures": "textures/items/atlantic_halibut"
+    },
+    "atlantic_herring": {
+      "textures": "textures/items/atlantic_herring"
+    },
+    "bayad": {
+      "textures": "textures/items/bayad"
+    },
+    "blackfish": {
+      "textures": "textures/items/blackfish"
+    },
+    "bluegill": {
+      "textures": "textures/items/bluegill"
+    },
+    "boulti": {
+      "textures": "textures/items/boulti"
+    },
+    "box_turtle": {
+      "textures": "textures/items/box_turtle"
+    },
+    "brown_shrooma": {
+      "textures": "textures/items/brown_shrooma"
+    },
+    "brown_trout": {
+      "textures": "textures/items/brown_trout"
+    },
+    "capitaine": {
+      "textures": "textures/items/capitaine"
+    },
+    "carp": {
+      "textures": "textures/items/carp"
+    },
+    "azc_catfish": {
+      "textures": "textures/items/azc_catfish"
+    },
+    "electric_eel": {
+      "textures": "textures/items/electric_eel"
+    },
+    "temperate_frog": {
+      "textures": "textures/items/frog_temperate"
+    },
+    "cold_frog": {
+      "textures": "textures/items/frog_cold"
+    },
+
+    //AzureCulture 4.2
     "arapaima": {
       "textures": "textures/items/arapaima"
     },
