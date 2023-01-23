@@ -1,51 +1,27 @@
 {
-	"pools" : [
-		{
-			"rolls" : 1,
-			"entries" : [
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/jungle_junk.json",
-					"weight" : 25,
-					"quality" : -3
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/dead_junk.json",
-					"weight" : 25,
-					"quality" : -2
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/dead_treasure.json",
-					"weight" : 13,
-					"quality" : 2
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/jungle_fish.json",
-					"weight" : 60,
-					"quality" : -1
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/swamp_fish.json",
-					"weight" : 45,
-					"quality" : 3
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/mooshroom_fish.json",
-					"weight" : 25,
-					"quality" : 4
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/dead_fish.json",
-					"weight" : 45,
-					"quality" : 6
-				}
-			]
-		}
-	]
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "loot_tables/gameplay/fishing/jungle_junk.json",
+          "weight": 40,
+          "quality": -2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/gameplay/fishing/treasure.json",
+          "weight": 13,
+          "quality": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/gameplay/fishing/tropical_fish.json",
+          "weight": 60,
+          "quality": -1
+        }
+      ]
+    }
+  ]
 }

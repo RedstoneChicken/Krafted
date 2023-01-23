@@ -2,6 +2,9 @@ give @s azc:driftwood
 give @s azc:tin_can
 give @s azc:fish_bones
 give @s azc:goldfish
+give @s azc:box
+give @s azc:lockbox
+give @s azc:treasure_chest
 give @s azc:message_in_a_bottle
 give @s azc:wooden_fillet_knife
 give @s azc:stone_fillet_knife

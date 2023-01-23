@@ -1,106 +1,108 @@
 {
-	"format_version" : "1.16.100",
-	"minecraft:item" : {
-		"description" : {
-			"category" : "equipment",
-			"identifier" : "azc:neptunium_hoe"
-		},
-		"components" : {
-			"minecraft:icon" : {
-				"texture" : "neptunium_hoe"
-			},
-			"minecraft:creative_category" : {
-				"parent" : "itemGroup.name.hoe"
-			},
-			"minecraft:max_stack_size" : 1,
-			"minecraft:hand_equipped" : true,
-			"minecraft:foil" : false,
-			"minecraft:mining_speed" : 8,
-			"minecraft:damage" : 4,
-			"minecraft:enchantable" : {
-				"value" : 10,
-				"slot" : "hoe"
-			},
-			"minecraft:can_destroy_in_creative" : true,
-			"minecraft:digger" : {
-				"use_efficiency" : true,
-				"destroy_speeds" : [
-					{
-						"block" : "minecraft:sculk_sensor",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:sculk",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:sculk_vein",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:sculk_catalyst",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:sculk_shrieker",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:azalea_leaves",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:mangrove_leaves",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:azalea_leaves_flowered",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:moss_block",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:hay_block",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:leaves",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:leaves2",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:nether_wart_block",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:shroomlight",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:sponge",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:target",
-						"speed" : 12
-					},
-					{
-						"block" : "minecraft:warped_wart_block",
-						"speed" : 12
-					}
-				]
-			},
-			"minecraft:weapon" : {},
-			"tag:minecraft:is_hoe" : {},
-			"minecraft:use_on" : {
-				"blocks" : [ "grass", "dirt", "grass_path" ]
-			},
-			"minecraft:display_name" : {}
-		}
-	}
+  "format_version": "1.18.0",
+  "minecraft:item": {
+    "description": {
+      "category": "equipment",
+      "identifier": "azc:neptunium_hoe"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "neptunium_hoe"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.hoe"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:foil": false,
+      "minecraft:mining_speed": 8,
+      "minecraft:damage": 4,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "hoe"
+      },
+      "minecraft:can_destroy_in_creative": true,
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": "minecraft:sculk_sensor",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:sculk",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:sculk_vein",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:sculk_catalyst",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:sculk_shrieker",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:azalea_leaves",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:mangrove_leaves",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:azalea_leaves_flowered",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:moss_block",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:hay_block",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:leaves",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:leaves2",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:nether_wart_block",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:shroomlight",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:sponge",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:target",
+            "speed": 12
+          },
+          {
+            "block": "minecraft:warped_wart_block",
+            "speed": 12
+          }
+        ]
+      },
+      "minecraft:weapon": {},
+      "tag:minecraft:is_hoe": {},
+      "minecraft:use_on": {
+        "blocks": ["grass", "dirt", "grass_path"]
+      },
+      "minecraft:display_name": {
+        "value": "Neptunium Hoe\n§l§7Unbreakable"
+      }
+    }
+  }
 }

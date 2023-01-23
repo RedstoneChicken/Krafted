@@ -809,6 +809,8 @@ entity.oh:mud_spider.name=Mud Spider
 item.spawn_egg.entity.oh:mud_spider.name=Spawn Mud Spider
 entity.oh:spooky_golem.name=Spooky Golem
 item.spawn_egg.entity.oh:spooky_golem.name=Spawn Spooky Golem
+entity.oh:cavern_creeper.name=Cavern Creeper
+item.spawn_egg.entity.oh:cavern_creeper.name=Spawn Cavern Creeper
 
 ## ============================================================
 

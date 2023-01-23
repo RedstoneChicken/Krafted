@@ -19,11 +19,6 @@
 					"max": 100
 				}
 			},
-			"minecraft:on_use_on": {
-				"on_use_on": {
-					"event": "stripped_hoe"
-				}
-			},
 			"minecraft:damage": 5,
 			"minecraft:enchantable": {
 				"value": 10,
@@ -65,82 +60,70 @@
 				}
 			},
 			"minecraft:digger": {
-    "use_efficiency": true,
-    "destroy_speeds": [
-        {
-            "block": "minecraft:nether_wart_block",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        },
-        {
-            "block": "minecraft:target",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        },
-        {
-            "block": "minecraft:shroomlight",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        },
-        {
-            "block": "minecraft:hay_block",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        },
-        {
-            "block": "minecraft:leaves",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        },
-        {
-            "block": "minecraft:leaves2",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        },
-        {
-            "block": "minecraft:warped_wart_block",
-            "speed": 7,
-            "on_dig": {
-                "event": "dmg"
-            }
-        }
-    ],
-    "on_dig": {
-        "event": "dmg"
-    }
-}
-		},
-		"events": {
-			"stripped_hoe": {
-				"sequence": [
+				"use_efficiency": true,
+				"destroy_speeds": [
 					{
-						"swing": {},
-						"damage": {
-							"type": "durability",
-							"amount": 1,
-							"target": "item"
+						"block": "minecraft:nether_wart_block",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
 						}
 					},
 					{
-						"run_command": {
-							"command": [
-								"function stripped_hoe"
-							]
+						"block": "minecraft:target",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:shroomlight",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:hay_block",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:leaves",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:leaves2",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_wart_block",
+						"speed": 7,
+						"on_dig": {
+							"event": "dmg"
 						}
 					}
-				]
+				],
+				"on_dig": {
+					"event": "dmg"
+				}
+			}
+		},
+		"events": {
+			"on_tool_used": {
+				"swing": {},
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
 			},
 			"dmg": {
 				"damage": {

@@ -7,16 +7,13 @@
         "category": "items"
       },
       "properties": {
-        "azc:trap": [
-          1,
-          2
-        ]
+        "azc:trap": [1, 2]
       }
     },
     "components": {
       "minecraft:loot": "loot_tables/blocks/wooden_fish_trap.json",
       "minecraft:destructible_by_mining": {
-        "seconds_to_destroy": 3
+        "seconds_to_destroy": 1
       },
       "minecraft:flammable": {
         "destroy_chance_modifier": 20,
@@ -50,9 +47,7 @@
             "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:minnow')",
             "decrement_stack": {},
             "run_command": {
-              "command": [
-                "playsound block.itemframe.add_item @a [r=5]"
-              ]
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
             },
             "set_block_property": {
               "azc:trap": 2
@@ -62,9 +57,7 @@
             "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:leech')",
             "decrement_stack": {},
             "run_command": {
-              "command": [
-                "playsound block.itemframe.add_item @a [r=5]"
-              ]
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
             },
             "set_block_property": {
               "azc:trap": 2
@@ -74,9 +67,7 @@
             "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:worm')",
             "decrement_stack": {},
             "run_command": {
-              "command": [
-                "playsound block.itemframe.add_item @a [r=5]"
-              ]
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
             },
             "set_block_property": {
               "azc:trap": 2
@@ -93,7 +84,7 @@
               "command": [
                 "particle minecraft:water_wake_particle ~~1~",
                 "playsound random.splash @a [r=10] ~~~ 0.5",
-                "summon azc:trap_loot ~ ~1 ~ azure",
+                "summon azc:trap_loot ~ ~1 ~",
                 "kill @e [type=azc:trap_loot,c=1,r=1]"
               ]
             }
@@ -101,9 +92,7 @@
           {
             "weight": 5,
             "run_command": {
-              "command": [
-                "playsound random.break @a [r=10] ~~~ 0.5"
-              ]
+              "command": ["playsound random.break @a [r=10] ~~~ 0.5"]
             },
             "set_block_property": {
               "azc:trap": 1
@@ -138,7 +127,7 @@
           },
           "minecraft:queued_ticking": {
             "looping": true,
-            "interval_range" : [ 340, 500 ],
+            "interval_range": [340, 500],
             "on_tick": {
               "event": "fish",
               "target": "self"

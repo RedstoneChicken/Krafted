@@ -78,7 +78,7 @@
 							"size": [4, 3, 4],
 							"inflate": 0.8,
 							"uv": {
-								"north": {"uv": [48, 20], "uv_size": [-4, 3]},
+								"north": {"uv": [44, 20], "uv_size": [4, 3]},
 								"east": {"uv": [44, 20], "uv_size": [-4, 3]},
 								"south": {"uv": [52, 20], "uv_size": [4, 3]},
 								"west": {"uv": [48, 20], "uv_size": [4, 3]},

@@ -12,7 +12,7 @@
       "minecraft:stack_by_data": true,
       "minecraft:food": {
         "saturation_modifier": "normal",
-        "nutrition": 8,
+        "nutrition": 6,
         "can_always_eat": false
       },
       "minecraft:use_duration": 32

@@ -1,57 +1,27 @@
 {
-	"pools" : [
-		{
-			"rolls" : 1,
-			"entries" : [
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/junk.json",
-					"weight" : 25,
-					"quality" : -2
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/treasure.json",
-					"weight" : 13,
-					"quality" : 2
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/fish.json",
-					"weight" : 60,
-					"quality" : -1
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/oceach_fish.json",
-					"weight" : 45,
-					"quality" : 3
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/desavesa_fish.json",
-					"weight" : 45,
-					"quality" : 4
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/snowy_fish.json",
-					"weight" : 25,
-					"quality" : 5
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/deep_fish.json",
-					"weight" : 13,
-					"quality" : 6
-				},
-				{
-					"type" : "loot_table",
-					"name" : "loot_tables/gameplay/fishing/cave_fish.json",
-					"weight" : 13,
-					"quality" : 7
-				}
-			]
-		}
-	]
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "loot_tables/gameplay/fishing/junk.json",
+          "weight": 40,
+          "quality": -2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/gameplay/fishing/treasure.json",
+          "weight": 13,
+          "quality": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/gameplay/fishing/freshwater_fish.json",
+          "weight": 60,
+          "quality": -1
+        }
+      ]
+    }
+  ]
 }

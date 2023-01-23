@@ -1,2123 +1,2125 @@
 {
-	"format_version" : "1.16.100",
-	"minecraft:item" : {
-		"description" : {
-			"category" : "equipment",
-			"identifier" : "azc:neptunium_pickaxe"
-		},
-		"components" : {
-			"minecraft:icon" : {
-				"texture" : "neptunium_pickaxe"
-			},
-			"minecraft:creative_category" : {
-				"parent" : "itemGroup.name.pickaxe"
-			},
-			"minecraft:max_stack_size" : 1,
-			"minecraft:hand_equipped" : true,
-			"minecraft:foil" : false,
-			"minecraft:durability" : {
-				"max_durability" : 2500
-			},
-			"minecraft:repairable" : {
-				"repair_items" : [
-					{
-						"items" : [ "azc:neptunium_ingot" ],
-						"repair_amount" : 625
-					},
-					{
-						"items" : [ "azc:neptunium_pickaxe" ],
-						"repair_amount" : "context.other->query.remaining_durability + 0.5 * context.other->query.max_durability"
-					}
-				]
-			},
-			"minecraft:mining_speed" : 8,
-			"minecraft:damage" : 8,
-			"minecraft:enchantable" : {
-				"value" : 10,
-				"slot" : "pickaxe"
-			},
-			"minecraft:can_destroy_in_creative" : true,
-			"minecraft:digger" : {
-				"use_efficiency" : true,
-				"destroy_speeds" : [
-					{
-						"block" : {
-							"tags" : "q.any_tag('stone', 'metal', 'diamond_pick_diggable')"
-						},
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:cobblestone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:mossy_cobblestone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:brick_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:sandstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:ice",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:chain",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:dispenser",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:dropper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:hopper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:observer",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"speed" : 12,
-						"block" : "minecraft:stone_pressure_plate",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:light_weighted_pressure_plate",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:heavy_weighted_pressure_plate",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_pressure_plate",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_button",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:redstone_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:rail",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:detector_rail",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:golden_rail",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:activator_rail",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stonecutter",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:conduit",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:bell",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:beacon",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:undyed_shulker_box",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:shulker_box",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stained_hardened_clay",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:concrete",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:hardened_clay",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:glass",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stained_glass",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stonecutter_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:glass_pane",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stained_glass_pane",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:ender_chest",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:enchanting_table",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:grindstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:anvil",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:brewing_stand",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:respawn_anchor",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:furnace",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lit_furnace",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blast_furnace",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lit_blast_furnace",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:smoker",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lit_smoker",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lantern",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:soul_lantern",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coral_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coral_fan",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coral_fan_dead",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coral_fan_hang",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coral_fan_hang2",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coral_fan_hang3",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:mob_spawner",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blackstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:magma",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:netherrack",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:crying_obsidian",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:end_stone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:packed_ice",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blue_ice",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:frosted_ice",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:quartz_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:nether_gold_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:ancient_debris",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"speed" : 12,
-						"block" : "minecraft:gilded_blackstone",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:diamond_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:netherite_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lapis_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:emerald_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:coal_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"speed" : 12,
-						"block" : "minecraft:quartz_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:crimson_nylium",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:warped_nylium",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:basalt",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_basalt",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:purpur_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:purpur_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blackstone_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_brick_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:nether_brick_fence",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:mossy_cobblestone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:normal_stone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:mossy_stone_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:sandstone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:smooth_sandstone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:red_sandstone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:smooth_red_sandstone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:granite_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_granite_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:andesite_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_andesite_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:diorite_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_diorite_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:nether_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:red_nether_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:end_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:quartz_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:smooth_quartz_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:prismarine_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:dark_prismarine_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:prismarine_bricks_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blackstone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:iron_trapdoor",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone_slab2",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone_slab3",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stone_slab4",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blackstone_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_brick_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:double_stone_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:double_stone_slab2",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:double_stone_slab3",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:double_stone_slab4",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blackstone_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_brick_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lodestone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:stonebrick",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:chiseled_polished_blackstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:chiseled_nether_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:quartz_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:cracked_polished_blackstone_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:cracked_nether_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:polished_blackstone_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:prismarine",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:end_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:smooth_stone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:red_sandstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:bone_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:nether_brick",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:red_nether_brick",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:purple_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:white_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:orange_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:magenta_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:light_blue_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:yellow_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:lime_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:pink_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:gray_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:silver_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:silver_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:cyan_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:blue_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:brown_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:green_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:red_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:black_glazed_terracotta",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						}
-					},
-					{
-						"block" : "minecraft:deepslate",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:tuff",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:copper_ore",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:crying_obsidian",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:obsidian",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cauldron",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_diamond_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:diamond_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_copper_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_lapis_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:lapis_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"block" : "minecraft:lit_deepslate_redstone_ore",
-						"use_efficiency" : true
-					},
-					{
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"block" : "minecraft:lit_redstone_ore",
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_redstone_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:redstone_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_coal_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:coal_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_emerald_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:emerald_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_gold_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:gold_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_iron_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:iron_ore",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:iron_bars",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:iron_trapdoor",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:iron_door",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:iron_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:gold_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:calcite",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:smooth_basalt",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:raw_iron_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:raw_gold_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:raw_copper_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:lightning_rod",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:amethyst_block",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:budding_amethyst",
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"speed" : 12,
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:amethyst_cluster",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:medium_amethyst_bud",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:large_amethyst_bud",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:small_amethyst_bud",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:pointed_dripstone",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cobbled_deepslate",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cobbled_deepslate_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cobbled_deepslate_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cobbled_deepslate_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cobbled_deepslate_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_tiles",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_tile_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_tile_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cracked_deepslate_tiles",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_tile_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_tile_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cracked_deepslate_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_brick_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_brick_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:deepslate_brick_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:chiseled_deepslate",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:polished_deepslate",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:polished_deepslate_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:polished_deepslate_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:polished_deepslate_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:polished_deepslate_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:copper_block",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:exposed_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:weathered_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:oxidized_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:exposed_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:weathered_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:oxidized_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_exposed_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_weathered_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_oxidized_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_exposed_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_weathered_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_oxidized_cut_copper",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:exposed_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:weathered_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:oxidized_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_exposed_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_weathered_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_oxidized_cut_copper_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:exposed_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:weathered_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:oxidized_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_exposed_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_weathered_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_oxidized_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:exposed_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:weathered_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:oxidized_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_exposed_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_weathered_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:waxed_oxidized_double_cut_copper_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:pearlescent_froglight",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:verdant_froglight",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:ochre_froglight",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:packed_mud",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:mud_bricks",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:mud_brick_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:mud_brick_double_slab",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:mud_brick_stairs",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "minecraft:mud_brick_wall",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "azc:neptunium_block",
-						"speed" : 22,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "azc:neptunes_bounty",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					},
-					{
-						"block" : "azc:tackle_box",
-						"speed" : 12,
-						"on_dig" : {
-							"event" : "reduce_durability"
-						},
-						"use_efficiency" : true
-					}
-				],
-				"on_dig" : {
-					"event" : "reduce_durability"
-				}
-			},
-			"minecraft:weapon" : {
-				"on_hurt_entity" : {
-					"event" : "reduce_durability2"
-				}
-			},
-			"tag:minecraft:is_pickaxe" : {},
-			"minecraft:display_name" : {}
-		},
-		"events" : {
-			"reduce_durability" : {
-				"damage" : {
-					"type" : "durability",
-					"amount" : 1,
-					"target" : "self"
-				}
-			},
-			"reduce_durability2" : {
-				"damage" : {
-					"type" : "durability",
-					"amount" : 2,
-					"target" : "self"
-				}
-			}
-		}
-	}
+  "format_version": "1.18.0",
+  "minecraft:item": {
+    "description": {
+      "category": "equipment",
+      "identifier": "azc:neptunium_pickaxe"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "neptunium_pickaxe"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.pickaxe"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:foil": false,
+      "minecraft:durability": {
+        "max_durability": 2500
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": ["azc:neptunium_ingot"],
+            "repair_amount": 625
+          },
+          {
+            "items": ["azc:neptunium_pickaxe"],
+            "repair_amount": "context.other->query.remaining_durability + 0.5 * context.other->query.max_durability"
+          }
+        ]
+      },
+      "minecraft:mining_speed": 8,
+      "minecraft:damage": 8,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "pickaxe"
+      },
+      "minecraft:can_destroy_in_creative": true,
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": {
+              "tags": "q.any_tag('stone', 'metal', 'diamond_pick_diggable')"
+            },
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:cobblestone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:mossy_cobblestone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:brick_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:sandstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:ice",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:chain",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:dispenser",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:dropper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:hopper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:observer",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "speed": 12,
+            "block": "minecraft:stone_pressure_plate",
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:light_weighted_pressure_plate",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:heavy_weighted_pressure_plate",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_pressure_plate",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_button",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:redstone_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:rail",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:detector_rail",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:golden_rail",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:activator_rail",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stonecutter",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:conduit",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:bell",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:beacon",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:undyed_shulker_box",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:shulker_box",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stained_hardened_clay",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:concrete",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:hardened_clay",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:glass",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stained_glass",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stonecutter_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:glass_pane",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stained_glass_pane",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:ender_chest",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:enchanting_table",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:grindstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:anvil",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:brewing_stand",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:respawn_anchor",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:furnace",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lit_furnace",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blast_furnace",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lit_blast_furnace",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:smoker",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lit_smoker",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lantern",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:soul_lantern",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coral_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coral_fan",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coral_fan_dead",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coral_fan_hang",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coral_fan_hang2",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coral_fan_hang3",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:mob_spawner",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blackstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:magma",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:netherrack",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:crying_obsidian",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:end_stone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:packed_ice",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blue_ice",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:frosted_ice",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:quartz_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:nether_gold_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:ancient_debris",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "speed": 12,
+            "block": "minecraft:gilded_blackstone",
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:diamond_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:netherite_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lapis_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:emerald_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:coal_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "speed": 12,
+            "block": "minecraft:quartz_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:crimson_nylium",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:warped_nylium",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:basalt",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_basalt",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:purpur_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:purpur_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:nether_brick_fence",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:mossy_cobblestone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:normal_stone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:mossy_stone_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:sandstone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:smooth_sandstone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:red_sandstone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:smooth_red_sandstone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:granite_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_granite_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:andesite_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_andesite_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:diorite_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_diorite_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:nether_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:red_nether_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:end_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:quartz_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:smooth_quartz_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:prismarine_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:dark_prismarine_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:prismarine_bricks_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:iron_trapdoor",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab2",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab3",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stone_slab4",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab2",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab3",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:double_stone_slab4",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blackstone_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_brick_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lodestone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:stonebrick",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:chiseled_polished_blackstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:chiseled_nether_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:quartz_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:cracked_polished_blackstone_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:cracked_nether_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:polished_blackstone_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:prismarine",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:end_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:smooth_stone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:red_sandstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:bone_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:nether_brick",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:red_nether_brick",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:purple_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:white_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:orange_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:magenta_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:light_blue_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:yellow_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:lime_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:pink_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:gray_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:silver_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:silver_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:cyan_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:blue_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:brown_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:green_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:red_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:black_glazed_terracotta",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            }
+          },
+          {
+            "block": "minecraft:deepslate",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:tuff",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:copper_ore",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:crying_obsidian",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:obsidian",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cauldron",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_diamond_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:diamond_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_copper_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_lapis_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:lapis_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "block": "minecraft:lit_deepslate_redstone_ore",
+            "use_efficiency": true
+          },
+          {
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "block": "minecraft:lit_redstone_ore",
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_redstone_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:redstone_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_coal_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:coal_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_emerald_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:emerald_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_gold_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:gold_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_iron_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:iron_ore",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:iron_bars",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:iron_trapdoor",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:iron_door",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:iron_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:gold_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:calcite",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:smooth_basalt",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:raw_iron_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:raw_gold_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:raw_copper_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:lightning_rod",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:amethyst_block",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:budding_amethyst",
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "speed": 12,
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:amethyst_cluster",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:medium_amethyst_bud",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:large_amethyst_bud",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:small_amethyst_bud",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:pointed_dripstone",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cobbled_deepslate",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cobbled_deepslate_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_tiles",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_tile_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_tile_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cracked_deepslate_tiles",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_tile_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_tile_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cracked_deepslate_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_brick_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_brick_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:deepslate_brick_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:chiseled_deepslate",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:polished_deepslate",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:polished_deepslate_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:polished_deepslate_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:polished_deepslate_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:polished_deepslate_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:copper_block",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:exposed_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:weathered_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:oxidized_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:exposed_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:weathered_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:oxidized_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_exposed_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_weathered_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_oxidized_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_exposed_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_weathered_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_oxidized_cut_copper",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:exposed_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:weathered_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:oxidized_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_exposed_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_weathered_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_oxidized_cut_copper_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:exposed_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:weathered_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:oxidized_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_exposed_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_weathered_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_oxidized_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:exposed_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:weathered_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:oxidized_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_exposed_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_weathered_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:waxed_oxidized_double_cut_copper_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:pearlescent_froglight",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:verdant_froglight",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:ochre_froglight",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:packed_mud",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:mud_bricks",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:mud_brick_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:mud_brick_double_slab",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:mud_brick_stairs",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "minecraft:mud_brick_wall",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "azc:neptunium_block",
+            "speed": 22,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "azc:neptunes_bounty",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          },
+          {
+            "block": "azc:tackle_box",
+            "speed": 12,
+            "on_dig": {
+              "event": "reduce_durability"
+            },
+            "use_efficiency": true
+          }
+        ],
+        "on_dig": {
+          "event": "reduce_durability"
+        }
+      },
+      "minecraft:weapon": {
+        "on_hurt_entity": {
+          "event": "reduce_durability2"
+        }
+      },
+      "tag:minecraft:is_pickaxe": {},
+      "minecraft:display_name": {
+        "value": "Neptunium Pickaxe\n§3Able to mine underwater"
+      }
+    },
+    "events": {
+      "reduce_durability": {
+        "damage": {
+          "type": "durability",
+          "amount": 1,
+          "target": "self"
+        }
+      },
+      "reduce_durability2": {
+        "damage": {
+          "type": "durability",
+          "amount": 2,
+          "target": "self"
+        }
+      }
+    }
+  }
 }

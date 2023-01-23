@@ -2,7 +2,7 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "adv:jellyfish",
+      "identifier": "azc:azc_jellyfish",
       "category": "nature"
     },
     "components": {

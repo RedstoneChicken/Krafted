@@ -1,0 +1,31 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:emerald_axe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XX",
+			"X#",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stick"
+			},
+			"X": {
+				"item": "minecraft:emerald"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:emerald_axe",
+				"count": 1
+			}
+		]
+	}
+}
