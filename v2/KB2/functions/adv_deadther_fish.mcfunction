@@ -11,3 +11,4 @@ give @s adv:fungi_catfish
 give @s adv:flarefin_koi
 give @s adv:blaze_pike
 give @s adv:magikarp
+give @s adv:blazing_fishing_pole

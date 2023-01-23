@@ -1,0 +1,14 @@
+{
+	"pools" : [
+		{
+			"rolls" : 1,
+			"entries" : [
+				{
+					"type" : "item",
+					"name" : "adv:frost_minnow",
+					"weight" : 1
+				}
+			]
+		}
+	]
+}

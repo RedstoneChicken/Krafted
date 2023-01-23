@@ -2,6 +2,7 @@
 {
   "entity_sounds": {
     "entities": {
+      //Advanced Fishing v7
       "adv:blazing_hook": {
         "events": {
           "death": "mob.fish.hurt"

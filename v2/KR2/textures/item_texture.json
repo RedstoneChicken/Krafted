@@ -544,6 +544,11 @@
     "incubation:scrambled_eggs": {
       "textures": "textures/items/pamobile/incubation_scrambled_eggs"
     },
+
+    //Advanced Fishing v7
+    "blazing_fishing_pole": {
+      "textures": "textures/items/blazing_fishing_pole"
+    },
     "abyssal_lurker": {
       "textures": "textures/items/abyssal_lurker"
     },

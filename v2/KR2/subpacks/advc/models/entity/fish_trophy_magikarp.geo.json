@@ -1,0 +1,62 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.fish_trophy_magikarp",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-6, 4, -8], "size": [12, 8, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "fish",
+					"pivot": [0, 8, -6],
+					"rotation": [0, -90, 0]
+				},
+				{
+					"name": "body",
+					"parent": "fish",
+					"pivot": [-0.5, 5, -10],
+					"cubes": [
+						{"origin": [-1, 5, -10.0008], "size": [2, 6, 6], "uv": [0, 9]},
+						{"origin": [0, 3, -10.0008], "size": [0, 2, 6], "uv": [12, 15]},
+						{"origin": [0, 11, -10.0008], "size": [0, 3, 6], "uv": [0, 15]}
+					]
+				},
+				{
+					"name": "tailfin",
+					"parent": "body",
+					"pivot": [0, 5, -4],
+					"cubes": [
+						{"origin": [0, 5.0008, -4], "size": [0, 6, 5], "uv": [10, 4]}
+					]
+				},
+				{
+					"name": "leftFin2",
+					"parent": "body",
+					"pivot": [0.5, 6, -8],
+					"rotation": [0, -20, 0],
+					"cubes": [
+						{"origin": [1.05673, 5, -7.64848], "size": [2, 2, 0], "uv": [0, 9]}
+					]
+				},
+				{
+					"name": "rightFin2",
+					"parent": "body",
+					"pivot": [-0.5, 5, -9],
+					"rotation": [0, 20, 0]
+				}
+			]
+		}
+	]
+}

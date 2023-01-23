@@ -13,29 +13,54 @@
           "table": "loot_tables/gameplay/jungle_fishing.json"
         }
       },
-      "loot_saltwater": {
+      "loot_oceach": {
         "minecraft:loot": {
-          "table": "loot_tables/gameplay/saltwater_fishing.json"
+          "table": "loot_tables/gameplay/oceach_fishing.json"
         }
       },
-      "loot_arid": {
+      "loot_desavesa": {
         "minecraft:loot": {
-          "table": "loot_tables/gameplay/arid_fishing.json"
+          "table": "loot_tables/gameplay/desavesa_fishing.json"
         }
       },
-      "loot_arctic": {
+      "loot_snowy": {
         "minecraft:loot": {
-          "table": "loot_tables/gameplay/arctic_fishing.json"
+          "table": "loot_tables/gameplay/snowy_fishing.json"
         }
       },
-      "loot_brackish": {
+      "loot_deep": {
         "minecraft:loot": {
-          "table": "loot_tables/gameplay/brackish_fishing.json"
+          "table": "loot_tables/gameplay/deep_fishing.json"
+        }
+      },
+      "loot_cave_one": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/cave_one_fish.json"
+        }
+      },
+      "loot_cave_two": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/cave_two_fish.json"
+        }
+      },
+      "loot_cave_three": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/cave_three_fish.json"
+        }
+      },
+      "loot_swamp": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/swamp_fishing.json"
         }
       },
       "loot_mooshroom": {
         "minecraft:loot": {
           "table": "loot_tables/gameplay/fishing/mooshroom_fish.json"
+        }
+      },
+      "loot_end": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/end_fish.json"
         }
       }
     },
@@ -74,25 +99,28 @@
               "value": "jungle"
             },
             "add": {
-              "component_groups": ["loot_jungle"]
+              "component_groups": [
+                "loot_jungle"
+              ]
             }
           },
           {
             "filters": {
-              "all_of": [
+              "any_of": [
                 {
-                  "test": "has_biome_tag",
+                  "test": "is_biome",
                   "value": "ocean"
                 },
                 {
-                  "test": "has_biome_tag",
-                  "operator": "not",
-                  "value": "cold"
+                  "test": "is_biome",
+                  "value": "beach"
                 }
               ]
             },
             "add": {
-              "component_groups": ["loot_saltwater"]
+              "component_groups": [
+                "loot_oceach"
+              ]
             }
           },
           {
@@ -113,24 +141,95 @@
               ]
             },
             "add": {
-              "component_groups": ["loot_arid"]
+              "component_groups": [
+                "loot_desavesa"
+              ]
             }
           },
           {
             "filters": {
-              "all_of": [
+              "any_of": [
                 {
                   "test": "has_biome_tag",
-                  "value": "ocean"
+                  "value": "taiga"
                 },
                 {
                   "test": "has_biome_tag",
-                  "value": "cold"
+                  "value": "frozen"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "ice"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "snow_covered"
                 }
               ]
             },
             "add": {
-              "component_groups": ["loot_arctic"]
+              "component_groups": [
+                "loot_snowy"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "deep"
+            },
+            "add": {
+              "component_groups": [
+                "loot_deep"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "operator": "<=",
+                  "value": 50
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_cave_one"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "operator": "<=",
+                  "value": 40
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_cave_two"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "operator": "<=",
+                  "value": 25
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_cave_three"
+              ]
             }
           },
           {
@@ -139,7 +238,9 @@
               "value": "swamp"
             },
             "add": {
-              "component_groups": ["loot_brackish"]
+              "component_groups": [
+                "loot_swamp"
+              ]
             }
           },
           {
@@ -148,7 +249,20 @@
               "value": "mooshroom_island"
             },
             "add": {
-              "component_groups": ["loot_mooshroom"]
+              "component_groups": [
+                "loot_mooshroom"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_biome",
+              "value": "the_end"
+            },
+            "add": {
+              "component_groups": [
+                "loot_end"
+              ]
             }
           }
         ]

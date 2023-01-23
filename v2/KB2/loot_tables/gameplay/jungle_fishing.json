@@ -1,27 +1,21 @@
 {
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "loot_table",
-          "name": "loot_tables/gameplay/fishing/jungle_junk.json",
-          "weight": 40,
-          "quality": -2
-        },
-        {
-          "type": "loot_table",
-          "name": "loot_tables/gameplay/fishing/treasure.json",
-          "weight": 13,
-          "quality": 2
-        },
-        {
-          "type": "loot_table",
-          "name": "loot_tables/gameplay/fishing/tropical_fish.json",
-          "weight": 60,
-          "quality": -1
-        }
-      ]
-    }
-  ]
+	"pools" : [
+		{
+			"rolls" : 1,
+			"entries" : [
+				{
+					"type" : "loot_table",
+					"name" : "loot_tables/gameplay/fishing/jungle_junk.json",
+					"weight" : 25,
+					"quality" : -3
+				},
+				{
+					"type" : "loot_table",
+					"name" : "loot_tables/gameplay/fishing/jungle_fish.json",
+					"weight" : 60,
+					"quality" : -1
+				}
+			]
+		}
+	]
 }

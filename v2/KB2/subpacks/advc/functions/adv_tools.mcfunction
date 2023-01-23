@@ -1,0 +1,9 @@
+give @s adv:obsidian_hook
+give @s adv:double_obsidian_hook
+give @s adv:glowstone_hook
+give @s adv:soulsand_hook
+give @s adv:blazing_fishing_pole_template
+give @s adv:blazing_fishing_pole
+give @s adv:blazing_fishing_pole_double
+give @s adv:blazing_fishing_pole_glow
+give @s adv:blazing_fishing_pole_soul

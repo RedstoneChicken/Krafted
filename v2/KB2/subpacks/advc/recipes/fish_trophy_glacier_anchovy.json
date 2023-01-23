@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "fish_trophy_glacier_anchovy"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "azc:fish_trophy"
+      },
+      {
+        "item": "adv:glacier_anchovy"
+      }
+    ],
+    "result": {
+      "item": "adv:fish_trophy_glacier_anchovy"
+    }
+  }
+}

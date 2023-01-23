@@ -2,7 +2,7 @@
   "format_version": "1.10",
   "minecraft:item": {
     "description": {
-      "identifier": "azc:azc_piranha",
+      "identifier": "adv:piranha",
       "category": "nature"
     },
     "components": {
@@ -12,7 +12,7 @@
       "minecraft:stack_by_data": true,
       "minecraft:food": {
         "saturation_modifier": "poor",
-        "nutrition": 1,
+        "nutrition": 2,
         "can_always_eat": false
       },
       "minecraft:use_duration": 32

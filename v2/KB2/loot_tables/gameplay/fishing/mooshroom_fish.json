@@ -10,18 +10,33 @@
         },
         {
           "type": "item",
-          "name": "azc:red_shrooma",
-          "weight": 45
-        },
-        {
-          "type": "item",
-          "name": "azc:brown_shrooma",
-          "weight": 45
-        },
-        {
-          "type": "item",
           "name": "minecraft:salmon",
           "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:squid",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:brown_shroomfin",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "adv:red_shroomfin",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "adv:catfish",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "adv:pike",
+          "weight": 13
         }
       ]
     }

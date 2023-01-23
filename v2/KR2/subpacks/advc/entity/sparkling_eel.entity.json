@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "adv:sparkling_eel",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/sparkling_eel"
+			},
+			"geometry" : {
+				"default" : "geometry.electric_eel"
+			},
+			"animations" : {
+				"swim" : "animation.electric_eel.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.cod" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_sparkling_eel",
+				"texture_index" : 0
+			}
+		}
+	}
+}

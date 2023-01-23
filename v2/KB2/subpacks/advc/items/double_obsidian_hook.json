@@ -1,0 +1,23 @@
+{
+  "format_version": "1.18.0",
+  "minecraft:item": {
+    "description": {
+      "category": "items",
+      "identifier": "adv:double_obsidian_hook"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "double_obsidian_hook"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.items"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": false,
+      "minecraft:foil": false,
+      "minecraft:display_name": {
+        "value": "§bDouble Obsidian Hook\n§eCatch two items"
+      }
+    }
+  }
+}
