@@ -420,7 +420,7 @@
   "azc:fish_trophy_tuna": {
     "textures": "fish_trophy_tuna",
     "sound": "wood"
-  }
+  },
   "cav:mudstone": {
     "sound": "stone",
     "textures": {

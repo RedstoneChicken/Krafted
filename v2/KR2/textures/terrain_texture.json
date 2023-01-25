@@ -611,7 +611,7 @@
     },
     "fish_trophy_perch": {
       "textures": ["textures/blocks/fish_trophy_perch"]
-    },    
+    },
     "fish_trophy_pink_salmon": {
       "textures": ["textures/blocks/fish_trophy_pink_salmon"]
     },
@@ -641,7 +641,7 @@
     },
     "fish_trophy_tuna": {
       "textures": ["textures/blocks/fish_trophy_tuna"]
-    }
+    },
     "gabbro": {
       "textures": ["textures/blocks/gabbro"]
     },
@@ -6472,9 +6472,6 @@
     "stone_bricks_trap_mossy": {
       "textures": ["textures/blocks/stone_bricks_trap_mossy"]
     },
-    "fish_trophy_atlantic_cod": {
-      "textures": ["textures/blocks/fish_trophy_atlantic_cod"]
-    },
     "crypt_traproom_small_spawner": {
       "textures": ["textures/blocks/empty"]
     },
@@ -6686,15 +6683,7 @@
 
     "sand_layer": { "textures": ["textures/blocks/sand_layer"] },
     "quicksand": { "textures": ["textures/blocks/quicksand"] },
-    "limestone": { "textures": ["textures/blocks/limestone"] },
     "cobbled_limestone": { "textures": ["textures/blocks/cobbled_limestone"] },
-    "polished_limestone": {
-      "textures": ["textures/blocks/polished_limestone"]
-    },
-    "limestone_bricks": { "textures": ["textures/blocks/limestone_bricks"] },
-    "limestone_bricks_chiseled": {
-      "textures": ["textures/blocks/limestone_bricks_chiseled"]
-    },
     "limestone_bricks_cracked": {
       "textures": ["textures/blocks/limestone_bricks_cracked"]
     },
