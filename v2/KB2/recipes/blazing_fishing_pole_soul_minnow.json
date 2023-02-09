@@ -4,7 +4,7 @@
 		"description" : {
 			"identifier" : "blazing_fishing_pole_soul_minnow"
 		},
-		"tags" : [ "tackle_box" ],
+		"tags" : [ "crafting_table" ],
 		"pattern" : [ " A ", "B C", "D E" ],
 		"key" : {
 			"A" : {

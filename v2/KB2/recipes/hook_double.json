@@ -4,7 +4,7 @@
 		"description" : {
 			"identifier" : "hook_double"
 		},
-		"tags" : [ "tackle_box" ],
+		"tags" : [ "crafting_table" ],
 		"ingredients" : [
 			{
 				"item" : "azc:iron_hook"

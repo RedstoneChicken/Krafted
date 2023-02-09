@@ -4,7 +4,7 @@
 		"description" : {
 			"identifier" : "nether_star_hook"
 		},
-		"tags" : [ "tackle_box" ],
+		"tags" : [ "crafting_table" ],
 		"ingredients" : [
 			{
 				"item" : "azc:golden_hook"

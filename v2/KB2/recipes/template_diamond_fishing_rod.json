@@ -4,7 +4,7 @@
 		"description" : {
 			"identifier" : "template_diamond_fishing_rod"
 		},
-		"tags" : [ "tackle_box" ],
+		"tags" : [ "crafting_table" ],
 		"pattern" : [ "  X", " X ", "#  " ],
 		"key" : {
 			"#" : {
