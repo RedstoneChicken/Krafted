@@ -21,6 +21,7 @@
 			"render_controllers": [
 				"controller.render.armor"
 			]
+			//Fake changes
 		}
 	}
 }
