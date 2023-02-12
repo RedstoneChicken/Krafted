@@ -1,20 +1,20 @@
 {
-	"format_version" : "1.12",
-	"minecraft:recipe_shapeless" : {
-		"description" : {
-			"identifier" : "hook_double_obsidian"
-		},
-		"tags" : [ "tackle_box" ],
-		"ingredients" : [
-			{
-				"item" : "adv:obsidian_hook"
-			},
-			{
-				"item" : "adv:obsidian_hook"
-			}
-		],
-		"result" : {
-			"item" : "adv:double_obsidian_hook"
-		}
-	}
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "hook_double_obsidian"
+    },
+    "tags": ["crafting_table"],
+    "ingredients": [
+      {
+        "item": "adv:obsidian_hook"
+      },
+      {
+        "item": "adv:obsidian_hook"
+      }
+    ],
+    "result": {
+      "item": "adv:double_obsidian_hook"
+    }
+  }
 }

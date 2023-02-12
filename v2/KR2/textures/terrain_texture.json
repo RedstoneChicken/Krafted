@@ -513,18 +513,6 @@
     "neptunes_bounty": {
       "textures": ["textures/blocks/neptunes_bounty"]
     },
-    "tackle_box_bottom": {
-      "textures": ["textures/blocks/tackle_box_bottom"]
-    },
-    "tackle_box_side": {
-      "textures": ["textures/blocks/tackle_box_side"]
-    },
-    "tackle_box_frontnback": {
-      "textures": ["textures/blocks/tackle_box_frontnback"]
-    },
-    "tackle_box_top": {
-      "textures": ["textures/blocks/tackle_box_top"]
-    },
     "fish_trap": {
       "textures": ["textures/blocks/fish_trap"]
     },

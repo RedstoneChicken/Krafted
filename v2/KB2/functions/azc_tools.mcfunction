@@ -19,7 +19,6 @@ give @s azc:double_iron_hook
 give @s azc:golden_hook
 give @s azc:redstone_hook
 give @s azc:nether_star_hook
-give @s azc:tackle_box
 give @s azc:minnow
 give @s azc:leech
 give @s azc:worm

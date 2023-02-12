@@ -130,17 +130,6 @@
     "textures": "neptunes_bounty",
     "sound": "metal"
   },
-  "azc:tackle_box": {
-    "textures": {
-      "down": "tackle_box_bottom",
-      "east": "tackle_box_side",
-      "north": "tackle_box_frontnback",
-      "south": "tackle_box_frontnback",
-      "up": "tackle_box_top",
-      "west": "tackle_box_side"
-    },
-    "sound": "lantern"
-  },
   "azc:wooden_fish_trap": {
     "textures": "fish_trap_wooden",
     "sound": "scaffolding"

@@ -2081,14 +2081,6 @@
               "event": "reduce_durability"
             },
             "use_efficiency": true
-          },
-          {
-            "block": "azc:tackle_box",
-            "speed": 12,
-            "on_dig": {
-              "event": "reduce_durability"
-            },
-            "use_efficiency": true
           }
         ],
         "on_dig": {
