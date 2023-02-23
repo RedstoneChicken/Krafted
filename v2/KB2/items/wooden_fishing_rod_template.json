@@ -1,16 +1,26 @@
 {
-	"format_version" : "1.10",
-	"minecraft:item" : {
-		"description" : {
-			"identifier" : "azc:wooden_fishing_rod_template",
-			"category" : "items"
-		},
-		"components" : {
-			"minecraft:max_stack_size" : 1,
-			"minecraft:hand_equipped" : true,
-			"minecraft:fuel" : {
-				"duration" : 10.0
-			}
-		}
-	}
+  "format_version": "1.18.0",
+  "minecraft:item": {
+    "description": {
+      "category": "items",
+      "identifier": "azc:wooden_fishing_rod_template"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "wooden_fishing_rod_template"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.items"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:foil": false,
+      "minecraft:display_name": {
+        "value": "Wooden Fishing Rod\n§7Template"
+      },
+      "minecraft:fuel": {
+        "duration": 10.0
+      }
+    }
+  }
 }

@@ -394,7 +394,6 @@ item.azc:whale_burger.name=Whale Burger
 ## Blocks:
 tile.azc:neptunium_block.name=Neptunium Block
 tile.azc:neptunes_bounty.name=§bNeptune's Bounty §f[???????]
-tile.azc:tackle_box.name=Tackle Box
 tile.azc:wooden_fish_trap.name=Wooden Fish Trap
 tile.azc:iron_fish_trap.name=Iron Fish Trap
 tile.azc:golden_fish_trap.name=Golden Fish Trap

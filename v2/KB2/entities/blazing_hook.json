@@ -47,7 +47,7 @@
 				"value" : 1
 			},
 			"minecraft:loot" : {
-				"table" : "loot_tables/gameplay/nether_fish.json"
+				"table" : "loot_tables/gameplay/fishing/nether_fish.json"
 			},
 			"minecraft:floats_in_liquid" : {},
 			"minecraft:buoyant" : {

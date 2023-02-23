@@ -4,7 +4,7 @@
 		"description" : {
 			"identifier" : "double_golden_fishing_rod_worm"
 		},
-		"tags" : [ "tackle_box" ],
+		"tags" : [ "crafting_table" ],
 		"pattern" : [ " A ", "B C", "D E" ],
 		"key" : {
 			"A" : {

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:obsidian_hook",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "obsidian_hook",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

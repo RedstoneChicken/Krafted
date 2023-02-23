@@ -1,23 +1,18 @@
+//bridge-file-version: #0
 {
-  "format_version": "1.16.100",
-  "minecraft:block": {
-    "description": {
-      "identifier": "cav:ruby_block",
-      "is_experimental": false
-    },
-    "components": {
-      "minecraft:creative_category": {
-        "category": "construction"
-      },
-      "minecraft:destroy_time": 0.7,
-      "minecraft:explosion_resistance": 30,
-      "minecraft:block_light_absorption": 15,
-      "minecraft:map_color": "#E72F3B",
-      "minecraft:block_light_emission": 0,
-      "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
-      }
-    }
-  }
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:ruby_block"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "Construction"
+			},
+			"tag:dextenblocks": {},
+			"minecraft:destroy_time": 5.5,
+			"minecraft:explosion_resistance": 2
+		},
+		"events": {}
+	}
 }

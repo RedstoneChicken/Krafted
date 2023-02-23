@@ -1,25 +1,38 @@
+//bridge-file-version: #6
 {
-  "format_version": "1.16.100",
-  "minecraft:block": {
-    "description": {
-      "identifier": "cav:ruby_ore",
-      "is_experimental": false
-    },
-    "components": {
-      "minecraft:creative_category": {
-        "category": "nature",
-        "group": "itemGroup.name.ore"
-      },
-      "minecraft:destroy_time": 0.7,
-      "minecraft:explosion_resistance": 30,
-      "minecraft:block_light_absorption": 15,
-      "minecraft:map_color": "#E72F3B",
-      "minecraft:block_light_emission": 0,
-      "minecraft:loot": "loot_tables/blocks/ruby_ore.json",
-      "minecraft:flammable": {
-        "burn_odds": 0,
-        "flame_odds": 0
-      }
-    }
-  }
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:ruby_ore"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.ore"
+			},
+			"tag:dextenblocks": {},
+			"minecraft:destroy_time": 7.5,
+			"minecraft:explosion_resistance": 2,
+			"minecraft:loot": "loot_tables/ruby_ore.json",
+			"minecraft:on_player_destroyed": {
+				"event": "xp",
+				"target": "self"
+			}
+		},
+		"events": {
+			"xp": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon xp_orb ~ ~ ~",
+								"summon xp_orb ~ ~ ~"
+							],
+							"target": "self"
+						}
+					}
+				]
+			}
+		}
+	}
 }

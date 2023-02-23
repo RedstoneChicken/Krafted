@@ -1,0 +1,578 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "trades": [
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:tin",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:tin",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:topaz",
+                  "quantity": {
+                    "min": 1,
+                    "max": 2
+                  }
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 3
+                  }
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:topaz",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:bronce",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:bronce",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:ruby",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 2
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 2
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:ruby",
+                  "quantity": 1
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:jade",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 3
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:jade",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:titanium",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 4
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:titanium",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:migtinio",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 3
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:migtinio",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:paladium",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 4
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:paladium",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groups": [
+        {
+          "trades": [
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:orichalcum",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 3
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:orichalcum",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:platinum",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 3,
+                    "max": 4
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:platinum",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:onyx",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 4,
+                    "max": 5
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 5
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:onyx",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:tourmaline",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 4,
+                    "max": 6
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:tourmaline",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:cobalto",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 5,
+                    "max": 6
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:cobalto",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:adamantite",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 5,
+                    "max": 7
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:adamantite",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:enderite",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 8,
+                    "max": 10
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:enderite",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "oh:mithril",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": {
+                    "min": 2,
+                    "max": 3
+                  }
+                }
+              ]
+            },
+            {
+              "max_uses": 32,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "oh:mithril",
+                  "quantity": {
+                    "min": 1,
+                    "max": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,27 +6,27 @@
         {
           "type": "item",
           "name": "minecraft:fish",
-          "weight": 60
+          "weight": 2
         },
         {
           "type": "item",
           "name": "minecraft:salmon",
-          "weight": 25
-        },
-        {
-          "type": "item",
-          "name": "adv:abyssal_lurker",
           "weight": 13
         },
         {
           "type": "item",
+          "name": "adv:abyssal_lurker",
+          "weight": 60
+        },
+        {
+          "type": "item",
           "name": "adv:sponge_eater",
-          "weight": 2
+          "weight": 25
         },
         {
           "type": "item",
           "name": "adv:angler_fish",
-          "weight": 2
+          "weight": 25
         }
       ]
     }

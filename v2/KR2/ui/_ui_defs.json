@@ -1,7 +1,5 @@
 {
-  
   "ui_defs": [
-    "ui/tackle_box.json",
     "ui/hammer_table_ui.json",
     "ui/account_banned_screen.json",
     "ui/achievement_screen.json",
@@ -187,14 +185,14 @@
     "ui/xbl_optional_signin.json",
     "ui/profile_card.json",
     "ui/xbl_report_user.json",
-	"ui/crafting_station.json",
-	"ui/stencil_table.json",
-	"ui/part_builder.json",
-	"ui/tool_station.json",
-	"ui/tool_forge.json",
-	"ui/smeltery_controller.json",
-	"ui/casting_table.json",
-	
+    "ui/crafting_station.json",
+    "ui/stencil_table.json",
+    "ui/part_builder.json",
+    "ui/tool_station.json",
+    "ui/tool_forge.json",
+    "ui/smeltery_controller.json",
+    "ui/casting_table.json",
+
     "ui/account_banned_screen.json",
     "ui/achievement_screen.json",
     "ui/add_external_server_screen.json",

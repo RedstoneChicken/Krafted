@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "adv:sponge_eater",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/sponge_eater"
+			},
+			"geometry" : {
+				"default" : "geometry.brown_trout"
+			},
+			"animations" : {
+				"swim" : "animation.brown_trout.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.salmon" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_sponge_eater",
+				"texture_index" : 0
+			}
+		}
+	}
+}

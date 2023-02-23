@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "fish_trophy_brown_shroomfin"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "azc:fish_trophy"
+      },
+      {
+        "item": "adv:brown_shroomfin"
+      }
+    ],
+    "result": {
+      "item": "adv:fish_trophy_brown_shroomfin"
+    }
+  }
+}

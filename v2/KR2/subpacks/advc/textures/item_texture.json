@@ -1,0 +1,342 @@
+{
+	"resource_pack_name" : "vanilla",
+	"texture_name" : "atlas.items",
+	"texture_data" : {
+		"abyssal_lurker" : {
+			"textures" : "textures/items/abyssal_lurker"
+		},
+		"angelfish" : {
+			"textures" : "textures/items/angelfish"
+		},
+		"angler_fish" : {
+			"textures" : "textures/items/angler_fish"
+		},
+		"blaze_pike" : {
+			"textures" : "textures/items/blaze_pike"
+		},
+		"bonefish" : {
+			"textures" : "textures/items/bonefish"
+		},
+		"brown_shroomfin" : {
+			"textures" : "textures/items/brown_shroomfin"
+		},
+		"catfish" : {
+			"textures" : "textures/items/catfish"
+		},
+		"cave_trout" : {
+			"textures" : "textures/items/cave_trout"
+		},
+		"charged_bullhead" : {
+			"textures" : "textures/items/charged_bullhead"
+		},
+		"chorus_koi" : {
+			"textures" : "textures/items/chorus_koi"
+		},
+		"crystal_mullet" : {
+			"textures" : "textures/items/crystal_mullet"
+		},
+		"cursed_koi" : {
+			"textures" : "textures/items/cursed_koi"
+		},
+		"ender_shad" : {
+			"textures" : "textures/items/ender_shad"
+		},
+		"explosive_crucian" : {
+			"textures" : "textures/items/explosive_crucian"
+		},
+		"flarefin_koi" : {
+			"textures" : "textures/items/flarefin_koi"
+		},
+		"frost_minnow" : {
+			"textures" : "textures/items/frost_minnow"
+		},
+		"fungi_catfish" : {
+			"textures" : "textures/items/fungi_catfish"
+		},
+		"glacier_anchovy" : {
+			"textures" : "textures/items/glacier_anchovy"
+		},
+		"golden_koi" : {
+			"textures" : "textures/items/golden_koi"
+		},
+		"green_jellyfish" : {
+			"textures" : "textures/items/green_jellyfish"
+		},
+		"jellyfish" : {
+			"textures" : "textures/items/jellyfish"
+		},
+		"magikarp" : {
+			"textures" : "textures/items/magikarp"
+		},
+		"magma_jellyfish" : {
+			"textures" : "textures/items/magma_jellyfish"
+		},
+		"mandarinfish" : {
+			"textures" : "textures/items/mandarinfish"
+		},
+		"mud_tuna" : {
+			"textures" : "textures/items/mud_tuna"
+		},
+		"nether_sturgeon" : {
+			"textures" : "textures/items/nether_sturgeon"
+		},
+		"obsidian_bream" : {
+			"textures" : "textures/items/obsidian_bream"
+		},
+		"pearl_sardine" : {
+			"textures" : "textures/items/pearl_sardine"
+		},
+		"pike" : {
+			"textures" : "textures/items/pike"
+		},
+		"piranha" : {
+			"textures" : "textures/items/piranha"
+		},
+		"quartz_chub" : {
+			"textures" : "textures/items/quartz_chub"
+		},
+		"red_shroomfin" : {
+			"textures" : "textures/items/red_shroomfin"
+		},
+		"ruffe" : {
+			"textures" : "textures/items/ruffe"
+		},
+		"sandy_bass" : {
+			"textures" : "textures/items/sandy_bass"
+		},
+		"snowy_walleye" : {
+			"textures" : "textures/items/snowy_walleye"
+		},
+		"sparkling_eel" : {
+			"textures" : "textures/items/sparkling_eel"
+		},
+		"specular_snapper" : {
+			"textures" : "textures/items/specular_snapper"
+		},
+		"sponge_eater" : {
+			"textures" : "textures/items/sponge_eater"
+		},
+		"spookyfin" : {
+			"textures" : "textures/items/spookyfin"
+		},
+		"squid" : {
+			"textures" : "textures/items/squid"
+		},
+		"sunfish" : {
+			"textures" : "textures/items/sunfish"
+		},
+		"swamp_plaice" : {
+			"textures" : "textures/items/swamp_plaice"
+		},
+		"withered_crucian" : {
+			"textures" : "textures/items/withered_crucian"
+		},
+		"blazing_fishing_pole_template" : {
+			"textures" : "textures/items/blazing_fishing_pole_template"
+		},
+		"blazing_fishing_pole_usual" : {
+			"textures" : "textures/items/blazing_fishing_pole_usual"
+		},
+		"blazing_fishing_pole_double" : {
+			"textures" : "textures/items/blazing_fishing_pole_double"
+		},
+		"blazing_fishing_pole_glow" : {
+			"textures" : "textures/items/blazing_fishing_pole_glow"
+		},
+		"blazing_fishing_pole_soul" : {
+			"textures" : "textures/items/blazing_fishing_pole_soul"
+		},
+		"obsidian_hook" : {
+			"textures" : "textures/items/obsidian_hook"
+		},
+		"double_obsidian_hook" : {
+			"textures" : "textures/items/double_obsidian_hook"
+		},
+		"glowstone_hook" : {
+			"textures" : "textures/items/glowstone_hook"
+		},
+		"soulsand_hook" : {
+			"textures" : "textures/items/soulsand_hook"
+		},
+		"spawn_egg_abyssal_lurker" : {
+			"textures" : "textures/items/spawn_egg_abyssal_lurker"
+		},
+		"spawn_egg_angelfish" : {
+			"textures" : "textures/items/spawn_egg_angelfish"
+		},
+		"spawn_egg_angler_fish" : {
+			"textures" : "textures/items/spawn_egg_angler_fish"
+		},
+		"spawn_egg_bonefish" : {
+			"textures" : "textures/items/spawn_egg_bonefish"
+		},
+		"spawn_egg_brown_shroomfin" : {
+			"textures" : "textures/items/spawn_egg_brown_shroomfin"
+		},
+		"spawn_egg_adv_catfish" : {
+			"textures" : "textures/items/spawn_egg_adv_catfish"
+		},
+		"spawn_egg_cave_trout" : {
+			"textures" : "textures/items/spawn_egg_cave_trout"
+		},
+		"spawn_egg_charged_bullhead" : {
+			"textures" : "textures/items/spawn_egg_charged_bullhead"
+		},
+		"spawn_egg_crystal_mullet" : {
+			"textures" : "textures/items/spawn_egg_crystal_mullet"
+		},
+		"spawn_egg_cursed_koi" : {
+			"textures" : "textures/items/spawn_egg_cursed_koi"
+		},
+		"spawn_egg_explosive_crucian" : {
+			"textures" : "textures/items/spawn_egg_explosive_crucian"
+		},
+		"spawn_egg_frost_minnow" : {
+			"textures" : "textures/items/spawn_egg_frost_minnow"
+		},
+		"spawn_egg_glacier_anchovy" : {
+			"textures" : "textures/items/spawn_egg_glacier_anchovy"
+		},
+		"spawn_egg_golden_koi" : {
+			"textures" : "textures/items/spawn_egg_golden_koi"
+		},
+		"spawn_egg_green_jellyfish" : {
+			"textures" : "textures/items/spawn_egg_green_jellyfish"
+		},
+		"spawn_egg_adv_jellyfish" : {
+			"textures" : "textures/items/spawn_egg_adv_jellyfish"
+		},
+		"spawn_egg_magikarp" : {
+			"textures" : "textures/items/spawn_egg_magikarp"
+		},
+		"spawn_egg_mandarinfish" : {
+			"textures" : "textures/items/spawn_egg_mandarinfish"
+		},
+		"spawn_egg_mud_tuna" : {
+			"textures" : "textures/items/spawn_egg_mud_tuna"
+		},
+		"spawn_egg_adv_piranha" : {
+			"textures" : "textures/items/spawn_egg_adv_piranha"
+		},
+		"spawn_egg_pike" : {
+			"textures" : "textures/items/spawn_egg_pike"
+		},
+		"spawn_egg_red_shroomfin" : {
+			"textures" : "textures/items/spawn_egg_red_shroomfin"
+		},
+		"spawn_egg_ruffe" : {
+			"textures" : "textures/items/spawn_egg_ruffe"
+		},
+		"spawn_egg_sandy_bass" : {
+			"textures" : "textures/items/spawn_egg_sandy_bass"
+		},
+		"spawn_egg_snowy_walleye" : {
+			"textures" : "textures/items/spawn_egg_snowy_walleye"
+		},
+		"spawn_egg_sparkling_eel" : {
+			"textures" : "textures/items/spawn_egg_sparkling_eel"
+		},
+		"spawn_egg_specular_snapper" : {
+			"textures" : "textures/items/spawn_egg_specular_snapper"
+		},
+		"spawn_egg_sponge_eater" : {
+			"textures" : "textures/items/spawn_egg_sponge_eater"
+		},
+		"spawn_egg_spookyfin" : {
+			"textures" : "textures/items/spawn_egg_spookyfin"
+		},
+		"spawn_egg_sunfish" : {
+			"textures" : "textures/items/spawn_egg_sunfish"
+		},
+		"bucket_abyssal_lurker" : {
+			"textures" : "textures/items/bucket_abyssal_lurker"
+		},
+		"bucket_angelfish" : {
+			"textures" : "textures/items/bucket_angelfish"
+		},
+		"bucket_angler_fish" : {
+			"textures" : "textures/items/bucket_angler_fish"
+		},
+		"bucket_bonefish" : {
+			"textures" : "textures/items/bucket_bonefish"
+		},
+		"bucket_brown_shroomfin" : {
+			"textures" : "textures/items/bucket_brown_shroomfin"
+		},
+		"bucket_adv_catfish" : {
+			"textures" : "textures/items/bucket_adv_catfish"
+		},
+		"bucket_cave_trout" : {
+			"textures" : "textures/items/bucket_cave_trout"
+		},
+		"bucket_charged_bullhead" : {
+			"textures" : "textures/items/bucket_charged_bullhead"
+		},
+		"bucket_crystal_mullet" : {
+			"textures" : "textures/items/bucket_crystal_mullet"
+		},
+		"bucket_cursed_koi" : {
+			"textures" : "textures/items/bucket_cursed_koi"
+		},
+		"bucket_explosive_crucian" : {
+			"textures" : "textures/items/bucket_explosive_crucian"
+		},
+		"bucket_frost_minnow" : {
+			"textures" : "textures/items/bucket_frost_minnow"
+		},
+		"bucket_glacier_anchovy" : {
+			"textures" : "textures/items/bucket_glacier_anchovy"
+		},
+		"bucket_golden_koi" : {
+			"textures" : "textures/items/bucket_golden_koi"
+		},
+		"bucket_green_jellyfish" : {
+			"textures" : "textures/items/bucket_green_jellyfish"
+		},
+		"bucket_adv_jellyfish" : {
+			"textures" : "textures/items/bucket_adv_jellyfish"
+		},
+		"bucket_magikarp" : {
+			"textures" : "textures/items/bucket_magikarp"
+		},
+		"bucket_mandarinfish" : {
+			"textures" : "textures/items/bucket_mandarinfish"
+		},
+		"bucket_mud_tuna" : {
+			"textures" : "textures/items/bucket_mud_tuna"
+		},
+		"bucket_pike" : {
+			"textures" : "textures/items/bucket_pike"
+		},
+		"bucket_adv_piranha" : {
+			"textures" : "textures/items/bucket_adv_piranha"
+		},
+		"bucket_red_shroomfin" : {
+			"textures" : "textures/items/bucket_red_shroomfin"
+		},
+		"bucket_ruffe" : {
+			"textures" : "textures/items/bucket_ruffe"
+		},
+		"bucket_sandy_bass" : {
+			"textures" : "textures/items/bucket_sandy_bass"
+		},
+		"bucket_snowy_walleye" : {
+			"textures" : "textures/items/bucket_snowy_walleye"
+		},
+		"bucket_sparkling_eel" : {
+			"textures" : "textures/items/bucket_sparkling_eel"
+		},
+		"bucket_specular_snapper" : {
+			"textures" : "textures/items/bucket_specular_snapper"
+		},
+		"bucket_sponge_eater" : {
+			"textures" : "textures/items/bucket_sponge_eater"
+		},
+		"bucket_spookyfin" : {
+			"textures" : "textures/items/bucket_spookyfin"
+		},
+		"bucket_sunfish" : {
+			"textures" : "textures/items/bucket_sunfish"
+		}
+	}
+}

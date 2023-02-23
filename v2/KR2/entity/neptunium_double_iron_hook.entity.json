@@ -7,12 +7,12 @@
         "default": "fishing_hook"
       },
       "textures": {
-        "default": "textures/entity/fishhook"
+        "default": "textures/entity/double_iron_hook"
       },
       "geometry": {
-        "default": "geometry.fishing_hook"
+        "default": "geometry.double_hook"
       },
-      "render_controllers": [ "controller.render.fishing_hook" ]
+      "render_controllers": ["controller.render.fishing_hook"]
     }
   }
 }

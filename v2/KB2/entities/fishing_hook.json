@@ -13,9 +13,54 @@
           "table": "loot_tables/gameplay/jungle_fishing.json"
         }
       },
+      "loot_oceach": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/oceach_fishing.json"
+        }
+      },
+      "loot_desavesa": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/desavesa_fishing.json"
+        }
+      },
+      "loot_snowy": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/snowy_fishing.json"
+        }
+      },
+      "loot_deep": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/deep_fishing.json"
+        }
+      },
+      "loot_cave_one": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/cave_one_fish.json"
+        }
+      },
+      "loot_cave_two": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/cave_two_fish.json"
+        }
+      },
+      "loot_cave_three": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/cave_three_fish.json"
+        }
+      },
+      "loot_swamp": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/swamp_fishing.json"
+        }
+      },
+      "loot_mooshroom": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/mooshroom_fish.json"
+        }
+      },
       "loot_end": {
         "minecraft:loot": {
-          "table": "loot_tables/gameplay/end_fish.json"
+          "table": "loot_tables/gameplay/fishing/end_fish.json"
         }
       }
     },
@@ -50,12 +95,162 @@
         "sequence": [
           {
             "filters": {
-              "test": "is_biome",
+              "test": "has_biome_tag",
               "value": "jungle"
             },
             "add": {
               "component_groups": [
                 "loot_jungle"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_biome",
+                  "value": "ocean"
+                },
+                {
+                  "test": "is_biome",
+                  "value": "beach"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_oceach"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "savanna"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_desavesa"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "taiga"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "frozen"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "ice"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "snow_covered"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_snowy"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "deep"
+            },
+            "add": {
+              "component_groups": [
+                "loot_deep"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "operator": "<=",
+                  "value": 50
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_cave_one"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "operator": "<=",
+                  "value": 40
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_cave_two"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_altitude",
+                  "operator": "<=",
+                  "value": 25
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "loot_cave_three"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "swamp"
+            },
+            "add": {
+              "component_groups": [
+                "loot_swamp"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "mooshroom_island"
+            },
+            "add": {
+              "component_groups": [
+                "loot_mooshroom"
               ]
             }
           },

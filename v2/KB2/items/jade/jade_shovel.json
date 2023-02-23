@@ -16,11 +16,7 @@
 					"max": 100
 				}
 			},
-			"minecraft:on_use_on": {
-				"on_use_on": {
-					"event": "stripped_shovel"
-				}
-			},
+			
 			"minecraft:damage": 3,
 			"minecraft:enchantable": {
 				"value": 10,
@@ -37,132 +33,36 @@
 				]
 			},
 			"minecraft:digger": {
-				"use_efficiency": true,
-				"destroy_speeds": [
-					{
-						"block": "minecraft:soul_sand",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:soul_soil",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:crimson_nylium",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:warped_nylium",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:dirt",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:coarse_dirt",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:farmland",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:grass",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:grass_path",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:podzol",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:mycelium",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:mud",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:gravel",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:sand",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:snow",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:snow_layer",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					},
-					{
-						"block": "minecraft:dirt_with_roots",
-						"speed": 4,
-						"on_dig": {
-							"event": "dmg"
-						}
-					}
-				],
-				"on_dig": {
-					"event": "dmg"
-				}
-			},
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": {
+                            "tags": "q.any_tag('dirt', 'sand', 'gravel', 'grass', 'snow')"
+                        },
+                        "speed": 4,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    },
+                    {
+                        "block": "minecraft:soul_sand",
+                        "speed": 4,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    },
+                    {
+                        "block": "minecraft:soul_soil",
+                        "speed": 4,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    }
+                ],
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
 			"tag:minecraft:is_shovel": {},
 			"minecraft:icon": {
 				"texture": "jade_shovel"
@@ -186,24 +86,12 @@
 			}
 		},
 		"events": {
-			"stripped_shovel": {
-				"sequence": [
-					{
-						"swing": {},
-						"damage": {
-							"type": "durability",
-							"amount": 1,
-							"target": "item"
-						}
-					},
-					{
-						"run_command": {
-							"command": [
-								"function stripped_shovel"
-							]
-						}
-					}
-				]
+			"on_tool_used": {
+				"swing": {},
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
 			},
 			"dmg": {
 				"damage": {
