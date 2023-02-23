@@ -55,6 +55,7 @@ Redstone Chicken - [Redstone Chicken#0001] (https://dsc.gg/rscbuilds)
 
 ## Credits
 ZhyuRo~Kun#2973
+ArtieTrey#6906
 
 Read me template used - [https://github.com/othneildrew/Best-README-Template]
 
