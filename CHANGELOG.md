@@ -1,4 +1,4 @@
-<h2>Version 1.0.1 </h2>
+<h2>Version 2.1 </h2>
 <h3>Updated to January releases(if there was a release)</h3>
 
 + AzureCulture 4.2 

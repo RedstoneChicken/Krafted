@@ -27,11 +27,21 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#info">Info</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
+
+<!-- INFO -->
+## info
+If you want to read more about this modpack please go to the MCPEDL page: <a rel="license" href="https://mcpedl.com/krafted/">CLICK ME!</a>.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- LICENSE -->
 ## License
