@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:soul_stick"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" P",
+			" P"
+		],
+		"key": {
+			"P": {
+				"item": "nether:soul_planks"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:stick"
+			}
+		]
+	}
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:lush_grass/lush_grass_flower_feature"
+        },
+        "features": [
+            [
+                "ff:lush_grass/lush_grass_tall1_feature",
+                15
+            ],
+            [
+                "ff:lush_grass/lush_grass_large1_feature",
+                12
+            ],
+            [
+                "ff:lush_grass/lush_grass1_feature",
+                12
+            ],
+            [
+                "ff:lush_grass/lush_fern1_feature",
+                12
+            ]
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "extra_fillet_rainbow_trout"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:neptunium_fillet_knife"
+      },
+      "B": {
+        "item": "azc:rainbow_trout"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 4
+      },
+      {
+        "item": "azc:neptunium_fillet_knife"
+      }
+    ]
+  }
+}

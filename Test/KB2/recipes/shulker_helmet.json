@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:shulker_helmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SSS",
+			"S S",
+			"SSS"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:shulker_shell"
+			}
+		},
+		"result": [
+			{
+				"item": "end:shulker_helmet"
+			}
+		]
+	}
+}

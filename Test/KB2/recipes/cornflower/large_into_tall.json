@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_cornflower_into_tall_cornflower"},"tags":["crafting_table"],"ingredients":[{"item":"ff:cornflower_large_item"}],"result":{"item":"ff:cornflower_tall_item","count":2}}}

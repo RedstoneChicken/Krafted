@@ -1,0 +1,53 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "oh:ruby_chestplate",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "ruby_chestplate"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.chestplate"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:enchantable": {
+        "value": 30,
+        "slot": "armor_torso"
+      },
+      "minecraft:durability": {
+        "max_durability": 185,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "protection": 0.1
+      },
+      "minecraft:mining_speed": 5,
+      "minecraft:wearable": {
+        "slot": "slot.armor.chest"
+      },
+      "minecraft:render_offsets": "chestplates",
+      "minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:ruby"
+						],
+						"repair_amount": "query.max_durability"
+					}
+				]
+			},
+      "minecraft:armor": {
+        "protection": 4
+      },
+      "minecraft:display_name": {
+				"value": "Ruby Chestplate"
+			}
+    }
+  }
+}

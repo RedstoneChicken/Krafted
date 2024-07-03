@@ -1,0 +1,23 @@
+//bridge-file-version: #21
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:chopping_board"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:meat_feast_pizza"
+				}
+			]
+		}
+	]
+}

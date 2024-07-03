@@ -1,0 +1,28 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:maple_sapling"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:sapling",
+				"count": 1
+			},
+			{
+				"item": "strat:maple_leaf",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "strat:maple_sapling_item",
+				"count": 1
+			}
+		]
+	}
+}

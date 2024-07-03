@@ -1,0 +1,25 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cheeseburger",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "good"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_cheeseburger"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,20 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:crystal_grass_short_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": {
+				"texture": "crystal_grass_short_item"
+			},
+			"minecraft:block_placer": {
+				"block": "end:crystal_grass_short"
+			}
+		},
+		"events": {}
+	}
+}

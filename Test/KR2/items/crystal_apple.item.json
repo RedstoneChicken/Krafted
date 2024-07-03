@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:crystal_apple",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:icon": "crystal_apple",
+			"minecraft:use_animation": "eat",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

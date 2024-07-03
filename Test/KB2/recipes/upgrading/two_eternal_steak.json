@@ -1,0 +1,39 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:two_eternal_steak"
+  },
+  "tags": [
+   "crafting_table"
+  ],
+  "pattern": [
+   "AS"
+  ],
+  "key": {
+   "A": {
+    "item": "kna:eternal_steak"
+   },
+   "S": {
+    "item": "kna:common_scrap"
+   }
+  },
+  "result": {
+   "item": "kna:eternal_steak_two",
+   "count": 1
+  }
+ }
+}
+item": "kna:wither_star",
+   "count": 1
+  }
+ }
+}
+      }
+    },
+    "result": {
+      "item": "kna:wither_star",
+      "count": 1
+    }
+  }
+}

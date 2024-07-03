@@ -1,0 +1,86 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:frosted_deepslate",
+      "properties": {
+        "honkit26113:direction": [0, 1, 2, 3, 4, 5]
+      }
+    },
+    "components": {
+      "tag:honkit26113_dig_with_pickaxe": {},
+    	"tag:honkit26113_stone": {},
+      "minecraft:unit_cube": {},
+      "minecraft:creative_category": {
+        "group": "itemGroup.name.nature",
+        "category": "nature"
+      },
+      "minecraft:explosion_resistance": 6,
+      "minecraft:destroy_time": 0.6,
+      "minecraft:breathability": "solid",
+    	"minecraft:on_player_placing": {
+        "event": "minecraft:placing_direction" 
+      },
+      "minecraft:material_instances" : {
+        "*": {
+          "texture": "frosted_deepslate_side",
+          "render_method" : "opaque"
+        },
+        "up": {
+          "texture": "frosted_deepslate_top",
+          "render_method" : "opaque"
+        },
+        "down": {
+          "texture": "frosted_deepslate_top",
+          "render_method" : "opaque"
+        }
+      }
+    },
+    "events": {
+      "minecraft:placing_direction": {
+        "set_block_property": {
+          "honkit26113:direction": "(query.block_face)"
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('honkit26113:direction') == 0", // up
+        "components": {
+          "minecraft:rotation" : [0, 0, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('honkit26113:direction') == 1", // down
+        "components": {
+          "minecraft:rotation" : [0, 0, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('honkit26113:direction') == 2", // north
+        "components": {
+          "minecraft:rotation" : [90, 0, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('honkit26113:direction') == 3", // south
+        "components": {
+          "minecraft:rotation" : [90, 0, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('honkit26113:direction') == 4", // east
+        "components": {
+          "minecraft:rotation" : [0, 0, 90]
+        }
+      },
+      {
+        "condition": "query.block_property('honkit26113:direction') == 5", // west
+        "components": {
+          "minecraft:rotation" : [0, 0, 90]
+        }
+      }
+    ]
+  }
+}

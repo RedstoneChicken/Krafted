@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "strat:furnace_cobalt_ingot2"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "strat:cobalt_ore",
+		"output": "strat:cobalt_ingot"
+	}
+}

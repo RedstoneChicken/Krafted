@@ -1,0 +1,33 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_hand_guard_rec_2"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:hand_guard_pattern"
+			},
+			"~": {
+				"item": "minecraft:stone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_hand_guard",
+				"count": 1
+			},
+			{
+				"item": "strat:hand_guard_pattern",
+				"count": 1
+			}
+		]
+	}
+}

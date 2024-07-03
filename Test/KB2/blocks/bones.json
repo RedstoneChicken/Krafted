@@ -1,0 +1,113 @@
+//bridge-file-version: #43
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:bones",
+			"properties": {
+				"rns:first": [
+					0,
+					1
+				],
+				"rns:second": [
+					0,
+					1
+				],
+				"rns:third": [
+					0,
+					1
+				],
+				"rns:addbone": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.bones",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_bones",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 0.1,
+			"minecraft:explosion_resistance": 30,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#302513",
+			"minecraft:pick_collision": {
+				"size": [
+					16,
+					4,
+					16
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "nature"
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:part_visibility": {
+				"rules": {
+					"first": "q.block_property('rns:first') == 0",
+					"second": "q.block_property('rns:second') == 1",
+					"third": "q.block_property('rns:third') == 1"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "rns:addbone",
+				"condition": "query.get_equipped_item_name == 'bone'"
+			},
+			"minecraft:loot": "loot_tables/bones.json"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('rns:addbone') == 1",
+				"components": {
+					"minecraft:part_visibility": {
+						"rules": {
+							"first": "q.block_property('rns:first') == 0",
+							"second": "q.block_property('rns:second') == 0",
+							"third": "q.block_property('rns:third') == 1"
+						}
+					},
+					"minecraft:loot": "loot_tables/bones2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('rns:addbone') == 2",
+				"components": {
+					"minecraft:part_visibility": {
+						"rules": {
+							"first": "q.block_property('rns:first') == 0",
+							"second": "q.block_property('rns:second') == 0",
+							"third": "q.block_property('rns:third') == 0"
+						}
+					},
+					"minecraft:loot": "loot_tables/bones3.json"
+				}
+			}
+		],
+		"events": {
+			"rns:addbone": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"rns:addbone": "query.block_property('rns:addbone')+1"
+						},
+						"condition": "query.block_property('rns:addbone') != 2"
+					}
+				]
+			}
+		}
+	}
+}

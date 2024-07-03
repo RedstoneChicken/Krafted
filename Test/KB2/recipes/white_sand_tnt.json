@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "craft:white_sand_tnt"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "X#X",
+      "#X#",
+      "X#X"
+    ],
+    "key": {
+      "#": {
+          "item": "cav:white_sand"
+      },
+      "X": {
+        "item": "minecraft:gunpowder"
+      }
+    },
+    "result": {
+      "item": "minecraft:tnt"
+    }
+  }
+}

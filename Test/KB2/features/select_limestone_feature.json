@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:select_limestone_feature"
+    },
+    "features": [
+      [ "honkit26113:limestone_feature", 79 ],
+      [ "honkit26113:cobbled_limestone_feature", 15 ],
+      [ "honkit26113:sandstone_feature", 5 ],
+      [ "honkit26113:calcite_feature", 1 ]
+    ]
+  }
+}

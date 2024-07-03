@@ -1,0 +1,24 @@
+//bridge-file-version: #2
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:adamantite_head"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "oh:adamantite"
+			}
+		},
+		"result": {
+			"item": "oh:adamantite_head"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:fries",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 0.8,
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "low"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_fries"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

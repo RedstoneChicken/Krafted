@@ -1,0 +1,44 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:christmas_cake"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AOA",
+			"BEB",
+			"CCC"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:milk_bucket"
+			},
+			"O": {
+				"item": "minecraft:sweet_berries"
+			},
+			"B": {
+				"item": "minecraft:sugar"
+			},
+			"C": {
+				"item": "strat:chocolate_bar"
+			},
+			"E": {
+				"item": "minecraft:egg"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:christmas_cake_item",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 2
+			}
+		]
+	}
+}

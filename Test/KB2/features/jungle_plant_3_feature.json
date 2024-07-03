@@ -1,0 +1,20 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "caf:jungle_plant_3_feature"
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+		"places_block": "caf:jungle_plant3",
+		"may_attach_to": {
+			"bottom": [
+				"caf:nether_mycelium",
+				"caf:jungle_nylium",
+				"minecraft:crimson_nylium",
+				"minecraft:warped_nylium"
+			]
+		}
+	}
+}

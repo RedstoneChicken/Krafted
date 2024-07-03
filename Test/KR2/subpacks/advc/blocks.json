@@ -1,0 +1,227 @@
+{
+	"format_version" : [ 1, 1, 0 ],
+	"adv:unbucket_abyssal_lurker" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_angelfish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_angler_fish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_bonefish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_brown_shroomfin" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_adv_catfish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_cave_trout" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_charged_bullhead" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_crystal_mullet" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_cursed_koi" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_explosive_crucian" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_frost_minnow" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_glacier_anchovy" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_golden_koi" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_green_jellyfish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_adv_jellyfish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_magikarp" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_mandarinfish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_mud_tuna" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_pike" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_adv_piranha" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_red_shroomfin" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_ruffe" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_sandy_bass" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_snowy_walleye" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_sparkling_eel" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_specular_snapper" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_sponge_eater" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_spookyfin" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:unbucket_sunfish" : {
+		"textures" : "unbucket",
+		"sound" : "coral"
+	},
+	"adv:fish_trophy_adv_catfish" : {
+		"textures" : "fish_trophy_adv_catfish",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_adv_piranha" : {
+		"textures" : "fish_trophy_adv_piranha",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_angelfish" : {
+		"textures" : "fish_trophy_angelfish",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_angler_fish" : {
+		"textures" : "fish_trophy_angler_fish",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_bonefish" : {
+		"textures" : "fish_trophy_bonefish",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_brown_shroomfin" : {
+		"textures" : "fish_trophy_brown_shroomfin",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_cave_trout" : {
+		"textures" : "fish_trophy_cave_trout",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_charged_bullhead" : {
+		"textures" : "fish_trophy_charged_bullhead",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_crystal_mullet" : {
+		"textures" : "fish_trophy_crystal_mullet",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_cursed_koi" : {
+		"textures" : "fish_trophy_cursed_koi",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_explosive_crucian" : {
+		"textures" : "fish_trophy_explosive_crucian",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_frost_minnow" : {
+		"textures" : "fish_trophy_frost_minnow",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_glacier_anchovy" : {
+		"textures" : "fish_trophy_glacier_anchovy",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_golden_koi" : {
+		"textures" : "fish_trophy_golden_koi",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_magikarp" : {
+		"textures" : "fish_trophy_magikarp",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_mandarinfish" : {
+		"textures" : "fish_trophy_mandarinfish",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_mud_tuna" : {
+		"textures" : "fish_trophy_mud_tuna",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_pike" : {
+		"textures" : "fish_trophy_pike",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_red_shroomfin" : {
+		"textures" : "fish_trophy_red_shroomfin",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_ruffe" : {
+		"textures" : "fish_trophy_ruffe",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_sandy_bass" : {
+		"textures" : "fish_trophy_sandy_bass",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_snowy_walleye" : {
+		"textures" : "fish_trophy_snowy_walleye",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_specular_snapper" : {
+		"textures" : "fish_trophy_specular_snapper",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_sponge_eater" : {
+		"textures" : "fish_trophy_sponge_eater",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_spookyfin" : {
+		"textures" : "fish_trophy_spookyfin",
+		"sound" : "wood"
+	},
+	"adv:fish_trophy_sunfish" : {
+		"textures" : "fish_trophy_sunfish",
+		"sound" : "wood"
+	}
+}

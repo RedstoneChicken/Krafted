@@ -1,0 +1,27 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:lonsdaleite_crystal_block"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0.6,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 3,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"tag:stone": {}
+		},
+		"events": {}
+	}
+}

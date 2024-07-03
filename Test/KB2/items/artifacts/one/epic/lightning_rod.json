@@ -1,0 +1,52 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:lightning_rod",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "lightning_rod"
+			},
+			"minecraft:display_name": {
+			 "value": "§eLightning Rod\n§6Epic\n§7Cooldown: 24\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "lightning_rod",
+				"duration": 24
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+				"minecraft:render_offsets": "tools",
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "use": {
+        "run_command": {
+          "command": [
+          		"playsound ambient.weather.lightning.impact @a[r=25]",
+            "tag @s add user_lc",
+            "effect @s fire_resistance 8 2 true",
+            "effect @s resistance 1 5 true",
+            "execute @e[tag=!user_lc,tag=!none,r=10] ~~~ summon lightning_bolt",
+            "tag @s remove user_lc"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

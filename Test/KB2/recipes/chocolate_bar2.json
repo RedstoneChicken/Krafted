@@ -1,0 +1,37 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:chocolate_bar2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##",
+			"-A"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cocoa_powder"
+			},
+			"-": {
+				"item": "strat:milk_glass"
+			},
+			"A": {
+				"item": "strat:butter"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:chocolate_bar",
+				"count": 1
+			},
+			{
+				"item": "strat:drinking_glass",
+				"count": 1
+			}
+		]
+	}
+}

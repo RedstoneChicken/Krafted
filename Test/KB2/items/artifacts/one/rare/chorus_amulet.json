@@ -1,0 +1,49 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:chorus_amulet",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "chorus_amulet"
+			},
+			"minecraft:display_name": {
+			 "value": "Chorus Amulet\n§1Rare\n§7Cooldown: 45\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "chorus_amulet",
+				"duration": 45
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "use": {
+        "run_command": {
+          "command": [	
+          	"playsound mob.endermen.portal @a[r=20]",
+            "tag @s add user_ca",
+            "execute @s ~ ~ ~ spreadplayers ~ ~ 1 30 @e[tag=!user_ca, r=20]",
+            "tag @s remove user_ca"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

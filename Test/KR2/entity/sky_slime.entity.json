@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "strat:sky_slime",
+			"materials": {
+				"default": "slime_outer"
+			},
+			"textures": {
+				"default": "textures/entity/slime/sky_slime"
+			},
+			"geometry": {
+				"default": "geometry.sky_slime"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.squish_factor = (query.previous_squish_value + (query.current_squish_value - query.previous_squish_value) * query.frame_alpha);",
+					"variable.bounce = 1 / ((variable.squish_factor / (query.variant * 0.5 + 1)) + 1);",
+					"variable.horizontal_scale_amount = variable.bounce * query.variant;",
+					"variable.vertical_scale_amount = (1 / variable.bounce) * query.variant;"
+				],
+				"scaleX": "variable.horizontal_scale_amount",
+				"scaleY": "variable.vertical_scale_amount",
+				"scaleZ": "variable.horizontal_scale_amount"
+			},
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#1cedc5",
+				"overlay_color": "#2acacb"
+			}
+		}
+	}
+}

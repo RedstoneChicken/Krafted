@@ -1,0 +1,18 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "caf:black_apple_feature"
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+		"places_block": "caf:black_apple4",
+		"may_attach_to": {
+			"bottom": [
+				"minecraft:netherrack",
+				"caf:nether_moss"
+			]
+		}
+	}
+}

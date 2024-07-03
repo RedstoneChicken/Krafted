@@ -1,0 +1,31 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:fletching_table_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"||",
+			"##",
+			"##"
+		],
+		"key": {
+			"|": {
+				"item": "minecraft:flint"
+			},
+			"#": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:fletching_table"
+			}
+		],
+		"priority": 50
+	}
+}

@@ -1,0 +1,17 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "strat:crop_bush_feature"
+		},
+		"places_block": {
+			"name": "strat:crop_bush",
+			"states": {
+				"tall_grass_type": "tall"
+			}
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true
+	}
+}

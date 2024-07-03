@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "explosive_crucian_to_gunpowder"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:explosive_crucian"
+      }
+    ],
+    "result": {
+      "item": "minecraft:gunpowder",
+      "count": 3
+    }
+  }
+}

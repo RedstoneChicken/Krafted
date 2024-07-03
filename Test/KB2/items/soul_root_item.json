@@ -1,0 +1,20 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "nether:soul_root_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "nether:soul_roots"
+			},
+			"minecraft:icon": {
+				"texture": "soul_roots_item"
+			}
+		},
+		"events": {}
+	}
+}

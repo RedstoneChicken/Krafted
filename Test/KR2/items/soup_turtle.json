@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:turtle_soup",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": "turtle_soup",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

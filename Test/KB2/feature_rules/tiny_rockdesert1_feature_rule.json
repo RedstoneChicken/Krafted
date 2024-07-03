@@ -1,0 +1,40 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "minecraft:tiny_rockdesert1_feature_rule",
+            "places_feature": "minecraft:tiny_rockdesert1_mcstructure"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "all_of": [
+                        {
+                            "any_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "==",
+                                    "value": "beach"
+                                },
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "==",
+                                    "value": "desert"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 1,
+            "scatter_chance": 5.0,
+            "x": 0,
+            "y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+            "z": 0
+        }
+    }
+}
+// Exported from software by MACHINE_BUILDER on YouTube. Check out this video for more information : https://www.youtube.com/watch?v=vcLibdIq7To <- download link in description

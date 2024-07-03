@@ -1,0 +1,35 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_broad_axe_head_2"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:broad_axe_head_pattern"
+			},
+			"~": {
+				"item": "minecraft:stone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_broad_axe_head",
+				"count": 1
+			},
+			{
+				"item": "strat:broad_axe_head_pattern",
+				"count": 1
+			}
+		]
+	}
+}

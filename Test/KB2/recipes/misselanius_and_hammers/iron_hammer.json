@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:iron_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:iron_head"
+			},
+			"Y": {
+				"item": "oh:trunk_stick"
+			},
+			"Z": {
+				"item": "minecraft:iron_block"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:iron_hammer",
+				"count": 1
+			}
+		]
+	}
+}

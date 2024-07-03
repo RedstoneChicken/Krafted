@@ -1,0 +1,19 @@
+//bridge-file-version: #0
+{
+  "values": [
+    "welcome2",
+    "always/tick",
+    "poison_eye",
+    "soul_shroomlight",
+    "poison_block",
+    "fog_start",
+    "armor_modifiers",
+    "nepeffect",
+    "blockarmorrun",
+    "effectcheck",
+    "light",
+    "slowness_sword",
+    "slowness_axe",
+    "armor_effects"
+  ]
+}

@@ -1,0 +1,52 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:void_turf_stone"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void_turf_stone",
+					"render_method": "opaque"
+				}
+			},
+			"tag:grass": {},
+			"minecraft:map_color": "#998024",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "play_sound"
+			},
+			"minecraft:on_interact": {
+				"event": "path",
+				"target": "self",
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_shovel')"
+			}
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a ~ ~ ~"
+					]
+				}
+			},
+			"path": {
+				"set_block": {
+					"block_type": "korbon:void_turf_path"
+				},
+				"run_command": {
+					"command": [
+						"playsound use.grass @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

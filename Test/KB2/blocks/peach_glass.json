@@ -1,0 +1,29 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "cav:peach_glass",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "construction",
+        "group": "itemGroup.name.glass"
+      },
+      "minecraft:destroy_time": 0.6,
+      "minecraft:explosion_resistance": 30,
+      "minecraft:block_light_absorption": 0.0,
+      "minecraft:map_color": "#F1ECD0",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "peach_glass",
+          "render_method": "blend"
+        }
+      },
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      }
+    }
+  }
+}

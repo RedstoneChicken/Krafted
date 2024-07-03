@@ -1,0 +1,38 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:wither_beast",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/wither_beast"
+			},
+			"geometry": {
+				"default": "geometry.wither_beast"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller",
+					"attack_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.wither_beast.walk",
+				"attack_controller": "controller.animation.wither_beast.attack",
+				"attack": "animation.wither_beast.attack",
+				"idle": "animation.wither_beast.idle",
+				"move": "animation.wither_beast.walk"
+			},
+			"spawn_egg": {
+				"base_color": "#232323",
+				"overlay_color": "#10B7EF"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

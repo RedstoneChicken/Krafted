@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:compressed_sand_to_double_compressed_sand"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:compressed_sand"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:double_compressed_sand",
+				"count": 1
+			}
+		]
+	}
+}

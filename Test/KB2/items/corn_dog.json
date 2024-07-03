@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:corn_dog",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 8,
+				"saturation_modifier": "good",
+				"can_always_eat": false,
+				"using_converts_to": "minecraft:stick"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "corn_dog"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

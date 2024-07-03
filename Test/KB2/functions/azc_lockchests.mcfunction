@@ -1,0 +1,11 @@
+give @s azc:lockbox_book
+give @s azc:lockbox_paper
+give @s azc:lockbox_compass
+give @s azc:lockbox_gunpowder
+give @s azc:lockbox_redstone
+give @s azc:lockbox_glowstone_dust
+give @s azc:lockbox_golden_apple
+give @s azc:treasure_chest_iron_ingot
+give @s azc:treasure_chest_gold_ingot
+give @s azc:treasure_chest_diamond
+give @s azc:treasure_chest_emerald

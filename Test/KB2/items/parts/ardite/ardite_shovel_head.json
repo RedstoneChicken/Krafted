@@ -1,0 +1,21 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ardite_shovel_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Ardite Shovel Head"
+			},
+			"minecraft:icon": {
+				"texture": "ardite_shovel_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

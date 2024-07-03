@@ -1,0 +1,83 @@
+//bridge-file-version: #45
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:velvium_grass"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "velvium_grass",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:velvium",
+							"korbon:verdanite_velvium"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#CB78B8",
+			"minecraft:flammable": {
+				"burn_odds": 15,
+				"flame_odds": 15
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					13,
+					12
+				]
+			},
+			"minecraft:loot": "empty",
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			}
+		},
+		"events": {
+			"bone_meal": {
+				"decrement_stack": {},
+				"set_block": {
+					"block_type": "korbon:velvium_grass_tall"
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~",
+						"playsound item.bone_meal.use @a ~ ~ ~"
+					]
+				}
+			},
+			"shear": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/velvium_grass.json"
+				}
+			}
+		}
+	}
+}

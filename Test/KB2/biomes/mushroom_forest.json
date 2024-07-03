@@ -1,0 +1,40 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:biome": {
+		"description": {
+			"identifier": "mushroom_forest"
+		},
+		"components": {
+			"minecraft:climate": {
+				"downfall": 0,
+				"snow_accumulation": [
+					0,
+					0.125
+				],
+				"temperature": 2,
+				"ash": 0.1
+			},
+			"minecraft:nether_generation_rules": {
+				"target_temperature": -0.5,
+				"target_humidity": 0,
+				"target_altitude": 0,
+				"target_weirdness": 0,
+				"weight": 0.175
+			},
+			"minecraft:capped_surface": {
+				"floor_materials": [
+					"caf:nether_mycelium",
+					"caf:nether_mycelium_blue"
+				],
+				"ceiling_materials": [
+					"minecraft:netherrack"
+				],
+				"sea_material": "minecraft:lava",
+				"foundation_material": "minecraft:netherrack"
+			},
+			"nether": {},
+			"mushroom_forest": {}
+		}
+	}
+}

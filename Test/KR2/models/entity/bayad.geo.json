@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bayad",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1.75,
+				"visible_bounds_offset": [0, 0.125, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 4, -4],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-2, 0, -4], "size": [4, 4, 8], "uv": [0, 0], "mirror": false},
+						{"origin": [0, 4, -3], "size": [0, 2, 5], "uv": [11, 7], "mirror": false},
+						{"origin": [0, -1, -1], "size": [0, 1, 4], "uv": [11, 10], "mirror": false}
+					]
+				},
+				{
+					"name": "tailfin",
+					"parent": "body",
+					"pivot": [0, 0, 4],
+					"mirror": true,
+					"cubes": [
+						{"origin": [0, 0, 4], "size": [0, 4, 4], "uv": [0, 0], "mirror": false}
+					]
+				},
+				{
+					"name": "rightFin",
+					"parent": "body",
+					"pivot": [1, 1, 0],
+					"rotation": [0, 0, -35],
+					"mirror": true,
+					"cubes": [
+						{"origin": [1.99999, 1, -5], "size": [2, 0, 2], "pivot": [1, 1, 0], "rotation": [0, 0, 75], "uv": [0, 2], "mirror": false}
+					]
+				},
+				{
+					"name": "leftFin",
+					"parent": "body",
+					"pivot": [0, 4, -3],
+					"rotation": [0, 0, 35],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-2.09842, 0.96897, -5], "size": [2, 0, 2], "pivot": [0.90158, 0.96897, 0], "rotation": [0, 0, -75], "uv": [0, 0], "mirror": false}
+					]
+				},
+				{
+					"name": "head",
+					"pivot": [0, 2, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [-2, 0, -7], "size": [4, 3, 3], "uv": [0, 12], "mirror": false},
+						{"origin": [2, 0, -7], "size": [0, 2, 2], "pivot": [2, 1, -7], "rotation": [0, 50, 0], "uv": [14, 13], "mirror": false},
+						{"origin": [1, -2, -7], "size": [2, 2, 0], "pivot": [0, 0, -7], "rotation": [20, 0, 0], "uv": [16, 2], "mirror": false},
+						{"origin": [-2, 0, -7], "size": [0, 2, 2], "pivot": [-2, 1, -7], "rotation": [0, -30, 0], "uv": [14, 15], "mirror": false},
+						{"origin": [-3, -2, -7], "size": [2, 2, 0], "pivot": [0, 0, -7], "rotation": [20, 0, 0], "uv": [16, 0], "mirror": false}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:sheetrock_tan"
+    },
+
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "cav:tan_dye"
+      },
+      {
+        "item": "cav:sheetrock"
+      }
+    ],
+    "result": {
+      "item": "cav:sheetrock_tan"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:deccan_grass_into_deccan_fern"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:deccan_grass_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:deccan_fern_item",
+      "count": 1
+    }
+  }
+}

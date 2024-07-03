@@ -1,0 +1,76 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:cheese_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.6,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "strat_cheese block",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.cheese",
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					6,
+					14
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-7
+				],
+				"size": [
+					14,
+					6,
+					14
+				]
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:map_color": "#D2C417",
+			"minecraft:on_player_destroyed": {
+				"event": "strat:cut"
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"strat:cut": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+						"spawn_loot": {
+							"table": "loot_tables/cheese.json"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+						"spawn_loot": {
+							"table": "loot_tables/cheese_block.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

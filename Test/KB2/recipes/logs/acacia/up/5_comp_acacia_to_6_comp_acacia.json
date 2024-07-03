@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:quintuple_compressed_acacia_to_sextuple_compressed_acacia"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:quintuple_compressed_acacia"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:sextuple_compressed_acacia",
+				"count": 1
+			}
+		]
+	}
+}

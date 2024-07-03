@@ -1,0 +1,111 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:ruby_axe",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 500,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:ruby"
+						],
+						"repair_amount": "25"
+					}
+				]
+			},
+			
+			"minecraft:damage": 5,
+			"minecraft:enchantable": {
+				"value": 22,
+				"slot": "axe"
+			},
+			"minecraft:digger": {
+                "use_efficiency": true,
+                "destroy_speeds": [
+                    {
+                        "block": {
+                            "tags": "!query.any_tag('bedrock', 'stone', 'stone', 'metal', 'diamond_pick_diggable', 'rail', 'mob_spawner', 'gravel', 'sand', 'dirt', 'snow', 'grass')"
+                        },
+                        "speed": 5,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    },
+                    {
+                        "block": "minecraft:leaves",
+                        "speed": 1,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    },
+                    {
+                        "block": "minecraft:leaves2",
+                        "speed": 1,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    },
+                    {
+                        "block": "minecraft:azalea_leaves",
+                        "speed": 1,
+                        "on_dig": {
+                            "event": "dmg"
+                        }
+                    }
+                ],
+                "on_dig": {
+                    "event": "dmg"
+                }
+            },
+			"tag:minecraft:is_axe": {},
+			"minecraft:icon": {
+				"texture": "ruby_axe"
+			},
+			"minecraft:display_name": {
+				"value": "Ruby Axe"
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_not_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_hit_block": {
+					"event": "dmg"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.axe"
+			}
+		},
+		"events": {
+			"on_tool_used": {
+				"swing": {},
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
+			},
+			"dmg": {
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
+			}
+		}
+	}
+}

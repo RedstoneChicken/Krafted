@@ -1,0 +1,31 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stencil_table_birch"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "minecraft:planks",
+				"data": 2
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stencil_table_birch",
+				"count": 1
+			}
+		]
+	}
+}

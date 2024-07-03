@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:normal_blue_dragon_rose_into_short_blue_dragon_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:blue_dragon_rose_item","count":2}],"result":{"item":"ff:blue_dragon_rose_short_item"}}}

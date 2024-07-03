@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_atlantic_herring_wooden"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:wooden_fillet_knife"
+      },
+      "B": {
+        "item": "azc:atlantic_herring"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi"
+      },
+      {
+        "item": "azc:wooden_fillet_knife"
+      }
+    ]
+  }
+}

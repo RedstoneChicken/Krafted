@@ -1,0 +1,75 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "korbon:tendril_flower",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/tendril_flower"
+			}
+		},
+		"events": {
+			"hit_ground": {
+				"sound_effect": {
+					"event_name": "block.bamboo_sapling.place"
+				}
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 2,
+				"max_particles": 50
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 8
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation_rate": 25
+			},
+			"minecraft:particle_initial_speed": -0.5,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					-1,
+					0
+				],
+				"rotation_acceleration": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0.2,
+					0.2
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"coefficient_of_restitution": 0.1,
+				"collision_drag": 10,
+				"collision_radius": 0.01,
+				"events": [
+					{
+						"event": "hit_ground",
+						"min_speed": 0.5
+					}
+				]
+			}
+		}
+	}
+}

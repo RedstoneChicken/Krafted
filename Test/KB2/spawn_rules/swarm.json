@@ -1,0 +1,33 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "korbon:swarm",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:weight": {
+					"default": 10
+				},
+				"minecraft:herd": {
+					"min_size": 3,
+					"max_size": 5
+				},
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "the_end"
+				},
+				"minecraft:spawns_on_block_filter": [
+					"korbon:phreyium",
+					"korbon:phreyium_grass",
+					"korbon:phreyium_stone",
+					"korbon:phreyium_block"
+				]
+			}
+		]
+	}
+}

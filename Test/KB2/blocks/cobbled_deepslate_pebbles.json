@@ -1,0 +1,154 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:cobbled_deepslate_pebbles",
+            "category": "none",
+            "properties": {
+                "honkit26113:variation": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            }
+        },
+        "components": {
+            "tag:stone": {},
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.none",
+                "category": "none"
+            },
+            "minecraft:loot": "loot_tables/blocks/cobbled_deepslate_pebbles.json",
+            "minecraft:map_color": "#576573",
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "cobbled_deepslate",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [ "up" ]
+                    }
+                ]
+            },
+            "minecraft:destroy_time": 0.75,
+            "minecraft:explosion_resistance": 6,
+            "minecraft:block_light_absorption": 0,
+            "minecraft:flammable": {
+                "flame_odds": 0,
+                "burn_odds": 0
+            },
+            "minecraft:pick_collision": {
+                "origin": [-7, 0, -7],
+                "size": [14, 4, 14]
+            },
+            "minecraft:entity_collision": false
+        },
+        "events": {
+        	"honkit26113:on_placed": {
+                "set_block_property": {
+                	"honkit26113:variation": "math.die_roll_integer(1,1,12)"
+                }
+            }
+        },
+        "permutations": [
+        	{
+                "condition": "query.block_property('honkit26113:variation') == 0",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var1",
+                    "minecraft:rotation": [0, 0, 0],
+                    "minecraft:ticking": {
+                        "looping": true,
+                        "range": [ 0.0, 0.0 ],
+                        "on_tick": {
+                            "event": "honkit26113:on_placed"
+                        }
+                    }
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:variation') == 1",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var1",
+                    "minecraft:rotation": [0, 0, 0]
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:variation') == 2",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var1",
+                    "minecraft:rotation": [0, 90, 0]
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:variation') == 3",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var1",
+                    "minecraft:rotation": [0, 180, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 4",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var1",
+                    "minecraft:rotation": [0, 270, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 5",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var2",
+                    "minecraft:rotation": [0, 0, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 6",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var2",
+                    "minecraft:rotation": [0, 90, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 7",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var2",
+                    "minecraft:rotation": [0, 180, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 8",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var2",
+                    "minecraft:rotation": [0, 270, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 9",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var3",
+                    "minecraft:rotation": [0, 0, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 10",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var3",
+                    "minecraft:rotation": [0, 90, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 11",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var3",
+                    "minecraft:rotation": [0, 180, 0]
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:variation') == 12",
+                "components": {
+                    "minecraft:geometry": "geometry.pebbles_var3",
+                    "minecraft:rotation": [0, 270, 0]
+                }
+            }
+        ]
+    }
+}

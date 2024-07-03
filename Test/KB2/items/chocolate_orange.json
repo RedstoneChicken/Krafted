@@ -1,0 +1,53 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:chocolate_orange",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "max",
+				"can_always_eat": false,
+				"on_consume": {
+					"event": "absorption"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "chocolate_orange"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			}
+		},
+		"events": {
+			"absorption": {
+				"randomize": [
+					{
+						"weight": 15
+					},
+					{
+						"run_command": {
+							"command": [
+								"effect @p absorption 20 1"
+							]
+						},
+						"weight": 2
+					},
+					{
+						"run_command": {
+							"command": [
+								"effect @p absorption 30 0"
+							]
+						},
+						"weight": 3
+					}
+				]
+			}
+		}
+	}
+}

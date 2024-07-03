@@ -1,0 +1,54 @@
+//bridge-file-version: #42
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:velvium_path"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "velvium_path",
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"tag:grass": {},
+			"tag:stone": {},
+			"minecraft:map_color": "#6E4364",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					15,
+					16
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.path_block",
+			"minecraft:on_player_destroyed": {
+				"event": "play_sound"
+			}
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

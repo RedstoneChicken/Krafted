@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "magma_jellyfish_to_lava_bucket"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "A",
+      "B"
+    ],
+    "key": {
+      "A": {
+        "item": "adv:magma_jellyfish"
+      },
+      "B": {
+        "item": "minecraft:bucket"
+      }
+    },
+    "result": {
+      "item": "minecraft:lava_bucket"
+    }
+  }
+}

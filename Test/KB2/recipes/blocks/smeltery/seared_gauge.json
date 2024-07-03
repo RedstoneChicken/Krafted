@@ -1,0 +1,31 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:seared_gauge"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~#~",
+			"#~#",
+			"~#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:seared_brick"
+			},
+			"~": {
+				"item": "minecraft:glass"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:seared_gauge",
+				"count": 1
+			}
+		]
+	}
+}

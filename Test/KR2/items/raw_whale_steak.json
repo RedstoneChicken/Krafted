@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:raw_whale_steak",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "raw_whale_steak",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

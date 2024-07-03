@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:diamond_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:diamond_head"
+			},
+			"Y": {
+				"item": "oh:trunk_stick"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:diamond_hammer",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:withered_crucian",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "withered_crucian",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

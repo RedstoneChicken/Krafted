@@ -1,0 +1,25 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.void_glider": {
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.saddle"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.skins[query.is_saddled]"
+			]
+		}
+	}
+}

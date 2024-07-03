@@ -1,0 +1,45 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:witch_house_feature_rule",
+			"places_feature": "minecraft:witch_house_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "swamp"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "bog"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "birch_wetland"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.1,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+			"z": 0
+		}
+	}
+}

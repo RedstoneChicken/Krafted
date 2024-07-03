@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "iron_nugget_from_fillet_knife"
+    },
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "azc:iron_fillet_knife",
+    "output": "minecraft:iron_nugget"
+  }
+}

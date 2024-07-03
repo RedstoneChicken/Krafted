@@ -1,0 +1,23 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:apple_pie",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "strat_apple pie"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:apple_pie_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

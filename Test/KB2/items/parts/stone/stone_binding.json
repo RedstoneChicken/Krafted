@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:stone_binding"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Stone Binding"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_stone binding"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

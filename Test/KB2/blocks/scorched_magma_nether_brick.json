@@ -1,0 +1,54 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:scorched_magma_nether_brick"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "construction"
+			},
+			"minecraft:on_placed": {
+				"condition": "query.block_neighbor_has_any_tag(0,1,0,'water')",
+				"event": "placed",
+				"target": "self"
+			}
+		},
+		"events": {
+			"placed": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "nether:scorched_nether_brick"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:knockback_roar_particle ~ ~ ~"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound lavahiss @p"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

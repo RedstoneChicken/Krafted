@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:grieving_lavender_into_grieving_lavender_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:grieving_lavender_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:grieving_lavender_bouquet_item",
+      "count": 1
+    }
+  }
+}

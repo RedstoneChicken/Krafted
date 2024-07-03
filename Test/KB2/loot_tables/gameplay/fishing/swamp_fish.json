@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:fish",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "minecraft:salmon",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:squid",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:ruffe",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "adv:mud_tuna",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:swamp_plaice",
+          "weight": 13
+        }
+      ]
+    }
+  ]
+}

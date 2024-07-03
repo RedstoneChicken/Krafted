@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "kna:melted_cocoa"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "kna:refined_cocoa",
+    "output": "kna:melted_chocolate"
+  }
+  
+}

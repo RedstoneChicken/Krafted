@@ -1,0 +1,15 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_brewing_mix" : {
+		"description" : {
+			"identifier" : "splash_mundane_by_azc_jellyfish"
+		},
+		"tags" : [ "brewing_stand" ],
+		"input" : "minecraft:splash_potion",
+		"reagent" : "azc:azc_jellyfish",
+		"output" : {
+			"item" : "minecraft:splash_potion",
+			"data" : 1
+		}
+	}
+}

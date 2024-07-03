@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_daffodil_into_short_daffodil"},"tags":["crafting_table"],"ingredients":[{"item":"ff:daffodil_tall_item"}],"result":{"item":"ff:daffodil_item","count":2}}}

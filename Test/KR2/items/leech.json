@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:leech",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "leech",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

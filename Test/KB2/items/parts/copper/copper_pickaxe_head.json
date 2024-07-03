@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:copper_pickaxe_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Copper Pickaxe Head"
+			},
+			"minecraft:icon": {
+				"texture": "copper_pickaxe_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

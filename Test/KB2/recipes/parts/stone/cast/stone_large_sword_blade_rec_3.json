@@ -1,0 +1,35 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_large_sword_blade_rec_3"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:large_sword_blade_cast"
+			},
+			"~": {
+				"item": "minecraft:cobblestone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_large_sword_blade",
+				"count": 1
+			},
+			{
+				"item": "strat:large_sword_blade_cast",
+				"count": 1
+			}
+		]
+	}
+}

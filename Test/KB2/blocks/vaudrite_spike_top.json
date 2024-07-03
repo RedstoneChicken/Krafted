@@ -1,0 +1,107 @@
+//bridge-file-version: #89
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:vaudrite_spike_top"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vaudrite_spike_top",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": true
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:vaudrite_spike_bottom",
+							"korbon:vaudrite"
+						]
+					}
+				]
+			},
+			"minecraft:breathability": "air",
+			"minecraft:map_color": "#411F4F",
+			"minecraft:flammable": {
+				"burn_odds": 10,
+				"flame_odds": 10
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:loot": "loot_tables/blocks/vaudrite_spike.json",
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "place",
+				"condition": "q.block_neighbor_has_any_tag(0,-1,0,'vaudrite_spike')"
+			},
+			"minecraft:on_fall_on": {
+				"event": "hurt"
+			},
+			"tag:vaudrite_spike": {}
+		},
+		"events": {
+			"place": {
+				"set_block_at_pos": {
+					"block_type": "korbon:vaudrite_spike_top",
+					"block_offset": [
+						0,
+						-1,
+						0
+					]
+				}
+			},
+			"grow": {
+				"randomize": [
+					{
+						"weight": 1,
+						"set_block": {
+							"block_type": "korbon:vaudrite_spike_bottom"
+						}
+					},
+					{
+						"weight": 3
+					}
+				]
+			},
+			"hurt": {
+				"damage": {
+					"amount": 2,
+					"target": "other",
+					"type": "contact"
+				}
+			}
+		}
+	}
+}

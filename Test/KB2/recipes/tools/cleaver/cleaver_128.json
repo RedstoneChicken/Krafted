@@ -1,0 +1,35 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:cleaver_128"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			"  #",
+			" o~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_large_sword_blade"
+			},
+			"~": {
+				"item": "strat:manyullyn_large_plate"
+			},
+			"o": {
+				"item": "strat:manyullyn_tough_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:cleaver_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

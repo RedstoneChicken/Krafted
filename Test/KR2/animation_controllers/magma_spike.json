@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.magma_spike.rise": {
+      "states": {
+        "default": {
+          "animations": [
+            "rise"
+          ],
+          "blend_transition": 0.1
+        }     
+      	
+      }
+    }
+  }
+}}
+}}ery.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.1
+        },
+        "general": {
+          "animations": [
+            "despawned"
+          ]
+        }
+      }
+    }
+  }
+}

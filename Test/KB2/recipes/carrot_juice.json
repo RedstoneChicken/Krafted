@@ -1,0 +1,28 @@
+//bridge-file-version: #4
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:carrot_juice"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:water_glass",
+				"count": 1
+			},
+			{
+				"item": "minecraft:carrot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:carrot_juice",
+				"count": 1
+			}
+		]
+	}
+}

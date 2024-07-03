@@ -1,0 +1,18 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "minecraft:grassfromstone"
+		},
+		"count": 20,
+		"places_block": {
+			"name": "minecraft:stone"
+		},
+		"may_replace": [
+			{
+				"name": "minecraft:grass"
+			}
+		]
+	}
+}

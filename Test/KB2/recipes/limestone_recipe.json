@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cav:limestone_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB",
+      "BA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:cobblestone"
+      },
+      "B": {
+        "item": "minecraft:nautilus_shell"
+      }
+    },
+    "result": {
+      "item": "cav:limestone",
+      "count": 4
+    }
+  }
+}

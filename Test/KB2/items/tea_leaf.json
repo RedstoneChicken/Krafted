@@ -1,0 +1,23 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tea_leaf",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tea_leaf"
+			},
+			"minecraft:creative_category": {
+				"parent": "nature"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:tea_crop",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

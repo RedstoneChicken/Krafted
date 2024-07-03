@@ -1,0 +1,16 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:thorn_root_feature"
+		},
+		"places_block": "korbon:thorn_root",
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:air",
+			"korbon:phreyium_grass"
+		]
+	}
+}

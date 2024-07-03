@@ -1,0 +1,14 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:endstone_patch_with_turf_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:end_stone_patch_scatter_feature",
+			"korbon:turf_endstone_scatter_feature"
+		]
+	}
+}

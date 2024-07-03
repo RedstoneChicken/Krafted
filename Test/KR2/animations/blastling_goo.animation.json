@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.blastling_goo.idle": {
+			"loop": true,
+			"animation_length": 187.36,
+			"bones": {
+				"root": {
+					"rotation": ["100+math.cos(query.life_time * 120) * 100", "100+math.sin(query.life_time * 120) * 100", "100+math.sin(query.life_time * 170) * 100"]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "shoot_sound"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "goo_trail",
+					"locator": "locator"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:cartography_table_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"||",
+			"##",
+			"##"
+		],
+		"key": {
+			"|": {
+				"item": "minecraft:paper"
+			},
+			"#": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": {
+			"item": "minecraft:cartography_table"
+		},
+		"priority": 50
+	}
+}

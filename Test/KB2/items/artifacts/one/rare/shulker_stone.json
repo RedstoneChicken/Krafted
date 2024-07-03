@@ -1,0 +1,53 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:shulker_stone",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0,
+         "minecraft:icon":{
+            "texture":"shulker_stone"
+         },
+         "minecraft:hand_equipped":true,
+         "minecraft:display_name":{
+            "value":"Shulker Stone\n§1Rare\n§7Cooldown: 27\nLevel: 1"
+         },
+         "minecraft:can_destroy_in_creative":false,
+         "minecraft:cooldown":{
+            "category":"shulker_stone",
+            "duration":27
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"use",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "use":{
+            "run_command":{
+               "command":[
+                  "playsound beacon.activate @a[r=10]",
+                  "tag @s add user_ss",
+                  "effect @e[tag=!user_ss,r=10] levitation 10 1",
+                  "execute @e[tag=!user_ss,r=10] ~~~ particle minecraft:shulker_bullet ~~~",
+                  "tag @s remove user_ss"
+               ],
+               "target":"holder"
+            },
+            "damage":{
+               "type":"magic",
+               "amount":1
+            }
+         }
+      }
+   }
+}

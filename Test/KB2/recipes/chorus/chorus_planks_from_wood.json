@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "korbon:chorus_planks_from_wood"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "korbon:chorus_wood"
+			}
+		],
+		"result": [
+			{
+				"item": "korbon:chorus_planks",
+				"count": 4
+			}
+		]
+	}
+}

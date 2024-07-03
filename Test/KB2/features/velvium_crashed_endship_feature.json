@@ -1,0 +1,14 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:velvium_crashed_endship_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:pink_chorus_tree_grass_feature",
+			"korbon:crashed_endship_velvium_feature"
+		]
+	}
+}

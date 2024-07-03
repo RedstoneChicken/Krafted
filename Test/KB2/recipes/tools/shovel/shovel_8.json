@@ -1,0 +1,35 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:shovel_8"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:stone_shovel_head"
+			},
+			"~": {
+				"item": "strat:stone_tool_rod"
+			},
+			"o": {
+				"item": "strat:stone_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:shovel_8",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

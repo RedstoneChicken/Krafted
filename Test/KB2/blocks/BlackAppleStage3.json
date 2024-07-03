@@ -1,0 +1,62 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:black_apple3"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blackapplestage3",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:geometry": "geometry.blackapple",
+			"minecraft:on_interact": {
+				"event": "caf:grow",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:ticking": {
+				"range": [
+					150,
+					400
+				],
+				"on_tick": {
+					"event": "caf:natural_grow"
+				},
+				"looping": true
+			}
+		},
+		"events": {
+			"caf:grow": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				},
+				"set_block_at_pos": {
+					"block_type": "caf:black_apple4",
+					"block_offset": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			"caf:natural_grow": {
+				"set_block_at_pos": {
+					"block_type": "caf:black_apple4",
+					"block_offset": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,233 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:hunting_rope",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"hunting_rope"
+         },
+         "minecraft:display_name":{
+            "value":"Hunting Rope\n§2Uncommon\n§7Cooldown: 40\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"hunting_rope",
+            "duration":40
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"fish",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "fish":{
+            "randomize":[
+               {
+                  "weight":60,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s chicken",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back  a chicken\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":13,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s beef",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a cow\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":25,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s mutton",
+                        "give @s wool",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back  a sheep!!\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":45,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s porkchop",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back  a pig\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":60,
+                  "run_command":{
+                     "command":[
+                        "playsound random.hurt @p",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back nothing.Sucks to be you.\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":10,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s rabbit",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a rabbit\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":10,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s sweet_berries 5",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back some wild berries\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":10,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s apple",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back an apple\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":10,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s potato",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a potato ._.\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":10,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s cactus",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a cactus\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":8,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s bamboo 3",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a few bamboos.\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":8,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s milk_bucket",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a bucket of pure milk from a cow\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":5,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s brown_mushroom 2",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back some sussy mushrooms.But its brown so its completely safe.\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":10,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s rotten_flesh",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back a flesh of a zombie\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":5,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s bone 3",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back some bone\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               },
+               {
+                  "weight":5,
+                  "run_command":{
+                     "command":[
+                        "playsound random.levelup @p",
+                        "give @s golden_apple",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back an apple, not just a normal aplle but a golden one.\"}]}",
+                        "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+                     ],
+                     "target":"self"
+                  }
+               }
+            ]
+         }
+      }
+   }
+}

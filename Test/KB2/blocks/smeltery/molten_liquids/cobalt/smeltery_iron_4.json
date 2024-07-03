@@ -1,0 +1,214 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:smeltery_cobalt_4"
+		},
+		"components": {
+			"minecraft:destructible_by_mining": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "molten_cobalt",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.tinkers_molten_liquid_3",
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					1,
+					1
+				],
+				"on_tick": {
+					"event": "strat:burn"
+				}
+			},
+			"minecraft:block_light_filter": 0,
+			"minecraft:block_light_emission": 1,
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:on_interact": {
+				"event": "strat:bucket"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:burn": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"damage @e[r=1] 2 lava",
+								"playsound extinguish.candle @a[r=1]"
+							]
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 29
+							},
+							{
+								"weight": 1,
+								"run_command": {
+									"command": [
+										"particle minecraft:lava_particle ~~~"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"strat:persist": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "strat:smeltery_cobalt_4"
+						}
+					}
+				]
+			},
+			"strat:bucket": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') != 'bucket' && query.get_equipped_item_name('main_hand') != 'molten_cobalt_bucket' && query.get_equipped_item_name('main_hand') != 'copper_can' && query.get_equipped_item_name('main_hand') != 'copper_can_cobalt'",
+						"run_command": {
+							"command": [
+								"title @s actionbar Smeltery:
+§9Cobalt§r (4/9)"
+							],
+							"target": "player"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'bucket'",
+						"sequence": [
+							{
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"playsound bucket.empty_lava @a ~~~",
+										"give @s strat:molten_cobalt_bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"fill ~-2 ~ ~-2 ~+2 ~ ~+2 strat:smeltery_cobalt_2 0 replace strat:smeltery_cobalt_4"
+									],
+									"target": "block"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'copper_can'",
+						"sequence": [
+							{
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"playsound bucket.empty_lava @a ~~~",
+										"give @s strat:copper_can_cobalt",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"fill ~-2 ~ ~-2 ~+2 ~ ~+2 strat:smeltery_cobalt_3 0 replace strat:smeltery_cobalt_4"
+									],
+									"target": "block"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'molten_cobalt_bucket'",
+						"sequence": [
+							{
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"playsound bucket.fill_lava @a ~~~",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"fill ~-2 ~ ~-2 ~+2 ~ ~+2 strat:smeltery_cobalt_6 0 replace strat:smeltery_cobalt_4"
+									],
+									"target": "block"
+								}
+							}
+						]
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'copper_can_cobalt'",
+						"sequence": [
+							{
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"gamerule sendcommandfeedback false",
+										"playsound bucket.fill_lava @a ~~~",
+										"give @s strat:copper_can",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"fill ~-2 ~ ~-2 ~+2 ~ ~+2 strat:smeltery_cobalt_5 0 replace strat:smeltery_cobalt_4"
+									],
+									"target": "block"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

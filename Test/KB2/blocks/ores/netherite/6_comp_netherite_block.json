@@ -1,0 +1,20 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cc:sextuple_compressed_netherite_block"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 1,
+			"minecraft:block_light_emission": 0,
+			"minecraft:breathability": "solid",
+			"minecraft:immovable": true,
+			"minecraft:destroy_time": 30,
+			"minecraft:explosion_resistance": 1200,
+			"minecraft:creative_category": {
+				"category": "construction"
+			}
+		},
+		"events": {}
+	}
+}

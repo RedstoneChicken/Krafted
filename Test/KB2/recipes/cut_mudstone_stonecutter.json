@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:cut_mudstone"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:mudstone"
+      }
+    ],
+    "result": {
+      "item": "cav:cut_mudstone",
+      "count": 1
+    }
+  }
+  
+}

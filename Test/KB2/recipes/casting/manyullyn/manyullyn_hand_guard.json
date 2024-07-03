@@ -1,0 +1,37 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:manyullyn_hand_guard"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:hand_guard_cast"
+			},
+			"~": {
+				"item": "strat:molten_manyullyn_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:manyullyn_hand_guard",
+				"count": 1
+			},
+			{
+				"item": "strat:hand_guard_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

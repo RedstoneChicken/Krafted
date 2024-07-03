@@ -1,0 +1,63 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": { "identifier": "ff:dead_bush_large" },
+    "components": {
+      "minecraft:pick_collision": {
+        "origin": [-7, 0, -7],
+        "size": [14, 16, 14]
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up"],
+            "block_filter": [
+              "grass",
+              "dirt",
+              "podzol",
+              "moss_block",
+              "dirt_with_roots",
+              "sand",
+              "sandstone",
+              "red_sandstone",
+              "hardened_clay",
+              "stained_hardened_clay"
+            ]
+          }
+        ]
+      },
+      "minecraft:geometry": "geometry.blue_bell",
+      "minecraft:breathability": "air",
+      "tag:flower": {},
+
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "alpha_test",
+          "texture": "dead_bush_large",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:block_light_emission": 0.14,
+      "minecraft:entity_collision": false,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:destroy_time": 0,
+      "minecraft:loot": "loot_tables/blocks/dead_bush/dead_bush_large.json",
+      "minecraft:on_interact": {
+        "condition": "q.get_equipped_item_name=='bone_meal'",
+        "event": "fertilize_block"
+      }
+    },
+    "events": {
+      "fertilize_block": {
+        "spawn_loot": {
+          "table": "loot_tables/blocks/dead_bush/dead_bush_large.json"
+        },
+        "decrement_stack": {},
+        "run_command": {
+          "command": ["particle minecraft:crop_growth_emitter ~ ~ ~"]
+        }
+      }
+    }
+  }
+}

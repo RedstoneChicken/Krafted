@@ -1,0 +1,29 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:noteblock_from_crooked_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AAA",
+            "ABA",
+            "AAA"
+        ],
+        "key": {
+            "A": {
+                "item": "honkit26113:crooked_planks"
+            },
+            "B": {
+                "item": "redstone"
+            }
+        },
+        "result": {
+            "item": "noteblock",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

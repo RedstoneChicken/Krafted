@@ -1,0 +1,22 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:cornflower_into_cornflower_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:red_flower",
+        "data": 9,
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:cornflower_bouquet_item",
+      "count": 1
+    }
+  }
+}

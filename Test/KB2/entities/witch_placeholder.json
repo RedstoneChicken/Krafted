@@ -1,0 +1,78 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "honkit26113:witch_placeholder",
+			"is_summonable": false,
+			"is_spawnable": false,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"honkit26113:countdown": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						0.1,
+						0.1
+					],
+					"time_down_event": {
+						"event": "honkit26113:spawn_witch"
+					}
+				}
+			},
+			"honkit26113:spawn_witch": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [ "placeholder", "inanimate" ]
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 0.5
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:persistent": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+      		"minecraft:damage_sensor": {
+        		"triggers": {
+          			"cause": "all",
+          			"deals_damage": false
+        		}
+      		}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"honkit26113:countdown"
+					]
+				}
+			},
+			"honkit26113:spawn_witch": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"honkit26113:spawn_witch"
+							]
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"summon witch ~ ~ ~"
+							]
+						}
+					}
+				]	
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "honkit26113:lost_explorer_camp_feature"
+        },
+        "structure_name": "mystructure:lost_explorer_camp",
+        "adjustment_radius": 8,
+        "facing_direction": "random",
+        "constraints": {
+            "grounded": {},
+      		"block_intersection": {
+        		"block_allowlist": [
+          			"honkit26113:crystallized_ice",
+                    "honkit26113:frosted_stone",
+                    "honkit26113:frosted_pebbles",
+                    "minecraft:air"
+        		]
+      		}
+    	}
+    }
+}

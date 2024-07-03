@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "recipe:nether_ruby_block_decraft"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"A"
+		],
+		"key": {
+			"A": {
+				"item": "caf:nether_ruby_block"
+			}
+		},
+		"result": [
+			{
+				"item": "caf:nether_ruby",
+				"count": 9
+			}
+		]
+	}
+}

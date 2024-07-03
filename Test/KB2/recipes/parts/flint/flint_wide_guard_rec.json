@@ -1,0 +1,33 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:flint_wide_guard_rec"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:wide_guard_pattern"
+			},
+			"~": {
+				"item": "minecraft:flint"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:flint_wide_guard",
+				"count": 1
+			},
+			{
+				"item": "strat:wide_guard_pattern",
+				"count": 1
+			}
+		]
+	}
+}

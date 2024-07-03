@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:compressed_gold_block_to_gold_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:compressed_gold_block"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:gold_block",
+				"count": 9
+			}
+		]
+	}
+}

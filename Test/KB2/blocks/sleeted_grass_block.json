@@ -1,0 +1,81 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ff:sleeted_grass_block"
+		},
+		"components": {
+			"minecraft:loot": "loot_tables/blocks/sleeted_grass_block.json",
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.null",
+				"category": "nature"
+			},
+			"tag:grass":{},
+			"minecraft:on_interact": {
+				"condition": "q.get_equipped_item_name =='bone_meal'",
+				"event": "grow_stage_2"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 0.1,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"texture": "sleeted_grass_block"
+				},
+				"north": {
+					"render_method": "opaque",
+					"texture": "sleeted_grass_block_side"
+				},
+				"south": {
+					"render_method": "opaque",
+					"texture": "sleeted_grass_block_side"
+				},
+				"east": {
+					"render_method": "opaque",
+					"texture": "sleeted_grass_block_side"
+				},
+				"west": {
+					"render_method": "opaque",
+					"texture": "sleeted_grass_block_side"
+				},
+				"down": {
+					"render_method": "opaque",
+					"texture": "dirt"
+				}
+			}
+		},
+		"events": {
+			//bonemeal
+			"grow_stage_2": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"run_command": {
+									"command": [
+										"function sleeted_grass/foilage"
+									]
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"function sleeted_grass/foilage2"
+									]
+								}
+							},
+							{
+								"run_command": {
+									"command": [
+										"function sleeted_grass/foilage3"
+									]
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

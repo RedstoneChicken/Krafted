@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "azc:shark",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/shark"
+			},
+			"geometry" : {
+				"default" : "geometry.shark"
+			},
+			"animations" : {
+				"swim" : "animation.shark.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.salmon" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_shark",
+				"texture_index" : 0
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:pearlstone_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:pearlstone"
+      }
+    ],
+    "result": {
+      "item": "cav:pearlstone_slab",
+      "count": 2
+    }
+  } 
+}

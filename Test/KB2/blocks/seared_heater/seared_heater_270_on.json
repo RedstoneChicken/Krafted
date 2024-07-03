@@ -1,0 +1,44 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:seared_heater_270_on"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "seared_heater_on_270",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"tag:stone": {},
+			"minecraft:loot": "loot_tables/seared_heater.json",
+			"minecraft:block_light_emission": 1,
+			"minecraft:on_player_destroyed": {
+				"event": "strat:deactivate"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:deactivate": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"function melter_deactivate",
+								"function heater_deactivate"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

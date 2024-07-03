@@ -1,0 +1,1097 @@
+{
+	"format_version" : "1.16.0",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:cave_spider",
+			"is_spawnable" : true,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"minecraft:spider_jockey" : {
+				"minecraft:addrider" : {
+					"entity_type" : "minecraft:skeleton"
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "skeleton" ],
+					"seats" : {
+						"position" : [ 0.0, 0.3, -0.1 ]
+					}
+				}
+			},
+			"minecraft:spider_stray_jockey" : {
+				"minecraft:addrider" : {
+					"entity_type" : "minecraft:skeleton.stray"
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "skeleton" ],
+					"seats" : {
+						"position" : [ 0.0, 0.3, -0.1 ]
+					}
+				}
+			},
+			"minecraft:spider_wither_jockey" : {
+				"minecraft:addrider" : {
+					"entity_type" : "minecraft:skeleton.wither"
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "skeleton" ],
+					"seats" : {
+						"position" : [ 0.0, 0.25, -0.1 ]
+					}
+				}
+			},
+			"minecraft:spider_neutral" : {
+				"minecraft:environment_sensor" : {
+					"triggers" : {
+						"filters" : {
+							"test" : "is_brightness",
+							"operator" : "<",
+							"value" : 0.49
+						},
+						"event" : "minecraft:become_hostile"
+					}
+				},
+				"minecraft:on_target_acquired" : {
+					"event" : "minecraft:become_angry"
+				}
+			},
+			"minecraft:spider_hostile" : {
+				"minecraft:environment_sensor" : {
+					"triggers" : {
+						"filters" : {
+							"test" : "is_brightness",
+							"operator" : ">",
+							"value" : 0.49
+						},
+						"event" : "minecraft:become_neutral"
+					}
+				},
+				"minecraft:behavior.nearest_attackable_target" : {
+					"priority" : 2,
+					"must_see" : true,
+					"attack_interval" : 5,
+					"entity_types" : [
+						{
+							"filters" : {
+								"any_of" : [
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "player"
+									},
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "snowgolem"
+									},
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "irongolem"
+									}
+								]
+							},
+							"max_dist" : 16
+						}
+					]
+				},
+				"minecraft:behavior.leap_at_target" : {
+					"priority" : 4,
+					"yd" : 0.4,
+					"must_be_on_ground" : false
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"track_target" : true,
+					"random_stop_interval" : 100,
+					"reach_multiplier" : 0.8
+				}
+			},
+			"minecraft:spider_angry" : {
+				"minecraft:angry" : {
+					"duration" : 10,
+					"duration_delta" : 3,
+					"calm_event" : {
+						"event" : "minecraft:on_calm",
+						"target" : "self"
+					}
+				},
+				"minecraft:behavior.nearest_attackable_target" : {
+					"priority" : 2,
+					"must_see" : true,
+					"attack_interval" : 10,
+					"entity_types" : [
+						{
+							"filters" : {
+								"any_of" : [
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "player"
+									},
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "snowgolem"
+									},
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "irongolem"
+									}
+								]
+							},
+							"max_dist" : 16
+						}
+					]
+				},
+				"minecraft:behavior.leap_at_target" : {
+					"priority" : 4,
+					"yd" : 0.4,
+					"must_be_on_ground" : false
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"track_target" : true,
+					"reach_multiplier" : 1.4
+				}
+			},
+			"minecraft:spider_poison_easy" : {
+				"minecraft:attack" : {
+					"damage" : 2,
+					"effect_name" : "poison",
+					"effect_duration" : 0
+				}
+			},
+			"minecraft:spider_poison_normal" : {
+				"minecraft:attack" : {
+					"damage" : 2,
+					"effect_name" : "poison",
+					"effect_duration" : 7
+				}
+			},
+			"minecraft:spider_poison_hard" : {
+				"minecraft:attack" : {
+					"damage" : 2,
+					"effect_name" : "poison",
+					"effect_duration" : 15
+				}
+			},
+			"elite_cave_spider" : {
+				"minecraft:health" : {
+					"value" : 22,
+					"max" : 22
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/elite_cave_spider.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "20"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 4,
+					"effect_name" : "poison",
+					"effect_duration" : 7
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Armoured Cave Spider The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Unseen Cave Spider Of Stalking"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Dark Cave Spider The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 10
+				}
+			},
+			"elite_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Quicksand Cave Spider Of WTF Imba"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_regen" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Regenerating Cave Spider Of First Aid"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "regeneration",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Starving Cave Spider Of Hunger"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 15
+				}
+			},
+			"elite_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Sprinting Cave Spider Of Bolting"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Apathetic Cave Spider Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Withering Cave Spider Doomskull"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 10
+				}
+			},
+			"ultra_cave_spider" : {
+				"minecraft:health" : {
+					"value" : 32,
+					"max" : 32
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/ultra_cave_spider.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "40"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 6,
+					"effect_name" : "poison",
+					"effect_duration" : 7
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Defensive Cave Spider Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Stalking Cave Spider The Unseen"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Eclipsed Cave Spider The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Quicksand Cave Spider The Slowing B****"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_regen" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Healing Cave Spider Of First Aid"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "regeneration",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Hungering Cave Spider The Mutated"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Charging Cave Spider The Swift One"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Apathetic Cave Spider Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Dark Lord Cave Spider Doomskull"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 15
+				}
+			},
+			"infernal_cave_spider" : {
+				"minecraft:health" : {
+					"value" : 42,
+					"max" : 42
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/infernal_cave_spider.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "60"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 8,
+					"effect_name" : "poison",
+					"effect_duration" : 7
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Turtling Cave Spider Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Hunting Cave Spider The Predator"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Shadowkin Cave Spider Of Darkness"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Slowing Cave Spider Of You-Can't-Run"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_regen" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Nigh Unkillable Cave Spider Of First Aid"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "regeneration",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Starving Cave Spider The Pale Rider"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Swift Cave Spider Of Being In Your Face"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Apathetic Cave Spider Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Sith Lord Cave Spider Of Dark Skulls"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 20
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:experience_reward" : {
+				"on_death" : "query.last_hit_by_player ? 5 : 0"
+			},
+			"minecraft:type_family" : {
+				"family" : [ "cavespider", "monster", "arthropod", "mob" ]
+			},
+			"minecraft:breathable" : {
+				"total_supply" : 15,
+				"suffocate_time" : 0
+			},
+			"minecraft:nameable" : {},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/cave_spider.json"
+			},
+			"minecraft:collision_box" : {
+				"width" : 0.7,
+				"height" : 0.5
+			},
+			"minecraft:health" : {
+				"value" : 12,
+				"max" : 12
+			},
+			"minecraft:hurt_on_condition" : {
+				"damage_conditions" : [
+					{
+						"filters" : {
+							"test" : "in_lava",
+							"subject" : "self",
+							"operator" : "==",
+							"value" : true
+						},
+						"cause" : "lava",
+						"damage_per_tick" : 4
+					}
+				]
+			},
+			"minecraft:movement" : {
+				"value" : 0.3
+			},
+			"minecraft:navigation.climb" : {
+				"can_path_over_water" : true
+			},
+			"minecraft:movement.basic" : {},
+			"minecraft:jump.static" : {},
+			"minecraft:can_climb" : {},
+			"minecraft:despawn" : {
+				"despawn_from_distance" : {}
+			},
+			"minecraft:behavior.float" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.mount_pathing" : {
+				"priority" : 5,
+				"speed_multiplier" : 1.25,
+				"target_dist" : 0.0,
+				"track_target" : true
+			},
+			"minecraft:behavior.random_stroll" : {
+				"priority" : 6,
+				"speed_multiplier" : 0.8
+			},
+			"minecraft:behavior.look_at_player" : {
+				"priority" : 7,
+				"look_distance" : 6.0,
+				"probability" : 0.02
+			},
+			"minecraft:behavior.random_look_around" : {
+				"priority" : 7
+			},
+			"minecraft:behavior.hurt_by_target" : {
+				"priority" : 1
+			},
+			"minecraft:rideable" : {
+				"seat_count" : 1,
+				"family_types" : [ "zombie" ],
+				"seats" : {
+					"position" : [ 0.0, 0.3, 0.0 ]
+				}
+			},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 1,
+						"randomize" : [
+							{
+								"weight" : 80,
+								"filters" : {
+									"all_of" : [
+										{
+											"test" : "is_daytime",
+											"value" : false
+										},
+										{
+											"test" : "is_snow_covered",
+											"value" : true
+										},
+										{
+											"test" : "is_underground",
+											"value" : false
+										}
+									]
+								},
+								"remove" : {},
+								"add" : {
+									"component_groups" : [ "minecraft:spider_stray_jockey", "minecraft:spider_neutral" ]
+								}
+							},
+							{
+								"weight" : 80,
+								"filters" : {
+									"test" : "is_biome",
+									"value" : "the_nether"
+								},
+								"remove" : {},
+								"add" : {
+									"component_groups" : [ "minecraft:spider_wither_jockey", "minecraft:spider_neutral" ]
+								}
+							},
+							{
+								"weight" : 750,
+								"filters" : {
+									"any_of" : [
+										{
+											"test" : "is_daytime",
+											"value" : false
+										},
+										{
+											"test" : "is_underground",
+											"value" : true
+										}
+									]
+								},
+								"remove" : {},
+								"add" : {
+									"component_groups" : [ "minecraft:spider_jockey", "minecraft:spider_neutral" ]
+								}
+							}
+						]
+					},
+					{
+						"weight" : 9500,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_bullwark" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_cloaking" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_darkness" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_quicksand" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_sapper" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_regen" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_sprint" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_weakness" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_cave_spider", "elite_wither" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_bullwark" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_cloaking" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_darkness" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_quicksand" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_regen" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_sapper" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_sprint" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_weakness" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_cave_spider", "ultra_wither" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"minecraft:spider_neutral",
+								"infernal_cave_spider",
+								"infernal_bullwark"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"minecraft:spider_neutral",
+								"infernal_cave_spider",
+								"infernal_cloaking"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"minecraft:spider_neutral",
+								"infernal_cave_spider",
+								"infernal_darkness"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"minecraft:spider_neutral",
+								"infernal_cave_spider",
+								"infernal_quicksand"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_cave_spider", "infernal_regen" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_cave_spider", "infernal_sapper" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_cave_spider", "infernal_sprint" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"minecraft:spider_neutral",
+								"infernal_cave_spider",
+								"infernal_weakness"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_cave_spider", "infernal_wither" ]
+						}
+					}
+				]
+			},
+			"minecraft:become_hostile" : {
+				"sequence" : [
+					{
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_neutral" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_hostile" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "is_difficulty",
+							"value" : "easy"
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_poison_hard", "minecraft:spider_poison_normal" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_poison_easy" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "is_difficulty",
+							"value" : "normal"
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_poison_easy", "minecraft:spider_poison_hard" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_poison_normal" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "is_difficulty",
+							"value" : "hard"
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_poison_easy", "minecraft:spider_poison_normal" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_poison_hard" ]
+						}
+					}
+				]
+			},
+			"minecraft:become_neutral" : {
+				"remove" : {
+					"component_groups" : [ "minecraft:spider_hostile" ]
+				},
+				"add" : {
+					"component_groups" : [ "minecraft:spider_neutral" ]
+				}
+			},
+			"minecraft:become_angry" : {
+				"sequence" : [
+					{
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_neutral" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_angry" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "is_difficulty",
+							"value" : "easy"
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_poison_hard", "minecraft:spider_poison_normal" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_poison_easy" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "is_difficulty",
+							"value" : "normal"
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_poison_easy", "minecraft:spider_poison_hard" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_poison_normal" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "is_difficulty",
+							"value" : "hard"
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:spider_poison_easy", "minecraft:spider_poison_normal" ]
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_poison_hard" ]
+						}
+					}
+				]
+			},
+			"minecraft:on_calm" : {
+				"remove" : {
+					"component_groups" : [ "minecraft:spider_angry" ]
+				},
+				"add" : {
+					"component_groups" : [ "minecraft:spider_neutral" ]
+				}
+			}
+		}
+	}
+}

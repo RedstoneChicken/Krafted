@@ -1,0 +1,19 @@
+//bridge-file-version: #2
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:mushroom_stew"
+		},
+		"components": {
+			"minecraft:use_duration": 32,
+			"minecraft:max_stack_size": 16,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "normal",
+				"using_converts_to": "bowl"
+			}
+		},
+		"events": {}
+	}
+}

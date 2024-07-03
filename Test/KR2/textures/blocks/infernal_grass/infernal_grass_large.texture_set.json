@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+      "color": "infernal_grass_large",
+      "metalness_emissive_roughness": "infernal_grass_large_mer",
+      "heightmap": "infernal_grass_large_heightmap"
+  }
+}

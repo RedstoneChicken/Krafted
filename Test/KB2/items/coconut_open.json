@@ -1,0 +1,34 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:coconut_open",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"saturation_modifier": "normal",
+				"nutrition": 5,
+				"can_always_eat": false,
+				"effects": {}
+			},
+			"minecraft:use_duration": 1.5,
+			"minecraft:icon": {
+				"texture": "korbon:coconut_open"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:coconut_open.name"
+			},
+			"minecraft:use_animation": "drink"
+		},
+		"events": {}
+	}
+}

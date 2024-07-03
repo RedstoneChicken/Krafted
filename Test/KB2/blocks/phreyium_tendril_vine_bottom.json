@@ -1,0 +1,79 @@
+//bridge-file-version: #92
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:phreyium_tendril_vine_bottom"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "phreyium_tendril_vine_bottom",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"down"
+						],
+						"block_filter": [
+							"korbon:phreyium_tendril_vine"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 1,
+			"minecraft:map_color": "#6C869F",
+			"minecraft:flammable": {
+				"burn_odds": 20,
+				"flame_odds": 20
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/tendril_vine_flower.json",
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "particle"
+				}
+			}
+		},
+		"events": {
+			"particle": {
+				"randomize": [
+					{
+						"weight": 1
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:tendril_flower ~~~"
+							]
+						},
+						"weight": 1
+					}
+				]
+			}
+		}
+	}
+}

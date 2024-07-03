@@ -1,0 +1,14 @@
+//bridge-file-version: #23
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:bangers_and_mash2"
+				}
+			]
+		}
+	]
+}

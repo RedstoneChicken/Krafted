@@ -1,0 +1,20 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:anchor_leaves"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "anchorleaves",
+					"render_method": "blend"
+				}
+			}
+		},
+		"events": {}
+	}
+}

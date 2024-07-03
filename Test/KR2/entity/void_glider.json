@@ -1,0 +1,57 @@
+//bridge-file-version: #62
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "korbon:void_glider",
+			"min_engine_version": "1.8.0",
+			"particle_effects": {
+				"particle": "korbon:void_glider_ambient"
+			},
+			"sound_effects": {
+				"flap": "mob.phantom.flap",
+				"bite": "mob.panda.bite"
+			},
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/void_glider",
+				"saddle": "textures/entity/void_glider_saddle"
+			},
+			"geometry": {
+				"default": "geometry.void_glider"
+			},
+			"animations": {
+				"look_at_target": "animation.common.look_at_target",
+				"wings": "animation.void_glider.wings",
+				"idle": "animation.void_glider.idle",
+				"walk": "animation.void_glider.walk",
+				"particle": "animation.void_glider.particle",
+				"attack": "animation.void_glider.attack",
+				"attack_controller": "controller.animation.void_glider.attack"
+			},
+			"scripts": {
+				"animate": [
+					"attack_controller",
+					"look_at_target",
+					{
+						"wings": "!query.is_on_ground"
+					},
+					{
+						"walk": "query.modified_move_speed"
+					},
+					"idle",
+					"particle"
+				]
+			},
+			"render_controllers": [
+				"controller.render.void_glider"
+			],
+			"spawn_egg": {
+				"base_color": "#141414",
+				"overlay_color": "#AA2AD5"
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:silver_ring"
+  },
+  "key": {
+   "A": {
+    "item": "minecraft:iron_block"
+   },
+   "H": {
+    "item": "minecraft:gold_block"
+   }
+  },
+  "pattern": [
+   "HA",
+   "A A",
+   " A "
+  ],
+  "result": {
+   "count": 1,
+   "item": "kna:silver_ring"
+  },
+  "tags": [
+   "crafting_table"
+  ]
+ }
+}
+
+ },
+    "result": {
+      "item": "kna:dragon_ring",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,68 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:mold_stem"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.mold_stem",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "moldstem",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"event": "caf:randomized_grow",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-1.5,
+					0,
+					-1.5
+				],
+				"size": [
+					3,
+					16,
+					3
+				]
+			},
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {
+			"caf:grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~1 ~ caf:mold_stem",
+						"setblock ~ ~2 ~ caf:giant_mold_top",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow02": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~1 ~ caf:giant_mold_top",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:randomized_grow": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow02"
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:bejeweled_skipper",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"fish"
+				]
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:physics": {},
+			"minecraft:movement.basic": {},
+			"minecraft:loot": {
+				"table": "loot_tables/raw_skipper.json"
+			},
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.8
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:navigation.walk": {},
+			"minecraft:behavior.random_look_around": {
+				"priority": 7
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 6
+			},
+			"minecraft:behavior.avoid_mob_type": {}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

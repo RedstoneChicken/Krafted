@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:jam_pancake",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "jam_pancake"
+			},
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "good",
+				"can_always_eat": false
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 2.4
+		},
+		"events": {}
+	}
+}

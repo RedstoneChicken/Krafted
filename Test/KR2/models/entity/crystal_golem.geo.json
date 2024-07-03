@@ -1,0 +1,84 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crystal_golem",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "leg1",
+					"parent": "bb_main",
+					"pivot": [3.5, 4, 0],
+					"cubes": [
+						{"origin": [1, 0, -3], "size": [5, 8, 6], "uv": [42, 13]}
+					]
+				},
+				{
+					"name": "leg2",
+					"parent": "bb_main",
+					"pivot": [-3.5, 4, 0],
+					"cubes": [
+						{"origin": [-6, 0, -3], "size": [5, 8, 6], "uv": [42, 13]}
+					]
+				},
+				{
+					"name": "arm1",
+					"parent": "bb_main",
+					"pivot": [9.625, 12, -0.05],
+					"cubes": [
+						{"origin": [6.5, 2, -4], "size": [6.5, 19, 7.8], "uv": [102, 1]},
+						{"origin": [7, 3, -3], "size": [5, 19, 6], "uv": [0, 37]}
+					]
+				},
+				{
+					"name": "arm2",
+					"parent": "bb_main",
+					"pivot": [-9.375, 12, -0.05],
+					"cubes": [
+						{"origin": [-12, 3, -3], "size": [5, 19, 6], "uv": [22, 45]},
+						{"origin": [-12.5, 2, -4], "size": [6.5, 19, 7.8], "uv": [102, 1]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "bb_main",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "top",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 15, -5], "size": [14, 9, 10], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "bottom",
+					"parent": "body",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 8, -4], "size": [14, 10, 8], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 13, -10], "size": [8, 8, 10], "uv": [34, 27]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:red_shrooma",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "red_shrooma",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:mattock_128"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#o",
+			" ~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_axe_head"
+			},
+			"o": {
+				"item": "strat:manyullyn_shovel_head"
+			},
+			"~": {
+				"item": "strat:manyullyn_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:mattock_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

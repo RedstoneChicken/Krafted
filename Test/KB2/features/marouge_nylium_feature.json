@@ -1,0 +1,20 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "nether:marouge_nylium_feature"
+		},
+		"places_block": {
+			"name": "nether:marouge_nylium"
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:crimson_nylium",
+			"minecraft:magma",
+			"minecraft:quartz_ore",
+			"minecraft:nether_gold_ore"
+		]
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:octuple_compressed_birch_to_septuple_compressed_birch"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:octuple_compressed_birch"
+			}
+		],
+		"result": [
+			{
+				"count": 9,
+				"item": "cc:septuple_compressed_birch"
+			}
+		]
+	}
+}

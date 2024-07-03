@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "kna:stone_guardian",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_underground": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 1,
+          "adjust_for_weather": true
+        },
+        "minecraft:difficulty_filter": {
+          "min": "normal",
+          "max": "hard"
+        },
+        "minecraft:weight": {
+          "default": 3
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "monster"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.warped_stag.walk": {
+			"states": {
+				"standing": {
+					"blend_transition": 0.2,
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"moving": "query.modified_move_speed > 0.1"
+						}
+					]
+				},
+				"moving": {
+					"blend_transition": 0.2,
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"standing": "query.modified_move_speed < 0.1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

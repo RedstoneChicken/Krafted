@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_allium_into_large_allium"},"tags":["crafting_table"],"ingredients":[{"item":"ff:allium_tall_item","count":2}],"result":{"item":"ff:allium_large_item"}}}

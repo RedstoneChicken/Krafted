@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_swordfish_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:iron_fillet_knife"
+      },
+      "B": {
+        "item": "azc:swordfish"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 7
+      },
+      {
+        "item": "azc:iron_fillet_knife"
+      }
+    ]
+  }
+}

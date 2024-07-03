@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.16,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:chest_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"A A",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": {
+			"item": "chest",
+			"count": 1
+		},
+		"priority": 50
+	}
+}

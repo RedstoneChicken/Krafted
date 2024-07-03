@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cav:cobbled_sandstone_recipe"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "minecraft:sandstone"
+      }
+    ],
+    "result": {
+      "item": "cav:cobbled_sandstone",
+      "count": 1
+    }
+  }
+  
+}

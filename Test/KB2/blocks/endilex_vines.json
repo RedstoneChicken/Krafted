@@ -1,0 +1,66 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:endilex_vines"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "endilex_vines",
+					"render_method": "blend",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:geometry": "geometry.endilex_vines",
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:on_interact": {
+				"event": "berry",
+				"target": "self"
+			},
+			"minecraft:loot": "loot_tables/endilex_vines.json",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:endilex_vines",
+							"end:endilex_vines_fruitless",
+							"end:endilex_leaves",
+							"end:endilex_log"
+						],
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					16,
+					8
+				]
+			},
+			"minecraft:destroy_time": 0.1
+		},
+		"events": {
+			"berry": {
+				"set_block": {
+					"block_type": "end:endilex_vines_fruitless"
+				},
+				"spawn_loot": {
+					"table": "loot_tables/endilex_berry.json"
+				}
+			}
+		}
+	}
+}

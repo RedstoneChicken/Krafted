@@ -1,0 +1,47 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:small_stone_sword",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "small_stone_sword"
+			},
+						"minecraft:display_name": {
+			 "value": "Small Stone Sword"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:weapon": {
+			},
+			"minecraft:damage": 2,
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 10
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:durability": {
+				"max_durability": 50
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:stone"
+						],
+						"repair_amount": 50
+					}
+				]
+			},
+			"minecraft:allow_off_hand": true,
+			"minecraft:foil": false,
+			"minecraft:render_offsets": "tools"
+			}
+		}
+	}

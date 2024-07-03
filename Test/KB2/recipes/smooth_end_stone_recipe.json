@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "cav:smooth_end_stone_recipe"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "minecraft:end_stone",
+    "output": "cav:smooth_end_stone"
+  }
+  
+}

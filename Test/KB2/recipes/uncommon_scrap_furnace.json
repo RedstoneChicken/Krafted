@@ -1,0 +1,15 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "kna:uncommon_scrap"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "kna:uncommon_crate",
+    "output": "kna:uncommon_scrap"
+  }
+  
+}
+

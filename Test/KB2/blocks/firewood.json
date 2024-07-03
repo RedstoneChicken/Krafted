@@ -1,0 +1,21 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:firewood"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 4,
+			"minecraft:block_light_emission": 0.5,
+			"minecraft:map_color": "#883A08",
+			"tag:wood": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Construction",
+				"category": "Construction"
+			}
+		},
+		"events": {}
+	}
+}

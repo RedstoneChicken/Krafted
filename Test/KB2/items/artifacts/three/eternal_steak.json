@@ -1,0 +1,53 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:eternal_steak_three",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "eat",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.5,
+			"minecraft:icon": {
+				"texture": "eternal_steak"
+			},
+			"minecraft:display_name": {
+			 "value":  "Eternal Steak\n§8Common\n§7Cooldown: 10\nLevel: 3"		},
+			"minecraft:cooldown": {
+				"category": "eternal_steak",
+				"duration": 10
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound random.burp @a[r=10]",
+          	"playsound random.eat @a[r=10]",
+            "effect @s saturation 2 5"
+          ],
+          "target": "holder"
+        },
+      	"remove_mob_effect": {
+	    		"effect": "hunger",
+	    		"target": "holder"
+		}
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "cav:end_brewing_stand_recipe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " B ",
+      "###"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:blaze_rod"
+      },
+      "#": {
+        "item": "minecraft:end_stone"
+      }
+    },
+    "result": {
+      "item": "minecraft:brewing_stand"
+    }
+  }
+}

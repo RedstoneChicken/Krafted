@@ -1,0 +1,40 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:sweet_berry_ice_cream",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": "good",
+				"can_always_eat": false,
+				"on_consume": {
+					"event": "consume"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "sweet_berry_ice_cream"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:max_stack_size": 16
+		},
+		"events": {
+			"consume": {
+				"sequence": [
+					{
+						"remove_mob_effect": {
+							"effect": "all"
+						}
+					}
+				]
+			}
+		}
+	}
+}

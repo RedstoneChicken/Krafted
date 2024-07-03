@@ -1,0 +1,39 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:yule_log",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 7,
+				"can_always_eat": false,
+				"saturation_modifier": "max",
+				"on_consume": {
+					"event": "consume"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "yule_log"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			}
+		},
+		"events": {
+			"consume": {
+				"sequence": [
+					{
+						"remove_mob_effect": {
+							"effect": "all"
+						}
+					}
+				]
+			}
+		}
+	}
+}

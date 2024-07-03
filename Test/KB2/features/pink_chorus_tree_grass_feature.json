@@ -1,0 +1,22 @@
+//bridge-file-version: #36
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:pink_chorus_tree_grass_feature"
+		},
+		"places_block": "korbon:velvium_grass",
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_attach_to": {
+			"min_sides_must_attach": 1,
+			"bottom": [
+				"korbon:velvium",
+				"korbon:verdanite_velvium"
+			]
+		}
+	}
+}

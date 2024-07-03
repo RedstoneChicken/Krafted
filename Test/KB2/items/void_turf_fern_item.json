@@ -1,0 +1,27 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:void_turf_fern_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:void_turf_fern",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "void_turf_fern_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:void_turf_fern_item.name"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,44 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "end:endilex_bush_rule",
+			"places_feature": "end:endilex_bush_feature"
+		},
+		"conditions": {
+			"placement_pass": "before_sky_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": "math.random_integer(1, 4)",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					8
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					8
+				]
+			},
+			"y": "(q.noise(v.worldx / 1024, v.worldz / 1024) + q.noise(v.worldx, v.worldz) * 0.05 < -0.5 && (math.abs(v.worldx) > 200 || math.abs(v.worldz) > 200)) ? (q.heightmap(v.worldx, v.worldz) - 1) : -1"
+		}
+	}
+}

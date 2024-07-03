@@ -1,0 +1,51 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "oh:topaz_leggings",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "topaz_leggings"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.leggings"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:enchantable": {
+        "value": 30,
+        "slot": "armor_legs"
+      },
+      "minecraft:durability": {
+        "max_durability": 100,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        }
+      },
+      "minecraft:mining_speed": 5,
+      "minecraft:wearable": {
+        "dispensable": true,
+        "slot": "slot.armor.legs"
+      },
+      "minecraft:render_offsets": "leggings",
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": [
+              "oh:topaz"
+            ],
+            "repair_amount": 30
+          }
+        ]
+      },
+      "minecraft:armor": {
+        "protection": 3
+      },
+      "minecraft:display_name": {
+				"value": "Topaz leggings"
+			}
+    }
+  }
+}

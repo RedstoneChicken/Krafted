@@ -1,0 +1,45 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:three_xp_tome"
+  },
+  "tags": [
+   "crafting_table"
+  ],
+  "pattern": [
+   "SAS"
+  ],
+  "key": {
+   "A": {
+    "item": "kna:xp_tome_two"
+   },
+   "S": {
+    "item": "kna:uncommon_scrap"
+   }
+  },
+  "result": {
+   "item": "kna:xp_tome_three",
+   "count": 1
+  }
+ }
+}
+
+
+
+  }
+ }
+}
+: "kna:wither_star",
+   "count": 1
+  }
+ }
+}
+      }
+    },
+    "result": {
+      "item": "kna:wither_star",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,13 @@
+//bridge-file-version: #7
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "empty"
+				}
+			]
+		}
+	]
+}

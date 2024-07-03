@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:blooming_grass_into_blooming_fern"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:blooming_grass_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:blooming_fern_item",
+      "count": 1
+    }
+  }
+}

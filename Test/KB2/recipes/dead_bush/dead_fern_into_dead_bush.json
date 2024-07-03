@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:dead_fern_into_dead_bush"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:dead_fern_item",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "minecraft:deadbush",
+      "count": 9
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:cobalto_ore_d"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.ore"
+			},
+			"tag:dextenblocks": {},
+			"minecraft:destroy_time": 12,
+			"minecraft:explosion_resistance": 2,
+			"minecraft:loot": "loot_tables/cobalto_ore.json",
+			"minecraft:on_player_destroyed": {
+				"event": "xp",
+				"target": "self"
+			}
+		},
+		"events": {
+			"xp": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon xp_orb ~ ~ ~",
+								"summon xp_orb ~ ~ ~"
+							],
+							"target": "self"
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,249 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:bush",
+			"properties": {
+				"rns:top": [
+					0,
+					1
+				],
+				"rns:bottom": [
+					0,
+					1
+				],
+				"rns:north": [
+					0,
+					1
+				],
+				"rns:south": [
+					0,
+					1
+				],
+				"rns:east": [
+					0,
+					1
+				],
+				"rns:west": [
+					0,
+					1
+				],
+				"rns:leaf": [
+					0,
+					1
+				],
+				"rns:snow": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_bush",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"tag:bush": {},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0,
+					0
+				],
+				"on_tick": {
+					"target": "self",
+					"event": "rns:whatdo"
+				}
+			},
+			"minecraft:part_visibility": {
+				"rules": {
+					"top": "q.block_property('rns:top') == 1",
+					"bottom": "q.block_property('rns:bottom') == 1",
+					"north": "q.block_property('rns:north') == 1",
+					"east": "q.block_property('rns:east') == 1",
+					"south": "q.block_property('rns:south') == 1",
+					"west": "q.block_property('rns:west') == 1",
+					"leaf": "q.block_property('rns:leaf') == 0"
+				}
+			},
+			"minecraft:geometry": "geometry.bush",
+			"minecraft:destroy_time": 0.3,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_step_on": {
+				"event": "rns:leaf",
+				"condition": "query.block_property('rns:leaf') == 0"
+			},
+			"minecraft:loot": "loot_tables/bushloot.json"
+		},
+		"events": {
+			"rns:place": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,-1,'bush')",
+						"set_block_property": {
+							"rns:north": 1
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,-1,'bush')",
+						"set_block_property": {
+							"rns:north": 0
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,0,1,'bush')",
+						"set_block_property": {
+							"rns:south": 1
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(0,0,1,'bush')",
+						"set_block_property": {
+							"rns:south": 0
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(1,0,0,'bush')",
+						"set_block_property": {
+							"rns:east": 1
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(1,0,0,'bush')",
+						"set_block_property": {
+							"rns:east": 0
+						}
+					},
+					{
+						"condition": "q.block_neighbor_has_any_tag(-1,0,0,'bush')",
+						"set_block_property": {
+							"rns:west": 1
+						}
+					},
+					{
+						"condition": "!q.block_neighbor_has_any_tag(-1,0,0,'bush')",
+						"set_block_property": {
+							"rns:west": 0
+						}
+					}
+				]
+			},
+			"rns:leaf": {
+				"randomize": [
+					{
+						"set_block_property": {
+							"rns:leaf": 1
+						},
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"playsound block.sweet_berry_bush.break @p"
+							]
+						},
+						"spawn_loot": {
+							"table": "loot_tables/leaf.json"
+						}
+					},
+					{
+						"weight": 7,
+						"trigger": {
+							"event": "nothing"
+						}
+					}
+				]
+			},
+			"rns:releaf": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"rns:leaf": 0
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"rns:snow": {
+				"sequence": [
+					{
+						"condition": "q.block_neighbor_has_any_tag(0,1,0,'snow')",
+						"set_block_property": {
+							"rns:snow": 1
+						},
+						"run_command": {
+							"command": [
+								"fill ~ ~1 ~ ~ ~1 ~ air 0 replace snow_layer"
+							]
+						}
+					}
+				]
+			},
+			"rns:whatdo": {
+				"sequence": [
+					{
+						"trigger": {
+							"event": "rns:place"
+						}
+					},
+					{
+						"trigger": {
+							"event": "rns:snow"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('rns:leaf') == 1",
+				"components": {
+					"minecraft:loot": "loot_tables/stick.json",
+					"minecraft:on_interact": {
+						"condition": "query.get_equipped_item_name == 'bone_meal'",
+						"event": "rns:releaf"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('rns:snow') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_snowbush",
+							"render_method": "blend"
+						}
+					}
+				}
+			}
+		]
+	}
+}

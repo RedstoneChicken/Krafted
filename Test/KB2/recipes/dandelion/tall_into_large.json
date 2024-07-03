@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_dandelion_into_large_dandelion"},"tags":["crafting_table"],"ingredients":[{"item":"ff:dandelion_tall_item","count":2}],"result":{"item":"ff:dandelion_large_item"}}}

@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:waffle",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "waffle"
+			},
+			"minecraft:food": {
+				"nutrition": 6,
+				"can_always_eat": false,
+				"saturation_modifier": "normal"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.6
+		},
+		"events": {}
+	}
+}

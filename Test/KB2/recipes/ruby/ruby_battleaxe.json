@@ -1,0 +1,34 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:ruby_battleaxe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XBX",
+			"X#X",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "oh:strong_stick"
+			},
+			"X": {
+				"item": "oh:ruby"
+			},
+			"B": {
+				"item": "oh:ruby_block"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:ruby_battleaxe",
+				"count": 1
+			}
+		]
+	}
+}

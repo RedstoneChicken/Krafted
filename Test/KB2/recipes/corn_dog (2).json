@@ -1,0 +1,37 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:corn_dog"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~#",
+			"i"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cooked_sausage"
+			},
+			"~": {
+				"item": "strat:batter"
+			},
+			"i": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:corn_dog",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bowl",
+				"count": 1
+			}
+		]
+	}
+}

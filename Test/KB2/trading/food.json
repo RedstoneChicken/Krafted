@@ -1,0 +1,331 @@
+{
+ "tiers": [
+  {
+   "groups": [
+    {
+     "num_to_select": 5,
+     "trades": [
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "kna:caramels",
+         "quantity": 2
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:iron_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "kna:melted_chocolate",
+         "quantity": 5
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:diamond"
+        }
+       ]
+      },
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "kna:candy",
+         "quantity": 2
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:coal"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "kna:golden_chocolate",
+         "quantity": 1
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:diamond"
+        }
+       ]
+      },
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "minecraft:cooked_fish",
+         "quantity": 6
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:gold_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "minecraft:melon",
+         "quantity": 4
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:iron_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:cookie",
+         "quantity": 5
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:gold_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "minecraft:beetroot",
+         "quantity": 6
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:iron_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 3,
+       "wants": [
+        {
+         "item": "minecraft:dried_kelp",
+         "quantity": 10
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:gold_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:spider_eye",
+         "quantity": 2
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:iron_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:golden_carrot",
+         "quantity": 1
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:copper_ingot"
+        }
+       ]
+      },
+      {
+       "max_uses": 2,
+       "wants": [
+        {
+         "item": "minecraft:apple",
+         "quantity": 1
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:stone"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:wheat",
+         "quantity": 40
+        }
+       ],
+       "gives": [
+        {
+         "item": "minecraft:diamond"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num_to_select": 4,
+     "trades": [
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:apple",
+         "quantity": 10
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:common_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:beef",
+         "quantity": 16
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:common_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:sweet_berries",
+         "quantity": 25
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:common_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:baked_potato",
+         "quantity": 16
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:rare_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:carrot",
+         "quantity": 32
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:rare_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:cooked_chicken",
+         "quantity": 12
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:common_crate"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "num_to_select": 1,
+     "trades": [
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:golden_apple",
+         "quantity": 3
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:epic_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:honeycomb",
+         "quantity": 8
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:epic_crate"
+        }
+       ]
+      },
+      {
+       "max_uses": 1,
+       "wants": [
+        {
+         "item": "minecraft:emerald_block",
+         "quantity": 6
+        }
+       ],
+       "gives": [
+        {
+         "item": "kna:epic_crate"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}     

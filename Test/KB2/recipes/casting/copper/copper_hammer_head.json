@@ -1,0 +1,39 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:copper_hammer_head"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:hammer_head_cast"
+			},
+			"~": {
+				"item": "strat:molten_copper_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:copper_hammer_head",
+				"count": 1
+			},
+			{
+				"item": "strat:hammer_head_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 8
+			}
+		]
+	}
+}

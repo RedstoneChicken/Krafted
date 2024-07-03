@@ -1,0 +1,45 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_glass_from_tinted_glass"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V",
+			" V",
+			"VV"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:tinted_glass"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_glass_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_glass_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_glass_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_glass_bucket",
+				"count": 1
+			}
+		],
+		"priority": 4
+	}
+}

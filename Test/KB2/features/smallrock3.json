@@ -1,0 +1,25 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "rns:smallrock3"
+		},
+		"structure_name": "mystructure:smallrock3",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					{
+						"name": "minecraft:air"
+					},
+					{
+						"name": "minecraft:grass"
+					}
+				]
+			}
+		}
+	}
+}

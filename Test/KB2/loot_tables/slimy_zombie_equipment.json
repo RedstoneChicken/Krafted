@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "honkit26113:hardened_slimeball",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}

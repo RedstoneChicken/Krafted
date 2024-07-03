@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:fish_bones",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "fish_bones",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

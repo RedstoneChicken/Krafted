@@ -1,0 +1,34 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_shovel_head_rec_3"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:shovel_head_cast"
+			},
+			"~": {
+				"item": "minecraft:cobblestone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_shovel_head",
+				"count": 1
+			},
+			{
+				"item": "strat:shovel_head_cast",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,39 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:cheese_cake"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AOA",
+			"BEB",
+			"CCC"
+		],
+		"key": {
+			"A": {
+				"item": "strat:cheese"
+			},
+			"O": {
+				"item": "minecraft:sweet_berries"
+			},
+			"B": {
+				"item": "minecraft:sugar"
+			},
+			"C": {
+				"item": "minecraft:cookie"
+			},
+			"E": {
+				"item": "minecraft:egg"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:cheese_cake_item"
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:loom_from_crooked_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AA",
+            "BB"
+        ],
+        "key": {
+            "A": {
+                "item": "string"
+            },
+            "B": {
+                "item": "honkit26113:crooked_planks"
+            }
+        },
+        "result": {
+            "item": "loom",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

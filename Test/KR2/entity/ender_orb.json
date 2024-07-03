@@ -1,0 +1,25 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:ender_orb",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/ender_orb"
+			},
+			"geometry": {
+				"default": "geometry.ender_orb"
+			},
+			"spawn_egg": {
+				"base_color": "#DC16FF",
+				"overlay_color": "#DC16FF"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

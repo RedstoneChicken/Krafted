@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "azc:whale",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/whale"
+			},
+			"geometry" : {
+				"default" : "geometry.whale"
+			},
+			"animations" : {
+				"swim" : "animation.whale.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.salmon" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_whale",
+				"texture_index" : 0
+			}
+		}
+	}
+}

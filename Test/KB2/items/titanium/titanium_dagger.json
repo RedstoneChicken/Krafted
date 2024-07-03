@@ -1,0 +1,111 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:titanium_dagger",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:durability": {
+				"max_durability": 1095
+			},
+			"minecraft:display_name": {
+				"value": "Titanium Dagger"
+			},
+			"minecraft:icon": {
+				"texture": "titanium_dagger",
+				"frame": "query.texture_frame_index 2"
+			},
+			"minecraft:damage": 7,
+			"minecraft:mining_speed": 2,
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "sword"
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:titanium"
+						],
+						"repair_amount": "25"
+					}
+				]
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": false,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 12,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 12,
+						"on_dig": {
+							"event": "dmg"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "dmg"
+				}
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_not_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_hit_block": {
+					"event": "dmg"
+				}
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"condition": "query.is_sneaking",
+					"target": "self",
+					"event": "velo"
+				}
+			}
+		},
+		"events": {
+			"dmg": {
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				}
+			},
+			"velo": {
+				"sequence": [
+					{
+						"swing": {},
+						"damage": {
+							"type": "durability",
+							"amount": 25
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"duration": 60,
+							"target": "holder",
+							"amplifier": 0
+						}
+					}
+				]
+			}
+		}
+	}
+}

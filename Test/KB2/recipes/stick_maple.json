@@ -1,0 +1,28 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stick_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:stick",
+				"count": 4
+			}
+		],
+		"priority": 50
+	}
+}

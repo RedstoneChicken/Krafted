@@ -1,0 +1,47 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:poison_eye_dummy"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.poison_eye",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "poison_flower",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			}
+		},
+		"events": {}
+	}
+}

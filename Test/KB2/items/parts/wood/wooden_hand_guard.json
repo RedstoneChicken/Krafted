@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:wooden_hand_guard"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Wooden Hand Guard"
+			},
+			"minecraft:icon": {
+				"texture": "strat_wooden hand guard"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

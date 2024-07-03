@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "recipe:purpurite_ore_furnace"
+    },
+
+    
+    "tags": ["furnace"],
+    "input": "cav:purpurite_ore",
+    "output": "cav:purpurite"
+  }
+  
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:polished_voidstone_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:polished_voidstone"
+      }
+    },
+    "result": {
+      "item": "cav:polished_voidstone_slab",
+      "count": 6
+    }
+  }
+}

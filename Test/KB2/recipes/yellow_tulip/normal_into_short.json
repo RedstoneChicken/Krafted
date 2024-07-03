@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:normal_yellow_tulip_into_short_yellow_tulip"},"tags":["crafting_table"],"ingredients":[{"item":"ff:yellow_tulip_item","count":2}],"result":{"item":"ff:yellow_tulip_short_item"}}}

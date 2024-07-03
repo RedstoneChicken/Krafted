@@ -1,0 +1,140 @@
+{
+  "format_version": "1.19.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "azc:wooden_fish_trap",
+      "menu_category": {
+        "category": "items"
+      },
+      "properties": {
+        "azc:trap": [1, 2]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/wooden_fish_trap.json",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1
+      },
+      "minecraft:flammable": {
+        "destroy_chance_modifier": 20,
+        "catch_chance_modifier": 5
+      },
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "fish_trap_wooden",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3
+      },
+      "minecraft:on_player_placing": {
+        "event": "place"
+      }
+    },
+    "events": {
+      "place": {
+        "set_block_property": {
+          "azc:trap": 1
+        }
+      },
+      "bait": {
+        "sequence": [
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:minnow')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
+            },
+            "set_block_property": {
+              "azc:trap": 2
+            }
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:leech')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
+            },
+            "set_block_property": {
+              "azc:trap": 2
+            }
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:worm')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
+            },
+            "set_block_property": {
+              "azc:trap": 2
+            }
+          }
+        ]
+      },
+      "fish": {
+        "randomize": [
+          {
+            "weight": 95,
+            "condition": "query.block_neighbor_has_any_tag(1,0,0,'water') && query.block_neighbor_has_any_tag(-1,0,0,'water') && query.block_neighbor_has_any_tag(0,0,1,'water') && query.block_neighbor_has_any_tag(0,0,-1,'water')",
+            "run_command": {
+              "command": [
+                "particle minecraft:water_wake_particle ~~1~",
+                "playsound random.splash @a [r=10] ~~~ 0.5",
+                "summon azc:trap_loot ~ ~1 ~",
+                "kill @e [type=azc:trap_loot,c=1,r=1]"
+              ]
+            }
+          },
+          {
+            "weight": 5,
+            "run_command": {
+              "command": ["playsound random.break @a [r=10] ~~~ 0.5"]
+            },
+            "set_block_property": {
+              "azc:trap": 1
+            }
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('azc:trap') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "fish_trap",
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:on_interact": {
+            "event": "bait"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:trap') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "fish_trap_wooden",
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:queued_ticking": {
+            "looping": true,
+            "interval_range": [340, 500],
+            "on_tick": {
+              "event": "fish",
+              "target": "self"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

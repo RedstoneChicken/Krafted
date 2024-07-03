@@ -1,0 +1,17 @@
+{
+	"format_version": "1.13.0",
+
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "korbon:phreyium_mushroom_tree_s_feature_p"
+		},
+
+		"places_feature": "korbon:phreyium_mushroom_tree_s_feature",
+
+		"iterations": 1,
+
+		"x": -16,
+		"z": -16,
+		"y": 0
+	}
+}

@@ -1,0 +1,19 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:drinking_glass",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "drinking_glass"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

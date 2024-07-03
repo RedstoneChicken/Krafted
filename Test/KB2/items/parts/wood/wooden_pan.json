@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:wooden_pan"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Wooden Pan"
+			},
+			"minecraft:icon": {
+				"texture": "wooden_pan"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

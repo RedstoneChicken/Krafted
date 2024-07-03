@@ -1,0 +1,28 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:pepperoni_pizza"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:cheese_pizza",
+				"count": 1
+			},
+			{
+				"item": "strat:pepperoni",
+				"count": 3
+			}
+		],
+		"result": [
+			{
+				"item": "strat:pepperoni_pizza",
+				"count": 1
+			}
+		]
+	}
+}

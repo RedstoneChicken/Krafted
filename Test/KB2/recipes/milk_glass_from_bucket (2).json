@@ -1,0 +1,34 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:milk_glass_from_bucket"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~#"
+		],
+		"key": {
+			"#": {
+				"item": "strat:drinking_glass"
+			},
+			"~": {
+				"item": "minecraft:milk_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:milk_glass",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		],
+		"priority": 1
+	}
+}

@@ -1,0 +1,47 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:plate_leggings_copper_3",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "plate_leggings_copper"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 450,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"strat:cobalt_ingot"
+						],
+						"repair_amount": 100
+					}
+				]
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs",
+				"dispensable": true
+			},
+			"minecraft:armor": {
+				"protection": 5
+			},
+			"minecraft:display_name": {
+				"value": "Plate Leggings\n§6Copper Embellishment\n§4Speedy§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "commands"
+			}
+		},
+		"events": {}
+	}
+}

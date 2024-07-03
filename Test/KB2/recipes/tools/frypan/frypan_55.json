@@ -1,0 +1,31 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:frypan_55"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:ardite_pan"
+			},
+			"o": {
+				"item": "strat:ardite_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:frypan_55",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

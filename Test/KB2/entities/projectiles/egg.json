@@ -1,0 +1,222 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "kna:egg",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "villager":{
+        "minecraft:loot":{
+          "table": "loot_tables/egg/villager.json"
+        }
+      },
+      "piglin":{
+        "minecraft:loot":{
+          "table": "loot_tables/egg/piglin.json"
+        }
+      },
+      "creeper":{
+        "minecraft:loot":{
+          "table": "loot_tables/egg/creeper.json"
+        }
+      }
+    },
+    "components": {
+      "minecraft:timer":{
+        "looping": false,
+        "time": 0.05,
+        "time_down_event": {
+          "event": "kna:die",
+          "target": "self"
+        }
+      },
+      "minecraft:type_family":{
+        "family":["dummy"]
+      },
+      "minecraft:damage_sensor":{
+        "triggers":{
+          "cause":"all",
+          "deals_damage":false
+        }
+      }
+    },
+    "events": {
+      "kna:villager":{
+        "add": {
+          "component_groups": [
+            "villager"
+          ]
+        }
+      },
+      "kna:creeper":{
+        "add": {
+          "component_groups": [
+            "creeper"
+          ]
+        }
+      },
+      "kna:piglin":{
+        "add": {
+          "component_groups": [
+            "piglin"
+          ]
+        }
+      },
+      "kna:die": {
+        "run_command":{
+          "command":[
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+} }
+}},
+      "mansion":{
+        "minecraft:loot":{
+          "table": "loot_tables/maps/mansion.json"
+        }
+      },
+      "monument":{
+        "minecraft:loot":{
+          "table": "loot_tables/maps/monument.json"
+        }
+      },  
+      "mineshaft":{
+        "minecraft:loot":{
+          "table": "loot_tables/maps/mineshaft.json"
+        }
+      }
+    },
+    "components": {
+      "minecraft:timer":{
+        "looping": false,
+        "time": 0.05,
+        "time_down_event": {
+          "event": "knsm:die",
+          "target": "self"
+        }
+      },
+      "minecraft:type_family":{
+        "family":["dummy"]
+      },
+      "minecraft:damage_sensor":{
+        "triggers":{
+          "cause":"all",
+          "deals_damage":false
+        }
+      }
+    },
+    "events": {
+      "knsm:outpost":{
+        "add": {
+          "component_groups": [
+            "outpost"
+          ]
+        }
+      },
+      "knsm:temple":{
+        "add": {
+          "component_groups": [
+            "temple"
+          ]
+        }
+      },
+      "knsm:mineshaft":{
+        "add": {
+          "component_groups": [
+            "mineshaft"
+          ]
+        }
+      },
+      "knsm:bastion":{
+        "add": {
+          "component_groups": [
+            "bastion"
+          ]
+        }
+      },
+      "knsm:portal":{
+        "add": {
+          "component_groups": [
+            "portal"
+          ]
+        }
+      },
+     "knsm:endcity":{
+        "add": {
+          "component_groups": [
+            "endcity"
+          ]
+        }
+      },
+     "knsm:fortress":{
+        "add": {
+          "component_groups": [
+            "fortress"
+          ]
+        }
+      },
+      "knsm:buried_treasure":{
+        "add": {
+          "component_groups": [
+            "buried_treasure"
+          ]
+        }
+      },
+     "knsm:ruins":{
+        "add": {
+          "component_groups": [
+            "ruins"
+          ]
+        }
+      },
+      "knsm:shipwreck":{
+        "add": {
+          "component_groups": [
+            "shipwreck"
+          ]
+        }
+      },
+      "knsm:village":{
+        "add": {
+          "component_groups": [
+            "village"
+          ]
+        }
+      },
+      "knsm:stronghold":{
+        "add": {
+          "component_groups": [
+            "stronghold"
+          ]
+        }
+      },
+      "knsm:mansion":{
+        "add": {
+          "component_groups": [
+            "mansion"
+          ]
+        }
+      },
+      "knsm:monument":{
+        "add": {
+          "component_groups": [
+            "monument"
+          ]
+        }
+      },
+      "knsm:die": {
+        "run_command":{
+          "command":[
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_azc_piranha_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:iron_fillet_knife"
+      },
+      "B": {
+        "item": "azc:azc_piranha"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi"
+      },
+      {
+        "item": "azc:iron_fillet_knife"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:bejeweled_skipper",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/bejeweled_skipper"
+			},
+			"geometry": {
+				"default": "geometry.bejeweled_skipper"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.bejeweled_skipper.walk",
+				"idle": "animation.bejeweled_skipper.idle",
+				"move": "animation.bejeweled_skipper.walk"
+			},
+			"spawn_egg": {
+				"base_color": "#1B056D",
+				"overlay_color": "#6217D2"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,59 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:smelting_cobalt_broad_axe_head"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_broad_axe_head"
+			},
+			"~": {
+				"item": "minecraft:bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			}
+		]
+	}
+}

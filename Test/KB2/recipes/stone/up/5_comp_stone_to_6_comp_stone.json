@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:quintuple_compressed_stone_to_sextuple_compressed_stone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:quintuple_compressed_stone"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:sextuple_compressed_stone",
+				"count": 1
+			}
+		]
+	}
+}

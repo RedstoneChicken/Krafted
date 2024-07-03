@@ -1,0 +1,242 @@
+//bridge-file-version: #45
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:jukebox_extended",
+			"properties": {
+				"korbon:face": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "jukebox_extended",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:loot": "loot_tables/blocks/jukebox_extended.json",
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:map_color": "#00FF00",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:on_player_placing": {
+				"event": "korbon:place"
+			},
+			"minecraft:on_interact": {
+				"target": "self",
+				"event": "records"
+			},
+			"minecraft:geometry": "geometry.basic_block"
+		},
+		"events": {
+			"korbon:place": {
+				"set_block_property": {
+					"korbon:face": "(query.cardinal_player_facing)"
+				}
+			},
+			"record_mystical": {
+				"set_block": {
+					"block_type": "korbon:jukebox_extended_mystical"
+				},
+				"decrement_stack": {},
+				"run_command": {
+					"target": "self",
+					"command": [
+						"playsound record.mystical @a[r=25] ~~~ 0.3",
+						"title @a[r=10] actionbar §dNow playing: MysticSwe - Mystical"
+					]
+				}
+			},
+			"records": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name == 'record_mystical'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_mystical"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.mystical @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: MysticSwe - mystical"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_blue'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_blue"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.blue @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: TheChillVibesGuy - Blue"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_scopophobia'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_scopophobia"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.scopophobia @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: mango unit - scopophobia"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_enderwave'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_enderwave"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.enderwave @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: prod. akobel - Enderwave"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_raid'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_raid"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.raid @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: Someone - Raid"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_anti'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_anti"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.anti @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: Firch - anti"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_carrot'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_carrot"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.carrot @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: CarrotAndCo - carrot"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_repeat'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_repeat"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.repeat @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: iKorbon - repeat"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_blaze'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_blaze"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.blaze @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: mango unit - blaze"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name == 'record_weird_realm'",
+						"set_block": {
+							"block_type": "korbon:jukebox_extended_weird_realm"
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"target": "self",
+							"command": [
+								"playsound record.weird_realm @a[r=25] ~~~ 0.3",
+								"title @a[r=10] actionbar §dNow playing: ToastDot.39 - weird realm"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:face') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.18.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ff:wither_rose_valley_feature_rule",
+      "places_feature": "ff:wither_rose/wither_rose_snap_to_surface"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "test": "has_biome_tag",
+          "value": "soulsand_valley"
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 90,
+      "scatter_chance": {
+        "numerator": 1,
+        "denominator": 5
+      },
+      "x": {
+        "distribution": "uniform",
+        "extent": [-8, 8]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [0, 127]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [-8, 8]
+      }
+    }
+  }
+}

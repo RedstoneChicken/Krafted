@@ -1,0 +1,29 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:excavator_65_repair"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"ingredients": [
+			{
+				"item": "strat:excavator_65",
+				"count": 1
+			},
+			{
+				"item": "minecraft:copper_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:excavator_65",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

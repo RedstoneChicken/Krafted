@@ -1,0 +1,38 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "caf:naga",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/naga"
+			},
+			"geometry": {
+				"default": "geometry.naga"
+			},
+			"animations": {
+				"static": "animation.naga.static"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"static": "query.is_standing"
+					},
+					{
+						"static": "query.modified_move_speed"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.naga"
+			],
+			"spawn_egg": {
+				"base_color": "#F8F7E8",
+				"overlay_color": "#2A2D30"
+			}
+		}
+	}
+}

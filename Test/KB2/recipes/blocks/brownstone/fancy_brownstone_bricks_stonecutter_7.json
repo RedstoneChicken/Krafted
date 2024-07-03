@@ -1,0 +1,24 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:fancy_brownstone_bricks_stonecutter_7"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "strat:brownstone_tiles",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:fancy_brownstone_bricks",
+				"count": 1
+			}
+		]
+	}
+}

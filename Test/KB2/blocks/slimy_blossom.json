@@ -1,0 +1,77 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:slimy_blossom",
+      "category": "none"
+    },
+    "components": {
+        "minecraft:creative_category": {
+            "group": "itemGroup.name.none",
+            "category": "none"
+        },
+    	"minecraft:destroy_time": 0.1,
+        "minecraft:block_light_emission": 0.25,
+        "minecraft:block_light_absorption": 0.0,
+        "minecraft:loot": "loot_tables/slimy_blossom.json",
+        "minecraft:pick_collision": {
+            "origin":  [-8, 0, -8],
+            "size":    [16, 5, 16]
+        },
+        "minecraft:entity_collision": {
+            "origin":  [-8, 0, -8],
+            "size":    [16, 1, 16]
+        },
+        "minecraft:on_step_on": {
+        	"event": "honkit26113:on_step_on"
+        },
+      	"minecraft:on_player_destroyed": {
+        	"condition": "query.get_equipped_item_name('main_hand') == 'shears'",
+        	"event": "honkit26113:broken"
+      	},
+        "minecraft:geometry": "geometry.slimy_blossom",
+        "minecraft:placement_filter": {
+            "conditions": [
+                {
+                    "block_filter": [ 
+                    	"minecraft:podzol",
+                    	"minecraft:dirt",
+                    	"minecraft:mycelium",
+                    	"minecraft:grass",
+                    	"minecraft:dirt",
+                    	"minecraft:dirt_with_roots",
+                    	"minecraft:deepslate",
+                    	"minecraft:stone",
+                        "minecraft:slime",
+                    	"honkit26113:slimy_stone",
+                        "honkit26113:slimy_deepslate" 
+                    ],
+                    "allowed_faces": [ "up" ]
+                }
+            ]
+        },
+      	"minecraft:material_instances" : {
+        	"*": {
+          		"texture": "slimy_blossom",
+          		"render_method": "alpha_test"
+        	}
+      	}
+    },
+    "events": {
+    	"honkit26113:on_step_on": {
+    		"add_mob_effect": {
+    			"amplifier": 0,
+    			"duration": 5.0,
+    			"effect": "poison",
+    			"target": "self"
+    		}
+    	},
+      	"honkit26113:broken": {
+        	"spawn_loot": {
+          		"table": "loot_tables/slimy_blossom.json"
+        	}
+      	}
+    }
+  }
+}

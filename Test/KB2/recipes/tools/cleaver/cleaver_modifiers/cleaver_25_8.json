@@ -1,0 +1,32 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:cleaver_25_8"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:cleaver_25_2",
+				"count": 1
+			},
+			{
+				"item": "minecraft:obsidian",
+				"count": 1
+			},
+			{
+				"item": "minecraft:ender_pearl",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:cleaver_25_8",
+				"count": 1
+			}
+		]
+	}
+}

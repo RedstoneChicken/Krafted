@@ -1,0 +1,1 @@
+give @s incubation:fried_egg

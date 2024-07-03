@@ -1,0 +1,33 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:sword_blade_cast_5"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:molten_gold_bucket"
+			},
+			"~": {
+				"item": "strat:copper_sword_blade"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:sword_blade_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,272 @@
+//*/next update/{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:mining_cart",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "mining_cart"
+			},
+			"minecraft:display_name": {
+			 "value": "§1Discord Mining"
+			},
+			"minecraft:cooldown": {
+				"category": "mining_cart",
+				"duration": 60
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "mine",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "mine": {						
+       "randomize": [
+						 {
+							"weight": 75,
+							"run_command": {
+								"command": [
+							 	 "give @s cobblestone 5",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and got only 5 cobblestones.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 30,
+							"run_command": {
+								"command": [
+							 	 "give @s andesite 8",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found some andesites.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 30,
+							"run_command": {
+								"command": [
+							 	 "give @s granite 8",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found some granite.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 30,
+							"run_command": {
+								"command": [
+							 	 "give @s andesite 8",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found some diorite. Trash.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+		 			 {
+							"weight": 25,
+							"run_command": {
+								"command": [
+							 	 "give @s gravel 5",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and got some gravels.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+							 	 "give @s deepslate_cobblestone 10",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and went really deep and found some deepslate cobblestone.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+							 	 "give @s pointed_dripstone 8",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and got some spiky dripstones.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 15,
+							"run_command": {
+								"command": [
+							 	 "give @s coal 16",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found a vein of coal.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+       {
+							"weight": 10,
+							"run_command": {
+								"command": [
+							 	 "give @s raw_iron 8",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and got a few iron.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 						 {
+							"weight": 6,
+							"run_command": {
+								"command": [
+							 	 "give @s raw_gold 6",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found a small vein of gold.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 			 {
+							"weight": 6,
+							"run_command": {
+								"command": [
+							 	 "give @s raw_copper 5",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found copper.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 			 {
+							"weight": 6,
+							"run_command": {
+								"command": [
+							 	 "give @s raw_gold 12",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and got redstone\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 			 {
+							"weight": 4,
+							"run_command": {
+								"command": [
+							 	 "give @s lapis_lazuli 9",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found a vein of lapis lazuli. Enchanted...\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 			 {
+							"weight": 6,
+							"run_command": {
+								"command": [
+							 	 "give @s diamond 4",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went mining underground and found diamonds!!.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Mine again in 60 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 }
+				]
+    }
+    }
+  }
+}			 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+											"give @s bone 3",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back some bone\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+											"give @s golden_apple",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back an apple, not just a normal aplle but a golden one.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 }
+				]
+    }
+    }
+  }
+}	
+ommand": {
+								"command": [
+											"give @s name_tag",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back  a name tag. Cool!\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+											"give @s saddle",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back  a saddle for your horse.Or maybe a pig.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+											"give @s nautilus_shell",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went hunting in the woods and brought back  a shell\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Hunt again in 40 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 }
+				]
+    }
+    }
+  }
+}}
+}  }
+}  }
+  }
+}}
+}  }
+}}
+  }
+}}
+}  }
+}}
+}}}
+}}
+}}

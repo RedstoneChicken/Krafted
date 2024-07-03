@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "cav:ruby_ore_furnace"
+    },
+
+    
+    "tags": ["furnace","blast_furnace"],
+    "input": "cav:ruby_ore",
+    "output": "cav:ruby"
+  }
+  
+}

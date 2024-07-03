@@ -1,0 +1,41 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:light_b"
+		},
+		"components": {
+			"minecraft:explosion_resistance": 999,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_emission": 0.8,
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": false,
+			"minecraft:unwalkable": false,
+			"minecraft:destroy_time": 1,
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0.3,
+					0.3
+				],
+				"on_tick": {
+					"event": "light",
+					"target": "self"
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "light_b",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"events": {
+			"light": {
+				"run_command": {
+					"command": "setblock ~ ~ ~ air 0"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "cav:end_lamp",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "items"
+      },
+      "minecraft:destroy_time": 0.2,
+      "minecraft:explosion_resistance": 30,
+      "minecraft:block_light_absorption": 15,
+      "minecraft:map_color": "#F1F1F1",
+      "minecraft:block_light_emission": 1,
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      }
+    }
+  }
+}

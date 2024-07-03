@@ -1,0 +1,15 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "minecraft:tiny_rockmesa_mcstructure"
+        },
+        "structure_name": "mystructure:tiny_rockmesa",
+        "adjustment_radius": 8,
+        "facing_direction": "random",
+        "constraints": {
+            "grounded": {}
+        }
+    }
+}
+// Exported from software by MACHINE_BUILDER on YouTube. Check out this video for more information : https://www.youtube.com/watch?v=vcLibdIq7To <- download link in description

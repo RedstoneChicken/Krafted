@@ -1,0 +1,14 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "nether:marouge_vine_placement_feature"
+		},
+		"features": [
+			"nether:marouge_vine_condition_feature",
+			"nether:marouge_vine_scatter"
+		],
+		"early_out": "first_failure"
+	}
+}

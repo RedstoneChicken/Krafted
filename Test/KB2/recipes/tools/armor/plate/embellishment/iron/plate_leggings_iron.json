@@ -1,0 +1,29 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:plate_leggings_iron"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:plate_leggings",
+				"count": 1
+			},
+			{
+				"item": "minecraft:iron_ingot",
+				"count": 3
+			}
+		],
+		"result": [
+			{
+				"item": "strat:plate_leggings_iron",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

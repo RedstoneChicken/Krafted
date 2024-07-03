@@ -1,0 +1,12 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:void_turf_feature"
+		},
+		"places_block": "korbon:void_turf",
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false
+	}
+}

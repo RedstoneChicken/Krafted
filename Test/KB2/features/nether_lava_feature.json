@@ -1,0 +1,53 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "honkit26113:nether_lava_feature"
+    },
+    "places_block": "minecraft:lava",
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": true,
+    "may_replace": [
+      "minecraft:air",
+      "minecraft:water",
+      "minecraft:flowing_water",
+      "minecraft:flowing_lava",
+      "minecraft:fire",
+      "minecraft:soul_fire",
+      "minecraft:red_mushroom",
+      "minecraft:brown_mushroom",
+      "honkit26113:crooked_fungus",
+      "honkit26113:crooked_roots"
+    ],
+    "may_attach_to": {
+      "min_sides_must_attach": 1,
+      "bottom": [
+        "honkit26113:crooked_nylium",
+        "honkit26113:crooked_stem",
+        "honkit26113:crooked_wart_block",
+        "honkit26113:soul_magma",
+        "minecraft:bedrock",
+        "minecraft:lava",
+        "minecraft:netherrack",
+        "minecraft:gravel",
+        "minecraft:blackstone",
+        "minecraft:magma"
+      ]
+    }
+  }
+}
+
+/*{
+  "format_version": "1.13.0",
+  "minecraft:sequence_feature": {
+    "description": {
+      "identifier": "honkit26113:nether_lava_feature"
+    },
+    "features": [
+      //"honkit26113:nether_lava_single_feature",
+      //"honkit26113:nether_lava_single_replace_vegetation_feature",
+      "honkit26113:nether_lava_single_feature"
+    ]
+  }
+}

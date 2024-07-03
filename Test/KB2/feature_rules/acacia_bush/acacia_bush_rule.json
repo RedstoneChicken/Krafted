@@ -1,0 +1,33 @@
+{
+  "format_version": "1.13.0",
+
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ff:acacia_bush_rule",
+      "places_feature": "ff:acacia_bush/acacia_bush_feature"
+    },
+
+    "conditions": {
+      "placement_pass": "underground_pass",
+
+      "minecraft:biome_filter": {
+        "test": "has_biome_tag",
+        "value": "savanna"
+      }
+    },
+
+    "distribution": {
+      "iterations": 1,
+
+      "x": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+      "y": "q.heightmap(v.worldx, v.worldz)"
+    }
+  }
+}

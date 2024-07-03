@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_blue_dragon_rose_into_tall_blue_dragon_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:blue_dragon_rose_large_item"}],"result":{"item":"ff:blue_dragon_rose_tall_item","count":2}}}

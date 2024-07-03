@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "driftwood_to_oak_planks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "azc:driftwood"
+      }
+    ],
+    "result": {
+      "item": "minecraft:planks",
+      "count": 4,
+      "data": 0
+    }
+  }
+}

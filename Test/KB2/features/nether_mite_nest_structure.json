@@ -1,0 +1,27 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "nether:nether_mite_nest_structure"
+		},
+		"structure_name": "nether:nether_mite_nest",
+		"adjustment_radius": 2,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:basalt",
+					"minecraft:blackstone",
+					"minecraft:netherrack",
+					"minecraft:polished_basalt",
+					"minecraft:air",
+					"minecraft:magma",
+					"minecraft:lava"
+				]
+			}
+		}
+	}
+}

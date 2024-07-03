@@ -1,0 +1,37 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:corrupted_block"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_emission": 0.9,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:on_step_on": {
+				"event": "step_on",
+				"target": "other"
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			}
+		},
+		"events": {
+			"step_on": {
+				"add_mob_effect": {
+					"effect": "wither",
+					"target": "other",
+					"duration": 2,
+					"amplifier": 0
+				}
+			}
+		}
+	}
+}

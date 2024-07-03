@@ -1,0 +1,26 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:greenheart_sapling_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "greenheart_sapling"
+			},
+			"minecraft:display_name": {
+				"value": "Greenheart Sapling"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:greenheart_sapling",
+				"use_block_description": true
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sapling"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #18
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:chicken_slices"
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:chicken_wing",
+					"weight": 1
+				},
+				{
+					"type": "empty",
+					"weight": 3
+				}
+			]
+		}
+	]
+}

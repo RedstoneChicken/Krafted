@@ -1,0 +1,28 @@
+//bridge-file-version: #5
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "korbon:banana_tree_sapling"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"X",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:sapling",
+				"data": 3
+			},
+			"X": {
+				"item": "korbon:banana_seeds"
+			}
+		},
+		"result": {
+			"item": "korbon:banana_sapling_item"
+		}
+	}
+}

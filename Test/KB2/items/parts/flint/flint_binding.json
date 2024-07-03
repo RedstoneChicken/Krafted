@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:flint_binding"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Flint Binding"
+			},
+			"minecraft:icon": {
+				"texture": "strat_flint binding"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

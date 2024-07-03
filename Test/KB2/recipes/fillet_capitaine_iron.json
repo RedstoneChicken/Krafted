@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_capitaine_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:iron_fillet_knife"
+      },
+      "B": {
+        "item": "azc:capitaine"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 10
+      },
+      {
+        "item": "azc:iron_fillet_knife"
+      }
+    ]
+  }
+}

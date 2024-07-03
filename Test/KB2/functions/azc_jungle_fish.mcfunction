@@ -1,0 +1,12 @@
+give @s azc:azc_piranha
+give @s azc:tambaqui
+give @s azc:electric_eel
+give @s azc:arapaima
+give @s azc:arrau_turtle
+give @s azc:starshell_turtle
+give @s azc:temperate_frog
+give @s azc:cold_frog
+give @s azc:warm_frog
+give @s azc:box_turtle
+give @s azc:red_shrooma
+give @s azc:brown_shrooma

@@ -1,0 +1,114 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_wood",
+			"properties": {
+				"minecraft:direction": {}
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:unit_cube": {},
+			"minecraft:on_player_placing": {
+				"event": "minecraft:direction",
+				"target": "self"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_log",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#411806",
+			"minecraft:on_interact": {
+				"event": "cwt:stripped",
+				"target": "self",
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')"
+			},
+			"tag:wood": {},
+			"minecraft:flammable": {
+				"burn_odds": 30,
+				"flame_odds": 30
+			},
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.wood",
+				"category": "nature"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('minecraft:direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('minecraft:direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						90
+					]
+				}
+			}
+		],
+		"events": {
+			"minecraft:direction": {
+				"set_block_property": {
+					"minecraft:direction": "math.floor( query.block_face / 2.0 )"
+				}
+			},
+			"cwt:stripped": {
+				"sequence": [
+					{
+						"condition": "query.block_property('minecraft:direction') == 0",
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ korbon:stripped_chorus_wood[\"direction\":0]"
+							]
+						},
+						"damage": {
+							"type": "durability",
+							"target": "item",
+							"amount": 1
+						}
+					},
+					{
+						"condition": "query.block_property('minecraft:direction') == 1",
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ korbon:stripped_chorus_wood[\"direction\":1]"
+							]
+						},
+						"damage": {
+							"type": "durability",
+							"target": "item",
+							"amount": 1
+						}
+					},
+					{
+						"condition": "query.block_property('minecraft:direction') == 2",
+						"run_command": {
+							"command": [
+								"setblock ~ ~ ~ korbon:stripped_chorus_wood[\"direction\":2]"
+							]
+						},
+						"damage": {
+							"type": "durability",
+							"target": "item",
+							"amount": 1
+						}
+					}
+				]
+			}
+		}
+	}
+}

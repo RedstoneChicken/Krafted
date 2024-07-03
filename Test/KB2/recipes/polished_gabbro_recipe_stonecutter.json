@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cav:polished_gabbro_recipe_stonecutter"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:gabbro"
+      }
+    ],
+    "result": {
+      "item": "cav:polished_gabbro",
+      "count": 1
+    }
+  }
+  
+}

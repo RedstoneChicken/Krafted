@@ -1,0 +1,26 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:turf_endstone"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "turf_endstone",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:map_color": "#E3DF9D",
+			"minecraft:explosion_resistance": 1.2,
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.construction",
+				"category": "construction"
+			}
+		},
+		"events": {}
+	}
+}

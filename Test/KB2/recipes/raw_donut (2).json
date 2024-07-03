@@ -1,0 +1,28 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:raw_donut"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" #",
+			"# #",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "strat:dough"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:raw_donut",
+				"count": 2
+			}
+		]
+	}
+}

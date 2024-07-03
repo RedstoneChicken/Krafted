@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:sugar"
+		},
+		"tags": [
+			"mortar_and_pestle"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:reeds"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:sugar",
+				"count": 2
+			}
+		]
+	}
+}

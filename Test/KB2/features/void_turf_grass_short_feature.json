@@ -1,0 +1,26 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:void_turf_grass_short_feature"
+		},
+		"places_block": "korbon:void_turf_grass_short",
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_attach_to": {
+			"bottom": [
+				"korbon:phreyium",
+				"korbon:phreyium_stone",
+				"korbon:phreyium_block",
+				"korbon:void_turf",
+				"korbon:void_turf_stone",
+				"korbon:velvium",
+				"korbon:verdanite_velvium"
+			]
+		}
+	}
+}

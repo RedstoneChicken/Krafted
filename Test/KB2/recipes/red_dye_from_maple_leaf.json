@@ -1,0 +1,24 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:red_dye_from_maple_leaf"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"group": "red_dye",
+		"ingredients": [
+			{
+				"item": "strat:maple_leaf",
+				"count": 1
+			}
+		],
+		"result": {
+			"item": "minecraft:dye",
+			"data": 1,
+			"count": 1
+		}
+	}
+}

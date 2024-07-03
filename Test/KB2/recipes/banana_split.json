@@ -1,0 +1,40 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:banana_split"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:banana",
+				"count": 1
+			},
+			{
+				"item": "strat:chocolate_bar",
+				"count": 1
+			},
+			{
+				"item": "minecraft:sweet_berries",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bowl",
+				"count": 1
+			},
+			{
+				"item": "strat:ice_cream",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:banana_split",
+				"count": 1
+			}
+		]
+	}
+}

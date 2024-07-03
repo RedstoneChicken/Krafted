@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:purpur_block"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "FF",
+      "FF"
+    ],
+    "key": {
+      "F": {
+        "item": "cav:purpurite"
+      }
+    },
+    "result": {
+      "item": "cav:purpurite_block",
+      "count": 4
+    }
+  }
+}

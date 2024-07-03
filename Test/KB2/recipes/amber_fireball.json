@@ -1,0 +1,30 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:amber_fireball"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"GGG",
+			"GNG",
+			"GGG"
+		],
+		"key": {
+			"G": {
+				"item": "nether:amber_chunk"
+			},
+			"N": {
+				"item": "minecraft:fireball"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:amber_fireball_item"
+			}
+		]
+	}
+}

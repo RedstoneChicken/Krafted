@@ -1,0 +1,17 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "caf:magma_flower_stage03_feature"
+		},
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": true,
+		"places_block": "caf:magmaflowerstage03",
+		"may_attach_to": {
+			"bottom": [
+				"minecraft:magma"
+			]
+		}
+	}
+}

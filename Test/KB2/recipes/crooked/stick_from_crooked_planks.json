@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:stick_from_crooked_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "A",
+            "A"
+        ],
+        "key": {
+            "A": {
+                "item": "honkit26113:crooked_planks"
+            }
+        },
+        "result": {
+            "item": "stick",
+            "count": 4
+        },
+        "priority": 2
+    }
+}

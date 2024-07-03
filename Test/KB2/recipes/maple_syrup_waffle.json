@@ -1,0 +1,33 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:maple_syrup_waffle"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:waffle"
+			},
+			"~": {
+				"item": "strat:maple_syrup"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:maple_syrup_waffle",
+				"count": 1
+			},
+			{
+				"item": "strat:glass_jar",
+				"count": 1
+			}
+		]
+	}
+}

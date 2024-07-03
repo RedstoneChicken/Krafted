@@ -1,0 +1,30 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:ori_blossom_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:ori_blossom",
+				"use_block_description": true,
+				"use_on": [
+					"minecraft:water"
+				]
+			},
+			"minecraft:icon": {
+				"texture": "ori_blossom_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:ori_blossom_item.name"
+			}
+		},
+		"events": {}
+	}
+}

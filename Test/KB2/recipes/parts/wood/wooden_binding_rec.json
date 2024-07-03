@@ -1,0 +1,33 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:wooden_binding_rec"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:tool_binding_pattern"
+			},
+			"~": {
+				"item": "minecraft:planks"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:wooden_binding",
+				"count": 1
+			},
+			{
+				"item": "strat:tool_binding_pattern",
+				"count": 1
+			}
+		]
+	}
+}

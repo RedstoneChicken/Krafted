@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:dye_from_purple_orchid"},"tags":["crafting_table"],"ingredients":[{"item":"ff:purple_orchid_item"}],"result":{"item":"minecraft:dye","data":5}}}

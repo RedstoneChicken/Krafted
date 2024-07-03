@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_lavender_into_tall_lavender"},"tags":["crafting_table"],"ingredients":[{"item":"ff:lavender_item","count":2}],"result":{"item":"ff:lavender_tall_item"}}}

@@ -1,0 +1,33 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:wildfire",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/wildfire"
+			},
+			"geometry": {
+				"default": "geometry.wildfire"
+			},
+			"scripts": {
+				"animate": [
+					"idle"
+				]
+			},
+			"animations": {
+				"idle": "animation.wildfire.idle"
+			},
+			"spawn_egg": {
+				"base_color": "#582C04",
+				"overlay_color": "#FF8800"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

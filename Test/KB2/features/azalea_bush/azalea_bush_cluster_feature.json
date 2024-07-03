@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:scatter_feature": {
+        "description": {
+            "identifier": "ff:azalea_bush/azalea_bush_cluster_feature"
+        },
+        "places_feature": "ff:azalea_bush/azalea_bush_flower_feature",
+        "iterations": 100,
+        "scatter_chance": 21,
+        "x": {
+            "distribution": "uniform",
+            "extent": [
+                -5,
+                5
+            ]
+        },
+        "y": 0,
+        "z": {
+            "distribution": "uniform",
+            "extent": [
+                -5,
+                5
+            ]
+        }
+    }
+}

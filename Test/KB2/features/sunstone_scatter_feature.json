@@ -1,0 +1,32 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "nether:sunstone_scatter_feature"
+		},
+		"places_feature": "nether:sunstone_weighted_feature",
+		"iterations": "math.random_integer(20,25)",
+		"x": {
+			"extent": [
+				0,
+				8
+			],
+			"distribution": "gaussian"
+		},
+		"z": {
+			"extent": [
+				0,
+				8
+			],
+			"distribution": "gaussian"
+		},
+		"y": {
+			"extent": [
+				30,
+				85
+			],
+			"distribution": "gaussian"
+		}
+	}
+}

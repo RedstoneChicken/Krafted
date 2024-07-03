@@ -1,0 +1,269 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:fishing_net",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "fishing_net"
+			},
+			"minecraft:display_name": {
+			 "value":  "Fishing Net\n§8Common\n§7Cooldown: 25\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "fishing_net",
+				"duration": 25
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "fish",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "fish": {						
+       "randomize": [
+						 {
+							"weight": 60,
+							"run_command": {
+								"command": [
+									"playsound random.levelup @p",
+									"give @s fish",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a fish\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 25,
+							"run_command": {
+								"command": [
+					     	"playsound random.levelup @p",
+										"give @s salmon",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a big salmon\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 13,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+									"give @s pufferfish",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a pufferfish!!\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+										"give @s clownfish",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a clownfish!!  A NEMO !!\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 45,
+							"run_command": {
+								"command": [
+										"playsound random.hurt @p",
+							 	 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got nothing.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s leather_boots",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself an old boots floating in the river\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+			 		 {
+							"weight": 10,
+							"run_command": {
+								"command": [	
+									"playsound random.levelup @p",
+											"give @s leather",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a wet leather\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s bone",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a bone, bone from what?\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s potion",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a bottle of water. Not safe, dont drink it\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s string",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a string\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+		 				"weight": 8,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s fishing_rod",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a fishing rod. Someone must have lost it.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 8,
+							"run_command": {
+								"command": [
+											"give @s stick",
+												"playsound random.levelup @p",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a stick...\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+		 			 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"playsound random.levelup @p",
+											"give @s bowl",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a wooden bowl\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+		 			 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+									"playsound random.levelup @p",
+											"give @s tripwire_hook",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a tripwire hook. Trash!\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 10,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s rotten_flesh",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a zombie's rotten flesh.Ew!!\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s waterlily",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a lily pad\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s name_tag",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a name tag. Cool!\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [
+										"playsound random.levelup @p",
+											"give @s saddle",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a saddle for your horse.Or maybe a pig.\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 5,
+							"run_command": {
+								"command": [	
+									"playsound random.levelup @p",
+											"give @s nautilus_shell",
+								 "tellraw @s {\"rawtext\":[{\"text\":\"§6You went fishing and you got yourself a shell\"}]}",
+								  "tellraw @s {\"rawtext\":[{\"text\":\"§3Fish again in 25 seconds...\"}]}"
+								],
+								"target": "self"
+							}
+						 }
+				]
+    }
+    }
+  }
+}

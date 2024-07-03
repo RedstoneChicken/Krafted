@@ -1,0 +1,44 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.16.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "korbon:hanging_chorus_leaves_feature_rule",
+			"places_feature": "korbon:hanging_chorus_leaves_scatter_feature"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "the_end"
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 90,
+			"x": {
+				"extent": [
+					-8,
+					8
+				],
+				"distribution": "uniform"
+			},
+			"z": {
+				"extent": [
+					-8,
+					8
+				],
+				"distribution": "uniform"
+			},
+			"y": {
+				"extent": [
+					40,
+					70
+				],
+				"distribution": "uniform"
+			}
+		}
+	}
+}

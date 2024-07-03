@@ -1,0 +1,103 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:soul_magma",
+            "register_to_creative_menu": true,
+            "properties": {
+                "honkit26113:damage": [0, 1]
+            }
+        },
+        "components": {
+            "tag:honkit26113_dig_with_pickaxe": {},
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.nature",
+                "category": "nature"
+            },
+            "minecraft:map_color": "#46EFF4",
+            "minecraft:destroy_time": 2,
+            "minecraft:block_light_emission": 0.2,
+            "minecraft:block_light_absorption": 15,
+            "minecraft:friction": 0.3,
+            "minecraft:flammable": {
+                "flame_odds": 0,
+                "burn_odds": 0
+            },
+            "minecraft:pick_collision": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            },
+            "minecraft:entity_collision": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            },
+            "minecraft:on_step_on": {
+                "event": "honkit26113:on_step_on"
+            },
+            "minecraft:on_fall_on": {
+                "event": "honkit26113:on_step_on"
+            },
+            "minecraft:on_step_off": {
+                "event": "honkit26113:on_step_off"
+            }
+        },
+        "events": {
+        	"honkit26113:on_step_on": {
+                "sequence": [
+                    {
+                        "set_block_property": {
+                            "honkit26113:damage": "1"
+                        }
+                    },
+                    {
+                        "condition": "query.is_sneaking == 0",
+                        "run_command": {
+                            "command": "effect @e[r=1,family=!undead] wither 1 3 true"
+                        }
+                    },
+                    {
+                        "condition": "query.is_sneaking == 1" // do nothing
+                    }
+                ]
+            },
+        	"honkit26113:on_step_off": {
+                "set_block_property": {
+                	"honkit26113:damage": "0"
+                }
+            },
+            "honkit26113:take_damage": {
+                "sequence": [
+                    {
+                        "condition": "query.is_sneaking == 1" // do nothing
+                    },
+                    {
+                        "condition": "query.is_sneaking == 0",
+                        "run_command": {
+                            "command": "effect @e[r=1] wither 1 3 true"
+                        }
+                    }
+                ]
+            }
+        },
+        "permutations": [
+        	{
+                "condition": "query.block_property('honkit26113:damage') == 0",
+                "components": {
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:damage') == 1",
+                "components": {
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 2.0, 2.0 ],
+            			"on_tick": {
+                			"event": "honkit26113:take_damage"
+            			}
+        			}
+                }
+            }
+        ]
+    }
+}

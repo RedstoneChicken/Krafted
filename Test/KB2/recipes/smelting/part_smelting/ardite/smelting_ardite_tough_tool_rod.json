@@ -1,0 +1,38 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:smelting_ardite_tough_tool_rod"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#~",
+			"~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:ardite_tough_tool_rod"
+			},
+			"~": {
+				"item": "minecraft:bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_ardite_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_ardite_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_ardite_bucket",
+				"count": 1
+			}
+		]
+	}
+}

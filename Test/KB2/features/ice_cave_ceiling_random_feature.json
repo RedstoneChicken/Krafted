@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:ice_cave_ceiling_random_feature"
+    },
+    "features": [
+      [ "honkit26113:blue_ice_ceiling_patch_feature", 95 ],
+      [ "honkit26113:crystallized_ice_ceiling_patch_feature", 5 ]
+    ]
+  }
+}

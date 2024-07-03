@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "red_shrooma_to_red_mushroom"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "azc:red_shrooma"
+      }
+    ],
+    "result": {
+      "item": "minecraft:red_mushroom",
+      "count": 5
+    }
+  }
+}

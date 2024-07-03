@@ -1,0 +1,41 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:black_apple4"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "blackapplestage4"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:geometry": "geometry.blackapple",
+			"minecraft:on_interact": {
+				"event": "caf:crop_collect"
+			}
+		},
+		"events": {
+			"caf:crop_collect": {
+				"set_block_at_pos": {
+					"block_type": "caf:black_apple3",
+					"block_offset": [
+						0,
+						0,
+						0
+					]
+				},
+				"run_command": {
+					"command": [
+						"give @p caf:black_apple"
+					]
+				}
+			}
+		}
+	}
+}

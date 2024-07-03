@@ -1,0 +1,25 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:heart_of_ender",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/heart_of_ender"
+			},
+			"geometry": {
+				"default": "geometry.heart_of_ender"
+			},
+			"spawn_egg": {
+				"base_color": "#0F0F0F",
+				"overlay_color": "#EE00FF"
+			},
+			"render_controllers": [
+				"controller.render.heart_of_ender"
+			]
+		}
+	}
+}

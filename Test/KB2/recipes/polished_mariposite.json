@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:polished_mariposite"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:mariposite"
+      }
+    },
+    "result": {
+      "item": "cav:polished_mariposite",
+      "count": 4
+    }
+  }
+}

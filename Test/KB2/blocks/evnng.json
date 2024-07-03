@@ -1,0 +1,200 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:evnng"
+		},
+		"components": {
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "caf:randomizedgrow"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "caf:randomizedgrow"
+				}
+			}
+		},
+		"events": {
+			"caf:grow00": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_small"
+					]
+				}
+			},
+			"caf:grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_small"
+					]
+				}
+			},
+			"caf:grow02": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_vine",
+						"setblock ~ ~-3 ~ caf:eye_vine",
+						"setblock ~ ~-4 ~ caf:eye_vine",
+						"setblock ~ ~-5 ~ caf:eye_small"
+					]
+				}
+			},
+			"caf:grow03": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_vine",
+						"setblock ~ ~-3 ~ caf:eye_vine",
+						"setblock ~ ~-4 ~ caf:eye_vine",
+						"setblock ~ ~-5 ~ caf:eye_vine",
+						"setblock ~ ~-6 ~ caf:eye_vine",
+						"setblock ~ ~-7 ~ caf:eye_small"
+					]
+				}
+			},
+			"caf:grow04": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_vine",
+						"setblock ~ ~-3 ~ caf:eye_vine",
+						"setblock ~ ~-4 ~ caf:eye_vine",
+						"setblock ~ ~-5 ~ caf:eye_vine",
+						"setblock ~ ~-6 ~ caf:eye_vine",
+						"setblock ~ ~-7 ~ caf:eye_vine",
+						"setblock ~ ~-8 ~ caf:eye_vine",
+						"setblock ~ ~-9 ~ caf:eye_small"
+					]
+				}
+			},
+			"caf:grow05": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye"
+					]
+				}
+			},
+			"caf:grow06": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye"
+					]
+				}
+			},
+			"caf:grow07": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_vine",
+						"setblock ~ ~-3 ~ caf:eye_vine",
+						"setblock ~ ~-4 ~ caf:eye_vine",
+						"setblock ~ ~-5 ~ caf:eye"
+					]
+				}
+			},
+			"caf:grow08": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_vine",
+						"setblock ~ ~-3 ~ caf:eye_vine",
+						"setblock ~ ~-4 ~ caf:eye_vine",
+						"setblock ~ ~-5 ~ caf:eye_vine",
+						"setblock ~ ~-6 ~ caf:eye_vine",
+						"setblock ~ ~-7 ~ caf:eye"
+					]
+				}
+			},
+			"caf:grow09": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:eye_vine",
+						"setblock ~ ~-1 ~ caf:eye_vine",
+						"setblock ~ ~-2 ~ caf:eye_vine",
+						"setblock ~ ~-3 ~ caf:eye_vine",
+						"setblock ~ ~-4 ~ caf:eye_vine",
+						"setblock ~ ~-5 ~ caf:eye_vine",
+						"setblock ~ ~-6 ~ caf:eye_vine",
+						"setblock ~ ~-7 ~ caf:eye_vine",
+						"setblock ~ ~-8 ~ caf:eye_vine",
+						"setblock ~ ~-9 ~ caf:eye"
+					]
+				}
+			},
+			"caf:randomizedgrow": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow00"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow02"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow03"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow04"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow05"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow06"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow07"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow08"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow09"
+						}
+					}
+				]
+			}
+		}
+	}
+}

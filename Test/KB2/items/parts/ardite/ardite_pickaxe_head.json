@@ -1,0 +1,21 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ardite_pickaxe_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Ardite Pickaxe Head"
+			},
+			"minecraft:icon": {
+				"texture": "ardite_pickaxe_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

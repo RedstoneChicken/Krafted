@@ -1,0 +1,38 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:mondus",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/endoraptor"
+			},
+			"geometry": {
+				"default": "geometry.endoraptor"
+			},
+			"scripts": {
+				"animate": [
+					"walk_controller",
+					"attack_controller"
+				]
+			},
+			"animations": {
+				"walk_controller": "controller.animation.mondus.walk",
+				"attack_controller": "controller.animation.mondus.attack",
+				"attack": "animation.endoraptor.attack",
+				"idle": "animation.endoraptor.idle",
+				"move": "animation.endoraptor.move"
+			},
+			"spawn_egg": {
+				"base_color": "#22031E",
+				"overlay_color": "#C711B9"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

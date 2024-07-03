@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:lilac_bouquet_into_lilac"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:lilac_bouquet_item",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ff:lilac_item",
+      "count": 9
+    }
+  }
+}

@@ -1,0 +1,35 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:shovel_127"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:ardite_shovel_head"
+			},
+			"~": {
+				"item": "strat:ardite_tool_rod"
+			},
+			"o": {
+				"item": "strat:ardite_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:shovel_127",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

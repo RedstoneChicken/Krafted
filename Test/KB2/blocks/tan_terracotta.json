@@ -1,0 +1,24 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "cav:tan_terracotta",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "construction",
+        "group": "itemGroup.name.stainedClay"
+      },
+      "minecraft:destroy_time": 0.6,
+      "minecraft:explosion_resistance": 30,
+      "minecraft:block_light_absorption": 15,
+      "minecraft:map_color": "#DEC98A",
+      "minecraft:block_light_emission": 0,
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      }
+    }
+  }
+}

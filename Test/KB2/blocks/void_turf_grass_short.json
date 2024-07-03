@@ -1,0 +1,83 @@
+//bridge-file-version: #36
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:void_turf_grass_short"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void_turf_grass_short",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:void_turf",
+							"korbon:void_turf_stone",
+							"korbon:velvium",
+							"korbon:verdanite_velvium",
+							"korbon:phreyium",
+							"korbon:phreyium_block"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#998024",
+			"minecraft:flammable": {
+				"burn_odds": 20,
+				"flame_odds": 10
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					6,
+					12
+				]
+			},
+			"minecraft:loot": "empty",
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			}
+		},
+		"events": {
+			"shear": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/void_turf_grass_short.json"
+				}
+			},
+			"bone_meal": {
+				"decrement_stack": {},
+				"set_block": {
+					"block_type": "korbon:void_turf_grass"
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~",
+						"playsound item.bone_meal.use @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

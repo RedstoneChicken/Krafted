@@ -1,0 +1,47 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:plate_chestplate_copper_2",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "plate_chestplate_copper"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 730,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"strat:cobalt_ingot"
+						],
+						"repair_amount": 100
+					}
+				]
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.chest",
+				"dispensable": true
+			},
+			"minecraft:armor": {
+				"protection": 8
+			},
+			"minecraft:display_name": {
+				"value": "Plate Chestplate\n§6Copper Embellishment\n§bDiamond§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "commands"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:coagulated_blood_from_congealed"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "strat:congealed_blood_block"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:coagulated_blood",
+				"count": 4
+			}
+		]
+	}
+}

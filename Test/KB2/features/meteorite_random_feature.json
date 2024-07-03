@@ -1,0 +1,19 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "end:meteorite_random_feature"
+		},
+		"features": [
+			[
+				"end:meteorite_prism_1_feature",
+				5
+			],
+			[
+				"end:meteorite_lonsdaleite_1",
+				1
+			]
+		]
+	}
+}

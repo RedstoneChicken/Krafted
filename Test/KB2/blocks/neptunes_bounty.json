@@ -1,0 +1,82 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "azc:neptunes_bounty",
+      "category": "Items",
+      "properties": {
+        "block:rotation": [0, 1, 2, 3, 4, 5, 6]
+      }
+    },
+    "components": {
+      "minecraft:loot": "loot_tables/blocks/neptunes_bounty.json",
+      "minecraft:destroy_time": 6.0,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:explosion_resistance": 30.0,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:block_light_emission": 0,
+      "minecraft:on_player_placing": {
+        "event": "update_rotation"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "neptunes_bounty",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:geometry": "geometry.neptunes_bounty",
+      "minecraft:pick_collision": {
+        "origin": [-7.0, 0, -7.0],
+        "size": [14, 14, 14]
+      },
+      "minecraft:entity_collision": {
+        "origin": [-7.0, 0, -7.0],
+        "size": [14, 14, 14]
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["up", "side"]
+          }
+        ]
+      },
+      "minecraft:creative_category": {
+        "category": "items"
+      },
+      "minecraft:breathability": "air"
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('block:rotation') == 2",
+        "components": {
+          "minecraft:rotation": [0, 0, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotation') == 3",
+        "components": {
+          "minecraft:rotation": [0, -180, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotation') == 4",
+        "components": {
+          "minecraft:rotation": [0, 90, 0]
+        }
+      },
+      {
+        "condition": "query.block_property('block:rotation') == 5",
+        "components": {
+          "minecraft:rotation": [0, -90, 0]
+        }
+      }
+    ],
+    "events": {
+      "update_rotation": {
+        "set_block_property": {
+          "block:rotation": "query.cardinal_facing_2d"
+        }
+      }
+    }
+  }
+}

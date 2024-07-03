@@ -1,0 +1,15 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_brewing_mix" : {
+		"description" : {
+			"identifier" : "lingering_mundane_by_leech"
+		},
+		"tags" : [ "brewing_stand" ],
+		"input" : "minecraft:lingering_potion",
+		"reagent" : "azc:leech",
+		"output" : {
+			"item" : "minecraft:lingering_potion",
+			"data" : 1
+		}
+	}
+}

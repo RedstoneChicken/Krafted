@@ -1,0 +1,50 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nether:brimstone",
+			"is_summonable": true,
+			"scripts": {
+				"animate": [
+					"brimstone"
+				]
+			},
+			"animations": {
+				"brimstone": "animation.brimstone"
+			},
+			"is_spawnable": false
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 2
+			},
+			"minecraft:physics": {},
+			"minecraft:fire_immune": true,
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 0
+					}
+				]
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

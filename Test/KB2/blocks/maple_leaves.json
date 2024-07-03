@@ -1,0 +1,53 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:maple_leaves"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.3,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#7E1500",
+			"minecraft:flammable": {
+				"burn_odds": 8,
+				"flame_odds": 8
+			},
+			"minecraft:explosion_resistance": 0.3,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "strats_leaves_maple",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:on_player_destroyed": {
+				"event": "strat:spawn_loot"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Nature",
+				"category": "Nature"
+			},
+			"tag:leaves": {}
+		},
+		"events": {
+			"strat:spawn_loot": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'shears'",
+						"spawn_loot": {
+							"table": "loot_tables/maple_leaves_2.json"
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') != 'shears'",
+						"spawn_loot": {
+							"table": "loot_tables/maple_leaves.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

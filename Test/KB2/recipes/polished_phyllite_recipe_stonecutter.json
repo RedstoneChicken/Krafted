@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cav:polished_phyllite_recipe_stonecutter"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:phyllite"
+      }
+    ],
+    "result": {
+      "item": "cav:polished_phyllite",
+      "count": 1
+    }
+  }
+  
+}

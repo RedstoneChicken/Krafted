@@ -1,0 +1,55 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:spawn_rules" : {
+		"description" : {
+			"identifier" : "azc:bayad",
+			"population_control" : "water_animal"
+		},
+		"conditions" : [
+			{
+				"minecraft:spawns_on_surface" : {},
+				"minecraft:spawns_underwater" : {},
+				"minecraft:distance_filter" : {
+					"min" : 12,
+					"max" : 32
+				},
+				"minecraft:weight" : {
+					"default" : 16
+				},
+				"minecraft:density_limit" : {
+					"surface" : 5
+				},
+				"minecraft:height_filter" : {
+					"min" : 0,
+					"max" : 64
+				},
+				"minecraft:herd" : {
+					"min_size" : 1,
+					"max_size" : 3
+				},
+				"minecraft:biome_filter" : [
+					{
+						"test" : "has_biome_tag",
+						"value" : "river"
+					},
+					{
+						"any_of" : [
+							{
+								"test" : "has_biome_tag",
+								"value" : "desert"
+							},
+							{
+								"test" : "has_biome_tag",
+								"value" : "savanna"
+							},
+							{
+								"test" : "has_biome_tag",
+								"value" : "mesa"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

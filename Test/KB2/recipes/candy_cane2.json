@@ -1,0 +1,37 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:candy_cane2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#~",
+			"O#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:sugar"
+			},
+			"~": {
+				"item": "minecraft:red_dye"
+			},
+			"O": {
+				"item": "strat:water_glass"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:candy_cane",
+				"count": 1
+			},
+			{
+				"item": "strat:drinking_glass",
+				"count": 1
+			}
+		]
+	}
+}

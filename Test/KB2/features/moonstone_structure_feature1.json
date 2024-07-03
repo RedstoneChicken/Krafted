@@ -1,0 +1,20 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "nether:moonstone_structure_feature1"
+		},
+		"structure_name": "nether:moonstone1",
+		"adjustment_radius": 0,
+		"facing_direction": "south",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air"
+				]
+			}
+		}
+	}
+}

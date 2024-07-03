@@ -1,0 +1,993 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.18.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:smeltery_controller_90_20",
+			"properties": {
+				"strat:fuel": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:explosion_resistance": 10,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "smeltery_controller_on_90",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.block",
+			"minecraft:loot": "loot_tables/smeltery_controller.json",
+			"tag:stone": {},
+			"minecraft:block_light_emission": 1,
+			"minecraft:on_player_destroyed": {
+				"event": "strat:remove_liquid"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:smelt": {
+				"sequence": [
+					{
+						"condition": "query.is_sneaking == 1.0",
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:fuel') == 10",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 1000mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 9",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 900mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 8",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 800mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 7",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 700mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 6",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 600mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 5",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 500mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 4",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 400mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 3",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 300mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 2",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 200mb"
+									],
+									"target": "player"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:fuel') == 1",
+								"run_command": {
+									"command": [
+										"title @s actionbar Fuel: 100mb"
+									],
+									"target": "player"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'iron_ingot' || query.get_equipped_item_name('main_hand') == 'iron_binding' || query.get_equipped_item_name('main_hand') == 'iron_tool_rod' || query.get_equipped_item_name('main_hand') == 'iron_wide_guard' || query.get_equipped_item_name('main_hand') == 'iron_hand_guard'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_smelt_iron_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace strat:smeltery_smelt_iron_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_7 0 replace strat:smeltery_smelt_iron_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_6 0 replace strat:smeltery_smelt_iron_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_5 0 replace strat:smeltery_smelt_iron_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_4 0 replace strat:smeltery_smelt_iron_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_3 0 replace strat:smeltery_smelt_iron_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_2 0 replace strat:smeltery_smelt_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_iron_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace strat:smeltery_iron_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_7 0 replace strat:smeltery_iron_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_6 0 replace strat:smeltery_iron_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_5 0 replace strat:smeltery_iron_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_4 0 replace strat:smeltery_iron_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_3 0 replace strat:smeltery_iron_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_2 0 replace strat:smeltery_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_1 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'raw_iron' || query.get_equipped_item_name('main_hand') == 'iron_pickaxe_head' || query.get_equipped_item_name('main_hand') == 'iron_axe_head' || query.get_equipped_item_name('main_hand') == 'iron_shovel_head' || query.get_equipped_item_name('main_hand') == 'iron_sword_blade'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_smelt_iron_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace strat:smeltery_smelt_iron_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_7 0 replace strat:smeltery_smelt_iron_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_6 0 replace strat:smeltery_smelt_iron_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_5 0 replace strat:smeltery_smelt_iron_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_4 0 replace strat:smeltery_smelt_iron_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_3 0 replace strat:smeltery_smelt_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_iron_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace strat:smeltery_iron_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_7 0 replace strat:smeltery_iron_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_6 0 replace strat:smeltery_iron_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_5 0 replace strat:smeltery_iron_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_4 0 replace strat:smeltery_iron_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_3 0 replace strat:smeltery_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_2 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'iron_pan' || query.get_equipped_item_name('main_hand') == 'iron_tough_binding' || query.get_equipped_item_name('main_hand') == 'iron_tough_tool_rod'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_smelt_iron_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace strat:smeltery_smelt_iron_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_7 0 replace strat:smeltery_smelt_iron_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_6 0 replace strat:smeltery_smelt_iron_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_5 0 replace strat:smeltery_smelt_iron_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_4 0 replace strat:smeltery_smelt_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_iron_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace strat:smeltery_iron_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_7 0 replace strat:smeltery_iron_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_6 0 replace strat:smeltery_iron_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_5 0 replace strat:smeltery_iron_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_4 0 replace strat:smeltery_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_3 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'iron_large_sword_blade' || query.get_equipped_item_name('main_hand') == 'iron_hammer_head' || query.get_equipped_item_name('main_hand') == 'iron_excavator_head' || query.get_equipped_item_name('main_hand') == 'iron_broad_axe_head' || query.get_equipped_item_name('main_hand') == 'iron_large_plate'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_smelt_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace strat:smeltery_iron_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_8 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'iron_block' || query.get_equipped_item_name('main_hand') == 'raw_iron_block'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_iron_9 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'gold_ingot' || query.get_equipped_item_name('main_hand') == 'blank_cast'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_9 0 replace strat:smeltery_smelt_gold_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_8 0 replace strat:smeltery_smelt_gold_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_7 0 replace strat:smeltery_smelt_gold_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_6 0 replace strat:smeltery_smelt_gold_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_5 0 replace strat:smeltery_smelt_gold_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_4 0 replace strat:smeltery_smelt_gold_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_3 0 replace strat:smeltery_smelt_gold_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_2 0 replace strat:smeltery_smelt_gold_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_9 0 replace strat:smeltery_gold_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_8 0 replace strat:smeltery_gold_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_7 0 replace strat:smeltery_gold_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_6 0 replace strat:smeltery_gold_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_5 0 replace strat:smeltery_gold_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_4 0 replace strat:smeltery_gold_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_3 0 replace strat:smeltery_gold_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_2 0 replace strat:smeltery_gold_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_1 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'raw_gold'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_9 0 replace strat:smeltery_smelt_gold_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_8 0 replace strat:smeltery_smelt_gold_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_7 0 replace strat:smeltery_smelt_gold_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_6 0 replace strat:smeltery_smelt_gold_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_5 0 replace strat:smeltery_smelt_gold_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_4 0 replace strat:smeltery_smelt_gold_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_3 0 replace strat:smeltery_smelt_gold_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_9 0 replace strat:smeltery_gold_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_8 0 replace strat:smeltery_gold_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_7 0 replace strat:smeltery_gold_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_6 0 replace strat:smeltery_gold_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_5 0 replace strat:smeltery_gold_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_4 0 replace strat:smeltery_gold_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_3 0 replace strat:smeltery_gold_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_2 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'gold_block' || query.get_equipped_item_name('main_hand') == 'raw_gold_block'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_gold_9 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'copper_ingot' || query.get_equipped_item_name('main_hand') == 'copper_binding' || query.get_equipped_item_name('main_hand') == 'copper_tool_rod' || query.get_equipped_item_name('main_hand') == 'copper_wide_guard' || query.get_equipped_item_name('main_hand') == 'copper_hand_guard'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_smelt_copper_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace strat:smeltery_smelt_copper_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_7 0 replace strat:smeltery_smelt_copper_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_6 0 replace strat:smeltery_smelt_copper_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_5 0 replace strat:smeltery_smelt_copper_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_4 0 replace strat:smeltery_smelt_copper_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_3 0 replace strat:smeltery_smelt_copper_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_2 0 replace strat:smeltery_smelt_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_copper_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace strat:smeltery_copper_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_7 0 replace strat:smeltery_copper_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_6 0 replace strat:smeltery_copper_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_5 0 replace strat:smeltery_copper_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_4 0 replace strat:smeltery_copper_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_3 0 replace strat:smeltery_copper_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_2 0 replace strat:smeltery_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_1 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'raw_copper' || query.get_equipped_item_name('main_hand') == 'copper_pickaxe_head' || query.get_equipped_item_name('main_hand') == 'copper_axe_head' || query.get_equipped_item_name('main_hand') == 'copper_shovel_head' || query.get_equipped_item_name('main_hand') == 'copper_sword_blade'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_smelt_copper_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace strat:smeltery_smelt_copper_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_7 0 replace strat:smeltery_smelt_copper_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_6 0 replace strat:smeltery_smelt_copper_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_5 0 replace strat:smeltery_smelt_copper_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_4 0 replace strat:smeltery_smelt_copper_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_3 0 replace strat:smeltery_smelt_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_copper_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace strat:smeltery_copper_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_7 0 replace strat:smeltery_copper_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_6 0 replace strat:smeltery_copper_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_5 0 replace strat:smeltery_copper_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_4 0 replace strat:smeltery_copper_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_3 0 replace strat:smeltery_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_2 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'copper_pan' || query.get_equipped_item_name('main_hand') == 'copper_tough_binding' || query.get_equipped_item_name('main_hand') == 'copper_tough_tool_rod' || query.get_equipped_item_name('main_hand') == 'lightning_rod'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_smelt_copper_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace strat:smeltery_smelt_copper_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_7 0 replace strat:smeltery_smelt_copper_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_6 0 replace strat:smeltery_smelt_copper_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_5 0 replace strat:smeltery_smelt_copper_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_4 0 replace strat:smeltery_smelt_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_copper_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace strat:smeltery_copper_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_7 0 replace strat:smeltery_copper_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_6 0 replace strat:smeltery_copper_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_5 0 replace strat:smeltery_copper_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_4 0 replace strat:smeltery_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_3 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'copper_large_sword_blade' || query.get_equipped_item_name('main_hand') == 'copper_hammer_head' || query.get_equipped_item_name('main_hand') == 'copper_excavator_head' || query.get_equipped_item_name('main_hand') == 'copper_broad_axe_head' || query.get_equipped_item_name('main_hand') == 'copper_large_plate'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_smelt_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace strat:smeltery_copper_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_8 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'copper_block' || query.get_equipped_item_name('main_hand') == 'raw_copper_block'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_copper_9 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'glass' || query.get_equipped_item_name('main_hand') == 'sand'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_9 0 replace strat:smeltery_smelt_glass_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_8 0 replace strat:smeltery_smelt_glass_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_7 0 replace strat:smeltery_smelt_glass_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_6 0 replace strat:smeltery_smelt_glass_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_5 0 replace strat:smeltery_smelt_glass_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_9 0 replace strat:smeltery_glass_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_8 0 replace strat:smeltery_glass_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_7 0 replace strat:smeltery_glass_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_6 0 replace strat:smeltery_glass_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_5 0 replace strat:smeltery_glass_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_glass_4 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'obsidian' || query.get_equipped_item_name('main_hand') == 'crying_obsidian'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_9 0 replace strat:smeltery_smelt_obsidian_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_8 0 replace strat:smeltery_smelt_obsidian_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_7 0 replace strat:smeltery_smelt_obsidian_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_6 0 replace strat:smeltery_smelt_obsidian_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_5 0 replace strat:smeltery_smelt_obsidian_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_9 0 replace strat:smeltery_obsidian_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_8 0 replace strat:smeltery_obsidian_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_7 0 replace strat:smeltery_obsidian_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_6 0 replace strat:smeltery_obsidian_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_5 0 replace strat:smeltery_obsidian_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_obsidian_4 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'grout' || query.get_equipped_item_name('main_hand') == 'seared_brick'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_9 0 replace strat:smeltery_smelt_seared_stone_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_8 0 replace strat:smeltery_smelt_seared_stone_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_7 0 replace strat:smeltery_smelt_seared_stone_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_6 0 replace strat:smeltery_smelt_seared_stone_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_5 0 replace strat:smeltery_smelt_seared_stone_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_4 0 replace strat:smeltery_smelt_seared_stone_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_3 0 replace strat:smeltery_smelt_seared_stone_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_2 0 replace strat:smeltery_smelt_seared_stone_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_9 0 replace strat:smeltery_seared_stone_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_8 0 replace strat:smeltery_seared_stone_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_7 0 replace strat:smeltery_seared_stone_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_6 0 replace strat:smeltery_seared_stone_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_5 0 replace strat:smeltery_seared_stone_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_4 0 replace strat:smeltery_seared_stone_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_3 0 replace strat:smeltery_seared_stone_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_2 0 replace strat:smeltery_seared_stone_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_1 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'seared_bricks'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_8 0 replace strat:smeltery_smelt_seared_stone_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_7 0 replace strat:smeltery_smelt_seared_stone_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_6 0 replace strat:smeltery_smelt_seared_stone_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_5 0 replace strat:smeltery_smelt_seared_stone_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_8 0 replace strat:smeltery_seared_stone_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_7 0 replace strat:smeltery_seared_stone_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_6 0 replace strat:smeltery_seared_stone_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_5 0 replace strat:smeltery_seared_stone_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_seared_stone_4 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'cobalt_ingot' || query.get_equipped_item_name('main_hand') == 'cobalt_binding' || query.get_equipped_item_name('main_hand') == 'cobalt_tool_rod' || query.get_equipped_item_name('main_hand') == 'cobalt_wide_guard' || query.get_equipped_item_name('main_hand') == 'cobalt_hand_guard'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_smelt_cobalt_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace strat:smeltery_smelt_cobalt_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_7 0 replace strat:smeltery_smelt_cobalt_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_6 0 replace strat:smeltery_smelt_cobalt_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_5 0 replace strat:smeltery_smelt_cobalt_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_4 0 replace strat:smeltery_smelt_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_3 0 replace strat:smeltery_smelt_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_2 0 replace strat:smeltery_smelt_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_cobalt_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace strat:smeltery_cobalt_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_7 0 replace strat:smeltery_cobalt_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_6 0 replace strat:smeltery_cobalt_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_5 0 replace strat:smeltery_cobalt_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_4 0 replace strat:smeltery_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_3 0 replace strat:smeltery_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_2 0 replace strat:smeltery_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_1 0 replace air",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace strat:smeltery_smelt_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace strat:smeltery_ardite_1"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'raw_cobalt' || query.get_equipped_item_name('main_hand') == 'cobalt_pickaxe_head' || query.get_equipped_item_name('main_hand') == 'cobalt_axe_head' || query.get_equipped_item_name('main_hand') == 'cobalt_shovel_head' || query.get_equipped_item_name('main_hand') == 'cobalt_sword_blade'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_smelt_cobalt_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace strat:smeltery_smelt_cobalt_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_7 0 replace strat:smeltery_smelt_cobalt_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_6 0 replace strat:smeltery_smelt_cobalt_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_5 0 replace strat:smeltery_smelt_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_4 0 replace strat:smeltery_smelt_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_3 0 replace strat:smeltery_smelt_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_cobalt_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace strat:smeltery_cobalt_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_7 0 replace strat:smeltery_cobalt_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_6 0 replace strat:smeltery_cobalt_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_5 0 replace strat:smeltery_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_4 0 replace strat:smeltery_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_3 0 replace strat:smeltery_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_2 0 replace air",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_smelt_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_ardite_2"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'cobalt_pan' || query.get_equipped_item_name('main_hand') == 'cobalt_tough_binding' || query.get_equipped_item_name('main_hand') == 'cobalt_tough_tool_rod'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_smelt_cobalt_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace strat:smeltery_smelt_cobalt_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_7 0 replace strat:smeltery_smelt_cobalt_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_6 0 replace strat:smeltery_smelt_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_5 0 replace strat:smeltery_smelt_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_4 0 replace strat:smeltery_smelt_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_cobalt_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace strat:smeltery_cobalt_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_7 0 replace strat:smeltery_cobalt_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_6 0 replace strat:smeltery_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_5 0 replace strat:smeltery_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_4 0 replace strat:smeltery_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_3 0 replace air",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_smelt_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_ardite_3"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'cobalt_large_sword_blade' || query.get_equipped_item_name('main_hand') == 'cobalt_hammer_head' || query.get_equipped_item_name('main_hand') == 'cobalt_excavator_head' || query.get_equipped_item_name('main_hand') == 'cobalt_broad_axe_head' || query.get_equipped_item_name('main_hand') == 'cobalt_large_plate'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_smelt_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace strat:smeltery_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_8 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'cobalt_block' || query.get_equipped_item_name('main_hand') == 'raw_cobalt_block'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_cobalt_9 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'ardite_ingot' || query.get_equipped_item_name('main_hand') == 'ardite_binding' || query.get_equipped_item_name('main_hand') == 'ardite_tool_rod' || query.get_equipped_item_name('main_hand') == 'ardite_wide_guard' || query.get_equipped_item_name('main_hand') == 'ardite_hand_guard'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_smelt_ardite_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace strat:smeltery_smelt_ardite_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_7 0 replace strat:smeltery_smelt_ardite_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_6 0 replace strat:smeltery_smelt_ardite_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_5 0 replace strat:smeltery_smelt_ardite_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_4 0 replace strat:smeltery_smelt_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_3 0 replace strat:smeltery_smelt_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_2 0 replace strat:smeltery_smelt_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_ardite_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace strat:smeltery_ardite_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_7 0 replace strat:smeltery_ardite_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_6 0 replace strat:smeltery_ardite_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_5 0 replace strat:smeltery_ardite_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_4 0 replace strat:smeltery_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_3 0 replace strat:smeltery_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_2 0 replace strat:smeltery_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_1 0 replace air",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace strat:smeltery_smelt_cobalt_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace strat:smeltery_cobalt_1"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'raw_ardite' || query.get_equipped_item_name('main_hand') == 'ardite_pickaxe_head' || query.get_equipped_item_name('main_hand') == 'ardite_axe_head' || query.get_equipped_item_name('main_hand') == 'ardite_shovel_head' || query.get_equipped_item_name('main_hand') == 'ardite_sword_blade'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_smelt_ardite_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace strat:smeltery_smelt_ardite_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_7 0 replace strat:smeltery_smelt_ardite_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_6 0 replace strat:smeltery_smelt_ardite_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_5 0 replace strat:smeltery_smelt_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_4 0 replace strat:smeltery_smelt_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_3 0 replace strat:smeltery_smelt_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_ardite_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace strat:smeltery_ardite_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_7 0 replace strat:smeltery_ardite_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_6 0 replace strat:smeltery_ardite_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_5 0 replace strat:smeltery_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_4 0 replace strat:smeltery_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_3 0 replace strat:smeltery_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_2 0 replace air",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_smelt_cobalt_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_cobalt_2"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'ardite_pan' || query.get_equipped_item_name('main_hand') == 'ardite_tough_binding' || query.get_equipped_item_name('main_hand') == 'ardite_tough_tool_rod'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_smelt_ardite_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace strat:smeltery_smelt_ardite_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_7 0 replace strat:smeltery_smelt_ardite_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_6 0 replace strat:smeltery_smelt_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_5 0 replace strat:smeltery_smelt_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_4 0 replace strat:smeltery_smelt_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_ardite_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace strat:smeltery_ardite_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_7 0 replace strat:smeltery_ardite_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_6 0 replace strat:smeltery_ardite_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_5 0 replace strat:smeltery_ardite_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_4 0 replace strat:smeltery_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_3 0 replace air",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_smelt_cobalt_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_cobalt_3"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'ardite_large_sword_blade' || query.get_equipped_item_name('main_hand') == 'ardite_hammer_head' || query.get_equipped_item_name('main_hand') == 'ardite_excavator_head' || query.get_equipped_item_name('main_hand') == 'ardite_broad_axe_head' || query.get_equipped_item_name('main_hand') == 'ardite_large_plate'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace strat:smeltery_ardite_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_8 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'ardite_block' || query.get_equipped_item_name('main_hand') == 'raw_ardite_block'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_ardite_9 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_ingot' || query.get_equipped_item_name('main_hand') == 'manyullyn_binding' || query.get_equipped_item_name('main_hand') == 'manyullyn_tool_rod' || query.get_equipped_item_name('main_hand') == 'manyullyn_wide_guard' || query.get_equipped_item_name('main_hand') == 'manyullyn_hand_guard'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_smelt_manyullyn_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace strat:smeltery_smelt_manyullyn_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_7 0 replace strat:smeltery_smelt_manyullyn_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_smelt_manyullyn_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_5 0 replace strat:smeltery_smelt_manyullyn_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_smelt_manyullyn_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_3 0 replace strat:smeltery_smelt_manyullyn_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace strat:smeltery_smelt_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_manyullyn_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace strat:smeltery_manyullyn_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_7 0 replace strat:smeltery_manyullyn_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_manyullyn_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_5 0 replace strat:smeltery_manyullyn_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_manyullyn_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_3 0 replace strat:smeltery_manyullyn_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace strat:smeltery_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_1 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_pickaxe_head' || query.get_equipped_item_name('main_hand') == 'manyullyn_axe_head' || query.get_equipped_item_name('main_hand') == 'manyullyn_shovel_head' || query.get_equipped_item_name('main_hand') == 'manyullyn_sword_blade'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_smelt_manyullyn_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace strat:smeltery_smelt_manyullyn_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_7 0 replace strat:smeltery_smelt_manyullyn_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_smelt_manyullyn_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_5 0 replace strat:smeltery_smelt_manyullyn_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_smelt_manyullyn_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_3 0 replace strat:smeltery_smelt_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_manyullyn_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace strat:smeltery_manyullyn_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_7 0 replace strat:smeltery_manyullyn_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_manyullyn_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_5 0 replace strat:smeltery_manyullyn_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_manyullyn_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_3 0 replace strat:smeltery_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_2 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_pan' || query.get_equipped_item_name('main_hand') == 'manyullyn_tough_binding' || query.get_equipped_item_name('main_hand') == 'manyullyn_tough_tool_rod'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_smelt_manyullyn_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace strat:smeltery_smelt_manyullyn_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_7 0 replace strat:smeltery_smelt_manyullyn_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_smelt_manyullyn_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_5 0 replace strat:smeltery_smelt_manyullyn_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_smelt_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_manyullyn_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace strat:smeltery_manyullyn_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_7 0 replace strat:smeltery_manyullyn_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_6 0 replace strat:smeltery_manyullyn_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_5 0 replace strat:smeltery_manyullyn_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_4 0 replace strat:smeltery_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_3 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_large_sword_blade' || query.get_equipped_item_name('main_hand') == 'manyullyn_hammer_head' || query.get_equipped_item_name('main_hand') == 'manyullyn_excavator_head' || query.get_equipped_item_name('main_hand') == 'manyullyn_broad_axe_head' || query.get_equipped_item_name('main_hand') == 'manyullyn_large_plate'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_smelt_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace strat:smeltery_manyullyn_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_8 0 replace air"
+									]
+								}
+							},
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'manyullyn_block'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_manyullyn_9 0 replace air"
+									]
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.get_equipped_item_name('main_hand') == 'rotten_flesh' || query.get_equipped_item_name('main_hand') == 'coagulated_blood'",
+								"set_block_property": {
+									"strat:fuel": "query.block_property('strat:fuel') - 1"
+								},
+								"decrement_stack": {},
+								"run_command": {
+									"command": [
+										"playsound liquid.lavapop @a ~~~",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_9 0 replace strat:smeltery_smelt_blood_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_8 0 replace strat:smeltery_smelt_blood_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_7 0 replace strat:smeltery_smelt_blood_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_6 0 replace strat:smeltery_smelt_blood_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_5 0 replace strat:smeltery_smelt_blood_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_4 0 replace strat:smeltery_smelt_blood_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_3 0 replace strat:smeltery_smelt_blood_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_2 0 replace strat:smeltery_smelt_blood_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_9 0 replace strat:smeltery_blood_8",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_8 0 replace strat:smeltery_blood_7",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_7 0 replace strat:smeltery_blood_6",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_6 0 replace strat:smeltery_blood_5",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_5 0 replace strat:smeltery_blood_4",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_4 0 replace strat:smeltery_blood_3",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_3 0 replace strat:smeltery_blood_2",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_2 0 replace strat:smeltery_blood_1",
+										"fill ~+1~~ ~+3~~+2 strat:smeltery_smelt_blood_1 0 replace air"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"strat:activate": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'lava_bucket'",
+						"set_block_property": {
+							"strat:fuel": 10
+						},
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"playsound bucket.fill_lava @a ~~~",
+								"give @p bucket",
+								"gamerule sendcommandfeedback true"
+							]
+						}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') != 'lava_bucket'",
+						"run_command": {
+							"command": [
+								"title @s actionbar Fuel: 0mb"
+							],
+							"target": "player"
+						}
+					}
+				]
+			},
+			"strat:remove_liquid": {
+				"run_command": {
+					"command": [
+						"function remove_liquid"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:fuel') == 0",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "strat:activate"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:fuel') > 0",
+				"components": {
+					"minecraft:on_interact": {
+						"event": "strat:smelt"
+					}
+				}
+			}
+		]
+	}
+}

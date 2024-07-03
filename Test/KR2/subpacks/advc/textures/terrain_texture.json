@@ -1,0 +1,89 @@
+{
+	"resource_pack_name" : "vanilla",
+	"texture_name" : "atlas.terrain",
+	"padding" : 8,
+	"num_mip_levels" : 4,
+	"texture_data" : {
+		"unbucket" : {
+			"textures" : [ "textures/blocks/unbucket" ]
+		},
+		"fish_trophy_adv_catfish" : {
+			"textures" : [ "textures/blocks/fish_trophy_adv_catfish" ]
+		},
+		"fish_trophy_adv_piranha" : {
+			"textures" : [ "textures/blocks/fish_trophy_adv_piranha" ]
+		},
+		"fish_trophy_angelfish" : {
+			"textures" : [ "textures/blocks/fish_trophy_angelfish" ]
+		},
+		"fish_trophy_angler_fish" : {
+			"textures" : [ "textures/blocks/fish_trophy_angler_fish" ]
+		},
+		"fish_trophy_bonefish" : {
+			"textures" : [ "textures/blocks/fish_trophy_bonefish" ]
+		},
+		"fish_trophy_brown_shroomfin" : {
+			"textures" : [ "textures/blocks/fish_trophy_brown_shroomfin" ]
+		},
+		"fish_trophy_cave_trout" : {
+			"textures" : [ "textures/blocks/fish_trophy_cave_trout" ]
+		},
+		"fish_trophy_charged_bullhead" : {
+			"textures" : [ "textures/blocks/fish_trophy_charged_bullhead" ]
+		},
+		"fish_trophy_crystal_mullet" : {
+			"textures" : [ "textures/blocks/fish_trophy_crystal_mullet" ]
+		},
+		"fish_trophy_cursed_koi" : {
+			"textures" : [ "textures/blocks/fish_trophy_cursed_koi" ]
+		},
+		"fish_trophy_explosive_crucian" : {
+			"textures" : [ "textures/blocks/fish_trophy_explosive_crucian" ]
+		},
+		"fish_trophy_frost_minnow" : {
+			"textures" : [ "textures/blocks/fish_trophy_frost_minnow" ]
+		},
+		"fish_trophy_glacier_anchovy" : {
+			"textures" : [ "textures/blocks/fish_trophy_glacier_anchovy" ]
+		},
+		"fish_trophy_golden_koi" : {
+			"textures" : [ "textures/blocks/fish_trophy_golden_koi" ]
+		},
+		"fish_trophy_magikarp" : {
+			"textures" : [ "textures/blocks/fish_trophy_magikarp" ]
+		},
+		"fish_trophy_mandarinfish" : {
+			"textures" : [ "textures/blocks/fish_trophy_mandarinfish" ]
+		},
+		"fish_trophy_mud_tuna" : {
+			"textures" : [ "textures/blocks/fish_trophy_mud_tuna" ]
+		},
+		"fish_trophy_pike" : {
+			"textures" : [ "textures/blocks/fish_trophy_pike" ]
+		},
+		"fish_trophy_red_shroomfin" : {
+			"textures" : [ "textures/blocks/fish_trophy_red_shroomfin" ]
+		},
+		"fish_trophy_ruffe" : {
+			"textures" : [ "textures/blocks/fish_trophy_ruffe" ]
+		},
+		"fish_trophy_sandy_bass" : {
+			"textures" : [ "textures/blocks/fish_trophy_sandy_bass" ]
+		},
+		"fish_trophy_snowy_walleye" : {
+			"textures" : [ "textures/blocks/fish_trophy_snowy_walleye" ]
+		},
+		"fish_trophy_specular_snapper" : {
+			"textures" : [ "textures/blocks/fish_trophy_specular_snapper" ]
+		},
+		"fish_trophy_sponge_eater" : {
+			"textures" : [ "textures/blocks/fish_trophy_sponge_eater" ]
+		},
+		"fish_trophy_spookyfin" : {
+			"textures" : [ "textures/blocks/fish_trophy_spookyfin" ]
+		},
+		"fish_trophy_sunfish" : {
+			"textures" : [ "textures/blocks/fish_trophy_sunfish" ]
+		}
+	}
+}

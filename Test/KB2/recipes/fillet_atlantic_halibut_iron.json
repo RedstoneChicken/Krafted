@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_atlantic_halibut_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:iron_fillet_knife"
+      },
+      "B": {
+        "item": "azc:atlantic_halibut"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 14
+      },
+      {
+        "item": "azc:iron_fillet_knife"
+      }
+    ]
+  }
+}

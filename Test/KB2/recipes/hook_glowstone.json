@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "hook_glowstone"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ " A ", "ABA", " A " ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:glowstone_dust"
+			},
+			"B" : {
+				"item" : "adv:obsidian_hook"
+			}
+		},
+		"result" : {
+			"item" : "adv:glowstone_hook"
+		}
+	}
+}

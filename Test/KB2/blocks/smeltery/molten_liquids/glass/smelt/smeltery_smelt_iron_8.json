@@ -1,0 +1,90 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:smeltery_smelt_glass_8"
+		},
+		"components": {
+			"minecraft:destructible_by_mining": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "glass",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.tinkers_molten_liquid_7",
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					10,
+					10
+				],
+				"on_tick": {
+					"event": "strat:smelt"
+				}
+			},
+			"minecraft:block_light_filter": 0,
+			"minecraft:block_light_emission": 1,
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:on_player_destroyed": {
+				"event": "strat:destroy"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:destroy": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"fill ~+4~~+4 ~-4~~-4 air 0 replace strat:smeltery_smelt_glass_8"
+							]
+						}
+					}
+				]
+			},
+			"strat:smelt": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "strat:smeltery_glass_8"
+						},
+						"run_command": {
+							"command": [
+								"playsound bucket.fill_lava @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

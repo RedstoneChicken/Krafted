@@ -1,0 +1,90 @@
+//bridge-file-version: #73
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:phreyium_sprouts"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "phreyium_sprouts",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:phreyium_block",
+							"korbon:phreyium",
+							"korbon:phreyium_stone",
+							"korbon:velvium"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#427D6A",
+			"minecraft:flammable": {
+				"burn_odds": 5,
+				"flame_odds": 3
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					8,
+					12
+				]
+			},
+			"minecraft:loot": "empty",
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "particle_amb"
+				}
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			}
+		},
+		"events": {
+			"particle_amb": {
+				"randomize": [
+					{
+						"weight": 1
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle korbon:phreyium_spores ~~5.5~"
+							]
+						},
+						"weight": 1
+					}
+				]
+			},
+			"shear": {
+				"spawn_loot": {
+					"table": "loot_tables/blocks/phreyium_sprouts.json"
+				}
+			}
+		}
+	}
+}

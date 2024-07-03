@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:peony_into_peony_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:peony_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:peony_bouquet_item",
+      "count": 1
+    }
+  }
+}

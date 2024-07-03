@@ -1,0 +1,24 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:brownstone_paver_stonecutter_8"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "strat:brownstone_road",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:brownstone_paver",
+				"count": 1
+			}
+		]
+	}
+}

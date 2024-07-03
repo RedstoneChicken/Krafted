@@ -1,0 +1,38 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:excavator_65"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" ~#",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:copper_excavator_head"
+			},
+			"~": {
+				"item": "strat:copper_large_plate"
+			},
+			"o": {
+				"item": "strat:copper_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:copper_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:excavator_65",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

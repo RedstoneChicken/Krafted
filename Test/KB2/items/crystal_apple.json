@@ -1,0 +1,59 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:crystal_apple",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:foil": false,
+			"minecraft:max_stack_size": 64,
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": "normal",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "eat"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "crystal_apple"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {
+			"eat": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"target": "holder",
+							"duration": 30,
+							"amplifier": 2
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "jump_boost",
+							"target": "holder",
+							"duration": 30,
+							"amplifier": 2
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "haste",
+							"target": "holder",
+							"duration": 30,
+							"amplifier": 2
+						}
+					}
+				]
+			}
+		}
+	}
+}

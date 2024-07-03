@@ -1,0 +1,20 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "end:end_poison_block_feature"
+		},
+		"places_block": "end:dummy_poison_crystal",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:end_stone"
+		],
+		"may_attach_to": {
+			"top": [
+				"minecraft:water"
+			]
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:marble_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:marble"
+      }
+    ],
+    "result": {
+      "item": "cav:marble_slab",
+      "count": 2
+    }
+  } 
+}

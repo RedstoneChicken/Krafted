@@ -1,0 +1,26 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:copper_can"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"# #",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:copper_ingot"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:copper_can",
+				"count": 3
+			}
+		]
+	}
+}

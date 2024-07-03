@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_wither_rose_into_large_wither_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:wither_rose_tall_item","count":2}],"result":{"item":"ff:wither_rose_large_item"}}}

@@ -1,0 +1,33 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_hand_guard_rec_3"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:hand_guard_cast"
+			},
+			"~": {
+				"item": "minecraft:cobblestone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_hand_guard",
+				"count": 1
+			},
+			{
+				"item": "strat:hand_guard_cast",
+				"count": 1
+			}
+		]
+	}
+}

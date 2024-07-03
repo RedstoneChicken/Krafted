@@ -1,0 +1,30 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "korbon:bed_gray_from_chorus"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "###", 
+            "~~~"
+        ],
+        "key": {
+            "~": {
+                "item": "korbon:chorus_planks",
+                "data": 0
+            },
+            "#": {
+                "item": "minecraft:wool",
+                "data": 7
+            }
+        },
+        "result": [
+			{
+				"item": "minecraft:bed",
+                "data": 7,
+				"count": 1
+			}
+		]
+    }
+}

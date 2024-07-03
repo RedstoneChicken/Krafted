@@ -1,0 +1,15 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.13.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "korbon:pread_feature"
+		},
+		"places_block": "korbon:pread",
+		"enforce_survivability_rules": true,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:air"
+		]
+	}
+}

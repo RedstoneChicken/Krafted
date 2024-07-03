@@ -1,0 +1,31 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stencil_table_dark_oak"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "minecraft:planks",
+				"data": 5
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stencil_table_dark_oak",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:siltstone_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:siltstone"
+      }
+    ],
+    "result": {
+      "item": "cav:siltstone_slab",
+      "count": 2
+    }
+  } 
+}

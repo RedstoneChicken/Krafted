@@ -1,0 +1,37 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:cobalt_tool_rod"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:tool_rod_cast"
+			},
+			"~": {
+				"item": "strat:molten_cobalt_bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:cobalt_tool_rod",
+				"count": 1
+			},
+			{
+				"item": "strat:tool_rod_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

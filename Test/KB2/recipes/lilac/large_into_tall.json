@@ -1,0 +1,21 @@
+{
+    "format_version": 1.12,
+    "minecraft:recipe_shapeless": {
+        "description": {
+            "identifier": "ff:large_lilac_into_tall_lilac"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "ingredients": [
+            {
+                "item": "ff:lilac_large_item"
+            }
+        ],
+        "result": {
+            "item": "minecraft:double_plant",
+            "data": 1,
+            "count": 2
+        }
+    }
+}

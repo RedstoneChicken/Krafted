@@ -1,0 +1,100 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.swarm.move": {
+			"loop": true,
+			"bones": {
+				"1": {
+					"position": ["math.cos(query.life_time * 680.0 + 317.0) * 5.0", " math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "-4+math.sin(query.life_time * -680.0 + 117.0) * 5.0"]
+				},
+				"2": {
+					"position": ["-2+math.cos(query.life_time * -680.0 + 317.0) * 5.0", "1+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "-5+math.sin(query.life_time * 680.0 + 117.0) * -5.0"]
+				},
+				"3": {
+					"position": ["-3+math.cos(query.life_time * 680.0 + 317.0) * -5.0", " math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "-6+math.sin(query.life_time * -680.0 + 117.0) * 5.0"]
+				},
+				"4": {
+					"position": ["-2+math.cos(query.life_time * -680.0 + -317.0) * 5.0", "3+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "-2+math.sin(query.life_time * -680.0 + 117.0) * -5.0"]
+				},
+				"5": {
+					"position": ["-2+math.cos(query.life_time * -680.0 + -317.0) * 5.0", "3+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "-2+math.sin(query.life_time * 680.0 + 117.0) * 5.0"]
+				},
+				"6": {
+					"position": ["-2+math.cos(query.life_time * 680.0 + -317.0) * 5.0", "1+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "-5+math.sin(query.life_time * 680.0 + -117.0) * 5.0"]
+				},
+				"7": {
+					"position": ["-2+math.cos(query.life_time * -680.0 + -317.0) * 5.0", "2+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "4+math.sin(query.life_time * -680.0 + -117.0) * 5.0"]
+				},
+				"8": {
+					"position": ["-2+math.cos(query.life_time * 680.0 + -317.0) * 5.0", "2+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "4+math.sin(query.life_time * 680.0 + -117.0) * 5.0"]
+				},
+				"9": {
+					"position": ["-2+math.cos(query.life_time * 680.0 + 317.0) * 5.0", "2+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "4+math.sin(query.life_time * 680.0 + -117.0) * 5.0"]
+				},
+				"10": {
+					"position": ["-2+math.cos(query.life_time * -680.0 + 317.0) * 5.0", "7+ math.cos((9 * 1.5 + query.life_time * 40.0) * 14.32)", "math.sin(query.life_time * -680.0 + 117.0) * 5.0"]
+				},
+				"bone2": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone6": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone3": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone4": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone5": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone7": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone8": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone9": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone10": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone11": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone12": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone13": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone14": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone15": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone16": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone17": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone18": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				},
+				"bone19": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * -45.0"]
+				},
+				"bone20": {
+					"rotation": [0, 0, "math.cos(query.life_time * 5000) * 45.0"]
+				}
+			}
+		}
+	}
+}

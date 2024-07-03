@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:abyssal_lurker",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "abyssal_lurker",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

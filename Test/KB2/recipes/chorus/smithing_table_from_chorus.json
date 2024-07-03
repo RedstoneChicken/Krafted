@@ -1,0 +1,28 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "korbon:smithing_table_from_chorus"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "##", 
+            "~~",
+            "~~"
+        ],
+        "key": {
+            "~": {
+                "item": "korbon:chorus_planks"
+            },
+            "#": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": [
+			{
+				"item": "minecraft:smithing_table",
+				"count": 1
+			}
+		]
+    }
+}

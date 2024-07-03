@@ -1,0 +1,29 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.void_glider.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.05
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.05
+				}
+			}
+		}
+	}
+}

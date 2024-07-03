@@ -1,0 +1,91 @@
+//bridge-file-version: #92
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:ori_blossom"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					10,
+					12
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ori_blossom",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.ori_blossom",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"minecraft:water"
+						]
+					}
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0.7,
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:flammable": {
+				"burn_odds": 30,
+				"flame_odds": 30
+			},
+			"minecraft:map_color": "#A944C1",
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:on_interact": {
+				"event": "particle"
+			},
+			"minecraft:breathability": "air",
+			"minecraft:on_player_destroyed": {
+				"event": "particle"
+			},
+			"minecraft:on_fall_on": {
+				"event": "particle",
+				"min_fall_distance": 2
+			},
+			"minecraft:loot": "loot_tables/blocks/ori_blossom.json"
+		},
+		"events": {
+			"particle": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:ori_blossom ~~~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

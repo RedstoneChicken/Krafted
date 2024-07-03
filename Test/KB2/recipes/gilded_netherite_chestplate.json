@@ -1,0 +1,30 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:gilded_netherite_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"GGG",
+			"GNG",
+			"GGG"
+		],
+		"key": {
+			"G": {
+				"item": "nether:gilded_scrap"
+			},
+			"N": {
+				"item": "minecraft:netherite_chestplate"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:gilded_netherite_chestplate"
+			}
+		]
+	}
+}

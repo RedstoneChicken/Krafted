@@ -1,0 +1,27 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:endslate_furnace"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SSS",
+			"S S",
+			"SSS"
+		],
+		"key": {
+			"S": {
+				"item": "end:endslate"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:furnace"
+			}
+		]
+	}
+}

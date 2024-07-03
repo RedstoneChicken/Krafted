@@ -1,0 +1,58 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:ghast_ball",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "ghast_ball"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value":  "Ghast Ball\n§8Common\n§7Cooldown: 25\nLevel: 1"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:cooldown": {
+				"category": "ghast_ball",
+				"duration": 25
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "fire",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			  
+			"fire": {
+				  "run_command": {
+     "command": [
+     		"playsound mob.ghast.fireball @a[r=10]",
+        "playsound mob.ghast.scream @a[r=25]"
+     ],
+     "target": "holder"
+    },
+			"swing":{
+            },
+   "shoot":{
+     "launch_power":1,
+     "angle_offset":"query.cardinal_facing",
+     "projectile":"kna:fireball"
+   },
+			"damage": {
+					"type": "magic",
+					"amount": 1
+				}
+			}
+		}
+	}
+}

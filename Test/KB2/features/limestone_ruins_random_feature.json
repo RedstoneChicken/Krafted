@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:limestone_ruins_random_feature"
+    },
+    "features": [
+      [ "honkit26113:limestone_ruins_5x5_1_feature", 1 ],
+      [ "honkit26113:limestone_ruins_5x5_2_feature", 1 ],
+      [ "honkit26113:limestone_ruins_5x5_3_feature", 1 ],
+      [ "honkit26113:limestone_ruins_5x5_4_feature", 1 ],
+      [ "honkit26113:limestone_ruins_6x6_1_feature", 1 ]
+    ]
+  }
+}

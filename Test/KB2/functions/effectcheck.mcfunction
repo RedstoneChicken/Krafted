@@ -1,0 +1,1 @@
+execute @r[tag=!baubleeffect,tag=!androideffect,tag=!caseseffect,tag=!draconiceffect,tag=!petseffect] ~ ~ ~ function autoeffect

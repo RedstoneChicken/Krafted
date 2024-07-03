@@ -1,0 +1,66 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:end_campfire"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "end_campfire",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.end_campfire",
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					7,
+					16
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					7,
+					16
+				]
+			},
+			"minecraft:loot": "loot_tables/end_campfire.json",
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0.5,
+					1
+				],
+				"on_tick": {
+					"event": "particle"
+				}
+			}
+		},
+		"events": {
+			"particle": {
+				"run_command": {
+					"command": [
+						"particle end:poisoneous_smoke ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

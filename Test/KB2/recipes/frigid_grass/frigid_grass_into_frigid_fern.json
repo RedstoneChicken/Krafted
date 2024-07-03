@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:frigid_grass_into_frigid_fern"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:frigid_grass_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:frigid_fern_item",
+      "count": 1
+    }
+  }
+}

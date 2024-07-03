@@ -1,0 +1,184 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "num_to_select": 6,
+          "trades": [
+            {
+              "max_uses": 12,
+              "wants": [
+                {
+                  "item": "minecraft:wheat_seeds",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "honkit26113:pebbles_item",
+                      "quantity": 16
+                    },
+                    {
+                      "item": "honkit26113:cobblestone_pebbles_item",
+                      "quantity": 16
+                    },
+                    {
+                      "item": "honkit26113:frosted_pebbles_item",
+                      "quantity": 16
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 5,
+              "wants": [
+                {
+                  "item": "minecraft:apple",
+                  "quantity": 12
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:crystallized_ice",
+                  "quantity": 8
+                }
+              ]
+            },
+            {
+              "max_uses": 3,
+              "wants": [
+                {
+                  "item": "minecraft:carrot",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:iron_ingot",
+                      "quantity": 5
+                    },
+                    {
+                      "item": "minecraft:raw_iron",
+                      "quantity": 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 3,
+              "wants": [
+                {
+                  "item": "minecraft:potato",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:coal",
+                  "quantity": 10
+                }
+              ]
+            },
+            {
+              "max_uses": 3,
+              "wants": [
+                {
+                  "item": "minecraft:log",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:gold_ingot",
+                      "quantity": 5
+                    },
+                    {
+                      "item": "minecraft:raw_gold",
+                      "quantity": 6
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 2,
+              "wants": [
+                {
+                  "item": "minecraft:honey_bottle",
+                  "quantity": 2
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:diamond",
+                      "quantity": 3
+                    },
+                    {
+                      "item": "minecraft:diamond",
+                      "quantity": 4
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "max_uses": 3,
+              "wants": [
+                {
+                  "item": "minecraft:red_flower",
+                  "quantity": 6
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:ice_crystal_item",
+                  "quantity": 7
+                }
+              ]
+            },
+            {
+              "max_uses": 6,
+              "wants": [
+                {
+                  "item": "minecraft:coral:0",
+                  "quantity": 3
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:ice_shard",
+                  "quantity": 12
+                }
+              ]
+            },
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "minecraft:cactus",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "honkit26113:dripping_icicle_item",
+                  "quantity": 16
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

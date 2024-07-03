@@ -1,0 +1,33 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:raw_cheese_pizza"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#o",
+			"~~"
+		],
+		"key": {
+			"o": {
+				"item": "strat:tomato"
+			},
+			"#": {
+				"item": "strat:cheese"
+			},
+			"~": {
+				"item": "strat:dough"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:raw_cheese_pizza",
+				"count": 1
+			}
+		]
+	}
+}

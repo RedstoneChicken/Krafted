@@ -1,0 +1,32 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:soul_campfire_from_stripped_crooked_stem"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " A ",
+            "ABA",
+            "CCC"
+        ],
+        "key": {
+            "A": {
+                "item": "stick"
+            },
+            "B": {
+                "item": "soul_soil"
+            },
+            "C": {
+                "item": "honkit26113:crooked_stem_stripped"
+            }
+        },
+        "result": {
+            "item": "soul_campfire",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

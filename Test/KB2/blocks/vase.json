@@ -1,0 +1,48 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:vase"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:friction": 0.6,
+			"minecraft:map_color": "#000000",
+			"minecraft:geometry": "geometry.vase",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vase",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					9,
+					12,
+					9
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					12,
+					10
+				]
+			},
+			"minecraft:unwalkable": true,
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

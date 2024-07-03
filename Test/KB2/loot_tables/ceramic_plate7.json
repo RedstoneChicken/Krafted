@@ -1,0 +1,14 @@
+//bridge-file-version: #22
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:fish_and_chips2"
+				}
+			]
+		}
+	]
+}

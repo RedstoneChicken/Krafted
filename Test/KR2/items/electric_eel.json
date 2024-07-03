@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:electric_eel",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "electric_eel",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

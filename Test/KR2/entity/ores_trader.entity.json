@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "oh:ores_trader",
+			"materials": {
+				"default": "wandering_trader"
+			},
+			"textures": {
+				"default": "textures/entity/ores_trader"
+			},
+			"geometry": {
+				"default": "geometry.ores_trader"
+			},
+			"scripts": {
+				"scale": "0.9375"
+			},
+			"animations": {
+				"general": "animation.ores_trader.general",
+				"look_at_target": "animation.common.look_at_target",
+				"raise_arms": "animation.ores_trader.raise_arms",
+				"move": "animation.ores_trader.move"
+			},
+			"animation_controllers": [
+				{
+					"general": "controller.animation.villager.general"
+				},
+				{
+					"raise_arms": "controller.animation.villager_v2.raise_arms"
+				},
+				{
+					"move": "controller.animation.villager.move"
+				}
+			],
+			"render_controllers": ["controller.render.default"],
+			"spawn_egg": {
+				"base_color": "#35a75b",
+				"overlay_color": "#fffc00"
+			}
+		}
+	}
+}

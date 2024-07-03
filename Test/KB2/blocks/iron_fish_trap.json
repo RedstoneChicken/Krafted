@@ -1,0 +1,134 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "azc:iron_fish_trap",
+      "is_experimental": false,
+      "category": "Items",
+      "properties": {
+        "azc:trap": [1, 2]
+      }
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "items"
+      },
+      "minecraft:loot": "loot_tables/blocks/iron_fish_trap.json",
+      "minecraft:destroy_time": 0.9,
+      "minecraft:map_color": "#FFFFFF",
+      "minecraft:block_light_absorption": 0,
+      "minecraft:block_light_emission": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "fish_trap_iron",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:explosion_resistance": 0.6,
+      "minecraft:on_player_placing": {
+        "event": "place"
+      }
+    },
+    "events": {
+      "place": {
+        "set_block_property": {
+          "azc:trap": 1
+        }
+      },
+      "bait": {
+        "sequence": [
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:minnow')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
+            },
+            "set_block_property": {
+              "azc:trap": 2
+            }
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:leech')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
+            },
+            "set_block_property": {
+              "azc:trap": 2
+            }
+          },
+          {
+            "condition": "query.is_item_name_any('slot.weapon.mainhand',0,'azc:worm')",
+            "decrement_stack": {},
+            "run_command": {
+              "command": ["playsound block.itemframe.add_item @a [r=5]"]
+            },
+            "set_block_property": {
+              "azc:trap": 2
+            }
+          }
+        ]
+      },
+      "fish": {
+        "randomize": [
+          {
+            "weight": 95,
+            "condition": "query.block_neighbor_has_any_tag(1,0,0,'water') && query.block_neighbor_has_any_tag(-1,0,0,'water') && query.block_neighbor_has_any_tag(0,0,1,'water') && query.block_neighbor_has_any_tag(0,0,-1,'water')",
+            "run_command": {
+              "command": [
+                "particle minecraft:water_wake_particle ~~1~",
+                "playsound random.splash @a [r=10] ~~~ 0.5",
+                "summon azc:trap_double_loot ~ ~1 ~",
+                "kill @e [type=azc:trap_double_loot,c=1,r=1]"
+              ]
+            }
+          },
+          {
+            "weight": 5,
+            "run_command": {
+              "command": ["playsound random.break @a [r=10] ~~~ 0.5"]
+            },
+            "set_block_property": {
+              "azc:trap": 1
+            }
+          }
+        ]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('azc:trap') == 1",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "fish_trap",
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:on_interact": {
+            "event": "bait"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('azc:trap') == 2",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "fish_trap_iron",
+              "render_method": "alpha_test"
+            }
+          },
+          "minecraft:ticking": {
+            "looping": true,
+            "range": [17.5, 25.0],
+            "on_tick": {
+              "event": "fish",
+              "target": "self"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

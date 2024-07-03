@@ -1,0 +1,46 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:weather_scroll_clear",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"weather_scroll"
+         },
+         "minecraft:display_name":{
+            "value":"Weather Scroll\n§eClear\n§7Single Use"
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"effect",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "effect":{
+            "run_command":{
+               "command":[
+                  "playsound random.enderchestopen @a[r=10]",
+                  "tellraw @a {\"rawtext\":[{\"text\":\"Today's Weather: Clear\"}]}",
+                  "weather clear"
+               ],
+               "target":"holder"
+            },
+            "decrement_stack":{
+               "ignore_game_mode":false
+            }
+         }
+      }
+   }
+}

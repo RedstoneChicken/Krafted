@@ -1,0 +1,207 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:tower_2_feature_rule",
+			"places_feature": "minecraft:tower_2_feature_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "ocean"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "river"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "lakes"
+						},
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "birch"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pine_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pine_normal"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pumpkin_plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "autumn_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "maple_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "coniferous"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "deciduous"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "tall_roofed"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pendula"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "mystic_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "azalea_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "dandelion_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "marsh"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "prairie"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "redwood_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "shrubland"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "lavender_grove"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "savanna"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "dark_oak"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "jungle"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "taiga"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "tropical_rainforest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "wakanda"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "swamp"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "ice_plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "bog"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "cherry_blossom"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.003,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz) + -25",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

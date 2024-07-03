@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "oh:cavern_creeper",
+			"materials": {
+				"default": "entity_emissive_alpha",
+				"charged": "entity_emissive_alpha",
+				"light": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/cavern_creeper",
+				"light": "textures/entity/cavern_creeper_light",
+				"charged": "textures/entity/creeper/creeper_armor_4"
+			},
+			"geometry": {
+				"default": "geometry.cavern_creeper",
+				"charged": "geometry.cavern_creeper.charged"
+			},
+			"spawn_egg": {
+				"base_color": "#301d3b",
+				"overlay_color": "#5c1956"
+			},
+			"scripts": {
+				"pre_animation": ["variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;", "variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;", "variable.swelling_scale2 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.1 + 1.0) / variable.wobble;", "variable.leg_rot = Math.cos(query.modified_distance_moved * 38.17326) * 80.22 * query.modified_move_speed;", "variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);"],
+				"animate": [
+					"controller",
+					"creeper_head"
+				]
+			},
+			"animations": {
+				"idle": "animation.all_creeper.idle",
+				"walk": "animation.all_creeper.walk",
+				"attack": "animation.creeper.attack",
+				"controller": "controller.animation.creeper",
+				"creeper_head": "animation.common.look_at_target",
+				"creeper_swelling": "animation.badlands_creeper.swelling"
+			},
+			"render_controllers": [
+				"controller.render.creeper"
+				
+			]
+		}
+	}
+}

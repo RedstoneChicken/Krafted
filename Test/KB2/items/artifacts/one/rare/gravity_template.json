@@ -1,0 +1,47 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:gravity_template",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "gravity_template"
+			},
+			"minecraft:display_name": {
+			 "value": "Gravity Template\n§1Rare\n§7Cooldown: 28\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "gravity_template",
+				"duration": 28
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+         		"playsound beacon.activate @a[r=10] ~~~",
+            "effect @s levitation 8 4 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

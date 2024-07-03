@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:double_compressed_lapis_block_to_tripple_compressed_lapis_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "cc:double_compressed_lapis_block"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:tripple_compressed_lapis_block",
+				"count": 1
+			}
+		]
+	}
+}

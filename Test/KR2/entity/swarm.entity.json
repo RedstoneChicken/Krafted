@@ -1,0 +1,34 @@
+//bridge-file-version: #16
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "korbon:swarm",
+			"materials": {
+				"default": "zombie"
+			},
+			"textures": {
+				"default": "textures/entity/swarm"
+			},
+			"geometry": {
+				"default": "geometry.swarm"
+			},
+			"spawn_egg": {
+				"base_color": "#755381",
+				"overlay_color": "#62476B"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"enable_attachables": true,
+			"animations": {
+				"move": "animation.swarm.move"
+			},
+			"render_controllers": [
+				"controller.render.zombie"
+			]
+		}
+	}
+}

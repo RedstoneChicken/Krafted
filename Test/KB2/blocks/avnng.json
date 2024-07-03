@@ -1,0 +1,116 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:avnng"
+		},
+		"components": {
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "caf:randomizedgrow"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "caf:randomizedgrow"
+				}
+			}
+		},
+		"events": {
+			"caf:grow00": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:anchortreevine2",
+						"setblock ~ ~-1 ~ caf:anchortreevine3"
+					]
+				}
+			},
+			"caf:grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:anchortreevine1",
+						"setblock ~ ~-1 ~ caf:anchortreevine2",
+						"setblock ~ ~-2 ~ caf:anchortreevine3"
+					]
+				}
+			},
+			"caf:grow02": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:anchortreevine1",
+						"setblock ~ ~-1 ~ caf:anchortreevine1",
+						"setblock ~ ~-2 ~ caf:anchortreevine1",
+						"setblock ~ ~-3 ~ caf:anchortreevine1",
+						"setblock ~ ~-4 ~ caf:anchortreevine2",
+						"setblock ~ ~-5 ~ caf:anchortreevine3"
+					]
+				}
+			},
+			"caf:grow03": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:anchortreevine1",
+						"setblock ~ ~-1 ~ caf:anchortreevine1",
+						"setblock ~ ~-2 ~ caf:anchortreevine1",
+						"setblock ~ ~-3 ~ caf:anchortreevine1",
+						"setblock ~ ~-4 ~ caf:anchortreevine1",
+						"setblock ~ ~-5 ~ caf:anchortreevine1",
+						"setblock ~ ~-6 ~ caf:anchortreevine2",
+						"setblock ~ ~-7 ~ caf:anchortreevine3"
+					]
+				}
+			},
+			"caf:grow04": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:anchortreevine1",
+						"setblock ~ ~-1 ~ caf:anchortreevine1",
+						"setblock ~ ~-2 ~ caf:anchortreevine1",
+						"setblock ~ ~-3 ~ caf:anchortreevine1",
+						"setblock ~ ~-4 ~ caf:anchortreevine1",
+						"setblock ~ ~-5 ~ caf:anchortreevine1",
+						"setblock ~ ~-6 ~ caf:anchortreevine1",
+						"setblock ~ ~-7 ~ caf:anchortreevine1",
+						"setblock ~ ~-8 ~ caf:anchortreevine2",
+						"setblock ~ ~9- ~ caf:anchortreevine3"
+					]
+				}
+			},
+			"caf:randomizedgrow": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow00"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow02"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow03"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow04"
+						}
+					}
+				]
+			}
+		}
+	}
+}

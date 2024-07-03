@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_perch_stone"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:stone_fillet_knife"
+      },
+      "B": {
+        "item": "azc:perch"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi"
+      },
+      {
+        "item": "azc:stone_fillet_knife"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "korbon:select_twisted_chorus_tree_feature"
+		},
+		"features": [
+			[
+				"korbon:chorus_tree_1_twisted_feature",
+				2
+			],
+			[
+				"korbon:chorus_tree_2_twisted_feature",
+				2
+			],
+			[
+				"korbon:chorus_tree_3_twisted_feature",
+				1
+			],
+			[
+				"korbon:chorus_tree_4_twisted_feature",
+				1
+			],
+			[
+				"korbon:chorus_tree_5_twisted_feature",
+				2
+			],
+			[
+				"korbon:chorus_tree_6_twisted_feature",
+				1
+			]
+		]
+	}
+}

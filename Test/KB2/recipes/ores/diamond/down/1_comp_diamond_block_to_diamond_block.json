@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:compressed_diamond_block_to_diamond_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:compressed_diamond_block"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:diamond_block",
+				"count": 9
+			}
+		]
+	}
+}

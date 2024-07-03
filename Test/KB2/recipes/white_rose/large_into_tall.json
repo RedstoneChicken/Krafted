@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_white_rose_into_tall_white_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:white_rose_large_item"}],"result":{"item":"ff:white_rose_tall_item","count":2}}}

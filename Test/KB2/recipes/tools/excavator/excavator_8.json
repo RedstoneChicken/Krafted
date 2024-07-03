@@ -1,0 +1,38 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:excavator_8"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" ~#",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:stone_excavator_head"
+			},
+			"~": {
+				"item": "strat:stone_large_plate"
+			},
+			"o": {
+				"item": "strat:stone_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:stone_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:excavator_8",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

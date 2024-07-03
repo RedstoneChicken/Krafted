@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "neptunium_ingot_from_fillet_knife"
+    },
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "azc:neptunium_fillet_knife",
+    "output": "azc:neptunium_ingot"
+  }
+}

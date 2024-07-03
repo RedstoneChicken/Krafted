@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:manyullyn_hammer_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Manyullyn Hammer Head"
+			},
+			"minecraft:icon": {
+				"texture": "manyullyn_hammer_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

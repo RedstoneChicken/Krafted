@@ -1,0 +1,37 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "ff:moonflower_grass",
+			"places_feature": "minecraft:jungle_tall_grass_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of":[
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "plains"
+				}
+			]
+			}
+			]
+		},
+		"distribution": {
+			"iterations": 150,
+			"scatter_chance": "variable.is_legacy ? 0.0 : 100.0",
+			"x": {
+				"distribution": "uniform",
+				"extent": [0, 16]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [0, 16]
+			},
+			"y": "t.in = q.noise(v.worldx / 1024, v.worldz / 1024) + q.noise(v.worldx, v.worldz) * 0.05; return (t.in > 0.5 && t.in < 0.7 ? q.heightmap(v.worldx, v.worldz) : -65);"
+		}
+	}
+}

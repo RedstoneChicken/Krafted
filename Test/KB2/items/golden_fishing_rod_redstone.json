@@ -1,0 +1,68 @@
+{
+  "format_version": "1.18.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:golden_fishing_rod_redstone",
+      "category": "commands"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.equipment"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:durability": {
+        "max_durability": 375
+      },
+      "minecraft:enchantable": {
+        "slot": "fishing_rod",
+        "value": 8
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "fish"
+        }
+      },
+      "minecraft:cooldown": {
+        "category": "fishing_rod",
+        "duration": 15
+      },
+      "minecraft:icon": {
+        "texture": "golden_fishing_rod_redstone"
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": ["minecraft:gold_ingot"],
+            "repair_amount": 93
+          },
+          {
+            "items": ["azc:golden_fishing_rod_template"],
+            "repair_amount": 186
+          }
+        ]
+      },
+      "minecraft:display_name": {
+        "value": "Golden Fishing Rod\n§7Redstone Hook"
+      }
+    },
+    "events": {
+      "fish": {
+        "swing": {},
+        "run_command": {
+          "command": ["playsound random.bow @a [r=10] ~~~ 0.5"]
+        },
+        "shoot": {
+          "projectile": "azc:redstone_hook",
+          "launch_power": 1,
+          "angle_offset": "query.cardinal_facing"
+        },
+        "damage": {
+          "type": "durability",
+          "amount": 1,
+          "target": "self"
+        }
+      }
+    }
+  }
+}

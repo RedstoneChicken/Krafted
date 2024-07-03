@@ -1,0 +1,1303 @@
+{
+	"format_version" : "1.18.20",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:spider",
+			"is_spawnable" : true,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"minecraft:spider_jockey" : {
+				"minecraft:addrider" : {
+					"entity_type" : "minecraft:skeleton"
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "skeleton" ],
+					"seats" : {
+						"position" : [ 0, 0.54, 0 ]
+					}
+				}
+			},
+			"minecraft:spider_stray_jockey" : {
+				"minecraft:addrider" : {
+					"entity_type" : "minecraft:skeleton.stray"
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "skeleton" ],
+					"seats" : {
+						"position" : [ 0, 0.54, 0 ]
+					}
+				}
+			},
+			"minecraft:spider_wither_jockey" : {
+				"minecraft:addrider" : {
+					"entity_type" : "minecraft:skeleton.wither"
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "skeleton" ],
+					"seats" : {
+						"position" : [ 0, 0.54, 0 ]
+					}
+				}
+			},
+			"minecraft:spider_neutral" : {
+				"minecraft:environment_sensor" : {
+					"triggers" : {
+						"filters" : {
+							"test" : "is_brightness",
+							"operator" : "<",
+							"value" : 0.49
+						},
+						"event" : "minecraft:become_hostile"
+					}
+				},
+				"minecraft:on_target_acquired" : {
+					"event" : "minecraft:become_angry"
+				}
+			},
+			"minecraft:spider_hostile" : {
+				"minecraft:environment_sensor" : {
+					"triggers" : {
+						"filters" : {
+							"test" : "is_brightness",
+							"operator" : ">",
+							"value" : 0.49
+						},
+						"event" : "minecraft:become_neutral"
+					}
+				},
+				"minecraft:on_target_acquired" : {
+					"event" : "minecraft:become_angry"
+				},
+				"minecraft:behavior.nearest_attackable_target" : {
+					"priority" : 2,
+					"must_see" : true,
+					"attack_interval" : 5,
+					"entity_types" : [
+						{
+							"filters" : {
+								"any_of" : [
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "player"
+									},
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "snowgolem"
+									},
+									{
+										"test" : "is_family",
+										"subject" : "other",
+										"value" : "irongolem"
+									}
+								]
+							},
+							"max_dist" : 16
+						}
+					]
+				}
+			},
+			"minecraft:spider_angry" : {
+				"minecraft:angry" : {
+					"duration" : 10,
+					"duration_delta" : 3,
+					"calm_event" : {
+						"event" : "minecraft:become_calm",
+						"target" : "self"
+					}
+				},
+				"minecraft:behavior.leap_at_target" : {
+					"priority" : 4,
+					"yd" : 0.4,
+					"must_be_on_ground" : false
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"track_target" : true,
+					"reach_multiplier" : 0.8
+				}
+			},
+			"elite_spider" : {
+				"minecraft:health" : {
+					"value" : 26,
+					"max" : 26
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/elite_spider.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "20"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Trolling Spider The NASA"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Armoured Spider The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Unseen Spider Of Stalking"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Dark Spider The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 10
+				}
+			},
+			"elite_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§bElite Enderborn Spider The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 0.05,
+					"light_teleport_chance" : 0.05
+				}
+			},
+			"elite_exhaust" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Exhausting Spider Of Fatigue"
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"track_target" : true,
+					"reach_multiplier" : 0.8,
+					"on_attack" : {
+						"event" : "exhaust"
+					}
+				}
+			},
+			"elite_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§bElite Innerly Peaceful Spider Of Equilibrium"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 0.0
+				}
+			},
+			"elite_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Poisonous Spider Of Venom"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 10
+				}
+			},
+			"elite_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Quicksand Spider Of WTF Imba"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_regen" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Regenerating Spider Of First Aid"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "regeneration",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Starving Spider Of Hunger"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 15
+				}
+			},
+			"elite_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Sprinting Spider Of Bolting"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Striking Spider Of Lightning"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Apathetic Spider Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Withering Spider Doomskull"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 10
+				}
+			},
+			"ultra_spider" : {
+				"minecraft:health" : {
+					"value" : 36,
+					"max" : 36
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/ultra_spider.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "40"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Thumping Spider Of Mission Control"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Defensive Spider Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Stalking Spider The Unseen"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Eclipsed Spider The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 40,
+					"name" : "§eUltra Tricky Spider The Enderborn"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 0.5,
+					"light_teleport_chance" : 0.5
+				}
+			},
+			"ultra_exhaust" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Exhausting Spider The Drainer"
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"track_target" : true,
+					"reach_multiplier" : 0.8,
+					"on_attack" : {
+						"event" : "exhaust"
+					}
+				}
+			},
+			"ultra_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 40,
+					"name" : "§eUltra Totally Zen Spider Of Inner Peace"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 0.0
+				}
+			},
+			"ultra_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Despoiling Spider The Cancerous"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Quicksand Spider The Slowing B****"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_regen" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Healing Spider Of First Aid"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "regeneration",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Hungering Spider The Mutated"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Charging Spider The Swift One"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Thundering Spider Of Striking"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Apathetic Spider Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Dark Lord Spider Doomskull"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 15
+				}
+			},
+			"infernal_spider" : {
+				"minecraft:health" : {
+					"value" : 46,
+					"max" : 46
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/infernal_spider.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "60"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Byebye Spider Of WEEEE"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Turtling Spider Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Hunting Spider The Predator"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Shadowkin Spider Of Darkness"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§cInfernal Enderborn Spider The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1,
+					"light_teleport_chance" : 1
+				}
+			},
+			"infernal_exhaust" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Draining Spider Of Fatigue"
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"track_target" : true,
+					"reach_multiplier" : 0.8,
+					"on_attack" : {
+						"event" : "exhaust"
+					}
+				}
+			},
+			"infernal_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§cInfernal Ronin Spider The Zen Master"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 0.0
+				}
+			},
+			"infernal_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Stinging Spider The Deadly Chalice"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Slowing Spider Of You-Can't-Run"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_regen" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Nigh Unkillable Spider Of First Aid"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "regeneration",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Starving Spider The Pale Rider"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Swift Spider Of Being In Your Face"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Electrified Spider The Raiden"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Apathetic Spider Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Sith Lord Spider Of Dark Skulls"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 20
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:experience_reward" : {
+				"on_death" : "query.last_hit_by_player ? 5 : 0"
+			},
+			"minecraft:nameable" : {},
+			"minecraft:type_family" : {
+				"family" : [ "spider", "monster", "mob", "arthropod" ]
+			},
+			"minecraft:breathable" : {
+				"total_supply" : 15,
+				"suffocate_time" : 0
+			},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/spider.json"
+			},
+			"minecraft:collision_box" : {
+				"width" : 1.4,
+				"height" : 0.9
+			},
+			"minecraft:health" : {
+				"value" : 16,
+				"max" : 16
+			},
+			"minecraft:hurt_on_condition" : {
+				"damage_conditions" : [
+					{
+						"filters" : {
+							"test" : "in_lava",
+							"subject" : "self",
+							"operator" : "==",
+							"value" : true
+						},
+						"cause" : "lava",
+						"damage_per_tick" : 4
+					}
+				]
+			},
+			"minecraft:movement" : {
+				"value" : 0.3
+			},
+			"minecraft:navigation.climb" : {
+				"can_path_over_water" : true
+			},
+			"minecraft:movement.basic" : {},
+			"minecraft:jump.static" : {},
+			"minecraft:can_climb" : {},
+			"minecraft:attack" : {
+				"damage" : 2
+			},
+			"minecraft:despawn" : {
+				"despawn_from_distance" : {}
+			},
+			"minecraft:behavior.float" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.mount_pathing" : {
+				"priority" : 5,
+				"speed_multiplier" : 1.25,
+				"target_dist" : 0.0,
+				"track_target" : true
+			},
+			"minecraft:behavior.random_stroll" : {
+				"priority" : 6,
+				"speed_multiplier" : 0.8
+			},
+			"minecraft:behavior.look_at_player" : {
+				"priority" : 7,
+				"look_distance" : 6.0,
+				"probability" : 0.02
+			},
+			"minecraft:behavior.random_look_around" : {
+				"priority" : 7
+			},
+			"minecraft:behavior.hurt_by_target" : {
+				"priority" : 1
+			},
+			"minecraft:rideable" : {
+				"seat_count" : 1,
+				"family_types" : [ "zombie" ],
+				"seats" : {
+					"position" : [ 0.0, 0.54, -0.1 ]
+				}
+			},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 9500,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"randomize" : [
+							{
+								"weight" : 80,
+								"filters" : {
+									"all_of" : [
+										{
+											"test" : "is_daytime",
+											"value" : false
+										},
+										{
+											"test" : "is_snow_covered",
+											"value" : true
+										},
+										{
+											"test" : "is_underground",
+											"value" : false
+										}
+									]
+								},
+								"remove" : {},
+								"add" : {
+									"component_groups" : [ "minecraft:spider_stray_jockey", "minecraft:spider_neutral" ]
+								}
+							},
+							{
+								"weight" : 80,
+								"filters" : {
+									"test" : "is_biome",
+									"value" : "the_nether"
+								},
+								"remove" : {},
+								"add" : {
+									"component_groups" : [ "minecraft:spider_wither_jockey", "minecraft:spider_neutral" ]
+								}
+							},
+							{
+								"weight" : 750,
+								"filters" : {
+									"any_of" : [
+										{
+											"test" : "is_daytime",
+											"value" : false
+										},
+										{
+											"test" : "is_underground",
+											"value" : true
+										}
+									]
+								},
+								"remove" : {},
+								"add" : {
+									"component_groups" : [ "minecraft:spider_jockey", "minecraft:spider_neutral" ]
+								}
+							}
+						]
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_blastoff" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_bullwark" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_cloaking" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_darkness" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_ender" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_exhaust" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_ninja" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_poisonous" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_quicksand" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_regen" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_sapper" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_sprint" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_storm" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_weakness" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "elite_spider", "elite_wither" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_blastoff" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_bullwark" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_cloaking" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_darkness" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_ender" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_exhaust" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_ninja" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_poisonous" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_quicksand" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_regen" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_sapper" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_sprint" ]
+						}
+					},
+					{
+						"weight" : 50,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_storm" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_weakness" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "ultra_spider", "ultra_wither" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_blastoff" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_bullwark" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_cloaking" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_darkness" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_ender" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_exhaust" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_ninja" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_poisonous" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_quicksand" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_regen" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_sapper" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_sprint" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_storm" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_weakness" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "minecraft:spider_neutral", "infernal_spider", "infernal_wither" ]
+						}
+					}
+				]
+			},
+			"minecraft:become_hostile" : {
+				"remove" : {
+					"component_groups" : [ "minecraft:spider_neutral" ]
+				},
+				"add" : {
+					"component_groups" : [ "minecraft:spider_hostile" ]
+				}
+			},
+			"minecraft:become_neutral" : {
+				"remove" : {
+					"component_groups" : [ "minecraft:spider_hostile" ]
+				},
+				"add" : {
+					"component_groups" : [ "minecraft:spider_neutral" ]
+				}
+			},
+			"minecraft:become_angry" : {
+				"add" : {
+					"component_groups" : [ "minecraft:spider_angry" ]
+				}
+			},
+			"minecraft:become_calm" : {
+				"remove" : {
+					"component_groups" : [ "minecraft:spider_angry" ]
+				}
+			},
+			"blastoff" : {
+				"run_command" : {
+					"command" : [ "effect @a [m=s,r=20] levitation 1 14" ]
+				}
+			},
+			"exhaust" : {
+				"run_command" : {
+					"command" : [ "effect @a [m=s,r=20] clear" ]
+				}
+			},
+			"storm" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=20] ~~~ summon lightning_bolt" ]
+				}
+			}
+		}
+	}
+}

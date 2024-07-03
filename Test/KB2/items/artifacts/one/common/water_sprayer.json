@@ -1,0 +1,50 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:water_sprayer",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "water_sprayer"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value": "Water Sprayer\n§8Common\n§7Cooldown: 12\nLevel: 1"
+			 },
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:cooldown": {
+				"category": "water_sprayer",
+				"duration": 12
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "fire",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"fire": {
+			"swing":{
+            },
+   "shoot":{
+     "launch_power":1,
+     "angle_offset":"query.cardinal_facing",
+     "projectile":"splash_potion"
+   },
+			"damage": {
+					"type": "magic",
+					"amount": 0
+				}
+			}
+		}
+	}
+}

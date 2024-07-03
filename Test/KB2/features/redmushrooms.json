@@ -1,0 +1,31 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "rns:redmushrooms"
+		},
+		"places_block": {
+			"name": "rns:redmushrooms"
+		},
+		"may_replace": [
+			{
+				"name": "minecraft:air"
+			}
+		],
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_attach_to": {
+			"min_sides_must_attach": 1,
+			"bottom": [
+				"minecraft:grass",
+				"minecraft:stone",
+				"minecraft:dirt",
+				"minecraft:gravel",
+				"minecraft:mud",
+				"minecraft:mangrove_roots",
+				"minecraft:mycelium"
+			]
+		}
+	}
+}

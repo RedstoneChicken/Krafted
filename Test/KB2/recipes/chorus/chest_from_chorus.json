@@ -1,0 +1,25 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "korbon:chest_from_chorus"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "~~~", 
+            "~ ~",
+            "~~~"
+        ],
+        "key": {
+            "~": {
+                "item": "korbon:chorus_planks"
+            }
+        },
+        "result": [
+			{
+				"item": "minecraft:chest",
+				"count": 1
+			}
+		]
+    }
+}

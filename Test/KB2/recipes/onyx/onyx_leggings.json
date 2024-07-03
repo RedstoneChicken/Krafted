@@ -1,0 +1,25 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:onyx_leggings"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"X X",
+			"X X"
+		],
+		"key": {
+			"X": {
+				"item": "oh:onyx"
+			}
+		},
+		"result": {
+			"item": "oh:onyx_leggings"
+		}
+	}
+}

@@ -1,0 +1,332 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:item": {
+    "description": {
+      "category": "items",
+      "identifier": "azc:message_in_a_bottle"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "message_in_a_bottle"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.items"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:hand_equipped": false,
+      "minecraft:foil": false,
+      "minecraft:display_name": {},
+      "minecraft:on_use": {
+        "on_use": {
+          "event": "read"
+        }
+      }
+    },
+    "events": {
+      "read": {
+        "randomize": [
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Oh no! Your fish are escaping!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar There's a metal that obtained by... fishing?",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar I have to bottling up my messages since there's no post office",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Help me out from this bottle!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar My base destroyed, Please help me!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Hey you over there! I think i see you!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Serious, DON'T LITTER away your fishing junks!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Property of Churos-Cola",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Warning: This bottle may choking when eaten",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar If you get this message, I'm you from the future, DON'T eat the bottle",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar From Davy Jones...",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar 25.0000° N, 71.0000° W",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar It's Neptunium!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Don't stick with wooden fishing rod! Upgrade it!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Do you have Fish Allergy? Is it even exist?",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Whale Burger? Breads & Steak! Yum!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Do you fear death? Do you fear that dark abyss? All your deeds laid bare, All your sins punished, I can offer you... an escape",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Eat the bottle for free Neptuniums!",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Ow! I got a Sushi...",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar I'm eating the bottle",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar This bottle was EDIBLE",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Zhyuro, Add a mythological metal that powerful when underwater ~Dear Fans",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Zhyuro, Azureculture 5 when? ~Dear Fans",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Dear Fans, Hi! ~Zhyuro",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar I'm in love with Sushiverse",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar [ERROR]",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Here's one crazy feature, Pattern Labels ~Stratospheer",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar §o...The message magically fades from your hand...",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Look at me, Open your inventory, Then back to me, And now this message is NEPTUNIUMS! Nah just kidding, it's still a paper",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          },
+          {
+            "weight": 1,
+            "run_command": {
+              "command": [
+                "title @s actionbar Recycle the bottle for 5 Neptuniums",
+                "playsound random.glass @a [r=10] ~~~ 0.5"
+              ]
+            },
+            "decrement_stack": {}
+          }
+        ]
+      }
+    }
+  }
+}

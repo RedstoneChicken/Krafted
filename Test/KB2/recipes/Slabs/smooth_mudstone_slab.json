@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:smooth_mudstone_slab"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "RRR"
+    ],
+    "key": {
+      "R": {
+        "item": "cav:smooth_mudstone"
+      }
+    },
+    "result": {
+      "item": "cav:smooth_mudstone_slab",
+      "count": 6
+    }
+  }
+}

@@ -1,0 +1,952 @@
+//bridge-file-version: #0
+{
+	"minecraft:block": {
+		"description": {
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:state2": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13
+				]
+			},
+			"identifier": "strat:chopping_board"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.board",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.boardbread",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board1.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.boardbread1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board1.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.boardbread2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.boardchicken",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board3.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.boardchicken1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board3.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.boardchicken2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board4.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 7",
+				"components": {
+					"minecraft:geometry": "geometry.boardpork",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board5.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 8",
+				"components": {
+					"minecraft:geometry": "geometry.boardpork1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board5.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 9",
+				"components": {
+					"minecraft:geometry": "geometry.boardpork2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board6.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 10",
+				"components": {
+					"minecraft:geometry": "geometry.boardcheese",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board4",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board7.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 11",
+				"components": {
+					"minecraft:geometry": "geometry.boardcheese1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board4",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board7.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 12",
+				"components": {
+					"minecraft:geometry": "geometry.boardcheese2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board4",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board8.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 13",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board5",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board9.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 14",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board5",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board9.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board5",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board10.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board6",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board11.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board6",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board11.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board6",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board12.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board7",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board13.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board7",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board13.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 7",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board7",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board14.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 8",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board8",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board15.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 9",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza1",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board8",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board15.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state2') == 10",
+				"components": {
+					"minecraft:geometry": "geometry.boardpizza2",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "chopping_board8",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/chopping_board16.json"
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-5
+				],
+				"size": [
+					14,
+					1,
+					10
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-5
+				],
+				"size": [
+					14,
+					1,
+					10
+				]
+			},
+			"minecraft:geometry": "geometry.board",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chopping_board",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:explosion_resistance": 3,
+			"minecraft:map_color": "#70550D",
+			"minecraft:loot": "loot_tables/chopping_board.json",
+			"minecraft:on_placed": {
+				"event": "strat:commands"
+			},
+			"minecraft:on_interact": {
+				"event": "strat:interact"
+			},
+			"tag:wood": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"strat:commands": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false"
+							]
+						}
+					}
+				]
+			},
+			"strat:interact": {
+				"sequence": [
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'bread'",
+								"set_block_property": {
+									"strat:state": 1
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/bread.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 2
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 2 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 3
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 3",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/bread_slices.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'chicken'",
+								"set_block_property": {
+									"strat:state": 4
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 4 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/chicken.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 4 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 5
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 6
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 6",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/chicken_slices.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'porkchop'",
+								"set_block_property": {
+									"strat:state": 7
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 7 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/porkchop.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 7 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 8
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 8 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 9
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 9",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/porkchop_2.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cheese_block_item'",
+								"set_block_property": {
+									"strat:state": 10
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cheese_block'",
+								"set_block_property": {
+									"strat:state": 10
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 10 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cheese_block.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 10 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 11
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 11 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 12
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 12",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cheese.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cheese_pizza'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cheese_pizza_block'",
+								"set_block_property": {
+									"strat:state": 13
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 13 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cheese_pizza.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 13 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 14
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 14 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 1
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 1",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cheese_pizza_slice.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'pepperoni_pizza'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'pepperoni_pizza_block'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 2
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 2 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/pepperoni_pizza.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 2 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state2": 3
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 3 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 4
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 4",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/pepperoni_pizza_slice.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'sausage_pizza'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 5
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'sausage_pizza_block'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 5
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 5 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/sausage_pizza.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 5 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state2": 6
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 6 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 7
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 7",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/sausage_pizza_slice.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'meat_feast_pizza'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 8
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'meat_feast_pizza_block'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 8
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 8 && query.get_equipped_item_name('main_hand') != 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/meat_feast_pizza.json"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 8 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state2": 9
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 9 && query.get_equipped_item_name('main_hand') == 'kitchen_knife'",
+								"set_block_property": {
+									"strat:state": 15,
+									"strat:state2": 10
+								},
+								"damage": {
+									"amount": 1,
+									"target": "item",
+									"type": "none"
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state2') == 10",
+								"set_block_property": {
+									"strat:state": 0,
+									"strat:state2": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/meat_feast_pizza_slice.json"
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"format_version": "1.16.200"
+}

@@ -1,0 +1,77 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:greeny_waste",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "greeny_waste"
+			},
+			"minecraft:display_name": {
+			 "value": "Greeny Waste\n§2Uncommon\n§7Cooldown: 25\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "greeny_waste",
+				"duration": 25
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound random.levelup @a[r=10]",
+            "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 double_plant 2 replace tallgrass 0",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 double_plant 3 replace tallgrass 2",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 7 replace wheat 6",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 7 replace wheat 5",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 6 replace wheat 4",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 5 replace wheat 3",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 4 replace wheat 2",         
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 3 replace wheat 1",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 wheat 2 replace wheat 0",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 7 replace carrots 6",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 7 replace carrots 5",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 6 replace carrots 4",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 5 replace carrots 3",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 4 replace carrots 2",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 3 replace carrots 1",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 carrots 2 replace carrots 0",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 7 replace potatoes 6",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 7 replace potatoes 5",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 6 replace potatoes 4",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 5 replace potatoes 3",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 4 replace potatoes 2",         
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 3 replace potatoes 1",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 potatoes 2 replace potatoes 0",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 7 replace beetroot 6",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 7 replace beetroot 5",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 6 replace beetroot 4",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 5 replace beetroot 3",
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 4 replace beetroot 2",         
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 3 replace beetroot 1",            
+             "execute @s ~~~ fill ~-3~-1~-3 ~3~1~3 beetroot 2 replace beetroot 0"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}
+

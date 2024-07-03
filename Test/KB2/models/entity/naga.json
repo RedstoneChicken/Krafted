@@ -1,0 +1,66 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.naga",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Waist",
+					"pivot": [-1, 18, -5],
+					"cubes": [
+						{"origin": [-1.5, 0, -1.5], "size": [3, 18, 3], "uv": [40, 0]},
+						{"origin": [-4.5, 2, -3.5], "size": [9, 15, 7], "uv": [0, 20]}
+					]
+				},
+				{
+					"name": "Head",
+					"pivot": [0, -2, 26],
+					"cubes": [
+						{"origin": [-5, 18, -5], "size": [10, 10, 10], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "Tail1",
+					"pivot": [0, 6, 4],
+					"cubes": [
+						{"origin": [-1.5, 6, 5], "size": [2, 13, 2], "pivot": [0, 6, 4], "rotation": [-110, 0, 0], "uv": [40, 0]},
+						{"origin": [-1, 2, 8], "size": [0, 10, 3], "pivot": [0, 2, 9], "rotation": [-45, 0, 0], "uv": [32, 25]},
+						{"origin": [-1, 1, 13], "size": [0, 9, 3], "pivot": [0, 0, 14], "rotation": [-45, 0, 0], "uv": [32, 25]}
+					]
+				},
+				{
+					"name": "Tail2",
+					"pivot": [0, 0, 15],
+					"cubes": [
+						{"origin": [-1.5, 0, 15], "size": [2, 11, 1], "pivot": [0, 0, 15], "rotation": [-90, 0, 0], "uv": [40, 0]},
+						{"origin": [-1, 1, 20], "size": [0, 8, 2], "pivot": [0, -1, 20], "rotation": [-45, 0, 0], "uv": [32, 25]}
+					]
+				},
+				{
+					"name": "Tail3",
+					"pivot": [0, -1, 26],
+					"cubes": [
+						{"origin": [-1, 0, 26], "size": [0, 8, 2], "pivot": [0, -2, 26], "rotation": [-45, 0, 0], "uv": [32, 25]},
+						{"origin": [-1, -1, 26], "size": [1, 0, 10], "uv": [40, 1]}
+					]
+				},
+				{
+					"name": "Thorns",
+					"pivot": [1, 10, 8],
+					"cubes": [
+						{"origin": [-7, 14, 8], "size": [12, 3, 0], "pivot": [1, 14, 7], "rotation": [0, -90, 0], "uv": [32, 22]},
+						{"origin": [-7, 10, 9], "size": [12, 3, 0], "pivot": [1, 10, 8], "rotation": [0, -90, 0], "uv": [32, 22]},
+						{"origin": [-7, 6, 10], "size": [12, 3, 0], "pivot": [1, 6, 9], "rotation": [0, -90, 0], "uv": [32, 22]}
+					]
+				}
+			]
+		}
+	]
+}

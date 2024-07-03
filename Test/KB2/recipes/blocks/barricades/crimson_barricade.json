@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:crimson_barricade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:crimson_stem"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:crimson_barricade",
+				"count": 4
+			}
+		]
+	}
+}

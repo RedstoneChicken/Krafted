@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:cracked_end_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:cracked_end_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:cracked_end_brick_slab",
+      "count": 2
+    }
+  } 
+}

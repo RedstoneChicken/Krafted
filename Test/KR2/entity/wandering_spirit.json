@@ -1,0 +1,33 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:wandering_spirit",
+			"textures": {
+				"default": "textures/entity/wandering_soul"
+			},
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"geometry": {
+				"default": "geometry.wandering_soul"
+			},
+			"animations": {
+				"move": "animation.wandering_soul.move"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#00949C",
+				"overlay_color": "#1FE6FF"
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:broadsword_26_rec"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:flint_sword_blade"
+			},
+			"~": {
+				"item": "strat:flint_wide_guard"
+			},
+			"o": {
+				"item": "strat:flint_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:broadsword_26",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

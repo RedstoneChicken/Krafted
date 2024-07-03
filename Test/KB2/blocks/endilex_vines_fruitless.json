@@ -1,0 +1,56 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:endilex_vines_fruitless"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "endilex_vine_fruitless",
+					"render_method": "blend",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:geometry": "geometry.endilex_vines",
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:destroy_time": 0.1,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:endilex_vines",
+							"end:endilex_vines_fruitless",
+							"end:endilex_leaves",
+							"end:endilex_log"
+						],
+						"allowed_faces": [
+							"down"
+						]
+					}
+				]
+			}
+		},
+		"events": {}
+	}
+}

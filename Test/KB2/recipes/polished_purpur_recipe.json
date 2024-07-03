@@ -1,0 +1,24 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "cav:polished_purpur_recipe"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##",
+      "##"
+    ],
+    "key": {
+      "#": {
+        "item": "cav:purpurite_block"
+      }
+    },
+    "result": {
+      "item": "cav:polished_purpur",
+      "count": 4
+    }
+  }
+}

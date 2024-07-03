@@ -1,0 +1,42 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:coffee_beans",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "coffee_beans"
+			},
+			"minecraft:creative_category": {
+				"parent": "nature"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "strat:convert"
+				}
+			}
+		},
+		"events": {
+			"strat:convert": {
+				"sequence": [
+					{
+						"decrement_stack": {
+							"ignore_game_mode": true
+						},
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:coffee_crop",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "holder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

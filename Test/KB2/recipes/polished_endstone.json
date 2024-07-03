@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:polished_endstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"EE",
+			"EE"
+		],
+		"key": {
+			"E": {
+				"item": "minecraft:end_stone"
+			}
+		},
+		"result": [
+			{
+				"item": "end:polished_endstone",
+				"count": 4
+			}
+		]
+	}
+}

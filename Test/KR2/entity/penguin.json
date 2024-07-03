@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:penguin",
+      "materials": {
+        "default": "chicken"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_penguin"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_penguin"
+      },
+      "animations": {
+        "move": "animation.penguin.move",
+        "swimming": "animation.penguin.swimming",
+        "general": "animation.chicken.general",
+        "look_at_target": "animation.penguin.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "general",
+          { "move": "query.modified_move_speed" },
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [ "controller.render.default" ],
+		"spawn_egg": {
+			"base_color": "#535F70",
+			"overlay_color": "#C8DED0"
+		}
+    }
+  }
+}

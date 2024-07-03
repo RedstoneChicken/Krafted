@@ -1,0 +1,31 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "korbon:tripwire_hook_from_chorus"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "!", 
+            "#",
+            "~"
+        ],
+        "key": {
+            "~": {
+                "item": "korbon:chorus_planks"
+            },
+            "#": {
+                "item": "minecraft:stick"
+            },
+            "!": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": [
+			{
+				"item": "minecraft:tripwire_hook",
+				"count": 2
+			}
+		]
+    }
+}

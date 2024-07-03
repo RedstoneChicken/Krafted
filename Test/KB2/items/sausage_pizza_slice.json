@@ -1,0 +1,26 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:sausage_pizza_slice",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			},
+			"minecraft:icon": {
+				"texture": "bridge_sausage pizza"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			}
+		},
+		"events": {}
+	}
+}

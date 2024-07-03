@@ -1,0 +1,14 @@
+{
+	"pools" : [
+		{
+			"rolls" : 1,
+			"entries" : [
+				{
+					"type" : "item",
+					"name" : "adv:green_jellyfish",
+					"weight" : 1
+				}
+			]
+		}
+	]
+}

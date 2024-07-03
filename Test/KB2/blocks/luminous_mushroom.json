@@ -1,0 +1,99 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:luminous_mushroom",
+      "category": "none"
+    },
+    "components": {
+        "minecraft:creative_category": {
+            "group": "itemGroup.name.none",
+            "category": "none"
+        },
+    	"minecraft:destroy_time": 0.0,
+        "minecraft:block_light_emission": 0.55,
+        "minecraft:block_light_absorption": 0,
+        "minecraft:geometry": "geometry.cross",
+        "minecraft:breathability": "air",
+        "minecraft:loot": "loot_tables/blocks/luminous_mushroom.json",
+        "minecraft:placement_filter": {
+            "conditions": [
+                {
+                	"block_filter": [
+                        "minecraft:grass",
+                        "minecraft:dirt",
+                        "minecraft:dirt_with_roots",
+                        "minecraft:moss_block",
+                        "minecraft:podzol",
+                        "honkit26113:crooked_nylium",
+                        "minecraft:crimson_nylium",
+                        "minecraft:warped_nylium",
+                        "minecraft:mycelium",
+                        "honkit26113:glow_mycelium",
+                        "honkit26113:deepslate_glow_mycelium"
+                    ],
+                    "allowed_faces": [ "up" ]
+                }
+            ]
+        },
+        "minecraft:on_interact":{
+            "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+            "event": "honkit26113:grow_giant_particle"
+        },
+        "minecraft:pick_collision": {
+            "origin":  [-4, 0, -4],
+            "size":    [6, 6.5, 6]
+        },
+        "minecraft:entity_collision": false,
+      	"minecraft:material_instances" : {
+        	"*": {
+          		"texture": "luminous_mushroom",
+          		"render_method": "alpha_test",
+          		"ambient_occlusion": false,
+          		"face_dimming": false
+        	}
+      	}
+    },
+    "events": {
+        "honkit26113:grow_giant_particle": {
+            "sequence": [
+                {
+                    "decrement_stack": {}
+                },
+                {
+                    "run_command": {
+                        "command": [
+                            "playsound item.bone_meal.use @a[r=7]",
+                            "particle minecraft:crop_growth_emitter ~ ~ ~"
+                        ]
+                    }
+                },
+                {
+                    "trigger": {
+                        "event": "honkit26113:grow_giant_randomize"
+                    }
+                }
+            ]
+        },
+        "honkit26113:grow_giant_randomize": {
+            "randomize": [
+                {
+                    "weight": 60
+                },
+                {
+                    "weight": 40,
+                    "trigger": {
+                        "event": "honkit26113:grow_giant"
+                    }
+                }
+            ]
+        },
+        "honkit26113:grow_giant": {
+            "run_command": {
+                "command": "structure load mystructure:giant_luminous_mushroom ~-2 ~ ~-2"
+            }
+        }
+    }
+  }
+}

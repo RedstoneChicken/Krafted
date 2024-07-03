@@ -1,0 +1,29 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:broadsword_65_repair"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:broadsword_65",
+				"count": 1
+			},
+			{
+				"item": "minecraft:copper_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:broadsword_65",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

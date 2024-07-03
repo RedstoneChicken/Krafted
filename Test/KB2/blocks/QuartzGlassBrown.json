@@ -1,0 +1,20 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:quartzglassbrown"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.25,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"texture": "quartzglassbrown"
+				}
+			},
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,77 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:stone_torch"
+		},
+		"components": {
+			"minecraft:block_light_filter": 0,
+			"minecraft:block_light_emission": 1,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "stone_torch",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.torch",
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-1.5,
+					0,
+					-1.5
+				],
+				"size": [
+					3,
+					9.5,
+					3
+				]
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					1,
+					1
+				],
+				"on_tick": {
+					"event": "strat:remove"
+				}
+			},
+			"minecraft:on_player_placing": {
+				"event": "strat:placing"
+			},
+			"minecraft:breakonpush": true,
+			"minecraft:immovable": true,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up",
+							"north",
+							"south",
+							"east",
+							"west",
+							"side"
+						]
+					}
+				]
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:remove": {
+				"sequence": [
+					{
+						"set_block": {
+							"block_type": "minecraft:air"
+						}
+					}
+				]
+			}
+		}
+	}
+}

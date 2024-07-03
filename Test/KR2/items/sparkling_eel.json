@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "adv:sparkling_eel",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "sparkling_eel",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

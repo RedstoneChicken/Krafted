@@ -1,0 +1,65 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:basalt_walk",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "basalt_walk"
+			},
+			"minecraft:display_name": {
+			 "value": "§cBasalt Walk\n§6Mythic\n§7Fuel: Hunger\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "basalt_walk",
+				"duration": 0
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound liquid.lava @p",
+            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",         "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",            "execute @s ~~~ fill ~-2~-1~-2 ~2~-1~2 basalt 0 replace lava 0",
+            "effect @s hunger 3 8 true"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}  
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+ 
+

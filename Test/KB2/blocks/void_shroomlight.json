@@ -1,0 +1,36 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:void_shroomlight"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void_shroomlight",
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:map_color": "#E86DFE",
+			"minecraft:explosion_resistance": 0.7,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			},
+			"minecraft:block_light_emission": 1
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a[r=3]"
+					]
+				}
+			}
+		}
+	}
+}

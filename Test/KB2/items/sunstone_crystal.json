@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "nether:sunstone_crystal"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "sunstone_crystal"
+			},
+			"minecraft:max_stack_size": 64,
+			"minecraft:allow_off_hand": true,
+			"minecraft:block_placer": {
+				"block": "nether:sunstone",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

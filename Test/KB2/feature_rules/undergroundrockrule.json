@@ -1,0 +1,56 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "rns:undergroundrockrule",
+			"places_feature": "rns:rockplace"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "overworld"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "overworld_generation"
+							}
+						]
+					}
+				]
+			},
+			"placement_pass": "final_pass"
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 100,
+			"x": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"z": {
+				"distribution": "gaussian",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"extent": [
+					-60,
+					50
+				],
+				"distribution": "uniform"
+			}
+		}
+	}
+}

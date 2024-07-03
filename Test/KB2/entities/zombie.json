@@ -1,0 +1,1645 @@
+{
+	"format_version" : "1.17.20",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:zombie",
+			"is_spawnable" : true,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"minecraft:look_to_start_drowned_transformation" : {
+				"minecraft:environment_sensor" : {
+					"triggers" : {
+						"filters" : {
+							"test" : "is_underwater",
+							"subject" : "self",
+							"operator" : "==",
+							"value" : true
+						},
+						"event" : "minecraft:start_transforming"
+					}
+				}
+			},
+			"minecraft:start_drowned_transformation" : {
+				"minecraft:environment_sensor" : {
+					"triggers" : {
+						"filters" : {
+							"test" : "is_underwater",
+							"subject" : "self",
+							"operator" : "==",
+							"value" : false
+						},
+						"event" : "minecraft:stop_transforming"
+					}
+				},
+				"minecraft:timer" : {
+					"looping" : false,
+					"time" : 30,
+					"time_down_event" : {
+						"event" : "minecraft:convert_to_drowned"
+					}
+				}
+			},
+			"minecraft:convert_to_drowned" : {
+				"minecraft:transformation" : {
+					"into" : "minecraft:drowned<minecraft:as_adult>",
+					"transformation_sound" : "convert_to_drowned",
+					"drop_equipment" : true,
+					"delay" : {
+						"value" : 15
+					}
+				},
+				"minecraft:is_shaking" : {}
+			},
+			"minecraft:convert_to_baby_drowned" : {
+				"minecraft:transformation" : {
+					"into" : "minecraft:drowned<minecraft:as_baby>",
+					"transformation_sound" : "convert_to_drowned",
+					"drop_equipment" : true,
+					"delay" : {
+						"value" : 15
+					}
+				},
+				"minecraft:is_shaking" : {}
+			},
+			"minecraft:zombie_baby" : {
+				"minecraft:experience_reward" : {
+					"on_death" : "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
+				},
+				"minecraft:is_baby" : {},
+				"minecraft:scale" : {
+					"value" : 0.5
+				},
+				"minecraft:movement" : {
+					"value" : 0.35
+				}
+			},
+			"minecraft:zombie_adult" : {
+				"minecraft:experience_reward" : {
+					"on_death" : "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+				},
+				"minecraft:movement" : {
+					"value" : 0.23
+				},
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "zombie" ],
+					"seats" : {
+						"position" : [ 0, 1.1, -0.35 ],
+						"lock_rider_rotation" : 0
+					}
+				},
+				"minecraft:behavior.mount_pathing" : {
+					"priority" : 2,
+					"speed_multiplier" : 1.25,
+					"target_dist" : 0,
+					"track_target" : true
+				}
+			},
+			"minecraft:zombie_jockey" : {
+				"minecraft:behavior.find_mount" : {
+					"priority" : 1,
+					"within_radius" : 16,
+					"start_delay" : 15,
+					"max_failed_attempts" : 20
+				}
+			},
+			"minecraft:can_have_equipment" : {
+				"minecraft:equipment" : {
+					"table" : "loot_tables/entities/zombie_equipment.json"
+				}
+			},
+			"elite_zombie" : {
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "zombie" ],
+					"seats" : {
+						"position" : [ 0, 1.1, -0.35 ],
+						"lock_rider_rotation" : 0
+					}
+				},
+				"minecraft:behavior.mount_pathing" : {
+					"priority" : 5,
+					"speed_multiplier" : 1.25,
+					"target_dist" : 0,
+					"track_target" : true
+				},
+				"minecraft:health" : {
+					"value" : 40,
+					"max" : 40
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/elite_zombie.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "20"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 6
+				}
+			},
+			"elite_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Trolling Zombie The NASA"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Armoured Zombie The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Unseen Zombie Of Stalking"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Dark Zombie The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 10
+				}
+			},
+			"elite_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Enderborn Zombie The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 0.10,
+					"light_teleport_chance" : 0.10
+				}
+			},
+			"elite_exhaust" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Exhausting Zombie Of Fatigue"
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"on_attack" : {
+						"event" : "exhaust"
+					}
+				}
+			},
+			"elite_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§bElite Innerly Peaceful Zombie Of Equilibrium"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 0.0
+				}
+			},
+			"elite_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Poisonous Zombie Of Venom"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 10
+				}
+			},
+			"elite_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Quicksand Zombie Of WTF Imba"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Starving Zombie Of Hunger"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 15
+				}
+			},
+			"elite_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Sprinting Zombie Of Bolting"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Striking Zombie Of Lightning"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Apathetic Zombie Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Webbing Zombie The Spider"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Withering Zombie Doomskull"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 10
+				}
+			},
+			"ultra_zombie" : {
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "zombie" ],
+					"seats" : {
+						"position" : [ 0, 1.1, -0.35 ],
+						"lock_rider_rotation" : 0
+					}
+				},
+				"minecraft:behavior.mount_pathing" : {
+					"priority" : 5,
+					"speed_multiplier" : 1.25,
+					"target_dist" : 0,
+					"track_target" : true
+				},
+				"minecraft:health" : {
+					"value" : 60,
+					"max" : 60
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/ultra_zombie.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "40"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 9
+				}
+			},
+			"ultra_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Thumping Zombie Of Mission Control"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Defensive Zombie Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Stalking Zombie The Unseen"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Eclipsed Zombie The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 40,
+					"name" : "§eUltra Tricky Zombie The Enderborn"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 0.5,
+					"light_teleport_chance" : 0.5
+				}
+			},
+			"ultra_exhaust" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Exhausting Zombie The Drainer"
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"on_attack" : {
+						"event" : "exhaust"
+					}
+				}
+			},
+			"ultra_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 40,
+					"name" : "§eUltra Totally Zen Zombie Of Inner Peace"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 0.0
+				}
+			},
+			"ultra_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Despoiling Zombie The Cancerous"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Quicksand Zombie The Slowing B****"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 20
+				}
+			},
+			"ultra_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Hungering Zombie The Mutated"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 20
+				}
+			},
+			"ultra_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Charging Zombie The Swift One"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Thundering Zombie Of Striking"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Apathetic Zombie Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Ensnaring Zombie The Deceiver"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Dark Lord Zombie Doomskull"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 15
+				}
+			},
+			"infernal_zombie" : {
+				"minecraft:rideable" : {
+					"seat_count" : 1,
+					"family_types" : [ "zombie" ],
+					"seats" : {
+						"position" : [ 0, 1.1, -0.35 ],
+						"lock_rider_rotation" : 0
+					}
+				},
+				"minecraft:behavior.mount_pathing" : {
+					"priority" : 2,
+					"speed_multiplier" : 1.25,
+					"target_dist" : 0,
+					"track_target" : true
+				},
+				"minecraft:health" : {
+					"value" : 80,
+					"max" : 80
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/tartarean/infernal_zombie.json"
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "60"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:attack" : {
+					"damage" : 12
+				}
+			},
+			"infernal_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Byebye Zombie Of WEEEE"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Turtling Zombie Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Hunting Zombie The Predator"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Shadowkin Zombie Of Darkness"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§cInfernal Enderborn Zombie The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1,
+					"light_teleport_chance" : 1
+				}
+			},
+			"infernal_exhaust" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Draining Zombie Of Fatigue"
+				},
+				"minecraft:behavior.melee_attack" : {
+					"priority" : 3,
+					"on_attack" : {
+						"event" : "exhaust"
+					}
+				}
+			},
+			"infernal_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§cInfernal Ronin Zombie The Zen Master"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 0.0
+				}
+			},
+			"infernal_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Stinging Zombie The Deadly Chalice"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Slowing Zombie Of You-Can't-Run"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 25
+				}
+			},
+			"infernal_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Starving Zombie The Pale Rider"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 25
+				}
+			},
+			"infernal_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Swift Zombie Of Being In Your Face"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Electrified Zombie The Raiden"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Apathetic Zombie Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Deceiving Zombie Of Traps"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_wither" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Sith Lord Zombie Of Dark Skulls"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "wither",
+					"effect_duration" : 20
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:nameable" : {},
+			"minecraft:type_family" : {
+				"family" : [ "zombie", "undead", "monster", "mob" ]
+			},
+			"minecraft:equip_item" : {},
+			"minecraft:collision_box" : {
+				"width" : 0.6,
+				"height" : 1.9
+			},
+			"minecraft:burns_in_daylight" : {},
+			"minecraft:movement.basic" : {},
+			"minecraft:navigation.walk" : {
+				"is_amphibious" : true,
+				"can_pass_doors" : true,
+				"can_walk" : true,
+				"can_break_doors" : true
+			},
+			"minecraft:annotation.break_door" : {},
+			"minecraft:jump.static" : {},
+			"minecraft:can_climb" : {},
+			"minecraft:health" : {
+				"value" : 20,
+				"max" : 20
+			},
+			"minecraft:hurt_on_condition" : {
+				"damage_conditions" : [
+					{
+						"filters" : {
+							"test" : "in_lava",
+							"subject" : "self",
+							"operator" : "==",
+							"value" : true
+						},
+						"cause" : "lava",
+						"damage_per_tick" : 4
+					}
+				]
+			},
+			"minecraft:breathable" : {
+				"total_supply" : 15,
+				"suffocate_time" : 0,
+				"breathes_air" : true,
+				"breathes_water" : true
+			},
+			"minecraft:attack" : {
+				"damage" : 3
+			},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/zombie.json"
+			},
+			"minecraft:shareables" : {
+				"items" : [
+					{
+						"item" : "minecraft:netherite_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:stone_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:wooden_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:netherite_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:turtle_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:skull:0",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 7
+					},
+					{
+						"item" : "minecraft:skull:1",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 7
+					},
+					{
+						"item" : "minecraft:carved_pumpkin",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 7
+					},
+					{
+						"item" : "minecraft:netherite_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:netherite_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:netherite_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					}
+				]
+			},
+			"minecraft:environment_sensor" : {
+				"triggers" : {
+					"filters" : {
+						"test" : "is_underwater",
+						"operator" : "==",
+						"value" : true
+					},
+					"event" : "minecraft:start_transforming"
+				}
+			},
+			"minecraft:despawn" : {
+				"despawn_from_distance" : {}
+			},
+			"minecraft:behavior.equip_item" : {
+				"priority" : 2
+			},
+			"minecraft:behavior.melee_attack" : {
+				"priority" : 3
+			},
+			"minecraft:behavior.stomp_turtle_egg" : {
+				"priority" : 4,
+				"speed_multiplier" : 1,
+				"search_range" : 10,
+				"search_height" : 2,
+				"goal_radius" : 1.14,
+				"interval" : 20
+			},
+			"minecraft:behavior.pickup_items" : {
+				"priority" : 6,
+				"max_dist" : 3,
+				"goal_radius" : 2,
+				"speed_multiplier" : 1.0,
+				"pickup_based_on_chance" : true,
+				"can_pickup_any_item" : true,
+				"excluded_items" : [ "minecraft:glow_ink_sac" ]
+			},
+			"minecraft:behavior.random_stroll" : {
+				"priority" : 7,
+				"speed_multiplier" : 1
+			},
+			"minecraft:behavior.look_at_player" : {
+				"priority" : 8,
+				"look_distance" : 6,
+				"probability" : 0.02
+			},
+			"minecraft:behavior.random_look_around" : {
+				"priority" : 9
+			},
+			"minecraft:behavior.hurt_by_target" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.nearest_attackable_target" : {
+				"priority" : 2,
+				"must_see" : true,
+				"reselect_targets" : true,
+				"within_radius" : 25.0,
+				"must_see_forget_duration" : 17.0,
+				"entity_types" : [
+					{
+						"filters" : {
+							"any_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "player"
+								},
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "snowgolem"
+								},
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "irongolem"
+								}
+							]
+						},
+						"max_dist" : 35
+					},
+					{
+						"filters" : {
+							"any_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "villager"
+								},
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "wandering_trader"
+								}
+							]
+						},
+						"max_dist" : 35,
+						"must_see" : false
+					},
+					{
+						"filters" : {
+							"all_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "baby_turtle"
+								},
+								{
+									"test" : "in_water",
+									"subject" : "other",
+									"operator" : "!=",
+									"value" : true
+								}
+							]
+						},
+						"max_dist" : 35
+					}
+				]
+			},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 9500,
+						"add" : {
+							"component_groups" : [ "minecraft:zombie_adult", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 75,
+						"add" : {
+							"component_groups" : [ "minecraft:zombie_baby", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_blastoff", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_bullwark", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_cloaking", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_darkness", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_ender", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_exhaust", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_ninja", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_poisonous", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_quicksand", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_sapper", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_sprint", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_storm", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_weakness", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_webber", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_zombie", "elite_wither", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"minecraft:zombie_baby",
+								"minecraft:zombie_jockey",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_blastoff", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_bullwark", "minecraft:can_have_equipment" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_cloaking", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_darkness", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_ender", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_exhaust", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_ninja", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_poisonous", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_quicksand", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_sapper", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_sprint", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_storm", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_weakness", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_webber", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_zombie", "ultra_wither", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_blastoff",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_bullwark",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_cloaking",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_darkness",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_ender", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_exhaust", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_ninja", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_poisonous",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_quicksand",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_sapper", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_sprint", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_storm", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [
+								"infernal_zombie",
+								"infernal_weakness",
+								"minecraft:can_have_equipment"
+							]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_webber", "minecraft:can_have_equipment" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_zombie", "infernal_wither", "minecraft:can_have_equipment" ]
+						}
+					}
+				]
+			},
+			"minecraft:as_adult" : {
+				"add" : {
+					"component_groups" : [ "minecraft:zombie_adult" ]
+				}
+			},
+			"minecraft:as_baby" : {
+				"add" : {
+					"component_groups" : [ "minecraft:zombie_baby" ]
+				}
+			},
+			"minecraft:start_transforming" : {
+				"add" : {
+					"component_groups" : [ "minecraft:start_drowned_transformation" ]
+				},
+				"remove" : {
+					"component_groups" : [ "minecraft:look_to_start_drowned_transformation" ]
+				}
+			},
+			"minecraft:stop_transforming" : {
+				"add" : {
+					"component_groups" : [ "minecraft:look_to_start_drowned_transformation" ]
+				},
+				"remove" : {
+					"component_groups" : [ "minecraft:start_drowned_transformation" ]
+				}
+			},
+			"minecraft:convert_to_drowned" : {
+				"sequence" : [
+					{
+						"filters" : {
+							"test" : "has_component",
+							"operator" : "!=",
+							"value" : "minecraft:is_baby"
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:convert_to_drowned" ]
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:start_drowned_transformation" ]
+						}
+					},
+					{
+						"filters" : {
+							"test" : "has_component",
+							"value" : "minecraft:is_baby"
+						},
+						"add" : {
+							"component_groups" : [ "minecraft:convert_to_baby_drowned" ]
+						},
+						"remove" : {
+							"component_groups" : [ "minecraft:start_drowned_transformation" ]
+						}
+					}
+				]
+			},
+			"blastoff" : {
+				"run_command" : {
+					"command" : [ "effect @a [m=s,r=20] levitation 1 14" ]
+				}
+			},
+			"exhaust" : {
+				"run_command" : {
+					"command" : [ "effect @a [m=s,r=20] clear" ]
+				}
+			},
+			"storm" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=20] ~~~ summon lightning_bolt" ]
+				}
+			},
+			"webber" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=10] ~~~ fill ~~~ ~~~ air 0 replace web 0" ]
+				}
+			}
+		}
+	}
+}

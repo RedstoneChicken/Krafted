@@ -1,0 +1,62 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.12.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "strat:explode",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:tnt"
+		},
+		"component_groups": {
+			"from_explosion": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 4,
+					"causes_fire": false,
+					"allow_damage_underwater": false,
+					"destroy_affected_by_griefing": true,
+					"max_resistance": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"tnt",
+					"inanimate"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:explode": {
+				"fuse_length": 0,
+				"fuse_lit": true,
+				"power": 4,
+				"causes_fire": false,
+				"allow_damage_underwater": false,
+				"destroy_affected_by_griefing": true,
+				"max_resistance": 0
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"from_explosion": {
+				"add": {
+					"component_groups": [
+						"from_explosion"
+					]
+				}
+			}
+		}
+	}
+}

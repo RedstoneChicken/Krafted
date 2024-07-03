@@ -1,0 +1,35 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:flint_large_sword_blade_rec_2"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:large_sword_blade_cast"
+			},
+			"~": {
+				"item": "minecraft:flint"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:flint_large_sword_blade",
+				"count": 1
+			},
+			{
+				"item": "strat:large_sword_blade_cast",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,18 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:onyx_block"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "Construction"
+			},
+			"tag:dextenblocks": {},
+			"minecraft:destroy_time": 8,
+			"minecraft:explosion_resistance": 2
+		},
+		"events": {}
+	}
+}

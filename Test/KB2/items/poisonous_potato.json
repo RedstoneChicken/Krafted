@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:poisonous_potato"
+		},
+		"components": {
+			"minecraft:use_duration": 16,
+			"minecraft:food": {
+				"nutrition": 1,
+				"saturation_modifier": "poor",
+				"effects": [
+					{
+						"name": "poison",
+						"chance": 0.6,
+						"duration": 5,
+						"amplifier": 0
+					}
+				]
+			}
+		},
+		"events": {}
+	}
+}

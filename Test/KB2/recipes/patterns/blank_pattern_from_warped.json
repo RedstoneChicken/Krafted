@@ -1,0 +1,30 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:blank_pattern_from_warped"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#0",
+			"0#"
+		],
+		"key": {
+			"0": {
+				"item": "minecraft:stick"
+			},
+			"#": {
+				"item": "minecraft:warped_planks"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:blank_pattern",
+				"count": 4
+			}
+		]
+	}
+}

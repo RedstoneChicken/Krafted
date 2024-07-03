@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:gneiss_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:gneiss"
+      }
+    ],
+    "result": {
+      "item": "cav:gneiss_slab",
+      "count": 2
+    }
+  } 
+}

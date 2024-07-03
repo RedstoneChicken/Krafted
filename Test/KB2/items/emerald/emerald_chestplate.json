@@ -1,0 +1,49 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "oh:emerald_chestplate",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "emerald_chestplate"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.chestplate"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:enchantable": {
+        "value": 30,
+        "slot": "armor_torso"
+      },
+      "minecraft:durability": {
+        "max_durability": 450
+      },
+      "minecraft:knockback_resistance": {
+        "protection": 0.1
+      },
+      "minecraft:mining_speed": 5,
+      "minecraft:wearable": {
+        "slot": "slot.armor.chest"
+      },
+      "minecraft:render_offsets": "chestplates",
+      "minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:emerald"
+						],
+						"repair_amount": "query.max_durability"
+					}
+				]
+			},
+      "minecraft:armor": {
+        "protection": 6
+      },
+      "minecraft:display_name": {
+				"value": "Emerald Chestplate"
+			}
+    }
+  }
+}

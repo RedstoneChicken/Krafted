@@ -1,0 +1,99 @@
+//bridge-file-version: #45
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:apple_sapling_block",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "apple_sapling_block",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					14,
+					8
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/apple_sapling_block.json",
+			"minecraft:geometry": "geometry.plantv3",
+			"minecraft:destroy_time": 0.01,
+			"minecraft:entity_collision": false,
+			"minecraft:friction": 0.6,
+			"minecraft:flammable": {
+				"flame_odds": 0,
+				"burn_odds": 0
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:dirt",
+							"minecraft:grass",
+							"minecraft:podzol"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			},
+			"minecraft:ticking": {
+				"range": [
+					300,
+					1200
+				],
+				"on_tick": {
+					"event": "grow_natural",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"grow_natural": {
+				"run_command": {
+					"command": [
+						"fill ~ ~ ~ ~ ~ ~ air",
+						"structure load apple_tree_1 ~-2~~-2"
+					],
+					"target": "self"
+				}
+			},
+			"bone_meal": {
+				"sequence": [
+					{
+						"decrement_stack": {}
+					},
+					{
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~"
+							]
+						}
+					},
+					{
+						"trigger": {
+							"event": "grow_natural"
+						}
+					}
+				]
+			}
+		}
+	}
+}

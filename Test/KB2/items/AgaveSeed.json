@@ -1,0 +1,26 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "caf:agave_seed",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:foil": false,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.seed"
+			},
+			"minecraft:display_name": {},
+			"minecraft:render_offsets": "apple",
+			"minecraft:icon": {
+				"texture": "agaveseed"
+			},
+			"minecraft:block_placer": {
+				"use_block_description": true,
+				"block": "caf:agave1"
+			}
+		},
+		"events": {}
+	}
+}

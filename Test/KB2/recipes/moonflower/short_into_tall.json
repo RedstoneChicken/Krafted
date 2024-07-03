@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_moonflower_into_tall_moonflower"},"tags":["crafting_table"],"ingredients":[{"item":"ff:moonflower_item","count":2}],"result":{"item":"ff:moonflower_tall_item"}}}

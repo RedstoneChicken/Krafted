@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:adamantite_apple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"YYY",
+			"YXY",
+			"YYY"
+		],
+		"key": {
+			"Y": {
+				"item": "oh:adamantite"
+			},
+			"X": {
+				"item": "minecraft:apple"
+			}
+		},
+		"result": {
+			"item": "oh:adamantite_apple",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:frypan_64_7_repair"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:frypan_64_7",
+				"count": 1
+			},
+			{
+				"item": "strat:manyullyn_ingot",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:frypan_64_7",
+				"count": 1
+			}
+		]
+	}
+}

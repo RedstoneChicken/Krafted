@@ -1,0 +1,27 @@
+//bridge-file-version: #24
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:phreyium_tendril_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:phreyium_tendril_vine",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "phreyium_tendril_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:phreyium_tendril_item.name"
+			}
+		},
+		"events": {}
+	}
+}

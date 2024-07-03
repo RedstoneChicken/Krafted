@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "nether:gilded_scrap"
+		},
+		"tags": [
+			"blast_furnace",
+			"furnace"
+		],
+		"input": "minecraft:gilded_blackstone",
+		"output": "nether:gilded_scrap"
+	}
+}

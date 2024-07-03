@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:glass_jar"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:glass_bottle",
+				"count": 1,
+				"data": 0
+			}
+		],
+		"result": [
+			{
+				"item": "strat:glass_jar",
+				"count": 1
+			}
+		]
+	}
+}

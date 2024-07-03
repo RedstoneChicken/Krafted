@@ -1,0 +1,14 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:verdanite_patch_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:verdanite_scatter_feature",
+			"korbon:verdanite_velvium_scatter_feature"
+		]
+	}
+}

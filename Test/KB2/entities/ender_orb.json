@@ -1,0 +1,74 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "end:ender_orb",
+			"runtime_identifier": "minecraft:ender_pearl",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"explode": {
+				"minecraft:explode": {
+					"fuse_length": 1,
+					"fuse_lit": true,
+					"power": 2,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"affect_projectile": true,
+						"event_trigger": {
+							"event": "explode",
+							"target": "self"
+						}
+					},
+					"stick_in_ground": {},
+					"impact_damage": {
+						"damage": [
+							3,
+							5
+						]
+					}
+				},
+				"power": 2,
+				"gravity": 0.2,
+				"angleoffset": -20,
+				"inertia": 1,
+				"liquid_inertia": 1
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			}
+		},
+		"events": {
+			"explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				}
+			}
+		}
+	}
+}

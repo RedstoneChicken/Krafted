@@ -1,0 +1,18 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:multiface_feature": {
+    "description": {
+      "identifier": "honkit26113:slime_caves_vines_feature"
+    },
+    "search_range": 60,
+    "places_block": "minecraft:vine",
+    "can_place_on_floor": false,
+    "can_place_on_ceiling": true,
+    "can_place_on_wall": true,
+    "chance_of_spreading": 0.65,
+    "can_place_on": [
+      "minecraft:stone",
+      "minecraft:deepslate"
+    ]
+  }
+}

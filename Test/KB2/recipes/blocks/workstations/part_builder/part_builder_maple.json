@@ -1,0 +1,30 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:part_builder_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:blank_pattern"
+			},
+			"~": {
+				"item": "strat:maple_log"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:part_builder_maple",
+				"count": 1
+			}
+		]
+	}
+}

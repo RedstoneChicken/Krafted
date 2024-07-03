@@ -1,0 +1,35 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:flint_hammer_head_2"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~~",
+			"~~~",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:hammer_head_cast"
+			},
+			"~": {
+				"item": "minecraft:flint"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:flint_hammer_head",
+				"count": 1
+			},
+			{
+				"item": "strat:hammer_head_cast",
+				"count": 1
+			}
+		]
+	}
+}

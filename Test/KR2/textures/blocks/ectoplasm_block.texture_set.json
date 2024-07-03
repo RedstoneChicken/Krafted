@@ -1,0 +1,9 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ectoplasm_block",
+		"metalness_emissive_roughness": "ectoplasm_block_mer",
+		"normal": "ectoplasm_block_normal"
+	}
+}

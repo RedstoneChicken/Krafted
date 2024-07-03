@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:warm_frog",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "warm_frog",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

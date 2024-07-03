@@ -1,0 +1,241 @@
+//bridge-file-version: #37
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:tea_crop",
+			"properties": {
+				"strat:growth_stage": [
+					0,
+					1,
+					2,
+					3
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.strat_crop",
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "grow_stage"
+				}
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:map_color": "#1EB809",
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal' && query.block_property('strat:growth_stage') < 3"
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"farmland"
+						]
+					}
+				]
+			},
+			"minecraft:loot": "loot_tables/tea_leaf.json",
+			"minecraft:block_light_absorption": 0
+		},
+		"events": {
+			"bone_meal": {
+				"sequence": [
+					{
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~",
+								"playsound item.bone_meal.use @a ~~~"
+							]
+						},
+						"trigger": {
+							"event": "grow_stage_2"
+						}
+					}
+				]
+			},
+			"grow_stage": {
+				"randomize": [
+					{
+						"weight": 2
+					},
+					{
+						"weight": 1,
+						"set_block_property": {
+							"strat:growth_stage": "(query.block_property('strat:growth_stage')<3) ? query.block_property('strat:growth_stage') + 1 : 3"
+						}
+					}
+				]
+			},
+			"grow_stage_2": {
+				"randomize": [
+					{
+						"weight": 1
+					},
+					{
+						"weight": 3,
+						"set_block_property": {
+							"strat:growth_stage": "(query.block_property('strat:growth_stage')<3) ? query.block_property('strat:growth_stage') + 1 : 3"
+						}
+					}
+				]
+			},
+			"final_stage": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"strat:growth_stage": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/tea_crop.json"
+						}
+					},
+					{
+						"trigger": {
+							"event": "trophy"
+						}
+					}
+				]
+			},
+			"trophy": {
+				"randomize": [
+					{
+						"weight": 99
+					},
+					{
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:farmers_trophy",
+								"playsound strat.trophy_collected @s",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "player"
+						},
+						"weight": 1
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:growth_stage') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tea_crop_0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							2,
+							16
+						]
+					},
+					"minecraft:loot": "loot_tables/tea_leaf.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tea_crop_1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							8,
+							16
+						]
+					},
+					"minecraft:loot": "loot_tables/tea_leaf.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tea_crop_2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							12,
+							16
+						]
+					},
+					"minecraft:loot": "loot_tables/tea_leaf.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "tea_crop_3",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-8,
+							0,
+							-8
+						],
+						"size": [
+							16,
+							16,
+							16
+						]
+					},
+					"minecraft:loot": "loot_tables/tea_crop.json",
+					"minecraft:on_interact": {
+						"event": "final_stage"
+					},
+					"minecraft:on_player_destroyed": {
+						"event": "trophy"
+					}
+				}
+			}
+		]
+	}
+}

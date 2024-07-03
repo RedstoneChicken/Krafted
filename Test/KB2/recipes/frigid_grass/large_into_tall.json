@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_frigid_grass_into_tall_frigid_grass"},"tags":["crafting_table"],"ingredients":[{"item":"ff:frigid_grass_large_item"}],"result":{"item":"ff:frigid_grass_tall_item","count":2}}}

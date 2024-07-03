@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:gravel_to_compressed_gravel"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:gravel"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_gravel",
+				"count": 1
+			}
+		]
+	}
+}

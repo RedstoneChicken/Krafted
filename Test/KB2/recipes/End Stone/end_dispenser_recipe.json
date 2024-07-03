@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "cav:end_dispenser_recipe"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "###",
+      "#X#",
+      "#R#"
+    ],
+    "key": {
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "#": {
+        "item": "minecraft:end_stone"
+      },
+      "X": {
+        "item": "minecraft:bow"
+      }
+    },
+    "result": {
+      "item": "minecraft:dispenser",
+      "data": 3
+    }
+  }
+}

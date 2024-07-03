@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:farmers_trophy",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:foil": true,
+			"minecraft:explodable": false,
+			"minecraft:should_despawn": false,
+			"minecraft:creative_category": {
+				"parent": "commands"
+			},
+			"minecraft:icon": {
+				"texture": "farmers_trophy"
+			}
+		},
+		"events": {}
+	}
+}

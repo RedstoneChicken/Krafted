@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "azc:lockbox_book",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_paper",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_compass",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_gunpowder",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_wither_rose",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_redstone",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_glowstone_dust",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "azc:lockbox_golden_apple",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

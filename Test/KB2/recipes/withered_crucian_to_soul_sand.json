@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "withered_crucian_to_soul_sand"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:withered_crucian"
+      }
+    ],
+    "result": {
+      "item": "minecraft:soul_sand"
+    }
+  }
+}

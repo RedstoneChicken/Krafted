@@ -1,0 +1,24 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:hammer_head_pattern"
+		},
+		"tags": [
+			"stencil_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:axe_head_pattern",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:hammer_head_pattern",
+				"count": 1
+			}
+		]
+	}
+}

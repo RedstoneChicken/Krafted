@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "korbon:mysterious_mushroom_stew"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:brown_mushroom"
+			},
+			{
+				"item": "minecraft:red_mushroom"
+			},
+			{
+				"item": "korbon:mysterious_mushroom"
+			},
+			{
+				"item": "minecraft:bowl"
+			}
+		],
+		"result": {
+			"item": "korbon:mysterious_mushroom_stew"
+		}
+	}
+}

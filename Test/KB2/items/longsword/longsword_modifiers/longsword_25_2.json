@@ -1,0 +1,135 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:longsword_25_2",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 3600,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 789,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:damage": 7,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 15,
+						"on_dig": {
+							"event": "hurt_2"
+						}
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 10,
+						"on_dig": {
+							"event": "hurt_2"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "hurt_2"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "Iron Longsword\n§bDiamond§r"
+			},
+			"minecraft:icon": {
+				"texture": "longsword_25_2"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+			"minecraft:use_animation": "bow",
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "lunge"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "longsword",
+				"duration": 3
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "hurt"
+				},
+				"on_hit_block": {
+					"event": "hurt_2"
+				}
+			}
+		},
+		"events": {
+			"lunge": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon strat:longsword_lunge ^ ^0.5 ^-0.5"
+							]
+						}
+					}
+				]
+			},
+			"hurt": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability == 10000",
+						"transform_item": {
+							"transform": "strat:longsword_25_broken"
+						},
+						"run_command": {
+							"command": [
+								"playsound random.break @a ~~~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"condition": "query.remaining_durability < 10000",
+						"damage": {
+							"type": "none",
+							"amount": 1,
+							"target": "self"
+						}
+					}
+				]
+			},
+			"hurt_2": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability == 20000",
+						"transform_item": {
+							"transform": "strat:longsword_25_broken"
+						},
+						"run_command": {
+							"command": [
+								"playsound random.break @a ~~~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"condition": "query.remaining_durability < 20000",
+						"damage": {
+							"type": "none",
+							"amount": 2,
+							"target": "self"
+						}
+					}
+				]
+			},
+			"on_tool_used": {}
+		}
+	}
+}

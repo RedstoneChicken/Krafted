@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:neptunium_ingot",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "neptunium_ingot",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

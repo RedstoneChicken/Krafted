@@ -1,0 +1,45 @@
+{
+  "format_version": "1.18",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "chetty:waypoint_beam",
+      "materials": {
+        "default": "glow_squid",
+        "chetty": "skeleton"
+      },
+      "textures": {
+        "black": "textures/entity/waypoint_black",
+        "blue": "textures/entity/waypoint_blue",
+        "brown": "textures/entity/waypoint_brown",
+        "cyan": "textures/entity/waypoint_cyan",
+        "gray": "textures/entity/waypoint_gray",
+        "green": "textures/entity/waypoint_green",
+        "light_blue": "textures/entity/waypoint_light_blue",
+        "lime": "textures/entity/waypoint_lime",
+        "magenta": "textures/entity/waypoint_magenta",
+        "orange": "textures/entity/waypoint_orange",
+        "pink": "textures/entity/waypoint_pink",
+        "purple": "textures/entity/waypoint_purple",
+        "red": "textures/entity/waypoint_red",
+        "light_gray": "textures/entity/waypoint_light_gray",
+        "white": "textures/entity/waypoint_white",
+        "yellow": "textures/entity/waypoint_yellow",
+        "none": "textures/entity/cape_invisible"
+      },
+      "geometry": {
+        "default": "geometry.waypointbeam"
+      },
+      "scripts": {
+        "animate": [
+          "idle"
+        ]
+      },
+      "animations": {
+        "idle": "animation.waypoint_beam.idle"
+      },
+      "render_controllers": [
+        "controller.render.waypoint_beam"
+      ]
+    }
+  }
+}

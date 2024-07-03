@@ -1,0 +1,47 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:clay_bricks_two",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "clay_bricks"
+			},
+			"minecraft:display_name": {
+			 "value":  "Clay Bricks\n§8Common\n§7Cooldown: 24\nLevel: 2\nClay Bricks: 8"
+			},
+			"minecraft:cooldown": {
+				"category": "clay_bricks",
+				"duration": 24
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "give",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "give": {
+        "run_command": {
+          "command": [
+          	"playsound mob.irongolem.hit @p",
+            "give @s brick_block 8"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

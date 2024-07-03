@@ -1,0 +1,254 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "honkit26113:lost_explorer",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "minecraft:scared": {
+        "minecraft:angry": {
+          "duration": 5,
+          "calm_event": {
+            "event": "minecraft:become_calm",
+            "target": "self"
+          }
+        }
+      }
+    },
+
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "lost_explorer", "mob" ]
+      },
+      "minecraft:is_hidden_when_invisible": {
+      },
+      "minecraft:economy_trade_table": {
+        "display_name": "entity.honkit26113:lost_explorer.name",
+        "table": "trading/lost_explorer_trades.json",
+        "new_screen": true
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:movement": {
+        "value": 0.5
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_open_doors": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:despawn": {
+        "despawn_from_distance": {}
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "entity_attack",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "minecraft:become_scared"
+            }
+          },
+          {
+            "cause": "projectile",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "minecraft:become_scared"
+            }
+          },
+          {
+            "cause": "magic",
+            "deals_damage": true,
+            "on_damage": {
+              "event": "minecraft:become_scared"
+            }
+          }
+        ]
+      },/*
+        "minecraft:preferred_path" : {
+          "max_fall_blocks" : 1,
+          "jump_cost" : 20,
+          "default_block_cost" : 3,
+          "preferred_path_blocks" : [
+            { 
+              "cost" : 0,
+              "blocks" : [ 
+                "honkit26113:frosted_stone"
+              ]
+            },
+            { 
+              "cost" : 1,
+              "blocks" : [ 
+                "cobblestone", 
+                "stone",
+                "stonebrick",
+                "sandstone",
+                "mossy_cobblestone",
+                "stone_slab",
+                "stone_slab2",
+                "stone_slab3",
+                "stone_slab4",
+                "double_stone_slab",
+                "double_stone_slab2",
+                "double_stone_slab3",
+                "double_stone_slab4",
+                "wooden_slab",
+                "double_wooden_slab",
+                "planks",
+                "brick_block",
+                "nether_brick",
+                "red_nether_brick",
+                "end_bricks",
+                "red_sandstone",
+                "stained_glass",
+                "glass",
+                "glowstone",
+                "prismarine",
+                "emerald_block",
+                "diamond_block",
+                "lapis_block",
+                "gold_block",
+                "redstone_block",
+                "purple_glazed_terracotta",
+                "white_glazed_terracotta",
+                "orange_glazed_terracotta",
+                "magenta_glazed_terracotta",
+                "light_blue_glazed_terracotta",
+                "yellow_glazed_terracotta",
+                "lime_glazed_terracotta",
+                "pink_glazed_terracotta",
+                "gray_glazed_terracotta",
+                "silver_glazed_terracotta",
+                "cyan_glazed_terracotta",
+                "blue_glazed_terracotta",
+                "brown_glazed_terracotta",
+                "green_glazed_terracotta",
+                "red_glazed_terracotta",
+                "black_glazed_terracotta"
+               ]
+            },
+            { 
+              "cost" : 50,
+              "blocks" : [ 
+                "bed",
+                "furnace",
+                "crafting_table"
+              ]
+            }
+          ]
+        },*/
+      "minecraft:behavior.trade_with_player": {
+        "priority": 1
+      },
+      "minecraft:behavior.trade_interest": {
+          "priority": 3,
+          "within_radius": 6.0,
+          "interest_time": 45.0,
+          "remove_item_time": 1.0,
+          "carried_item_switch_time": 2.0,
+          "cooldown": 2.0
+      },
+      "minecraft:behavior.look_at_trading_player": {
+        "priority": 4
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 2,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "zombie" },
+                { "test": "is_family", "subject": "other", "value": "zombie_villager" },
+                { "test": "is_family", "subject": "other", "value": "zombie_pigman" },
+                { "test": "is_family", "subject": "other", "value": "illager" },
+                { "test": "is_family", "subject": "other", "value": "vex" }
+              ]
+            },
+            "walk_speed_multiplier": 0.6,
+            "sprint_speed_multiplier": 0.6
+          }
+        ],
+        "max_dist": 6
+      },
+      "minecraft:behavior.restrict_open_door": {
+        "priority": 5
+      },
+      "minecraft:behavior.open_door": {
+        "priority": 6,
+        "close_door_after": true
+      },
+      "minecraft:behavior.move_towards_restriction": {
+        "priority": 7,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 8,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      }
+    },
+    "events": {
+      "minecraft:become_scared": {
+        "add": {
+          "component_groups": [
+            "minecraft:scared"
+          ]
+        }
+      },
+      "minecraft:become_calm": {
+        "remove": {
+          "component_groups": [
+            "minecraft:scared"
+          ]
+        }
+      }
+    }
+  }
+}

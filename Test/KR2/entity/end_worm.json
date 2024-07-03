@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:end_worm",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/end_worm"
+			},
+			"geometry": {
+				"default": "geometry.end_worm"
+			},
+			"spawn_egg": {
+				"base_color": "#50073C",
+				"overlay_color": "#C90DA0"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

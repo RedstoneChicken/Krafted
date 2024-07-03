@@ -1,0 +1,186 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:quicksand",
+            "register_to_creative_menu": true,
+            "properties": {
+                "honkit26113:layer": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            }
+        },
+        "components": {
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.nature",
+                "category": "nature"
+            },
+            "minecraft:breathability": "solid",
+            "minecraft:map_color": "#3A2800",
+            "minecraft:destroy_time": 2,
+            "minecraft:block_light_absorption": 15,
+            "minecraft:friction": 0.3,
+            "minecraft:flammable": {
+                "flame_odds": 0,
+                "burn_odds": 0
+            },
+            "minecraft:pick_collision": {
+                "origin": [-8, 0, -8],
+                "size": [16, 16, 16]
+            }
+        },
+        "events": {
+        	"honkit26113:on_step_on": {
+                "set_block_property": {
+                	"honkit26113:layer": "(query.block_property('honkit26113:layer')) + 1"
+                }
+            },
+        	"honkit26113:on_step_off": {
+                "set_block_property": {
+                	"honkit26113:layer": "0"
+                }
+            }
+        },
+        "permutations": [
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 0",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    },
+        			"minecraft:on_step_on": {
+        				"event": "honkit26113:on_step_on"
+        			},
+        			"minecraft:on_fall_on": {
+        				"event": "honkit26113:on_step_on"
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 1",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 14, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 2",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 12, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 3",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 10, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 4",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 5",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 6, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 6",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 4, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 7",
+                "components": {
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 2, 16]
+                    },
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 0.5, 0.5 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_on"
+            			}
+        			}
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:layer') == 8",
+                "components": {
+                    "minecraft:entity_collision": false,
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 4.0, 4.0 ],
+            			"on_tick": {
+                			"event": "honkit26113:on_step_off"
+            			}
+        			}
+                }
+            }
+        ]
+    }
+}

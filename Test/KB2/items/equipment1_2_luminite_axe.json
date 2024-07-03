@@ -1,0 +1,945 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_axe",
+			"category": "equipment"
+		},
+		"components": {
+			"tag:minecraft:is_axe": {},
+			"tag:minecraft:is_digger": {},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.axe"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "axe"
+			},
+			"minecraft:icon": {
+				"texture": "luminite_axe"
+			},
+			"minecraft:damage": 7,
+			"minecraft:render_offsets": "tools",
+			"minecraft:hand_equipped": true,
+			"minecraft:explodable": false,
+			"minecraft:durability": {
+				"max_durability": 2571
+			},
+			"minecraft:mining_speed": 9.0,
+      		"minecraft:weapon": {
+        		"on_hurt_entity": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+        		}
+      		},
+			"minecraft:digger": {
+        		"on_dig": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+      			},
+    			"use_efficiency": true,
+    			"destroy_speeds": [
+        			{
+            			"block": {
+                			"tags": "query.any_tag('wood','pumpkin','plant','honkit26113:dig_with_axe')"
+            			},
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:luminous_mushroom_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:luminous_mushroom_stem",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dark_oak_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dark_oak_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:wooden_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:chest",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:trapped_chest",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lectern",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:smithing_table",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:loom",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cartography_table",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:fletching_table",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:barrel",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:fence",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_fence",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dark_oak_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_fence",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_fence_gate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jukebox",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:log2",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_acacia_log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_birch_log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_dark_oak_log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_jungle_log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_oak_log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_spruce_log",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_stem",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_crimson_stem",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stripped_warped_stem",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_stem",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:planks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_planks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_planks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:wooden_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:oak_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dark_oak_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:campfire",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bookshelf",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:standing_banner",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:wall_banner",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lit_pumpkin",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:melon_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:pumpkin",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:darkoak_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:darkoak_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_standing_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_wall_sign",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:noteblock",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:acacia_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:birch_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dark_oak_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:jungle_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:spruce_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:wooden_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:beehive",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:ladder",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bee_nest",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:composter",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bamboo",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bed",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cocoa",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:daylight_detector",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:brown_mushroom_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:red_mushroom_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:vine",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			}
+    			]
+			},
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 643
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_axe"
+            			],
+            			"repair_amount": 2571
+        			}
+    			]
+			}
+		},
+    	"events": {
+      		"honkit26113:on_tool_used": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		},
+      		"on_tool_used": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		}
+    	}
+	}
+}

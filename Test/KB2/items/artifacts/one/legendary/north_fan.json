@@ -1,0 +1,55 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:north_fan",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":1,
+         "minecraft:damage":2,
+         "minecraft:render_offsets":"tools",
+         "minecraft:icon":{
+            "texture":"north_fan"
+         },
+         "minecraft:display_name":{
+            "value":"§bNorth Fan\n§3Legendary\n§7Cooldown: 5\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"north_fan",
+            "duration":5
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:foil":true,
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"use",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "use":{
+            "run_command":{
+               "command":[
+                  "playsound mob.dolphin.idle @a[r=10]",
+                  "tag @s add nf_user",
+                  "effect @s slowness 1 1",
+                  "particle kna:snow_dust ~~~",
+                  "effect @e[r=8,tag=!nf_user] slowness 5 3",
+                  "effect @e[r=8,tag=!nf_user] weakness 5 3",
+                  "effect @e[r=8,tag=!nf_user] wither 5 1",
+                  "tag @s remove nf_user"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

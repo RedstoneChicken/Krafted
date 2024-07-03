@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:atlantic_cod",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "atlantic_cod",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

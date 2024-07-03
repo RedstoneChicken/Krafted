@@ -1,0 +1,35 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:shovel_128"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_shovel_head"
+			},
+			"~": {
+				"item": "strat:manyullyn_tool_rod"
+			},
+			"o": {
+				"item": "strat:manyullyn_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:shovel_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

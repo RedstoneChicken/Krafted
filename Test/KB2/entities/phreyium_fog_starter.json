@@ -1,0 +1,44 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "korbon:phreyium_fog_starter",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:behavior.float": {},
+			"minecraft:navigation.generic": {
+				"can_sink": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:persistent": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true
+			},
+			"minecraft:fire_immune": true
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

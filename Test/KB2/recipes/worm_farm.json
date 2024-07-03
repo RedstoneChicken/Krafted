@@ -1,0 +1,24 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "worm_farm"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ "B B", "BCB", "AAA" ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:planks"
+			},
+			"B" : {
+				"item" : "minecraft:fence"
+			},
+			"C" : {
+				"item" : "minecraft:dirt"
+			}
+		},
+		"result" : {
+			"item" : "azc:worm_farm"
+		}
+	}
+}

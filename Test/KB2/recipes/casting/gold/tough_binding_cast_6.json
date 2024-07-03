@@ -1,0 +1,33 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:tough_binding_cast_6"
+		},
+		"tags": [
+			"casting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:molten_gold_bucket"
+			},
+			"~": {
+				"item": "strat:cobalt_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:tough_binding_cast",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 1
+			}
+		]
+	}
+}

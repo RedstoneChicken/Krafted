@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "hatchi:bundlepack",
+			"materials": {
+				"default": "armor",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"default": "textures/bundlepack",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.bundlepack"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;",
+				"animate": [
+					"move",
+					"display"
+				]
+			},
+			"render_controllers": ["controller.render.armor"],
+			"animations": {
+				"move": "animation.bundlepack.move",
+				"display": "animation.bundlepack.display"
+			}
+		}
+	}
+}

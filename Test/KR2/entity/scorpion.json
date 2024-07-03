@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "honkit26113:scorpion",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/honkit26113_scorpion"
+      },
+      "geometry": {
+        "default": "geometry.honkit26113_scorpion"
+      },
+      "animations": {
+        "look_at_target": "animation.scorpion.look_at_target",
+        "walk": "animation.spider.walk",
+        "attack": "animation.scorpion.attack"
+      },
+      "animation_controllers": [
+        { "move": "controller.animation.scorpion.move" }
+      ],
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+		"base_color": "#896B3F",
+		"overlay_color": "#ACA77F"
+      }
+    }
+  }
+}

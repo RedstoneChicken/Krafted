@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:vanilla_bean",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:creative_category": {
+				"parent": "nature"
+			},
+			"minecraft:icon": {
+				"texture": "vanilla_bean"
+			},
+			"minecraft:foil": false,
+			"minecraft:block_placer": {
+				"block": "strat:vanilla_crop",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

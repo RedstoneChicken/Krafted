@@ -1,0 +1,26 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:sky_slime_balls_from_congealed"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "strat:congealed_sky_slime_block"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:sky_slime_ball",
+				"count": 4
+			}
+		]
+	}
+}

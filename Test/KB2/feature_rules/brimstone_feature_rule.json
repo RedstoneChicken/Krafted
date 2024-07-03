@@ -1,0 +1,40 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "nether:brimstone_feature_rule",
+			"places_feature": "nether:brimstone_scatter_feature"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "nether"
+			}
+		},
+		"distribution": {
+			"iterations": 20,
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"y": 0,
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 2
+			}
+		}
+	}
+}

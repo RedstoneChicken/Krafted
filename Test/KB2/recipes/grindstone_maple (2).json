@@ -1,0 +1,32 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.16,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:grindstone_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ABA",
+			"C C"
+		],
+		"key": {
+			"A": {
+				"item": "stick"
+			},
+			"B": {
+				"item": "stone_slab"
+			},
+			"C": {
+				"item": "strat:maple_planks"
+			}
+		},
+		"result": {
+			"item": "grindstone",
+			"count": 1
+		},
+		"priority": 50
+	}
+}

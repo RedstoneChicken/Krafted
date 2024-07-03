@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "honkit26113:giant_crooked_fungus_random_feature"
+    },
+    "features": [
+      [ "honkit26113:giant_crooked_fungus_small_1_feature", 6 ],
+      [ "honkit26113:giant_crooked_fungus_big_1_n_feature", 1 ],
+      [ "honkit26113:giant_crooked_fungus_big_1_e_feature", 1 ],
+      [ "honkit26113:giant_crooked_fungus_big_1_s_feature", 1 ],
+      [ "honkit26113:giant_crooked_fungus_big_1_w_feature", 1 ]
+    ]
+  }
+}

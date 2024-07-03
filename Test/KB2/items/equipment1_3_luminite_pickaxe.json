@@ -1,0 +1,1689 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "honkit26113:luminite_pickaxe",
+			"category": "equipment"
+		},
+		"components": {
+			"tag:minecraft:is_pickaxe": {},
+			"tag:minecraft:is_digger": {},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.pickaxe"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 13,
+				"slot": "pickaxe"
+			},
+			"minecraft:icon": {
+				"texture": "luminite_pickaxe"
+			},
+			"minecraft:damage": 6,
+			"minecraft:render_offsets": "tools",
+			"minecraft:hand_equipped": true,
+			"minecraft:explodable": false,
+			"minecraft:durability": {
+				"max_durability": 2571
+			},
+			"minecraft:mining_speed": 9.0,
+			"minecraft:weapon": {
+        		"on_hurt_entity": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+        		}
+      		},
+			"minecraft:digger": {
+        		"on_dig": {
+          			"event": "honkit26113:on_tool_used",
+          			"target": "self"
+        		},
+    			"use_efficiency": true,
+    			"destroy_speeds": [
+        			{
+            			"block": {
+            				"tags": "query.any_tag('stone','metal','honkit26113:dig_with_pickaxe')"
+            			},
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+                    {
+                        "block": "honkit26113:slimy_stone",
+                        "speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+                    },
+        			{
+            			"block": "honkit26113:luminite_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:deepslate_luminite_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:luminite_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:glow_mycelium",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:limestone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:cobbled_limestone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:polished_limestone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:limestone_bricks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:limestone_bricks_chiseled",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:limestone_bricks_cracked",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:limestone_bricks_mossy",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:limestone_bricks_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:frosted_stone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:crystallized_ice",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:deepslate_glow_mycelium",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "honkit26113:slimy_deepslate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_brick_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_brick_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_brick_wall",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_bricks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_coal_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_copper_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_diamond_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_emerald_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_gold_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_iron_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_lapis_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_redstone_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_tile_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_tile_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:deepslate_tiles",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:chiseled_deepslate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cobbled_deepslate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cobbled_deepslate_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cobbled_deepslate_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cobbled_deepslate_wall",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cracked_deepslate_bricks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cracked_deepslate_tiles",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:polished_deepslate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:polished_deepslate_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:polished_deepslate_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:polished_deepslate_wall",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:copper_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:tuff",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:calcite",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:smooth_basalt",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dripstone_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:amethyst_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:budding_amethyst",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:raw_iron_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:raw_copper_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:raw_gold_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:exposed_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:weathered_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:oxidized_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_exposed_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_weathered_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_oxidized_cut_copper_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:exposed_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:weathered_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:oxidized_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_exposed_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_weathered_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_oxidized_cut_copper_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:copper_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:exposed_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:weathered_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:oxidized_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_exposed_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_weathered_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_oxidized_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:exposed_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:weathered_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:oxidized_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_exposed_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_weathered_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:waxed_oxidized_cut_copper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:obsidian",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:ancient_debris",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crying_obsidian",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:respawn_anchor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:ender_chest",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:anvil",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:coal_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:diamond_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:netherite_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:emerald_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:iron_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:redstone_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:enchanting_table",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:iron_bars",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:iron_door",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:iron_trapdoor",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:mob_spawner",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bell",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dispenser",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dropper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:observer",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:furnace",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:blast_furnace",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:smoker",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stonecutter_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lodestone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lantern",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:conduit",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:gold_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:coal_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:dragon_egg",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:diamond_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:emerald_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:end_stone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:gold_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:hopper",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:iron_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lapis_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lapis_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:quartz_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:nether_gold_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:redstone_ore",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:grindstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bone_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:brick_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:brick_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cauldron",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cobblestone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cobblestone_wall",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:mossy_cobblestone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:nether_brick",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:red_nether_brick",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:nether_brick_fence",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:nether_brick_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_slab",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_slab2",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_slab3",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_slab4",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:polished_blackstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:concrete",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:shulker_box",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:undyed_shulker_box",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:prismarine",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:smooth_stone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:purpur_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stonebrick",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_brick_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:blackstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:chiseled_polished_blackstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:polished_blackstone_bricks",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:gilded_blackstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:white_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:orange_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:magenta_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:light_blue_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:yellow_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:lime_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:pink_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:gray_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:silver_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:cyan_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:purple_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:blue_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:brown_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:green_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:red_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:black_glazed_terracotta",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stained_hardened_clay",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:basalt",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:quartz_block",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:quartz_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:red_sandstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:red_sandstone_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:sandstone",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:sandstone_stairs",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:crimson_nylium",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:warped_nylium",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:rail",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:golden_rail",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:detector_rail",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:activator_rail",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:brewing_stand",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_button",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:blue_ice",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:ice",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:magma",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:packed_ice",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:frosted_ice",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:stone_pressure_plate",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:netherrack",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:end_rod",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			},
+        			{
+            			"block": "minecraft:bed",
+            			"speed": 9,
+        				"on_dig": {
+          					"event": "honkit26113:on_tool_used",
+          					"target": "self"
+      					}
+        			}
+    			]
+			},
+			"minecraft:repairable": {
+    			"repair_items": [
+        			{
+            			"items": [
+                			"honkit26113:luminite"
+            			],
+            			"repair_amount": 643
+        			},
+        			{
+            			"items": [
+                			"honkit26113:luminite_pickaxe"
+            			],
+            			"repair_amount": 2571
+        			}
+    			]
+			}
+		},
+    	"events": {
+      		"honkit26113:on_tool_used": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		},
+      		"on_tool_used": {
+        		"swing": {},
+        		"damage": {
+          			"type": "contact",
+          			"amount": 1
+        		}
+      		}
+    	}
+	}
+}

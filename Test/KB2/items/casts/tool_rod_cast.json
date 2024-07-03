@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tool_rod_cast",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Tool Rod Cast\n§7Material Cost: 1§r"
+			},
+			"minecraft:icon": {
+				"texture": "strat_tool rod cast"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"tag:cast": {}
+		},
+		"events": {}
+	}
+}

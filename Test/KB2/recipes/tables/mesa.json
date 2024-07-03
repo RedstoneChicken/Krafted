@@ -1,0 +1,39 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:mesa"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XIX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:log"
+			},
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"R": {
+				"item": "oh:ruby"
+			},
+			"J": {
+				"item": "oh:jade"
+			},
+			"B": {
+				"item": "oh:bronce"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:mesa",
+				"count": 1
+			}
+		]
+	}
+}

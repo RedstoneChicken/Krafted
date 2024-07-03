@@ -1,0 +1,45 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.10",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:spawn_magma_zombie",
+			"is_experimental": true
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "stone"
+				}
+			},
+			"minecraft:ticking": {
+				"range": [
+					8,
+					8
+				],
+				"looping": false,
+				"on_tick": {
+					"event": "spawn"
+				}
+			}
+		},
+		"events": {
+			"spawn": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon oh:ores_trader ~ ~1 ~"
+							]
+						}
+					},
+					{
+						"set_block": {
+							"block_type": "minecraft:air"
+						}
+					}
+				]
+			}
+		}
+	}
+}

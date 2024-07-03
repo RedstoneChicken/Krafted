@@ -1,0 +1,22 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:distorted_roots/distorted_roots_valley_flower_feature"
+        },
+        "features": [
+            [
+                "ff:distorted_roots/distorted_roots_feature",
+                15
+            ],
+            [
+                "ff:distorted_roots/distorted_roots_tall_feature",
+                15
+            ],
+            [
+                "ff:distorted_roots/distorted_roots_large_feature",
+                12
+            ]
+        ]
+    }
+}

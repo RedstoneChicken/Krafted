@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:siltstone_bricks"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:polished_siltstone"
+      }
+    ],
+    "result": {
+      "item": "cav:siltstone_bricks",
+      "count": 1
+    }
+  }
+  
+}

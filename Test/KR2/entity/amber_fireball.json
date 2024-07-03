@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:amber_fireball",
+			"materials": {
+				"default": "fireball"
+			},
+			"textures": {
+				"default": "textures/items/amber_fireball"
+			},
+			"geometry": {
+				"default": "geometry.fireball"
+			},
+			"animations": {
+				"face_player": "animation.actor.billboard"
+			},
+			"scripts": {
+				"scale": 2,
+				"animate": [
+					"face_player"
+				]
+			},
+			"render_controllers": [
+				"controller.render.fireball"
+			]
+		}
+	}
+}

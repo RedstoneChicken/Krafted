@@ -1,0 +1,257 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "chetty:waypoint_block",
+			"properties": {
+				"beacon:color": [
+					"black",
+					"blue",
+					"brown",
+					"cyan",
+					"gray",
+					"green",
+					"light_blue",
+					"lime",
+					"magenta",
+					"orange",
+					"pink",
+					"purple",
+					"red",
+					"silver",
+					"white",
+					"yellow"
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('beacon:color') == 'black'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "black",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'blue'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "blue",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'brown'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "brown",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'cyan'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "cyan",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'gray'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "gray",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'green'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "green",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'light_blue'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "light_blue",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'lime'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "lime",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'magenta'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "magenta",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'orange'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "orange",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'pink'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "pink",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'purple'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "purple",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'red'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "red",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'silver'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "silver",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'white'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "white",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('beacon:color') == 'yellow'",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "yellow",
+							"render_method": "blend",
+							"ambient_occlusion": true,
+							"face_dimming": true
+						}
+					}
+				}
+			}
+		],
+		"components": {
+			"minecraft:on_placed": {
+				"event": "beam"
+			},
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:light_emission": 15,
+			"minecraft:geometry": "geometry.waypointblock",
+			"minecraft:selection_box": false,
+			"minecraft:collision_box": false
+		},
+		"events": {
+			"beam": {
+				"run_command": {
+					"command": [
+						"tp @e[type=chetty:waypoint_beam,r=1] ~~0.2~"
+					]
+				}
+			}
+		}
+	}
+}

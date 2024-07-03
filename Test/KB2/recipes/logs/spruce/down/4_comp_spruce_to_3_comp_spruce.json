@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:quadruple_compressed_spruce_to_tripple_compressed_spruce"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:quadruple_compressed_spruce"
+			}
+		],
+		"result": [
+			{
+				"count": 9,
+				"item": "cc:tripple_compressed_spruce"
+			}
+		]
+	}
+}

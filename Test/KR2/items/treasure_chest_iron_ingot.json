@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:treasure_chest_iron_ingot",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "treasure_chest",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

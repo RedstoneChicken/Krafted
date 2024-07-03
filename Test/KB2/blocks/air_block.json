@@ -1,0 +1,37 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "cbw:air_block"//This block is for detect air and break de lower door block
+		},
+		"components": {
+			"minecraft:creative_category": {
+                "category": "null"
+            },
+			"minecraft:destroy_time": 999999,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "air",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:on_placed": {
+				"event": "cbw:break",
+				"target": "self"
+			},
+			"minecraft:pick_collision": false,
+			"minecraft:entity_collision": false
+		},
+		"events": {
+			"cbw:break": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~-1 ~ air 0 destroy",
+						"setblock ~ ~ ~ air 0"
+					]
+				}
+			}
+		}
+	}
+}

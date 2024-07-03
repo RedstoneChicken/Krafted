@@ -1,0 +1,33 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.13.0",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "korbon:void_liquid_scatter_feature"
+		},
+		"iterations": 12,
+		"x": {
+			"distribution": "fixed_grid",
+			"extent": [
+				-2,
+				2
+			]
+		},
+		"y": {
+			"distribution": "gaussian",
+			"extent": [
+				-4,
+				4
+			]
+		},
+		"z": {
+			"distribution": "fixed_grid",
+			"extent": [
+				-2,
+				2
+			]
+		},
+		"coordinate_eval_order": "zyx",
+		"places_feature": "korbon:void_liquid_feature"
+	}
+}

@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "strat:cookie_from_cookie_dough"
+		},
+		"tags": [
+			"furnace",
+			"smoker"
+		],
+		"input": "strat:cookie_dough",
+		"output": "minecraft:cookie"
+	}
+}

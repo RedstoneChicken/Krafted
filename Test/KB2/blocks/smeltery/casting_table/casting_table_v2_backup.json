@@ -1,0 +1,2983 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:casting_table_v2_backup",
+			"properties": {
+				"strat:part": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:part2": [
+					0,
+					1,
+					2,
+					3,
+					4
+				],
+				"strat:material": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				],
+				"strat:stage": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:block_light_filter": 0,
+			"minecraft:map_color": "#202020",
+			"minecraft:explosion_resistance": 5,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "casting_table",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.casting_table_parts",
+			"minecraft:part_visibility": {
+				"conditions": {
+					"molten_liquid": "query.block_property('strat:stage') == 1",
+					"ingot": "query.block_property('strat:part') == 1",
+					"tool_rod": "query.block_property('strat:part') == 2",
+					"binding": "query.block_property('strat:part') == 3",
+					"hand_guard": "query.block_property('strat:part') == 4",
+					"wide_guard": "query.block_property('strat:part') == 5",
+					"sword_blade": "query.block_property('strat:part') == 6",
+					"pickaxe_head": "query.block_property('strat:part') == 7",
+					"axe_head": "query.block_property('strat:part') == 8",
+					"shovel_head": "query.block_property('strat:part') == 9",
+					"pan": "query.block_property('strat:part') == 10",
+					"tough_tool_rod": "query.block_property('strat:part') == 11",
+					"tough_binding": "query.block_property('strat:part') == 12",
+					"large_sword_blade": "query.block_property('strat:part') == 13",
+					"hammer_head": "query.block_property('strat:part') == 14",
+					"broad_axe_head": "query.block_property('strat:part2') == 1",
+					"excavator_head": "query.block_property('strat:part2') == 2",
+					"large_plate": "query.block_property('strat:part2') == 3"
+				}
+			},
+			"tag:stone": {},
+			"minecraft:loot": "loot_tables/casting_table.json",
+			"minecraft:on_interact": {
+				"event": "strat:interact"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Commands",
+				"category": "Commands"
+			}
+		},
+		"events": {
+			"strat:interact": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:stage') == 0",
+						"sequence": [
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'blank_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_blank_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ingot_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_ingot_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'tool_rod_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_tool_rod_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'tool_binding_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_tool_binding_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'pickaxe_head_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_pickaxe_head_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'axe_head_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_axe_head_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'pan_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_pan_cast"
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'large_plate_cast'",
+										"set_block": {
+											"block_type": "strat:casting_table_large_plate_cast"
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'gold_ingot'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_tool_rod'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_binding'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_hand_guard'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_wide_guard'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_sword_blade'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_axe_head'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_shovel_head'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_pan'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_tough_binding'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_hammer_head'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_excavator_head'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'wooden_large_plate'",
+										"set_block_property": {
+											"strat:material": 1,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/gold_ingot.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 1 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/wood/wooden_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'seared_brick'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_tool_rod'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_binding'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_hand_guard'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_wide_guard'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_sword_blade'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_axe_head'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_shovel_head'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_pan'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_tough_binding'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_hammer_head'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_excavator_head'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'stone_large_plate'",
+										"set_block_property": {
+											"strat:material": 2,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/seared_brick.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 2 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/stone/stone_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'brick'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_tool_rod'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_binding'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_hand_guard'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_wide_guard'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_sword_blade'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_axe_head'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_shovel_head'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_pan'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_tough_binding'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_hammer_head'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_excavator_head'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'flint_large_plate'",
+										"set_block_property": {
+											"strat:material": 3,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/brick.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 3 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/flint/flint_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_ingot'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_tool_rod'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_binding'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_hand_guard'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_wide_guard'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_sword_blade'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_axe_head'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_shovel_head'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_pan'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_tough_binding'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_hammer_head'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_excavator_head'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'iron_large_plate'",
+										"set_block_property": {
+											"strat:material": 4,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/iron_ingot.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 4 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/iron/iron_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_ingot'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_tool_rod'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_binding'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_hand_guard'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_wide_guard'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_sword_blade'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_axe_head'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_shovel_head'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_pan'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_tough_binding'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_hammer_head'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_excavator_head'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'copper_large_plate'",
+										"set_block_property": {
+											"strat:material": 5,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/copper_ingot.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 5 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/copper/copper_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_ingot'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_tool_rod'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_binding'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_hand_guard'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_wide_guard'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_sword_blade'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_axe_head'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_shovel_head'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_pan'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_tough_binding'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_hammer_head'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_excavator_head'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'cobalt_large_plate'",
+										"set_block_property": {
+											"strat:material": 6,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/cobalt_ingot.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 6 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/cobalt/cobalt_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_ingot'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_tool_rod'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_binding'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_hand_guard'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_wide_guard'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_sword_blade'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_axe_head'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_shovel_head'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_pan'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_tough_binding'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_hammer_head'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_excavator_head'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'ardite_large_plate'",
+										"set_block_property": {
+											"strat:material": 7,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/ardite_ingot.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 7 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/ardite/ardite_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_ingot'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_tool_rod'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_binding'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 3
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_hand_guard'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 4
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_wide_guard'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 5
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_sword_blade'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 6
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_pickaxe_head'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 7
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_axe_head'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 8
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_shovel_head'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 9
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_pan'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 10
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_tough_tool_rod'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 11
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_tough_binding'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 12
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_large_sword_blade'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 13
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_hammer_head'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part": 14
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_broad_axe_head'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part2": 1
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_excavator_head'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part2": 2
+										},
+										"decrement_stack": {}
+									},
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'manyullyn_large_plate'",
+										"set_block_property": {
+											"strat:material": 8,
+											"strat:part2": 3
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/manyullyn_ingot.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 4 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_hand_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 5 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_wide_guard.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 6 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 7 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_pickaxe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 8 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 9 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_shovel_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 10 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_pan.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 11 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_tough_tool_rod.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 12 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_tough_binding.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 13 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_large_sword_blade.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part') == 14 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_hammer_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part2') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_broad_axe_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part2') == 2 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_excavator_head.json"
+										}
+									},
+									{
+										"condition": "query.block_property('strat:material') == 8 && query.block_property('strat:part2') == 3 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part2": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/parts/manyullyn/manyullyn_large_plate.json"
+										}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:part') == 0 && query.get_equipped_item_name('main_hand') == 'gold_ingot'",
+										"set_block_property": {
+											"strat:material": 9,
+											"strat:part": 1
+										},
+										"decrement_stack": {}
+									}
+								]
+							},
+							{
+								"sequence": [
+									{
+										"condition": "query.block_property('strat:material') == 9 && query.block_property('strat:part') == 1 && query.get_equipped_item_name('main_hand') != 'molten_gold_bucket'",
+										"set_block_property": {
+											"strat:material": 0,
+											"strat:part": 0
+										},
+										"spawn_loot": {
+											"table": "loot_tables/casting/ingots/gold_ingot.json"
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('strat:part') != 0 || query.block_property('strat:part2') != 0 && query.get_equipped_item_name('main_hand') == 'molten_gold_bucket'",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								},
+								"set_block_property": {
+									"strat:stage": 1
+								},
+								"decrement_stack": {}
+							}
+						]
+					},
+					{
+						"condition": "query.block_property('strat:part') == 0 && query.block_property('strat:part2') == 0 && query.get_equipped_item_name('main_hand') == 'molten_gold_bucket'",
+						"sequence": [
+							{
+								"run_command": {
+									"command": [
+										"playsound bucket.fill_lava @a ~~~",
+										"gamerule sendcommandfeedback false",
+										"give @s bucket",
+										"gamerule sendcommandfeedback true"
+									],
+									"target": "player"
+								},
+								"set_block_property": {
+									"strat:stage": 1,
+									"strat:part2": 4
+								},
+								"decrement_stack": {}
+							}
+						]
+					}
+				]
+			},
+			"strat:solidify": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:part') == 1",
+						"set_block": {
+							"block_type": "strat:casting_table_ingot_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part') == 2",
+						"set_block": {
+							"block_type": "strat:casting_table_tool_rod_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part') == 3",
+						"set_block": {
+							"block_type": "strat:casting_table_tool_binding_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part') == 7",
+						"set_block": {
+							"block_type": "strat:casting_table_pickaxe_head_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part') == 8",
+						"set_block": {
+							"block_type": "strat:casting_table_axe_head_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part') == 10",
+						"set_block": {
+							"block_type": "strat:casting_table_pan_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part2') == 3",
+						"set_block": {
+							"block_type": "strat:casting_table_large_plate_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('strat:part2') == 4",
+						"set_block": {
+							"block_type": "strat:casting_table_blank_cast"
+						},
+						"run_command": {
+							"command": [
+								"particle minecraft:basic_smoke_particle ~~+1~",
+								"playsound extinguish.candle @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('strat:material') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_wooden_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_wooden_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_stone_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_flint_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_iron_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_copper_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_cobalt_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_ardite_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_manyullyn_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_gold_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:material') == 10",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "casting_table_seared_parts",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:stage') == 1",
+				"components": {
+					"minecraft:ticking": {
+						"range": [
+							5,
+							5
+						],
+						"on_tick": {
+							"event": "strat:solidify"
+						}
+					}
+				}
+			}
+		]
+	}
+}

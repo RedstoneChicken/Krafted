@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:sheetrock"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PPP",
+      "GGG",
+      "PPP"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:paper"
+      },
+      "G": {
+        "item": "cav:gypsum_dust"
+      }
+    },
+    "result": {
+      "item": "cav:sheetrock",
+      "count": 1
+    }
+  }
+}

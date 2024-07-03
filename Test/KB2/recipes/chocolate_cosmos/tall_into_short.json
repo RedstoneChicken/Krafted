@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_chocolate_cosmos_into_short_chocolate_cosmos"},"tags":["crafting_table"],"ingredients":[{"item":"ff:chocolate_cosmos_tall_item"}],"result":{"item":"ff:chocolate_cosmos_item","count":2}}}

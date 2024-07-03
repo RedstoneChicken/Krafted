@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:buttered_pancake",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "buttered_pancake"
+			},
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 1.6
+		},
+		"events": {}
+	}
+}

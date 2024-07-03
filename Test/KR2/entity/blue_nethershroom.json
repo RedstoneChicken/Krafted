@@ -1,0 +1,29 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:blue_nethershroom",
+			"materials": {
+				"default": "item_in_hand_entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/items/blue_nethershroom"
+			},
+			"geometry": {
+				"default": "geometry.item_sprite"
+			},
+			"animations": {
+				"flying": "animation.actor.billboard"
+			},
+			"scripts": {
+				"animate": [
+					"flying"
+				]
+			},
+			"render_controllers": [
+				"controller.render.item_sprite"
+			]
+		}
+	}
+}

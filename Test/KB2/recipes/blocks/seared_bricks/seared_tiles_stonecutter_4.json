@@ -1,0 +1,24 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:seared_tiles_stonecutter_4"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "strat:triangle_seared_bricks",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:seared_tiles",
+				"count": 1
+			}
+		]
+	}
+}

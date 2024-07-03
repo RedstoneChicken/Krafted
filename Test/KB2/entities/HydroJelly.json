@@ -1,0 +1,165 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "caf:hydro_jelly",
+			"is_summonable": true,
+			"is_spawnable": true,
+			"animations": {
+				"hydrogen_explode": "controller.animation.hydrogen_explode"
+			},
+			"scripts": {
+				"animate": [
+					"hydrogen_explode"
+				]
+			}
+		},
+		"component_groups": {
+			"caf:size1": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"caf:size2": {
+				"minecraft:scale": {
+					"value": 0.9
+				}
+			},
+			"caf:size3": {
+				"minecraft:scale": {
+					"value": 0.7
+				}
+			},
+			"caf:size4": {
+				"minecraft:scale": {
+					"value": 1.5
+				}
+			},
+			"caf:its_almost_exploding": {
+				"minecraft:explode": {
+					"fuse_length": 1.5,
+					"fuse_lit": true,
+					"power": 3,
+					"causes_fire": false,
+					"destroy_affected_by_griefing": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"lantern"
+				]
+			},
+			"minecraft:leashable": {
+				"soft_distance": 4,
+				"hard_distance": 6,
+				"max_distance": 20,
+				"can_be_stolen": false
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 10,
+				"breathes_water": false
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2.5
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:nameable": {},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:physics": {},
+			"minecraft:movement": {
+				"value": 0.025
+			},
+			"minecraft:behavior.random_hover": {
+				"priority": 12,
+				"xz_dist": 8,
+				"y_dist": 8,
+				"y_offset": -1,
+				"interval": 1,
+				"hover_height": [
+					1,
+					4
+				]
+			},
+			"minecraft:behavior.float": {
+				"priority": 19
+			},
+			"minecraft:flying_speed": {
+				"value": 0.05
+			},
+			"minecraft:navigation.hover": {
+				"can_path_over_water": true,
+				"can_sink": false,
+				"can_pass_doors": false,
+				"can_path_from_air": true,
+				"avoid_water": true,
+				"avoid_damage_blocks": true,
+				"avoid_sun": false
+			},
+			"minecraft:movement.hover": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_fly": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:behavior.avoid_block": {
+				"target_blocks": [
+					"minecraft:flowing_water",
+					"minecraft:water"
+				],
+				"priority": 2
+			},
+			"minecraft:fire_immune": true
+		},
+		"events": {
+			"hydrogen_explode": {
+				"add": {
+					"component_groups": [
+						"caf:its_almost_exploding"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"add": {
+							"component_groups": [
+								"caf:size1"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"caf:size2"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"caf:size3"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"caf:size4"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

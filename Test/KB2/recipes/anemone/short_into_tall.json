@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_anemone_into_tall_anemone"},"tags":["crafting_table"],"ingredients":[{"item":"ff:anemone_item","count":2}],"result":{"item":"ff:anemone_tall_item"}}}

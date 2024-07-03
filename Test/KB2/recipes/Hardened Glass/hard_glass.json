@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:hard_glass"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "FFF",
+      "GGG",
+      "FFF"
+    ],
+    "key": {
+      "F": {
+        "item": "cav:feldspar"
+      },
+      "G": {
+        "item": "minecraft:glass"
+      }
+    },
+    "result": {
+      "item": "minecraft:hard_glass",
+      "count": 3
+    }
+  }
+}

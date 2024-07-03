@@ -1,0 +1,36 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.16,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:piston_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"BCB",
+			"BDB"
+		],
+		"key": {
+			"A": {
+				"item": "strat:maple_planks"
+			},
+			"B": {
+				"item": "cobblestone"
+			},
+			"C": {
+				"item": "iron_ingot"
+			},
+			"D": {
+				"item": "redstone"
+			}
+		},
+		"result": {
+			"item": "piston",
+			"count": 1,
+			"data": 1
+		}
+	}
+}

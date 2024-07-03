@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:acacia_barricade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:log2",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:acacia_barricade",
+				"count": 4
+			}
+		]
+	}
+}

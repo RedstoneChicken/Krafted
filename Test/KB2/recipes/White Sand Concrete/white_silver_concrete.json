@@ -1,0 +1,51 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "craft:white_silver_concrete"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "group": "concrete_powder",
+    "ingredients": [
+      {
+        "item": "minecraft:dye",
+        "data": 7
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "cav:white_sand",
+        "data": 0
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      },
+      {
+        "item": "minecraft:gravel"
+      }
+    ],
+    "result": {
+      "item": "minecraft:concrete_powder",
+      "data": 8,
+      "count": 8
+    }
+  }
+}

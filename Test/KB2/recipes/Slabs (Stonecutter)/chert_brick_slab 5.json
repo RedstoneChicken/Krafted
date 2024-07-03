@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:diabase_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:diabase_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:diabase_brick_slab",
+      "count": 2
+    }
+  } 
+}

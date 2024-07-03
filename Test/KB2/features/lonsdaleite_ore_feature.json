@@ -1,0 +1,18 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "end:lonsdaleite_ore_feature"
+		},
+		"count": 8,
+		"replace_rules": [
+			{
+				"places_block": "end:lonsdaleite_ore",
+				"may_replace": [
+					"minecraft:end_stone"
+				]
+			}
+		]
+	}
+}

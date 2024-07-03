@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "nether:marouge_vine_weighted"
+		},
+		"features": [
+			[
+				"nether:marouge_vine_1_feature",
+				1
+			],
+			[
+				"nether:marouge_vine_2_feature",
+				1
+			],
+			[
+				"nether:marouge_vine_3_feature",
+				1
+			]
+		]
+	}
+}

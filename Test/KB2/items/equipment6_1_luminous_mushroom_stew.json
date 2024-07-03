@@ -1,0 +1,41 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+    	"identifier": "honkit26113:luminous_mushroom_stew",
+      "category": "equipment"
+    },
+    "components": {
+		  "minecraft:creative_category": {
+			 "parent": "itemGroup.name.miscFood"
+		  },
+		  "minecraft:icon": {
+			 "texture": "luminous_mushroom_stew"
+		  },
+      "minecraft:use_duration": 1.6,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_animation": "eat",
+      "minecraft:food": {
+      	"can_always_eat": true,
+        "nutrition": 6,
+        "saturation_modifier": "normal",
+        "using_converts_to": "bowl",
+    	  "on_consume": {
+        	"event": "honkit26113:consumed",
+        	"target": "self"
+    	  }
+      }
+    },
+    "events": {
+    	"honkit26113:consumed": {
+    		"add_mob_effect": {
+    			"amplifier": 0,
+    			"duration": 15.0,
+    			"effect": "night_vision",
+    			"target": "self"
+    		}
+    	}
+    }
+  }
+}

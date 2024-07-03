@@ -1,0 +1,179 @@
+//bridge-file-version: #68
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:candle_holder",
+			"register_to_creative_menu": true,
+			"properties": {
+				"korbon:face": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "candle_holder",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-2,
+					4,
+					-8
+				],
+				"size": [
+					4,
+					12,
+					5
+				]
+			},
+			"minecraft:geometry": "geometry.candle_holder",
+			"minecraft:loot": "loot_tables/blocks/candle_holder.json",
+			"minecraft:destroy_time": 0.2,
+			"minecraft:map_color": "#383A38",
+			"minecraft:block_light_emission": 0.8,
+			"minecraft:on_player_placing": {
+				"event": "korbon:place"
+			},
+			"minecraft:ticking": {
+				"on_tick": {
+					"event": "flame4",
+					"target": "self"
+				},
+				"range": [
+					0,
+					1
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:flammable": {
+				"burn_odds": 0,
+				"flame_odds": 0
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"side"
+						]
+					}
+				]
+			}
+		},
+		"events": {
+			"korbon:place": {
+				"set_block_property": {
+					"korbon:face": "(query.cardinal_player_facing)"
+				}
+			},
+			"flame1": {
+				"run_command": {
+					"command": [
+						"particle minecraft:basic_flame_particle ~-0.3~0.7~",
+						"particle minecraft:basic_smoke_particle ~-0.3~0.8~"
+					]
+				}
+			},
+			"flame2": {
+				"run_command": {
+					"command": [
+						"particle minecraft:basic_flame_particle ~~0.7~0.3",
+						"particle minecraft:basic_smoke_particle ~~0.8~0.3"
+					]
+				}
+			},
+			"flame3": {
+				"run_command": {
+					"command": [
+						"particle minecraft:basic_flame_particle ~0.3~0.7~",
+						"particle minecraft:basic_smoke_particle ~0.3~0.8~"
+					]
+				}
+			},
+			"flame4": {
+				"run_command": {
+					"command": [
+						"particle minecraft:basic_flame_particle ~~0.7~-0.3",
+						"particle minecraft:basic_smoke_particle ~~0.8~-0.3"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:face') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					],
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "flame2",
+							"target": "self"
+						},
+						"range": [
+							0,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					],
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "flame1",
+							"target": "self"
+						},
+						"range": [
+							0,
+							1
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					],
+					"minecraft:ticking": {
+						"on_tick": {
+							"event": "flame3",
+							"target": "self"
+						},
+						"range": [
+							0,
+							1
+						]
+					}
+				}
+			}
+		]
+	}
+}

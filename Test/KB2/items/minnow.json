@@ -1,0 +1,22 @@
+{
+	"format_version" : "1.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "azc:minnow",
+			"category" : "items"
+		},
+		"components" : {
+			"minecraft:hand_equipped" : false,
+			"minecraft:max_stack_size" : 64,
+			"minecraft:foil" : false,
+			"minecraft:stack_by_data" : true,
+			"minecraft:on_use_on" : {
+				"on_use_on" : {
+					"target" : "block",
+					"condition" : "query.block_property('azc:trap') == 1",
+					"event" : "bait"
+				}
+			}
+		}
+	}
+}

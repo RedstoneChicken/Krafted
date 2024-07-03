@@ -1,0 +1,78 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.wildfire",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 22, 1],
+					"cubes": [
+						{"origin": [-4, 22, -3], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [-4, 22, -3], "size": [8, 9, 8], "inflate": 0.1, "uv": [32, 47]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 19, 0],
+					"cubes": [
+						{"origin": [-2, 0, -2], "size": [4, 22, 4], "uv": [40, 12]}
+					]
+				},
+				{
+					"name": "shield_base",
+					"parent": "root",
+					"pivot": [0, 19, 0]
+				},
+				{
+					"name": "front_shield",
+					"parent": "shield_base",
+					"pivot": [0, 19, -5],
+					"cubes": [
+						{"origin": [-5, 2, -6], "size": [10, 18, 2], "uv": [17, 16]}
+					]
+				},
+				{
+					"name": "back_shield",
+					"parent": "shield_base",
+					"pivot": [0, 19, 5],
+					"rotation": [-180, 0, 180],
+					"cubes": [
+						{"origin": [-5, 2, 4], "size": [10, 18, 2], "uv": [17, 16]}
+					]
+				},
+				{
+					"name": "right_shield",
+					"parent": "shield_base",
+					"pivot": [-5, 19, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-10, 2, -1], "size": [10, 18, 2], "uv": [17, 16]}
+					]
+				},
+				{
+					"name": "left_shield",
+					"parent": "shield_base",
+					"pivot": [5, 19, 0],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [0, 2, -1], "size": [10, 18, 2], "uv": [17, 16], "mirror": true}
+					]
+				}
+			]
+		}
+	]
+}

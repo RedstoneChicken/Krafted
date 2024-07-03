@@ -1,0 +1,24 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:platinum_2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"X"
+		],
+		"key": {
+			"X": {
+				"item": "oh:platinum_block"
+			}
+		},
+		"result": {
+			"item": "oh:platinum",
+			"count": 4
+		}
+	}
+}

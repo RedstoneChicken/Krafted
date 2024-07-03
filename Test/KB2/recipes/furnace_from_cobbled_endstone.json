@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "korbon:furnace_from_cobbled_endstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"# #",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "korbon:cobbled_endstone"
+			}
+		},
+		"result": {
+			"item": "minecraft:furnace"
+		}
+	}
+}

@@ -1,0 +1,138 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "honkit26113:lava_tank_diamond_cooldown",
+			"properties": {
+				"honkit26113:cooldown": [ 0, 1, 2, 3, 4, 5 ]
+			}
+		},
+		"components": {
+			"tag:honkit26113_dig_with_pickaxe": {},
+			"tag:honkit26113_lava_tank": {},
+      		"minecraft:creative_category": {
+        		"group": "itemGroup.name.none",
+      			"category": "none"
+      		},
+           	"minecraft:material_instances": {
+                "*": {
+                    "texture": "lava_tank_diamond",
+                    "render_method": "alpha_test",
+                    "ambient_occlusion": false,
+                    "face_dimming": false
+                }
+            },
+            "minecraft:geometry": "geometry.lava_tank",
+            "minecraft:part_visibility": {
+                "rules": {
+                    "glass": true,
+                    "base": true,
+                    "lava": false,
+                    "obsidian": false
+                }
+            },
+			"minecraft:on_interact": {
+				"event": "honkit26113:error"
+			},
+            "minecraft:breathability": "air",
+			"minecraft:destroy_time": 0.5,
+			"minecraft:explosion_resistance": 2
+        },
+        "events": {
+      		"honkit26113:error": {
+        		"sequence": [
+          			{
+            			"run_command": {
+              				"command": [
+              					"particle minecraft:critical_hit_emitter ~ ~ ~",
+              					"playsound random.anvil_land @a[r=10]"
+              				]
+            			}
+          			},
+          			{
+          				"condition": "q.block_property('honkit26113:cooldown') == 0",
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown5\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.block_property('honkit26113:cooldown') == 1",
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown4\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.block_property('honkit26113:cooldown') == 2",
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown3\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.block_property('honkit26113:cooldown') == 3",
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown2\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.block_property('honkit26113:cooldown') == 4",
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown1\"}]}"
+            			}
+          			},
+          			{
+          				"condition": "q.block_property('honkit26113:cooldown') == 5",
+            			"run_command": {
+              				"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown0\"}]}"
+            			}
+          			}
+        		]
+      		},
+      		"honkit26113:cooldown_over": {
+      			"sequence": [
+      				{
+      					"set_block": {
+      						"block_type": "honkit26113:lava_tank_diamond"
+      					}
+      				},
+      				{
+      					"run_command": {
+      						"command": "titleraw @a[r=10] actionbar {\"rawtext\":[{\"translate\":\"lava_tank.message.cooldown_end\"}]}"
+      					}
+      				}
+      			]
+      		},
+      		"honkit26113:cooldown_deduct_one": {
+      			"set_block_property": {
+      				"honkit26113:cooldown": "q.block_property('honkit26113:cooldown') + 1"
+      			}
+      		}
+  		},
+  		"permutations": [
+  			{
+  				"condition": "q.block_property('honkit26113:cooldown') <= 4",
+  				"components": {
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 1.0, 1.0 ],
+            			"on_tick": {
+            	    		"event": "honkit26113:cooldown_deduct_one"
+            			}
+        			}
+  				}
+  			},
+  			{
+  				"condition": "q.block_property('honkit26113:cooldown') == 5",
+  				"components": {
+        			"minecraft:ticking": {
+            			"looping": true,
+            			"range": [ 1.0, 1.0 ],
+            			"on_tick": {
+            	    		"event": "honkit26113:cooldown_over"
+            			}
+        			}
+  				}
+  			}
+  		]
+	}
+}

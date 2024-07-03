@@ -1,0 +1,32 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:frypan_37_9_2"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:frypan_37_3",
+				"count": 1
+			},
+			{
+				"item": "minecraft:obsidian",
+				"count": 1
+			},
+			{
+				"item": "minecraft:ender_pearl",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:frypan_37_9",
+				"count": 1
+			}
+		]
+	}
+}

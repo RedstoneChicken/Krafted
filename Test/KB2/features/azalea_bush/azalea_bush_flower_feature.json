@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:azalea_bush/azalea_bush_flower_feature"
+        },
+        "features": [
+            [
+                "ff:azalea_bush/azalea_bush_tall_feature",
+                15
+            ],
+            [
+                "ff:azalea_bush/azalea_bush_feature",
+                12
+            ],
+            [
+                "ff:azalea_bush_flowers/azalea_bush_flowers_tall_feature",
+                15
+            ],
+            [
+                "ff:azalea_bush_flowers/azalea_bush_flowers_feature",
+                12
+            ]
+        ]
+    }
+}

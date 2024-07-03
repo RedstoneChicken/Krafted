@@ -1,0 +1,24 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:flint_rec"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:gravel",
+				"count": 3
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:flint",
+				"count": 1
+			}
+		]
+	}
+}

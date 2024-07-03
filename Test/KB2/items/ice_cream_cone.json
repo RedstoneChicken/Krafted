@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ice_cream_cone",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 0.8,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "poor",
+				"can_always_eat": false
+			},
+			"minecraft:icon": {
+				"texture": "ice_cream_cone"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

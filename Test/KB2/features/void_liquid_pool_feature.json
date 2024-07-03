@@ -1,0 +1,15 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.13.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "korbon:void_liquid_pool_feature"
+		},
+		"early_out": "first_failure",
+		"features": [
+			"korbon:vaudrite_patch_feature",
+			"korbon:void_liquid_patch_scatter_feature",
+			"korbon:void_liquid_scatter_feature"
+		]
+	}
+}

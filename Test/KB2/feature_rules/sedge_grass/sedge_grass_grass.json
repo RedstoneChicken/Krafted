@@ -1,0 +1,37 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "ff:sedge_grass_grass",
+			"places_feature": "minecraft:jungle_tall_grass_feature"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of":[
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "swamp"
+				}
+			]
+			}
+			]
+		},
+		"distribution": {
+			"iterations": 50,
+			"scatter_chance": "variable.is_legacy ? 0.0 : 100.0",
+			"x": {
+				"distribution": "uniform",
+				"extent": [0, 16]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [0, 16]
+			},
+			"y": "q.heightmap(v.worldx, v.worldz)"
+		}
+	}
+}

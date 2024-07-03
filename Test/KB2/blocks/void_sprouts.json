@@ -1,0 +1,61 @@
+//bridge-file-version: #46
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:void_sprouts"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "void_sprouts",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"korbon:phreyium_block",
+							"korbon:phreyium",
+							"korbon:phreyium_stone",
+							"korbon:velvium"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0.4,
+			"minecraft:map_color": "#427D6A",
+			"minecraft:flammable": {
+				"burn_odds": 5,
+				"flame_odds": 3
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-6,
+					0,
+					-6
+				],
+				"size": [
+					12,
+					8,
+					12
+				]
+			},
+			"minecraft:loot": "loot_tables/blocks/void_sprouts.json"
+		},
+		"events": {}
+	}
+}

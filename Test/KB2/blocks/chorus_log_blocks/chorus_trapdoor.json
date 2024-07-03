@@ -1,0 +1,310 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_trapdoor",
+			"properties": {
+				"cbw:open": [
+					false,
+					true
+				],
+				"cbw:face": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5
+				],
+				"cbw:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "cbw:update_rotation"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_trapdoor",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_interact": {
+				"event": "inter"
+			},
+			"minecraft:destroy_time": 0.5,
+			"minecraft:map_color": "#411806",
+			"tag:wood": {},
+			"minecraft:flammable": {
+				"burn_odds": 30,
+				"flame_odds": 30
+			},
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.trapdoor",
+				"category": "construction"
+			}
+		},
+		"events": {
+			"set": {
+				"set_block_property": {
+					"cbw:face": "query.block_face"
+				}
+			},
+			"inter": {
+				"sequence": [
+					{
+						"condition": "query.block_property('cbw:open')==true",
+						"set_block_property": {
+							"cbw:open": false
+						},
+						"run_command": {
+							"command": [
+								"playsound random.door_close @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "query.block_property('cbw:open')==false",
+						"set_block_property": {
+							"cbw:open": true
+						},
+						"run_command": {
+							"command": [
+								"playsound random.door_open @a[r=5]"
+							]
+						}
+					}
+				]
+			},
+			"cbw:update_rotation": {
+				"set_block_property": {
+					"cbw:block_rotation": "query.cardinal_facing_2d"
+				},
+				"trigger": "set"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('cbw:face') == 1 && query.block_property('cbw:open') == false",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_closed",
+					"minecraft:pick_collision": {
+						"size": [
+							16,
+							3,
+							16
+						]
+					},
+					"minecraft:entity_collision": {
+						"size": [
+							16,
+							3,
+							16
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:face') == 1 && query.block_property('cbw:open') == true",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_side_open",
+					"minecraft:pick_collision": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					},
+					"minecraft:entity_collision": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					},
+					"minecraft:destroy_time": 2,
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:face') > 1 && query.block_property('cbw:open') == false",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_side",
+					"minecraft:pick_collision": {
+						"size": [
+							16,
+							3,
+							16
+						],
+						"origin": [
+							-8,
+							13,
+							-8
+						]
+					},
+					"minecraft:entity_collision": {
+						"size": [
+							16,
+							3,
+							16
+						],
+						"origin": [
+							-8,
+							13,
+							-8
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:face') > 1 && query.block_property('cbw:open') == true",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_side_open",
+					"minecraft:pick_collision": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					},
+					"minecraft:entity_collision": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:face') == 0 && query.block_property('cbw:open') == false",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_side",
+					"minecraft:pick_collision": {
+						"size": [
+							16,
+							3,
+							16
+						],
+						"origin": [
+							-8,
+							13,
+							-8
+						]
+					},
+					"minecraft:entity_collision": {
+						"size": [
+							16,
+							3,
+							16
+						],
+						"origin": [
+							-8,
+							13,
+							-8
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:face') == 0 && query.block_property('cbw:open') == true",
+				"components": {
+					"minecraft:geometry": "geometry.trapdoor_side_open",
+					"minecraft:pick_collision": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					},
+					"minecraft:entity_collision": {
+						"size": [
+							16,
+							16,
+							3
+						],
+						"origin": [
+							-8,
+							0,
+							5
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('cbw:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

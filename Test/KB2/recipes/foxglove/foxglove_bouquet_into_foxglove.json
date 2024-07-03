@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:foxglove_bouquet_into_foxglove"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:foxglove_bouquet_item",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ff:foxglove_item",
+      "count": 9
+    }
+  }
+}

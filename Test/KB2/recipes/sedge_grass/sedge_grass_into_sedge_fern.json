@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:sedge_grass_into_sedge_fern"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:sedge_grass_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:sedge_fern_item",
+      "count": 1
+    }
+  }
+}

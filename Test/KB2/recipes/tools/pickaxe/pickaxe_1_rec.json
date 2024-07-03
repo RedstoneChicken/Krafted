@@ -1,0 +1,35 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:pickaxe_1_rec"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:wooden_pickaxe_head"
+			},
+			"~": {
+				"item": "strat:wooden_binding"
+			},
+			"o": {
+				"item": "strat:wooden_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:pickaxe_1",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

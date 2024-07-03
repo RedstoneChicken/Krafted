@@ -1,0 +1,37 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:wither_star"
+  },
+  "tags": [
+   "crafting_table"
+  ],
+  "pattern": [
+   "XAS"
+  ],
+  "key": {
+   "A": {
+    "item": "minecraft:gold_block"
+   },
+   "S": {
+    "item": "minecraft:nether_star"
+   },
+   "X": {
+    "item": "minecraft:wither_rose"
+   }
+  },
+  "result": {
+   "item": "kna:wither_star",
+   "count": 1
+  }
+ }
+}
+      }
+    },
+    "result": {
+      "item": "kna:wither_star",
+      "count": 1
+    }
+  }
+}

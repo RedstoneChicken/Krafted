@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:large_plate_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Large Plate Pattern\n§7Material Cost: 8§r"
+			},
+			"minecraft:icon": {
+				"texture": "strat_large plate pattern"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:large_plate_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

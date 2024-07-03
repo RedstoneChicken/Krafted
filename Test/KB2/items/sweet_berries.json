@@ -1,0 +1,26 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:sweet_berries"
+		},
+		"components": {
+			"minecraft:use_duration": 16,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "poor",
+				"is_meat": false
+			},
+			"minecraft:seed": {
+				"crop_result": "sweet_berry_bush",
+				"plant_at": [
+					"grass",
+					"dirt",
+					"podzol"
+				]
+			}
+		},
+		"events": {}
+	}
+}

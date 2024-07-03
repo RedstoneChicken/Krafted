@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:double_compressed_emerald_block_to_compressed_emerald_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:double_compressed_emerald_block"
+			}
+		],
+		"result": [
+			{
+				"item": "cc:compressed_emerald_block",
+				"count": 9
+			}
+		]
+	}
+}

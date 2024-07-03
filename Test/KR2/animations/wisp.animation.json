@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wisp.look_at_target": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation - this", 0]
+				},
+				"body": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [0, "query.target_y_rotation - this", 0]
+				}
+			}
+		},
+		"animation.wisp.move": {
+			"loop": true,
+			"animation_length": 0.9,
+			"bones": {
+				"left_hand": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.36": [0, 0, -35],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.36": [1, -4.3, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"right_hand": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.36": [0, 0, 35],
+						"0.72": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.36": [-1, -4.3, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"tentacles_0": {
+					"rotation": {
+						"0.0": [31, 0, 0],
+						"0.4": [0, 0, 0],
+						"0.8": [31, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.4": [0, 0, 0],
+						"0.8": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "bs:pirate_shipwreck_2_feature_mcstructure"
+		},
+		"structure_name": "mystructure:pirate_shipwreck_2",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					{
+						"name": "minecraft:water"
+					}
+				]
+			}
+		}
+	}
+}

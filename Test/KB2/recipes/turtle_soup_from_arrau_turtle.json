@@ -1,0 +1,29 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "turtle_soup_from_arrau_turtle"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ "AB", "C" ],
+		"key" : {
+			"A" : {
+				"item" : "azc:arrau_turtle"
+			},
+			"B" : {
+				"item" : "minecraft:water_bucket"
+			},
+			"C" : {
+				"item" : "minecraft:bowl"
+			}
+		},
+		"result" : [
+			{
+				"item" : "azc:turtle_soup"
+			},
+			{
+				"item" : "minecraft:bucket"
+			}
+		]
+	}
+}

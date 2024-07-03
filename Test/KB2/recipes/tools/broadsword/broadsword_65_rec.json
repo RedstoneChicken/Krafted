@@ -1,0 +1,35 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:broadsword_65_rec"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"pattern": [
+			"#",
+			"~",
+			"o"
+		],
+		"key": {
+			"#": {
+				"item": "strat:copper_sword_blade"
+			},
+			"~": {
+				"item": "strat:copper_wide_guard"
+			},
+			"o": {
+				"item": "strat:copper_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:broadsword_65",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

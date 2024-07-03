@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:smallmouth_bass",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "smallmouth_bass",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

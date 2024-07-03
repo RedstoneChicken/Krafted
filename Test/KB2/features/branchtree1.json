@@ -1,0 +1,22 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "rns:branchtree1"
+		},
+		"structure_name": "mystructure:branchtree1",
+		"adjustment_radius": 8,
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					{
+						"name": "minecraft:air"
+					}
+				]
+			}
+		},
+		"facing_direction": "north"
+	}
+}

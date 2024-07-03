@@ -1,0 +1,53 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "oh:orichalcum_leggings",
+      "category": "Equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "orichalcum_leggings"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.leggings"
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:enchantable": {
+        "value": 30,
+        "slot": "armor_legs"
+      },
+      "minecraft:durability": {
+        "max_durability": 480,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        }
+      },
+      "minecraft:knockback_resistance": {
+        "protection": 0.1
+      },
+      "minecraft:mining_speed": 5,
+      "minecraft:wearable": {
+        "slot": "slot.armor.legs"
+      },
+      "minecraft:render_offsets": "leggings",
+      "minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:orichalcum"
+						],
+						"repair_amount": "query.max_durability"
+					}
+				]
+			},
+      "minecraft:armor": {
+        "protection": 6
+      },
+      "minecraft:display_name": {
+        "value": "Orichalcum Leggings"
+      }
+    }
+  }
+}

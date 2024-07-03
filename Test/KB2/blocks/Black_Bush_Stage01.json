@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:black_bush_stage01"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "blackbush",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.black_bush_01"
+		},
+		"events": {}
+	}
+}

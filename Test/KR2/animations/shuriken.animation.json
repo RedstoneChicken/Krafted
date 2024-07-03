@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shuriken.throw": {
+			"loop": true,
+			"animation_length": 0.32,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.08": [0, -90, 0],
+						"0.16": [0, -180, 0],
+						"0.24": [0, -270, 0],
+						"0.32": [0, -360, 0]
+					}
+				}
+			}
+		}
+	}
+}

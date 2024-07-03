@@ -1,0 +1,116 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:lvnng"
+		},
+		"components": {
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "caf:randomizedgrow"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "caf:randomizedgrow"
+				}
+			}
+		},
+		"events": {
+			"caf:grow05": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:lumabus_roots",
+						"setblock ~ ~-1 ~ caf:lumabus_bulb"
+					]
+				}
+			},
+			"caf:grow06": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:lumabus_roots",
+						"setblock ~ ~-1 ~ caf:lumabus_vine",
+						"setblock ~ ~-2 ~ caf:lumabus_bulb"
+					]
+				}
+			},
+			"caf:grow07": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:lumabus_roots",
+						"setblock ~ ~-1 ~ caf:lumabus_vine",
+						"setblock ~ ~-2 ~ caf:lumabus_vine",
+						"setblock ~ ~-3 ~ caf:lumabus_vine",
+						"setblock ~ ~-4 ~ caf:lumabus_vine",
+						"setblock ~ ~-5 ~ caf:lumabus_bulb"
+					]
+				}
+			},
+			"caf:grow08": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:lumabus_roots",
+						"setblock ~ ~-1 ~ caf:lumabus_vine",
+						"setblock ~ ~-2 ~ caf:lumabus_vine",
+						"setblock ~ ~-3 ~ caf:lumabus_vine",
+						"setblock ~ ~-4 ~ caf:lumabus_vine",
+						"setblock ~ ~-5 ~ caf:lumabus_vine",
+						"setblock ~ ~-6 ~ caf:lumabus_vine",
+						"setblock ~ ~-7 ~ caf:lumabus_bulb"
+					]
+				}
+			},
+			"caf:grow09": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:lumabus_roots",
+						"setblock ~ ~-1 ~ caf:lumabus_vine",
+						"setblock ~ ~-2 ~ caf:lumabus_vine",
+						"setblock ~ ~-3 ~ caf:lumabus_vine",
+						"setblock ~ ~-4 ~ caf:lumabus_vine",
+						"setblock ~ ~-5 ~ caf:lumabus_vine",
+						"setblock ~ ~-6 ~ caf:lumabus_vine",
+						"setblock ~ ~-7 ~ caf:lumabus_vine",
+						"setblock ~ ~-8 ~ caf:lumabus_vine",
+						"setblock ~ ~-9 ~ caf:lumabus_bulb"
+					]
+				}
+			},
+			"caf:randomizedgrow": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow05"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow06"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow07"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow08"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow09"
+						}
+					}
+				]
+			}
+		}
+	}
+}

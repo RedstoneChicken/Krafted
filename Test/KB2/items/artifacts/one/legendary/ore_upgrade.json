@@ -1,0 +1,54 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:ore_upgrade",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"ore_upgrade"
+         },
+         "minecraft:display_name":{
+            "value":"§bOre Upgrade\n§3Legendary\n§7Cooldown: 45\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"ore_upgrade",
+            "duration":45
+         },
+         "minecraft:foil":true,
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"effect",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "effect":{
+            "run_command":{
+               "command":[
+                  "playsound random.levelup @a[r=5] ~ ~ ~ 1 0.7 1",
+                  "fill ~2~2~2 ~-2~-2~-2 ancient_debris 0 replace diamond_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 diamond_ore 0 replace lapis_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 lapis_ore 0 replace redstone_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 redstone_ore 0 replace gold_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 gold_ore 0 replace iron_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 iron_ore 0 replace copper_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 copper_ore 0 replace coal_ore",
+                  "fill ~2~2~2 ~-2~-2~-2 coal_ore 0 replace stone"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

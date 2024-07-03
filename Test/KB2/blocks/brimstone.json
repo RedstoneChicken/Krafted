@@ -1,0 +1,35 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:brimstone"
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:flammable": {
+				"flame_odds": 0,
+				"burn_odds": 0
+			},
+			"minecraft:explosion_resistance": 2,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:on_placed": {
+				"event": "nether:sponge"
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			}
+		},
+		"events": {
+			"nether:sponge": {
+				"run_command": {
+					"command": [
+						"summon nether:brimstone_entity ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

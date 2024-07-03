@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:minnow",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "minnow",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

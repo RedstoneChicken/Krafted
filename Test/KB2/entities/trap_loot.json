@@ -1,0 +1,158 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "azc:trap_loot",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:knockback_resistance": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:health": {
+        "value": 1
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false,
+            "damage_modifier": 0,
+            "damage_multiplier": 0
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/gameplay/fishing.json"
+      }
+    },
+    "component_groups": {
+      "loot_jungle": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/jungle_fishing.json"
+        }
+      },
+      "loot_saltwater": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/saltwater_fishing.json"
+        }
+      },
+      "loot_arid": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/arid_fishing.json"
+        }
+      },
+      "loot_arctic": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/arctic_fishing.json"
+        }
+      },
+      "loot_brackish": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/brackish_fishing.json"
+        }
+      },
+      "loot_mooshroom": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/mooshroom_fish.json"
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "jungle"
+            },
+            "add": {
+              "component_groups": ["loot_jungle"]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "ocean"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "not",
+                  "value": "cold"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": ["loot_saltwater"]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "savanna"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": ["loot_arid"]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "ocean"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "cold"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": ["loot_arctic"]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "swamp"
+            },
+            "add": {
+              "component_groups": ["loot_brackish"]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "mooshroom_island"
+            },
+            "add": {
+              "component_groups": ["loot_mooshroom"]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

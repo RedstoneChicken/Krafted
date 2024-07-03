@@ -1,0 +1,516 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+    	"identifier": "honkit26113:mysterious_stew",
+      "category": "equipment"
+    },
+    "components": {
+		  "minecraft:creative_category": {
+			 "parent": "itemGroup.name.miscFood"
+		  },
+		  "minecraft:icon": {
+			 "texture": "mysterious_stew"
+		  },
+      "minecraft:use_duration": 1.6,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_animation": "eat",
+      "minecraft:food": {
+      	"can_always_eat": true,
+        "nutrition": 3,
+        "saturation_modifier": "normal",
+        "using_converts_to": "bowl",
+    	  "on_consume": {
+        	"event": "honkit26113:consumed",
+        	"target": "self"
+    	  }
+      }
+    },
+    "events": {
+      "honkit26113:consumed": {
+        "randomize": [
+          {
+            "weight": 2, // 66.7%
+            "trigger": {
+              "event": "honkit26113:one_effect"
+            }
+          },
+          {
+            "weight": 1, // 33.3%
+            "trigger": {
+              "event": "honkit26113:two_effects"
+            }
+          }
+        ]
+      },
+    	"honkit26113:one_effect": {
+        "randomize": [
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "absorption",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "bad_omen",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "blindness",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "conduit_power",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "darkness",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "fire_resistance",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "haste",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "health_boost",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "hunger",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "instant_damage",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "instant_health",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "invisibility",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "jump_boost",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "levitation",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "mining_fatigue",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "nausea",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "night_vision",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "poison",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "regeneration",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "resistance",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "saturation",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "village_hero",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "water_breathing",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "weakness",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "wither",
+              "target": "self"
+            }
+          }
+        ]
+    	},
+      "honkit26113:two_effects": {
+        "sequence": [
+          {
+            "randomize": [
+              {
+                "weight": 1,
+                "add_mob_effect": {
+                  "amplifier": 1,
+                  "duration": 15.0,
+                  "effect": "absorption",
+                  "target": "self"
+                }
+              },
+              {
+                "weight": 1,
+                "add_mob_effect": {
+                  "amplifier": 1,
+                  "duration": 15.0,
+                  "effect": "bad_omen",
+                  "target": "self"
+                }
+              },
+              {
+                "weight": 1,
+                "add_mob_effect": {
+                  "amplifier": 1,
+                  "duration": 15.0,
+                  "effect": "blindness",
+                  "target": "self"
+                }
+              },
+              {
+                "weight": 1,
+                "add_mob_effect": {
+                  "amplifier": 1,
+                  "duration": 15.0,
+                  "effect": "conduit_power",
+                  "target": "self"
+                }
+              },
+              {
+                "weight": 1,
+                "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "darkness",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "fire_resistance",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "haste",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "health_boost",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "hunger",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "instant_damage",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "instant_health",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "invisibility",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "jump_boost",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "levitation",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "mining_fatigue",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "nausea",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "night_vision",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "poison",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "regeneration",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "resistance",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "saturation",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "village_hero",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "water_breathing",
+              "target": "self"
+            }
+          },
+          {
+            "weight": 1,
+            "add_mob_effect": {
+              "amplifier": 1,
+              "duration": 15.0,
+              "effect": "weakness",
+              "target": "self"
+            }
+          },
+              {
+                "weight": 1,
+                "add_mob_effect": {
+                  "amplifier": 1,
+                  "duration": 15.0,
+                  "effect": "wither",
+                  "target": "self"
+                }
+              }
+            ]
+          },
+          {
+            "trigger": {
+              "event": "honkit26113:one_effect"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

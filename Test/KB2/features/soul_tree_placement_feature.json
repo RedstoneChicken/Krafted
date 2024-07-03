@@ -1,0 +1,14 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:aggregate_feature": {
+		"description": {
+			"identifier": "nether:soul_tree_placement_feature"
+		},
+		"features": [
+			"nether:soul_tree_condition_feature",
+			"nether:soul_tree_scatter"
+		],
+		"early_out": "first_failure"
+	}
+}

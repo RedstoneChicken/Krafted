@@ -1,0 +1,36 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:broadsword_127_14_3"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:broadsword_127",
+				"count": 1
+			},
+			{
+				"item": "strat:necrotic_bone",
+				"count": 1
+			},
+			{
+				"item": "minecraft:obsidian",
+				"count": 1
+			},
+			{
+				"item": "minecraft:ender_pearl",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:broadsword_127_14",
+				"count": 1
+			}
+		]
+	}
+}

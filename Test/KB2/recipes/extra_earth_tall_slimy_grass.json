@@ -1,0 +1,28 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:extra_earth_tall_slimy_grass"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:earth_tall_slimy_grass_item",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bone_meal",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:earth_tall_slimy_grass_item",
+				"count": 4
+			}
+		]
+	}
+}

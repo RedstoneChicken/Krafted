@@ -1,0 +1,24 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:crafting_station_rec"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:crafting_table",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:crafting_station",
+				"count": 1
+			}
+		]
+	}
+}

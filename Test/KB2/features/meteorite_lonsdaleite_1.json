@@ -1,0 +1,15 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "end:meteorite_lonsdaleite_1"
+		},
+		"structure_name": "end:meteorite_lons1",
+		"facing_direction": "random",
+		"adjustment_radius": 0,
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:poison_crystal"
+		},
+		"components": {
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					0.5,
+					1
+				],
+				"on_tick": {
+					"event": "particle"
+				}
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:destroy_time": 2,
+			"tag:stone": {}
+		},
+		"events": {
+			"particle": {
+				"run_command": {
+					"command": [
+						"particle end:poisoneous_gas ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

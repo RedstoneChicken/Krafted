@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:wooden_hammer"
+		},
+		"tags": [
+			"hammertable"
+		],
+		"pattern": [
+			"   ",
+			"Y X",
+			"   "
+		],
+		"key": {
+			"X": {
+				"item": "oh:wooden_head"
+			},
+			"Y": {
+				"item": "oh:trunk_stick"
+			}
+		},
+		"result": [
+			{
+				"item": "oh:wooden_hammer",
+				"count": 1
+			}
+		]
+	}
+}

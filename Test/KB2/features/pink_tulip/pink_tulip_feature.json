@@ -1,0 +1,19 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ff:pink_tulip/pink_tulip_feature"
+    },
+    "places_block": {
+      "name": "minecraft:red_flower",
+      "states": {
+        "flower_type": "tulip_pink"
+      }
+    },
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": true,
+    "may_replace": [
+      "minecraft:air"
+    ]
+  }
+}

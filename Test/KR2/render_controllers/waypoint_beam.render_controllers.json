@@ -1,0 +1,62 @@
+{
+  "format_version": "1.16.0",
+  "render_controllers": {
+    "controller.render.waypoint_beam": {
+      "arrays": {
+        "textures": {
+          "Array.waypoint": [
+            "Texture.black",
+            "Texture.blue",
+            "Texture.brown",
+            "Texture.cyan",
+            "Texture.gray",
+            "Texture.green",
+            "Texture.light_blue",
+            "Texture.lime",
+            "Texture.magenta",
+            "Texture.orange",
+            "Texture.pink",
+            "Texture.purple",
+            "Texture.red",
+            "Texture.light_gray",
+            "Texture.white",
+            "Texture.yellow",
+            "Texture.none"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        },
+        {
+          "*": "Material.chetty"
+        }
+      ],
+      "textures": [
+        "Array.waypoint[query.variant]"
+      ],
+      "part_visibility": [
+        {
+          "*top*": "query.is_saddled"
+        },
+        {
+          "*bottom*": "query.is_saddled"
+        }
+      ],
+      "overlay_color": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": "variable.glow_alpha"
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.glow_alpha"
+      }
+    }
+  }
+}

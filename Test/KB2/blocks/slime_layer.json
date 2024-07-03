@@ -1,0 +1,183 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:slime_layer",
+            "category": "none",
+            "properties": {
+                "honkit26113:add_layer": [0, 1, 2, 3, 4, 5, 6, 7]
+            }
+        },
+        
+        "components": { 
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.none",
+                "category": "none"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "slime",
+                    "render_method": "blend"
+                }
+            },
+            "minecraft:destroy_time": 0.5,
+            "minecraft:block_light_absorption": 0.0
+        },
+        "events": {
+            "honkit26113:add_layer": {
+                "sequence": [
+                    {
+                        "set_block_property": {
+                            "honkit26113:add_layer": "query.block_property('honkit26113:add_layer') + 1"
+                        }
+                    },
+                    {
+                        "decrement_stack": {}
+                    }
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 0",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer0",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 2, 16]
+                    },
+                    "minecraft:entity_collision": false,
+                    "minecraft:loot": "loot_tables/blocks/slime_layer1.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 1",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer1",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 4, 16]
+                    },
+                    "minecraft:entity_collision": false,
+                    "minecraft:loot": "loot_tables/blocks/slime_layer1.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 2",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer2",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 6, 16]
+                    },
+                    "minecraft:entity_collision": false,
+                    "minecraft:loot": "loot_tables/blocks/slime_layer1.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 3",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer3",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/slime_layer2.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 4",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer4",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 10, 16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/slime_layer2.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 5",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer5",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 12, 16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/slime_layer3.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 6",
+                "components": {
+                    "minecraft:on_interact": {
+                        "event": "honkit26113:add_layer",
+                        "condition": "query.get_equipped_item_name('main_hand') == 'slime_layer'"
+                    },
+                    "minecraft:geometry": "geometry.layer6",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 14, 16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 8, 16]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/slime_layer3.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:add_layer') == 7",
+                "components": {
+                    "minecraft:geometry": "geometry.layer7",
+                    "minecraft:pick_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8, 0, -8],
+                        "size": [16, 16, 16]
+                    },
+                    "minecraft:loot": "loot_tables/blocks/slime_layer4.json"
+                }
+            }
+        ]
+    }
+}

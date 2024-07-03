@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:petunia_into_petunia_bouquet"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:petunia_item",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ff:petunia_bouquet_item",
+      "count": 1
+    }
+  }
+}

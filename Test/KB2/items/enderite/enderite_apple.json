@@ -1,0 +1,113 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:enderite_apple",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 1.6,
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 7,
+				"saturation_modifier": "supernatural",
+				"can_always_eat": true,
+				"on_consume": {
+					"event": "consumed",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "enderite_apple",
+				"frame": "query.texture_frame_index 1"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:display_name": {
+				"value": "Enderite Apple"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			}
+		},
+		"events": {
+			"consumed": {
+				"sequence": [
+					{
+						"condition": "query.is_sneaking",
+						"run_command": {
+							"command": [
+								"effect @e[family=!player,type=!item,r=25,c=10] levitation 3 10"
+							]
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "regeneration",
+							"duration": 42,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "absorption",
+							"duration": 180,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"duration": 180,
+							"amplifier": 2,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "fire_resistance",
+							"duration": 240,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "haste",
+							"duration": 120,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "instant_health",
+							"duration": 5,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "strength",
+							"duration": 120,
+							"amplifier": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"duration": 60,
+							"amplifier": 0,
+							"target": "holder"
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "cav:sheetrock_light_blue",
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "category": "construction"
+      },
+      "minecraft:destroy_time": 0.35,
+      "minecraft:explosion_resistance": 30,
+      "minecraft:block_light_absorption": 15,
+      "minecraft:map_color": "#F6F6F6",
+      "minecraft:block_light_emission": 0,
+      "minecraft:flammable": {
+        "burn_odds": 0,
+        "flame_odds": 0
+      }
+    }
+  }
+}

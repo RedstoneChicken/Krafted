@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:novaculite_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:novaculite"
+      }
+    ],
+    "result": {
+      "item": "cav:novaculite_slab",
+      "count": 2
+    }
+  } 
+}

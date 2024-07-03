@@ -1,0 +1,46 @@
+//bridge-file-version: #26
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "nether:wither_nylium_rule",
+			"places_feature": "nether:wither_nylium_snap_to_surface"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"test": "has_biome_tag",
+				"operator": "==",
+				"value": "soulsand_valley"
+			}
+		},
+		"distribution": {
+			"iterations": 600,
+			"x": {
+				"extent": [
+					-32,
+					32
+				],
+				"distribution": "gaussian"
+			},
+			"y": {
+				"extent": [
+					30,
+					90
+				],
+				"distribution": "gaussian"
+			},
+			"z": {
+				"extent": [
+					-32,
+					32
+				],
+				"distribution": "gaussian"
+			},
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 50
+			}
+		}
+	}
+}

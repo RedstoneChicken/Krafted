@@ -1,0 +1,42 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:chocolate_cake"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"BEB",
+			"CCC"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:bucket",
+				"data": 1
+			},
+			"B": {
+				"item": "strat:cocoa_powder"
+			},
+			"C": {
+				"item": "strat:flour"
+			},
+			"E": {
+				"item": "minecraft:egg"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:chocolate_cake_item"
+			},
+			{
+				"item": "minecraft:bucket",
+				"count": 3,
+				"data": 0
+			}
+		]
+	}
+}

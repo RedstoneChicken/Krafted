@@ -1,0 +1,104 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:sawmill",
+			"properties": {
+				"korbon:face": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "sawmill",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-7,
+					0,
+					-4
+				],
+				"size": [
+					14,
+					14,
+					8
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-7,
+					0,
+					-4
+				],
+				"size": [
+					14,
+					14,
+					8
+				]
+			},
+			"minecraft:geometry": "geometry.sawmill",
+			"minecraft:loot": "loot_tables/blocks/sawmill.json",
+			"minecraft:destroy_time": 1,
+			"minecraft:friction": 0.6,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0,
+			"minecraft:on_player_placing": {
+				"event": "korbon:place"
+			}
+		},
+		"events": {
+			"korbon:place": {
+				"set_block_property": {
+					"korbon:face": "(query.cardinal_player_facing)"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:face') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		]
+	}
+}

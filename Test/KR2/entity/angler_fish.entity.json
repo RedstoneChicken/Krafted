@@ -1,0 +1,30 @@
+{
+	"format_version" : "1.8.0",
+	"minecraft:client_entity" : {
+		"description" : {
+			"identifier" : "adv:angler_fish",
+			"materials" : {
+				"default" : "salmon"
+			},
+			"textures" : {
+				"default" : "textures/entity/fish/angler_fish"
+			},
+			"geometry" : {
+				"default" : "geometry.angler_fish"
+			},
+			"animations" : {
+				"swim" : "animation.angler_fish.swim"
+			},
+			"animation_controllers" : [
+				{
+					"general" : "controller.animation.fishes.general"
+				}
+			],
+			"render_controllers" : [ "controller.render.cod" ],
+			"spawn_egg" : {
+				"texture" : "spawn_egg_angler_fish",
+				"texture_index" : 0
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_snowy_grass_into_tall_snowy_grass"},"tags":["crafting_table"],"ingredients":[{"item":"ff:snowy_grass_large_item"}],"result":{"item":"ff:snowy_grass_tall_item","count":2}}}

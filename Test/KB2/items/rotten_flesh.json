@@ -1,0 +1,25 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:rotten_flesh"
+		},
+		"components": {
+			"minecraft:use_duration": 16,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "poor",
+				"effects": [
+					{
+						"name": "hunger",
+						"chance": 0.8,
+						"duration": 30,
+						"amplifier": 0
+					}
+				]
+			}
+		},
+		"events": {}
+	}
+}

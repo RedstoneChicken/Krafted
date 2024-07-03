@@ -1,0 +1,31 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_iron_from_iron_bars"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:iron_bars"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_iron_bucket",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

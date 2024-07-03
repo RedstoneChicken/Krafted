@@ -1,0 +1,120 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:pillager_base_1_feature_rule",
+			"places_feature": "minecraft:pillager_base_1_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "lakes"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "ocean"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "!=",
+							"value": "river"
+						},
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "birch"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "savanna"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pine_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pine_normal"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pumpkin_plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "cherry_blossom"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "autumn_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "maple_forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "coniferous"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "deciduous"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "tall_roofed"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "pendula"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "lavender_grove"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.1,
+			"x": 0,
+			"y": "query.heightmap(variable.worldx, variable.worldz) + 0",
+			"z": 0
+		}
+	}
+}

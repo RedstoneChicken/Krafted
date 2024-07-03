@@ -1,0 +1,28 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:meat_feast_pizza_2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:sausage_pizza",
+				"count": 1
+			},
+			{
+				"item": "strat:pepperoni",
+				"count": 3
+			}
+		],
+		"result": [
+			{
+				"item": "strat:meat_feast_pizza",
+				"count": 1
+			}
+		]
+	}
+}

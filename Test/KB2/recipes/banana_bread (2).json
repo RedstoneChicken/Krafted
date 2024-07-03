@@ -1,0 +1,32 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:banana_bread"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:baguette",
+				"count": 1
+			},
+			{
+				"item": "strat:banana",
+				"count": 1
+			},
+			{
+				"item": "minecraft:sugar",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:banana_bread",
+				"count": 1
+			}
+		]
+	}
+}

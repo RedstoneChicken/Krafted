@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:claw_dagger"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" CC",
+			"  C",
+			" S"
+		],
+		"key": {
+			"C": {
+				"item": "end:claw"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "end:claw_dagger"
+			}
+		]
+	}
+}

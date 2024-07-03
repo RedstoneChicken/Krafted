@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:compressed_birch_to_birch"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:compressed_birch"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:log",
+				"data": 2,
+				"count": 9
+			}
+		]
+	}
+}

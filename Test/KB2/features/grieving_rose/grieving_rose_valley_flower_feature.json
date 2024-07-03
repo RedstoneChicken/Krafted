@@ -1,0 +1,30 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:grieving_rose/grieving_rose_valley_flower_feature"
+        },
+        "features": [
+            [
+                "ff:grieving_rose/grieving_rose_bouquet_feature",
+                15
+            ],
+            [
+                "ff:grieving_rose/grieving_rose_feature",
+                15
+            ],
+            [
+                "ff:grieving_rose/grieving_rose_tall_feature",
+                15
+            ],
+            [
+                "ff:grieving_rose/grieving_rose_short_feature",
+                17
+            ],
+            [
+                "ff:grieving_rose/grieving_rose_large_feature",
+                12
+            ]
+        ]
+    }
+}

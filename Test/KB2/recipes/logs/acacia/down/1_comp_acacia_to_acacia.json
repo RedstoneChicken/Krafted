@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "cc:compressed_acacia_to_acacia"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"count": 1,
+				"item": "cc:compressed_acacia"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:log2",
+				"data": 0,
+				"count": 9
+			}
+		]
+	}
+}

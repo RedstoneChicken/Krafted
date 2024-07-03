@@ -1,0 +1,299 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:growth_stage": [
+					0,
+					1,
+					2
+				]
+			},
+			"identifier": "strat:coffee_crop"
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:geometry": "geometry.coffee_crop_0",
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "grow_stage"
+				}
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-1,
+					7,
+					5
+				],
+				"size": [
+					2,
+					3,
+					2
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-1,
+					7,
+					5
+				],
+				"size": [
+					2,
+					3,
+					2
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "bone_meal",
+				"condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'"
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"minecraft:log",
+							"minecraft:log2"
+						],
+						"allowed_faces": [
+							"side"
+						]
+					}
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:loot": "loot_tables/coffee_crop.json",
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Nature",
+				"category": "Nature"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"bone_meal": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:growth_stage') < 2",
+						"decrement_stack": {},
+						"run_command": {
+							"command": [
+								"particle minecraft:crop_growth_emitter ~~~",
+								"playsound item.bone_meal.use @a ~~~"
+							]
+						},
+						"trigger": {
+							"event": "grow_stage_2"
+						}
+					}
+				]
+			},
+			"grow_stage": {
+				"randomize": [
+					{
+						"weight": 2
+					},
+					{
+						"weight": 1,
+						"set_block_property": {
+							"strat:growth_stage": "(query.block_property('strat:growth_stage')<3) ? query.block_property('strat:growth_stage') + 1 : 2"
+						}
+					}
+				]
+			},
+			"grow_stage_2": {
+				"randomize": [
+					{
+						"weight": 1
+					},
+					{
+						"weight": 3,
+						"set_block_property": {
+							"strat:growth_stage": "(query.block_property('strat:growth_stage')<3) ? query.block_property('strat:growth_stage') + 1 : 2"
+						}
+					}
+				]
+			},
+			"do_nothing": {},
+			"final_stage": {
+				"sequence": [
+					{
+						"set_block_property": {
+							"strat:growth_stage": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/coffee_crop_2.json"
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "coffee_crop_0",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/coffee_crop.json",
+					"minecraft:geometry": "geometry.coffee_crop_0",
+					"minecraft:entity_collision": {
+						"origin": [
+							-1,
+							7,
+							5
+						],
+						"size": [
+							2,
+							3,
+							2
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-1,
+							7,
+							5
+						],
+						"size": [
+							2,
+							3,
+							2
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "coffee_crop_1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/coffee_crop.json",
+					"minecraft:geometry": "geometry.coffee_crop_1",
+					"minecraft:entity_collision": {
+						"origin": [
+							-2,
+							5,
+							3
+						],
+						"size": [
+							4,
+							5,
+							4
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-2,
+							5,
+							3
+						],
+						"size": [
+							4,
+							5,
+							4
+						]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:growth_stage') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "coffee_crop_2",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:loot": "loot_tables/coffee_crop_2.json",
+					"minecraft:geometry": "geometry.coffee_crop_2",
+					"minecraft:entity_collision": {
+						"origin": [
+							-3,
+							3,
+							1
+						],
+						"size": [
+							6,
+							7,
+							6
+						]
+					},
+					"minecraft:pick_collision": {
+						"origin": [
+							-3,
+							3,
+							1
+						],
+						"size": [
+							6,
+							7,
+							6
+						]
+					},
+					"minecraft:on_interact": {
+						"event": "final_stage"
+					}
+				}
+			}
+		]
+	}
+}

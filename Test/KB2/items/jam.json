@@ -1,0 +1,24 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:jam",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:icon": {
+				"texture": "strat_jam"
+			},
+			"minecraft:use_animation": "drink",
+			"minecraft:block_placer": {
+				"block": "strat:jam_jar_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

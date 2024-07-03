@@ -1,0 +1,19 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "electric_eel_to_glowstone_dust"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "azc:electric_eel"
+      }
+    ],
+    "result": {
+      "item": "minecraft:glowstone_dust"
+    }
+  }
+}

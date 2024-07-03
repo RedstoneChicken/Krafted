@@ -1,0 +1,38 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "korbon:watchling",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:weight": {
+					"default": 15
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 3
+				},
+				"minecraft:biome_filter": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "the_end"
+					}
+				],
+				"minecraft:spawns_on_block_filter": [
+					"korbon:void_turf",
+					"korbon:void_turf_grass",
+					"korbon:void_turf_stone",
+					"korbon:chorus_leaves",
+					"korbon:void_turf_fern",
+					"korbon:void_turf_fern_tall",
+					"korbon:void_turf_grass_tall"
+				]
+			}
+		]
+	}
+}

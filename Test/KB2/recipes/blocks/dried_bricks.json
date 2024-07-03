@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:dried_bricks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "strat:dried_brick"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:dried_bricks",
+				"count": 1
+			}
+		]
+	}
+}

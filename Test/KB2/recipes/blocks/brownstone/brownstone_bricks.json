@@ -1,0 +1,28 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:brownstone_bricks"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##",
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "strat:smooth_brownstone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:brownstone_bricks",
+				"count": 4
+			}
+		],
+		"priority": 2
+	}
+}

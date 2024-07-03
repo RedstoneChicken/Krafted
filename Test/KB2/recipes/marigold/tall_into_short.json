@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_marigold_into_short_marigold"},"tags":["crafting_table"],"ingredients":[{"item":"ff:marigold_tall_item"}],"result":{"item":"ff:marigold_item","count":2}}}

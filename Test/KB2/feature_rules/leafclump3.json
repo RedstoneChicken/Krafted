@@ -1,0 +1,55 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.17.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "rns:leafclump3",
+			"places_feature": "rns:leafclump3"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "plains"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "forest"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "jungle"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "uniform"
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz)",
+			"scatter_chance": 3
+		}
+	}
+}

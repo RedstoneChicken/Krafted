@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cut:schist_brick_slab"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:schist_bricks"
+      }
+    ],
+    "result": {
+      "item": "cav:schist_brick_slab",
+      "count": 2
+    }
+  } 
+}

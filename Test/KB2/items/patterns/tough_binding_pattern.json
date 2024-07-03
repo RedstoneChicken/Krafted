@@ -1,0 +1,26 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tough_binding_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tough_binding_pattern"
+			},
+			"minecraft:display_name": {
+				"value": "Tough Binding Pattern\n§7Material Cost: 3§r"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:tough_binding_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

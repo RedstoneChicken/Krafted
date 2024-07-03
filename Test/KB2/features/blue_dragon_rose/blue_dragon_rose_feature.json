@@ -1,0 +1,9 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:single_block_feature": {
+    "description": { "identifier": "ff:blue_dragon_rose/blue_dragon_rose_feature" },
+    "places_block": { "name": "ff:blue_dragon_rose" },
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": true
+  }
+}

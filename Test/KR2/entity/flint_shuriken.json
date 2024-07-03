@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "strat:flint_shuriken",
+			"materials": {
+				"default": "snowball"
+			},
+			"textures": {
+				"default": "textures/items/gadgets/flint_shuriken"
+			},
+			"geometry": {
+				"default": "geometry.shuriken"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"flying": "animation.shuriken.throw"
+			},
+			"scripts": {
+				"animate": [
+					"flying"
+				]
+			}
+		}
+	}
+}

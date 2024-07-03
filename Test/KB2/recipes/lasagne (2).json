@@ -1,0 +1,40 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:lasagne"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:pasta",
+				"count": 1
+			},
+			{
+				"item": "strat:cheese",
+				"count": 1
+			},
+			{
+				"item": "minecraft:cooked_beef",
+				"count": 1
+			},
+			{
+				"item": "strat:tomato",
+				"count": 1
+			},
+			{
+				"item": "strat:salt",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:lasagne",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,33 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:flint_rod_rec"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:tool_rod_pattern"
+			},
+			"~": {
+				"item": "minecraft:flint"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:flint_tool_rod",
+				"count": 1
+			},
+			{
+				"item": "strat:tool_rod_pattern",
+				"count": 1
+			}
+		]
+	}
+}

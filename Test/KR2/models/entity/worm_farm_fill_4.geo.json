@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.worm_farm_fill_4",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_boundsset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "farm",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-6, 0, -6], "size": [12, 1, 12], "uv": [20, 0]},
+						{"origin": [-6, 9, -6], "size": [12, 0, 12], "uv": [28, 13]},
+						{"origin": [-8, 0, -8], "size": [2, 16, 16], "uv": [20, 16]},
+						{"origin": [-24, 0, -8], "size": [2, 16, 16], "pivot": [-8, 10, 0], "rotation": [0, 180, 0], "uv": [0, 0]},
+						{"origin": [-6, 0, 6], "size": [12, 16, 2], "uv": [28, 48]},
+						{"origin": [-6, 0, 20], "size": [12, 16, 2], "pivot": [0, 9, 7], "rotation": [0, 180, 0], "uv": [0, 48]}
+					]
+				}
+			]
+		}
+	]
+}

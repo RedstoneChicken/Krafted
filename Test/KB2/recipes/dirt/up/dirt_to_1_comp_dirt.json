@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:dirt_to_compressed_dirt"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:dirt"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_dirt",
+				"count": 1
+			}
+		]
+	}
+}

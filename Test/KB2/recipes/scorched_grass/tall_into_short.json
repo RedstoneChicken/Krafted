@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_scorched_grass_into_short_scorched_grass"},"tags":["crafting_table"],"ingredients":[{"item":"ff:scorched_grass_tall_item"}],"result":{"item":"ff:scorched_grass_item","count":2}}}

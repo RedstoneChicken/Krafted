@@ -1,0 +1,110 @@
+//bridge-file-version: #78
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:old_bell",
+			"properties": {
+				"korbon:face": [
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			}
+		},
+		"events": {
+			"ring": {
+				"run_command": {
+					"command": [
+						"playsound custom.old_bell @a[r=128] ~~~"
+					],
+					"target": "self"
+				}
+			},
+			"korbon:place": {
+				"set_block_property": {
+					"korbon:face": "(query.cardinal_player_facing)"
+				}
+			}
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "old_bell",
+					"render_method": "opaque",
+					"face_dimming": false
+				}
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					120,
+					300
+				],
+				"on_tick": {
+					"event": "ring"
+				}
+			},
+			"minecraft:geometry": "geometry.old_bell",
+			"minecraft:on_interact": {
+				"event": "ring"
+			},
+			"minecraft:on_player_placing": {
+				"event": "korbon:place"
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-4
+				],
+				"size": [
+					16,
+					16,
+					8
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('korbon:face') == 2",
+				"components": {
+					"minecraft:block_light_absorption": 0
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('korbon:face') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			}
+		]
+	}
+}

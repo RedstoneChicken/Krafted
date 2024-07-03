@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:smoker_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" # ",
+			"#F#",
+			" # "
+		],
+		"key": {
+			"F": {
+				"item": "minecraft:furnace"
+			},
+			"#": {
+				"item": "strat:maple_log"
+			}
+		},
+		"result": {
+			"item": "minecraft:smoker"
+		},
+		"priority": 50
+	}
+}

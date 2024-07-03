@@ -1,0 +1,46 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"places_feature": "caf:golden_vine_feature",
+			"identifier": "caf:golden_vine_feature_rule"
+		},
+		"conditions": {
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "nether"
+					}
+				]
+			},
+			"placement_pass": "surface_pass"
+		},
+		"distribution": {
+			"iterations": 50,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					33,
+					120
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

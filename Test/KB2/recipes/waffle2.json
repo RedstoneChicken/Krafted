@@ -1,0 +1,37 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:waffle2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~#",
+			"o"
+		],
+		"key": {
+			"~": {
+				"item": "strat:batter"
+			},
+			"#": {
+				"item": "strat:butter"
+			},
+			"o": {
+				"item": "strat:fried_egg"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:waffle",
+				"count": 1
+			},
+			{
+				"item": "minecraft:bowl",
+				"count": 1
+			}
+		]
+	}
+}

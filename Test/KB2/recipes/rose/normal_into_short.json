@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:normal_rose_into_short_rose"},"tags":["crafting_table"],"ingredients":[{"item":"ff:rose_item","count":2}],"result":{"item":"ff:rose_short_item"}}}

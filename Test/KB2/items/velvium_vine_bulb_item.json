@@ -1,0 +1,27 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:velvium_vine_bulb_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:velvium_vine_bulb",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "velvium_vine_bulb_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:velvium_vine_bulb_item.name"
+			}
+		},
+		"events": {}
+	}
+}

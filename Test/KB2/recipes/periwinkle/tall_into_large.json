@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_periwinkle_into_large_periwinkle"},"tags":["crafting_table"],"ingredients":[{"item":"ff:periwinkle_tall_item","count":2}],"result":{"item":"ff:periwinkle_large_item"}}}

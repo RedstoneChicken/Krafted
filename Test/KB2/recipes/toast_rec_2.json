@@ -1,0 +1,24 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:toast_rec_2"
+		},
+		"tags": [
+			"toaster"
+		],
+		"ingredients": [
+			{
+				"item": "strat:bread_slice",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "strat:toast",
+				"count": 2
+			}
+		]
+	}
+}

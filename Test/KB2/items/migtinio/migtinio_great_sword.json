@@ -1,0 +1,179 @@
+//bridge-file-version: #6
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "oh:migtinio_great_sword",
+      "category": "equipment"
+    },
+    "components": {
+      "minecraft:icon": {
+        "texture": "migtinio_great_sword"
+      },
+      "minecraft:display_name": {
+        "value": "Migtinio Great Sword"
+      },
+      "minecraft:damage": 13,
+      "minecraft:durability": {
+        "max_durability": 815,
+        "damage_chance": {
+          "min": 60,
+          "max": 100
+        }
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:mining_speed": 3,
+      "minecraft:enchantable": {
+        "value": 18,
+        "slot": "sword"
+      },
+      "minecraft:render_offsets": {
+        "main_hand": {
+          "third_person": {
+            "position": [0.8, 1.9, -1.2],
+            "scale": [0.1, 0.04, 0.1]
+          },
+          "first_person": {
+            "position": [0.41, 0.04, -1.18],
+            "scale": [0.028, 0.019, 0.028]
+          }
+        }
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": ["oh:migtinio"],
+            "repair_amount": "25"
+          }
+        ]
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:digger": {
+        "use_efficiency": false,
+        "destroy_speeds": [
+          {
+            "block": "minecraft:web",
+            "speed": 12,
+            "on_dig": {
+              "event": "dmg"
+            }
+          },
+          {
+            "block": "minecraft:bamboo",
+            "speed": 12,
+            "on_dig": {
+              "event": "dmg"
+            }
+          }
+        ],
+        "on_dig": {
+          "event": "dmg"
+        }
+      },
+      "minecraft:weapon": {
+        "on_not_hurt_entity": {
+          "event": "dmg"
+        },
+        "on_hit_block": {
+          "event": "dmg"
+        },
+        "on_hurt_entity": {
+          "event": "sweep"
+        }
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.sword"
+      },
+      "minecraft:on_use": {
+        "on_use": {
+          "condition": "query.is_sneaking",
+          "event": "fuerza"
+        }
+      }
+    },
+    "events": {
+      "sweep": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "playsound sound.sweep @a ~ ~ ~ 1",
+                "particle oh:sweep_p_m ^ ^1.2 ^2.2"
+              ]
+            }
+          },
+          {
+            "run_command": {
+              "command": ["summon oh:sweep ~ ~ ~"],
+              "target": "other"
+            }
+          },
+          {
+            "damage": {
+              "type": "durability",
+              "amount": 1
+            }
+          }
+        ]
+      },
+      "on_tool_used": {
+        "swing": {},
+        "damage": {
+          "type": "durability",
+          "amount": 1
+        }
+      },
+      "dmg": {
+        "damage": {
+          "type": "none",
+          "amount": 1,
+          "target": "self"
+        }
+      },
+      "fuerza": {
+        "sequence": [
+          {
+            "swing": {},
+            "damage": {
+              "type": "durability",
+              "amount": 30
+            }
+          },
+          {
+            "add_mob_effect": {
+              "effect": "slowness",
+              "amplifier": 0,
+              "target": "holder",
+              "duration": 3
+            }
+          },
+          {
+            "add_mob_effect": {
+              "effect": "regeneration",
+              "target": "holder",
+              "amplifier": 1,
+              "duration": 5
+            }
+          },
+          {
+            "add_mob_effect": {
+              "effect": "resistance",
+              "target": "holder",
+              "amplifier": 2,
+              "duration": 25
+            }
+          },
+          {
+            "add_mob_effect": {
+              "effect": "strength",
+              "target": "holder",
+              "duration": 25,
+              "amplifier": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

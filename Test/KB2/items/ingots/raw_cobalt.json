@@ -1,0 +1,22 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:raw_cobalt",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "tinkers_raw_cobalt"
+			},
+			"minecraft:display_name": {
+				"value": "Raw Cobalt"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

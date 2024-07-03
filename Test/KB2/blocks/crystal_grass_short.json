@@ -1,0 +1,50 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:crystal_grass_short"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "crystal_grass_short",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:entity_collision": false,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"block_filter": [
+							"end:crystal_nylium"
+						],
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					12,
+					10
+				]
+			},
+			"minecraft:destroy_time": 0.1,
+			"minecraft:loot": "loot_tables/crystal_grass_short.json"
+		},
+		"events": {}
+	}
+}

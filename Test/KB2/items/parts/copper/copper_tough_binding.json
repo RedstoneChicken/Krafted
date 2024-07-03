@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:copper_tough_binding"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Copper Tough Binding"
+			},
+			"minecraft:icon": {
+				"texture": "copper_tough_binding"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,17 @@
+{
+  "format_version": "1.12",
+  "minecraft:item": {
+    "description": {
+      "identifier": "cav:mica",
+      "category": "Nature",
+      "is_experimental": false,
+      "register_to_creative_menu": true
+    },
+
+    "components": {
+      "minecraft:icon": "mica",
+      "minecraft:render_offsets": "apple",
+      "register_to_creative_menu": true
+    }
+  }
+}

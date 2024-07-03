@@ -1,0 +1,86 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:gmnng"
+		},
+		"components": {
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "invisiblegenblock",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:on_placed": {
+				"event": "caf:randomizedgrow"
+			},
+			"minecraft:random_ticking": {
+				"on_tick": {
+					"event": "caf:randomizedgrow"
+				}
+			}
+		},
+		"events": {
+			"caf:grow00": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:giant_mold_sapling"
+					]
+				}
+			},
+			"caf:grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:mold_stem_bottom",
+						"setblock ~ ~1 ~ caf:giant_mold_top"
+					]
+				}
+			},
+			"caf:grow02": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:mold_stem_bottom",
+						"setblock ~ ~1 ~ caf:mold_stem",
+						"setblock ~ ~2 ~ caf:giant_mold_top"
+					]
+				}
+			},
+			"caf:grow03": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:mold_stem_bottom",
+						"setblock ~ ~1 ~ caf:mold_stem",
+						"setblock ~ ~2 ~ caf:mold_stem",
+						"setblock ~ ~3 ~ caf:giant_mold_top"
+					]
+				}
+			},
+			"caf:randomizedgrow": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow00"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow02"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow03"
+						}
+					}
+				]
+			}
+		}
+	}
+}

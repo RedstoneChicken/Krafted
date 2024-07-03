@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:herbal_drink",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "herbal_drink"
+			},
+			"minecraft:display_name": {
+			 "value": "Herbal Drink\n§2Uncommon\n§7Cooldown: 15\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "herbal_drink",
+				"duration": 15
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+          	"playsound random.drink @a[r=5]",
+            "effect @s clear",
+            "effect @s regeneration 5 5",
+            "effect @s saturation 5 5"
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}  
+  

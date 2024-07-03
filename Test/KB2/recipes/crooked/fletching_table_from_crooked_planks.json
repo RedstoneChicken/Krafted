@@ -1,0 +1,29 @@
+{
+    "format_version": "1.16",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "honkit26113:fletching_table_from_crooked_planks"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "AA",
+            "BB",
+            "BB"
+        ],
+        "key": {
+            "A": {
+                "item": "flint"
+            },
+            "B": {
+                "item": "honkit26113:crooked_planks"
+            }
+        },
+        "result": {
+            "item": "fletching_table",
+            "count": 1
+        },
+        "priority": 2
+    }
+}

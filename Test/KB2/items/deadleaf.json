@@ -1,0 +1,24 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "rns:driedleaf",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:stacked_by_data": true,
+			"minecraft:allow_off_hand": true,
+			"minecraft:icon": {
+				"texture": "driedleaf"
+			},
+			"minecraft:display_name": {
+				"value": "Dried Leaf"
+			},
+			"minecraft:block_placer": {
+				"block": "rns:driedleafpile"
+			}
+		},
+		"events": {}
+	}
+}

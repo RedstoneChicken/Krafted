@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:normal_petunia_into_short_petunia"},"tags":["crafting_table"],"ingredients":[{"item":"ff:petunia_item","count":2}],"result":{"item":"ff:petunia_short_item"}}}

@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_lily_valley_into_large_lily_valley"},"tags":["crafting_table"],"ingredients":[{"item":"ff:lily_valley_tall_item","count":2}],"result":{"item":"ff:lily_valley_large_item"}}}

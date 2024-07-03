@@ -1,0 +1,33 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:jam_waffle"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:waffle"
+			},
+			"~": {
+				"item": "strat:jam"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:jam_waffle",
+				"count": 1
+			},
+			{
+				"item": "strat:glass_jar",
+				"count": 1
+			}
+		]
+	}
+}

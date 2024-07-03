@@ -1,0 +1,55 @@
+//bridge-file-version: #39
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_water_leaves"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_water_leaves",
+					"render_method": "alpha_test",
+					"face_dimming": false
+				}
+			},
+			"tag:grass": {},
+			"minecraft:geometry": "geometry.chorus_water_leaves",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"minecraft:water"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#908640",
+			"minecraft:flammable": {
+				"burn_odds": 30,
+				"flame_odds": 30
+			},
+			"minecraft:explosion_resistance": 0,
+			"minecraft:loot": "empty"
+		},
+		"events": {}
+	}
+}

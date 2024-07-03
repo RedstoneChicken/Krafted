@@ -1,0 +1,228 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "oh:migtinio_hammer",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "migtinio_hammer"
+			},
+			"minecraft:display_name": {
+				"value": "Migtinio Hammer\n§eHammers"
+			},
+			"minecraft:damage": 7,
+			"minecraft:durability": {
+				"max_durability": 795
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"oh:migtinio"
+						],
+						"repair_amount": "query.max_durability"
+					}
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.pickaxe"
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "daño"
+				},
+				"on_not_hurt_entity": {
+					"event": "daño"
+				},
+				"on_hit_block": {
+					"event": "daño"
+				}
+			},
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "pickaxe"
+			},
+			"minecraft:mining_speed": 8,
+			"tag:minecraft:is_pickaxe": {},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "!query.any_tag('bedrock')"
+						},
+						"speed": 6,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:leaves",
+						"speed": 1
+					},
+					{
+						"block": "minecraft:leaves2",
+						"speed": 1
+					},
+					{
+						"block": "minecraft:azalea_leaves",
+						"speed": 1
+					},
+					{
+						"block": {
+							"tags": "(query.any_tag('dextenblocks'))"
+						},
+						"speed": 9,
+						"on_dig": {
+							"event": "dmg"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "daño"
+				}
+			}
+		},
+		"events": {
+			"dmg": {
+				"damage": {
+					"type": "durability",
+					"amount": 1
+				},
+				"sequence": [
+					{
+						"condition": "query.cardinal_player_facing == 0",
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						},
+						"run_command": {
+							"command": [
+								"execute unless block ~1 ~ ~1 bedrock unless block ~1 ~ ~1 light_block unless block ~1 ~ ~1 barrier unless block ~1 ~ ~1 deny unless block ~1 ~ ~1 allow unless block ~1 ~ ~1 command_block unless block ~1 ~ ~1 obsidian unless block ~1 ~ ~1 border_block unless block ~1 ~ ~1 crying_obsidian unless block ~1 ~ ~1 reinforced_deepslate run setblock ~1 ~ ~1 air 0 destroy",
+								"execute unless block ~1 ~ ~-1 bedrock unless block ~1 ~ ~-1 light_block unless block ~1 ~ ~-1 barrier unless block ~1 ~ ~-1 deny unless block ~1 ~ ~-1 allow unless block ~1 ~ ~-1 command_block unless block ~1 ~ ~-1 obsidian unless block ~1 ~ ~-1 border_block unless block ~1 ~ ~-1 crying_obsidian unless block ~1 ~ ~-1 reinforced_deepslate run setblock ~1 ~ ~-1 air 0 destroy",
+								"execute unless block ~1 ~ ~ bedrock unless block ~1 ~ ~ light_block unless block ~1 ~ ~ barrier unless block ~1 ~ ~ deny unless block ~1 ~ ~ allow unless block ~1 ~ ~ command_block unless block ~1 ~ ~ obsidian unless block ~1 ~ ~ border_block unless block ~1 ~ ~ crying_obsidian unless block ~1 ~ ~ reinforced_deepslate run setblock ~1 ~ ~ air 0 destroy",
+								"execute unless block ~ ~ ~1 bedrock unless block ~ ~ ~1 light_block unless block ~ ~ ~1 barrier unless block ~ ~ ~1 deny unless block ~ ~ ~1 allow unless block ~ ~ ~1 command_block unless block ~ ~ ~1 obsidian unless block ~ ~ ~1 border_block unless block ~ ~ ~1 crying_obsidian unless block ~ ~ ~1 reinforced_deepslate run setblock ~ ~ ~1 air 0 destroy",
+								"execute unless block ~ ~ ~-1 bedrock unless block ~ ~ ~-1 light_block unless block ~ ~ ~-1 barrier unless block ~ ~ ~-1 deny unless block ~ ~ ~-1 allow unless block ~ ~ ~-1 command_block unless block ~ ~ ~-1 obsidian unless block ~ ~ ~-1 border_block unless block ~ ~ ~-1 crying_obsidian unless block ~ ~ ~-1 reinforced_deepslate run setblock ~ ~ ~-1 air 0 destroy",
+								"execute unless block ~-1 ~ ~1 bedrock unless block ~-1 ~ ~1 light_block unless block ~-1 ~ ~1 barrier unless block ~-1 ~ ~1 deny unless block ~-1 ~ ~1 allow unless block ~-1 ~ ~1 command_block unless block ~-1 ~ ~1 obsidian unless block ~-1 ~ ~1 border_block unless block ~-1 ~ ~1 crying_obsidian unless block ~-1 ~ ~1 reinforced_deepslate run setblock ~-1 ~ ~1 air 0 destroy",
+								"execute unless block ~-1 ~ ~-1 bedrock unless block ~-1 ~ ~-1 light_block unless block ~-1 ~ ~-1 barrier unless block ~-1 ~ ~-1 deny unless block ~-1 ~ ~-1 allow unless block ~-1 ~ ~-1 command_block unless block ~-1 ~ ~-1 obsidian unless block ~-1 ~ ~-1 border_block unless block ~-1 ~ ~-1 crying_obsidian unless block ~-1 ~ ~-1 reinforced_deepslate run setblock ~-1 ~ ~-1 air 0 destroy",
+								"execute unless block ~-1 ~ ~ bedrock unless block ~-1 ~ ~ light_block unless block ~-1 ~ ~ barrier unless block ~-1 ~ ~ deny unless block ~-1 ~ ~ allow unless block ~-1 ~ ~ command_block unless block ~-1 ~ ~ obsidian unless block ~-1 ~ ~ border_block unless block ~-1 ~ ~ crying_obsidian unless block ~-1 ~ ~ reinforced_deepslate run setblock ~-1 ~ ~ air 0 destroy"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 1",
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						},
+						"run_command": {
+							"command": [
+								"execute unless block ~1 ~ ~1 bedrock unless block ~1 ~ ~1 light_block unless block ~1 ~ ~1 barrier unless block ~1 ~ ~1 deny unless block ~1 ~ ~1 allow unless block ~1 ~ ~1 command_block unless block ~1 ~ ~1 obsidian unless block ~1 ~ ~1 border_block unless block ~1 ~ ~1 crying_obsidian unless block ~1 ~ ~1 reinforced_deepslate run setblock ~1 ~ ~1 air 0 destroy",
+								"execute unless block ~1 ~ ~-1 bedrock unless block ~1 ~ ~-1 light_block unless block ~1 ~ ~-1 barrier unless block ~1 ~ ~-1 deny unless block ~1 ~ ~-1 allow unless block ~1 ~ ~-1 command_block unless block ~1 ~ ~-1 obsidian unless block ~1 ~ ~-1 border_block unless block ~1 ~ ~-1 crying_obsidian unless block ~1 ~ ~-1 reinforced_deepslate run setblock ~1 ~ ~-1 air 0 destroy",
+								"execute unless block ~1 ~ ~ bedrock unless block ~1 ~ ~ light_block unless block ~1 ~ ~ barrier unless block ~1 ~ ~ deny unless block ~1 ~ ~ allow unless block ~1 ~ ~ command_block unless block ~1 ~ ~ obsidian unless block ~1 ~ ~ border_block unless block ~1 ~ ~ crying_obsidian unless block ~1 ~ ~ reinforced_deepslate run setblock ~1 ~ ~ air 0 destroy",
+								"execute unless block ~ ~ ~1 bedrock unless block ~ ~ ~1 light_block unless block ~ ~ ~1 barrier unless block ~ ~ ~1 deny unless block ~ ~ ~1 allow unless block ~ ~ ~1 command_block unless block ~ ~ ~1 obsidian unless block ~ ~ ~1 border_block unless block ~ ~ ~1 crying_obsidian unless block ~ ~ ~1 reinforced_deepslate run setblock ~ ~ ~1 air 0 destroy",
+								"execute unless block ~ ~ ~-1 bedrock unless block ~ ~ ~-1 light_block unless block ~ ~ ~-1 barrier unless block ~ ~ ~-1 deny unless block ~ ~ ~-1 allow unless block ~ ~ ~-1 command_block unless block ~ ~ ~-1 obsidian unless block ~ ~ ~-1 border_block unless block ~ ~ ~-1 crying_obsidian unless block ~ ~ ~-1 reinforced_deepslate run setblock ~ ~ ~-1 air 0 destroy",
+								"execute unless block ~-1 ~ ~1 bedrock unless block ~-1 ~ ~1 light_block unless block ~-1 ~ ~1 barrier unless block ~-1 ~ ~1 deny unless block ~-1 ~ ~1 allow unless block ~-1 ~ ~1 command_block unless block ~-1 ~ ~1 obsidian unless block ~-1 ~ ~1 border_block unless block ~-1 ~ ~1 crying_obsidian unless block ~-1 ~ ~1 reinforced_deepslate run setblock ~-1 ~ ~1 air 0 destroy",
+								"execute unless block ~-1 ~ ~-1 bedrock unless block ~-1 ~ ~-1 light_block unless block ~-1 ~ ~-1 barrier unless block ~-1 ~ ~-1 deny unless block ~-1 ~ ~-1 allow unless block ~-1 ~ ~-1 command_block unless block ~-1 ~ ~-1 obsidian unless block ~-1 ~ ~-1 border_block unless block ~-1 ~ ~-1 crying_obsidian unless block ~-1 ~ ~-1 reinforced_deepslate run setblock ~-1 ~ ~-1 air 0 destroy",
+								"execute unless block ~-1 ~ ~ bedrock unless block ~-1 ~ ~ light_block unless block ~-1 ~ ~ barrier unless block ~-1 ~ ~ deny unless block ~-1 ~ ~ allow unless block ~-1 ~ ~ command_block unless block ~-1 ~ ~ obsidian unless block ~-1 ~ ~ border_block unless block ~-1 ~ ~ crying_obsidian unless block ~-1 ~ ~ reinforced_deepslate run setblock ~-1 ~ ~ air 0 destroy"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 2",
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						},
+						"run_command": {
+							"command": [
+								"execute unless block ~ ~1 ~ bedrock unless block ~ ~1 ~ light_block unless block ~ ~1 ~ barrier unless block ~ ~1 ~ deny unless block ~ ~1 ~ allow unless block ~ ~1 ~ command_block unless block ~ ~1 ~ obsidian unless block ~ ~1 ~ border_block unless block ~ ~1 ~ crying_obsidian unless block ~ ~1 ~ reinforced_deepslate run setblock ~ ~1 ~ air 0 destroy",
+								"execute unless block ~ ~-1 ~ bedrock unless block ~ ~-1 ~ light_block unless block ~ ~-1 ~ barrier unless block ~ ~-1 ~ deny unless block ~ ~-1 ~ allow unless block ~ ~-1 ~ command_block unless block ~ ~-1 ~ obsidian unless block ~ ~-1 ~ border_block unless block ~ ~-1 ~ crying_obsidian unless block ~ ~-1 ~ reinforced_deepslate run setblock ~ ~-1 ~ air 0 destroy",
+								"execute unless block ~1 ~1 ~ bedrock unless block ~1 ~1 ~ light_block unless block ~1 ~1 ~ barrier unless block ~1 ~1 ~ deny unless block ~1 ~1 ~ allow unless block ~1 ~1 ~ command_block unless block ~1 ~1 ~ obsidian unless block ~1 ~1 ~ border_block unless block ~1 ~1 ~ crying_obsidian unless block ~1 ~1 ~ reinforced_deepslate run setblock ~1 ~1 ~ air 0 destroy",
+								"execute unless block ~-1 ~1 ~ bedrock unless block ~-1 ~1 ~ light_block unless block ~-1 ~1 ~ barrier unless block ~-1 ~1 ~ deny unless block ~-1 ~1 ~ allow unless block ~-1 ~1 ~ command_block unless block ~-1 ~1 ~ obsidian unless block ~-1 ~1 ~ border_block unless block ~-1 ~1 ~ crying_obsidian unless block ~-1 ~1 ~ reinforced_deepslate run setblock ~-1 ~1 ~ air 0 destroy",
+								"execute unless block ~1 ~-1 ~ bedrock unless block ~1 ~-1 ~ light_block unless block ~1 ~-1 ~ barrier unless block ~1 ~-1 ~ deny unless block ~1 ~-1 ~ allow unless block ~1 ~-1 ~ command_block unless block ~1 ~-1 ~ obsidian unless block ~1 ~-1 ~ border_block unless block ~1 ~-1 ~ crying_obsidian unless block ~1 ~-1 ~ reinforced_deepslate run setblock ~1 ~-1 ~ air 0 destroy",
+								"execute unless block ~-1 ~-1 ~ bedrock unless block ~-1 ~-1 ~ light_block unless block ~-1 ~-1 ~ barrier unless block ~-1 ~-1 ~ deny unless block ~-1 ~-1 ~ allow unless block ~-1 ~-1 ~ command_block unless block ~-1 ~-1 ~ obsidian unless block ~-1 ~-1 ~ border_block unless block ~-1 ~-1 ~ crying_obsidian unless block ~-1 ~-1 ~ reinforced_deepslate run setblock ~-1 ~-1 ~ air 0 destroy",
+								"execute unless block ~1 ~ ~ bedrock unless block ~1 ~ ~ light_block unless block ~1 ~ ~ barrier unless block ~1 ~ ~ deny unless block ~1 ~ ~ allow unless block ~1 ~ ~ command_block unless block ~1 ~ ~ obsidian unless block ~1 ~ ~ border_block unless block ~1 ~ ~ crying_obsidian unless block ~1 ~ ~ reinforced_deepslate run setblock ~1 ~ ~ air 0 destroy",
+								"execute unless block ~-1 ~ ~ bedrock unless block ~-1 ~ ~ light_block unless block ~-1 ~ ~ barrier unless block ~-1 ~ ~ deny unless block ~-1 ~ ~ allow unless block ~-1 ~ ~ command_block unless block ~-1 ~ ~ obsidian unless block ~-1 ~ ~ border_block unless block ~-1 ~ ~ crying_obsidian unless block ~-1 ~ ~ reinforced_deepslate run setblock ~-1 ~ ~ air 0 destroy"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 3",
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						},
+						"run_command": {
+							"command": [
+								"execute unless block ~ ~1 ~ bedrock unless block ~ ~1 ~ light_block unless block ~ ~1 ~ barrier unless block ~ ~1 ~ deny unless block ~ ~1 ~ allow unless block ~ ~1 ~ command_block unless block ~ ~1 ~ obsidian unless block ~ ~1 ~ border_block unless block ~ ~1 ~ crying_obsidian unless block ~ ~1 ~ reinforced_deepslate run setblock ~ ~1 ~ air 0 destroy",
+								"execute unless block ~ ~-1 ~ bedrock unless block ~ ~-1 ~ light_block unless block ~ ~-1 ~ barrier unless block ~ ~-1 ~ deny unless block ~ ~-1 ~ allow unless block ~ ~-1 ~ command_block unless block ~ ~-1 ~ obsidian unless block ~ ~-1 ~ border_block unless block ~ ~-1 ~ crying_obsidian unless block ~ ~-1 ~ reinforced_deepslate run setblock ~ ~-1 ~ air 0 destroy",
+								"execute unless block ~1 ~1 ~ bedrock unless block ~1 ~1 ~ light_block unless block ~1 ~1 ~ barrier unless block ~1 ~1 ~ deny unless block ~1 ~1 ~ allow unless block ~1 ~1 ~ command_block unless block ~1 ~1 ~ obsidian unless block ~1 ~1 ~ border_block unless block ~1 ~1 ~ crying_obsidian unless block ~1 ~1 ~ reinforced_deepslate run setblock ~1 ~1 ~ air 0 destroy",
+								"execute unless block ~-1 ~1 ~ bedrock unless block ~-1 ~1 ~ light_block unless block ~-1 ~1 ~ barrier unless block ~-1 ~1 ~ deny unless block ~-1 ~1 ~ allow unless block ~-1 ~1 ~ command_block unless block ~-1 ~1 ~ obsidian unless block ~-1 ~1 ~ border_block unless block ~-1 ~1 ~ crying_obsidian unless block ~-1 ~1 ~ reinforced_deepslate run setblock ~-1 ~1 ~ air 0 destroy",
+								"execute unless block ~1 ~-1 ~ bedrock unless block ~1 ~-1 ~ light_block unless block ~1 ~-1 ~ barrier unless block ~1 ~-1 ~ deny unless block ~1 ~-1 ~ allow unless block ~1 ~-1 ~ command_block unless block ~1 ~-1 ~ obsidian unless block ~1 ~-1 ~ border_block unless block ~1 ~-1 ~ crying_obsidian unless block ~1 ~-1 ~ reinforced_deepslate run setblock ~1 ~-1 ~ air 0 destroy",
+								"execute unless block ~-1 ~-1 ~ bedrock unless block ~-1 ~-1 ~ light_block unless block ~-1 ~-1 ~ barrier unless block ~-1 ~-1 ~ deny unless block ~-1 ~-1 ~ allow unless block ~-1 ~-1 ~ command_block unless block ~-1 ~-1 ~ obsidian unless block ~-1 ~-1 ~ border_block unless block ~-1 ~-1 ~ crying_obsidian unless block ~-1 ~-1 ~ reinforced_deepslate run setblock ~-1 ~-1 ~ air 0 destroy",
+								"execute unless block ~1 ~ ~ bedrock unless block ~1 ~ ~ light_block unless block ~1 ~ ~ barrier unless block ~1 ~ ~ deny unless block ~1 ~ ~ allow unless block ~1 ~ ~ command_block unless block ~1 ~ ~ obsidian unless block ~1 ~ ~ border_block unless block ~1 ~ ~ crying_obsidian unless block ~1 ~ ~ reinforced_deepslate run setblock ~1 ~ ~ air 0 destroy",
+								"execute unless block ~-1 ~ ~ bedrock unless block ~-1 ~ ~ light_block unless block ~-1 ~ ~ barrier unless block ~-1 ~ ~ deny unless block ~-1 ~ ~ allow unless block ~-1 ~ ~ command_block unless block ~-1 ~ ~ obsidian unless block ~-1 ~ ~ border_block unless block ~-1 ~ ~ crying_obsidian unless block ~-1 ~ ~ reinforced_deepslate run setblock ~-1 ~ ~ air 0 destroy"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 4",
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						},
+						"run_command": {
+							"command": [
+								"execute unless block ~ ~1 ~1 bedrock unless block ~ ~1 ~1 light_block unless block ~ ~1 ~1 barrier unless block ~ ~1 ~1 deny unless block ~ ~1 ~1 allow unless block ~ ~1 ~1 command_block unless block ~ ~1 ~1 obsidian unless block ~ ~1 ~1 border_block unless block ~ ~1 ~1 crying_obsidian unless block ~ ~1 ~1 reinforced_deepslate run setblock ~ ~1 ~1 air 0 destroy",
+								"execute unless block ~ ~1 ~-1 bedrock unless block ~ ~1 ~-1 light_block unless block ~ ~1 ~-1 barrier unless block ~ ~1 ~-1 deny unless block ~ ~1 ~-1 allow unless block ~ ~1 ~-1 command_block unless block ~ ~1 ~-1 obsidian unless block ~ ~1 ~-1 border_block unless block ~ ~1 ~-1 crying_obsidian unless block ~ ~1 ~-1 reinforced_deepslate run setblock ~ ~1 ~-1 air 0 destroy",
+								"execute unless block ~ ~-1 ~1 bedrock unless block ~ ~-1 ~1 light_block unless block ~ ~-1 ~1 barrier unless block ~ ~-1 ~1 deny unless block ~ ~-1 ~1 allow unless block ~ ~-1 ~1 command_block unless block ~ ~-1 ~1 obsidian unless block ~ ~-1 ~1 border_block unless block ~ ~-1 ~1 crying_obsidian unless block ~ ~-1 ~1 reinforced_deepslate run setblock ~ ~-1 ~1 air 0 destroy",
+								"execute unless block ~ ~-1 ~-1 bedrock unless block ~ ~-1 ~-1 light_block unless block ~ ~-1 ~-1 barrier unless block ~ ~-1 ~-1 deny unless block ~ ~-1 ~-1 allow unless block ~ ~-1 ~-1 command_block unless block ~ ~-1 ~-1 obsidian unless block ~ ~-1 ~-1 border_block unless block ~ ~-1 ~-1 crying_obsidian unless block ~ ~-1 ~-1 reinforced_deepslate run setblock ~ ~-1 ~-1 air 0 destroy",
+								"execute unless block ~ ~-1 ~ bedrock unless block ~ ~-1 ~ light_block unless block ~ ~-1 ~ barrier unless block ~ ~-1 ~ deny unless block ~ ~-1 ~ allow unless block ~ ~-1 ~ command_block unless block ~ ~-1 ~ obsidian unless block ~ ~-1 ~ border_block unless block ~ ~-1 ~ crying_obsidian unless block ~ ~-1 ~ reinforced_deepslate run setblock ~ ~-1 ~ air 0 destroy",
+								"execute unless block ~ ~1 ~ bedrock unless block ~ ~1 ~ light_block unless block ~ ~1 ~ barrier unless block ~ ~1 ~ deny unless block ~ ~1 ~ allow unless block ~ ~1 ~ command_block unless block ~ ~1 ~ obsidian unless block ~ ~1 ~ border_block unless block ~ ~1 ~ crying_obsidian unless block ~ ~1 ~ reinforced_deepslate run setblock ~ ~1 ~ air 0 destroy",
+								"execute unless block ~ ~ ~-1 bedrock unless block ~ ~ ~-1 light_block unless block ~ ~ ~-1 barrier unless block ~ ~ ~-1 deny unless block ~ ~ ~-1 allow unless block ~ ~ ~-1 command_block unless block ~ ~ ~-1 obsidian unless block ~ ~ ~-1 border_block unless block ~ ~ ~-1 crying_obsidian unless block ~ ~ ~-1 reinforced_deepslate run setblock ~ ~ ~-1 air 0 destroy",
+								"execute unless block ~ ~ ~1 bedrock unless block ~ ~ ~1 light_block unless block ~ ~ ~1 barrier unless block ~ ~ ~1 deny unless block ~ ~ ~1 allow unless block ~ ~ ~1 command_block unless block ~ ~ ~1 obsidian unless block ~ ~ ~1 border_block unless block ~ ~ ~1 crying_obsidian unless block ~ ~ ~1 reinforced_deepslate run setblock ~ ~ ~1 air 0 destroy"
+							],
+							"target": "block"
+						}
+					},
+					{
+						"condition": "query.cardinal_player_facing == 5",
+						"damage": {
+							"type": "durability",
+							"amount": 1
+						},
+						"run_command": {
+							"command": [
+								"execute unless block ~ ~1 ~1 bedrock unless block ~ ~1 ~1 light_block unless block ~ ~1 ~1 barrier unless block ~ ~1 ~1 deny unless block ~ ~1 ~1 allow unless block ~ ~1 ~1 command_block unless block ~ ~1 ~1 obsidian unless block ~ ~1 ~1 border_block unless block ~ ~1 ~1 crying_obsidian unless block ~ ~1 ~1 reinforced_deepslate run setblock ~ ~1 ~1 air 0 destroy",
+								"execute unless block ~ ~1 ~-1 bedrock unless block ~ ~1 ~-1 light_block unless block ~ ~1 ~-1 barrier unless block ~ ~1 ~-1 deny unless block ~ ~1 ~-1 allow unless block ~ ~1 ~-1 command_block unless block ~ ~1 ~-1 obsidian unless block ~ ~1 ~-1 border_block unless block ~ ~1 ~-1 crying_obsidian unless block ~ ~1 ~-1 reinforced_deepslate run setblock ~ ~1 ~-1 air 0 destroy",
+								"execute unless block ~ ~-1 ~1 bedrock unless block ~ ~-1 ~1 light_block unless block ~ ~-1 ~1 barrier unless block ~ ~-1 ~1 deny unless block ~ ~-1 ~1 allow unless block ~ ~-1 ~1 command_block unless block ~ ~-1 ~1 obsidian unless block ~ ~-1 ~1 border_block unless block ~ ~-1 ~1 crying_obsidian unless block ~ ~-1 ~1 reinforced_deepslate run setblock ~ ~-1 ~1 air 0 destroy",
+								"execute unless block ~ ~-1 ~-1 bedrock unless block ~ ~-1 ~-1 light_block unless block ~ ~-1 ~-1 barrier unless block ~ ~-1 ~-1 deny unless block ~ ~-1 ~-1 allow unless block ~ ~-1 ~-1 command_block unless block ~ ~-1 ~-1 obsidian unless block ~ ~-1 ~-1 border_block unless block ~ ~-1 ~-1 crying_obsidian unless block ~ ~-1 ~-1 reinforced_deepslate run setblock ~ ~-1 ~-1 air 0 destroy",
+								"execute unless block ~ ~-1 ~ bedrock unless block ~ ~-1 ~ light_block unless block ~ ~-1 ~ barrier unless block ~ ~-1 ~ deny unless block ~ ~-1 ~ allow unless block ~ ~-1 ~ command_block unless block ~ ~-1 ~ obsidian unless block ~ ~-1 ~ border_block unless block ~ ~-1 ~ crying_obsidian unless block ~ ~-1 ~ reinforced_deepslate run setblock ~ ~-1 ~ air 0 destroy",
+								"execute unless block ~ ~1 ~ bedrock unless block ~ ~1 ~ light_block unless block ~ ~1 ~ barrier unless block ~ ~1 ~ deny unless block ~ ~1 ~ allow unless block ~ ~1 ~ command_block unless block ~ ~1 ~ obsidian unless block ~ ~1 ~ border_block unless block ~ ~1 ~ crying_obsidian unless block ~ ~1 ~ reinforced_deepslate run setblock ~ ~1 ~ air 0 destroy",
+								"execute unless block ~ ~ ~-1 bedrock unless block ~ ~ ~-1 light_block unless block ~ ~ ~-1 barrier unless block ~ ~ ~-1 deny unless block ~ ~ ~-1 allow unless block ~ ~ ~-1 command_block unless block ~ ~ ~-1 obsidian unless block ~ ~ ~-1 border_block unless block ~ ~ ~-1 crying_obsidian unless block ~ ~ ~-1 reinforced_deepslate run setblock ~ ~ ~-1 air 0 destroy",
+								"execute unless block ~ ~ ~1 bedrock unless block ~ ~ ~1 light_block unless block ~ ~ ~1 barrier unless block ~ ~ ~1 deny unless block ~ ~ ~1 allow unless block ~ ~ ~1 command_block unless block ~ ~ ~1 obsidian unless block ~ ~ ~1 border_block unless block ~ ~ ~1 crying_obsidian unless block ~ ~ ~1 reinforced_deepslate run setblock ~ ~ ~1 air 0 destroy"
+							],
+							"target": "block"
+						}
+					}
+				]
+			},
+			"daño": {
+				"damage": {
+					"type": "durability",
+					"amount": 1,
+					"target": "item"
+				}
+			}
+		}
+	}
+}

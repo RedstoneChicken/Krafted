@@ -1,0 +1,29 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:baguette",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 1.6,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "strat_baguette"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 3,
+				"saturation_modifier": "low",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

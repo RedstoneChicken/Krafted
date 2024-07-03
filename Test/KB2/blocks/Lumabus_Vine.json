@@ -1,0 +1,84 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:lumabusvine"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.25,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:geometry": "geometry.cb",
+			"minecraft:on_interact": {
+				"event": "caf:grow_mealramdom",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "lumabusvine"
+				}
+			}
+		},
+		"events": {
+			"caf:grow_meal": {
+				"set_block_at_pos": {
+					"block_type": "caf:lumabusvine",
+					"block_offset": [
+						0,
+						-1,
+						0
+					]
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow_meal1": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~",
+						"function LumabusVineRandomGrow"
+					]
+				}
+			},
+			"caf:grow_meal_bulb": {
+				"set_block_at_pos": {
+					"block_type": "caf:lumabus_bulb",
+					"block_offset": [
+						0,
+						-1,
+						0
+					]
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow_mealramdom": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow_meal"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow_meal1"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow_meal_bulb"
+						}
+					}
+				]
+			}
+		}
+	}
+}

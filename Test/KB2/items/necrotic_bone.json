@@ -1,0 +1,22 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:necrotic_bone"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "necrotic_bone"
+			},
+			"minecraft:display_name": {
+				"value": "Necrotic Bone"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

@@ -1,0 +1,29 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:ice_cream_sandwich",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 1.6,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "ice_cream_sandwich"
+			},
+			"minecraft:food": {
+				"nutrition": 6,
+				"saturation_modifier": "max",
+				"can_always_eat": false
+			},
+			"minecraft:foil": false
+		},
+		"events": {}
+	}
+}

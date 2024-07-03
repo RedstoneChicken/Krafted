@@ -1,0 +1,20 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "end:zalix_flower_feature"
+		},
+		"places_block": "end:zalix_flower",
+		"enforce_placement_rules": false,
+		"enforce_survivability_rules": false,
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_attach_to": {
+			"bottom": [
+				"end:zallium"
+			]
+		}
+	}
+}

@@ -1,0 +1,115 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:oakbranch",
+			"properties": {
+				"rns:place": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5
+				],
+				"rns:stripped": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:destroy_time": 2,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:on_player_placing": {
+				"event": "rns:facing"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_oakbranch",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.branch",
+			"minecraft:on_interact": {
+				"event": "rns:stripped",
+				"condition": "q.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe') && query.block_property('rns:stripped') == 0"
+			}
+		},
+		"events": {
+			"rns:facing": {
+				"set_block_property": {
+					"rns:place": "query.cardinal_facing_2d"
+				}
+			},
+			"rns:stripped": {
+				"set_block_property": {
+					"rns:stripped": 1
+				},
+				"run_command": {
+					"command": [
+						"playsound dig.wood @p ~ ~ ~"
+					]
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('rns:place') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('rns:place') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('rns:place') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('rns:place') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('rns:stripped') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rns_strippedoakbranch",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		]
+	}
+}

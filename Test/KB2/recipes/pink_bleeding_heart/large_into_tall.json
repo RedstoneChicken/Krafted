@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:large_pink_bleeding_heart_into_tall_pink_bleeding_heart"},"tags":["crafting_table"],"ingredients":[{"item":"ff:pink_bleeding_heart_large_item"}],"result":{"item":"ff:pink_bleeding_heart_tall_item","count":2}}}

@@ -1,0 +1,126 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "components":{
+         "minecraft:can_destroy_in_creative":false,
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.items"
+         },
+         "minecraft:display_name":{
+            "value":"§1Tier III\n§7Rare Artifact"
+         },
+         "minecraft:hand_equipped":true,
+         "minecraft:icon":{
+            "texture":"rare_artifact"
+         },
+         "minecraft:max_stack_size":1,
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"give",
+               "target":"self"
+            }
+         },
+         "minecraft:use_animation":"drink",
+         "minecraft:use_duration":0
+      },
+      "description":{
+         "identifier":"kna:rare_crate"
+      },
+      "events":{
+         "give":{
+            "randomize":[
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:launchup_ball 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:lifesteal_feather 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:gravity_template 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:chorus_amulet 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:golden_soup 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:shulker_stone 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:eternal_candle 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:dummy_totem 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:aura_goggles_g 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               },
+               {
+                  "run_command":{
+                     "command":[
+                        "replaceitem entity @s slot.weapon.mainhand 0 kna:villagers_medal 1"
+                     ],
+                     "target":"self"
+                  },
+                  "weight":10
+               }
+            ]
+         }
+      }
+   }
+}

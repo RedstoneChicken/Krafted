@@ -1,0 +1,28 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:willow_log"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:on_interact": {
+				"event": "caf:strip",
+				"condition": "[query.get_equipped_item_name('main_hand') == 'diamond_axe'] || [query.get_equipped_item_name('main_hand') == 'iron_axe'] || [query.get_equipped_item_name('main_hand') == 'golden_axe'] || [query.get_equipped_item_name('main_hand') == 'stone_axe'] || [query.get_equipped_item_name('main_hand') == 'wooden_axe']"
+			}
+		},
+		"events": {
+			"caf:strip": {
+				"set_block_at_pos": {
+					"block_type": "caf:stripped_willow_log",
+					"block_offset": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

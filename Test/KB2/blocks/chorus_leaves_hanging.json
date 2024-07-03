@@ -1,0 +1,73 @@
+//bridge-file-version: #47
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_leaves_hanging"
+		},
+		"components": {
+			"minecraft:destroy_time": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_leaves_hanging",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": "geometry.plant",
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"down"
+						],
+						"block_filter": [
+							"korbon:chorus_leaves",
+							"korbon:chorus_leaves_hanging",
+							"korbon:turf_purpur",
+							"korbon:turf_endstone_bricks"
+						]
+					}
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:breathability": "air",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:map_color": "#908640",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:pick_collision": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:loot": "empty",
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			}
+		},
+		"events": {
+			"shear": {
+				"sequence": [
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/chorus_leaves_hanging.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

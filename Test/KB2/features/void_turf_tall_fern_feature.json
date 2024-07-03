@@ -1,0 +1,22 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:void_turf_tall_fern_feature"
+		},
+		"structure_name": "mystructure:void_turf_tall_fern",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air",
+					"korbon:void_turf_grass",
+					"korbon:void_turf_fern"
+				]
+			}
+		}
+	}
+}

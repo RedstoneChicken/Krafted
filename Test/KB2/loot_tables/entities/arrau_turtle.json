@@ -1,0 +1,14 @@
+{
+	"pools" : [
+		{
+			"rolls" : 1,
+			"entries" : [
+				{
+					"type" : "item",
+					"name" : "azc:arrau_turtle",
+					"weight" : 1
+				}
+			]
+		}
+	]
+}

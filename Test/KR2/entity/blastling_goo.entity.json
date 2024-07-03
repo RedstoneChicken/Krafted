@@ -1,0 +1,43 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "korbon:blastling_goo",
+			"materials": {
+				"default": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/blastling/blastling_goo"
+			},
+			"geometry": {
+				"default": "geometry.blastling_goo"
+			},
+			"particle_effects": {
+				"goo_trail": "korbon:blastling_goo_trail"
+			},
+			"sound_effects": {
+				"shoot_sound": "mob.shulker.shoot"
+			},
+			"animations": {
+				"move": "animation.arrow.move",
+				"idle": "animation.blastling_goo.idle"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.shake = query.shake_time - query.frame_alpha;",
+					"variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+				],
+				"animate": [
+					"move",
+					{
+						"idle": "query.is_alive&&query.is_moving"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.arrow"
+			]
+		}
+	}
+}

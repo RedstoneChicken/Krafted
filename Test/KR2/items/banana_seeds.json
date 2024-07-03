@@ -1,0 +1,14 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.13.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:banana_seeds",
+			"category": "Nature"
+		},
+		"components": {
+			"minecraft:icon": "korbon:banana_seeds",
+			"minecraft:render_offsets": "seeds"
+		}
+	}
+}

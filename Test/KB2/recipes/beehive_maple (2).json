@@ -1,0 +1,31 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.14,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:beehive_maple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"ooo",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "strat:maple_planks"
+			},
+			"o": {
+				"item": "minecraft:honeycomb"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:beehive"
+			}
+		],
+		"priority": 50
+	}
+}

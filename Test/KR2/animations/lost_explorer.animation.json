@@ -1,0 +1,26 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.lost_explorer.general" : {
+			"loop" : true,
+			"bones" : {
+				"arms" : {
+					"position" : [ 0.0, -1.0, -1.0 ],
+					"rotation" : [ "-42.97 - this", 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.lost_explorer.move" : {
+			"anim_time_update" : "query.modified_distance_moved",
+			"loop" : true,
+			"bones" : {
+				"leg0" : {
+					"rotation" : [ "(math.cos(query.anim_time * 38.17) * 40.0) - this", "-this", 0.0 ]
+				},
+				"leg1" : {
+					"rotation" : [ "(math.cos(query.anim_time * 38.17 + 180) * 40.0) - this", "-this", 0.0 ]
+				}
+			}
+		}
+	}
+}

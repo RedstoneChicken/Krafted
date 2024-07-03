@@ -1,0 +1,9 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": { "identifier": "ff:tall_dead_bush_into_short_dead_bush" },
+    "tags": ["crafting_table"],
+    "ingredients": [{ "item": "ff:dead_bush_tall_item" }],
+    "result": { "item": "minecraft:deadbush", "count": 2 }
+  }
+}

@@ -1,0 +1,52 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:marshmallow",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:hand_equipped": false,
+			"minecraft:stacked_by_data": true,
+			"minecraft:use_duration": 0.4,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:icon": {
+				"texture": "marshmallow"
+			},
+			"minecraft:foil": false,
+			"minecraft:food": {
+				"nutrition": 1,
+				"saturation_modifier": "poor",
+				"can_always_eat": false,
+				"on_consume": {
+					"event": "strat:chubby_bunny"
+				}
+			}
+		},
+		"events": {
+			"strat:chubby_bunny": {
+				"randomize": [
+					{
+						"weight": 99
+					},
+					{
+						"run_command": {
+							"command": [
+								"gamerule sendcommandfeedback false",
+								"give @s strat:chubby_bunny_trophy",
+								"playsound strat.trophy_collected @s",
+								"gamerule sendcommandfeedback true"
+							],
+							"target": "holder"
+						},
+						"weight": 1
+					}
+				]
+			}
+		}
+	}
+}

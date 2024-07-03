@@ -1,0 +1,27 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:polished_endslate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"EE",
+			"EE"
+		],
+		"key": {
+			"E": {
+				"item": "end:endslate"
+			}
+		},
+		"result": [
+			{
+				"item": "end:polished_endslate",
+				"count": 4
+			}
+		]
+	}
+}

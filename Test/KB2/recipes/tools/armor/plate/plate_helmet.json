@@ -1,0 +1,31 @@
+//bridge-file-version: #11
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:plate_helmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"~~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_ingot"
+			},
+			"~": {
+				"item": "minecraft:chain"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:plate_helmet",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

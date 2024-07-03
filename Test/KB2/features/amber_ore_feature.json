@@ -1,0 +1,18 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "nether:amber_ore_feature"
+		},
+		"count": 4,
+		"replace_rules": [
+			{
+				"places_block": "nether:amber_ore",
+				"may_replace": [
+					"minecraft:netherrack"
+				]
+			}
+		]
+	}
+}

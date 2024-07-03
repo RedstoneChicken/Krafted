@@ -1,0 +1,28 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:cleaver_128_14"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:cleaver_128_6",
+				"count": 1
+			},
+			{
+				"item": "strat:necrotic_bone",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:cleaver_128_14",
+				"count": 1
+			}
+		]
+	}
+}

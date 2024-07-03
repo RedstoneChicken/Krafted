@@ -1,0 +1,26 @@
+//bridge-file-version: #18
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tomato",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:use_duration": 0.8,
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:icon": {
+				"texture": "strat_tomato"
+			},
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			}
+		},
+		"events": {}
+	}
+}

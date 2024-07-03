@@ -1,0 +1,31 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_cobalt_from_ingot"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "strat:cobalt_ingot"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_cobalt_bucket",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

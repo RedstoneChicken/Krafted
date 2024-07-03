@@ -1,0 +1,23 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tough_tool_rod_cast",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Tough Tool Rod Cast\n§7Material Cost: 3§r"
+			},
+			"minecraft:icon": {
+				"texture": "tough_tool_rod_cast"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"tag:cast": {}
+		},
+		"events": {}
+	}
+}

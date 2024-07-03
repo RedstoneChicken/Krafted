@@ -1,0 +1,37 @@
+{
+ "format_version": "1.12",
+ "minecraft:recipe_shaped": {
+  "description": {
+   "identifier": "kna:night_clock"
+  },
+  "key": {
+   "A": {
+    "item": "minecraft:obsidian"
+   },
+   "B": {
+    "item": "minecraft:netherite_ingot"
+   },
+   "C": {
+    "item": "minecraft:clock"
+   },
+   "D": {
+    "item": "minecraft:crying_obsidian"
+   }
+  },
+  "pattern": [
+   "ABA",
+   "ACA",
+   "DDD"
+  ],
+  "result": {
+   "count": 1,
+   "item": "kna:night_clock"
+  },
+  "tags": [
+   "crafting_table"
+  ]
+ }
+}   "count": 1
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "nature:blooming_jungle_vines",
+      "properties": {
+        "nature:growth": [0, 1, 2]
+      }
+    },
+    "permutations": [
+      {
+        "condition": "query.block_property('nature:growth') == 1",
+        "components": {
+          "minecraft:on_player_destroyed": {
+            "event": "destroyed"
+          },
+          "minecraft:on_placed": {
+            "event": "update_texture"
+          },
+          "tag:vine": {},
+          "minecraft:loot": "loot_tables/blocks/blooming_jungle_vines.json",
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "alpha_test",
+              "texture": "dirt",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('nature:growth') == 0",
+        "components": {
+          "minecraft:on_player_destroyed": {
+            "event": "destroyed"
+          },
+          "tag:vine": {},
+          "minecraft:on_placed": {
+            "event": "update_texture"
+          }
+        }
+      },
+      {
+        "condition": "query.block_property('nature:growth') == 2",
+        "components": {
+          "tag:destroy":{},
+          "minecraft:on_placed": {
+            "event": "destroyed2"
+          },
+          "minecraft:material_instances": {
+            "*": {
+              "render_method": "alpha_test",
+              "texture": "stone",
+              "face_dimming": false,
+              "ambient_occlusion": false
+            }
+          }
+        }
+      }
+    ],
+    "components": {
+      "minecraft:pick_collision": {
+        "origin": [-7, 0, -7],
+        "size": [14, 16, 14]
+      },
+      "minecraft:block_light_emission": 0.14,
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": ["down"]
+          }
+        ]
+      },
+      "minecraft:entity_collision": false,
+      "minecraft:block_light_absorption": 0,
+      "minecraft:loot": "loot_tables/blocks/blooming_jungle_vines.json",
+      "minecraft:geometry": "geometry.crop",
+      "minecraft:destroy_time": 0,
+      "minecraft:material_instances": {
+        "*": {
+          "render_method": "alpha_test",
+          "texture": "cobblestone",
+          "face_dimming": false,
+          "ambient_occlusion": false
+        }
+      },
+      "minecraft:breathability": "air",
+
+    },
+    "events": {
+      "update_texture": {
+        "sequence": [
+          {
+            "condition": "q.block_neighbor_has_any_tag(0,-1,0,'vine')",
+            "set_block_property": {
+              "nature:growth": 1
+            }
+          },
+          {
+            "condition": "q.block_neighbor_has_any_tag(0,1,0,'vine')",
+            "run_command": {
+              "command": [
+                "fill ~ ~1 ~ ~ ~1 ~ air 0 replace nature:blooming_jungle_vines",
+                "fill ~ ~1 ~ ~ ~1 ~ nature:blooming_jungle_vines 0 replace air"
+              ]
+            }
+          },
+          {
+            "condition": "q.block_neighbor_has_any_tag(0,1,0,'destroy')",
+            "run_command": {
+              "command": [
+                "fill ~ ~1 ~ ~ ~1 ~ air 0 replace nature:blooming_jungle_vines"
+              ]
+            },
+            "set_block_property": {
+              "nature:growth": 2
+            }
+          }
+        ]
+      },
+      "destroyed": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "fill ~ ~1 ~ ~ ~1 ~ air 0 replace nature:blooming_jungle_vines",
+                "fill ~ ~1 ~ ~ ~1 ~ nature:blooming_jungle_vines 0 replace air"
+              ]
+            }
+          },
+          {
+            "set_block_property": {
+              "nature:growth": 2
+            }
+          }
+        ]
+      },
+      "destroyed2": {
+        "sequence": [
+          {
+            "run_command": {
+              "command": [
+                "fill ~ ~-1 ~ ~ ~-1 ~ air 0 replace nature:blooming_jungle_vines",
+                "fill ~ ~-1 ~ ~ ~-1 ~ nature:blooming_jungle_vines 0 replace air",
+                "fill ~~~ ~~~ air"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

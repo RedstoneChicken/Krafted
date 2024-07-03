@@ -1,0 +1,23 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:pumpkin_pie_item",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "pumpkin_pie_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:pumpkin_pie_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

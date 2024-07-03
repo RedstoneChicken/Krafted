@@ -1,0 +1,38 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:excavator_1"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" ~#",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:wooden_excavator_head"
+			},
+			"~": {
+				"item": "strat:wooden_large_plate"
+			},
+			"o": {
+				"item": "strat:wooden_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:wooden_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:excavator_1",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

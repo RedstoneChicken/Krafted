@@ -1,0 +1,31 @@
+//bridge-file-version: #25
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_glass_from_glass_pane"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:glass_pane"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_glass_bucket",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

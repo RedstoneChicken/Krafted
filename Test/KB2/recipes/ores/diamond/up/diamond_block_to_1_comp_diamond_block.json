@@ -1,0 +1,27 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:diamond_block_to_compressed_diamond_block"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:diamond_block"
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_diamond_block",
+				"count": 1
+			}
+		]
+	}
+}

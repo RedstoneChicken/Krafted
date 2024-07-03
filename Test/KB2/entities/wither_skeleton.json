@@ -1,0 +1,1398 @@
+{
+	"format_version" : "1.16.0",
+	"minecraft:entity" : {
+		"description" : {
+			"identifier" : "minecraft:wither_skeleton",
+			"is_spawnable" : true,
+			"is_summonable" : true,
+			"is_experimental" : false
+		},
+		"component_groups" : {
+			"elite_wither_skeleton" : {
+				"minecraft:health" : {
+					"value" : 40,
+					"max" : 40
+				},
+				"minecraft:attack" : {
+					"damage" : 6
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "20"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/elite_wither_skeleton.json"
+				}
+			},
+			"elite_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Trolling Wither Skeleton The NASA"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Armoured Wither Skeleton The Defender"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Unseen Wither Skeleton Of Stalking"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "conduit_power",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"elite_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Dark Wither Skeleton The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 10
+				}
+			},
+			"elite_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§bElite Enderborn Wither Skeleton The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 0.05,
+					"light_teleport_chance" : 0.05
+				}
+			},
+			"elite_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§bElite Innerly Peaceful Wither Skeleton Of Equilibrium"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 30,
+					"random_teleport_cube" : [ 32, 32, 32 ],
+					"target_distance" : 16,
+					"target_teleport_chance" : 0.05,
+					"light_teleport_chance" : 1.0
+				}
+			},
+			"elite_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Poisonous Wither Skeleton Of Venom"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 10
+				}
+			},
+			"elite_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Quicksand Wither Skeleton Of WTF Imba"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Starving Wither Skeleton Of Hunger"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 15
+				}
+			},
+			"elite_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Sprinting Wither Skeleton Of Bolting"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 1,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"elite_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Striking Wither Skeleton Of Lightning"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"elite_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Apathetic Wither Skeleton Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 15
+				}
+			},
+			"elite_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 10,
+					"name" : "§bElite Webbing Wither Skeleton The spider"
+				},
+				"minecraft:timer" : {
+					"time" : [ 10, 15 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_wither_skeleton" : {
+				"minecraft:health" : {
+					"value" : 60,
+					"max" : 60
+				},
+				"minecraft:attack" : {
+					"damage" : 9
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "40"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/ultra_wither_skeleton.json"
+				}
+			},
+			"ultra_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Thumping Wither Skeleton Of Mission Control"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Defensive Wither Skeleton Of Turtling"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Stalking Wither Skeleton The Unseen"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "haste",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"ultra_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Eclipsed Wither Skeleton The Shadow"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 40,
+					"name" : "§eUltra Tricky Wither Skeleton The Enderborn"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 0.5,
+					"light_teleport_chance" : 0.5
+				}
+			},
+			"ultra_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 40,
+					"name" : "§eUltra Totally Zen Wither Skeleton Of Inner Peace"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 15,
+					"random_teleport_cube" : [ 16, 16, 16 ],
+					"target_distance" : 32,
+					"target_teleport_chance" : 0.5,
+					"light_teleport_chance" : 1.0
+				}
+			},
+			"ultra_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Despoiling Wither Skeleton The Cancerous"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 15
+				}
+			},
+			"ultra_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Quicksand Wither Skeleton The Slowing B****"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Hungering Wither Skeleton The Mutated"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Charging Wither Skeleton The Swift One"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 2,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"ultra_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Thundering Wither Skeleton Of Striking"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"ultra_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Apathetic Wither Skeleton Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 30
+				}
+			},
+			"ultra_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 20,
+					"name" : "§eUltra Ensnaring Wither Skeleton The Deceiver"
+				},
+				"minecraft:timer" : {
+					"time" : [ 7, 10 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_wither_skeleton" : {
+				"minecraft:health" : {
+					"value" : 80,
+					"max" : 80
+				},
+				"minecraft:attack" : {
+					"damage" : 12
+				},
+				"minecraft:experience_reward" : {
+					"on_death" : "60"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				},
+				"minecraft:loot" : {
+					"table" : "loot_tables/entities/infernal_wither_skeleton.json"
+				}
+			},
+			"infernal_blastoff" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Byebye Wither Skeleton Of WEEEE"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "blastoff"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_bullwark" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Turtling Wither Skeleton Of Effing Armor"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "resistance",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_cloaking" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Hunting Wither Skeleton The Predator"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "invisibility",
+							"duration" : 999999,
+							"visible" : false
+						},
+						{
+							"effect" : "saturation",
+							"duration" : 999999,
+							"visible" : true
+						}
+					]
+				}
+			},
+			"infernal_darkness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Shadowkin Wither Skeleton Of Darkness"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "blindness",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_ender" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§cInfernal Enderborn Wither Skeleton The Trickster"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1,
+					"light_teleport_chance" : 1
+				}
+			},
+			"infernal_ninja" : {
+				"minecraft:boss" : {
+					"hud_range" : 80,
+					"name" : "§cInfernal Ronin Wither Skeleton The Zen Master"
+				},
+				"minecraft:teleport" : {
+					"random_teleports" : true,
+					"max_random_teleport_time" : 7,
+					"random_teleport_cube" : [ 8, 8, 8 ],
+					"target_distance" : 64,
+					"target_teleport_chance" : 1.0,
+					"light_teleport_chance" : 1.0
+				}
+			},
+			"infernal_poisonous" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Stinging Wither Skeleton The Deadly Chalice"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "poison",
+					"effect_duration" : 20
+				}
+			},
+			"infernal_quicksand" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Slowing Wither Skeleton Of You-Can't-Run"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "slowness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_sapper" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Starving Wither Skeleton The Pale Rider"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "hunger",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_sprint" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Swift Wither Skeleton Of Being In Your Face"
+				},
+				"minecraft:spell_effects" : {
+					"add_effects" : [
+						{
+							"effect" : "speed",
+							"duration" : 999999,
+							"amplifier" : 3,
+							"visible" : false
+						}
+					]
+				}
+			},
+			"infernal_storm" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Electrified Wither Skeleton The Raiden"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "storm"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			},
+			"infernal_weakness" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Apathetic Wither Skeleton Of Apathy"
+				},
+				"minecraft:attack" : {
+					"effect_name" : "weakness",
+					"effect_duration" : 45
+				}
+			},
+			"infernal_webber" : {
+				"minecraft:boss" : {
+					"hud_range" : 30,
+					"name" : "§cInfernal Deceiving Wither Skeleton Of Traps"
+				},
+				"minecraft:timer" : {
+					"time" : [ 5, 7 ],
+					"time_down_event" : {
+						"event" : "webber"
+					},
+					"randomInterval" : true,
+					"looping" : true
+				}
+			}
+		},
+		"components" : {
+			"minecraft:is_hidden_when_invisible" : {},
+			"minecraft:experience_reward" : {
+				"on_death" : "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+			},
+			"minecraft:nameable" : {},
+			"minecraft:breathable" : {
+				"total_supply" : 15,
+				"suffocate_time" : 0,
+				"breathes_water" : true
+			},
+			"minecraft:health" : {
+				"value" : 20,
+				"max" : 20
+			},
+			"minecraft:equip_item" : {},
+			"minecraft:collision_box" : {
+				"width" : 0.72,
+				"height" : 2.01
+			},
+			"minecraft:attack" : {
+				"damage" : 4,
+				"effect_name" : "wither",
+				"effect_duration" : 10
+			},
+			"minecraft:loot" : {
+				"table" : "loot_tables/entities/wither_skeleton.json"
+			},
+			"minecraft:equipment" : {
+				"table" : "loot_tables/entities/wither_skeleton_gear.json"
+			},
+			"minecraft:movement" : {
+				"value" : 0.25
+			},
+			"minecraft:navigation.walk" : {
+				"is_amphibious" : true,
+				"avoid_sun" : true,
+				"avoid_water" : true
+			},
+			"minecraft:movement.basic" : {},
+			"minecraft:jump.static" : {},
+			"minecraft:can_climb" : {},
+			"minecraft:shareables" : {
+				"items" : [
+					{
+						"item" : "minecraft:netherite_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:stone_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:wooden_sword",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:wooden_shovel",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:stone_shovel",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:golden_shovel",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:iron_shovel",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:diamond_shovel",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:netherite_shovel",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:wooden_pickaxe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:stone_pickaxe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:golden_pickaxe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:iron_pickaxe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:diamond_pickaxe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:netherite_pickaxe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:wooden_axe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:stone_axe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:golden_axe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:iron_axe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:diamond_axe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:netherite_axe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:wooden_hoe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:stone_hoe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:golden_hoe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:iron_hoe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:diamond_hoe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:netherite_hoe",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:netherite_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:turtle_helmet",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 6
+					},
+					{
+						"item" : "minecraft:skull:0",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 7
+					},
+					{
+						"item" : "minecraft:skull:1",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 7
+					},
+					{
+						"item" : "minecraft:carved_pumpkin",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 7
+					},
+					{
+						"item" : "minecraft:netherite_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_chestplate",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:netherite_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_leggings",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					},
+					{
+						"item" : "minecraft:netherite_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 0
+					},
+					{
+						"item" : "minecraft:diamond_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 1
+					},
+					{
+						"item" : "minecraft:iron_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 2
+					},
+					{
+						"item" : "minecraft:chainmail_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 3
+					},
+					{
+						"item" : "minecraft:golden_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 4
+					},
+					{
+						"item" : "minecraft:leather_boots",
+						"want_amount" : 1,
+						"surplus_amount" : 1,
+						"priority" : 5
+					}
+				]
+			},
+			"minecraft:scale" : {
+				"value" : 1.2
+			},
+			"minecraft:fire_immune" : {},
+			"minecraft:despawn" : {
+				"despawn_from_distance" : {}
+			},
+			"minecraft:behavior.hurt_by_target" : {
+				"priority" : 1
+			},
+			"minecraft:behavior.nearest_attackable_target" : {
+				"priority" : 2,
+				"reselect_targets" : true,
+				"must_see" : true,
+				"entity_types" : [
+					{
+						"filters" : {
+							"test" : "is_family",
+							"subject" : "other",
+							"value" : "player"
+						},
+						"max_dist" : 16
+					},
+					{
+						"filters" : {
+							"all_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "piglin"
+								},
+								{
+									"test" : "is_difficulty",
+									"operator" : "!=",
+									"value" : "peaceful"
+								}
+							]
+						},
+						"max_dist" : 16
+					},
+					{
+						"filters" : {
+							"test" : "is_family",
+							"subject" : "other",
+							"value" : "irongolem"
+						},
+						"max_dist" : 16
+					},
+					{
+						"filters" : {
+							"all_of" : [
+								{
+									"test" : "is_family",
+									"subject" : "other",
+									"value" : "baby_turtle"
+								},
+								{
+									"test" : "in_water",
+									"subject" : "other",
+									"operator" : "!=",
+									"value" : true
+								}
+							]
+						},
+						"max_dist" : 16
+					}
+				]
+			},
+			"minecraft:behavior.equip_item" : {
+				"priority" : 3
+			},
+			"minecraft:behavior.melee_attack" : {
+				"priority" : 4,
+				"track_target" : true,
+				"speed_multiplier" : 1.25
+			},
+			"minecraft:behavior.pickup_items" : {
+				"priority" : 5,
+				"max_dist" : 3,
+				"goal_radius" : 2,
+				"speed_multiplier" : 1.0,
+				"pickup_based_on_chance" : true
+			},
+			"minecraft:behavior.random_stroll" : {
+				"priority" : 6,
+				"speed_multiplier" : 1
+			},
+			"minecraft:behavior.look_at_player" : {
+				"priority" : 7,
+				"look_distance" : 8
+			},
+			"minecraft:behavior.random_look_around" : {
+				"priority" : 8
+			},
+			"minecraft:type_family" : {
+				"family" : [ "wither", "monster", "undead", "skeleton", "mob" ]
+			},
+			"minecraft:physics" : {},
+			"minecraft:pushable" : {
+				"is_pushable" : true,
+				"is_pushable_by_piston" : true
+			},
+			"minecraft:conditional_bandwidth_optimization" : {}
+		},
+		"events" : {
+			"minecraft:entity_spawned" : {
+				"randomize" : [
+					{
+						"weight" : 9500,
+						"add" : {},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_blastoff" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_bullwark" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_cloaking" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_darkness" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_ender" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_ninja" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_poisonous" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_quicksand" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_sapper" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_sprint" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_storm" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_weakness" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 50,
+						"add" : {
+							"component_groups" : [ "elite_wither_skeleton", "elite_webber" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_blastoff" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_bullwark" ]
+						},
+						"remove" : {}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_cloaking" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_darkness" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_ender" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_ninja" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_poisonous" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_quicksand" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_sapper" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_sprint" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_storm" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_weakness" ]
+						}
+					},
+					{
+						"weight" : 25,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "ultra_wither_skeleton", "ultra_webber" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_blastoff" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_bullwark" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_cloaking" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_darkness" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_ender" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_ninja" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_poisonous" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_quicksand" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_sapper" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_sprint" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_storm" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_weakness" ]
+						}
+					},
+					{
+						"weight" : 5,
+						"remove" : {},
+						"add" : {
+							"component_groups" : [ "infernal_wither_skeleton", "infernal_webber" ]
+						}
+					}
+				]
+			},
+			"blastoff" : {
+				"run_command" : {
+					"command" : [ "effect @a [m=s,r=20] levitation 1 14" ]
+				}
+			},
+			"storm" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=20] ~~~ summon lightning_bolt" ]
+				}
+			},
+			"webber" : {
+				"run_command" : {
+					"command" : [ "execute @e [type=player,m=s,r=10] ~~~ fill ~~~ ~~~ air 0 replace web 0" ]
+				}
+			}
+		}
+	}
+}

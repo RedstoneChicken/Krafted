@@ -1,0 +1,18 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"identifier": "minecraft:salmon"
+		},
+		"components": {
+			"minecraft:use_duration": 16,
+			"minecraft:stacked_by_data": true,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "poor"
+			}
+		},
+		"events": {}
+	}
+}

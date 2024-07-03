@@ -1,0 +1,42 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "kna:starter_loot",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:timer":{
+        "looping": false,
+        "time": 0.05,
+        "time_down_event": {
+          "event": "kna:die",
+          "target": "self"
+        }
+      },
+      "minecraft:loot":{
+        "table": "loot_tables/starter_loot.json"
+      },
+      "minecraft:type_family":{
+        "family":["dummy"]
+      },
+      "minecraft:damage_sensor":{
+        "triggers":{
+          "cause":"all",
+          "deals_damage":false
+        }
+      }
+    },
+    "events": {
+      "kna:die": {
+        "run_command":{
+          "command":[
+            "kill @s"
+          ]
+        }
+      }
+    }
+  }
+}

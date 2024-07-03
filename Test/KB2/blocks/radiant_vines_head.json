@@ -1,0 +1,69 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:radiant_vines_head"
+    },
+    "components": {
+        "minecraft:creative_category": {
+            "group": "itemGroup.name.commands",
+            "category": "commands"
+        },
+    	  "minecraft:destroy_time": 0.0,
+        "minecraft:block_light_emission": 0.2,
+        "minecraft:block_light_absorption": 0,
+        "minecraft:geometry": "geometry.cross",
+        "minecraft:loot": "loot_tables/radiant_vines.json",
+        "minecraft:placement_filter": {
+            "conditions": [
+                {
+                    "allowed_faces": [ "up" ]
+                }
+            ]
+        },
+        "minecraft:pick_collision": {
+            "origin":  [-3, 0, -3],
+            "size":    [6, 14, 6]
+        },
+        "minecraft:entity_collision": false,
+        "minecraft:on_interact":{
+            "condition": "query.get_equipped_item_name('main_hand') == 'radiant_vines_item' && (query.block_face == 1.0)",
+            "event": "honkit26113:on_interact"
+        },
+        "minecraft:on_player_destroyed": {
+        	"event": "honkit26113:on_player_destroyed"
+        },
+      	"minecraft:material_instances" : {
+        	"*": {
+          		"texture": "radiant_vines_head",
+          		"render_method": "alpha_test",
+              "ambient_occlusion": false,
+              "face_dimming": false
+        	}
+      	}
+    },
+    "events": {
+      "honkit26113:on_player_destroyed": {
+        "run_command": {
+          "command": "fill ~ ~-1 ~ ~ ~-1 ~ honkit26113:radiant_vines_head 0 replace honkit26113:radiant_vines_body"
+        }
+      },
+      "honkit26113:on_interact": {
+      	"sequence": [
+      		{
+      			"run_command": {
+      				"command": [
+      					"fill ~ ~1 ~ ~ ~1 ~ honkit26113:radiant_vines_head 0 replace air",
+      					"fill ~ ~ ~ ~ ~ ~ honkit26113:radiant_vines_body 0 replace honkit26113:radiant_vines_head"
+      				]
+      			}
+      		},
+      		{
+      			"decrement_stack": {}
+      		}
+      	]
+      }
+    }
+  }
+}

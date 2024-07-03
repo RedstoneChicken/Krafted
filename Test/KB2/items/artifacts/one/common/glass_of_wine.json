@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "kna:glass_of_wine",
+			"category": "equipment"
+    },
+    
+    "components": {
+			"minecraft:use_animation": "drink",
+      "minecraft:hand_equipped": false,
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 1,
+      "minecraft:use_duration": 0.2,
+			"minecraft:icon": {
+				"texture": "glass_of_wine"
+			},
+			"minecraft:display_name": {
+			 "value":  "Glass of Wine\n§8Common\n§7Cooldown: 58\nLevel: 1"
+			},
+			"minecraft:cooldown": {
+				"category": "glass_of_wine",
+				"duration": 58
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+   "minecraft:on_use": {
+				"on_use": {
+					"event": "effect",
+					"target": "self"
+				 }
+			}
+    },
+    "events": {
+      "effect": {
+        "run_command": {
+          "command": [
+         	 	"playsound random.drink @a[r=10]",
+            "effect @s strength 18 3",
+            "effect @s nausea 18 50 ",
+            "effect @s resistance 18 5"
+          
+          ],
+          "target": "holder"
+        }
+      }
+    }
+  }
+}

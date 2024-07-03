@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "crystal_mullet_to_lapis_lazuli"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:crystal_mullet"
+      }
+    ],
+    "result": {
+      "item": "minecraft:dye",
+      "count": 5,
+      "data": 4
+    }
+  }
+}

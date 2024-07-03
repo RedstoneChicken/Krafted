@@ -1,0 +1,47 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "minecraft:blue_forest_rock3_feature_rule",
+            "places_feature": "minecraft:blue_forest_rock3_feature_mcstructure"
+        },
+        "conditions": {
+            "placement_pass": "underground_pass",
+            "minecraft:biome_filter": [
+                {
+                    "all_of": [
+                        {
+                            "any_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "==",
+                                    "value": "warped_forest"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 1,
+            "scatter_chance": 40,
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    16
+                ]
+            },
+            "y": "variable.random = (Math.random(35, 100)); return variable.random > (query.above_top_solid(variable.worldx, variable.worldz) - 6) ? -999 : variable.random;",
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    16
+                ]
+            }
+        }
+    }
+}
+// JSON exported by MACHINE_BUILDER'S Feature Rule Generator (youtube.com/machinebuilder) DO NOT REMOVE THIS WATERMARK

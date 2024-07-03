@@ -1,0 +1,13 @@
+/*{
+  "format_version": "1.13.0",
+  "minecraft:sequence_feature": {
+    "description": {
+      "identifier": "honkit26113:nether_lava_layer_sequence_feature"
+    },
+    "features": [
+      "honkit26113:nether_lava_layer_feature",
+      "honkit26113:nether_lava_layer_snap_to_floor_feature",
+      "honkit26113:nether_lava_layer_replace_water_feature"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "recipe:nether_ruby_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"A",
+			"A",
+			"B"
+		],
+		"key": {
+			"A": {
+				"item": "caf:nether_ruby"
+			},
+			"B": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "caf:nether_ruby_sword"
+			}
+		]
+	}
+}

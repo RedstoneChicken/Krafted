@@ -1,0 +1,28 @@
+//bridge-file-version: #5
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:orange_sapling"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:sapling",
+				"count": 1
+			},
+			{
+				"item": "strat:orange",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "strat:orange_sapling_item",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:peach_terracotta"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "TTT",
+      "TDT",
+      "TTT"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:hardened_clay"
+      },
+      "D": {
+        "item": "cav:peach_dye"
+      }
+    },
+    "result": {
+      "item": "cav:peach_terracotta",
+      "count": 8
+    }
+  }
+}

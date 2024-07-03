@@ -1,0 +1,38 @@
+//bridge-file-version: #15
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:smelting_copper_tough_binding"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#~",
+			"~~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:copper_tough_binding"
+			},
+			"~": {
+				"item": "minecraft:bucket"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_copper_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_copper_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_copper_bucket",
+				"count": 1
+			}
+		]
+	}
+}

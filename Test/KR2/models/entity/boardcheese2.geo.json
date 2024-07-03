@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.boardcheese2",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [1, 2, -4], "size": [3, 4, 8], "pivot": [0, 0, 0], "rotation": [0, 0, -92.5], "uv": [0, 23]},
+						{"origin": [0, 1, -4], "size": [3, 4, 8], "pivot": [0, 0, 0], "rotation": [0, 0, -30], "uv": [14, 15]},
+						{"origin": [3, -3, -4], "size": [3, 4, 8], "pivot": [0, 0, 0], "rotation": [0, 0, -55], "uv": [0, 11]}
+					]
+				},
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-7, 0, -5], "size": [14, 1, 10], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

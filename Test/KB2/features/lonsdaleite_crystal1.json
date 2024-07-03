@@ -1,0 +1,15 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "end:lonsdaleite_crystal1"
+		},
+		"structure_name": "end:lonsdaleite_crystal1",
+		"facing_direction": "random",
+		"adjustment_radius": 0,
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:short_anemone_into_normal_anemone"},"tags":["crafting_table"],"ingredients":[{"item":"ff:anemone_short_item"}],"result":{"item":"ff:anemone_item","count":2}}}

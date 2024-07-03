@@ -1,0 +1,60 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:drowned_shards",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.artifacts"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "drowned_shards"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value":  "Drowned Shards\n§2Uncommon\n§7Cooldown: 50\nLevel: 1"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:cooldown": {
+				"category": "drowned_shards",
+				"duration": 50
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "use",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"use": {
+			 "run_command": {
+          "command": [
+          	"playsound random.splash @a[r=10]",
+            "effect @s water_breathing 25 2 true",
+            "effect @s night_vision 25 1 true",
+            "execute @s ~~~ particle minecraft:sponge_absorb_water_particle ~~~", 
+            "execute @s ~~~ particle minecraft:sponge_absorb_water_particle ~~~"
+            ],
+          "target": "holder"
+        },
+			 "swing":{
+            },
+    "shoot":{
+     "launch_power":1,
+     "angle_offset":"query.cardinal_facing",
+     "projectile":"thrown_trident"
+   },
+			 "damage": {
+					"type": "trident",
+					"amount": 1
+				}
+			}
+		}
+	}
+}		

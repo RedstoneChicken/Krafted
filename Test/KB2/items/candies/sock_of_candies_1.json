@@ -1,0 +1,136 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "kna:sock_of_candies"
+		},
+		"components": {
+			"minecraft:use_animation": "drink",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.starter"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:use_duration": 0,
+			"minecraft:icon": {
+				"texture": "sock_of_candies"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+			 "value": "§4Sock of Candies §7(§11/4§7)"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "give",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"give": {
+						"randomize": [
+						 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:candy",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+						 },
+							{
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:candy2",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+							},
+							{
+							"weight": 1,
+							"run_command": {
+								"command": [
+								 "give @s kna:lollipop",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+								 "give @s kna:lollipop2",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:lollipop3",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+						 },
+						 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:mint",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+				 },
+				 	 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:caramels",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+				 },
+						 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:chocolate",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+				 },
+				 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:chocolate_bar",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+				 },
+				 {
+							"weight": 1,
+							"run_command": {
+								"command": [
+									"give @s kna:golden_chocolate",
+									"replaceitem entity @s slot.weapon.mainhand 0 leather_boots 1"
+								],
+								"target": "self"
+							}
+				 }
+				]
+			}
+		}
+	}
+}

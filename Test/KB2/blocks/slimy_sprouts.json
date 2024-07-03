@@ -1,0 +1,64 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:slimy_sprouts",
+      "category": "none"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "group": "itemGroup.name.none",
+        "category": "none"
+      },
+    	"minecraft:destroy_time": 0.0,
+      "minecraft:block_light_emission": 0.2,
+      "minecraft:block_light_absorption": 0.0,
+      "minecraft:geometry": "geometry.cross",
+      "minecraft:breathability": "air",
+      "minecraft:loot": "loot_tables/no_drops.json",
+      "minecraft:on_player_destroyed": {
+        "condition": "query.get_equipped_item_name('main_hand') == 'shears'",
+        "event": "honkit26113:broken"
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "block_filter": [ 
+              "minecraft:podzol",
+              "minecraft:dirt",
+              "minecraft:mycelium",
+              "minecraft:grass",
+              "minecraft:dirt",
+              "minecraft:dirt_with_roots",
+              "minecraft:deepslate",
+              "minecraft:stone",
+              "minecraft:slime",
+              "honkit26113:slimy_stone",
+              "honkit26113:slimy_deepslate" 
+            ],
+            "allowed_faces": [ "up" ]
+          }
+        ]
+      },
+      "minecraft:pick_collision": {
+        "origin":  [-5.5, 0, -5.5],
+        "size":    [11, 4, 11]
+      },
+      "minecraft:entity_collision": false,
+      "minecraft:material_instances" : {
+        "*": {
+          "texture": "slimy_sprouts",
+          "render_method": "alpha_test"
+        }
+      }
+    },
+    "events": {
+      "honkit26113:broken": {
+        "spawn_loot": {
+          "table": "loot_tables/slimy_sprouts.json"
+        }
+      }
+    }
+  }
+}

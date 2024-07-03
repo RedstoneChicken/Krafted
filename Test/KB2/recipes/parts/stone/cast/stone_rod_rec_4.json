@@ -1,0 +1,33 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:stone_rod_rec_4"
+		},
+		"tags": [
+			"part_builder"
+		],
+		"pattern": [
+			"#~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:tool_rod_cast"
+			},
+			"~": {
+				"item": "minecraft:cobblestone"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:stone_tool_rod",
+				"count": 1
+			},
+			{
+				"item": "strat:tool_rod_cast",
+				"count": 1
+			}
+		]
+	}
+}

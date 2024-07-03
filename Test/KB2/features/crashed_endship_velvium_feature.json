@@ -1,0 +1,35 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.13.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "korbon:crashed_endship_velvium_feature"
+		},
+		"structure_name": "mystructure:crashed_endship_velvium",
+		"adjustment_radius": 0,
+		"facing_direction": "north",
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_whitelist": [
+					"minecraft:air",
+					"korbon:velvium_grass",
+					"korbon:void_turf_grass_short",
+					"korbon:velvium_vine_body",
+					"korbon:velvium_vine_top",
+					"korbon:velvium_vine_bulb",
+					"korbon:velvium",
+					"korbon:chorus_leaves_pink",
+					"korbon:chorus_log",
+					"korbon:chorus_wood",
+					"korbon:void_sprouts",
+					"korbon:verdanite_velvium",
+					"korbon:verdanite",
+					"korbon:smooth_endstone",
+					"korbon:pread",
+					"korbon:pread_tall"
+				]
+			}
+		}
+	}
+}

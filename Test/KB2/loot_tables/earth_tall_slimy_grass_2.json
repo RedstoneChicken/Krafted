@@ -1,0 +1,17 @@
+//bridge-file-version: #5
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 1,
+				"max": 1
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:earth_tall_slimy_grass_item"
+				}
+			]
+		}
+	]
+}

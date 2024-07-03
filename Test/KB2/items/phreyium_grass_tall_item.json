@@ -1,0 +1,27 @@
+//bridge-file-version: #23
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "korbon:phreyium_grass_tall_item",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:block_placer": {
+				"block": "korbon:phreyium_grass_tall",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "phreyium_grass_tall_item"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.nature"
+			},
+			"minecraft:display_name": {
+				"value": "item.korbon:phreyium_grass_tall_item.name"
+			}
+		},
+		"events": {}
+	}
+}

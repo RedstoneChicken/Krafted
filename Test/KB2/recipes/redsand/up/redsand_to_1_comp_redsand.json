@@ -1,0 +1,28 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "cc:redsand_to_compressed_redsand"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"XXX",
+			"XXX"
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:sand",
+				"data": 1
+			}
+		},
+		"result": [
+			{
+				"item": "cc:compressed_redsand",
+				"count": 1
+			}
+		]
+	}
+}

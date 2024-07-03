@@ -1,0 +1,51 @@
+{
+   "format_version":"1.16.100",
+   "minecraft:item":{
+      "description":{
+         "identifier":"kna:magma_gloves",
+         "category":"equipment"
+      },
+      "components":{
+         "minecraft:use_animation":"drink",
+         "minecraft:hand_equipped":false,
+         "minecraft:stacked_by_data":true,
+         "minecraft:max_stack_size":1,
+         "minecraft:use_duration":0.2,
+         "minecraft:icon":{
+            "texture":"magma_gloves"
+         },
+         "minecraft:display_name":{
+            "value":"§bMagma Gloves\n§3Legendary\n§7Cooldown: 6\nLevel: 1"
+         },
+         "minecraft:cooldown":{
+            "category":"magma_gloves",
+            "duration":6
+         },
+         "minecraft:creative_category":{
+            "parent":"itemGroup.name.artifacts"
+         },
+         "minecraft:foil":true,
+         "minecraft:on_use":{
+            "on_use":{
+               "event":"use",
+               "target":"self"
+            }
+         }
+      },
+      "events":{
+         "use":{
+            "run_command":{
+               "command":[
+                  "playsound ambient.weather.lightning.impact @a[r=25]",
+                  "tag @s add user_mg",
+                  "effect @s fire_resistance 8 2 true",
+                  "effect @s resistance 1 5 true",
+                  "execute @e[tag=!user_mg,r=10] ~~~ summon kna:magma_spike",
+                  "tag @s remove user_mg"
+               ],
+               "target":"holder"
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:atlantic_herring",
+      "category": "Nature"
+    },
+    "components": {
+      "minecraft:icon": "atlantic_herring",
+      "minecraft:use_animation": "eat",
+      "minecraft:render_offsets": "apple"
+    }
+  }
+}

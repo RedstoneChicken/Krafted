@@ -1,0 +1,50 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ff:corrupted_rose_bouquet_item",
+      "category": "nature"
+    },
+    "components": {
+      "minecraft:block_placer": {
+        "block": "ff:corrupted_rose_bouquet",
+        "use_on": [
+          "grass",
+          "dirt",
+          "podzol",
+          "moss_block",
+          "dirt_with_roots",
+          "crimson_nylium",
+          "warped_nylium",
+          "netherrack",
+          "soul_sand",
+          "soul_soil",
+          "magma"
+        ]
+      },
+      "minecraft:icon": {
+        "texture": "corrupted_rose_bouquet"
+      },
+      "minecraft:creative_category": {
+        "parent": "itemGroup.name.flower"
+      },
+      "tag:flower": {},
+      "minecraft:max_stack_size": 64,
+      "minecraft:stacked_by_data": true,
+      "minecraft:on_use_on": {
+        "on_use_on": {
+          "event": "sound"
+        }
+      }
+    },
+    "events": {
+      "sound": {
+        "run_command": {
+          "command": [
+            "playsound dig.grass @a[r=5] ~ ~ ~ 0.4 1.0"
+          ]
+        }
+      }
+    }
+  }
+}

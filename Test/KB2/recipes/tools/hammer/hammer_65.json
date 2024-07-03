@@ -1,0 +1,35 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:hammer_65"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			"~",
+			" #",
+			"o ~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:copper_hammer_head"
+			},
+			"~": {
+				"item": "strat:copper_large_plate"
+			},
+			"o": {
+				"item": "strat:copper_tough_tool_rod"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:hammer_65",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

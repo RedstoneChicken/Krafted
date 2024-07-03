@@ -1,0 +1,62 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cook_book3",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:foil": false,
+			"minecraft:stacked_by_data": false,
+			"minecraft:icon": {
+				"texture": "cook_book"
+			},
+			"minecraft:creative_category": {
+				"parent": "commands"
+			},
+			"minecraft:display_name": {
+				"value": "Cook Book"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "used"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "strat_book",
+				"duration": 0.5
+			}
+		},
+		"events": {
+			"used": {
+				"sequence": [
+					{
+						"condition": "query.is_sneaking == 0.0",
+						"transform_item": {
+							"transform": "strat:cook_book4"
+						},
+						"run_command": {
+							"command": [
+								"playsound item.book.page_turn @a ~~~"
+							]
+						}
+					},
+					{
+						"condition": "query.is_sneaking == 1.0",
+						"swing": {},
+						"transform_item": {
+							"transform": "strat:cook_book4"
+						},
+						"run_command": {
+							"command": [
+								"playsound item.book.page_turn @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

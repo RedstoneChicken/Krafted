@@ -1,0 +1,40 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:milk_and_cookies",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 2.4,
+			"minecraft:food": {
+				"nutrition": 9,
+				"saturation_modifier": "good",
+				"on_consume": {
+					"event": "consume"
+				},
+				"using_converts_to": "strat:dirty_paper_plate"
+			},
+			"minecraft:icon": {
+				"texture": "milk_and_cookies"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:max_stack_size": 16
+		},
+		"events": {
+			"consume": {
+				"sequence": [
+					{
+						"remove_mob_effect": {
+							"effect": "all"
+						}
+					}
+				]
+			}
+		}
+	}
+}

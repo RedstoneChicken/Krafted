@@ -1,0 +1,1 @@
+{"format_version":1.12,"minecraft:recipe_shapeless":{"description":{"identifier":"ff:tall_violet_roots_into_short_violet_roots"},"tags":["crafting_table"],"ingredients":[{"item":"ff:violet_roots_tall_item"}],"result":{"item":"ff:violet_roots_item","count":2}}}

@@ -1,0 +1,219 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "azc:nether_star_hook",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.15,
+        "height": 0.15
+      },
+      "minecraft:projectile": {
+        "should_bounce": false,
+        "liquid_inertia": 0,
+        "on_hit": {
+          "stick_in_ground": {}
+        }
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 7,
+          "use_motion_prediction_hints": true
+        }
+      },
+      "minecraft:timer": {
+        "time": [4, 9],
+        "time_down_event": {
+          "event": "reel_fish"
+        },
+        "randomInterval": true,
+        "looping": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 10,
+        "max": 10
+      },
+      "minecraft:health": {
+        "value": 1
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/gameplay/fishing_otherworldly.json"
+      },
+      "minecraft:floats_in_liquid": {},
+      "minecraft:buoyant": {
+        "apply_gravity": false,
+        "base_buoyancy": 1.0,
+        "big_wave_probability": 0.03,
+        "liquid_blocks": ["minecraft:water", "minecraft:flowing_water"],
+        "big_wave_speed": 10.0,
+        "simulate_waves": true,
+        "drag_down_on_buoyancy_removed": 0.0
+      },
+      "minecraft:navigation.float": {
+        "can_sink": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false,
+            "damage_modifier": 0,
+            "damage_multiplier": 0
+          }
+        ]
+      },
+      "minecraft:despawn": {
+        "filters": {
+          "any_of": [
+            {
+              "test": "on_ground",
+              "subject": "self"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "reel_fish": {
+        "run_command": {
+          "command": [
+            "particle minecraft:water_wake_particle ~~1~",
+            "playsound random.splash @a [r=10] ~~~ 0.5",
+            "execute @p ~~~ tp @e [type=azc:nether_star_hook,c=1] @s",
+            "execute @p ~~~ xp 3 @s",
+            "kill @s"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "jungle"
+            },
+            "add": {
+              "component_groups": ["loot_jungle"]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "ocean"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "not",
+                  "value": "cold"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": ["loot_saltwater"]
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "savanna"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": ["loot_arid"]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "ocean"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "cold"
+                }
+              ]
+            },
+            "add": {
+              "component_groups": ["loot_arctic"]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "swamp"
+            },
+            "add": {
+              "component_groups": ["loot_brackish"]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_biome_tag",
+              "value": "mooshroom_island"
+            },
+            "add": {
+              "component_groups": ["loot_mooshroom"]
+            }
+          }
+        ]
+      }
+    },
+    "component_groups": {
+      "loot_jungle": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/jungle_fishing_otherworldly.json"
+        }
+      },
+      "loot_saltwater": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/saltwater_fishing_otherworldly.json"
+        }
+      },
+      "loot_arid": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/arid_fishing_otherworldly.json"
+        }
+      },
+      "loot_arctic": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/arctic_fishing_otherworldly.json"
+        }
+      },
+      "loot_brackish": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/brackish_fishing_otherworldly.json"
+        }
+      },
+      "loot_mooshroom": {
+        "minecraft:loot": {
+          "table": "loot_tables/gameplay/fishing/mooshroom_fish_otherworldly.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:gypsum_feature"
+    },
+    "count": 30,
+    "replace_rules": [
+      {
+        "places_block": "cav:gypsum",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "stone"
+            }
+          }
+        ]
+      },
+      {
+        "places_block": "cav:gypsum",
+        "may_replace": [
+          "minecraft:sandstone"
+        ]
+      },
+      {
+        "places_block": "cav:gypsum",
+        "may_replace": [
+          "minecraft:red_sandstone"
+        ]
+      }
+    ]
+  }
+}

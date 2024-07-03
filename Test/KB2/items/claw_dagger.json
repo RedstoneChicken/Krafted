@@ -1,0 +1,23 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "end:claw_dagger",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "claw_dagger"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:damage": 5,
+			"minecraft:weapon": {},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			}
+		},
+		"events": {}
+	}
+}

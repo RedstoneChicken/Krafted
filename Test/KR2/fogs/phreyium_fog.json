@@ -1,0 +1,23 @@
+//bridge-file-version: #13
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "korbon:phreyium_fog"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 0,
+				"fog_end": 132,
+				"fog_color": "#14211D",
+				"render_distance_type": "fixed"
+			},
+			"water": {
+				"fog_start": 0,
+				"fog_end": 15,
+				"fog_color": "#2A473E",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}

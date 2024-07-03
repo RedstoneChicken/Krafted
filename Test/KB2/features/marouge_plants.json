@@ -1,0 +1,27 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "nether:marouge_plants"
+		},
+		"features": [
+			[
+				"nether:marouge_roots_feature",
+				4
+			],
+			[
+				"nether:marouge_fungus_feature",
+				2
+			],
+			[
+				"nether:poison_eye_single_block",
+				2
+			],
+			[
+				"nether:blue_nethershroom_feature",
+				2
+			]
+		]
+	}
+}

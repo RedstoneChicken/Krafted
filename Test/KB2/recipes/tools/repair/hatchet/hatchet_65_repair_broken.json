@@ -1,0 +1,29 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:hatchet_65_repair_broken"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:hatchet_65_broken",
+				"count": 1
+			},
+			{
+				"item": "minecraft:copper_ingot",
+				"count": 2
+			}
+		],
+		"result": [
+			{
+				"item": "strat:hatchet_65",
+				"count": 1
+			}
+		],
+		"priority": 2
+	}
+}

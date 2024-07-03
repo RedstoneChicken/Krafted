@@ -1,0 +1,26 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tool_rod_pattern",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Tool Rod Pattern\n§7Material Cost: 1§r"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_tool rod pattern"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:tool_rod_pattern_block",
+				"use_block_description": true
+			}
+		},
+		"events": {}
+	}
+}

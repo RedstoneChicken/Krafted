@@ -1,0 +1,71 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:anchortreevine1"
+		},
+		"components": {
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 0.25,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "anchortreevine1",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.cb",
+			"minecraft:on_interact": {
+				"event": "caf:grow_mealramdom",
+				"condition": "query.get_equipped_item_name =='bone_meal'"
+			},
+			"minecraft:entity_collision": false
+		},
+		"events": {
+			"caf:grow_meal": {
+				"set_block_at_pos": {
+					"block_type": "caf:anchortreevine1",
+					"block_offset": [
+						0,
+						-1,
+						0
+					]
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow_meal1": {
+				"set_block_at_pos": {
+					"block_type": "caf:anchortreevine2",
+					"block_offset": [
+						0,
+						-1,
+						0
+					]
+				},
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:grow_mealramdom": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:grow_meal"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:grow_meal1"
+						}
+					}
+				]
+			}
+		}
+	}
+}

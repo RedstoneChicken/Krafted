@@ -1,0 +1,21 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:wooden_hammer_head"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Wooden Hammer Head"
+			},
+			"minecraft:icon": {
+				"texture": "wooden_hammer_head"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

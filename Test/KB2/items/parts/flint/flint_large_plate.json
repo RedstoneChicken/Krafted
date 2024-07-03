@@ -1,0 +1,21 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:flint_large_plate"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Flint Large Plate"
+			},
+			"minecraft:icon": {
+				"texture": "flint_large_plate"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

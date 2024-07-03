@@ -1,0 +1,132 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:giant_mold_top"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.giant_mold_top",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "giantmoldtop",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:on_interact": {
+				"condition": "query.get_equipped_item_name =='bone_meal'",
+				"event": "caf:grow01"
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-1.5,
+					0,
+					-1.5
+				],
+				"size": [
+					6,
+					16,
+					6
+				]
+			},
+			"minecraft:block_light_absorption": 0,
+			"minecraft:ticking": {
+				"range": [
+					1,
+					5
+				],
+				"looping": true,
+				"on_tick": {
+					"event": "caf:mushroom_forest_biome"
+				}
+			}
+		},
+		"events": {
+			"caf:grow01": {
+				"run_command": {
+					"command": [
+						"setblock ~ ~ ~ caf:mold_stem",
+						"setblock ~ ~1 ~ caf:giant_mold_top",
+						"particle minecraft:crop_growth_emitter ~~~"
+					]
+				}
+			},
+			"caf:ambient01": {
+				"run_command": {
+					"command": [
+						"particle caf:moldambientparticle ~1 ~ ~"
+					]
+				}
+			},
+			"caf:ambient02": {
+				"run_command": {
+					"command": [
+						"particle caf:moldambientparticle ~-1 ~ ~"
+					]
+				}
+			},
+			"caf:ambient03": {
+				"run_command": {
+					"command": [
+						"particle caf:moldambientparticle ~ ~ ~1"
+					]
+				}
+			},
+			"caf:ambient04": {
+				"run_command": {
+					"command": [
+						"particle caf:moldambientparticle ~ ~ ~-1"
+					]
+				}
+			},
+			"caf:ambient05": {
+				"run_command": {
+					"command": [
+						"particle caf:moldambientparticle ~ ~1 ~"
+					]
+				}
+			},
+			"caf:ambient06": {
+				"run_command": {
+					"command": [
+						"particle caf:moldambientparticle ~ ~-1 ~"
+					]
+				}
+			},
+			"caf:mushroom_forest_biome": {
+				"randomize": [
+					{
+						"trigger": {
+							"event": "caf:ambient01"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:ambient02"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:ambient03"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:ambient04"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:ambient05"
+						}
+					},
+					{
+						"trigger": {
+							"event": "caf:ambient06"
+						}
+					}
+				]
+			}
+		}
+	}
+}

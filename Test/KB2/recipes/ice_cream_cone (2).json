@@ -1,0 +1,30 @@
+//bridge-file-version: #5
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:ice_cream_cone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"# #",
+			" #"
+		],
+		"key": {
+			"#": {
+				"item": "strat:flour"
+			},
+			"~": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:ice_cream_cone",
+				"count": 2
+			}
+		]
+	}
+}

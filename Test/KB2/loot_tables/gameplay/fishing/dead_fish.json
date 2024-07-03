@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "adv:green_jellyfish",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "adv:bonefish",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:spookyfin",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "adv:cursed_koi",
+          "weight": 13
+        }
+      ]
+    }
+  ]
+}

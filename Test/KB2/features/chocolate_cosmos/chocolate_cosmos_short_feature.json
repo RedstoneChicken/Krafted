@@ -1,0 +1,1 @@
+{"format_version":"1.13.0","minecraft:single_block_feature":{"description":{"identifier":"ff:chocolate_cosmos/chocolate_cosmos_short_feature"},"places_block":{"name":"ff:chocolate_cosmos_short"},"enforce_survivability_rules":true,"enforce_placement_rules":true,"may_replace":["minecraft:air"]}}

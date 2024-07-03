@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_synodontis_stone"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:stone_fillet_knife"
+      },
+      "B": {
+        "item": "azc:synodontis"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi"
+      },
+      {
+        "item": "azc:stone_fillet_knife"
+      }
+    ]
+  }
+}

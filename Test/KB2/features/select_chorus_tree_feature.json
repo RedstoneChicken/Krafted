@@ -1,0 +1,23 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.13.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "korbon:select_chorus_tree_feature"
+		},
+		"features": [
+			[
+				"korbon:chorus_tree_big_feature",
+				1
+			],
+			[
+				"korbon:chorus_tree_fancy_feature",
+				3
+			],
+			[
+				"korbon:chorus_tree_flowering_feature",
+				2
+			]
+		]
+	}
+}

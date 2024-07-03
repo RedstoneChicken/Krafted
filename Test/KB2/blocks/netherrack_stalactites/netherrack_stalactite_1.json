@@ -1,0 +1,33 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:netherrack_stalactite_1"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.5,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "alpha_test",
+					"texture": "netherrackstalactite"
+				}
+			},
+			"minecraft:geometry": "geometry.stalagmite_1",
+			"minecraft:entity_collision": {
+				"size": [
+					4,
+					16,
+					4
+				],
+				"origin": [
+					-2,
+					0,
+					-2
+				]
+			}
+		},
+		"events": {}
+	}
+}

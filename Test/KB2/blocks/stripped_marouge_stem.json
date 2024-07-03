@@ -1,0 +1,86 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:stripped_marouge_stem",
+			"properties": {
+				"wiki:facing_direction": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:facing_direction') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:facing_direction') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:facing_direction') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						90
+					]
+				}
+			}
+		],
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "stripped_marouge_stem_side",
+					"render_method": "opaque",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				},
+				"up": {
+					"texture": "stripped_marouge_stem",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				},
+				"down": {
+					"texture": "stripped_marouge_stem",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:destroy_time": 3,
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+			},
+			"minecraft:on_player_placing": {
+				"event": "wiki:set_facing_direction"
+			},
+			"minecraft:unit_cube": {}
+		},
+		"events": {
+			"wiki:set_facing_direction": {
+				"set_block_property": {
+					"wiki:facing_direction": "math.floor( query.block_face / 2.0 )"
+				}
+			}
+		}
+	}
+}

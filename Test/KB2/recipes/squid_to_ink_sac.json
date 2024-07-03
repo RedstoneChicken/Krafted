@@ -1,0 +1,21 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "squid_to_ink_sac"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:squid"
+      }
+    ],
+    "result": {
+      "item": "minecraft:dye",
+      "count": 5,
+      "data": 0
+    }
+  }
+}

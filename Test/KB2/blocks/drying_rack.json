@@ -1,0 +1,1787 @@
+//bridge-file-version: #29
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:drying_rack",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:rack_holder": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:rack_holder2": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				],
+				"strat:rack_holder3": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:geometry": "geometry.rack",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "strat_drying rack",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:loot": "loot_tables/drying_rack.json",
+			"minecraft:on_interact": {
+				"event": "strat:rack"
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					12,
+					4
+				],
+				"size": [
+					16,
+					16,
+					4
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					12,
+					4
+				],
+				"size": [
+					16,
+					16,
+					4
+				]
+			},
+			"minecraft:block_light_filter": 0,
+			"tag:wood": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"strat:rack": {
+				"sequence": [
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'rotten_flesh' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 1
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'monster_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 2
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'beef' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 3
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'beef_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 4
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'porkchop' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 5
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'bacon_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 6
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'chicken' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 7
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'chicken_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 8
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'mutton' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 9
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'mutton_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 10
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'rabbit' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 11
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'rabbit_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 12
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cod' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 13
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'fish_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 14
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'salmon' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 1
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'salmon_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 2
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'tropical_fish' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 3
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'tropical_fish_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 4
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'pufferfish' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 5
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'fugu_jerky' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 6
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'leather' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 7
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_beef' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 8
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_porkchop' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 9
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_chicken' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 10
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_mutton' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 11
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_rabbit' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 12
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_cod' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 13
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'cooked_salmon' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 14
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'clay_ball' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 1
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'dried_brick' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 2
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'clay' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 3
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'hardened_clay' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 4
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'slime_ball' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 5
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'gelatinous_slime_drop' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 6
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'coagulated_blood' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 7
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'coagulated_blood_drop' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 8
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'sky_slime_ball' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 9
+						},
+						"decrement_stack": {}
+					},
+					{
+						"condition": "query.get_equipped_item_name('main_hand') == 'sky_slime_drop' && query.block_property('strat:rack_holder') == 0",
+						"set_block_property": {
+							"strat:rack_holder": 15,
+							"strat:rack_holder2": 15,
+							"strat:rack_holder3": 10
+						},
+						"decrement_stack": {}
+					}
+				]
+			},
+			"strat:derack": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:rack_holder') == 1",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/rotten_flesh.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 2",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/monster_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 3",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_beef.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 4",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/beef_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 5",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_porkchop.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 6",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/bacon_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 7",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_chicken.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 8",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/chicken_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 9",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_mutton.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 10",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/mutton_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 11",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_rabbit.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 12",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/rabbit_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 13",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_cod.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 14",
+						"set_block_property": {
+							"strat:rack_holder": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/fish_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 1",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/raw_salmon.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 2",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/salmon_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 3",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/tropical_fish.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 4",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/tropical_fish_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 5",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/pufferfish.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 6",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/fugu_jerky.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 7",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/leather.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 8",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_beef.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 9",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_porkchop.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 10",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_chicken.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 11",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_mutton.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 12",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_rabbit.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 13",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_cod.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 14",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cooked_salmon.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 1",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clay_ball.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 2",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/dried_brick.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 3",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clay.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 4",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/hardened_clay.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 5",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/slime_ball.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 6",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/gelatinous_slime_drop.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 7",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/coagulated_blood.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 8",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/coagulated_blood_drop.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 9",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/sky_slime_ball.json"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 10",
+						"set_block_property": {
+							"strat:rack_holder": 0,
+							"strat:rack_holder2": 0,
+							"strat:rack_holder3": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/sky_slime_drop.json"
+						}
+					}
+				]
+			},
+			"strat:transform": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:rack_holder') == 1",
+						"set_block_property": {
+							"strat:rack_holder": 2
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 3",
+						"set_block_property": {
+							"strat:rack_holder": 4
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 5",
+						"set_block_property": {
+							"strat:rack_holder": 6
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 7",
+						"set_block_property": {
+							"strat:rack_holder": 8
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 9",
+						"set_block_property": {
+							"strat:rack_holder": 10
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 11",
+						"set_block_property": {
+							"strat:rack_holder": 12
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder') == 13",
+						"set_block_property": {
+							"strat:rack_holder": 14
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 1",
+						"set_block_property": {
+							"strat:rack_holder2": 2
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 3",
+						"set_block_property": {
+							"strat:rack_holder2": 4
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 5",
+						"set_block_property": {
+							"strat:rack_holder2": 6
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 8",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 9",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 10",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 11",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 12",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 13",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder2') == 14",
+						"set_block_property": {
+							"strat:rack_holder2": 7
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 1",
+						"set_block_property": {
+							"strat:rack_holder3": 2
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 3",
+						"set_block_property": {
+							"strat:rack_holder3": 4
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 5",
+						"set_block_property": {
+							"strat:rack_holder3": 6
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 7",
+						"set_block_property": {
+							"strat:rack_holder3": 8
+						}
+					},
+					{
+						"condition": "query.block_property('strat:rack_holder3') == 9",
+						"set_block_property": {
+							"strat:rack_holder3": 10
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 0",
+				"components": {
+					"minecraft:geometry": "geometry.rack",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_drying rack",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:rack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "strat_drying rack 1",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_monster_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_beef",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_beef_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_porkchop",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_bacon_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 7",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_chicken",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 8",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_chicken_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 9",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_mutton",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 10",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_mutton_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 11",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_rabbit",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 12",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_rabbit_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 13",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_fish",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder') == 14",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_fish_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_raw_salmon",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_salmon_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_tropical_fish",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_tropical_fish_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_pufferfish",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_fugu_jerky",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 7",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_leather",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 8",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_beef",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 9",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_porkchop",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 10",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_chicken",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 11",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_mutton",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 12",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_rabbit",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 13",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_fish",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder2') == 14",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_cooked_salmon",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							510,
+							510
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_clay_ball",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							120,
+							120
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 2",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_dried_brick",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 3",
+				"components": {
+					"minecraft:geometry": "geometry.rack_block",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_clay",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							360,
+							360
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 4",
+				"components": {
+					"minecraft:geometry": "geometry.rack_block",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_terracotta",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 5",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_slime",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 6",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_slime_drop",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 7",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_blood",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 8",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_blood_drop",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 9",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_sky_slime",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					},
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							300,
+							300
+						],
+						"on_tick": {
+							"event": "strat:transform"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('strat:rack_holder3') == 10",
+				"components": {
+					"minecraft:geometry": "geometry.rack_item",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "rack_sky_slime_drop",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:on_interact": {
+						"event": "strat:derack"
+					}
+				}
+			}
+		]
+	}
+}

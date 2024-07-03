@@ -1,0 +1,26 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.13.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:flour_rec"
+		},
+		"tags": [
+			"mortar_and_pestle"
+		],
+		"pattern": [
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:wheat"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:flour",
+				"count": 2
+			}
+		]
+	}
+}

@@ -1,0 +1,24 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:sword_blade_pattern_rec"
+		},
+		"tags": [
+			"stencil_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:pan_pattern",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:sword_blade_pattern",
+				"count": 1
+			}
+		]
+	}
+}

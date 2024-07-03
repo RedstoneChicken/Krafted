@@ -1,0 +1,38 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:vaudrite"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.8,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "vaudrite",
+					"render_method": "opaque"
+				}
+			},
+			"tag:stone": {},
+			"minecraft:map_color": "#CBCBCB",
+			"minecraft:explosion_resistance": 1.5,
+			"minecraft:on_player_destroyed": {
+				"event": "play_sound"
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.nature",
+				"category": "nature"
+			},
+			"tag:vaudrite": {}
+		},
+		"events": {
+			"play_sound": {
+				"run_command": {
+					"command": [
+						"playsound dig.stone @a[r=3]"
+					]
+				}
+			}
+		}
+	}
+}

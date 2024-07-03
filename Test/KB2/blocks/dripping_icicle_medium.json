@@ -1,0 +1,53 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:dripping_icicle_medium"
+    },
+    "components": {
+      "minecraft:creative_category": {
+        "group": "itemGroup.name.commands",
+        "category": "commands"
+      },
+    	"minecraft:destroy_time": 0.5,
+        "minecraft:explosion_resistance": 3,
+        "minecraft:block_light_emission": 0.3,
+        "minecraft:block_light_absorption": 0.0,
+        "minecraft:geometry": "geometry.icicle_medium",
+        "minecraft:material_instances" : {
+          "*": {
+              "texture": "dripping_icicle",
+              "render_method": "blend",
+              "face_dimming": false
+          }
+        },
+        "minecraft:loot": "loot_tables/dripping_icicle.json",
+        "minecraft:placement_filter": {
+            "conditions": [
+                {
+                	"allowed_faces": [ "down" ]
+                }
+            ]
+        },
+        "minecraft:on_player_destroyed": {
+          "event": "honkit26113:on_player_destroyed"
+        },
+        "minecraft:pick_collision": {
+            "origin":  [-4, 0, -4],
+            "size":    [8, 16, 8]
+        },
+        "minecraft:entity_collision": {
+            "origin":  [-4, 0, -4],
+            "size":    [8, 16, 8]
+        }
+    },
+    "events": {
+      "honkit26113:on_player_destroyed": {
+        "run_command": {
+          "command": "fill ~ ~1 ~ ~ ~1 ~ honkit26113:dripping_icicle_small 0 replace honkit26113:dripping_icicle_medium"
+        }
+      }
+    }
+  }
+}

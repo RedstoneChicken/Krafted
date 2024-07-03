@@ -1,0 +1,90 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "minecraft:magma_vent_1_feature_rule",
+			"places_feature": "minecraft:magma_vent_1_mcstructure"
+		},
+		"conditions": {
+			"placement_pass": "surface_pass",
+			"minecraft:biome_filter": [
+				{
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "==",
+									"value": "ocean"
+								}
+							]
+						},
+						{
+							"any_of": [
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "forest"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "mountain"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "taiga"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "swamp"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "savanna"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "ice_plains"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "desert"
+								},
+								{
+									"test": "has_biome_tag",
+									"operator": "!=",
+									"value": "frozen"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.1,
+			"x": 0,
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					"query.above_top_solid(variable.worldx, variable.worldz)",
+					"query.above_top_solid(variable.worldx, variable.worldz)+1"
+				]
+			},
+			"z": 0
+		}
+	}
+}

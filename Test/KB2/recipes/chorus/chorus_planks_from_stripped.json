@@ -1,0 +1,22 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "korbon:chorus_planks_from_stripped"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "korbon:stripped_chorus_log"
+			}
+		],
+		"result": [
+			{
+				"item": "korbon:chorus_planks",
+				"count": 4
+			}
+		]
+	}
+}

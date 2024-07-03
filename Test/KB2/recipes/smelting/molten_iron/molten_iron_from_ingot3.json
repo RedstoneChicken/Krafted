@@ -1,0 +1,41 @@
+//bridge-file-version: #20
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_iron_from_ingot3"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			"#V",
+			"#V",
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:iron_ingot"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_iron_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_iron_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_iron_bucket",
+				"count": 1
+			}
+		],
+		"priority": 1
+	}
+}

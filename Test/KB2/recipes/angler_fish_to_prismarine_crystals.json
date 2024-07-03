@@ -1,0 +1,20 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "angler_fish_to_prismarine_crystals"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "adv:angler_fish"
+      }
+    ],
+    "result": {
+      "item": "minecraft:prismarine_crystals",
+      "count": 2
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.book.wield": {
+			"loop": true,
+			"animation_length": 0.48,
+			"bones": {
+				"book": {
+					"rotation": ["c.is_first_person ? -15.0 : 0.0", "c.is_first_person ? 55.0 : 0.0", "c.is_first_person ? 0 : 0.0"],
+					"position": ["c.is_first_person ? 0 : 0.0", "c.is_first_person ? -1 : 0.0", "c.is_first_person ? -2.0 : 0.0"]
+				}
+			}
+		}
+	}
+}

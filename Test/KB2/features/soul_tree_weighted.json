@@ -1,0 +1,19 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "nether:soul_tree_weighted"
+		},
+		"features": [
+			[
+				"nether:soul_tree_1_feature",
+				1
+			],
+			[
+				"nether:soul_tree_2_feature",
+				1
+			]
+		]
+	}
+}

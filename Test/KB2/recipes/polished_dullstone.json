@@ -1,0 +1,27 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:polished_dullstone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SS",
+			"SS"
+		],
+		"key": {
+			"S": {
+				"item": "nether:dullstone_block"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:polished_dullstone",
+				"count": 4
+			}
+		]
+	}
+}

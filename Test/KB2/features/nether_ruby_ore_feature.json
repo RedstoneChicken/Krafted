@@ -1,0 +1,17 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.13.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "nether_ruby_ore_feature"
+		},
+		"count": 8,
+		"places_block": "caf:nether_ruby_ore",
+		"may_replace": [
+			{
+				"name": "minecraft:netherrack",
+				"states": {}
+			}
+		]
+	}
+}

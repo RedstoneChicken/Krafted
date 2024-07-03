@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.honkit26113_penguin",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 8, -2], "size": [6, 4, 4], "uv": [0, 11]},
+						{"origin": [-1, 8, -4], "size": [2, 1, 3], "uv": [6, 19]},
+						{"origin": [-1, 9, -3], "size": [2, 1, 2], "uv": [16, 0]}
+					]
+				},
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "leg",
+					"parent": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "left_leg",
+					"parent": "leg",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [1, 0, -3], "size": [2, 1, 4], "uv": [20, 0]}
+					]
+				},
+				{
+					"name": "right_leg",
+					"parent": "leg",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 0, -3], "size": [2, 1, 4], "uv": [16, 7]}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-3, 1, -2], "size": [6, 7, 4], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "wings",
+					"parent": "bone",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "left_wing",
+					"parent": "wings",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [3, 3, -2], "size": [1, 5, 4], "uv": [0, 19]}
+					]
+				},
+				{
+					"name": "right_wing",
+					"parent": "wings",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 3, -2], "size": [1, 5, 4], "uv": [16, 15]}
+					]
+				}
+			]
+		}
+	]
+}

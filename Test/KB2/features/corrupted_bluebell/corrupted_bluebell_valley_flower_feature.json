@@ -1,0 +1,26 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:corrupted_bluebell/corrupted_bluebell_valley_flower_feature"
+        },
+        "features": [
+            [
+                "ff:corrupted_bluebell/corrupted_bluebell_bouquet_feature",
+                15
+            ],
+            [
+                "ff:corrupted_bluebell/corrupted_bluebell_feature",
+                15
+            ],
+            [
+                "ff:corrupted_bluebell/corrupted_bluebell_tall_feature",
+                15
+            ],
+            [
+                "ff:corrupted_bluebell/corrupted_bluebell_large_feature",
+                12
+            ]
+        ]
+    }
+}

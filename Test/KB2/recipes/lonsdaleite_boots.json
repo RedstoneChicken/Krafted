@@ -1,0 +1,30 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:lonsdaleite_boots"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"B": {
+				"item": "end:block_of_lonsdaleite"
+			},
+			"D": {
+				"item": "minecraft:diamond_boots"
+			}
+		},
+		"pattern": [
+			"BBB",
+			"BDB",
+			"BBB"
+		],
+		"result": [
+			{
+				"item": "end:lonsdaleite_boots"
+			}
+		]
+	}
+}

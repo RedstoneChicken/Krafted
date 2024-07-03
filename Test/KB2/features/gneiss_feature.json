@@ -1,0 +1,23 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "cav:gneiss_feature"
+    },
+    "count": 33,
+    "replace_rules": [
+      {
+        "places_block": "cav:gneiss",
+        "may_replace": [
+          {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "stone"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+

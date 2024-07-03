@@ -1,0 +1,23 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.16.100",
+	"minecraft:fog_settings": {
+		"description": {
+			"identifier": "honkit26113:nether_wastes_fog_settings"
+		},
+		"distance": {
+			"air": {
+				"fog_start": 64,
+				"fog_end": 192,
+				"fog_color": "#546493",
+				"render_distance_type": "fixed"
+			},
+			"weather": {
+				"fog_start": 64,
+				"fog_end": 192,
+				"fog_color": "#546493",
+				"render_distance_type": "fixed"
+			}
+		}
+	}
+}

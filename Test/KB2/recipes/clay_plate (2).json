@@ -1,0 +1,26 @@
+//bridge-file-version: #3
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:clay_plate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:clay_ball"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:clay_plate",
+				"count": 2
+			}
+		]
+	}
+}

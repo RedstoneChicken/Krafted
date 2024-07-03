@@ -1,0 +1,15 @@
+//bridge-file-version: #0
+{
+	"format_version": 1.1,
+	"minecraft:item": {
+		"description": {
+			"category": "Nature",
+			"identifier": "end:lotus_melon_slice"
+		},
+		"components": {
+			"minecraft:icon": "lotus_melon_slice",
+			"minecraft:use_animation": "eat",
+			"minecraft:render_offsets": "apple"
+		}
+	}
+}

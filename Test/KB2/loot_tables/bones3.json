@@ -1,0 +1,20 @@
+//bridge-file-version: #2
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:bone",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 3
+						}
+					]
+				}
+			]
+		}
+	]
+}

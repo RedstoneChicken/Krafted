@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:bobber",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "bobber",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

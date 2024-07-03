@@ -1,0 +1,26 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:cheese",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:use_duration": 0.8,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": "normal",
+				"can_always_eat": false
+			},
+			"minecraft:icon": {
+				"texture": "bridge_cheese"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat"
+		},
+		"events": {}
+	}
+}

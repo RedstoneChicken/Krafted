@@ -1,0 +1,18 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "end:ender_ore_feature"
+		},
+		"count": 4,
+		"replace_rules": [
+			{
+				"places_block": "end:ender_ore",
+				"may_replace": [
+					"minecraft:end_stone"
+				]
+			}
+		]
+	}
+}

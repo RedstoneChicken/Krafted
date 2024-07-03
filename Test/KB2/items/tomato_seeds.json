@@ -1,0 +1,23 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:tomato_seeds",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.seed"
+			},
+			"minecraft:block_placer": {
+				"block": "strat:tomato_crop",
+				"use_block_description": true
+			},
+			"minecraft:icon": {
+				"texture": "strat_tomato seeds"
+			}
+		},
+		"events": {}
+	}
+}

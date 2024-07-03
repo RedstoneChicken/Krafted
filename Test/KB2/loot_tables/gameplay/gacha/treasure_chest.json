@@ -1,0 +1,29 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "azc:treasure_chest_iron_ingot",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "azc:treasure_chest_gold_ingot",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "azc:treasure_chest_diamond",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "azc:treasure_chest_emerald",
+          "weight": 2
+        }
+      ]
+    }
+  ]
+}

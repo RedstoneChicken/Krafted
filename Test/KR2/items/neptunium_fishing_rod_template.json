@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "azc:neptunium_fishing_rod_template",
+      "category": "Items"
+    },
+    "components": {
+      "minecraft:icon": "neptunium_fishing_rod_template",
+      "minecraft:render_offsets": "miscellaneous"
+    }
+  }
+}

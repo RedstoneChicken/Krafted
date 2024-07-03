@@ -1,0 +1,38 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:dough_rec2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#o",
+			"~"
+		],
+		"key": {
+			"#": {
+				"item": "strat:flour"
+			},
+			"~": {
+				"item": "minecraft:potion"
+			},
+			"o": {
+				"item": "strat:salt"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:dough",
+				"count": 2
+			},
+			{
+				"item": "minecraft:glass_bottle",
+				"count": 1
+			}
+		],
+		"priority": 3
+	}
+}

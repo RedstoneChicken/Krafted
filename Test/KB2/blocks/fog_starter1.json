@@ -1,0 +1,39 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:fog_starter1"
+		},
+		"components": {
+			"minecraft:ticking": {
+				"range": [
+					5,
+					8
+				],
+				"on_tick": {
+					"event": "start_fog"
+				}
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "air",
+					"render_method": "alpha_test",
+					"ambient_occlusion": true,
+					"face_dimming": true
+				}
+			},
+			"minecraft:destroy_time": 10
+		},
+		"events": {
+			"start_fog": {
+				"run_command": {
+					"command": [
+						"structure load mushroom_tree_1b_a ~-9~-24~-9",
+						"summon korbon:phreyium_fog_starter ~ ~100 ~"
+					]
+				}
+			}
+		}
+	}
+}

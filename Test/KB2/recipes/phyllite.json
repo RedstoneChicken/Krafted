@@ -1,0 +1,27 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:phyllite"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB",
+      "BA"
+    ],
+    "key": {
+      "A": {
+        "item": "cav:shale"
+      },
+      "B": {
+        "item": "cav:mica"
+      }
+    },
+    "result": {
+      "item": "cav:phyllite",
+      "count": 4
+    }
+  }
+}

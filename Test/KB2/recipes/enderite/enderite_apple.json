@@ -1,0 +1,29 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:enderite_apple"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"YYY",
+			"YXY",
+			"YYY"
+		],
+		"key": {
+			"Y": {
+				"item": "oh:enderite"
+			},
+			"X": {
+				"item": "minecraft:apple"
+			}
+		},
+		"result": {
+			"item": "oh:enderite_apple",
+			"count": 1
+		}
+	}
+}

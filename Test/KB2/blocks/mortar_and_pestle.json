@@ -1,0 +1,421 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "strat:mortar_and_pestle",
+			"properties": {
+				"bridge:block_rotation": [
+					2,
+					3,
+					4,
+					5
+				],
+				"strat:state": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				]
+			}
+		},
+		"components": {
+			"minecraft:on_player_placing": {
+				"event": "bridge:update_rotation"
+			},
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:explosion_resistance": 5,
+			"minecraft:geometry": "geometry.mortar_and_pestle",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mortar_and_pestle",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					4,
+					8
+				]
+			},
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					4,
+					8
+				]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						]
+					}
+				]
+			},
+			"minecraft:on_interact": {
+				"event": "strat:interact"
+			},
+			"minecraft:loot": "loot_tables/mortar_and_pestle.json",
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.Items",
+				"category": "Items"
+			}
+		},
+		"events": {
+			"bridge:update_rotation": {
+				"set_block_property": {
+					"bridge:block_rotation": "query.cardinal_facing_2d"
+				}
+			},
+			"strat:interact": {
+				"sequence": [
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'cocoa_beans'",
+								"set_block_property": {
+									"strat:state": 1
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1",
+								"set_block_property": {
+									"strat:state": 2
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 1 && query.is_sneaking",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/cocoa_beans.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'wheat'",
+								"set_block_property": {
+									"strat:state": 3
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 3",
+								"set_block_property": {
+									"strat:state": 4
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 3 && query.is_sneaking",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/wheat.json"
+								}
+							}
+						]
+					},
+					{
+						"sequence": [
+							{
+								"condition": "query.block_property('strat:state') == 0 && query.get_equipped_item_name('main_hand') == 'sugar_cane'",
+								"set_block_property": {
+									"strat:state": 5
+								},
+								"decrement_stack": {}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5",
+								"set_block_property": {
+									"strat:state": 6
+								}
+							},
+							{
+								"condition": "query.block_property('strat:state') == 5 && query.is_sneaking",
+								"set_block_property": {
+									"strat:state": 0
+								},
+								"spawn_loot": {
+									"table": "loot_tables/sugar_cane.json"
+								}
+							}
+						]
+					},
+					{
+						"trigger": {
+							"event": "bridge:update_rotation"
+						}
+					}
+				]
+			},
+			"strat:grind_cocoa": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:state') == 1",
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:state') == 2",
+						"set_block_property": {
+							"strat:state": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/cocoa_powder.json"
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.gravel @a ~~~"
+							]
+						}
+					}
+				]
+			},
+			"strat:grind_wheat": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:state') == 3",
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:state') == 4",
+						"set_block_property": {
+							"strat:state": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/flour.json"
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.gravel @a ~~~"
+							]
+						}
+					}
+				]
+			},
+			"strat:grind_sugar_cane": {
+				"sequence": [
+					{
+						"condition": "query.block_property('strat:state') == 5",
+						"set_block_property": {
+							"strat:state": "query.block_property('strat:state') + 1"
+						}
+					},
+					{
+						"condition": "query.block_property('strat:state') == 6",
+						"set_block_property": {
+							"strat:state": 0
+						},
+						"spawn_loot": {
+							"table": "loot_tables/sugar.json"
+						},
+						"run_command": {
+							"command": [
+								"playsound dig.gravel @a ~~~"
+							]
+						}
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 4",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:block_rotation') == 5",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle",
+					"minecraft:loot": "loot_tables/mortar_and_pestle.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle_cocoa",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle1",
+					"minecraft:loot": "loot_tables/mortar_and_pestle1.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle_cocoa",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle2",
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							1,
+							1
+						],
+						"on_tick": {
+							"event": "strat:grind_cocoa"
+						}
+					},
+					"minecraft:loot": "loot_tables/mortar_and_pestle1.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle_wheat",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle1",
+					"minecraft:loot": "loot_tables/mortar_and_pestle2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle_wheat",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle2",
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							1,
+							1
+						],
+						"on_tick": {
+							"event": "strat:grind_wheat"
+						}
+					},
+					"minecraft:loot": "loot_tables/mortar_and_pestle2.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle_sugar_cane",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle1",
+					"minecraft:loot": "loot_tables/mortar_and_pestle3.json"
+				}
+			},
+			{
+				"condition": "query.block_property('strat:state') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "mortar_and_pestle_sugar_cane",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:geometry": "geometry.mortar_and_pestle2",
+					"minecraft:ticking": {
+						"looping": false,
+						"range": [
+							1,
+							1
+						],
+						"on_tick": {
+							"event": "strat:grind_sugar_cane"
+						}
+					},
+					"minecraft:loot": "loot_tables/mortar_and_pestle3.json"
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,22 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:violet_roots/violet_roots_valley_flower_feature"
+        },
+        "features": [
+            [
+                "ff:violet_roots/violet_roots_feature",
+                15
+            ],
+            [
+                "ff:violet_roots/violet_roots_tall_feature",
+                15
+            ],
+            [
+                "ff:violet_roots/violet_roots_large_feature",
+                12
+            ]
+        ]
+    }
+}

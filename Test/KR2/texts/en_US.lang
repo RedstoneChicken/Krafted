@@ -1,0 +1,2684 @@
+# TEXT-UI #
+
+chetty.menu.map=Show on other maps
+chetty.menu.beam=Light beam
+
+
+# OUTPUT-COMMAND-CREATED-DELETED #
+
+chetty.message1=No active points yet!
+chetty.message2=The name cannot be blank!
+chetty.message3=The point
+chetty.message4=has been placed!
+chetty.message5=has been removed!
+
+## ============================================================
+
+## Advanced:
+item.adv:abyssal_lurker.name=§eAbyssal Lurker
+item.adv:angelfish.name=Angelfish
+item.adv:angler_fish.name=§eAngler Fish
+item.adv:blaze_pike.name=§dBlaze Pike
+item.adv:bonefish.name=§dBonefish
+item.adv:brown_shroomfin.name=§bBrown Shroomfin
+item.adv:catfish.name=Catfish
+item.adv:cave_trout.name=§bCave Trout
+item.adv:charged_bullhead.name=§bCharged Bullhead
+item.adv:chorus_koi.name=§bChorus Koi
+item.adv:crystal_mullet.name=§bCrystal Mullet
+item.adv:cursed_koi.name=§dCursed Koi
+item.adv:ender_shad.name=§bEnder Shad
+item.adv:explosive_crucian.name=§eExplosive Crucian
+item.adv:flarefin_koi.name=§dFlarefin Koi
+item.adv:frost_minnow.name=Frost Minnow
+item.adv:fungi_catfish.name=§dFungi Catfish
+item.adv:glacier_anchovy.name=§eGlacier Anchovy
+item.adv:golden_koi.name=Golden Koi
+item.adv:green_jellyfish.name=§dGreen Jellyfish
+item.adv:jellyfish.name=Jellyfish
+item.adv:magikarp.name=§dMagikarp
+item.adv:magma_jellyfish.name=§dMagma Jellyfish
+item.adv:mandarinfish.name=§bMandarinfish
+item.adv:mud_tuna.name=Mud Tuna
+item.adv:nether_sturgeon.name=§dNether Sturgeon
+item.adv:obsidian_bream.name=§dObsidian Bream
+item.adv:pearl_sardine.name=§bPearl Sardine
+item.adv:pike.name=Pike
+item.adv:piranha.name=§bPiranha
+item.adv:quartz_chub.name=§dQuartz Chub
+item.adv:red_shroomfin.name=§bRed Shroomfin
+item.adv:ruffe.name=Ruffe
+item.adv:sandy_bass.name=Sandy Bass
+item.adv:snowy_walleye.name=Snowy Walleye
+item.adv:sparkling_eel.name=§bSparkling Eel
+item.adv:specular_snapper.name=§bSpecular Snapper
+item.adv:sponge_eater.name=§eSponge Eater
+item.adv:spookyfin.name=§dSpookyfin
+item.adv:squid.name=Squid
+item.adv:sunfish.name=§eSunfish
+item.adv:swamp_plaice.name=§eSwamp Plaice
+item.adv:withered_crucian.name=§dWithered Crucian
+item.adv:blazing_fishing_pole=§dBlazing Fishing Pole
+
+## Azure:
+item.adv:blazing_fishing_pole_template.name=§bBlazing Fishing Pole
+item.adv:blazing_fishing_pole=§dBlazing Fishing Pole
+item.adv:blazing_fishing_pole_double=§dBlazing Fishing Pole
+item.adv:blazing_fishing_pole_glow=§dBlazing Fishing Pole
+item.adv:blazing_fishing_pole_soul=§dBlazing Fishing Pole
+item.adv:obsidian_hook.name=§bObsidian Hook
+item.azc:double_iron_hook.name=Double Iron Hook
+item.adv:double_obsidian_hook.name=§bDouble Obsidian Hook
+item.adv:glowstone_hook.name=§bGlowstone Hook
+item.adv:soulsand_hook.name=§bSoul Sand Hook
+
+## Buckets:
+item.adv:bucket_abyssal_lurker=Bucket Of Abyssal Lurker
+item.adv:bucket_angelfish=Bucket Of Angelfish
+item.adv:bucket_angler_fish=Bucket Of Angler Fish
+item.adv:bucket_bonefish=Bucket Of Bonefish
+item.adv:bucket_brown_shroomfin=Bucket Of Brown Shroomfin
+item.adv:bucket_adv_catfish=Bucket Of Catfish
+item.adv:bucket_cave_trout=Bucket Of Cave Trout
+item.adv:bucket_charged_bullhead=Bucket Of Charged Bullhead
+item.adv:bucket_crystal_mullet=Bucket Of Crystal Mullet
+item.adv:bucket_cursed_koi=Bucket Of Cursed Koi
+item.adv:bucket_explosive_crucian=Bucket Of Explosive Crucian
+item.adv:bucket_frost_minnow=Bucket Of Frost Minnow
+item.adv:bucket_glacier_anchovy=Bucket Of Glacier Anchovy
+item.adv:bucket_golden_koi=Bucket Of Golden Koi
+item.adv:bucket_green_jellyfish=Bucket Of Green Jellyfish
+item.adv:bucket_adv_jellyfish=Bucket Of Jellyfish
+item.adv:bucket_magikarp=Pokéball
+item.adv:bucket_mandarinfish=Bucket Of Mandarinfish
+item.adv:bucket_mud_tuna=Bucket Of Mud Tuna
+item.adv:bucket_pike=Bucket Of Pike
+item.adv:bucket_adv_piranha=Bucket Of Piranha
+item.adv:bucket_red_shroomfin=Bucket Of Red Shroomfin
+item.adv:bucket_ruffe=Bucket Of Ruffe
+item.adv:bucket_sandy_bass=Bucket Of Sandy Bass
+item.adv:bucket_snowy_walleye=Bucket Of Snowy Walleye
+item.adv:bucket_sparkling_eel=Bucket Of Sparkling Eel
+item.adv:bucket_specular_snapper=Bucket Of Specular Snapper
+item.adv:bucket_sponge_eater=Bucket Of Sponge Eater
+item.adv:bucket_spookyfin=Bucket Of Spookyfin
+item.adv:bucket_sunfish=Bucket Of Sunfish
+
+## Spawn Eggs:
+item.spawn_egg.entity.adv:abyssal_lurker.name=Spawn Abyssal Lurker
+item.spawn_egg.entity.adv:angelfish.name=Spawn Angelfish
+item.spawn_egg.entity.adv:angler_fish.name=Spawn Angler Fish
+item.spawn_egg.entity.adv:bonefish.name=Spawn Bonefish
+item.spawn_egg.entity.adv:brown_shroomfin.name=Spawn Brown Shroomfin
+item.spawn_egg.entity.adv:adv_catfish.name=Spawn Catfish
+item.spawn_egg.entity.adv:cave_trout.name=Spawn Cave Trout
+item.spawn_egg.entity.adv:charged_bullhead.name=Spawn Charged Bullhead
+item.spawn_egg.entity.adv:crystal_mullet.name=Spawn Crystal Mullet
+item.spawn_egg.entity.adv:cursed_koi.name=Spawn Cursed Koi
+item.spawn_egg.entity.adv:explosive_crucian.name=Spawn Explosive Crucian
+item.spawn_egg.entity.adv:frost_minnow.name=Spawn Frost Minnow
+item.spawn_egg.entity.adv:glacier_anchovy.name=Spawn Glacier Anchovy
+item.spawn_egg.entity.adv:golden_koi.name=Spawn Golden Koi
+item.spawn_egg.entity.adv:green_jellyfish.name=Spawn Green Jellyfish
+item.spawn_egg.entity.adv:adv_jellyfish.name=Spawn Jellyfish
+item.spawn_egg.entity.adv:magikarp.name=Spawn Magikarp
+item.spawn_egg.entity.adv:mandarinfish.name=Spawn Mandarinfish
+item.spawn_egg.entity.adv:mud_tuna.name=Spawn Mud Tuna
+item.spawn_egg.entity.adv:pike.name=Spawn Pike
+item.spawn_egg.entity.adv:adv_piranha.name=Spawn Piranha
+item.spawn_egg.entity.adv:red_shroomfin.name=Spawn Red Shroomfin
+item.spawn_egg.entity.adv:ruffe.name=Spawn Ruffe
+item.spawn_egg.entity.adv:sandy_bass.name=Spawn Sandy Bass
+item.spawn_egg.entity.adv:snowy_walleye.name=Spawn Snowy Walleye
+item.spawn_egg.entity.adv:sparkling_eel.name=Spawn Sparkling Eel
+item.spawn_egg.entity.adv:specular_snapper.name=Spawn Specular Snapper
+item.spawn_egg.entity.adv:sponge_eater.name=Spawn Sponge Eater
+item.spawn_egg.entity.adv:spookyfin.name=Spawn Spookyfin
+item.spawn_egg.entity.adv:sunfish.name=Spawn Sunfish
+
+## ============================================================
+
+## Azureculture:
+## Fish:
+item.azc:arapaima.name=§eArapaima
+item.azc:arrau_turtle.name=§eArrau Turtle
+item.azc:atlantic_cod.name=Atlantic Cod
+item.azc:atlantic_halibut.name=§eAtlantic Halibut
+item.azc:atlantic_herring.name=Atlantic Herring
+item.azc:bayad.name=Bagrid
+item.azc:blackfish.name=Tautog
+item.azc:bluegill.name=Bluegill
+item.azc:boulti.name=Boulti
+item.azc:box_turtle.name=§eBox Turtle
+item.azc:brown_shrooma.name=§bBrown Shrooma
+item.azc:brown_trout.name=§bBrown Trout
+item.azc:capitaine.name=§eCapitaine
+item.azc:carp.name=Carp
+item.azc:azc_catfish.name=§eCatfish
+item.azc:electric_eel.name=Electric Eel
+item.azc:temperate_frog.name=§eFrog
+item.azc:cold_frog.name=§eFrog
+item.azc:warm_frog.name=§eFrog
+item.azc:gar.name=Gar
+item.azc:azc_jellyfish.name=Jellyfish
+item.azc:leech.name=Leech
+item.azc:minnow.name=Minnow
+item.azc:muskellunge.name=Muskellunge
+item.azc:pacific_halibut.name=Pacific Halibut
+item.azc:perch.name=Perch
+item.azc:pink_salmon.name=Pink Salmon
+item.azc:azc_piranha.name=§ePiranha
+item.azc:pollock.name=Pollock
+item.azc:rainbow_trout.name=Rainbow Trout
+item.azc:red_grouper.name=Red Grouper
+item.azc:red_shrooma.name=§bRed Shrooma
+item.azc:shark.name=Shark
+item.azc:smallmouth_bass.name=Smallmouth Bass
+item.azc:azc_squid.name=Squid
+item.azc:starshell_turtle.name=§dStarshell Turtle
+item.azc:swordfish.name=Swordfish
+item.azc:synodontis.name=Synodontis
+item.azc:tambaqui.name=§eTambaqui
+item.azc:tuna.name=§eTuna
+item.azc:whale.name=§eWhale
+
+## Miscellaneous:
+item.azc:driftwood.name=Driftwood
+item.azc:tin_can.name=Tin Can
+item.azc:fish_bones.name=Fish Bones
+item.azc:goldfish.name=Goldfish
+item.azc:message_in_a_bottle.name=§bMessage In A Bottle
+item.azc:wooden_fillet_knife=Wooden Filet Knife
+item.azc:stone_fillet_knife=Stone Fillet Knife
+item.azc:iron_fillet_knife=Iron Fillet Knife
+item.azc:golden_fillet_knife=Golden Fillet Knife
+item.azc:diamond_fillet_knife=Diamond Fillet Knife
+item.azc:neptunium_fillet_knife=Neptunium Fillet Knife
+item.azc:bobber.name=Bobber
+item.azc:fishing_line.name=Fishing Line
+item.azc:iron_hook.name=Iron Hook
+item.azc:double_iron_hook.name=Double Hook
+item.azc:golden_hook.name=Golden Hook
+item.azc:redstone_hook.name=Redstone Hook
+item.azc:nether_star_hook.name=Nether Star Hook
+item.azc:worm.name=Worm
+
+## Fishing Rods [Template]:
+item.azc:wooden_fishing_rod_template.name=Wooden Fishing Rod
+item.azc:iron_fishing_rod_template.name=Iron Fishing Rod
+item.azc:golden_fishing_rod_template.name=Golden Fishing Rod
+item.azc:diamond_fishing_rod_template.name=Diamond Fishing Rod
+item.azc:neptunium_fishing_rod_template.name=Neptunium Fishing Rod
+
+## Fishing Rods [Usual]:
+item.fishing_rod.name=Wooden Fishing Rod
+item.azc:iron_fishing_rod_usual=Iron Fishing Rod
+item.azc:golden_fishing_rod_usual=Golden Fishing Rod
+item.azc:diamond_fishing_rod_usual=Diamond Fishing Rod
+item.azc:neptunium_fishing_rod_usual=Neptunium Fishing Rod
+
+## Fishing Rods [Double]:
+item.azc:wooden_fishing_rod_double=Wooden Fishing Rod
+item.azc:iron_fishing_rod_double=Iron Fishing Rod
+item.azc:golden_fishing_rod_double=Golden Fishing Rod
+item.azc:diamond_fishing_rod_double=Diamond Fishing Rod
+item.azc:neptunium_fishing_rod_double=Neptunium Fishing Rod
+
+## Fishing Rods [Golden]:
+item.azc:wooden_fishing_rod_golden=Wooden Fishing Rod
+item.azc:iron_fishing_rod_golden=Iron Fishing Rod
+item.azc:golden_fishing_rod_golden=Golden Fishing Rod
+item.azc:diamond_fishing_rod_golden=Diamond Fishing Rod
+item.azc:neptunium_fishing_rod_golden=Neptunium Fishing Rod
+
+## Fishing Rods [Redstone]:
+item.azc:wooden_fishing_rod_redstone=Wooden Fishing Rod
+item.azc:iron_fishing_rod_redstone=Iron Fishing Rod
+item.azc:golden_fishing_rod_redstone=Golden Fishing Rod
+item.azc:diamond_fishing_rod_redstone=Diamond Fishing Rod
+item.azc:neptunium_fishing_rod_redstone=Neptunium Fishing Rod
+
+## Fishing Rods [Nether Star]:
+item.azc:neptunium_fishing_rod_nether_star=Neptunium Fishing Rod
+
+## Buckets:
+item.azc:bucket_arapaima=Bucket of Araipaima
+item.azc:bucket_arrau_turtle=Bucket of Arrau Turtle
+item.azc:bucket_atlantic_cod=Bucket of Atlantic Cod
+item.azc:bucket_atlantic_halibut=Bucket of Atlantic Halibut
+item.azc:bucket_atlantic_herring=Bucket of Atlantic Herring
+item.azc:bucket_bayad=Bucket of Bagrid
+item.azc:bucket_blackfish=Bucket of Tautog
+item.azc:bucket_bluegill=Bucket of Bluegill
+item.azc:bucket_boulti=Bucket of Boulti
+item.azc:bucket_box_turtle=Bucket of Box Turtle
+item.azc:bucket_brown_shrooma=Bucket of Brown Shrooma
+item.azc:bucket_brown_trout=Bucket of Brown Trout
+item.azc:bucket_capitaine=Bucket of Capitaine
+item.azc:bucket_carp=Bucket of Carp
+item.azc:bucket_catfish=Bucket of Catfish
+item.azc:bucket_electric_eel=Bucket of Electric Eel
+item.azc:bucket_gar=Bucket of Gar
+item.azc:bucket_goldfish=Bucket of Goldfish
+item.azc:bucket_jellyfish=Bucket of Jellyfish
+item.azc:bucket_minnow=Bucket of Minnow
+item.azc:bucket_muskellunge=Bucket of Muskellunge
+item.azc:bucket_pacific_halibut=Bucket of Pacific Halibut
+item.azc:bucket_perch=Bucket of Perch
+item.azc:bucket_pink_salmon=Bucket of Pink Salmon
+item.azc:bucket_piranha=Bucket of Piranha
+item.azc:bucket_pollock=Bucket of Pollock
+item.azc:bucket_rainbow_trout=Bucket of Rainbow Trout
+item.azc:bucket_red_grouper=Bucket of Red Grouper
+item.azc:bucket_red_shrooma=Bucket of Red Shrooma
+item.azc:bucket_smallmouth_bass=Bucket of Smallmouth Bass
+item.azc:bucket_azc_squid=Bucket of Squid
+item.azc:bucket_starshell_turtle=Bucket of Starshell Turtle
+item.azc:bucket_synodontis=Bucket of Synodontis
+item.azc:bucket_tambaqui=Bucket of Tambaqui
+item.azc:bucket_tuna=Bucket of Tuna
+
+## Boxs:
+item.azc:box_gravel.name=Box
+item.azc:box_cobblestone.name=Box
+item.azc:box_rotten_flesh.name=Box
+item.azc:box_flint.name=Box
+item.azc:box_clay_ball.name=Box
+item.azc:box_leather.name=Box
+item.azc:box_feather.name=Box
+item.azc:box_coal.name=§eBox
+item.azc:box_charcoal.name=§eBox
+item.azc:box_wheat_seeds.name=§eBox
+item.azc:box_bowl.name=§eBox
+item.azc:box_string.name=§eBox
+item.azc:box_leather_helmet.name=§bBox
+item.azc:box_leather_chestplate.name=§bBox
+item.azc:box_leather_leggings.name=§bBox
+item.azc:box_leather_boots.name=§bBox
+item.azc:box_stone.name=§bBox
+item.azc:box_dirt.name=§bBox
+item.azc:box_bucket.name=§bBox
+item.azc:box_slime_ball.name=§bBox
+item.azc:box_sugar_cane.name=§bBox
+item.azc:box_glass_bottle.name=§bBox
+item.azc:box_carrot.name=§bBox
+item.azc:box_potato.name=§bBox
+item.azc:box_vine.name=§bBox
+item.azc:box_apple.name=§bBox
+
+## Lockboxs:
+item.azc:lockbox_book.name=§eLockbox
+item.azc:lockbox_paper.name=§eLockbox
+item.azc:lockbox_compass.name=§eLockbox
+item.azc:lockbox_gunpowder.name=§eLockbox
+item.azc:lockbox_redstone.name=§bLockbox
+item.azc:lockbox_glowstone_dust.name=§bLockbox
+item.azc:lockbox_golden_apple.name=§dLockbox
+
+## Treasure Chests:
+item.azc:treasure_chest_iron_ingot.name=Treasure Chest
+item.azc:treasure_chest_gold_ingot.name=§eTreasure Chest
+item.azc:treasure_chest_diamond.name=§bTreasure Chest
+item.azc:treasure_chest_emerald.name=§dTreasure Chest
+
+## Neptuniums:
+item.azc:neptunium_ingot.name=Neptunium Ingot
+item.azc:neptunium_nugget.name=Neptunium Nugget
+item.azc:neptunium_sword=Neptunium Sword
+item.azc:neptunium_pickaxe=Neptunium Pickaxe
+item.azc:neptunium_axe=Neptunium Axe
+item.azc:neptunium_shovel=Neptunium Shovel
+item.azc:neptunium_hoe=Neptunium Hoe
+item.azc:neptunium_helmet=Neptunium Helmet
+item.azc:neptunium_chestplate=Neptunium Chestplate
+item.azc:neptunium_leggings=Neptunium Leggings
+item.azc:neptunium_boots=Neptunium Boots
+
+## Spawn Eggs:
+item.spawn_egg.entity.azc:arapaima.name=Spawn Araipaima
+item.spawn_egg.entity.azc:arrau_turtle.name=Spawn Arrau Turtle
+item.spawn_egg.entity.azc:atlantic_cod.name=Spawn Atlantic Cod
+item.spawn_egg.entity.azc:atlantic_halibut.name=Spawn Atlantic Halibut
+item.spawn_egg.entity.azc:atlantic_herring.name=Spawn Atlantic Herring
+item.spawn_egg.entity.azc:bayad.name=Spawn Bagrid
+item.spawn_egg.entity.azc:blackfish.name=Spawn Tautog
+item.spawn_egg.entity.azc:bluegill.name=Spawn Bluegill
+item.spawn_egg.entity.azc:boulti.name=Spawn Boulti
+item.spawn_egg.entity.azc:box_turtle.name=Spawn Box Turtle
+item.spawn_egg.entity.azc:brown_shrooma.name=Spawn Brown Shrooma
+item.spawn_egg.entity.azc:brown_trout.name=Spawn Brown Trout
+item.spawn_egg.entity.azc:capitaine.name=Spawn Capitaine
+item.spawn_egg.entity.azc:carp.name=Spawn Carp
+item.spawn_egg.entity.azc:catfish.name=Spawn Catfish
+item.spawn_egg.entity.azc:electric_eel.name=Spawn Electric Eel
+item.spawn_egg.entity.azc:gar.name=Spawn Gar
+item.spawn_egg.entity.azc:goldfish.name=Spawn Goldfish
+item.spawn_egg.entity.azc:jellyfish.name=Spawn Jellyfish
+item.spawn_egg.entity.azc:minnow.name=Spawn Minnow
+item.spawn_egg.entity.azc:muskellunge.name=Spawn Muskellunge
+item.spawn_egg.entity.azc:pacific_halibut.name=Spawn Pacific Halibut
+item.spawn_egg.entity.azc:perch.name=Spawn Perch
+item.spawn_egg.entity.azc:pink_salmon.name=Spawn Pink Salmon
+item.spawn_egg.entity.azc:piranha.name=Spawn Piranha
+item.spawn_egg.entity.azc:pollock.name=Spawn Pollock
+item.spawn_egg.entity.azc:rainbow_trout.name=Spawn Rainbow Trout
+item.spawn_egg.entity.azc:red_grouper.name=Spawn Red Grouper
+item.spawn_egg.entity.azc:red_shrooma.name=Spawn Red Shrooma
+item.spawn_egg.entity.azc:shark.name=Spawn Shark
+item.spawn_egg.entity.azc:smallmouth_bass.name=Spawn Smallmouth Bass
+item.spawn_egg.entity.azc:azc_squid.name=Spawn Squid
+item.spawn_egg.entity.azc:starshell_turtle.name=Spawn Starshell Turtle
+item.spawn_egg.entity.azc:swordfish.name=Spawn Swordfish
+item.spawn_egg.entity.azc:synodontis.name=Spawn Synodontis
+item.spawn_egg.entity.azc:tambaqui.name=Spawn Tambaqui
+item.spawn_egg.entity.azc:tuna.name=Spawn Tuna
+item.spawn_egg.entity.azc:whale.name=Spawn Whale
+
+## Entities:
+entity.azc:electric_eel.name=Electric Eel
+entity.azc:jellyfish.name=Jellyfish
+entity.azc:shark.name=Shark
+
+## Foods:
+item.azc:sashimi.name=Sashimi
+item.azc:cooked_fish_fillet.name=Cooked Fish Fillet
+item.azc:cooked_frog_legs.name=Cooked Frog Legs
+item.azc:algae.name=Algae
+item.azc:seaweed.name=Seaweed
+item.azc:sushi.name=Sushi
+item.azc:turtle_soup.name=Turtle Soup
+item.azc:raw_whale_steak.name=Raw Whale Steak
+item.azc:cooked_whale_steak.name=Cooked Whale Steak
+item.azc:whale_burger.name=Whale Burger
+
+## Blocks:
+tile.azc:neptunium_block.name=Neptunium Block
+tile.azc:neptunes_bounty.name=§bNeptune's Bounty §f[???????]
+tile.azc:wooden_fish_trap.name=Wooden Fish Trap
+tile.azc:iron_fish_trap.name=Iron Fish Trap
+tile.azc:golden_fish_trap.name=Golden Fish Trap
+tile.azc:redstone_fish_trap.name=Redstone Fish Trap
+tile.azc:worm_farm.name=Worm Farm
+
+## ============================================================
+
+## Cavern:
+## 0.8.0 Update
+
+tile.cav:gabbro.name=Gabbro
+tile.cav:rhyolite.name=Rhyolite
+tile.cav:dacite.name=Dacite
+tile.cav:shale.name=Shale
+tile.cav:schist.name=Schist
+tile.cav:gneiss.name=Gneiss
+tile.cav:marble.name=Marble
+tile.cav:limestone.name=Limestone
+tile.cav:polished_marble.name=Polished Marble
+tile.cav:polished_limestone.name=Polished Limestone
+tile.cav:polished_gabbro.name=Polished Gabbro
+tile.cav:polished_dacite.name=Polished Dacite
+item.cav:purpurite.name=Purpurite
+item.cav:end_dust.name=End Dust
+tile.cav:diatomite.name=Diatomite
+
+## 0.9.0 & 1.0.0 End Update
+
+tile.cav:pearlstone.name=Pearlstone
+tile.cav:polished_pearlstone.name=Polished Pearlstone
+tile.cav:cut_pearlstone.name=Cut Pearlstone
+tile.cav:voidstone.name=Voidstone
+tile.cav:polished_voidstone.name=Polished Voidstone
+tile.cav:cut_voidstone.name=Cut Voidstone
+tile.cav:purpurite_ore.name=Purpurite Ore
+tile.cav:purpurite_block.name=Purpurite Block
+tile.cav:polished_purpur.name=Polished Purpur
+tile.cav:smooth_end_stone.name=Smooth End Stone
+tile.cav:end_sand.name=End Sand
+tile.cav:end_glass.name=End Glass
+tile.cav:end_dust_block.name=End Dust Block
+tile.cav:end_lamp.name=End Lamp
+tile.cav:obsidian_bricks.name=Obsidian Bricks
+tile.cav:gilded_obsidian.name=Gilded Obsidian
+tile.cav:cracked_end_bricks.name=Cracked End Stone Bricks
+tile.cav:chiseled_end_bricks.name=Chiseled End Bricks
+tile.cav:smooth_end_stone.name=Smooth End Stone
+
+## 1.1.0 Update (Discord Exclusive Beta)
+
+tile.cav:diabase.name=Diabase
+tile.cav:pegmatite.name=Pegmatite
+tile.cav:dolostone.name=Dolostone
+tile.cav:novaculite.name=Novaculite
+tile.cav:phyllite.name=Phyllite
+tile.cav:chert.name=Chert
+tile.cav:siltstone.name=Siltstone
+tile.cav:amphibolite.name=Amphibolite
+tile.cav:hornfels.name=Hornfels
+tile.cav:polished_rhyolite.name=Polished Rhyolite
+tile.cav:polished_shale.name=Polished Shale
+tile.cav:polished_cobblestone.name=Polished Cobblestone
+tile.cav:polished_phyllite.name=Polished Phyllite
+tile.cav:polished_dolostone.name=Polished Dolostone
+tile.cav:polished_siltstone.name=Polished Siltstone
+tile.cav:polished_chert.name=Polished Chert
+tile.cav:polished_amphibolite.name=Polished Amphibolite
+tile.cav:polished_novaculite.name=Polished Novaculite
+tile.cav:rhyolite_bricks.name=Polished Rhyolite Bricks
+tile.cav:marble_bricks.name=Polished Marble Bricks
+tile.cav:limestone_bricks.name=Polished Limestone Bricks
+tile.cav:dacite_bricks.name=Polished Dacite Bricks
+tile.cav:gabbro_bricks.name=Polished Gabbro Bricks
+tile.cav:shale_bricks.name=Polished Shale Bricks
+tile.cav:dolostone_bricks.name=Polished Dolostone Bricks
+tile.cav:novaculite_bricks.name=Polished Novaculite Bricks
+tile.cav:phyllite_bricks.name=Phyllite Bricks
+tile.cav:chert_bricks.name=Polished Chert Bricks
+tile.cav:siltstone_bricks.name=Polished Siltstone Bricks
+tile.cav:amphibolite_bricks.name=Polished Amphibolite Bricks
+tile.cav:flint_block.name=Flint Block
+tile.cav:river_rock.name=River Rock
+tile.cav:soapstone.name=Soapstone
+tile.cav:mariposite.name=Mariposite
+tile.cav:cobbled_sandstone.name=Cobbled Sandstone
+tile.cav:sandstone_bricks.name=Sandstone Bricks
+item.cav:sandstone_brick.name=Sandstone Brick
+tile.cav:mud.name=Mud
+tile.cav:mudstone.name=Mudstone
+tile.cav:smooth_mudstone.name=Smooth Mudstone
+tile.cav:cut_mudstone.name=Cut Mudstone
+tile.cav:chiseled_mudstone.name=Chiseled Mudstone
+tile.cav:cobbled_mudstone.name=Cobbled Mudstone
+tile.cav:creative_clay.name=Creative Clay
+
+## 1.2.0 Update (Beta 2.0)
+
+tile.cav:flint_ore.name=Flint Ore
+tile.cav:feldspar_ore.name=Feldspar Ore
+tile.cav:mica_ore.name=Mica Ore
+tile.cav:white_sand.name=White Sand
+tile.cav:gypsum.name=Gypsum
+tile.cav:banded_sandstone.name=Banded Sandstone
+item.cav:feldspar.name=Feldspar
+item.cav:mica.name=Mica
+item.cav:gypsum_dust.name=Gypsum Dust
+item.cav:ruby.name=Ruby
+tile.cav:ruby_ore.name=Ruby Ore
+tile.cav:feldspar_block.name=Block of Feldspar
+tile.cav:mica_block.name=Block of Mica
+tile.cav:polished_schist.name=Polished Schist
+tile.cav:schist_bricks.name=Polished Schist Bricks
+tile.cav:polished_pegmatite.name=Polished Pegmatite
+tile.cav:pegmatite_bricks.name=Polished Pegmatite Bricks
+tile.cav:polished_diabase.name=Polished Diabase
+tile.cav:diabase_bricks.name=Polished Diabase Bricks
+tile.cav:polished_end_stone.name=Polished End Stone
+item.cav:flint_hoe.name=Flint Hoe
+item.cav:flint_shovel.name=Flint Shovel
+item.cav:flint_axe.name=Flint Axe
+item.cav:flint_pickaxe.name=Flint Pickaxe
+item.cav:flint_sword.name=Flint Sword
+tile.cav:polished_mariposite.name=Polished Mariposite
+tile.cav:mariposite_bricks.name=Polished Mariposite Bricks
+tile.cav:sheetrock.name=Sheetrock
+tile.cav:polished_hornfels.name=Polished Hornfels
+tile.cav:hornfels_bricks.name=Polished Hornfels Bricks
+
+## 2.0.0 More Rocks Update Public Release
+
+item.cav:novaculite_brick.name=Novaculite Brick
+item.cav:phyllite_brick.name=Phyllite Brick
+tile.cav:ruby_block.name=Ruby Block
+tile.cav:cut_smooth_end_stone.name= Cut Smooth End Stone
+tile.cav:sheetrock_black.name=Black Sheetrock
+tile.cav:sheetrock_blue.name=Blue Sheetrock
+tile.cav:sheetrock_brown.name=Brown Sheetrock
+tile.cav:sheetrock_cyan.name=Cyan Sheetrock
+tile.cav:sheetrock_gray.name=Gray Sheetrock
+tile.cav:sheetrock_green.name=Green Sheetrock
+tile.cav:sheetrock_light_blue.name=Light Blue Sheetrock
+tile.cav:sheetrock_magenta.name=Magenta Sheetrock
+tile.cav:sheetrock_orange.name=Orange Sheetrock
+tile.cav:sheetrock_pink.name=Pink Sheetrock
+tile.cav:sheetrock_purple.name=Purple Sheetrock
+tile.cav:sheetrock_red.name=Red Sheetrock
+tile.cav:sheetrock_silver.name=Light Gray Sheetrock
+tile.cav:sheetrock_yellow.name=Yellow Sheetrock
+tile.cav:sheetrock_lime.name=Lime Sheetrock
+tile.cav:sheetrock_tan.name=Tan Sheetrock
+tile.cav:sheetrock_peach.name=Peach Sheetrock
+item.cav:tan_dye.name=Tan Dye
+item.cav:peach_dye.name=Peach Dye
+tile.cav:tan_concrete.name=Tan Concrete
+tile.cav:tan_concrete_powder.name=Tan Concrete Powder
+tile.cav:tan_terracotta.name=Tan Terracotta
+tile.cav:tan_glazed_terracotta.name=Tan Glazed Terracotta
+tile.cav:tan_glass.name=Tan Stained Glass
+tile.cav:tan_hard_glass.name=Tan Stained Hardened Glass
+tile.cav:tan_wool.name=Tan Wool
+tile.cav:peach_concrete.name=Peach Concrete
+tile.cav:peach_concrete_powder.name=Peach Concrete Powder
+tile.cav:peach_terracotta.name=Peach Terracotta
+tile.cav:peach_glazed_terracotta.name=Peach Glazed Terracotta
+tile.cav:peach_glass.name=Peach Stained Glass
+tile.cav:peach_hard_glass.name=Peach Stained Hardened Glass
+tile.cav:peach_wool.name=Peach Wool
+
+## 2.1.0 Depths and Construction Update
+
+tile.cav:diorite_bricks.name=Polished Diorite Bricks
+tile.cav:granite_bricks.name=Polished Granite Bricks
+tile.cav:andesite_bricks.name=Polished Andesite Bricks
+tile.cav:deepslate_ruby_ore.name=Deepslate Ruby Ore
+tile.cav:deepslate_mica_ore.name=Deepslate Mica Ore
+tile.cav:deepslate_feldspar_ore.name=Deepslate Feldspar Ore
+tile.cav:deepslate_flint_ore.name=Deepslate Flint Ore
+
+tile.cav:diorite_brick_slab.name=Polished Diorite Brick Slab
+tile.cav:granite_brick_slab.name=Polished Granite Brick Slab
+tile.cav:andesite_brick_slab.name=Polished Andesite Brick Slab
+
+
+tile.cav:gabbro_slab.name=Gabbro Slab
+tile.cav:rhyolite_slab.name=Rhyolite Slab
+tile.cav:dacite_slab.name=Dacite Slab
+tile.cav:shale_slab.name=Shale Slab
+tile.cav:schist_slab.name=Schist Slab
+tile.cav:gneiss_slab.name=Gneiss Slab
+tile.cav:marble_slab.name=Marble Slab
+tile.cav:limestone_slab.name=Limestone Slab
+tile.cav:polished_marble_slab.name=Polished Marble Slab
+tile.cav:polished_limestone_slab.name=Polished Limestone Slab
+tile.cav:polished_gabbro_slab.name=Polished Gabbro Slab
+tile.cav:polished_dacite_slab.name=Polished Dacite Slab
+tile.cav:pearlstone_slab.name=Pearlstone Slab
+tile.cav:polished_pearlstone_slab.name=Polished Pearlstone Slab
+tile.cav:cut_pearlstone_slab.name=Cut Pearlstone Slab
+tile.cav:voidstone_slab.name=Voidstone Slab
+tile.cav:polished_voidstone_slab.name=Polished Voidstone Slab
+tile.cav:cut_voidstone_slab.name=Cut Voidstone Slab
+tile.cav:purpurite_slab.name=Purpurite Slab
+tile.cav:polished_purpur_slab.name=Polished Purpur Slab
+tile.cav:smooth_end_slab.name=Smooth End Stone Slab
+tile.cav:obsidian_brick_slab.name=Obsidian Brick Slab
+tile.cav:cracked_end_brick_slab.name=Cracked End Stone Brick Slab
+tile.cav:smooth_end_stone_slab.name=Smooth End Stone Slab
+tile.cav:diabase_slab.name=Diabase Slab
+tile.cav:pegmatite_slab.name=Pegmatite Slab
+tile.cav:dolostone_slab.name=Dolostone Slab
+tile.cav:novaculite_slab.name=Novaculite Slab
+tile.cav:phyllite_slab.name=Phyllite Slab
+tile.cav:chert_slab.name=Chert Slab
+tile.cav:siltstone_slab.name=Siltstone Slab
+tile.cav:amphibolite_slab.name=Amphibolite Slab
+tile.cav:hornfels_slab.name=Hornfels Slab
+tile.cav:polished_rhyolite_slab.name=Polished Rhyolite Slab
+tile.cav:polished_shale_slab.name=Polished Shale Slab
+tile.cav:polished_cobblestone_slab.name=Polished Cobblestone Slab
+tile.cav:polished_phyllite_slab.name=Polished Phyllite Slab
+tile.cav:polished_dolostone_slab.name=Polished Dolostone Slab
+tile.cav:polished_siltstone_slab.name=Polished Siltstone Slab
+tile.cav:polished_chert_slab.name=Polished Chert Slab
+tile.cav:polished_amphibolite_slab.name=Polished Amphibolite Slab
+tile.cav:polished_novaculite_slab.name=Polished Novaculite Slab
+tile.cav:rhyolite_brick_slab.name=Polished Rhyolite Brick Slab
+tile.cav:marble_brick_slab.name=Polished Marble Brick Slab
+tile.cav:limestone_brick_slab.name=Polished Limestone Brick Slab
+tile.cav:dacite_brick_slab.name=Polished Dacite Brick Slab
+tile.cav:gabbro_brick_slab.name=Polished Gabbro Brick Slab
+tile.cav:shale_brick_slab.name=Polished Shale Brick Slab
+tile.cav:dolostone_brick_slab.name=Polished Dolostone Brick Slab
+tile.cav:novaculite_brick_slab.name=Polished Novaculite Brick Slab
+tile.cav:phyllite_brick_slab.name=Phyllite Brick Slab
+tile.cav:chert_brick_slab.name=Polished Chert Brick Slab
+tile.cav:siltstone_brick_slab.name=Polished Siltstone Brick Slab
+tile.cav:amphibolite_brick_slab.name=Polished Amphibolite Brick Slab
+tile.cav:river_rock_slab.name=River Rock Slab
+tile.cav:mariposite_slab.name=Mariposite Slab
+tile.cav:cobbled_sandstone_slab.name=Cobbled Sandstone Slab
+tile.cav:sandstone_brick_slab.name=Sandstone Brick Slab
+tile.cav:mudstone_slab.name=Mudstone Slab
+tile.cav:smooth_mudstone_slab.name=Smooth Mudstone Slab
+tile.cav:cut_mudstone_slab.name=Cut Mudstone Slab
+tile.cav:cobbled_mudstone_slab.name=Cobbled Mudstone Slab
+tile.cav:banded_sandstone_slab.name=Banded Sandstone Slab
+tile.cav:polished_schist_slab.name=Polished Schist Slab
+tile.cav:schist_brick_slab.name=Polished Schist Brick Slab
+tile.cav:polished_pegmatite_slab.name=Polished Pegmatite Slab
+tile.cav:pegmatite_brick_slab.name=Polished Pegmatite Brick Slab
+tile.cav:polished_diabase_slab.name=Polished Diabase Slab
+tile.cav:diabase_brick_slab.name=Polished Diabase Brick Slab
+tile.cav:polished_end_slab.name=Polished End Stone Slab
+tile.cav:polished_mariposite_slab.name=Polished Mariposite Slab
+tile.cav:mariposite_brick_slab.name=Polished Mariposite Brick Slab
+
+##Upcoming
+tile.cav:gypsum_slab.name=Gypsum Slab
+tile.cav:sheetrock_slab.name=Sheetrock Slab
+tile.cav:polished_hornfels_slab.name=Polished Hornfels Slab
+tile.cav:hornfels_brick_slab.name=Polished Hornfels Brick Slab
+tile.cav:cut_smooth_end_slab.name= Cut Smooth End Stone Slab
+tile.cav:sheetrock_black_slab.name=Black Sheetrock Slab
+tile.cav:sheetrock_blue_slab.name=Blue Sheetrock Slab
+tile.cav:sheetrock_brown_slab.name=Brown Sheetrock Slab
+tile.cav:sheetrock_cyan_slab.name=Cyan Sheetrock Slab
+tile.cav:sheetrock_gray_slab.name=Gray Sheetrock Slab
+tile.cav:sheetrock_green_slab.name=Green Sheetrock Slab
+tile.cav:sheetrock_light_blue_slab.name=Light Blue Sheetrock Slab
+tile.cav:sheetrock_magenta_slab.name=Magenta Sheetrock Slab
+tile.cav:sheetrock_orange_slab.name=Orange Sheetrock Slab
+tile.cav:sheetrock_pink_slab.name=Pink Sheetrock Slab
+tile.cav:sheetrock_purple_slab.name=Purple Sheetrock Slab
+tile.cav:sheetrock_red_slab.name=Red Sheetrock Slab
+tile.cav:sheetrock_silver_slab.name=Light Gray Sheetrock Slab
+tile.cav:sheetrock_yellow_slab.name=Yellow Sheetrock Slab
+tile.cav:sheetrock_lime_slab.name=Lime Sheetrock Slab
+tile.cav:sheetrock_tan_slab.name=Tan Sheetrock Slab
+tile.cav:sheetrock_peach_slab.name=Peach Sheetrock Slab
+
+
+## Vanilla Names
+## Note: Do not remove these, they are needed
+
+tile.purpur_block.default.name=Cut Purpur
+tile.stone_slab2.purpur.name=Cut Purpur Slab
+
+tips.game.1=Cavern adds 24 rocks to the overworld!
+tips.game.2=Mine purpurite to craft new purpur blocks.
+tips.game.3=Cavern v2.0 added lots of new rocks and features!
+tips.game.4=All rocks have a unique crafting recipe
+tips.game.5=End Stone can be used in place of Cobblestone in crafting recipes.
+tips.game.6=End Sand can be used in place of Sand in crafting recipes.
+tips.game.7=Too broke for iron tools? Try using the new flint tools!
+tips.game.8=Flint Tools mine the custom Cavern blocks faster!
+tips.game.9=Use Popped Chorusfruit and Blaze Powder to make an End Lamp!
+tips.game.10=Pearlstone and Voidstone are available in Polished and Cut variants.
+tips.game.11=Smelt End Sand to make End Glass.
+tips.game.12=The Stonecutter is your friend!
+tips.game.13=Ocean biomes have many exclusive rocks like Diatomite and Novaculite!
+tips.game.14=Dig deeper to find different types of rocks!
+tips.game.15=Activate Expiramental Gameplay for more features.
+tips.game.16=Most rocks have a polished and bricks variants.
+tips.game.17=There are many rocks and ores exclusive to ocean biomes!
+tips.game.18=Different ores are more abundant at different Y-levels, experiment to discover what works best!
+tips.game.19=Before you mine diamonds, redstone or gold, make sure you're using an iron or diamond pickaxe or the ore won't drop.
+tips.game.20=Dolostone, Limestone, and Gabbro can be found in Oceans and Beaches.
+tips.game.21=The End has many new types of blocks, mine down and discover them yourself!
+tips.game.22=Gilded Obsidian is a special type of Diamond Ore only found in the End.
+tips.game.23=Siltstone can be found in Deserts and Badlands.
+tips.game.24=Mud and Mudstone can be found in Rivers and Swamps.
+tips.game.25=River Rock is a multicolored cobblestone that is found in Rivers.
+tips.game.26=Flint Ore is a better source of Flint Shards than Gravel.
+tips.game.27=Use /function creative to get Creative Clay, which can be used in the stonecutter to get all blocks.
+tips.game.28=Blow up the ground with TNT to get large amounts of rock!
+tips.game.29=Sandstone can now be crafted into bricks!
+tips.game.30=Cavern v2.0: More Rocks Update added lots of new blocks and items.
+tips.game.31=All rocks are layered, so mine at certain layers to get certain rocks.
+tips.game.32=Craft Sheetrock with paper and gypsum dust for a new pastel color pallette.
+tips.game.33=Smelt Phyllite and Novaculite to get their respective bricks.
+tips.game.34=Trade rubies with Wandering Traders for valuable items.
+tips.game.35=Craft the all new tan dye with mica.
+tips.game.36=Craft tan and white dye together to make peach dye.
+tips.game.37=Concrete, concrete powder, stained glass, hardened glass, terracotta, and wool now have tan and peach variants!
+tips.game.38=Coming soon to CurseForge!
+tips.game.39=Cavern has many updates planned for the future
+tips.game.40=Diorite, you either love it or hate it.
+tips.game.41=Phantoms are dangerous mobs that appear during the night. Make sure to sleep regularly!
+tips.game.42=Zombies turn into drowned if they sink underwater.
+tips.game.43=Minecraft Live takes place every year! Look out for the next one!
+tips.game.44=Using fireworks boosts elytra speed in mid air. Just... make sure they don't explode, otherwise it'll hurt BADLY!
+tips.game.45=Gold is most common in mesa biomes.
+tips.game.46=Do people actually read these?
+tips.game.47=Infinite wonders, Endless possibilities.
+tips.game.48=DON'T LEAVE TREES FLOATING
+tips.game.49=Sprint in water to swim!
+tips.game.50=Riptide enchantment will propel you through the air in the rain.
+tips.game.51=Minecraft Live is a worldwide interactive live-streaming event. Grab your items and join the party!
+tips.game.52=Be nice to animals!
+tips.game.53=The Beacon is a powerful item that can only be crafted with a nether star from the Wither!
+tips.game.54=Don't kill dolphins, you monster!
+tips.game.55=Did you know that nether stars can't be destroyed by explosions?
+tips.game.56=When digging straight up, place a torch at your feet to break any sand or gravel that could potentially fall down on you.
+tips.game.57=You can barter with Piglins
+tips.game.58=Shear a Beehive or nest to get Honeycomb, use a Bottle to get honey
+tips.game.59=Place a Campfire under a Beehive or nest to harvest honey peacefully. Your bees will thank you.
+tips.game.60=Respawning in the Nether requires a charged Respawn Anchor
+tips.game.61=You can charge a Respawn Anchor with Glowstone
+tips.game.62=You can breed Hoglins with Crimson Fungus, but it is dangerous!
+
+## ============================================================
+
+## More Ores Tools:
+tile.oh:mithril_ore_d.name=Mithril Ore Deepslate
+tile.oh:mithril_block.name=Mithril Block
+tile.oh:mithril_ore.name=Mithril Ore
+
+tile.oh:titanium_ore_d.name=Titanium Ore Deepslate
+tile.oh:titanium_block.name=Titanium Block
+tile.oh:titanium_ore.name=Titanium Ore
+
+tile.oh:cobalto_ore.name=Cobalto Ore
+tile.oh:ruby_ore.name=Ruby Ore
+tile.oh:jade_ore.name=Jade Ore
+tile.oh:tin_ore.name=Tin Ore
+tile.oh:mesa.name=Hammers Table
+tile.oh:cobalto_block.name=Cobalto Block
+tile.oh:ruby_block.name=Ruby Block
+tile.oh:jade_block.name=Jade Block
+tile.oh:bronce_block.name=Bronce Block
+tile.oh:migtinio_ore.name=Migtinio Ore
+tile.oh:migtinio_block.name=Migtinio Block
+tile.oh:onyx_ore.name=Onyx Ore
+tile.oh:onyx_block.name=Onyx Block
+tile.oh:enderite_ore.name=Enderite Ore
+tile.oh:enderite_block.name=Enderite Block
+tile.oh:cobalto_ore_d.name=Cobalto Ore Deepslate
+tile.oh:ruby_ore_d.name=Ruby Ore Deepslate
+tile.oh:jade_ore_d.name=Jade Ore Deepslate
+tile.oh:migtinio_ore_d.name=Migtinio Ore Deepslate
+tile.oh:onyx_ore_d.name=Onyx Ore Deepslate
+tile.oh:onyx_ore_n.name=Onyx Ore Netherrack
+tile.oh:enderite_ore_d.name=Enderite Ore Deepslate
+tile.oh:tin_ore_d.name=Tin Ore Deepslate
+tile.oh:tin_block.name=Tin Block
+tile.oh:tourmaline_ore_d.name=Tourmaline Ore Deepslate
+tile.oh:tourmaline_block.name=Tourmaline Block
+tile.oh:tourmaline_ore.name=Tourmaline Ore
+tile.oh:paladium_ore_d.name=Paladium Ore Deepslate
+tile.oh:paladium_ore_n.name=Paladium Ore Netherrack
+tile.oh:paladium_block.name=Paladium Block
+tile.oh:paladium_ore.name=Paladium Ore
+tile.oh:adamantite_ore_d.name=Adamantite Ore Deepslate
+tile.oh:adamantite_block.name=Adamantite Block
+tile.oh:adamantite_ore.name=Adamantite Ore
+tile.oh:platinum_ore_d.name=Platinum Ore Deepslate
+tile.oh:platinum_block.name=Platinum Block
+tile.oh:platinum_ore.name=Platinum Ore
+tile.oh:topaz_ore_d.name=Topaz Ore Deepslate
+tile.oh:topaz_block.name=Topaz Block
+tile.oh:topaz_ore.name=Topaz Ore
+tile.oh:orichalcum_ore_d.name=Orichalcum Ore Deepslate
+tile.oh:orichalcum_ore_n.name=Orichalcum Ore Netherrack
+tile.oh:orichalcum_block.name=Orichalcum Block
+tile.oh:orichalcum_ore.name=Orichalcum Ore
+entity.oh:magma_zombie.name=Magma Zombie
+item.spawn_egg.entity.oh:magma_zombie.name=Spawn §4Magma §eZombie
+entity.oh:ores_trader.name=Ores Trader
+item.spawn_egg.entity.oh:ores_trader.name=Spawn §2Ores §6Trader
+entity.oh:mud_spider.name=Mud Spider
+item.spawn_egg.entity.oh:mud_spider.name=Spawn Mud Spider
+entity.oh:spooky_golem.name=Spooky Golem
+item.spawn_egg.entity.oh:spooky_golem.name=Spawn Spooky Golem
+
+## ============================================================
+
+## Food Expansion:
+##bridge-file-version: #166
+pack.name=Strat's Food Expansion Addon!
+pack.description=Food Add-on by Stratospheer!
+
+##Blocks
+tile.strat:crop_bush.name=Crop Bush
+tile.strat:salt_ore.name=Salt Ore
+tile.strat:toaster.name=Toaster
+tile.strat:cheese_block.name=Cheese Block
+tile.strat:cheese_pizza_block.name=Cheese Pizza
+tile.strat:churn.name=Churn
+tile.strat:chopping_board.name=Chopping Board
+tile.strat:pot.name=Pot
+tile.strat:frying_pan.name=Skillet
+tile.strat:maple_sapling.name=Maple Sapling
+tile.strat:maple_leaves.name=Maple Leaves
+tile.strat:maple_log.name=Maple Log
+tile.strat:maple_planks.name=Maple Wood Planks
+tile.strat:maple_slab.name=Maple Wood Slab
+tile.strat:meat_feast_pizza_block.name=Meat Feast Pizza
+tile.strat:orange_sapling.name=Orange Sapling
+tile.strat:pepperoni_pizza_block.name=Pepperoni Pizza
+tile.strat:sausage_pizza_block.name=Sausage Pizza
+tile.strat:tomato_crop.name=Tomato Crop
+tile.strat:lettuce_crop.name=Lettuce Crop
+tile.strat:banana_crop.name=Banana Crop
+tile.strat:orange_crop.name=Orange Crop
+tile.strat:banana_sapling.name=Banana Sapling
+tile.strat:mortar_and_pestle.name=Mortar and Pestle
+tile.strat:chocolate_cake.name=Chocolate Cake
+tile.strat:jar_block.name=Glass Jar
+tile.strat:jam_jar_block.name=Jam
+tile.strat:marmalade_jar_block.name=Marmalade
+tile.strat:maple_syrup_jar_block.name=Maple Syrup
+tile.strat:apple_sapling=Apple Sapling
+tile.strat:apple_crop.name=Apple Crop
+tile.strat:apple_pie_block.name=Apple Pie
+tile.strat:pumpkin_pie_block.name=Pumpkin Pie
+tile.strat:cheese_cake.name=Cheese Cake
+tile.strat:christmas_cake.name=Christmas Cake
+tile.strat:ceramic_plate_block.name=Ceramic Plate
+tile.strat:blender.name=Blender
+tile.strat:vanilla_sapling.name=Vanilla Sapling
+tile.strat:vanilla_crop.name=Vanilla Crop
+tile.strat:tea_crop.name=Tea Crop
+tile.strat:coffee_crop.name=Coffee Beans
+tile.strat:coffee_bean_sapling.name=Coffee Bean Sapling
+
+##Food
+item.strat:apple_pie=Apple Pie
+item.strat:apple_pie_slice=Apple Pie Slice
+item.strat:bacon=Raw Bacon
+item.strat:bacon_and_eggs=Bacon and Eggs
+item.strat:bacon_and_eggs2=Bacon and Eggs
+item.strat:bacon_sandwich=Bacon Sandwich
+item.strat:baguette=Baguette
+item.strat:banana=Banana
+item.strat:banana_bread=Banana Bread
+item.strat:banana_split=Banana Split
+item.strat:bangers_and_mash=Bangers and Mash
+item.strat:bangers_and_mash2=Bangers and Mash
+item.strat:batter=Batter
+item.strat:beef_stew=Beef Stew
+item.strat:blt=BLT
+item.strat:bread_slice=Bread Slice
+item.strat:butter=Butter
+item.strat:buttered_pancake=Buttered Pancake
+item.strat:buttered_potato=Buttered Potato
+item.strat:buttered_toast=Buttered Toast
+item.strat:candy_cane=Candy Cane
+item.strat:ceramic_plate=Ceramic Plate
+item.strat:cheese=Cheese
+item.strat:cheese_block_item=Cheese Block
+item.strat:cheese_cake_item=Cheesecake
+item.strat:cheese_cake_slice=Cheesecake Slice
+item.strat:cheese_pizza=Cheese Pizza
+item.strat:cheese_pizza_slice=Cheese Pizza Slice
+item.strat:cheese_toastie=Grilled Cheese
+item.strat:cheeseburger=Cheeseburger
+item.strat:deluxe_burger=Deluxe Burger
+item.strat:chicken_and_waffles=Chicken and Waffles
+item.strat:chicken_and_waffles2=Chicken and Waffles
+item.strat:roast_chicken=Roast Chicken
+item.strat:roast_chicken2=Roast Chicken
+item.strat:chicken_nuggets=Chicken Nuggets
+item.strat:chicken_slices=Chicken Slices
+item.strat:chicken_soup=Chicken Soup
+item.strat:chocolate_banana=Chocolate Banana
+item.strat:chocolate_donut=Chocolate Donut
+item.strat:chocolate_sprinkled_donut=Chocolate Sprinkled Donut
+item.strat:chocolate_bar=Chocolate Bar
+item.strat:chocolate_cake_item=Chocolate Cake
+item.strat:chocolate_cake_slice=Chocolate Cake Slice
+item.strat:chocolate_orange=Chocolate Orange
+item.strat:chicken_wing=Raw Chicken Wing
+item.strat:churn_item=Churn
+item.strat:clay_plate=Clay Plate
+item.strat:cocoa_powder=Cocoa Powder
+item.strat:cooked_bacon=Cooked Bacon
+item.strat:cooked_chicken_wing=Cooked Chicken Wing
+item.strat:cooked_sausage=Cooked Sausage
+item.strat:corn_dog=Corn Dog
+item.strat:cookie_dough=Cookie Dough
+item.strat:cookie_dough_ice_cream=Cookie Dough Ice Cream
+item.strat:dirty_paper_plate=Dirty Paper Plate
+item.strat:dough=Dough
+item.strat:donut=Donut
+item.strat:fish_and_chips=Fish and Chips
+item.strat:fish_and_chips2=Fish and Chips
+item.strat:fried_egg=Fried Egg
+item.strat:fries=French Fries
+item.strat:frying_pan_item=Skillet
+item.strat:hotdog=Hotdog
+item.strat:ice_cream_cone=Ice Cream Cone
+item.strat:ice_cream=Vanilla Ice Cream
+item.strat:chocolate_ice_cream=Chocolate Ice Cream
+item.strat:sweet_berry_ice_cream=Sweet Berry Ice Cream
+item.strat:jam=Jam
+item.strat:jam_on_toast=Jam on Toast
+item.strat:jam_pancake=Jam Pancake
+item.strat:lettuce=Lettuce
+item.strat:lettuce_seeds=Lettuce Seeds
+item.strat:maple_syrup=Maple Syrup
+item.strat:maple_syrup_pancake=Maple Syrup Pancake
+item.strat:marmalade=Marmalade
+item.strat:marmalade_on_toast=Marmalade on Toast
+item.strat:marshmallow=Marshmallow
+item.strat:mashed_potato=Mashed Potato
+item.strat:meat_feast_pizza=Meat Feast Pizza
+item.strat:meat_feast_pizza_slice=Meat Feast Pizza Slice
+item.strat:nuggets_and_fries=Nuggets and Fries
+item.strat:nuggets_and_fries2=Nuggets and Fries
+item.strat:orange=Orange
+item.strat:pancake=Pancake
+item.strat:paper_plate=Paper Plate
+item.strat:pasta=Pasta
+item.strat:pepperoni=Pepperoni
+item.strat:pepperoni_pizza=Pepperoni Pizza
+item.strat:pepperoni_pizza_slice=Pepperoni Pizza Slice
+item.strat:pot_item=Pot
+item.strat:pizza_dinner=Pizza Dinner
+item.strat:pizza_dinner2=Pizza Dinner
+item.strat:raw_cheese_pizza=Raw Cheese Pizza
+item.strat:raw_donut=Raw Donut
+item.strat:salad=Tomato Salad
+item.strat:salt=Salt
+item.strat:sausage=Raw Sausage
+item.strat:sausage_pizza=Sausage Pizza
+item.strat:sausage_pizza_slice=Sausage Pizza Slice
+item.strat:sausage_sandwich=Sausage Sandwich
+item.strat:smore=S'more
+item.strat:spaghetti_bolognese=Spaghetti
+item.strat:spaghetti_bolognese2=Spaghetti
+item.strat:steak_and_chips=Steak and Fries
+item.strat:steak_and_chips2=Steak and Fries
+item.strat:toast=Toast
+item.strat:toaster_item=Toaster
+item.strat:tomato=Tomato
+item.strat:tomato_seeds=Tomato Seeds
+item.strat:tomato_soup=Tomato Soup
+item.strat:flour=Wheat Flour
+item.strat:waffle=Waffle
+item.strat:jam_waffle=Jam Waffle
+item.strat:maple_syrup_waffle=Maple Syrup Waffle
+item.strat:pumpkin_pie_item=Pumpkin Pie
+item.strat:pumpkin_pie_slice=Pumpkin Pie Slice
+item.strat:christmas_cake_item=Christmas Cake
+item.strat:christmas_cake_slice=Christmas Cake Slice
+item.strat:milk_and_cookies=Milk and Cookies
+item.strat:milk_and_cookies2=Milk and Cookies
+item.strat:yule_log=Yule Log
+item.strat:lasagne=Lasagna
+item.strat:cornish_pasty=Cornish Pasty
+item.strat:ice_cream_sandwich=Ice Cream Sandwich
+item.strat:drinking_glass=Drinking Glass
+item.strat:water_glass=Glass of Water
+item.strat:milk_glass=Glass of Milk
+item.strat:apple_juice=Apple Juice
+item.strat:orange_juice=Orange Juice
+item.strat:carrot_juice=Carrot Juice
+item.strat:beet_juice=Beet Juice
+item.strat:melon_smoothie=Melon Smoothie
+item.strat:banana_smoothie=Banana Smoothie
+item.strat:fruit_smoothie=Fruit Smoothie
+item.strat:cookies_and_cream_smoothie=Cookies and Cream Smoothie
+item.strat:chocolate_milkshake=Chocolate Milkshake
+item.strat:sweet_berry_milkshake=Sweet Berry Milkshake
+item.strat:cookie_dough_milkshake=Cookie Dough Milkshake
+item.strat:vanilla_milkshake=Vanilla Milkshake
+item.strat:vanilla_bean=Vanilla Bean
+item.strat:vanilla=Vanilla
+item.strat:clay_mug=Clay Mug
+item.strat:ceramic_mug=Ceramic Mug
+item.strat:chocolate_milk=Chocolate Milk
+item.strat:hot_chocolate=Hot Cocoa
+item.strat:bubbly_water=Bubbly Water
+item.strat:cola_glass=Glass of Soda
+item.strat:tea=Cup of Tea
+item.strat:coffee=Cup of Coffee
+
+##Misc Items
+item.strat:crop_bush_item=Crop Bush
+item.strat:kitchen_knife=Kitchen Knife
+item.strat:maple_leaf=Maple Leaf
+item.strat:maple_sapling_item=Maple Sapling
+item.strat:banana_sapling_item=Banana Sapling
+item.strat:orange_sapling_item=Orange Sapling
+item.strat:apple_sapling_item=Apple Sapling
+item.strat:cook_book=Cook Book
+item.strat:glass_jar=Glass Jar
+item.strat:maple_shears=Maple Shears
+item.strat:chubby_bunny_trophy=Chubby Bunny Trophy
+item.strat:farmers_trophy=Farmer's Trophy
+item.strat:raw_foodism_trophy=Raw Foodism Trophy
+item.strat:vanilla_sapling_item=Vanilla Sapling
+item.strat:tea_leaf=Tea Leaf
+item.strat:coffee_beans=Coffee Beans
+item.strat:coffee_bean_sapling_item=Coffee Bean Sapling
+
+item.strat:crop_bush_remover=Crop Bush Remover
+
+## ============================================================
+
+## Incubation
+tile.incubation:nest.name=Chicken Nest
+item.incubation:fried_egg.name=Fried Egg
+item.incubation:scrambled_eggs.name=Scrambled Eggs
+
+## ============================================================
+
+## Feather Plucking:
+action.interact.shear_chicken=Shear
+
+## ============================================================
+
+## Items
+item.paint_brush.name=Paint Brush
+
+
+## Blocks
+tile.carpentry_table.name=Carpentry Table
+
+tile.rustic.oak.table.name=Oak Table
+tile.rustic.spruce.table.name=Spruce Table
+tile.rustic.birch.table.name=Birch Table
+tile.rustic.jungle.table.name=Jungle Table
+tile.rustic.acacia.table.name=Acacia Table
+tile.rustic.dark_oak.table.name=Dark Oak Table
+tile.rustic.crimson.table.name=Crimson Table
+tile.rustic.warped.table.name=Warped Table
+tile.rustic.oak.stool.name=Oak Stool
+tile.rustic.spruce.stool.name=Spruce Stool
+tile.rustic.birch.stool.name=Birch Stool
+tile.rustic.jungle.stool.name=Jungle Stool
+tile.rustic.acacia.stool.name=Acacia Stool
+tile.rustic.dark_oak.stool.name=Dark Oak Stool
+tile.rustic.crimson.stool.name=Crimson Stool
+tile.rustic.warped.stool.name=Warped Stool
+tile.rustic.book.name=Book
+tile.rustic.radio.name=Radio
+tile.rustic.lamp.name=Lamp
+tile.rustic.trash_can.name=Trash Can
+tile.rustic.clock.name=Clock
+tile.rustic.bottle.name=Bottle
+tile.rustic.vase.name=Vase
+tile.rustic.curtain.name=Curtain
+tile.rustic.step_ladder.name=Step Ladder
+tile.rustic.plant_pot.name=Plant Pot
+tile.rustic.grandfather_clock.name=Grandfather Clock
+tile.rustic.ceiling_fan.name=Ceiling Fan
+tile.rustic.mounted_goat_horn.name=Mounted Goat Horn
+tile.rustic.chandelier.name=Chandelier
+tile.rustic.shelve.name=Shelve
+tile.rustic.oak.rocking_chair.name=Oak Rocking Chair
+tile.rustic.spruce.rocking_chair.name=Spruce Rocking Chair
+tile.rustic.birch.rocking_chair.name=Birch Rocking Chair
+tile.rustic.jungle.rocking_chair.name=Jungle Rocking Chair
+tile.rustic.acacia.rocking_chair.name=Acacia Rocking Chair
+tile.rustic.dark_oak.rocking_chair.name=Dark Oak Rocking Chair
+tile.rustic.crimson.rocking_chair.name=Crimson Rocking Chair
+tile.rustic.warped.rocking_chair.name=Warped Rocking Chair
+tile.rustic.oak.chair.name=Oak Chair
+tile.rustic.spruce.chair.name=Spruce Chair
+tile.rustic.birch.chair.name=Birch Chair
+tile.rustic.jungle.chair.name=Jungle Chair
+tile.rustic.acacia.chair.name=Acacia Chair
+tile.rustic.dark_oak.chair.name=Dark Oak Chair
+tile.rustic.crimson.chair.name=Crimson Chair
+tile.rustic.warped.chair.name=Warped Chair
+tile.rustic.television.name=Television
+tile.rustic.oak.coffee_table.name=Oak Coffee Table
+tile.rustic.spruce.coffee_table.name=Spruce Coffee Table
+tile.rustic.birch.coffee_table.name=Birch Coffee Table
+tile.rustic.jungle.coffee_table.name=Jungle Coffee Table
+tile.rustic.acacia.coffee_table.name=Acacia Coffee Table
+tile.rustic.dark_oak.coffee_table.name=Dark Oak Coffee Table
+tile.rustic.crimson.coffee_table.name=Crimson Coffee Table
+tile.rustic.warped.coffee_table.name=Warped Coffee Table
+tile.rustic.oak.cabinet.name=Oak Cabinet
+tile.rustic.spruce.cabinet.name=Spruce Cabinet
+tile.rustic.birch.cabinet.name=Birch Cabinet
+tile.rustic.jungle.cabinet.name=Jungle Cabinet
+tile.rustic.acacia.cabinet.name=Acacia Cabinet
+tile.rustic.dark_oak.cabinet.name=Dark Oak Cabinet
+tile.rustic.crimson.cabinet.name=Crimson Cabinet
+tile.rustic.warped.cabinet.name=Warped Cabinet
+tile.rustic.oak.sofa.name=Oak Sofa
+tile.rustic.spruce.sofa.name=Spruce Sofa
+tile.rustic.birch.sofa.name=Birch Sofa
+tile.rustic.jungle.sofa.name=Jungle Sofa
+tile.rustic.acacia.sofa.name=Acacia Sofa
+tile.rustic.dark_oak.sofa.name=Dark Oak Sofa
+tile.rustic.crimson.sofa.name=Crimson Sofa
+tile.rustic.warped.sofa.name=Warped Sofa
+tile.rustic.scroll.name=Scroll
+tile.rustic.fire_pit.name=Fire Pit
+
+
+## Entities
+entity.furnideco:seat.name=Seat
+entity.furnideco:storage.name=Storage
+entity.furnideco:spawn_item.name=Spawn Item
+
+
+## Interactions
+action.hint.exit.furnideco:seat=Jump to stand up.
+
+
+## UI
+ui.cabinet.name=Cabinet
+
+## ============================================================
+
+## Workstations
+tile.strat:crafting_station.name=Crafting Station
+tile.strat:stencil_table_oak.name=Stencil Table (Oak)
+tile.strat:stencil_table_spruce.name=Stencil Table (Spruce)
+tile.strat:stencil_table_birch.name=Stencil Table (Birch)
+tile.strat:stencil_table_jungle.name=Stencil Table (Jungle)
+tile.strat:stencil_table_acacia.name=Stencil Table (Acacia)
+tile.strat:stencil_table_dark_oak.name=Stencil Table (Dark Oak)
+tile.strat:stencil_table_maple.name=Stencil Table (Maple)
+tile.strat:stencil_table_lavawood.name=Stencil Table (Lavawood)
+tile.strat:part_builder_oak.name=Part Builder (Oak)
+tile.strat:part_builder_spruce.name=Part Builder (Spruce)
+tile.strat:part_builder_birch.name=Part Builder (Birch)
+tile.strat:part_builder_jungle.name=Part Builder (Jungle)
+tile.strat:part_builder_acacia.name=Part Builder (Acacia)
+tile.strat:part_builder_dark_oak.name=Part Builder (Dark Oak)
+tile.strat:part_builder_maple.name=Part Builder (Maple)
+tile.strat:part_builder_firewood.name=Part Builder (Firewood)
+tile.strat:stencil_table_warped.name=Stencil Table (Warped)
+tile.strat:stencil_table_crimson.name=Stencil Table (Crimson)
+tile.strat:part_builder_warped.name=Part Builder (Warped)
+tile.strat:part_builder_crimson.name=Part Builder (Crimson)
+tile.strat:tool_station.name=Tinker Station
+tile.strat:tool_forge.name=Tinker's Anvil (Iron)
+tile.strat:tool_forge_ardite.name=Tinker's Anvil (Ardite)
+tile.strat:tool_forge_cobalt.name=Tinker's Anvil (Cobalt)
+tile.strat:tool_forge_manyullyn.name=Tinker's Anvil (Manyullyn)
+tile.strat:tool_forge_gold.name=Tinker's Anvil (Gold)
+tile.strat:tool_forge_copper.name=Tinker's Anvil (Copper)
+
+## Smeltery
+tile.strat:grout.name=Grout
+tile.strat:nether_grout.name=Nether Grout
+tile.strat:seared_cobblestone.name=Seared Cobblestone
+tile.strat:seared_stone.name=Seared Stone
+tile.strat:seared_bricks.name=Seared Bricks
+tile.strat:cracked_seared_bricks.name=Cracked Seared Bricks
+tile.strat:fancy_seared_bricks.name=Fancy Seared Bricks
+tile.strat:square_seared_bricks.name=Square Seared Bricks
+tile.strat:triangle_seared_bricks.name=Triangle Seared Bricks
+tile.strat:seared_creeperface.name=Seared Creeperface
+tile.strat:small_seared_bricks.name=Small Seared Bricks
+tile.strat:seared_tiles.name=Seared Tiles
+tile.strat:seared_road.name=Seared Road
+tile.strat:seared_paver.name=Seared Paver
+
+tile.strat:smeltery_controller.name=Smeltery Controller
+
+tile.strat:casting_table.name=Casting Table
+
+tile.strat:casting_basin.name=Casting Basin
+tile.strat:casting_basin_ardite.name=Casting Basin
+tile.strat:casting_basin_manyullyn.name=Casting Basin
+tile.strat:casting_basin_seared_stone.name=Casting Basin
+tile.strat:casting_basin_dirt.name=Casting Basin
+tile.strat:casting_basin_glass.name=Casting Basin
+
+## Ore
+tile.strat:ardite_ore.name=Nether Ardite Ore
+tile.strat:cobalt_ore.name=Nether Cobalt Ore
+
+## Ore Blocks
+tile.strat:raw_ardite_block.name=Block of Raw Ardite
+tile.strat:raw_cobalt_block.name=Block of Raw Cobalt
+
+tile.strat:ardite_block.name=Block of Ardite
+tile.strat:cobalt_block.name=Block of Cobalt
+tile.strat:manyullyn_block.name=Block of Manyullyn
+
+## Seared Tank
+tile.strat:seared_tank.name=Seared Tank (0mb)
+
+tile.strat:seared_tank_lava_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_lava_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_lava_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_lava_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_iron_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_iron_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_iron_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_iron_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_gold_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_gold_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_gold_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_gold_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_copper_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_copper_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_copper_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_copper_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_cobalt_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_cobalt_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_cobalt_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_cobalt_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_ardite_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_ardite_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_ardite_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_ardite_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_manyullyn_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_manyullyn_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_manyullyn_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_manyullyn_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_seared_stone_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_seared_stone_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_seared_stone_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_seared_stone_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_glass_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_glass_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_glass_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_glass_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_liquid_dirt_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_liquid_dirt_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_liquid_dirt_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_liquid_dirt_4.name=Seared Tank (4000mb)
+
+tile.strat:seared_tank_obsidian_1.name=Seared Tank (1000mb)
+tile.strat:seared_tank_obsidian_2.name=Seared Tank (2000mb)
+tile.strat:seared_tank_obsidian_3.name=Seared Tank (3000mb)
+tile.strat:seared_tank_obsidian_4.name=Seared Tank (4000mb)
+
+## Seared Gauge
+tile.strat:seared_gauge.name=Seared Gauge (0mb)
+
+tile.strat:seared_gauge_lava_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_lava_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_lava_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_lava_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_iron_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_iron_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_iron_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_iron_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_gold_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_gold_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_gold_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_gold_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_copper_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_copper_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_copper_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_copper_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_cobalt_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_cobalt_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_cobalt_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_cobalt_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_ardite_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_ardite_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_ardite_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_ardite_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_manyullyn_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_manyullyn_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_manyullyn_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_manyullyn_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_seared_stone_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_seared_stone_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_seared_stone_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_seared_stone_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_glass_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_glass_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_glass_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_glass_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_liquid_dirt_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_liquid_dirt_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_liquid_dirt_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_liquid_dirt_4.name=Seared Gauge (4000mb)
+
+tile.strat:seared_gauge_obsidian_1.name=Seared Gauge (1000mb)
+tile.strat:seared_gauge_obsidian_2.name=Seared Gauge (2000mb)
+tile.strat:seared_gauge_obsidian_3.name=Seared Gauge (3000mb)
+tile.strat:seared_gauge_obsidian_4.name=Seared Gauge (4000mb)
+
+## Seared Melter
+tile.strat:seared_melter.name=Seared Melter
+tile.strat:seared_melter_0.name=Seared Melter
+tile.strat:seared_melter_0_on.name=Seared Melter
+tile.strat:seared_melter_90.name=Seared Melter
+tile.strat:seared_melter_90_on.name=Seared Melter
+tile.strat:seared_melter_180.name=Seared Melter
+tile.strat:seared_melter_180_on.name=Seared Melter
+tile.strat:seared_melter_270.name=Seared Melter
+tile.strat:seared_melter_270_on.name=Seared Melter
+
+## Seared Heater
+tile.strat:seared_heater.name=Seared Heater
+tile.strat:seared_heater_0.name=Seared Heater
+tile.strat:seared_heater_0_on.name=Seared Heater
+tile.strat:seared_heater_90.name=Seared Heater
+tile.strat:seared_heater_90_on.name=Seared Heater
+tile.strat:seared_heater_180.name=Seared Heater
+tile.strat:seared_heater_180_on.name=Seared Heater
+tile.strat:seared_heater_270.name=Seared Heater
+tile.strat:seared_heater_270_on.name=Seared Heater
+
+## Mob Heads
+tile.strat:enderman_head.name=Enderman Head
+tile.strat:blaze_head.name=Blaze Head
+tile.strat:spider_head.name=Spider Head
+
+## Misc
+tile.strat:drying_rack.name=Drying Rack
+tile.strat:stone_torch.name=Stone Torch
+tile.strat:mud_bricks.name=Mud Bricks
+tile.strat:dried_bricks.name=Dried Bricks
+tile.strat:dried_clay.name=Dried Clay
+tile.strat:oak_barricade.name=Oak Barricade
+tile.strat:spruce_barricade.name=Spruce Barricade
+tile.strat:birch_barricade.name=Birch Barricade
+tile.strat:jungle_barricade.name=Jungle Barricade
+tile.strat:acacia_barricade.name=Acacia Barricade
+tile.strat:dark_oak_barricade.name=Dark Oak Barricade
+tile.strat:crimson_barricade.name=Crimson Barricade
+tile.strat:warped_barricade.name=Warped Barricade
+tile.strat:glow.name=Glow
+entity.strat:efln_ball.name=EFLN
+entity.strat:explode.name=EFLN
+
+## Wood
+tile.strat:lavawood.name=Lavawood
+tile.strat:firewood.name=Firewood
+
+## Slime
+tile.strat:congealed_slime_block.name=Congealed Slime Block
+tile.strat:earth_slime_grass.name=Earthslime Grass
+tile.strat:earth_slime_dirt.name=Earthslime Dirt
+tile.strat:earth_slimy_leaves.name=Slimy Leaves
+tile.strat:congealed_blood_block.name=Congealed Blood
+entity.strat:slimesling_launch.name=Slime Sling
+
+## Slabs
+tile.strat:mud_bricks_slab.name=Mud Bricks Slab
+tile.strat:lavawood_slab.name=Lavawood Slab
+tile.strat:firewood_slab.name=Firewood Slab
+tile.strat:seared_bricks_slab.name=Seared Bricks Slab
+tile.strat:brownstone_bricks_slab.name=Brownstone Bricks Slab
+
+## ============================================================
+
+tile.caf:crimsoncraftingtable.name=Crimson Crafting Table
+
+## ============================================================
+
+tile.korbon:void_turf.name=Void Turf
+tile.korbon:void_turf_stone.name=Void Turf with Stones
+tile.korbon:turf_endstone.name=Turf End Stone
+tile.korbon:chorus_log.name=Chorus Log
+tile.korbon:chorus_leaves.name=Chorus Leaves
+tile.korbon:chorus_door.name=Chorus Door
+tile.korbon:chorus_planks.name=Chorus Planks
+tile.korbon:chorus_slab.name=Chorus Slab
+tile.korbon:chorus_trapdoor.name=Chorus Trapdoor
+tile.korbon:chorus_wood.name=Chorus Wood
+tile.korbon:stripped_chorus_log.name=Stripped Chorus Log
+tile.korbon:stripped_chorus_wood.name=Stripped Chorus Wood
+tile.korbon:chorus_leaves_flowering.name=Flowering Chorus Leaves
+tile.korbon:chorus_leaves_hanging.name=Hanging Chorus Leaves
+tile.korbon:phreyium.name=Phreyium
+tile.korbon:phreyium_stone.name=Phreyium with Stones
+tile.korbon:phreyium_wart_block.name=Phreyium Wart Block
+tile.korbon:phreyium_stem.name=Phreyium Stem
+tile.korbon:phreyium_block.name=Phreyium Block
+tile.korbon:phreyium_spines.name=Phreyium Spines
+tile.korbon:chorus_water_leaves.name=Chorus LeaF Pile
+tile.korbon:ori_blossom.name=Ori Blossom
+tile.korbon:phreyium_grass.name=Phreyium Grass
+tile.korbon:phreyium_tendril_vine.name=Phreyium Tendril
+tile.korbon:phreyium_tendril_vine_bottom.name=Phreyium Tendril Flower
+tile.korbon:phreyium_tooth_fungus.name=Phreyium Tooth Fungus
+tile.korbon:pread.name=Pread
+tile.korbon:pread_tall.name=Double Pread
+tile.korbon:viscosa_fungus.name=Viscosa
+tile.korbon:viscosa_tall.name=Tall Viscosa
+tile.korbon:void_sprouts.name=Void Sprouts
+tile.korbon:void_turf_grass.name=Void Turf Grass
+tile.korbon:void_turf_grass_short.name=Void Turf Short Grass
+tile.korbon:void_turf_fern_tall.name=Tall Void Turf Fern
+tile.korbon:chorus_leaves_pink.name=Pink Chorus Leaves
+tile.korbon:verdanite.name=Verdanite
+tile.korbon:verdanite_velvium.name=Velvium Verdanite
+tile.korbon:velvium.name=Velvium
+tile.korbon:velvium_grass.name=Velvium Grass
+tile.korbon:vaudrite.name=Vaudrite
+tile.korbon:smooth_endstone.name=Smooth End Stone
+tile.korbon:cobbled_endstone.name=Cobbled End Stone
+tile.korbon:velvium_vine_body.name=Velvium Vine Body
+tile.korbon:velvium_vine_top.name=Velvium Vine Top
+tile.korbon:velvium_vine_bulb.name=Velvium Vine Bulb
+tile.korbon:phreyium_sprouts.name=Phreyium Spore Sprouts
+tile.korbon:phreyium_gills.name=Phreyium Gills
+tile.korbon:void_shroomlight.name=Voidlight
+tile.korbon:thorn_root.name=Thorn Root
+tile.korbon:endstone_geyser.name=End Stone Geyser Vent
+tile.korbon:void_liquid.name=Void Liquid
+tile.korbon:vaudrite_spike_top.name=Vaudrite Spike
+tile.korbon:vaudrite_spike_bottom.name=Vaudrite Spike Body
+tile.korbon:turf_endstone_bricks.name=Turf End Stone Bricks
+tile.korbon:turf_purpur.name=Turf Purpur Block
+tile.korbon:phreyium_endstone_bricks.name=Phreyium End Stone Bricks
+tile.korbon:phreyium_purpur.name=Phreyium Purpur Block
+tile.korbon:velvium_endstone_bricks.name=Velvium End Stone Bricks
+tile.korbon:velvium_purpur.name=Velvium Purpur Block
+tile.korbon:velvium_path.name=Velvium Path
+tile.korbon:verdanite_velvium_path.name=Velvium Verdanite Path
+tile.korbon:void_turf_path.name=Void Turf Path
+tile.korbon:phreyium_path.name=Phreyium Path
+tile.korbon:void_standing_torch_top.name=Standing Void Torch Top
+tile.korbon:void_standing_torch_bottom.name=Standing Void Torch Bottom
+tile.korbon:void_turf_grass_tall.name=Tall Void Turf Grass
+tile.korbon:phreyium_grass_tall.name=Tall Phreyium Grass
+tile.korbon:velvium_grass_tall.name=Tall Velvium Grass
+
+
+
+item.korbon:chorus_leaves_hanging_item.name=Hanging Chorus Leaves
+item.korbon:chorus_water_leaves_item.name=Chorus LeaF Pile
+item.korbon:ori_blossom_item.name=Ori Blossom
+item.korbon:phreyium_grass_item.name=Phreyium Grass
+item.korbon:phreyium_tendril_item.name=Phreyium Tendril
+item.korbon:phreyium_tendril_bottom_item.name=Phreyium Tendril Flower
+item.korbon:phreyium_tooth_fungus_item.name=Phreyium Tooth Fungus
+item.korbon:pread_item.name=Pread
+item.korbon:pread_tall_item.name=Double Pread
+item.korbon:viscosa_item.name=Viscosa
+item.korbon:viscosa_tall_item.name=Tall Viscosa
+item.korbon:void_sprouts_item.name=Void Sprouts
+item.korbon:void_turf_grass_item.name=Void Turf Grass
+item.korbon:void_turf_grass_short_item.name=Void Turf Short Grass
+item.korbon:void_turf_fern_item.name=Void Turf Fern
+item.korbon:void_turf_fern_tall_item.name=Tall Void Turf Fern
+item.spawn_egg.entity.korbon:watchling.name=Spawn Watchling
+item.spawn_egg.entity.korbon:blastling.name=Spawn Blastling
+item.korbon:velvium_vine_item.name=Velvium Vine
+item.korbon:velvium_vine_bulb_item.name=Velvium Vine Bulb
+item.korbon:velvium_grass_item.name=Velvium Grass
+item.korbon:phreyium_sprouts_item.name=Phreyium Sprouts
+item.korbon:raw_jokle.name=Jokle
+item.korbon:cooked_jokle.name=Cooked Jokle
+item.spawn_egg.entity.korbon:jokle.name=Spawn Jokle
+item.korbon:jokle_bucket.name=Bucket of Jokle
+item.spawn_egg.entity.korbon:swarm.name=Spawn Insect Swarm
+item.korbon:thorn_root_item.name=Thorn Root
+item.korbon:vaudrite_spike_top_item.name=Vaudrite Spike
+item.korbon:eye_of_shadows.name=Eye of Shadows
+item.korbon:void_standing_torch_item.name=Standing Void Torch
+item.korbon:void_turf_grass_tall_item.name=Tall Void Turf Grass
+item.korbon:phreyium_grass_tall_item.name=Tall Phreyium Grass
+item.korbon:velvium_grass_tall_item.name=Tall Velvium Grass
+item.spawn_egg.entity.korbon:void_glider.name=Spawn Void Glider
+
+
+entity.korbon:watchling.name=Watchling
+entity.korbon:blastling.name=Blastling
+entity.korbon:blastling_goo.name=Blastling Goo
+entity.korbon:jokle.name=Jokle
+entity.korbon:swarm.name=Insect Swarm
+entity.korbon:void_glider.name=Void Glider
+
+## ============================================================
+
+action.interact.scoop=Collect Jokle
+
+entity.end:endithere.name=Ender Wyvern
+item.spawn_egg.entity.end:endithere.name=Spawn Ender Wyvern
+tile.end:endilex_log.name=Endilex Log
+tile.end:zallium.name=Zallium
+tile.end:prism_quartz_bloom.name=Prism Quartz Bloom
+tile.end:prism_quartz_crystal.name=Prism Quartz Crystal
+tile.end:prism_quartz_block.name=Prism Quartz Block
+item.end:prism_quartz_crystal_shard=Prism Quartz Crystal Shard
+tile.end:endilex_plank.name=Endilex Planks
+tile.end:end_lotus.name=Ender Melon
+tile.end:end_lotus_non.name=Ender Root
+tile.end:zallium_sprout.name=Zallium Sprout
+tile.end:zalix_flower.name=Zalix Flower
+tile.end:endilex_leaves.name=Endilex Leaves
+item.end:endilex_axe=Endilex Axe
+item.end:endilex_pickaxe=Endilex Pickaxe
+item.end:endilex_sword=Endilex Sword
+item.end:endilex_shovel=Endilex Shovel
+item.end:endilex_hoe=Endilex Hoe
+tile.end:endilex_vines.name=Endilex Vines
+item.record_13.desc=DJ_Databaze - Bittersweet
+item.end:endilex_berry=Endilex Berry
+item.end:lonsdaleite=Lonsdaleite
+tile.end:block_of_lonsdaleite.name=Block Of Lonsdaleite
+tile.end:lonsdaleite_ore.name=Lonsdaleite Ore
+tile.end:lonsdaleite_crystal.name=Lonsdaleite Crystal
+tile.end:lonsdaleite_crystal_block.name=Lonsdaleite Crystal Block
+item.end:end_stone_sword=Endslate Sword
+item.end:end_stone_axe=Endslate Axe
+item.end:end_stone_pickaxe=Endslate Pickaxe
+item.end:end_stone_shovel=Endslate Shovel
+item.end:end_stone_hoe=Endslate Hoe
+entity.end:leuistic_enderman.name=Leuistic Enderman
+item.spawn_egg.entity.end_leuistic_enderman.name=Spawn Leuistic Enderman
+tile.end:corrupted_block.name=Corrupted Block
+tile.end:corrupted_plant.name=Corrupted Plant
+tile.end:endilex_vines_fruitless.name=Fruitless Endilex Vines
+item.end:lotus_melon=Lotus Melon
+item.end:lotus_melon_slice=Lotus Melon Slice
+tile.end:endslate.name=Endslate
+tile.end:polished_endslate.name=Polished Endslate
+tile.end:endslate_slab.name=Endslate Slab
+tile.end:polished_endslate_slab.name=Polished Endslate Slab
+item.end:lonsdaleite_shard=Lonsdaleite Shard
+item.end:prism_quartz_crystal=Prism Quartz Crystal
+item.end:lonsdaleite_helmet=Lonsdaleite Helmet
+item.end:lonsdaleite_chestplate=Lonsdaleite Chestplate
+item.end:lonsdaleite_leggings=Lonsdaleite Leggings
+item.end:lonsdaleite_boots=Lonsdaleite Boots
+tile.end:endslate_furnace.name=Endslate Furnace
+item.end:crystal_apple=Crystal Apple
+item.end:prism_pearl=Prism Pearl
+entity.end:prism_pearl.name=Prism Pearl
+item.end:glass_jar=Glass Jar
+item.end:endilex_jam=Endilex Jam
+item.end:zalix_buds=Zalix Buds
+item.end:prism_quartz_crystal_item=Prism Quartz Crystal
+tile.end:endilex_trapdoor.name=Endilex Trapdoor
+item.end:corrupted_slime=Corrupted Slime
+entity.end:mondus.name=Endoraptor
+entity.end:adult_spectral_jelly.name=Adult Spectral Jelly
+item.spawn_egg.entity.end:adult_spectral_jelly.name=Spawn Adult Spectral Jelly
+entity.end:ghill.name=Spectral Jelly
+item.spawn_egg.entity.end:mondus.name=Spawn Endoraptor
+item.spawn_egg.entity.end:leuistic_enderman.name=Spawn Leuistic Enderman
+item.spawn_egg.entity.end:ghill.name=Spawn Spectral Jelly
+entity.end:ghill.name=Spectral Jelly
+item.end:light_feather=Light Feather
+item.end:claw=Claw
+item.end:claw_dagger=Claw Dagger
+item.end:wyvern_feather=Wyvern Feather
+tile.end:polished_endstone.name=Polished Endstone
+entity.end:crystal_golem.name=Crystal Golem
+item.spawn_egg.entity.end:crystal_golem.name=Spawn Crystal Golem
+tile.end:crystal_nylium.name=Crystal Nylium
+tile.end:crystal.name=Crystal Block
+entity.end:heart_of_ender.name=Heart Of Ender
+item.spawn_egg.entity.end:heart_of_ender.name=Spawn Heart Of Ender
+item.end:zallium_sprout_item=Zallium Sprout
+item.end:zalix_flower=Zalix Flower
+item.end:endilex_vine_item=Endilex Vine
+item.end:zalix_bud_on_a_stick=Zalix Bud On A Stick
+item.spawn_egg.entity.end:bejeweled_skipper.name=Spawn Bejeweled Skipper
+entity.end:bejeweled_skipper.name=Bejeweled Skipper
+item.spawn_egg.entity.end:shulker_crab.name=Spawn Shulker Crab
+entity.end:shulker_crab.name=Shulker Crab
+tile.end:crystal_mushroom_top.name=Crystal Mushroom Top
+tile.end:crystal_mushroom_stem.name=Crystal Mushroom Stem
+item.end:skipper_cooked=Cooked Skipper
+item.end:skipper_raw=Raw Skipper
+item.end:ender_orb_item=Ender Orb
+entity.end:ender_orb.name=Ender Orb
+item.end:crystal_vine_item=Crystal Vine
+item.end:crystal_vine_head_item=Crystal Vine Head
+tile.end:poison_crystal.name=End Poison Block
+item.end:crystal_rock=End Geode
+tile.end:crystal_plank.name=Crystal Planks
+item.end:tentacle=Tentacle
+entity.end:enderling.name=Enderling
+item.spawn_egg.entity.end:enderling.name=Spawn Enderling
+item.end:ender_ingot=Ender Ingot
+tile.end:ender_ore.name=Ender Ore
+item.spawn_egg.entity.end:end_worm.name=Spawn End Worm
+entity.end:end_worm.name=End Worm
+item.end:crystal_fungus_item=Crystal Fungus
+item.end:crystal_grass_tall_item=Tall Crystal Grass
+item.end:crystal_grass_short_item=Short Crystal Grass
+item.end:endilex_sapling_item=Endilex Sapling
+tile.end:end_campfire.name=End Campfire
+item.end:end_campfire_item=End Campfire
+item.end:raw_ender=Raw Ender
+tile.end:raw_ender_block.name=Raw Ender Block
+howtoplay.trading=Enderling Trading
+howtoplay.trading.title=How to Play : Trading With Enderlings
+howtoplay.trading.text.1=You can trade with a new mob named the Enderling, which spawns randomly in any of the End Biomes inside of the End Dimension. They offer goods such as ender pearls, cooked skipper, crystal apples, and tons of other useful items! 
+howtoplay.trading.header.1=Ender Ingots
+howtoplay.trading.text.2=The Enderling will trade in exchange for Ender Ingots, which can be obtained from the new Ender Ores. This new ore only spawns in the End Dimension, and can be found on the bottoms of the massive end islands.  
+howtoplay.trading.text.3=Once you break an Ender Ore, it will drop Raw Ender, which you can take to a furnace or a blast furnace to have smelted into the new Ender Ingot!
+howtoplay.trading.text.4=This new ingot can be hard to obtain, so the trading rewards can be well worth your time!
+
+## ============================================================
+
+entity.nether:nether_mite.name=Nether Mite
+item.spawn_egg.entity.nether:nether_mite.name=Spawn Nether Mite
+tile.nether:nest_block.name=Nest Block
+tile.nether:brimstone.name=Brimstone
+tile.nether:molten_brimstone.name=Molten Brimstone
+tile.nether:sunstone.name=Sunstone
+tile.nether:sunstone_block.name=Sunstone Block
+item.nether:sunstone_crystal=Sunstone Crystal
+tile.nether:sunstone_gong.name=Sunstone Gong
+tile.nether:blue_nether_brick.name=Blue Nether Brick
+tile.nether:scorched_nether_brick.name=Scorched Nether Brick
+tile.nether:scorched_magma_nether_brick.name=Scorched Magma Nether Brick
+tile.nether:nest_connector_bottom.name=Nest Connector Bottom
+tile.nether:nest_connector_top.name=Nest Connector Top
+item.nether:nest_connector_bottom_item=Nest Connector Bottom
+item.nether:nest_connector_top_item=Nest Connector Top
+item.nether:blue_nethershroom_item=Blue Nethershroom
+entity.nether:blue_nethershroon.name=Blue Nethershroon
+entity.nether:piglin_fungus_thrower.name=Piglin Fungus Thrower
+item.spawn_egg.entity.nether:piglin_fungus_thrower.name=Spawn Piglin Fungus Thrower
+tile.nether:blue_nethershroom_block.name=Blue Nethershroom
+tile.nether:poison_flower.name=Poison Flower
+tile.nether:poison_eye.name=Poison Eye
+tile.nether:marouge_nylium.name=Marouge Nylium
+tile.nether:marouge_stem.name=Marouge Stem
+tile.nether:marouge_planks.name=Marouge Planks
+tile.nether:marouge_wart_block.name=Marouge Wart Block
+tile.nether:marouge_fungus.name=Marouge Fungus
+tile.nether:marouge_roots.name=Marouge Roots
+tile.nether:marouge_vines.name=Marouge Vines
+item.nether:marouge_vine_item=Marouge Vines
+tile.nether:nest_connector_mid.name=Nest Connector Middle
+item.nether:nest_connector_mid_item=Nest Connector Middle
+tile.nether:soul_nether_shroom.name=Soul Shroomlight
+tile.nether:marouge_vine_head.name=Marouge Vine Head
+item.nether:marouge_vine_head_item=Marouge Vine Head
+tile.nether:stripped_marouge_stem.name=Stripped Marouge Stem
+tile.nether:marouge_trapdoor.name=Marouge Trapdoor
+item.nether:marouge_root_item=Marouge Root
+item.nether:marouge_fungus_item=Marouge Fungus
+entity.nether:wither_beast.name=Wither Beast
+item.spawn_egg.entity.nether:wither_beast.name=Spawn Wither Beast
+item.nether:poison_eye_item=Poison Eyes
+item.nether:wither_bone=Wither Bone
+item.nether:nether_stew=Nether Stew
+tile.nether:wither_nylium.name=Soul Nylium
+tile.nether:soul_planks.name=Soul Planks
+tile.nether:soul_netherwart_block.name=Soul Netherwart Block
+item.nether:soulshroom_item=Soulshroom
+tile.nether:soul_stem.name=Soul Stem
+entity.nether:warped_stag.name=Warped Stag
+item.spawn_egg.entity.nether:warped_stag.name=Spawn Warped Stag
+entity.nether:wandering_spirit.name=Wandering Soul
+item.spawn_egg.entity.nether:wandering_spirit.name=Spawn Wandering Soul
+item.nether:soul_root_item=Soul Roots
+tile.nether:moonstone.name=Moonstone
+tile.nether:moonstone_block.name=Moonstone Block
+item.nether:moonstone_crystal=Moonstone Crystal
+tile.nether:polished_sunstone.name=Polished Sunstone
+tile.nether:sunstone_bricks.name=Sunstone Bricks
+tile.nether:polished_moonstone.name=Polished Moonstone
+tile.nether:moonstone_brick.name=Moonstone Bricks
+tile.nether:polished_dullstone.name=Polished Dullstone
+tile.nether:dullstone_block.name=Dullstone Block
+tile.nether:dullstone_bricks.name=Dullstone Bricks
+item.nether:moonstone_boots=Moonstone Boots
+item.nether:moonstone_chestplate=Moonstone Chestplate
+item.nether:moonstone_helmet=Moonstone Helmet
+item.nether:moonstone_leggings=Moonstone Leggings
+item.nether:gilded_netherite_boots=Gilded Netherite Boots
+item.nether:gilded_netherite_chestplate=Gilded Netherite Chestplate
+item.nether:gilded_netherite_helmet=Gilded Netherite Helmet
+item.nether:gilded_netherite_leggings=Gilded Netherite Leggings
+item.nether:gilded_scrap=Gilded Scrap
+item.nether:dullstone_crystal=Dullstone Crystal
+tile.nether:dullstone.name=Dullstone
+entity.nether:amber_ghast.name=Amber Ghast
+item.spawn_egg.entity.nether:amber_ghast.name=Spawn Amber Ghast
+tile.nether:polished_amber.name=Polished Amber
+tile.nether:amber_ore.name=Amber Ore
+tile.nether:amber_block.name=Amber Block
+tile.nether:amber_bricks.name=Amber Bricks
+item.nether:amber_chunk=Amber Chunk
+item.nether:amber_fireball_item=Amber Fireball
+entity.nether:amber_fireball.name=Amber Fireball
+item.spawn_egg.entity.nether:magma_tyrant.name=Spawn Magma Tyrant
+entity.nether:magma_tyrant.name=Magma Tyrant
+item.nether:magma_sword=Magma Sword
+item.nether:magma_scales=Magma Scales
+item.spawn_egg.entity.nether:wildfire.name=Spawn Wildfire
+entity.nether:wildfire.name=Wildfire
+
+## ============================================================
+
+item.hatchi:bundlepack=Bundlepack
+
+## ============================================================
+
+tile.cc:compressed_cobblestone.name=Compressed Cobblestone
+tile.cc:double_compressed_cobblestone.name=Double Compressed Cobblestone
+tile.cc:tripple_compressed_cobblestone.name=Tripple Compressed Cobblestone
+tile.cc:quadruple_compressed_cobblestone.name=Quadruple Compressed Cobblestone
+tile.cc:quintuple_compressed_cobblestone.name=Quintuple Compressed Cobblestone
+tile.cc:sextuple_compressed_cobblestone.name=Sextuple Compressed Cobblestone
+tile.cc:septuple_compressed_cobblestone.name=Septuple Compressed Cobblestone
+tile.cc:octuple_compressed_cobblestone.name=Octuple Compressed Cobblestone
+
+tile.cc:compressed_stone.name=Compressed Stone
+tile.cc:double_compressed_stone.name=Double Compressed Stone
+tile.cc:tripple_compressed_stone.name=Tripple Compressed Stone
+tile.cc:quadruple_compressed_stone.name=Quadruple Compressed Stone
+tile.cc:quintuple_compressed_stone.name=Quintuple Compressed Stone
+tile.cc:sextuple_compressed_stone.name=Sextuple Compressed Stone
+tile.cc:septuple_compressed_stone.name=Septuple Compressed Stone
+tile.cc:octuple_compressed_stone.name=Octuple Compressed Stone
+
+tile.cc:compressed_netherrack.name=Compressed Netherrack
+tile.cc:double_compressed_netherrack.name=Double Compressed Netherrack
+tile.cc:tripple_compressed_netherrack.name=Tripple Compressed Netherrack
+tile.cc:quadruple_compressed_netherrack.name=Quadruple Compressed Netherrack
+tile.cc:quintuple_compressed_netherrack.name=Quintuple Compressed Netherrack
+tile.cc:sextuple_compressed_netherrack.name=Sextuple Compressed Netherrack
+tile.cc:septuple_compressed_netherrack.name=Septuple Compressed Netherrack
+tile.cc:octuple_compressed_netherrack.name=Octuple Compressed Netherrack
+
+tile.cc:compressed_dirt.name=Compressed Dirt
+tile.cc:double_compressed_dirt.name=Double Compressed Dirt
+tile.cc:tripple_compressed_dirt.name=Tripple Compressed Dirt
+tile.cc:quadruple_compressed_dirt.name=Quardruple Compressed Dirt
+tile.cc:quintuple_compressed_dirt.name=Quintuple Compressed Dirt
+tile.cc:sextuple_compressed_dirt.name=Sextuple Compressed Dirt
+tile.cc:septuple_compressed_dirt.name=Septuple Compressed Dirt
+tile.cc:octuple_compressed_dirt.name=Octuple Compressed Dirt
+
+tile.cc:compressed_gravel.name=Compressed Gravel
+tile.cc:double_compressed_gravel.name=Double Compressed Gravel
+tile.cc:tripple_compressed_gravel.name=Tripple Compressed Gravel
+tile.cc:quadruple_compressed_gravel.name=Quardruple Compressed Gravel
+tile.cc:quintuple_compressed_gravel.name=Quintuple Compressed Gravel
+tile.cc:sextuple_compressed_gravel.name=Sextuple Compressed Gravel
+tile.cc:septuple_compressed_gravel.name=Septuple Compressed Gravel
+tile.cc:octuple_compressed_gravel.name=Octuple Compressed Gravel
+
+tile.cc:compressed_sand.name=Compressed Sand
+tile.cc:double_compressed_sand.name=Double Compressed Sand
+tile.cc:tripple_compressed_sand.name=Tripple Compressed Sand
+tile.cc:quadruple_compressed_sand.name=Quardruple Compressed Sand
+tile.cc:quintuple_compressed_sand.name=Quintuple Compressed Sand
+tile.cc:sextuple_compressed_sand.name=Sextuple Compressed Sand
+tile.cc:septuple_compressed_sand.name=Septuple Compressed Sand
+tile.cc:octuple_compressed_sand.name=Octuple Compressed Sand
+
+tile.cc:compressed_redsand.name=Compressed Red Sand
+tile.cc:double_compressed_redsand.name=Double Compressed Red Sand
+tile.cc:tripple_compressed_redsand.name=Tripple Compressed Red Sand
+tile.cc:quadruple_compressed_redsand.name=Quardruple Compressed Red Sand
+tile.cc:quintuple_compressed_redsand.name=Quintuple Compressed Red Sand
+tile.cc:sextuple_compressed_redsand.name=Sextuple Compressed Red Sand
+tile.cc:septuple_compressed_redsand.name=Septuple Compressed Red Sand
+tile.cc:octuple_compressed_redsand.name=Octuple Compressed Red Sand
+
+tile.cc:compressed_endstone.name=Compressed Endstone
+tile.cc:double_compressed_endstone.name=Double Compressed Endstone
+tile.cc:tripple_compressed_endstone.name=Tripple Compressed Endstone
+tile.cc:quadruple_compressed_endstone.name=Quardruple Compressed Endstone
+tile.cc:quintuple_compressed_endstone.name=Quintuple Compressed Endstone
+tile.cc:sextuple_compressed_endstone.name=Sextuple Compressed Endstone
+tile.cc:septuple_compressed_endstone.name=Septuple Compressed Endstone
+tile.cc:octuple_compressed_endstone.name=Octuple Compressed Endstone
+
+tile.cc:compressed_oak.name=Compressed Oak
+tile.cc:compressed_oak_leaf.name=Compressed Oak Leaves
+tile.cc:double_compressed_oak.name=Double Compressed Oak
+tile.cc:tripple_compressed_oak.name=Tripple Compressed Oak
+tile.cc:quadruple_compressed_oak.name=Quardruple Compressed Oak
+tile.cc:quintuple_compressed_oak.name=Quintuple Compressed Oak
+tile.cc:sextuple_compressed_oak.name=Sextuple Compressed Oak
+tile.cc:septuple_compressed_oak.name=Septuple Compressed Oak
+tile.cc:octuple_compressed_oak.name=Octuple Compressed Oak
+
+tile.cc:compressed_spruce.name=Compressed Spruce
+tile.cc:double_compressed_spruce.name=Double Compressed Spruce
+tile.cc:tripple_compressed_spruce.name=Tripple Compressed Spruce
+tile.cc:quadruple_compressed_spruce.name=Quardruple Compressed Spruce
+tile.cc:quintuple_compressed_spruce.name=Quintuple Compressed Spruce
+tile.cc:sextuple_compressed_spruce.name=Sextuple Compressed Spruce
+tile.cc:septuple_compressed_spruce.name=Septuple Compressed Spruce
+tile.cc:octuple_compressed_spruce.name=Octuple Compressed Spruce
+
+tile.cc:compressed_birch.name=Compressed Birch
+tile.cc:double_compressed_birch.name=Double Compressed Birch
+tile.cc:tripple_compressed_birch.name=Tripple Compressed Birch
+tile.cc:quadruple_compressed_birch.name=Quardruple Compressed Birch
+tile.cc:quintuple_compressed_birch.name=Quintuple Compressed Birch
+tile.cc:sextuple_compressed_birch.name=Sextuple Compressed Birch
+tile.cc:septuple_compressed_birch.name=Septuple Compressed Birch
+tile.cc:octuple_compressed_birch.name=Octuple Compressed Birch
+
+tile.cc:compressed_jungle.name=Compressed Jungle
+tile.cc:double_compressed_jungle.name=Double Compressed Jungle
+tile.cc:tripple_compressed_jungle.name=Tripple Compressed Jungle
+tile.cc:quadruple_compressed_jungle.name=Quardruple Compressed Jungle
+tile.cc:quintuple_compressed_jungle.name=Quintuple Compressed Jungle
+tile.cc:sextuple_compressed_jungle.name=Sextuple Compressed Jungle
+tile.cc:septuple_compressed_jungle.name=Septuple Compressed Jungle
+tile.cc:octuple_compressed_jungle.name=Octuple Compressed Jungle
+
+tile.cc:compressed_acacia.name=Compressed Acacia
+tile.cc:double_compressed_acacia.name=Double Compressed Acacia
+tile.cc:tripple_compressed_acacia.name=Tripple Compressed Acacia
+tile.cc:quadruple_compressed_acacia.name=Quardruple Compressed Acacia
+tile.cc:quintuple_compressed_acacia.name=Quintuple Compressed Acacia
+tile.cc:sextuple_compressed_acacia.name=Sextuple Compressed Acacia
+tile.cc:septuple_compressed_acacia.name=Septuple Compressed Acacia
+tile.cc:octuple_compressed_acacia.name=Octuple Compressed Acacia
+
+tile.cc:compressed_darkoak.name=Compressed Dark Oak
+tile.cc:double_compressed_darkoak.name=Double Compressed Dark Oak
+tile.cc:tripple_compressed_darkoak.name=Tripple Compressed Dark Oak
+tile.cc:quadruple_compressed_darkoak.name=Quardruple Compressed Dark Oak
+tile.cc:quintuple_compressed_darkoak.name=Quintuple Compressed Dark Oak
+tile.cc:sextuple_compressed_darkoak.name=Sextuple Compressed Dark Oak
+tile.cc:septuple_compressed_darkoak.name=Septuple Compressed Dark Oak
+tile.cc:octuple_compressed_darkoak.name=Octuple Compressed Dark Oak
+
+tile.cc:compressed_crimsonstem.name=Compressed Crimson Stem
+tile.cc:double_compressed_crimsonstem.name=Double Compressed Crimson Stem
+tile.cc:tripple_compressed_crimsonstem.name=Tripple Compressed Crimson Stem
+tile.cc:quadruple_compressed_crimsonstem.name=Quardruple Compressed Crimson Stem
+tile.cc:quintuple_compressed_crimsonstem.name=Quintuple Compressed Crimson Stem
+tile.cc:sextuple_compressed_crimsonstem.name=Sextuple Compressed Crimson Stem
+tile.cc:septuple_compressed_crimsonstem.name=Septuple Compressed Crimson Stem
+tile.cc:octuple_compressed_crimsonstem.name=Octuple Compressed Crimson Stem
+
+tile.cc:compressed_warpedstem.name=Compressed Warped Stem
+tile.cc:double_compressed_warpedstem.name=Double Compressed Warped Stem
+tile.cc:tripple_compressed_warpedstem.name=Tripple Compressed Warped Stem
+tile.cc:quadruple_compressed_warpedstem.name=Quardruple Compressed Warped Stem
+tile.cc:quintuple_compressed_warpedstem.name=Quintuple Compressed Warped Stem
+tile.cc:sextuple_compressed_warpedstem.name=Sextuple Compressed Warped Stem
+tile.cc:septuple_compressed_warpedstem.name=Septuple Compressed Warped Stem
+tile.cc:octuple_compressed_warpedstem.name=Octuple Compressed Warped Stem
+
+tile.cc:compressed_netherite_block.name=Compressed Netherite Block
+tile.cc:double_compressed_netherite_block.name=Double Compressed Netherite Block
+tile.cc:tripple_compressed_netherite_block.name=Tripple Compressed Netherite Block
+tile.cc:quadruple_compressed_netherite_block.name=Quardruple Compressed Netherite Block
+tile.cc:quintuple_compressed_netherite_block.name=Quintuple Compressed Netherite Block
+tile.cc:sextuple_compressed_netherite_block.name=Sextuple Compressed Netherite Block
+tile.cc:septuple_compressed_netherite_block.name=Septuple Compressed Netherite Block
+tile.cc:octuple_compressed_netherite_block.name=Octuple Compressed Netherite Block
+
+tile.cc:compressed_emerald_block.name=Compressed Emerald Block
+tile.cc:double_compressed_emerald_block.name=Double Compressed Emerald Block
+tile.cc:tripple_compressed_emerald_block.name=Tripple Compressed Emerald Block
+tile.cc:quadruple_compressed_emerald_block.name=Quardruple Compressed Emerald Block
+tile.cc:quintuple_compressed_emerald_block.name=Quintuple Compressed Emerald Block
+tile.cc:sextuple_compressed_emerald_block.name=Sextuple Compressed Emerald Block
+tile.cc:septuple_compressed_emerald_block.name=Septuple Compressed Emerald Block
+tile.cc:octuple_compressed_emerald_block.name=Octuple Compressed Emerald Block
+
+tile.cc:compressed_diamond_block.name=Compressed Diamond Block
+tile.cc:double_compressed_diamond_block.name=Double Compressed Diamond Block
+tile.cc:tripple_compressed_diamond_block.name=Tripple Compressed Diamond Block
+tile.cc:quadruple_compressed_diamond_block.name=Quardruple Compressed Diamond Block
+tile.cc:quintuple_compressed_diamond_block.name=Quintuple Compressed Diamond Block
+tile.cc:sextuple_compressed_diamond_block.name=Sextuple Compressed Diamond Block
+tile.cc:septuple_compressed_diamond_block.name=Septuple Compressed Diamond Block
+tile.cc:octuple_compressed_diamond_block.name=Octuple Compressed Diamond Block
+
+tile.cc:compressed_redstone_block.name=Compressed Redstone Block
+tile.cc:double_compressed_redstone_block.name=Double Compressed Redstone Block
+tile.cc:tripple_compressed_redstone_block.name=Tripple Compressed Redstone Block
+tile.cc:quadruple_compressed_redstone_block.name=Quardruple Compressed Redstone Block
+tile.cc:quintuple_compressed_redstone_block.name=Quintuple Compressed Redstone Block
+tile.cc:sextuple_compressed_redstone_block.name=Sextuple Compressed Redstone Block
+tile.cc:septuple_compressed_redstone_block.name=Septuple Compressed Redstone Block
+tile.cc:octuple_compressed_redstone_block.name=Octuple Compressed Redstone Block
+
+tile.cc:compressed_lapis_block.name=Compressed Lapis Lazuli Block
+tile.cc:double_compressed_lapis_block.name=Double Compressed Lapis Lazuli Block
+tile.cc:tripple_compressed_lapis_block.name=Tripple Compressed Lapis Lazuli Block
+tile.cc:quadruple_compressed_lapis_block.name=Quardruple Compressed Lapis Lazuli Block
+tile.cc:quintuple_compressed_lapis_block.name=Quintuple Compressed Lapis Lazuli Block
+tile.cc:sextuple_compressed_lapis_block.name=Sextuple Compressed Lapis Lazuli Block
+tile.cc:septuple_compressed_lapis_block.name=Septuple Compressed Lapis Lazuli Block
+tile.cc:octuple_compressed_lapis_block.name=Octuple Compressed Lapis Lazuli Block
+
+tile.cc:compressed_gold_block.name=Compressed Gold Block
+tile.cc:double_compressed_gold_block.name=Double Compressed Gold Block
+tile.cc:tripple_compressed_gold_block.name=Tripple Compressed Gold Block
+tile.cc:quadruple_compressed_gold_block.name=Quardruple Compressed Gold Block
+tile.cc:quintuple_compressed_gold_block.name=Quintuple Compressed Gold Block
+tile.cc:sextuple_compressed_gold_block.name=Sextuple Compressed Gold Block
+tile.cc:septuple_compressed_gold_block.name=Septuple Compressed Gold Block
+tile.cc:octuple_compressed_gold_block.name=Octuple Compressed Gold Block
+
+tile.cc:compressed_iron_block.name=Compressed Iron Block
+tile.cc:double_compressed_iron_block.name=Double Compressed Iron Block
+tile.cc:tripple_compressed_iron_block.name=Tripple Compressed Iron Block
+tile.cc:quadruple_compressed_iron_block.name=Quardruple Compressed Iron Block
+tile.cc:quintuple_compressed_iron_block.name=Quintuple Compressed Iron Block
+tile.cc:sextuple_compressed_iron_block.name=Sextuple Compressed Iron Block
+tile.cc:septuple_compressed_iron_block.name=Septuple Compressed Iron Block
+tile.cc:octuple_compressed_iron_block.name=Octuple Compressed Iron Block
+
+tile.cc:compressed_coal_block.name=Compressed Coal Block
+tile.cc:double_compressed_coal_block.name=Double Compressed Coal Block
+tile.cc:tripple_compressed_coal_block.name=Tripple Compressed Coal Block
+tile.cc:quadruple_compressed_coal_block.name=Quardruple Compressed Coal Block
+tile.cc:quintuple_compressed_coal_block.name=Quintuple Compressed Coal Block
+tile.cc:sextuple_compressed_coal_block.name=Sextuple Compressed Coal Block
+tile.cc:septuple_compressed_coal_block.name=Septuple Compressed Coal Block
+tile.cc:octuple_compressed_coal_block.name=Octuple Compressed Coal Block
+
+## ============================================================
+
+entity.kna:skelly.name=Skelly
+entity.kna:bee.name=Attacking Bees
+entity.kna:bad_skelly.name=Bad Skelly
+entity.kna:human_one.name=Hungry Boy
+entity.kna:necrowitch.name=§0NecroWitch
+entity.kna:dark_skeleton.name=§0Dark Skeleton
+entity.kna:stone_guardian.name=Stone Guardian
+entity.kna:hiddeger.name=Hiddeger
+entity.kna:meltiger.name=Meltiger
+entity.kna:quillager.name=Quillager
+entity.kna:revoker.name=Revoker
+entity.kna:mini_golem.name=Mini Golem
+entity.kna:dummy.name=Dummy
+entity.kna:human_two.name=Snowball
+entity.kna:boomerang.name=Boomerang
+entity.kna:boomerang_r.name=Boomerang
+entity.kna:magma_spike.name=Magma Spike
+entity.kna:sweep_attack.name=Spear Blow
+entity.kna:fireball_two.name=Fireball (Lvl 2)
+entity.kna:fireball_three.name=Fireball (Lvl 3)
+entity.kna:fireball.name=Fireball (Lvl 1)
+entity.kna:iron_golem_two.name=Iron Golem (Lvl 2)
+entity.kna:iron_golem.name=Iron Golem (Lvl 1)
+
+
+item.spawn_egg.entity.kna:skelly.name=Spawn Skelly
+item.spawn_egg.entity.kna:bee.name=Spawn Attacking Bees
+item.spawn_egg.entity.kna:bad_skelly.name=Spawn Bad Skelly
+item.spawn_egg.entity.kna:human_one.name=Spawn Hungry Boy
+item.spawn_egg.entity.kna:necrowitch.name=Spawn NecroWitch
+item.spawn_egg.entity.kna:dark_skeleton.name=Spawn Dark Skeleton
+item.spawn_egg.entity.kna:stone_guardian.name=Spawn Stone Guardian
+item.spawn_egg.entity.kna:night_bat.name=Spawn Night Bat
+item.spawn_egg.entity.kna:night_witch.name=Spawn Night Witch
+item.spawn_egg.entity.kna:hiddeger.name=Spawn Hiddeger
+item.spawn_egg.entity.kna:meltiger.name=Spawn Meltiger
+item.spawn_egg.entity.kna:quillager.name=Spawn Quillager
+item.spawn_egg.entity.kna:revoker.name=Spawn Revoker
+item.spawn_egg.entity.kna:mini_golem.name=Spawn Mini Golem
+item.spawn_egg.entity.kna:dummy.name=Spawn Dummy
+item.spawn_egg.entity.kna:human_two.name=Spawn Snowball
+
+## ============================================================
+
+item.ff:azalea_flower_item=Azalea
+item.ff:lotus_flower_item=Lotus Flower
+item.ff:hibiscus_item=Hibiscus
+item.ff:carnation_item=Carnation
+item.ff:gold_rose_item=Gold Rose
+item.ff:gold_rose_tall_item=Gold Rose Bush
+item.ff:gold_rose_large_item=Large Gold Rose Bush
+item.ff:gold_rose_short_item=Small Gold Rose Bush
+item.ff:tiger_lily_item=Tiger Lily
+item.ff:tiger_lily_tall_item=Tall Tiger Lily
+item.ff:tiger_lily_large_item=Large Tiger Lily
+item.ff:marigold_item=Marigold
+item.ff:marigold_tall_item=Tall Marigold
+item.ff:marigold_large_item=Large Marigold
+item.ff:rose_item=Rose
+item.ff:rose_large_item=Large Rose Bush
+item.ff:rose_short_item=Small Rose Bush
+item.ff:daffodil_item=Daffodil
+item.ff:angels_trumpet_item=Angel's Trumpet
+item.ff:dandelion_tall_item=Tall Dandelion
+item.ff:dandelion_large_item=Large Dandelion
+item.ff:wither_rose_tall_item=Wither Rose Bush
+item.ff:wither_rose_large_item=Large Wither Rose Bush
+item.ff:wither_rose_short_item=Small Wither Rose Bush
+item.ff:buttercup_item=Buttercup
+item.ff:buttercup_tall_item=Tall Buttercup
+item.ff:buttercup_large_item=Large Buttercup
+item.ff:anemone_item=Anemone
+item.ff:pink_bleeding_heart_item=Pink Bleeding Heart
+item.ff:pink_bleeding_heart_tall_item=Tall Pink Bleeding Heart
+item.ff:pink_bleeding_heart_large_item=Large Pink Bleeding Heart
+item.ff:pink_rose_item=Pink Rose
+item.ff:pink_rose_tall_item=Pink Rose Bush
+item.ff:pink_rose_large_item=Large Pink Rose Bush
+item.ff:pink_rose_short_item=Small Pink Rose Bush
+item.ff:periwinkle_item=Periwinkle
+item.ff:hemlock_item=Hemlock
+item.ff:chocolate_cosmos_item=Chocolate Cosmos
+item.ff:snapdragon_item=Snapdragon
+item.ff:snapdragon_tall_item=Tall Snapdragon
+item.ff:foxglove_item=Foxglove
+item.ff:foxglove_tall_item=Tall Foxglove
+item.ff:wolfsbane_item=wolfsbane
+item.ff:wolfsbane_tall_item=Tall wolfsbane
+item.ff:gardenia_item=Gardenia
+item.ff:gardenia_tall_item=Tall Gardenia
+item.ff:grieving_rose_item=Grieving Rose
+item.ff:grieving_rose_tall_item=Grieving Rose Bush
+item.ff:grieving_rose_large_item=Large Grieving Rose Bush
+item.ff:grieving_rose_short_item=Small Grieving Rose Bush
+item.ff:corrupted_rose_item=Corrupted Rose
+item.ff:corrupted_rose_tall_item=Corrupted Rose Bush
+item.ff:corrupted_rose_large_item=Large Corrupted Rose Bush
+item.ff:corrupted_rose_short_item=Small Corrupted Rose Bush
+item.ff:cyan_rose_item=Cyan Rose
+item.ff:cyan_rose_tall_item=Cyan Rose Bush
+item.ff:cyan_rose_large_item=Large Cyan Rose Bush
+item.ff:cyan_rose_short_item=Small Cyan Rose Bush
+item.ff:white_rose_item=White Rose
+item.ff:white_rose_tall_item=White Rose Bush
+item.ff:white_rose_large_item=Large White Rose Bush
+item.ff:white_rose_short_item=Small White Rose Bush
+item.ff:blue_bleeding_heart_item=Blue Bleeding Heart
+item.ff:blue_bleeding_heart_tall_item=Tall Blue Bleeding Heart
+item.ff:blue_bleeding_heart_large_item=Large Blue Bleeding Heart
+item.ff:white_bleeding_heart_item=White Bleeding Heart
+item.ff:white_bleeding_heart_tall_item=Tall White Bleeding Heart
+item.ff:white_bleeding_heart_large_item=Large White Bleeding Heart
+item.ff:dandelion_short_item=Short Dandelion
+item.ff:black_bleeding_heart_item=Black Bleeding Heart
+item.ff:black_bleeding_heart_tall_item=Tall Black Bleeding Heart
+item.ff:black_bleeding_heart_large_item=Large Black Bleeding Heart
+item.ff:lavender_item=Lavender
+item.ff:lavender_tall_item=Tall Lavender
+item.ff:lavender_large_item=Large Lavender
+item.ff:grieving_lavender_item=Grieving Lavender
+item.ff:grieving_lavender_tall_item=Tall Grieving Lavender
+item.ff:grieving_lavender_large_item=Large Grieving Lavender
+item.ff:bluebell_item=Bluebell
+item.ff:bluebell_tall_item=Tall Bluebell
+item.ff:bluebell_large_item=Large Bluebell
+item.ff:corrupted_bluebell_item=Corrupted Bluebell
+item.ff:corrupted_bluebell_tall_item=Tall Corrupted Bluebell
+item.ff:corrupted_bluebell_large_item=Large Corrupted Bluebell
+item.ff:sunflower_item=Sunflower
+tile.double_plant.sunflower.name=Tall Sunflower
+tile.double_plant.syringa.name=Tall Lilac
+tile.double_plant.paeonia.name=Peony Bush
+item.ff:sunflower_large_item=Large Sunflower
+item.ff:lilac_item=Lilac
+item.ff:lilac_large_item=Large Lilac
+item.ff:peony_item=Peony
+item.ff:peony_large_item=Large Peony Bush
+item.ff:peony_short_item=Small Peony Bush
+item.ff:blue_dragon_rose_item=Blue Dragon Rose
+item.ff:blue_dragon_rose_tall_item=Blue Dragon Rose Bush
+item.ff:blue_dragon_rose_large_item=Large Blue Dragon Rose Bush
+item.ff:blue_dragon_rose_short_item=Small Blue Dragon Rose Bush
+item.ff:allium_tall_item=Tall Allium
+item.ff:allium_large_item=Large Allium
+item.ff:allium_short_item=Short Allium
+item.ff:poppy_tall_item=Poppy Bush
+item.ff:poppy_large_item=Large Poppy Bush
+item.ff:poppy_short_item=Small Poppy Bush
+item.ff:lily_valley_tall_item=Lily of The Valley Bush
+item.ff:lily_valley_large_item=Large Lily of The Valley Bush
+item.ff:lily_valley_short_item=Small Lily of The Valley Bush
+item.ff:white_tulip_tall_item=White Tulip Bush
+item.ff:white_tulip_large_item=Large White Tulip Bush
+item.ff:white_tulip_short_item=Small White Tulip Bush
+item.ff:red_tulip_tall_item=Red Tulip Bush
+item.ff:red_tulip_large_item=Large Red Tulip Bush
+item.ff:red_tulip_short_item=Small Red Tulip Bush
+item.ff:pink_tulip_tall_item=Pink Tulip Bush
+item.ff:pink_tulip_large_item=Large Pink Tulip Bush
+item.ff:pink_tulip_short_item=Small Pink Tulip Bush
+item.ff:orange_tulip_tall_item=Orange Tulip Bush
+item.ff:orange_tulip_large_item=Large Orange Tulip Bush
+item.ff:orange_tulip_short_item=Small Orange Tulip Bush
+item.ff:yellow_tulip_item=Yellow Tulip
+item.ff:yellow_tulip_tall_item=Yellow Tulip Bush
+item.ff:yellow_tulip_large_item=Large Yellow Tulip Bush
+item.ff:yellow_tulip_short_item=Small Yellow Tulip Bush
+item.ff:purple_tulip_item=Purple Tulip
+item.ff:purple_tulip_tall_item=Purple Tulip Bush
+item.ff:purple_tulip_large_item=Large Purple Tulip Bush
+item.ff:purple_tulip_short_item=Small Purple Tulip Bush
+item.ff:green_tulip_item=Green Tulip
+item.ff:green_tulip_tall_item=Green Tulip Bush
+item.ff:green_tulip_large_item=Large Green Tulip Bush
+item.ff:green_tulip_short_item=Small Green Tulip Bush
+item.ff:blue_tulip_item=Blue Tulip
+item.ff:blue_tulip_tall_item=Blue Tulip Bush
+item.ff:blue_tulip_large_item=Large Blue Tulip Bush
+item.ff:blue_tulip_short_item=Small Blue Tulip Bush
+item.ff:oxeye_daisy_tall_item=Oxeye Daisy Bush
+item.ff:oxeye_daisy_large_item=Large Oxeye Daisy Bush
+item.ff:oxeye_daisy_short_item=Small Oxeye Daisy Bush
+item.ff:blue_orchid_tall_item=Blue Orchid Bush
+item.ff:blue_orchid_large_item=Large Blue Orchid Bush
+item.ff:blue_orchid_short_item=Small Blue Orchid Bush
+item.ff:purple_orchid_item=Purple Orchid
+item.ff:purple_orchid_tall_item=Purple Orchid Bush
+item.ff:purple_orchid_large_item=Large Purple Orchid Bush
+item.ff:purple_orchid_short_item=Small Purple Orchid Bush
+item.ff:azure_bluet_tall_item=Azure Bluet Bush
+item.ff:azure_bluet_large_item=Large Azure Bluet Bush
+item.ff:azure_bluet_short_item=Small Azure Bluet Bush
+item.ff:cornflower_tall_item=Cornflower Bush
+item.ff:cornflower_large_item=Large Cornflower Bush
+item.ff:cornflower_short_item=Small Cornflower Bush
+item.ff:queen_tulip_item=Queen of The Night Tulip
+item.ff:queen_tulip_tall_item=Queen of The Night Tulip Bush
+item.ff:queen_tulip_large_item=Large Queen of The Night Tulip Bush
+item.ff:queen_tulip_short_item=Small Queen of The Night Tulip Bush
+item.ff:petunia_item=Petunia 
+item.ff:petunia_tall_item=Petunia Bush
+item.ff:petunia_large_item=Large Petunia Bush
+item.ff:petunia_short_item=Small Petunia Bush
+item.ff:allium_bouquet_item=Allium Bouquet
+item.ff:anemone_bouquet_item=Anemone Bouquet
+item.ff:angels_trumpet_bouquet_item=Angels Trumpet Bouquet
+item.ff:azalea_bouquet_item=Azalea Bouquet
+item.ff:azure_bluet_bouquet_item=Azure Bluet Bouquet
+item.ff:black_bleeding_heart_bouquet_item=Black Bleeding Heart Bouquet
+item.ff:bluebell_bouquet_item=Bluebell Bouquet
+item.ff:blue_bleeding_heart_bouquet_item=Blue Bleeding Heart Bouquet
+item.ff:blue_dragon_rose_bouquet_item=Blue Dragon Rose Bouquet
+item.ff:blue_orchid_bouquet_item=Blue Orchid Bouquet
+item.ff:blue_tulip_bouquet_item=Blue Tulip Bouquet
+item.ff:buttercup_bouquet_item=Buttercup Bouquet
+item.ff:carnation_bouquet_item=Carnation Bouquet
+item.ff:chocolate_cosmos_bouquet_item=Chocolate Cosmos Bouquet
+item.ff:cornflower_bouquet_item=Cornflower Bouquet
+item.ff:corrupted_bluebell_bouquet_item=Corrupted Bluebell Bouquet
+item.ff:corrupted_rose_bouquet_item=Corrupted Rose Bouquet
+item.ff:cyan_rose_bouquet_item=Cyan Rose Bouquet
+item.ff:daffodil_bouquet_item=Daffodil Bouquet
+item.ff:dandelion_bouquet_item=Dandelion Bouquet
+item.ff:foxglove_bouquet_item=Foxglove Bouquet
+item.ff:gardenia_bouquet_item=Gardenia Bouquet
+item.ff:gold_rose_bouquet_item=Gold Rose Bouquet
+item.ff:green_tulip_bouquet_item=Green Tulip Bouquet
+item.ff:grieving_lavender_bouquet_item=Grieving Lavender Bouquet
+item.ff:grieving_rose_bouquet_item=Grieving Rose Bouquet
+item.ff:hemlock_bouquet_item=Hemlock Bouquet
+item.ff:hibiscus_bouquet_item=Hibiscus Bouquet
+item.ff:lavender_bouquet_item=Lavender Bouquet
+item.ff:lilac_bouquet_item=Lilac Bouquet
+item.ff:lily_valley_bouquet_item=Lily Valley Bouquet
+item.ff:marigold_bouquet_item=Marigold Bouquet
+item.ff:orange_tulip_bouquet_item=Orange Tulip Bouquet
+item.ff:oxeye_daisy_bouquet_item=Oxeye Daisy Bouquet
+item.ff:peony_bouquet_item=Peony Bouquet
+item.ff:periwinkle_bouquet_item=Periwinkle Bouquet
+item.ff:petunia_bouquet_item=Petunia Bouquet
+item.ff:pink_bleeding_heart_bouquet_item=Pink Bleeding Heart Bouquet
+item.ff:pink_rose_bouquet_item=Pink Rose Bouquet
+item.ff:pink_tulip_bouquet_item=Pink Tulip Bouquet
+item.ff:poppy_bouquet_item=Poppy Bouquet
+item.ff:purple_orchid_bouquet_item=Purple Orchid Bouquet
+item.ff:purple_tulip_bouquet_item=Purple Tulip Bouquet
+item.ff:queen_tulip_bouquet_item=Queen Tulip Bouquet
+item.ff:red_tulip_bouquet_item=Red Tulip Bouquet
+item.ff:rose_bouquet_item=Rose Bouquet
+item.ff:snapdragon_bouquet_item=Snapdragon Bouquet
+item.ff:sunflower_bouquet_item=Sunflower Bouquet
+item.ff:tiger_lily_bouquet_item=Tiger Lily Bouquet
+item.ff:white_bleeding_heart_bouquet_item=White Bleeding Heart Bouquet
+item.ff:white_rose_bouquet_item=White Rose Bouquet
+item.ff:white_tulip_bouquet_item=White Tulip Bouquet
+item.ff:wither_rose_bouquet_item=Wither Rose Bouquet
+item.ff:wolfsbane_bouquet_item=Wolfsbane Bouquet
+item.ff:yellow_tulip_bouquet_item=Yellow Tulip Bouquet
+item.ff:dead_fern_item=Dead Fern
+item.ff:dead_bush_large_item=Large Dead Bush
+item.ff:dead_bush_tall_item=Tall Dead Bush
+tile.ff:sleeted_grass_block.name=Sleeted Grass Block
+item.ff:anemone_bouquet_item=Anemone Bouquet
+item.ff:anemone_short_item=Short Anemone
+item.ff:anemone_large_item=Large Anemone
+item.ff:anemone_tall_item=Tall Anemone
+item.ff:anemone_item=Anemone
+item.ff:azalea_flower_short_item=Short Azalea Flower
+item.ff:azalea_flower_large_item=Large Azalea Flower
+item.ff:azalea_flower_tall_item=Tall Azalea Flower
+item.ff:azalea_flower_item=Azalea Flower
+item.ff:chocolate_cosmos_bouquet_item=Chocolate Cosmos Bouquet
+item.ff:chocolate_cosmos_short_item=Short Chocolate Cosmos
+item.ff:chocolate_cosmos_large_item=Large Chocolate Cosmos
+item.ff:chocolate_cosmos_tall_item=Tall Chocolate Cosmos
+item.ff:chocolate_cosmos_item=Chocolate Cosmos
+item.ff:daffodil_bouquet_item=Daffodil Bouquet
+item.ff:daffodil_short_item=Short Daffodil
+item.ff:daffodil_large_item=Large Daffodil
+item.ff:daffodil_tall_item=Tall Daffodil
+item.ff:daffodil_item=Daffodil
+item.ff:drip_flower_item=Drip Flower
+item.ff:foxglove_bouquet_item=Foxglove Bouquet
+item.ff:foxglove_large_item=Large Foxglove
+item.ff:foxglove_tall_item=Tall Foxglove
+item.ff:foxglove_item=Foxglove
+item.ff:gardenia_bouquet_item=Gardenia Bouquet
+item.ff:gardenia_large_item=Large Gardenia
+item.ff:gardenia_tall_item=Tall Gardenia
+item.ff:gardenia_item=Gardenia
+item.ff:hydrangea_bouquet_item=Hydrangea Bouquet
+item.ff:hydrangea_short_item=Short Hydrangea
+item.ff:hydrangea_large_item=Large Hydrangea
+item.ff:hydrangea_tall_item=Tall Hydrangea
+item.ff:hydrangea_item=Hydrangea
+item.ff:moonflower_bouquet_item=Moonflower Bouquet
+item.ff:moonflower_large_item=Large Moonflower
+item.ff:moonflower_tall_item=Tall Moonflower
+item.ff:moonflower_item=Moonflower
+item.ff:nasturtium_bouquet_item=Nasturtium Bouquet
+item.ff:nasturtium_large_item=Large Nasturtium
+item.ff:nasturtium_tall_item=Tall Nasturtium
+item.ff:nasturtium_item=Nasturtium
+item.ff:periwinkle_bouquet_item=Periwinkle Bouquet
+item.ff:periwinkle_short_item=Short Periwinkle
+item.ff:periwinkle_large_item=Large Periwinkle
+item.ff:periwinkle_tall_item=Tall Periwinkle
+item.ff:periwinkle_item=Periwinkle
+item.ff:snapdragon_bouquet_item=Snapdragon Bouquet
+item.ff:snapdragon_large_item=Large Snapdragon
+item.ff:snapdragon_tall_item=Tall Snapdragon
+item.ff:snapdragon_item=Snapdragon
+item.ff:wolfsbane_bouquet_item=Wolfsbane Bouquet
+item.ff:wolfsbane_large_item=Large Wolfsbane
+item.ff:wolfsbane_tall_item=Tall Wolfsbane
+item.ff:wolfsbane_item=Wolfsbane
+item.ff:acacia_bush_tall_item=Tall Acacia Bush
+item.ff:acacia_bush_item=Acacia Bush
+item.ff:azalea_bush_flowers_tall_item=Tall Flowering Azalea Bush
+item.ff:azalea_bush_flowers_item=Flowering Azalea Bush
+item.ff:azalea_bush_tall_item=Tall Azalea Bush
+item.ff:azalea_bush_item=Azalea Bush
+item.ff:birch_bush_tall_item=Tall Birch Bush
+item.ff:birch_bush_item=Birch Bush
+item.ff:blooming_fern_item=Blooming Fern
+item.ff:blooming_grass_large_item=Large Blooming Grass
+item.ff:blooming_grass_tall_item=Tall Blooming Grass
+item.ff:blooming_grass_item=Blooming Grass
+item.ff:dark_oak_bush_tall_item=Tall Dark Oak Bush
+item.ff:dark_oak_bush_item=Dark Oak Bush
+item.ff:deccan_fern_item=Deccan Fern
+item.ff:deccan_grass_large_item=Large Deccan Grass
+item.ff:deccan_grass_tall_item=Tall Deccan Grass
+item.ff:deccan_grass_item=Deccan Grass
+item.ff:distorted_roots_large_item=Large Distorted Roots
+item.ff:distorted_roots_tall_item=Tall Distorted Roots
+item.ff:distorted_roots_item=Distorted Roots
+item.ff:elymus_fern_item=Elymus Fern
+item.ff:elymus_grass_large_item=Large Elymus Grass
+item.ff:elymus_grass_tall_item=Tall Elymus Grass
+item.ff:elymus_grass_item=Elymus Grass
+item.ff:enchanted_fern_item=Enchanted Fern
+item.ff:enchanted_grass_large_item=Large Enchanted Grass
+item.ff:enchanted_grass_tall_item=Tall Enchanted Grass
+item.ff:enchanted_grass_item=Enchanted Grass
+item.ff:frigid_fern_item=Frigid Fern
+item.ff:frigid_grass_large_item=Large Frigid Grass
+item.ff:frigid_grass_tall_item=Tall Frigid Grass
+item.ff:frigid_grass_item=Frigid Grass
+item.ff:infernal_fern_item=Infernal Fern
+item.ff:infernal_grass_large_item=Large Infernal Grass
+item.ff:infernal_grass_tall_item=Tall Infernal Grass
+item.ff:infernal_grass_item=Infernal Grass
+item.ff:jungle_bush_tall_item=Tall Jungle Bush
+item.ff:jungle_bush_item=Jungle Bush
+item.ff:lush_fern_item=Lush Fern
+item.ff:lush_grass_large_item=Large Lush Grass
+item.ff:lush_grass_tall_item=Tall Lush Grass
+item.ff:lush_grass_item=Lush Grass
+item.ff:oak_bush_tall_item=Tall Oak Bush
+item.ff:oak_bush_item=Oak Bush
+item.ff:scorched_fern_item=Scorched Fern
+item.ff:scorched_grass_large_item=Large Scorched Grass
+item.ff:scorched_grass_tall_item=Tall Scorched Grass
+item.ff:scorched_grass_item=Scorched Grass
+item.ff:sedge_fern_item=Sedge Fern
+item.ff:sedge_grass_large_item=Large Sedge Grass
+item.ff:sedge_grass_tall_item=Tall Sedge Grass
+item.ff:sedge_grass_item=Sedge Grass
+item.ff:shrub_item=Shrub
+item.ff:snowy_fern_item=Snowy Fern
+item.ff:snowy_grass_large_item=Large Snowy Grass
+item.ff:snowy_grass_tall_item=Tall Snowy Grass
+item.ff:snowy_grass_item=Snowy Grass
+item.ff:soul_fern_item=Soul Fern
+item.ff:soul_grass_large_item=Large Soul Grass
+item.ff:soul_grass_tall_item=Tall Soul Grass
+item.ff:soul_grass_item=Soul Grass
+item.ff:spruce_bush_tall_item=Tall Spruce Bush
+item.ff:spruce_bush_item=Spruce Bush
+item.ff:violet_roots_large_item=Large Violet Roots
+item.ff:violet_roots_tall_item=Tall Violet Roots
+item.ff:violet_roots_item=Violet Roots
+
+## ============================================================
+
+entity.korbon:mummy.name=Mummy
+item.spawn_egg.entity.korbon:mummy.name=Spawn Mummy
+tile.korbon:apple_leaves.name=Apple Leaves
+entity.korbon:pirate.name=Pirate
+item.spawn_egg.entity.korbon:pirate.name=Spawn Pirate
+item.korbon:orange.name=Orange
+tile.korbon:orange_leaves.name=Orange Leaves
+item.korbon:golden_orange.name=§bGolden Orange§r
+entity.korbon:decayed_zombie.name=Decayed Zombie
+item.spawn_egg.entity.korbon:decayed_zombie.name=Spawn Decayed Zombie
+entity.korbon:ghost.name=Ghost
+item.spawn_egg.entity.korbon:ghost.name=Spawn Ghost
+item.korbon:ectoplasm.name=Ectoplasm
+item.korbon:pear.name=Pear
+tile.korbon:pear_leaves.name=Pear Leaves
+item.korbon:peach.name=Peach
+tile.korbon:peach_leaves.name=Peach Leaves
+tile.korbon:enraged_cobblestone.name=Enraged Cobblestone
+entity.korbon:enraged_zombie.name=Enraged Zombie
+item.spawn_egg.entity.korbon:enraged_zombie.name=Spawn Enraged Zombie
+tile.korbon:lemon_leaves.name=Lemon Leaves
+item.korbon:lemon.name=Lemon
+tile.korbon:cherry_leaves.name=Cherry Leaves
+item.korbon:cherry.name=Cherries
+tile.korbon:vase.name=Vase
+item.korbon:apple_sapling_item.name=Apple Tree Sapling
+item.korbon:orange_sapling_item.name=Orange Tree Sapling
+item.korbon:cherry_sapling_item.name=Cherry Tree Sapling
+item.korbon:peach_sapling_item.name=Peach Tree Sapling
+item.korbon:pear_sapling_item.name=Pear Tree Sapling
+item.korbon:lemon_sapling_item.name=Lemon Tree Sapling
+tile.korbon:herobrine_totem_block.name=Herobrine Totem Block
+tile.korbon:present.name=Present
+tile.korbon:tombstone1.name=Tombstone
+tile.korbon:ectoplasm_block.name=Ectoplasm Block
+tile.korbon:banana_block.name=Banana Block
+tile.korbon:candle.name=Candle
+item.korbon:candle_item.name=Candle
+tile.korbon:candle_holder.name=Candle with Wall Support
+item.korbon:candle_holder_item.name=Candle with Wall Support
+entity.korbon:baby_spider.name=Baby Spider
+item.spawn_egg.entity.korbon:baby_spider.name=Spawn Baby Spider
+item.spawn_egg.entity.korbon:queen_spider.name=Spawn Spider Queen
+entity.korbon:queen_spider.name=Spider Queen
+tile.korbon:spider_nest.name=Spider Nest
+tile.korbon:spawner_block_queenspider.name=Spawner Block - Queen Spider
+item.korbon:banana.name=Banana
+item.korbon:banana_sapling_item.name=Banana Tree Sapling
+item.bs:exp_book_1.name=§eExperience Book I§r
+item.bs:exp_book_2.name=§eExperience Book II§r
+item.bs:exp_book_3.name=§eExperience Book III§r
+item.bs:the_great_book_of_experience.name=§3The Great Book of Experience§r
+tile.korbon:blueberry_bush.name=Blueberry Bush
+tile.korbon:blueberry_bush_harvested.name=Blueberry Bush Harvested
+item.korbon:blueberries.name=Blueberries
+item.korbon:banana_seeds.name=Banana Seeds
+tile.korbon:mysterious_mushroom.name=Mysterious Mushroom
+item.korbon:mysterious_mushroom.name=Mysterious Mushroom
+item.korbon:mysterious_mushroom_stew.name=Mysterious Mushroom Stew
+entity.korbon:lumberjack_villager.name=Lumberjack
+item.spawn_egg.entity.korbon:lumberjack_villager.name=Spawn Lumberjack Villager
+tile.korbon:sawmill.name=Sawmill
+tile.korbon:spawner_block_lumberjack.name=Spawner Block - Lumberjack
+tile.korbon:jukebox_extended.name=Jukebox+
+tile.korbon:jukebox_extended_mystical.name=Jukebox+ with Record - Mystical
+entity.korbon:herobrine.name=Herobrine
+entity.korbon:possessed_cow.name=Possessed Cow
+entity.korbon:possessed_villager.name=Possessed Villager
+entity.korbon:aetherial_knight.name=Aetherial Knight
+item.spawn_egg.entity.korbon:aetherial_knight.name=Spawn Aetherial Knight
+tile.korbon:spawner_block_castle_island.name=Structure Spawner - Castle Island
+tile.korbon:spike_trap.name=Sandstone Spike Trap
+tile.korbon:spike_trap_base.name=Spike Trap
+entity.korbon:cryptcrawler.name=Crypt Crawler
+item.spawn_egg.entity.korbon:cryptcrawler.name=Spawn Crypt Crawler
+tile.korbon:stone_bricks_trap.name=Crumbling Stone Bricks
+tile.korbon:stone_bricks_trap_mossy.name=Crumbling Mossy Stone Bricks
+item.korbon:coconut.name=Coconut
+item.korbon:coconut_open.name=Split Coconut
+tile.korbon:coconut_block.name=Coconut Block
+tile.korbon:old_bell.name=Old Bell
+entity.korbon:pillager_wolf.name=Pillager Wolf
+item.spawn_egg.entity.korbon:pillager_wolf.name=Spawn Pillager Wolf
+entity.korbon:pillager_trapper.name=Trapper Pillager
+item.spawn_egg.entity.korbon:pillager_trapper.name=Spawn Trapper Pillager
+entity.korbon:coconut.name=Coconut
+entity.korbon:pumpkin_zombie.name=Zombie
+entity.korbon:pumpkin_skeleton.name=Skeleton
+
+## ============================================================
+
+tile.rns:bush.name=Bush
+tile.rns:sticks.name=Sticks
+tile.rns:driedbush.name=Dried Bush
+tile.rns:rock.name=Rock
+tile.rns:nimberrybush.name=Nimberry Bush
+tile.rns:jungleleafbush.name=Jungle Leaf Bush
+tile.rns:leafpile.name=Leaf Pile
+tile.rns:driedleafpile.name=Dried Leaf Pile
+tile.rns:brownmushrooms.name=Brown Mushroom Clump
+tile.rns:redmushrooms.name=Red Mushroom Clump
+tile.rns:oakbranch.name=Oak Branch
+tile.rns:bones.name=Bones
+
+## ============================================================
+
+## Luminous Caverns
+tile.honkit26113:glow_mycelium.name=Glow Mycelium
+tile.honkit26113:deepslate_glow_mycelium.name=Deepslate Glow Mycelium
+tile.honkit26113:luminous_mushroom.name=Luminous Mushroom
+tile.honkit26113:gloomy_mushroom.name=Gloomy Mushroom
+tile.honkit26113:mysterious_fungus.name=Mysterious Fungus
+tile.honkit26113:luminous_mushroom_block.name=Luminous Mushroom Block
+tile.honkit26113:gloomy_mushroom_block.name=Gloomy Mushroom Block
+tile.honkit26113:luminous_mushroom_stem.name=Luminous Mushroom Stem
+tile.honkit26113:radiant_vines_head.name=Radiant Vines Head
+tile.honkit26113:radiant_vines_body.name=Radiant Vines Body
+tile.honkit26113:luminite_ore.name=Luminite Ore
+tile.honkit26113:deepslate_luminite_ore.name=Deepslate Luminite Ore
+tile.honkit26113:luminite_block.name=Block of Luminite
+
+item.honkit26113:luminous_mushroom_stew=Luminous Mushroom Stew
+item.honkit26113:mysterious_stew=Mysterious Stew
+item.honkit26113:radiant_vines_item=Radiant Vines
+item.honkit26113:luminite=Luminite
+item.honkit26113:luminite_shard=Luminite Shard
+item.honkit26113:luminite_helmet=Luminite Helmet
+item.honkit26113:luminite_chestplate=Luminite Chestplate
+item.honkit26113:luminite_leggings=Luminite Leggings
+item.honkit26113:luminite_boots=Luminite Boots
+item.honkit26113:luminite_sword=Luminite Sword
+item.honkit26113:luminite_pickaxe=Luminite Pickaxe
+item.honkit26113:luminite_shovel=Luminite Shovel
+item.honkit26113:luminite_axe=Luminite Axe
+item.honkit26113:luminite_hoe=Luminite Hoe
+
+item.spawn_egg.entity.honkit26113:shroom_elf.name=Spawn Shroom Elf
+entity.honkit26113:shroom_elf.name=Shroom Elf
+item.spawn_egg.entity.honkit26113:luminous_mooshroom.name=Spawn Luminous Mooshroom
+entity.honkit26113:luminous_mooshroom.name=Luminous Mooshroom
+
+
+
+## Slimy Sewers
+tile.honkit26113:slimy_stone.name=Slimy Stone
+tile.honkit26113:slimy_deepslate.name=Slimy Deepslate
+tile.honkit26113:slimy_stone_bricks.name=Slimy Stone Bricks
+tile.honkit26113:slimy_stone_bricks_slab.name=Slimy Stone Brick Slab
+tile.honkit26113:slimy_stone_bricks_cracked.name=Cracked Slimy Stone Bricks
+tile.honkit26113:slimy_deepslate_bricks.name=Slimy Deepslate Bricks
+tile.honkit26113:slimy_deepslate_bricks_slab.name=Slimy Deepslate Brick Slab
+tile.honkit26113:slimy_deepslate_bricks_cracked.name=Cracked Slimy Deepslate Bricks
+tile.honkit26113:slimy_deepslate_tiles.name=Slimy Deepslate Tiles
+tile.honkit26113:slimy_deepslate_tiles_slab.name=Slimy Deepslate Tile Slab
+tile.honkit26113:slimy_deepslate_tiles_cracked.name=Cracked Slimy Deepslate Tiles
+tile.honkit26113:slime_layer.name=Slime Layer
+tile.honkit26113:dripping_slime_head.name=Dripping Slime Head
+tile.honkit26113:dripping_slime_body.name=Dripping Slime Body
+tile.honkit26113:slimy_blossom.name=Slimy Blossom
+tile.honkit26113:slimy_sprouts.name=Slimy Sprouts
+tile.honkit26113:sticky_spikes.name=Sticky Spikes
+tile.honkit26113:slime_lantern.name=Slime Lantern
+tile.honkit26113:glow_lichen_block.name=Glow Lichen Block
+
+item.honkit26113:slime_soup=Slime Soup
+item.honkit26113:dripping_slime_item=Dripping Slime
+item.honkit26113:slimeball_part=Slimeball Part
+item.honkit26113:hardened_slimeball=Hardened Slimeball
+item.honkit26113:slime_dagger=Slime Dagger
+
+item.spawn_egg.entity.honkit26113:slimy_zombie.name=Spawn Slimy Zombie
+entity.honkit26113:slimy_zombie.name=Slimy Zombie
+
+
+
+## Limestone Caves
+tile.honkit26113:limestone.name=Limestone
+tile.honkit26113:limestone_slab.name=Limestone Slab
+tile.honkit26113:limestone_pebbles.name=Limestone Pebbles
+tile.honkit26113:cobbled_limestone.name=Cobbled Limestone
+tile.honkit26113:cobbled_limestone_pebbles.name=Cobbled Limestone Pebbles
+tile.honkit26113:polished_limestone.name=Polished Limestone
+tile.honkit26113:limestone_bricks.name=Limestone Bricks
+tile.honkit26113:limestone_bricks_slab.name=Limestone Brick Slab
+tile.honkit26113:limestone_bricks_chiseled.name=Chiseled Limestone Bricks
+tile.honkit26113:limestone_bricks_cracked.name=Cracked Limestone Bricks
+tile.honkit26113:limestone_bricks_mossy.name=Mossy Limestone Bricks
+tile.honkit26113:sand_layer.name=Sand Layer
+tile.honkit26113:quicksand.name=Quicksand
+tile.honkit26113:sandy_roots_head.name=Sandy Roots Head
+tile.honkit26113:sandy_roots_body.name=Sandy Roots Body
+
+item.honkit26113:raw_scorpion=Raw Scorpion
+item.honkit26113:cooked_scorpion=Cooked Scorpion
+item.honkit26113:sandy_roots_item=Sandy Roots
+item.honkit26113:sand_lump=Sand Lump
+
+item.spawn_egg.entity.honkit26113:scorpion.name=Spawn Scorpion
+entity.honkit26113:scorpion.name=Scorpion
+
+
+
+## Ice Caves
+tile.honkit26113:frosted_stone.name=Frosted Stone
+tile.honkit26113:frosted_stone_slab.name=Frosted Stone Slab
+tile.honkit26113:frosted_deepslate.name=Frosted Deepslate
+tile.honkit26113:pebbles.name=Pebbles
+tile.honkit26113:cobblestone_pebbles.name=Cobblestone Pebbles
+tile.honkit26113:frosted_pebbles.name=Frosted Pebbles
+tile.honkit26113:deepslate_pebbles.name=Deepslate Pebbles
+tile.honkit26113:cobbled_deepslate_pebbles.name=Cobbled Deepslate Pebbles
+tile.honkit26113:frosted_deepslate_pebbles.name=Frosted Deepslate Pebbles
+tile.honkit26113:crystallized_ice.name=Crystallized Ice
+tile.honkit26113:ice_crystal.name=Ice Crystal
+tile.honkit26113:dripping_icicle_small.name=Small Dripping Icicle
+tile.honkit26113:dripping_icicle_medium.name=Medium Dripping Icicle
+tile.honkit26113:packed_ice_bricks.name=Packed Ice Bricks
+tile.honkit26113:packed_ice_bricks_slab.name=Packed Ice Brick Slab
+tile.honkit26113:packed_ice_bricks_cracked.name=Cracked Packed Ice Bricks
+tile.honkit26113:packed_ice_chiseled.name=Chiseled Packed Ice
+tile.honkit26113:suitcase.name=Suitcase
+tile.honkit26113:suitcase_used.name=Suitcase
+
+item.honkit26113:ice_shard=Ice Shard
+item.honkit26113:dripping_icicle_item=Dripping Icicle
+
+item.spawn_egg.entity.honkit26113:penguin.name=Spawn Penguin
+entity.honkit26113:penguin.name=Penguin
+item.spawn_egg.entity.honkit26113:lost_explorer.name=Spawn Lost Explorer
+entity.honkit26113:lost_explorer.name=Lost Explorer
+
+
+
+## Soul Caverns
+tile.honkit26113:crooked_nylium.name=Crooked Nylium
+tile.honkit26113:crooked_fungus.name=Crooked Fungus
+tile.honkit26113:crooked_roots.name=Crooked Roots
+tile.honkit26113:crooked_wart_block.name=Crooked Wart Block
+tile.honkit26113:crooked_stem.name=Crooked Stem
+tile.honkit26113:crooked_stem_stripped.name=Stripped Crooked Stem
+tile.honkit26113:crooked_hyphae.name=Crooked Hyphae
+tile.honkit26113:crooked_hyphae_stripped.name=Stripped Crooked Hyphae
+tile.honkit26113:crooked_planks.name=Crooked Planks
+tile.honkit26113:crooked_slab.name=Crooked Slab
+tile.honkit26113:crooked_fence.name=Crooked Fence
+tile.honkit26113:crooked_fence_gate.name=Crooked Fence Gate
+tile.honkit26113:crooked_trapdoor.name=Crooked Trapdoor
+tile.honkit26113:soul_stone.name=Soul Stone
+tile.honkit26113:soul_bricks.name=Soul Bricks
+tile.honkit26113:soul_bricks_slab.name=Soul Brick Slab
+tile.honkit26113:soul_bricks_fence.name=Soul Brick Fence
+tile.honkit26113:soul_bricks_chiseled.name=Chiseled Soul Bricks
+tile.honkit26113:soul_bricks_cracked.name=Cracked Soul Bricks
+tile.honkit26113:soul_shroomlight.name=Soul Shroomlight
+tile.honkit26113:soul_magma.name=Soul Magma Block
+tile.honkit26113:soul_geyser.name=Soul Geyser
+tile.honkit26113:glowing_obsidian.name=Glowing Obsidian
+tile.honkit26113:lava_tank_broken.name=Broken Lava Tank
+tile.honkit26113:lava_tank_gold.name=Gold Lava Tank
+tile.honkit26113:lava_tank_gold_full.name=Full Gold Lava Tank
+tile.honkit26113:lava_tank_gold_locked.name=Locked Gold Lava Tank
+tile.honkit26113:lava_tank_gold_cooldown.name=Cooling Down Gold Lava Tank
+tile.honkit26113:lava_tank_diamond.name=Diamond Lava Tank
+tile.honkit26113:lava_tank_diamond_full.name=Full Diamond Lava Tank
+tile.honkit26113:lava_tank_diamond_locked.name=Locked Diamond Lava Tank
+tile.honkit26113:lava_tank_diamond_cooldown.name=Cooling Down Diamond Lava Tank
+
+item.honkit26113:soul_healer=§bSoul Healer§r
+item.honkit26113:soul_fragment=Soul Fragment
+item.honkit26113:crooked_fungus_stew=Crooked Fungus Stew
+
+item.spawn_egg.entity.honkit26113:wisp.name=Spawn Wisp
+entity.honkit26113:wisp.name=Wisp
+
+## Loading Messages
+honkit26113.beyond_underground.tips.1=Luminous Caverns only generate under Mushroom Islands!
+honkit26113.beyond_underground.tips.2=Slimy Sewers only generate under Swamps!
+honkit26113.beyond_underground.tips.3=Limestone Caves only generate under Deserts!
+honkit26113.beyond_underground.tips.4=Ice Caves only generate under frozen biomes!
+honkit26113.beyond_underground.tips.5=Make Fatal Poison potions using Raw Scorpions!
+honkit26113.beyond_underground.tips.6=Make Luminous Mushroom Stew using Luminous Mushrooms!
+honkit26113.beyond_underground.tips.7=You can make Slime Soup using Slimeballs... but I don't recommend drinking it.
+honkit26113.beyond_underground.tips.8=Shroom Elfs are very shy creatures, but you can feed them Luminous Mushrooms to gain their trust!
+honkit26113.beyond_underground.tips.9=Luminite can be found in Luminous Caverns!
+honkit26113.beyond_underground.tips.10=Luminite gear has more durability than Netherite gear!
+honkit26113.beyond_underground.tips.11=You can craft Hardened Slimeballs and throw them at your opponents!
+honkit26113.beyond_underground.tips.12=Limestone can be used to make Limestone Bricks!
+honkit26113.beyond_underground.tips.13=Each major Beyond The Underground update brings a new panorama! 
+honkit26113.beyond_underground.tips.14=Pebbles have 12 different variations when placed!
+honkit26113.beyond_underground.tips.15=Combine 6 Luminite Shards with 1 Diamond to make 1 Luminite!
+honkit26113.beyond_underground.tips.16=Watch out for Quicksand when exploring Swamps and Limestone Caves!
+honkit26113.beyond_underground.tips.17=Ice Crystals are the only thing that give off light in the dark, freezing Ice Caves.
+honkit26113.beyond_underground.tips.18=Packed Ice can be used to make Packed Ice Bricks!
+honkit26113.beyond_underground.tips.19=Interact with a Suitcase while holding an Emerald to summon a Lost Explorer!
+honkit26113.beyond_underground.tips.20=Limestone Caves are the only cave type that don't generate at Deepslate level!
+honkit26113.beyond_underground.tips.21=Feed a Luminous Mooshroom Mysterious Fungus, and get Mysterious Stew!
+honkit26113.beyond_underground.tips.22=Mysterious Stew has a 33.3% to give you 2 effects.
+honkit26113.beyond_underground.tips.23=Watch your step when exploring the Slimy Sewers- don't step into Sticky Spikes!
+honkit26113.beyond_underground.tips.24=You can craft all types of pebbles using a Stonecutter!
+honkit26113.beyond_underground.tips.25=Use Slimy Stone and Slimy Deepslate to make bricks!
+honkit26113.beyond_underground.tips.26=Make sure you are equipped with armor before taking on Limestone and Slime Dungeons!
+honkit26113.beyond_underground.tips.27=Ruins can sometimes be found in Limestone Caves. I wonder what their backstories are?
+honkit26113.beyond_underground.tips.28=You can craft Slime Lanterns using 1 Glowstone and 4 Hardened Slimeballs.
+honkit26113.beyond_underground.tips.29=Slime Daggers can only be obtained from Slime Dungeons!
+honkit26113.beyond_underground.tips.30=Soul Caverns only generate under the Nether Wastes!
+honkit26113.beyond_underground.tips.31=Craft a Soul Healer using 7 Soul Fragments and 2 Glowing Obsidian!
+honkit26113.beyond_underground.tips.32=Activate the Soul Healer when you're low on health- it can save your life!
+honkit26113.beyond_underground.tips.33=Make Soul Bricks using Soul Stone!
+honkit26113.beyond_underground.tips.34=You can throw Sand Lumps at your opponents!
+honkit26113.beyond_underground.tips.35=Crooked Fungus Stew gives you the Fire Resistance effect!
+honkit26113.beyond_underground.tips.36=Watch out for Soul Geysers in the Soul Caverns! They shoot you high up into the air!
+honkit26113.beyond_underground.tips.37=Don't step on Soul Magma Blocks- they hurt!
+
+
+## Output Messages
+suitcase.message.interact_with_emerald=Interact with an Emerald to summon the Lost Explorer!
+suitcase.message.summoned=Lost Explorer successfully summoned!
+suitcase.message.used=This Suitcase has already been used to summon a Lost Explorer!
+
+lava_tank.message.broken=Oops! This Lava Tank is broken. Repair it in a Crafting Table first!
+lava_tank.message.locked=Locked Lava Tanks cannot be emptied!
+lava_tank.message.confirmation=Are you sure? Interact with the tank again to proceed.
+lava_tank.message.cancel=Canceled operation.
+lava_tank.message.cooldown5=You need to wait before using the Lava Tank again. [0:05]
+lava_tank.message.cooldown4=You need to wait before using the Lava Tank again. [0:04]
+lava_tank.message.cooldown3=You need to wait before using the Lava Tank again. [0:03]
+lava_tank.message.cooldown2=You need to wait before using the Lava Tank again. [0:02]
+lava_tank.message.cooldown1=You need to wait before using the Lava Tank again. [0:01]
+lava_tank.message.cooldown0=You need to wait before using the Lava Tank again. [0:00]
+lava_tank.message.cooldown_end=The Lava Tank is now ready for use.
+lava_tank.message.interact_with_water=Interact with a Water Bucket to cool down the tank!
+lava_tank.message.cooling_down=The Lava Tank is now cooling down!
+lava_tank.message.interact_with_pickaxe=Interact with a Diamond Pickaxe or better to empty the tank!
+lava_tank.message.emptied=The Lava Tank has been emptied!
+
+soul_healer.message.activated=§bSoul Healer§r Activated!
+
+## ============================================================

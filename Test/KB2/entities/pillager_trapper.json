@@ -1,0 +1,241 @@
+//bridge-file-version: #70
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "korbon:pillager_trapper",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:angry": {
+				"minecraft:angry": {},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": false,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							"max_dist": 32
+						}
+					]
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 0,
+					"attack_interval_min": 1,
+					"attack_interval_max": 1,
+					"attack_radius": 16,
+					"speed_multiplier": 0.7,
+					"burst_shots": 2,
+					"burst_interval": 0.1
+				},
+				"minecraft:shooter": {
+					"def": "minecraft:arrow"
+				}
+			},
+			"can_trade": {
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.korbon:pillager_trapper.name",
+					"table": "trading/economy_trades/pillager_trapper.json",
+					"new_screen": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"pillager"
+				]
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:health": {
+				"value": 50,
+				"max": 50
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.9
+			},
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_pass_doors": true,
+				"can_open_doors": true,
+				"avoid_water": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:behavior.trade_with_player": {
+				"priority": 1
+			},
+			"minecraft:behavior.look_at_trading_player": {
+				"priority": 4
+			},
+			"minecraft:behavior.panic": {
+				"priority": 1,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:behavior.restrict_open_door": {
+				"priority": 5
+			},
+			"minecraft:behavior.open_door": {
+				"priority": 6,
+				"close_door_after": true
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 8,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 9
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:equipment": {
+				"table": "loot_tables/entities/pillager_trapper_gear.json"
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 0,
+				"attack_interval_min": 1,
+				"attack_interval_max": 1,
+				"attack_radius": 15,
+				"burst_shots": 2,
+				"burst_interval": 0.1,
+				"speed_multiplier": 0.7
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"must_see": true,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "irongolem"
+						},
+						"max_dist": 16
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "baby_turtle"
+								}
+							]
+						},
+						"max_dist": 16
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "villager"
+						},
+						"max_dist": 16
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "wandering_trader"
+						},
+						"max_dist": 16
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "bear"
+						},
+						"max_dist": 16
+					}
+				]
+			},
+			"minecraft:shooter": {
+				"def": "minecraft:arrow"
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 6,
+				"speed_multiplier": 0.4
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							},
+							"event": "minecraft:become_angry"
+						}
+					}
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/pillager_trapper.json"
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"can_trade"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"add": {
+					"component_groups": [
+						"minecraft:angry"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"can_trade"
+					]
+				}
+			}
+		}
+	}
+}

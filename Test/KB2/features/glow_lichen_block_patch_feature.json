@@ -1,0 +1,28 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.0",
+  "minecraft:vegetation_patch_feature": {
+    "description": {
+      "identifier": "honkit26113:glow_lichen_block_patch_feature"
+    },
+    "replaceable_blocks": [
+      "minecraft:stone",
+      "minecraft:deepslate",
+      "minecraft:dirt"
+    ],
+    "ground_block": "honkit26113:glow_lichen_block",
+    "vegetation_feature": "honkit26113:glow_lichen_block_patch_vegetation_random_feature",
+    "surface": "floor",
+    "depth": {
+      "range_min": 1,
+      "range_max": 2
+    },
+    "vertical_range": 5,
+    "vegetation_chance": 1.0,
+    "horizontal_radius": {
+      "range_min": 2,
+      "range_max": 3
+    },
+    "extra_edge_column_chance": 0.15
+  }
+}

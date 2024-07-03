@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "cav:mica_ore_furnace"
+    },
+
+    
+    "tags": ["furnace","blast_furnace"],
+    "input": "cav:mica_ore",
+    "output": "cav:mica"
+  }
+  
+}

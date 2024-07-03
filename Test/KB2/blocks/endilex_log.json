@@ -1,0 +1,108 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "end:endilex_log",
+			"properties": {
+				"wiki:rotation": [
+					0,
+					1,
+					2
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "endilex_log_side",
+					"render_method": "opaque",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				},
+				"up": {
+					"texture": "endilex_log_top"
+				},
+				"down": {
+					"texture": "endilex_log_top"
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 2,
+			"minecraft:on_player_placing": {
+				"event": "wiki:set_rotation"
+			},
+			"minecraft:loot": "loot_tables/endilex_log.json",
+			"minecraft:pick_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.log"
+			},
+			"tag:wood": {}
+		},
+		"events": {
+			"wiki:set_rotation": {
+				"set_block_property": {
+					"wiki:rotation": "math.floor(query.cardinal_facing/2)"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('wiki:rotation') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 1",
+				"components": {
+					"minecraft:rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "query.block_property('wiki:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						270
+					]
+				}
+			}
+		]
+	}
+}

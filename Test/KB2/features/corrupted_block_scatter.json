@@ -1,0 +1,26 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.16.100",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "end:corrupted_block_scatter"
+		},
+		"iterations": "math.random_integer(20,25)",
+		"x": {
+			"extent": [
+				0,
+				8
+			],
+			"distribution": "gaussian"
+		},
+		"z": {
+			"extent": [
+				0,
+				8
+			],
+			"distribution": "gaussian"
+		},
+		"y": "query.heightmap(v.worldx, v.worldz) -1",
+		"places_feature": "end:corrupted_block_feature"
+	}
+}

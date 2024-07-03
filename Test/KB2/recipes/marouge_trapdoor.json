@@ -1,0 +1,26 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "nether:marouge_trapdoor"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"PPP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "nether:marouge_planks"
+			}
+		},
+		"result": [
+			{
+				"item": "nether:marouge_trapdoor"
+			}
+		]
+	}
+}

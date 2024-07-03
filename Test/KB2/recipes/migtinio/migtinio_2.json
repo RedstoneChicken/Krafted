@@ -1,0 +1,24 @@
+//bridge-file-version: #1
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "oh:migtinio_2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"X"
+		],
+		"key": {
+			"X": {
+				"item": "oh:migtinio_block"
+			}
+		},
+		"result": {
+			"item": "oh:migtinio",
+			"count": 4
+		}
+	}
+}

@@ -1,0 +1,30 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:pot"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"~##",
+			" ##"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:iron_ingot"
+			},
+			"~": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:pot_item",
+				"count": 1
+			}
+		]
+	}
+}

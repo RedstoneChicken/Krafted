@@ -1,0 +1,40 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.200",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:cornish_pasty"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:dough",
+				"count": 1
+			},
+			{
+				"item": "minecraft:cooked_beef",
+				"count": 1
+			},
+			{
+				"item": "minecraft:potato",
+				"count": 1
+			},
+			{
+				"item": "minecraft:carrot",
+				"count": 1
+			},
+			{
+				"item": "strat:salt",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:cornish_pasty",
+				"count": 1
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:manyullyn_sword_blade"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Manyullyn Sword Blade"
+			},
+			"minecraft:icon": {
+				"texture": "manyullyn_sword_blade"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

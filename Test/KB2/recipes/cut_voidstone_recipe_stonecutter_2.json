@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+    "identifier": "cav:cut_voidstone_recipe_stonecutter_2"
+    },
+
+    
+    "tags": [ "stonecutter" ],
+    "priority": 0,
+    "ingredients": [
+      {
+        "item": "cav:voidstone"
+      }
+    ],
+    "result": {
+      "item": "cav:cut_voidstone",
+      "count": 1
+    }
+  }
+  
+}

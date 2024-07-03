@@ -1,0 +1,20 @@
+//bridge-file-version: #1
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "nothing",
+					"weight": 10
+				},
+				{
+					"type": "item",
+					"name": "rns:driedleaf",
+					"weight": 1
+				}
+			]
+		}
+	]
+}

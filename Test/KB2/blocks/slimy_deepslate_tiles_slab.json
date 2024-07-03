@@ -1,0 +1,268 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "honkit26113:slimy_deepslate_tiles_slab",
+            "register_to_creative_menu": true,
+            "properties": {
+                "honkit26113:placeontopside": [0, 1, 2, 3, 4, 5, 6]
+            }
+        },
+        "components": {
+            "tag:honkit26113_dig_with_pickaxe": {},
+            "tag:stone": {},
+            "minecraft:creative_category": {
+                "group": "itemGroup.name.slab",
+                "category": "construction"
+            },
+            "minecraft:map_color": "#C2A991",
+            "minecraft:destroy_time": 0.4,
+            "minecraft:explosion_resistance": 6,
+            "minecraft:flammable": {
+                "flame_odds": 0,
+                "burn_odds": 0
+            },
+        	"minecraft:on_player_placing": {
+        		"event": "honkit26113:placeontopside"
+        	}
+        },
+        "events": {
+            "honkit26113:make_double":{     
+            	"sequence":[
+                	{
+            			"set_block_property": {
+                            "honkit26113:placeontopside": "6"
+                        }
+                	},
+                	{
+            			"decrement_stack":{}    
+                	}
+            	]
+        	},
+        	"honkit26113:placeontopside": {
+                "set_block_property": {
+                	"honkit26113:placeontopside": "query.cardinal_player_facing"
+                }
+            },
+            "honkit26113:broken": {
+                "spawn_loot": {
+                    "table": "loot_tables/blocks/slimy_deepslate_tiles_slab.json"
+                }
+            },
+            "honkit26113:broken_double": {
+                "spawn_loot": {
+                    "table": "loot_tables/blocks/slimy_deepslate_tiles_slab_double.json"
+                }
+            }
+        },
+        "permutations": [
+        	{
+                "condition": "query.block_property('honkit26113:placeontopside') == 0.0", // upright
+                "components": {
+                    "minecraft:geometry": "geometry.slab_new",
+           			"minecraft:material_instances": {
+                		"*": {
+                    		"texture": "slimy_deepslate_tiles",
+                    		"render_method": "alpha_test"
+                		}
+            		},
+                    "minecraft:pick_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+            		"minecraft:on_interact":{
+                		"condition": "((query.get_equipped_item_name('main_hand') == 'slimy_deepslate_tiles_slab') && (query.block_face == 1.0))",
+                		"event": "honkit26113:make_double"
+        			},
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken"
+                    },
+                    "minecraft:block_light_absorption": 0,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:placeontopside') == 1.0", // upside down
+                "components": {
+                    "minecraft:geometry": "geometry.slab_top_new",
+                    "minecraft:material_instances": {
+                		"*": {
+                    		"texture": "slimy_deepslate_tiles",
+                    		"render_method": "alpha_test"
+                		}
+            		},
+                    "minecraft:pick_collision": {
+                        "origin": [-8,8,-8],
+                        "size": [16,8,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,8,-8],
+                        "size": [16,8,16]
+                    },
+            		"minecraft:on_interact":{
+                		"condition": "((query.get_equipped_item_name('main_hand') == 'slimy_deepslate_tiles_slab') && (query.block_face == 0.0))",
+                		"event": "honkit26113:make_double"
+        			},
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken"
+                    },
+                    "minecraft:block_light_absorption": 0,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:placeontopside') == 2.0", // upright
+                "components": {
+                    "minecraft:geometry": "geometry.slab_new",
+           			"minecraft:material_instances": {
+                		"*": {
+                    		"texture": "slimy_deepslate_tiles",
+                    		"render_method": "alpha_test"
+                		}
+            		},
+                    "minecraft:pick_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+            		"minecraft:on_interact":{
+                		"condition": "((query.get_equipped_item_name('main_hand') == 'slimy_deepslate_tiles_slab') && (query.block_face == 1.0))",
+                		"event": "honkit26113:make_double"
+        			},
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken"
+                    },
+                    "minecraft:block_light_absorption": 0,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:placeontopside') == 3.0", // upright
+                "components": {
+                    "minecraft:geometry": "geometry.slab_new",
+           			"minecraft:material_instances": {
+                		"*": {
+                    		"texture": "slimy_deepslate_tiles",
+                    		"render_method": "alpha_test"
+                		}
+            		},
+                    "minecraft:pick_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+            		"minecraft:on_interact":{
+                		"condition": "((query.get_equipped_item_name('main_hand') == 'slimy_deepslate_tiles_slab') && (query.block_face == 1.0))",
+                		"event": "honkit26113:make_double"
+        			},
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken"
+                    },
+                    "minecraft:block_light_absorption": 0,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:placeontopside') == 4.0", // upright
+                "components": {
+                    "minecraft:geometry": "geometry.slab_new",
+           			"minecraft:material_instances": {
+                		"*": {
+                    		"texture": "slimy_deepslate_tiles",
+                    		"render_method": "alpha_test"
+                		}
+            		},
+                    "minecraft:pick_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+            		"minecraft:on_interact":{
+                		"condition": "((query.get_equipped_item_name('main_hand') == 'slimy_deepslate_tiles_slab') && (query.block_face == 1.0))",
+                		"event": "honkit26113:make_double"
+        			},
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken"
+                    },
+                    "minecraft:block_light_absorption": 0,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            },
+        	{
+                "condition": "query.block_property('honkit26113:placeontopside') == 5.0", // upright
+                "components": {
+                    "minecraft:geometry": "geometry.slab_new",
+           			"minecraft:material_instances": {
+                		"*": {
+                    		"texture": "slimy_deepslate_tiles",
+                    		"render_method": "alpha_test"
+                		}
+            		},
+                    "minecraft:pick_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,8,16]
+                    },
+            		"minecraft:on_interact":{
+                		"condition": "((query.get_equipped_item_name('main_hand') == 'slimy_deepslate_tiles_slab') && (query.block_face == 1.0))",
+                		"event": "honkit26113:make_double"
+        			},
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken"
+                    },
+                    "minecraft:block_light_absorption": 0,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            },
+            {
+                "condition": "query.block_property('honkit26113:placeontopside') == 6.0", // full
+                "components": {
+                    "minecraft:unit_cube": {},
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "slimy_deepslate_tiles",
+                            "render_method": "alpha_test"
+                        }
+                    },
+                    "minecraft:pick_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,16,16]
+                    },
+                    "minecraft:entity_collision": {
+                        "origin": [-8,0,-8],
+                        "size": [16,16,16]
+                    },
+                    "minecraft:on_player_destroyed": {
+                        "condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_pickaxe')",
+                        "event": "honkit26113:broken_double"
+                    },
+                    "minecraft:block_light_absorption": 15,
+                    "minecraft:loot": "loot_tables/no_drops.json"
+                }
+            }
+        ]
+    }
+}

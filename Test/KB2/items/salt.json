@@ -1,0 +1,19 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:salt",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "strat_salt"
+			},
+			"minecraft:creative_category": {
+				"parent": "nature"
+			}
+		},
+		"events": {}
+	}
+}

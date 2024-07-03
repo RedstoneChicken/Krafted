@@ -1,0 +1,30 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:weighted_random_feature": {
+        "description": {
+            "identifier": "ff:corrupted_rose/corrupted_rose_valley_flower_feature"
+        },
+        "features": [
+            [
+                "ff:corrupted_rose/corrupted_rose_bouquet_feature",
+                15
+            ],
+            [
+                "ff:corrupted_rose/corrupted_rose_feature",
+                15
+            ],
+            [
+                "ff:corrupted_rose/corrupted_rose_tall_feature",
+                15
+            ],
+            [
+                "ff:corrupted_rose/corrupted_rose_short_feature",
+                17
+            ],
+            [
+                "ff:corrupted_rose/corrupted_rose_large_feature",
+                12
+            ]
+        ]
+    }
+}

@@ -1,0 +1,508 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:mattock_8_4",
+			"category": "commands"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 608,
+				"damage_chance": {
+					"min": 1,
+					"max": 1
+				}
+			},
+			"minecraft:mining_speed": 6,
+			"minecraft:damage": 7,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "q.any_tag('wood', 'pumpkin', 'plant')"
+						},
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:chest",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:melon_block",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crafting_table",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:bookshelf",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:dirt",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:grass",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:grass_path",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:farmland",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:hay_block",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": {
+							"tags": "query.all_tags('dirt')"
+						},
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:sand",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:podzol",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:grout",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:nether_grout",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:log",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:log2",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:mangrove_log",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crimson_stem",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:warped_stem",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:wood",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:planks",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:mangrove_wood",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:warped_hyphae",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crimson_hyphae",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:planks",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:mangrove_planks",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:warped_planks",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crimson_planks",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:mangrove_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:wooden_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:double_wooden_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:warped_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:warped_double_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crimson_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crimson_double_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:oak_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:spruce_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:birch_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:jungle_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:acacia_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:dark_oak_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:warped_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:crimson_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "minecraft:mangrove_stairs",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:lavawood",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:firewood",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:lavawood_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:firewood_slab",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:drying_rack",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					},
+					{
+						"block": "strat:punji_sticks",
+						"speed": 6,
+						"on_dig": {
+							"event": "hurt"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "hurt"
+				}
+			},
+			"tag:minecraft:is_axe": {},
+			"minecraft:display_name": {
+				"value": "Stone Mattock\n§bDiamond\n§4Haste§r"
+			},
+			"minecraft:icon": {
+				"texture": "mattock_8_4"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.hoe"
+			},
+			"minecraft:use_on": {
+				"blocks": [
+					"grass",
+					"dirt",
+					"grass_path"
+				]
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "hurt_2"
+				},
+				"on_hit_block": {
+					"event": "hurt"
+				}
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "farm",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"hurt": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability == 10000",
+						"transform_item": {
+							"transform": "strat:mattock_8_broken"
+						},
+						"run_command": {
+							"command": [
+								"playsound random.break @a ~~~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"condition": "query.remaining_durability < 10000",
+						"damage": {
+							"type": "none",
+							"amount": 1,
+							"target": "self"
+						}
+					}
+				]
+			},
+			"hurt_2": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability == 20000",
+						"transform_item": {
+							"transform": "strat:mattock_8_broken"
+						},
+						"run_command": {
+							"command": [
+								"playsound random.break @a ~~~"
+							],
+							"target": "holder"
+						}
+					},
+					{
+						"condition": "query.remaining_durability < 20000",
+						"damage": {
+							"type": "none",
+							"amount": 2,
+							"target": "self"
+						}
+					}
+				]
+			},
+			"farm": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability < 10000",
+						"damage": {
+							"type": "none",
+							"amount": 1,
+							"target": "item"
+						},
+						"run_command": {
+							"command": [
+								"fill ~ ~ ~ ~ ~ ~ farmland 0 replace dirt",
+								"fill ~ ~ ~ ~ ~ ~ farmland 0 replace grass",
+								"fill ~ ~ ~ ~ ~ ~ farmland 0 replace grass_path"
+							]
+						},
+						"swing": {}
+					},
+					{
+						"condition": "query.remaining_durability == 10000",
+						"run_command": {
+							"command": [
+								"fill ~ ~ ~ ~ ~ ~ farmland 0 replace dirt",
+								"fill ~ ~ ~ ~ ~ ~ farmland 0 replace grass",
+								"fill ~ ~ ~ ~ ~ ~ farmland 0 replace grass_path",
+								"playsound random.break @a ~~~"
+							]
+						},
+						"transform_item": {
+							"transform": "strat:mattock_8_broken"
+						},
+						"swing": {}
+					}
+				]
+			}
+		}
+	}
+}

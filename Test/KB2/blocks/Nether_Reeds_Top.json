@@ -1,0 +1,50 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "caf:nether_reeds_top"
+		},
+		"components": {
+			"minecraft:destroy_time": 1,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up",
+							"down"
+						]
+					},
+					{
+						"block_filter": [
+							"minecraft:netherrack",
+							"caf:jungle_nylium",
+							"minecraft:crimson_nylium",
+							"minecraft:warped_nylium",
+							"caf:nether_mycelium"
+						]
+					}
+				]
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "nether_reeds_top",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:geometry": "geometry.cb"
+		},
+		"events": {
+			"caf:growmeal": {
+				"run_command": {
+					"command": [
+						"particle minecraft:crop_growth_emitter ~~~",
+						"fill ~ ~ ~ ~ ~2 ~ caf:nether_reeds_middle 0 replace air",
+						"setblock ~ ~3 ~ caf:nether_reeds_top"
+					]
+				}
+			}
+		}
+	}
+}

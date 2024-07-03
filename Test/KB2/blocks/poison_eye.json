@@ -1,0 +1,81 @@
+//bridge-file-version: #17
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nether:poison_eye"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.poison_eye",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "poison_flower",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:block_light_emission": 0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:pick_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:entity_collision": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					10,
+					8
+				]
+			},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.flower"
+			},
+			"minecraft:ticking": {
+				"looping": true,
+				"range": [
+					1,
+					2
+				],
+				"on_tick": {
+					"event": "particle"
+				}
+			},
+			"minecraft:on_interact": {
+				"condition": "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe')",
+				"event": "shear"
+			}
+		},
+		"events": {
+			"particle": {
+				"run_command": {
+					"command": [
+						"particle nether:poison_eye_particle ~ ~ ~"
+					]
+				}
+			},
+			"shear": {
+				"set_block": {
+					"block_type": "nether:poison_flower"
+				},
+				"spawn_loot": {
+					"table": "loot_tables/poison_eye.json"
+				}
+			}
+		}
+	}
+}

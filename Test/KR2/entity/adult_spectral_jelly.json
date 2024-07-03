@@ -1,0 +1,33 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "end:adult_spectral_jelly",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/adult_spectral_jelly"
+			},
+			"geometry": {
+				"default": "geometry.adult_spectral_jelly"
+			},
+			"animations": {
+				"move": "animation.adult_spectral_jelly.idle"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#5E0C69",
+				"overlay_color": "#E939CD"
+			}
+		}
+	}
+}

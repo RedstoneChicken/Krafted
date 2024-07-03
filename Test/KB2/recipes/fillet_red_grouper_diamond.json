@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fillet_red_grouper_diamond"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "AB"
+    ],
+    "key": {
+      "A": {
+        "item": "azc:diamond_fillet_knife"
+      },
+      "B": {
+        "item": "azc:red_grouper"
+      }
+    },
+    "result": [
+      {
+        "item": "azc:sashimi",
+        "count": 3
+      },
+      {
+        "item": "azc:diamond_fillet_knife"
+      }
+    ]
+  }
+}

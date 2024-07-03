@@ -1,0 +1,38 @@
+//bridge-file-version: #19
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:excavator_128"
+		},
+		"tags": [
+			"tool_forge"
+		],
+		"pattern": [
+			" ~#",
+			" o",
+			"x"
+		],
+		"key": {
+			"#": {
+				"item": "strat:manyullyn_excavator_head"
+			},
+			"~": {
+				"item": "strat:manyullyn_large_plate"
+			},
+			"o": {
+				"item": "strat:manyullyn_tough_tool_rod"
+			},
+			"x": {
+				"item": "strat:manyullyn_tough_binding"
+			}
+		},
+		"result": [
+			{
+				"item": "strat:excavator_128",
+				"count": 1
+			}
+		],
+		"priority": 0
+	}
+}

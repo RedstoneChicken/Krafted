@@ -1,0 +1,17 @@
+//bridge-file-version: #1
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 0,
+				"max": 1
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:shulker_shell"
+				}
+			]
+		}
+	]
+}

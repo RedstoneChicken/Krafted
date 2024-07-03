@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:end_lamp"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "PPP",
+      "PBP",
+      "PPP"
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:chorus_fruit_popped"
+      },
+      "B": {
+        "item": "minecraft:blaze_powder"
+      }
+    },
+    "result": {
+      "item": "cav:end_lamp",
+      "count": 1
+    }
+  }
+}

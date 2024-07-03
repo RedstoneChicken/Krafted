@@ -1,0 +1,28 @@
+//bridge-file-version: #3
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:cleaver_127_8_2"
+		},
+		"tags": [
+			"tool_station"
+		],
+		"ingredients": [
+			{
+				"item": "strat:cleaver_127_6",
+				"count": 1
+			},
+			{
+				"item": "minecraft:diamond",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:cleaver_127_8",
+				"count": 1
+			}
+		]
+	}
+}

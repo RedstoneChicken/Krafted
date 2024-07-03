@@ -1,0 +1,26 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:maple_syrup_pancake",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "maple_syrup_pancake"
+			},
+			"minecraft:food": {
+				"nutrition": 10,
+				"saturation_modifier": "max",
+				"can_always_eat": false
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_duration": 2.4
+		},
+		"events": {}
+	}
+}

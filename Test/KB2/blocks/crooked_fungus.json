@@ -1,0 +1,133 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "honkit26113:crooked_fungus",
+      "category": "none"
+    },
+    "components": {
+        "minecraft:creative_category": {
+            "group": "itemGroup.name.none",
+            "category": "none"
+        },
+    	"minecraft:destroy_time": 0.0,
+        "minecraft:block_light_absorption": 0,
+        "minecraft:geometry": "geometry.cross",
+        "minecraft:breathability": "air",
+        "minecraft:loot": "loot_tables/blocks/crooked_fungus.json",
+        "minecraft:placement_filter": {
+            "conditions": [
+                {
+                	"block_filter": [
+                        "minecraft:grass",
+                        "minecraft:dirt",
+                        "minecraft:podzol",
+                        "minecraft:farmland",
+                        "minecraft:dirt_with_roots",
+                        "minecraft:moss_block",
+                        "minecraft:crimson_nylium",
+                        "minecraft:warped_nylium",
+                        "minecraft:mycelium",
+                        "minecraft:soul_soil",
+                        "honkit26113:crooked_nylium",
+                        "honkit26113:glow_mycelium",
+                        "honkit26113:deepslate_glow_mycelium"
+                    ],
+                    "allowed_faces": [ "up" ]
+                }
+            ]
+        },
+        "minecraft:on_interact":{
+            "condition": "query.get_equipped_item_name('main_hand') == 'bone_meal'",
+            "event": "honkit26113:grow_giant_particle"
+        },
+        "minecraft:pick_collision": {
+            "origin":  [-4, 0, -4],
+            "size":    [6, 6.5, 6]
+        },
+        "minecraft:entity_collision": false,
+      	"minecraft:material_instances" : {
+        	"*": {
+          		"texture": "crooked_fungus",
+          		"render_method": "alpha_test",
+          		"ambient_occlusion": false,
+          		"face_dimming": false
+        	}
+      	}
+    },
+    "events": {
+        "honkit26113:grow_giant_particle": {
+            "sequence": [
+                {
+                    "decrement_stack": {}
+                },
+                {
+                    "run_command": {
+                        "command": [
+                            "playsound item.bone_meal.use @a[r=7]",
+                            "particle minecraft:crop_growth_emitter ~ ~ ~"
+                        ]
+                    }
+                },
+                {
+                    "condition": "q.block_neighbor_has_any_tag(0,-1,0,'honkit26113_crooked_nylium')",
+                    "trigger": {
+                        "event": "honkit26113:grow_giant_randomize"
+                    }
+                }
+            ]
+        },
+        "honkit26113:grow_giant_randomize": {
+            "randomize": [
+                {
+                    "weight": 60
+                },
+                {
+                    "weight": 40,
+                    "trigger": {
+                        "event": "honkit26113:change_to_netherrack"
+                    }
+                }
+            ]
+        },
+        "honkit26113:change_to_netherrack": {
+            "sequence": [
+                {
+                    "set_block_at_pos": {
+                        "block_offset": [ 0, -1, 0 ],
+                        "block_type": "minecraft:netherrack"
+                    }
+                },
+                {
+                    "trigger": {
+                        "event": "honkit26113:grow_giant"
+                    }
+                }
+            ]
+        },
+        "honkit26113:grow_giant": {
+            "randomize": [
+                {
+                    "weight": 4,
+                    "run_command": {
+                        "command": "structure load mystructure:crooked_fungus_small_1 ~-2 ~ ~-2"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "run_command": {
+                        "command": "structure load mystructure:crooked_fungus_big_1 ~-10 ~ ~-3"
+                    }
+                },
+                {
+                    "weight": 1,
+                    "run_command": {
+                        "command": "structure load mystructure:crooked_fungus_big_1_rotated_90 ~-3 ~ ~-10"
+                    }
+                }
+            ]
+        }
+    }
+  }
+}

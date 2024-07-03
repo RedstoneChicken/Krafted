@@ -1,0 +1,19 @@
+//bridge-file-version: #8
+{
+	"format_version": "1.16.100",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "end:end_island_feature"
+		},
+		"features": [
+			[
+				"end:end_house_island_1",
+				1
+			],
+			[
+				"end:tiny_end_island_1",
+				30
+			]
+		]
+	}
+}

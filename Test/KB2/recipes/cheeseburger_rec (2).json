@@ -1,0 +1,32 @@
+//bridge-file-version: #6
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:cheeseburger_rec"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:cooked_beef",
+				"count": 1
+			},
+			{
+				"item": "strat:bread_slice",
+				"count": 2
+			},
+			{
+				"item": "strat:cheese",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:cheeseburger",
+				"count": 1
+			}
+		]
+	}
+}

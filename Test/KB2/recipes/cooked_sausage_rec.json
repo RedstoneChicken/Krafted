@@ -1,0 +1,16 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.16.0",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "strat:cooked_sausage_rec"
+		},
+		"tags": [
+			"furnace",
+			"smoker",
+			"campfire"
+		],
+		"input": "strat:sausage",
+		"output": "strat:cooked_sausage"
+	}
+}

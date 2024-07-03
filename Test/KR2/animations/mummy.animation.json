@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mummy.bob": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["2+math.cos(query.anim_time * 100) * 2", "0+math.cos(query.anim_time * 100) * 2", "-12.5+math.cos(query.anim_time * 100) * 2"],
+					"position": [-0.4, -0.4, -0.4]
+				},
+				"torso": {
+					"rotation": ["0+math.cos(query.anim_time * 100) * 1", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["-75+math.cos(query.anim_time * 100) * -2", 0, 0],
+					"position": [0, -3, -3]
+				},
+				"leftArm": {
+					"rotation": ["-65+math.cos(query.anim_time * 100) * -2", 0, 0],
+					"position": [0, -3, -3]
+				}
+			}
+		},
+		"animation.mummy.move": {
+			"loop": true,
+			"bones": {
+				"torso": {
+					"rotation": ["0+math.cos(query.anim_time * 300) * 8", 0, 0]
+				},
+				"waist": {
+					"rotation": ["0+math.cos(query.anim_time * 300) * 8", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["0+math.cos(query.anim_time * 500) * 40", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["-5+math.cos(query.anim_time * 500) * -60", 0, 0]
+				}
+			}
+		}
+	}
+}

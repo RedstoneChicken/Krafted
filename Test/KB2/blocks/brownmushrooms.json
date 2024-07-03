@@ -1,0 +1,41 @@
+//bridge-file-version: #14
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "rns:brownmushrooms"
+		},
+		"components": {
+			"minecraft:geometry": "geometry.brownmushroom",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "rns_brownmushroom",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:destroy_time": 0.2,
+			"minecraft:explosion_resistance": 30,
+			"minecraft:block_light_absorption": 1,
+			"minecraft:map_color": "#10551D",
+			"minecraft:flammable": {
+				"burn_odds": 0,
+				"flame_odds": 0
+			},
+			"minecraft:friction": 0.4,
+			"minecraft:breathability": "air",
+			"minecraft:pick_collision": {
+				"size": [
+					16,
+					6,
+					16
+				]
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:creative_category": {
+				"category": "construction"
+			},
+			"minecraft:loot": "loot_tables/brownmushroom.json"
+		},
+		"events": {}
+	}
+}

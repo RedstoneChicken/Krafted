@@ -1,0 +1,81 @@
+//bridge-file-version: #70
+{
+	"format_version": "1.13.0",
+	"minecraft:tree_feature": {
+		"description": {
+			"identifier": "korbon:void_liquid_feature"
+		},
+		"acacia_trunk": {
+			"trunk_height": {
+				"base": 1,
+				"intervals": [
+					1,
+					2
+				]
+			},
+			"trunk_width": 1,
+			"trunk_lean": {
+				"allow_diagonal_growth": false,
+				"lean_height": {
+					"range_min": 0,
+					"range_max": 0
+				},
+				"lean_steps": {
+					"range_min": 0,
+					"range_max": 0
+				}
+			},
+			"trunk_block": {
+				"name": "korbon:void_liquid"
+			}
+		},
+		"base_block": [
+			"korbon:void_liquid"
+		],
+		"may_grow_on": [
+			"korbon:void_liquid"
+		],
+		"may_replace": [
+			"minecraft:air",
+			{
+				"name": "minecraft:leaves",
+				"states": {
+					"old_leaf_type": "oak"
+				}
+			},
+			{
+				"name": "minecraft:leaves",
+				"states": {
+					"old_leaf_type": "spruce"
+				}
+			},
+			{
+				"name": "minecraft:leaves",
+				"states": {
+					"old_leaf_type": "birch"
+				}
+			},
+			{
+				"name": "minecraft:leaves",
+				"states": {
+					"old_leaf_type": "jungle"
+				}
+			},
+			{
+				"name": "minecraft:leaves2",
+				"states": {
+					"new_leaf_type": "acacia"
+				}
+			},
+			{
+				"name": "minecraft:leaves2",
+				"states": {
+					"new_leaf_type": "dark_oak"
+				}
+			}
+		],
+		"may_grow_through": [
+			"korbon:void_liquid"
+		]
+	}
+}

@@ -1,0 +1,20 @@
+//bridge-file-version: #3
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "strat:blank_pattern",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": 27
+						}
+					]
+				}
+			]
+		}
+	]
+}

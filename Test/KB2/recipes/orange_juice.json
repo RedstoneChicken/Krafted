@@ -1,0 +1,28 @@
+//bridge-file-version: #3
+{
+	"format_version": 1.12,
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "strat:orange_juice"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "strat:water_glass",
+				"count": 1
+			},
+			{
+				"item": "strat:orange",
+				"count": 1
+			}
+		],
+		"result": [
+			{
+				"item": "strat:orange_juice",
+				"count": 1
+			}
+		]
+	}
+}

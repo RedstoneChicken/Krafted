@@ -1,0 +1,20 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.16.100",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "end:corrupt_plant_feature"
+		},
+		"places_block": "end:corrupted_plant",
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:air"
+		],
+		"may_attach_to": {
+			"bottom": [
+				"end:corrupted_block"
+			]
+		}
+	}
+}

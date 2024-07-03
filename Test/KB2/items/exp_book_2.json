@@ -1,0 +1,43 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bs:exp_book_2",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "item.bs:exp_book_2.name"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:render_offsets": "flint_and_steel",
+			"minecraft:foil": true,
+			"minecraft:use_duration": 100,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "exp_book_2",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "bs:exp_book_2"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.enchantedBook"
+			}
+		},
+		"events": {
+			"exp_book_2": {
+				"run_command": {
+					"command": [
+						"summon xp_bottle ~~~",
+						"xp 20L @p",
+						"clear @p bs:exp_book_2 0 1"
+					],
+					"target": "holder"
+				}
+			}
+		}
+	}
+}

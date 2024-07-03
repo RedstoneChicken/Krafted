@@ -1,0 +1,15 @@
+{
+    "format_version": "1.13.0",
+    "minecraft:structure_template_feature": {
+        "description": {
+            "identifier": "minecraft:endrock4_feature_mcstructure"
+        },
+        "structure_name": "mystructure:endrock4",
+        "adjustment_radius": 8,
+        "facing_direction": "random",
+        "constraints": {
+            "grounded": {}
+        }
+    }
+}
+// JSON exported by MACHINE_BUILDER'S Feature Rule Generator (youtube.com/machinebuilder) DO NOT REMOVE THIS WATERMARK

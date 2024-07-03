@@ -1,0 +1,36 @@
+//bridge-file-version: #21
+{
+	"format_version": "1.17.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "strat:molten_copper_from_raw3"
+		},
+		"tags": [
+			"smeltery"
+		],
+		"pattern": [
+			" V",
+			"#V"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:raw_copper"
+			},
+			"V": {
+				"item": "minecraft:bucket",
+				"data": 0
+			}
+		},
+		"result": [
+			{
+				"item": "strat:molten_copper_bucket",
+				"count": 1
+			},
+			{
+				"item": "strat:molten_copper_bucket",
+				"count": 1
+			}
+		],
+		"priority": 2
+	}
+}

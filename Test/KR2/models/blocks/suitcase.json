@@ -1,0 +1,28 @@
+// This file was modified by HonKit26113 (@HonKit1103). Do not distribute without permission.
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.suitcase",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-6, 0, -4], "size": [12, 6, 8], "uv": [0, 0]},
+						{"origin": [-3, 6, -1], "size": [1, 2, 2], "uv": [0, 4]},
+						{"origin": [2, 6, -1], "size": [1, 2, 2], "uv": [0, 0]},
+						{"origin": [-2, 7, -1], "size": [4, 1, 2], "uv": [0, 14]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,45 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bs:the_great_book_of_experience",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "item.bs:the_great_book_of_experience.name"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:render_offsets": "flint_and_steel",
+			"minecraft:foil": true,
+			"minecraft:use_duration": 10,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "bs:the_great_book_of_experience",
+					"target": "self"
+				}
+			},
+			"minecraft:icon": {
+				"texture": "bs:the_great_book_of_experience"
+			},
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.enchantedBook"
+			}
+		},
+		"events": {
+			"bs:the_great_book_of_experience": {
+				"run_command": {
+					"command": [
+						"summon xp_bottle ~~~",
+						"summon lightning_bolt ~ ~2 ~",
+						"xp 70L @p",
+						"clear @p bs:the_great_book_of_experience 0 1",
+						"title @p actionbar §a[§kaa§r§a]§e You have just used §3The Great Book of Experience §a[§kaa§r§a]§r"
+					],
+					"target": "holder"
+				}
+			}
+		}
+	}
+}

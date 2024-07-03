@@ -1,0 +1,25 @@
+//bridge-file-version: #0
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "nether:amber_ghast",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/amber_ghast"
+			},
+			"geometry": {
+				"default": "geometry.amber_ghast"
+			},
+			"spawn_egg": {
+				"base_color": "#A35505",
+				"overlay_color": "#F59701"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

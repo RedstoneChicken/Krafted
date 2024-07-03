@@ -1,0 +1,30 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "end:end_stone_axe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" EE",
+			" SE",
+			" S"
+		],
+		"key": {
+			"E": {
+				"item": "end:endslate"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": [
+			{
+				"item": "end:end_stone_axe"
+			}
+		]
+	}
+}

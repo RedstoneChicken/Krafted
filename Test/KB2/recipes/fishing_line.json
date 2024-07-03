@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.12",
+	"minecraft:recipe_shaped" : {
+		"description" : {
+			"identifier" : "fishing_line"
+		},
+		"tags" : [ "crafting_table" ],
+		"pattern" : [ " A ", "ABA", " A " ],
+		"key" : {
+			"A" : {
+				"item" : "minecraft:string"
+			},
+			"B" : {
+				"item" : "minecraft:iron_ingot"
+			}
+		},
+		"result" : {
+			"item" : "azc:fishing_line"
+		}
+	}
+}

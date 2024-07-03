@@ -1,0 +1,22 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.16.100",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "end:crystal_mushroom_mid1"
+		},
+		"structure_name": "end:crystal_mushroom_mid1",
+		"facing_direction": "random",
+		"adjustment_radius": 0,
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					"minecraft:air",
+					"minecraft:end_stone",
+					"end:crystal_nylium"
+				]
+			}
+		}
+	}
+}

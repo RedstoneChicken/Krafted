@@ -1,0 +1,21 @@
+//bridge-file-version: #4
+{
+	"format_version": "1.17.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "strat:flint_hand_guard"
+		},
+		"components": {
+			"minecraft:display_name": {
+				"value": "Flint Hand Guard"
+			},
+			"minecraft:icon": {
+				"texture": "flint_hand_guard"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		},
+		"events": {}
+	}
+}

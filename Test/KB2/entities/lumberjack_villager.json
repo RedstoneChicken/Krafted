@@ -1,0 +1,423 @@
+//bridge-file-version: #228
+{
+	"format_version": "1.16.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "korbon:lumberjack_villager",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:scared": {
+				"minecraft:angry": {
+					"duration": 5,
+					"broadcastAnger": true,
+					"broadcastRange": 10,
+					"calm_event": {
+						"event": "minecraft:become_calm",
+						"target": "self"
+					}
+				}
+			},
+			"lumberjack": {
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.korbon:lumberjack_villager.name",
+					"table": "trading/economy_trades/lumberjack_villager_trades.json",
+					"new_screen": true,
+					"persist_trades": true
+				},
+				"minecraft:behavior.trade_interest": {
+					"priority": 5,
+					"within_radius": 6,
+					"interest_time": 45,
+					"remove_item_time": 1,
+					"carried_item_switch_time": 2,
+					"cooldown": 2
+				},
+				"minecraft:type_family": {
+					"family": [
+						"mob",
+						"villager",
+						"nitwit",
+						"peasant"
+					]
+				},
+				"minecraft:behavior.random_stroll": {
+					"priority": 5,
+					"speed_multiplier": 0.6
+				},
+				"minecraft:dweller": {
+					"dwelling_type": "village",
+					"dweller_role": "inhabitant",
+					"can_migrate": true,
+					"can_find_poi": true
+				}
+			},
+			"bed_schedule_villager": {
+				"minecraft:behavior.sleep": {
+					"priority": 3,
+					"goal_radius": 1.5,
+					"speed_multiplier": 0.6,
+					"sleep_collider_height": 0.3,
+					"sleep_collider_width": 1,
+					"sleep_y_offset": 0.6,
+					"timeout_cooldown": 10
+				}
+			},
+			"lumberjack_schedule": {
+				"minecraft:scheduler": {
+					"min_delay_secs": 0,
+					"max_delay_secs": 10,
+					"scheduled_events": [
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "hourly_clock_time",
+										"operator": ">=",
+										"value": 0
+									},
+									{
+										"test": "hourly_clock_time",
+										"operator": "<",
+										"value": 11200
+									}
+								]
+							},
+							"event": "minecraft:schedule_wake_up"
+						},
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "hourly_clock_time",
+										"operator": ">=",
+										"value": 11200
+									},
+									{
+										"test": "hourly_clock_time",
+										"operator": "<",
+										"value": 12000
+									}
+								]
+							},
+							"event": "minecraft:schedule_work_lumberjack"
+						},
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "hourly_clock_time",
+										"operator": ">=",
+										"value": 12000
+									},
+									{
+										"test": "hourly_clock_time",
+										"operator": "<",
+										"value": 24000
+									}
+								]
+							},
+							"event": "minecraft:schedule_bed_villager"
+						}
+					]
+				}
+			},
+			"work_schedule_lumberjack": {
+				"minecraft:behavior.move_to_block": {
+					"priority": 7,
+					"tick_interval": 1,
+					"start_chance": 0.5,
+					"search_range": 64,
+					"search_height": 16,
+					"goal_radius": 1,
+					"stay_duration": 5,
+					"target_offset": [
+						0,
+						0.25,
+						0
+					],
+					"target_blocks": [
+						"korbon:sawmill"
+					],
+					"on_stay_completed": {
+						"event": "minecraft:resupply_trades"
+					},
+					"target_selection_method": "nearest",
+					"speed_multiplier": 0.6
+				}
+			},
+			"trade_resupply_component_group": {
+				"minecraft:trade_resupply": {}
+			}
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.9
+			},
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_pass_doors": true,
+				"can_open_doors": true,
+				"avoid_water": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:despawn": {
+				"remove_child_entities": true,
+				"filters": {
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "self",
+									"value": "wandering_trader_despawning"
+								},
+								{
+									"test": "has_trade_supply",
+									"subject": "self",
+									"value": false
+								}
+							]
+						},
+						{
+							"test": "distance_to_nearest_player",
+							"operator": ">",
+							"value": 24
+						}
+					]
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "entity_attack",
+						"deals_damage": true,
+						"on_damage": {
+							"event": "minecraft:become_scared"
+						}
+					},
+					{
+						"cause": "projectile",
+						"deals_damage": true,
+						"on_damage": {
+							"event": "minecraft:become_scared"
+						}
+					},
+					{
+						"cause": "magic",
+						"deals_damage": true,
+						"on_damage": {
+							"event": "minecraft:become_scared"
+						}
+					}
+				]
+			},
+			"minecraft:behavior.trade_with_player": {
+				"priority": 1
+			},
+			"minecraft:behavior.trade_interest": {
+				"priority": 3,
+				"within_radius": 6,
+				"interest_time": 45,
+				"remove_item_time": 1,
+				"carried_item_switch_time": 2,
+				"cooldown": 2
+			},
+			"minecraft:behavior.look_at_trading_player": {
+				"priority": 4
+			},
+			"minecraft:behavior.panic": {
+				"priority": 1,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:behavior.avoid_mob_type": {
+				"priority": 2,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie_villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zombie_pigman"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "illager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "vex"
+								}
+							]
+						},
+						"walk_speed_multiplier": 0.6,
+						"sprint_speed_multiplier": 0.6
+					}
+				],
+				"max_dist": 6
+			},
+			"minecraft:behavior.restrict_open_door": {
+				"priority": 5
+			},
+			"minecraft:behavior.open_door": {
+				"priority": 6,
+				"close_door_after": true
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 3,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 9
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"villager",
+					"mob"
+				]
+			},
+			"minecraft:behavior.hide": {
+				"priority": 0,
+				"speed_multiplier": 0.8,
+				"poi_type": "bed",
+				"duration": 30
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 8,
+				"speed_multiplier": 0.6
+			},
+			"minecraft:hide": {},
+			"minecraft:behavior.move_towards_dwelling_restriction": {
+				"priority": 10,
+				"speed_multiplier": 0.6
+			}
+		},
+		"events": {
+			"minecraft:become_scared": {
+				"add": {
+					"component_groups": [
+						"minecraft:scared"
+					]
+				}
+			},
+			"minecraft:become_calm": {
+				"remove": {
+					"component_groups": [
+						"minecraft:scared"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"lumberjack",
+						"lumberjack_schedule"
+					]
+				}
+			},
+			"minecraft:schedule_bed_villager": {
+				"add": {
+					"component_groups": [
+						"bed_schedule_villager"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"work_schedule_lumberjack"
+					]
+				}
+			},
+			"minecraft:schedule_wake_up": {
+				"remove": {
+					"component_groups": [
+						"bed_schedule_villager",
+						"trade_resupply_component_group"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"lumberjack"
+					]
+				}
+			},
+			"minecraft:schedule_work_lumberjack": {
+				"remove": {
+					"component_groups": [
+						"bed_schedule_villager"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"work_schedule_lumberjack"
+					]
+				}
+			},
+			"minecraft:resupply_trades": {
+				"add": {
+					"component_groups": [
+						"trade_resupply_component_group"
+					]
+				},
+				"run_command": {
+					"command": [
+						"playsound custom.sawmill @a[r=7] ~~~ 0.3"
+					]
+				}
+			}
+		}
+	}
+}

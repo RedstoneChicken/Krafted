@@ -1,0 +1,37 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "oh:topaz_ore"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "itemGroup.name.ore"
+			},
+			"tag:dextenblocks": {},
+			"minecraft:loot": "loot_tables/topaz_ore.json",
+			"minecraft:destroy_time": 4.5,
+			"minecraft:on_player_destroyed": {
+				"event": "xp",
+				"target": "self"
+			},
+			"minecraft:explosion_resistance": 2
+		},
+		"events": {
+			"xp": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon xp_orb ~ ~ ~",
+								"summon xp_orb ~ ~ ~"
+							],
+							"target": "self"
+						}
+					}
+				]
+			}
+		}
+	}
+}

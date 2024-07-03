@@ -1,0 +1,45 @@
+//bridge-file-version: #32
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "korbon:chorus_leaves_pink"
+		},
+		"components": {
+			"minecraft:destroy_time": 0.2,
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "chorus_leaves_pink",
+					"render_method": "blend"
+				}
+			},
+			"minecraft:explosion_resistance": 0.1,
+			"minecraft:map_color": "#908640",
+			"minecraft:flammable": {
+				"flame_odds": 30,
+				"burn_odds": 30
+			},
+			"minecraft:creative_category": {
+				"group": "itemGroup.name.leaves",
+				"category": "nature"
+			},
+			"minecraft:on_player_destroyed": {
+				"event": "shear",
+				"condition": "query.get_equipped_item_name('main_hand') == 'shears'"
+			},
+			"minecraft:loot": "empty"
+		},
+		"events": {
+			"shear": {
+				"sequence": [
+					{
+						"spawn_loot": {
+							"table": "loot_tables/blocks/pink_chorus_leaves.json"
+						}
+					}
+				]
+			}
+		}
+	}
+}

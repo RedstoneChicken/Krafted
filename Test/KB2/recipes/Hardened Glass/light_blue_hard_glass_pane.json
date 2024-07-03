@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "craft:light_blue_hard_glass_pane"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "FFF",
+      "GGG",
+      "FFF"
+    ],
+    "key": {
+      "F": {
+        "item": "cav:feldspar"
+      },
+      "G": {
+        "item": "minecraft:stained_glass_pane",
+        "data": 3
+      }
+    },
+    "result": {
+      "item": "minecraft:hard_stained_glass_pane",
+      "data": 3,
+      "count": 3
+    }
+  }
+}

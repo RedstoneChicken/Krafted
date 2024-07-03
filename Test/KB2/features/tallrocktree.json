@@ -1,0 +1,25 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.17.0",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "rns:tallrocktree"
+		},
+		"structure_name": "mystructure:tallrocktree",
+		"adjustment_radius": 8,
+		"constraints": {
+			"grounded": {},
+			"block_intersection": {
+				"block_allowlist": [
+					{
+						"name": "minecraft:air"
+					},
+					{
+						"name": "minecraft:grass"
+					}
+				]
+			}
+		},
+		"facing_direction": "random"
+	}
+}

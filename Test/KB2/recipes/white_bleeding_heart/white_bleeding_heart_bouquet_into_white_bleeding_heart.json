@@ -1,0 +1,21 @@
+{
+  "format_version": 1.12,
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ff:white_bleeding_heart_bouquet_into_white_bleeding_heart"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "ff:white_bleeding_heart_bouquet_item",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ff:white_bleeding_heart_item",
+      "count": 9
+    }
+  }
+}
